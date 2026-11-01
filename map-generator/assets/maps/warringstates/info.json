@@ -1,0 +1,64 @@
+{
+  "$schema": "../../../info.schema.json",
+  "id": "WarringStates",
+  "name": "Warring States",
+  "translation_key": "map.warringstates",
+  "categories": ["featured", "asia", "new"],
+  "featured_rank": 3,
+  "location": { "lat": 34.5, "lon": 112 },
+  "author": "crunchybbb (base map), KDK221",
+  "special_team_count": 2,
+  "nations": [
+    {
+      "coordinates": [1280, 1190],
+      "name": "Qin",
+      "flag": "Qin"
+    },
+    {
+      "coordinates": [1450, 1360],
+      "name": "Chu",
+      "flag": "Chu"
+    },
+    {
+      "coordinates": [1720, 1060],
+      "name": "Qi",
+      "flag": "Qi"
+    },
+    {
+      "coordinates": [1631, 880],
+      "name": "Yan",
+      "flag": "Yan"
+    },
+    {
+      "coordinates": [1560, 1060],
+      "name": "Zhao",
+      "flag": "Zhao"
+    },
+    {
+      "coordinates": [1560, 1150],
+      "name": "Wei",
+      "flag": "Wei"
+    },
+    {
+      "coordinates": [1500, 1190],
+      "name": "Han",
+      "flag": "Han"
+    },
+    {
+      "coordinates": [1440, 1165],
+      "name": "Zhou",
+      "flag": "Zhou"
+    },
+    {
+      "coordinates": [1082, 1322],
+      "name": "Shu",
+      "flag": "Shu"
+    },
+    {
+      "coordinates": [1245, 1363],
+      "name": "Ba",
+      "flag": "Ba Kingdom"
+    }
+  ],
+  "themes": ["asia"]
+}

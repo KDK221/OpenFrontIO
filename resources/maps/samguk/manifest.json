@@ -1,5 +1,7 @@
 {
-  "categories": ["asia", "new"],
+  "categories": ["featured", "asia", "new"],
+  "display_name": "Three Kingdoms",
+  "featured_rank": 1,
   "id": "Samguk",
   "map": {
     "height": 2188,
@@ -16,7 +18,7 @@
     "num_land_tiles": 192353,
     "width": 544
   },
-  "name": "Three Kingdoms",
+  "name": "Samguk",
   "nations": [
     {
       "coordinates": [294, 986],

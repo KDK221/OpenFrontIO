@@ -21,26 +21,26 @@ describe("MapPlaylist weights", () => {
   const count = (type: string, weights: object, seed = 1) =>
     p
       .buildMapsList(type, weights, new PseudoRandom(seed))
-      .filter((m) => m === GameMapType.World).length;
+      .filter((m) => m === GameMapType.Samguk).length;
 
   it("schedules a map by its weight for the queue", () => {
-    expect(count("ffa", { [GameMapType.World]: { ffaWeight: 37 } })).toBe(37);
-    expect(count("ffa", { [GameMapType.World]: { ffaWeight: 0 } })).toBe(0);
+    expect(count("ffa", { [GameMapType.Samguk]: { ffaWeight: 37 } })).toBe(37);
+    expect(count("ffa", { [GameMapType.Samguk]: { ffaWeight: 0 } })).toBe(0);
     expect(
-      count("special", { [GameMapType.World]: { specialWeight: 3 } }),
+      count("special", { [GameMapType.Samguk]: { specialWeight: 3 } }),
     ).toBe(3);
   });
 
   it("gives a map or queue with no weight the default", () => {
     expect(count("ffa", {})).toBe(DEFAULT_MAP_WEIGHT);
     // A weight for another queue leaves ffa on the default.
-    expect(count("ffa", { [GameMapType.World]: { teamWeight: 37 } })).toBe(
+    expect(count("ffa", { [GameMapType.Samguk]: { teamWeight: 37 } })).toBe(
       DEFAULT_MAP_WEIGHT,
     );
   });
 
   it("rounds a fractional weight at random, averaging the weight", () => {
-    const weights = { [GameMapType.World]: { ffaWeight: 2.3 } };
+    const weights = { [GameMapType.Samguk]: { ffaWeight: 2.3 } };
     let total = 0;
     for (let seed = 1; seed <= 2000; seed++) {
       const n = count("ffa", weights, seed);
@@ -54,10 +54,10 @@ describe("MapPlaylist weights", () => {
     const weights = Object.fromEntries(
       Object.values(GameMapType).map((m) => [m, { ffaWeight: 0 }]),
     );
-    weights[GameMapType.World] = { ffaWeight: 0.1 };
+    weights[GameMapType.Samguk] = { ffaWeight: 0.1 };
     for (let seed = 1; seed <= 50; seed++) {
       expect(p.buildMapsList("ffa", weights, new PseudoRandom(seed))).toEqual([
-        GameMapType.World,
+        GameMapType.Samguk,
       ]);
     }
   });
@@ -71,17 +71,17 @@ describe("MapPlaylist weights", () => {
     playlist.setWeights({});
     expect(q.playlists.ffa.length).toBeGreaterThan(0);
 
-    playlist.setWeights({ [GameMapType.World]: { ffaWeight: 0 } });
+    playlist.setWeights({ [GameMapType.Samguk]: { ffaWeight: 0 } });
     expect(q.playlists.ffa).toEqual([]);
   });
 
   it("stops serving a map pulled to 0", async () => {
     const playlist = new MapPlaylist();
-    playlist.setWeights({ [GameMapType.World]: { ffaWeight: 0 } });
+    playlist.setWeights({ [GameMapType.Samguk]: { ffaWeight: 0 } });
     const queued = internals(playlist).playlists;
     const config = await playlist.gameConfig("ffa");
-    expect(config.gameMap).not.toBe(GameMapType.World);
-    expect(queued.ffa).not.toContain(GameMapType.World);
+    expect(config.gameMap).not.toBe(GameMapType.Samguk);
+    expect(queued.ffa).not.toContain(GameMapType.Samguk);
   });
 
   it("ignores weights that would empty a queue", async () => {

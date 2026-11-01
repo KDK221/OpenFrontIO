@@ -1,7 +1,7 @@
 import {
   Difficulty,
   GameMapSize,
-  GameMapType,
+  DEFAULT_MAP,
   GameMode,
   GameType,
 } from "@openfront/engine-api/game/GameTypes";
@@ -93,7 +93,7 @@ export class GameManager {
         gameConfig: {
           donateGold: false,
           donateTroops: false,
-          gameMap: GameMapType.World,
+          gameMap: DEFAULT_MAP,
           gameType: GameType.Private,
           gameMapSize: GameMapSize.Normal,
           difficulty: Difficulty.Easy,

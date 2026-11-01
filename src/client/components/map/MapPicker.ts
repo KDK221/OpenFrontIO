@@ -6,6 +6,7 @@ import {
   listedMaps,
   MapInfo,
   maps,
+  DEFAULT_MAP,
 } from "@openfront/engine-api/game/GameTypes";
 import { assetUrl } from "@openfront/shared/AssetUrls";
 import { html, LitElement } from "lit";
@@ -34,7 +35,7 @@ function mapsInCategory(category: MapCategory): MapInfo[] {
 
 @customElement("map-picker")
 export class MapPicker extends LitElement {
-  @property({ type: String }) selectedMap: GameMapType = GameMapType.World;
+  @property({ type: String }) selectedMap: GameMapType = DEFAULT_MAP;
   @property({ type: Boolean }) useRandomMap = false;
   @property({ type: Boolean }) showMedals = false;
   @property({ type: Boolean }) randomMapDivider = false;

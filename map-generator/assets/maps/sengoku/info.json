@@ -1,0 +1,75 @@
+{
+  "$schema": "../../../info.schema.json",
+  "id": "Sengoku",
+  "name": "Sengoku",
+  "display_name": "Sengoku Japan",
+  "translation_key": "map.sengoku",
+  "categories": ["featured", "asia", "new"],
+  "featured_rank": 2,
+  "location": { "lat": 36.5, "lon": 138.5 },
+  "author": "Aotumuri (base map), KDK221",
+  "special_team_count": 4,
+  "nations": [
+    {
+      "coordinates": [1290, 1300],
+      "name": "Oda",
+      "flag": "Oda"
+    },
+    {
+      "coordinates": [1470, 1200],
+      "name": "Takeda",
+      "flag": "Takeda"
+    },
+    {
+      "coordinates": [1440, 1060],
+      "name": "Uesugi",
+      "flag": "Uesugi"
+    },
+    {
+      "coordinates": [1540, 1220],
+      "name": "Hojo",
+      "flag": "Hojo"
+    },
+    {
+      "coordinates": [1430, 1260],
+      "name": "Imagawa",
+      "flag": "Imagawa"
+    },
+    {
+      "coordinates": [1210, 1200],
+      "name": "Asakura",
+      "flag": "Asakura"
+    },
+    {
+      "coordinates": [1158, 1300],
+      "name": "Miyoshi",
+      "flag": "Miyoshi"
+    },
+    {
+      "coordinates": [930, 1340],
+      "name": "Mori",
+      "flag": "Mori"
+    },
+    {
+      "coordinates": [980, 1480],
+      "name": "Chosokabe",
+      "flag": "Chosokabe"
+    },
+    {
+      "coordinates": [790, 1540],
+      "name": "Otomo",
+      "flag": "Otomo"
+    },
+    {
+      "coordinates": [690, 1680],
+      "name": "Shimazu",
+      "flag": "Shimazu"
+    },
+    {
+      "coordinates": [1640, 950],
+      "name": "Date",
+      "flag": "Date"
+    }
+  ],
+  "themes": ["asia"]
+}

@@ -2,6 +2,7 @@ import {
   GameMapType,
   listedMaps,
   MapInfo,
+  DEFAULT_MAP,
 } from "@openfront/engine-api/game/GameTypes";
 import { assetUrl } from "@openfront/shared/AssetUrls";
 import { html, LitElement, nothing, type PropertyValues } from "lit";
@@ -85,7 +86,7 @@ function loadEarthPaths(): Promise<EarthPaths> {
 
 @customElement("earth-map")
 export class EarthMap extends LitElement {
-  @property({ type: String }) selectedMap: GameMapType = GameMapType.World;
+  @property({ type: String }) selectedMap: GameMapType = DEFAULT_MAP;
   @property({ type: Boolean }) useRandomMap = false;
   @property({ attribute: false }) onSelectMap?: (map: GameMapType) => void;
   @state() private paths: EarthPaths = { sphere: "", land: "" };

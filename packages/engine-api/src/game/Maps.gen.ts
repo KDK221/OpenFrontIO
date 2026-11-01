@@ -107,9 +107,10 @@ export enum GameMapType {
   QingChina = "Qing China", // map-generator/assets/maps/qingchina/info.json
   RioDeJaneiro = "Rio de Janeiro", // map-generator/assets/maps/riodejaneiro/info.json
   Russia = "Russia", // map-generator/assets/maps/russia/info.json
-  Samguk = "Three Kingdoms", // map-generator/assets/maps/samguk/info.json
+  Samguk = "Samguk", // map-generator/assets/maps/samguk/info.json
   SanFrancisco = "San Francisco", // map-generator/assets/maps/sanfrancisco/info.json
   Scandinavia = "Scandinavia", // map-generator/assets/maps/scandinavia/info.json
+  Sengoku = "Sengoku", // map-generator/assets/maps/sengoku/info.json
   Sierpinski = "Sierpinski", // map-generator/assets/maps/sierpinski/info.json
   Sol = "Sol", // map-generator/assets/maps/sol/info.json
   SouthAmerica = "South America", // map-generator/assets/maps/southamerica/info.json
@@ -134,6 +135,7 @@ export enum GameMapType {
   VancouverIsland = "Vancouver Island", // map-generator/assets/maps/vancouverisland/info.json
   Venice = "Venice", // map-generator/assets/maps/venice/info.json
   Vietnam = "Vietnam", // map-generator/assets/maps/vietnam/info.json
+  WarringStates = "Warring States", // map-generator/assets/maps/warringstates/info.json
   WarshipWarship = "Warship Warship", // map-generator/assets/maps/warshipwarship/info.json
   World = "World", // map-generator/assets/maps/world/info.json
   WorldInverted = "World Inverted", // map-generator/assets/maps/worldinverted/info.json
@@ -1956,8 +1958,9 @@ export const maps: readonly MapInfo[] = [
     id: "Samguk",
     type: GameMapType.Samguk,
     translationKey: "map.samguk",
-    categories: ["asia", "new"],
+    categories: ["featured", "asia", "new"],
     defaultNationCount: 6,
+    featuredRank: 1,
     specialTeamCount: 3,
     themes: ["asia"],
     author: "crunchybbb (base map), KDK221",
@@ -1982,6 +1985,18 @@ export const maps: readonly MapInfo[] = [
     themes: ["europe"],
     author: "crunchybbb",
     location: { lat: 63, lon: 15 },
+  },
+  {
+    id: "Sengoku",
+    type: GameMapType.Sengoku,
+    translationKey: "map.sengoku",
+    categories: ["featured", "asia", "new"],
+    defaultNationCount: 12,
+    featuredRank: 2,
+    specialTeamCount: 4,
+    themes: ["asia"],
+    author: "Aotumuri (base map), KDK221",
+    location: { lat: 36.5, lon: 138.5 },
   },
   {
     id: "Sierpinski",
@@ -2261,6 +2276,18 @@ export const maps: readonly MapInfo[] = [
     themes: ["asia"],
     author: "crunchybbb",
     location: { lat: 16, lon: 106.5 },
+  },
+  {
+    id: "WarringStates",
+    type: GameMapType.WarringStates,
+    translationKey: "map.warringstates",
+    categories: ["featured", "asia", "new"],
+    defaultNationCount: 10,
+    featuredRank: 3,
+    specialTeamCount: 2,
+    themes: ["asia"],
+    author: "crunchybbb (base map), KDK221",
+    location: { lat: 34.5, lon: 112 },
   },
   {
     id: "WarshipWarship",

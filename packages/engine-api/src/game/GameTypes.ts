@@ -2,7 +2,7 @@ import { AllPlayersStats, ClientID } from "../Schemas";
 
 import { TileRef } from "./GameMap";
 import { GameUpdate, GameUpdateType } from "./GameUpdates";
-import { maps, type MapInfo } from "./Maps.gen";
+import { GameMapType, maps, type MapInfo } from "./Maps.gen";
 
 function isEnumValue<T extends Record<string, string | number>>(
   enumObj: T,
@@ -121,10 +121,26 @@ export {
 } from "./Maps.gen";
 
 /**
- * The maps players can pick or be dealt: everything but `hidden` ones (the
- * tutorial map), which only code that names them starts.
+ * Historical scenario maps. Only these are offered to players; the other
+ * maps inherited from OpenFront stay in the repo (so upstream merges stay
+ * simple) but are not listed.
  */
-export const listedMaps: readonly MapInfo[] = maps.filter((m) => !m.hidden);
+export const SCENARIO_MAPS: readonly GameMapType[] = [
+  GameMapType.Samguk,
+  GameMapType.Sengoku,
+  GameMapType.WarringStates,
+];
+
+/** The map lobbies and pickers start on. */
+export const DEFAULT_MAP: GameMapType = GameMapType.Samguk;
+
+/**
+ * The maps players can pick or be dealt: the scenario maps, minus any
+ * `hidden` ones (the tutorial map), which only code that names them starts.
+ */
+export const listedMaps: readonly MapInfo[] = maps.filter(
+  (m) => !m.hidden && SCENARIO_MAPS.includes(m.type),
+);
 
 export enum GameType {
   Singleplayer = "Singleplayer",

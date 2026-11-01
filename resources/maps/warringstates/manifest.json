@@ -1,0 +1,76 @@
+{
+  "categories": ["featured", "asia", "new"],
+  "featured_rank": 3,
+  "id": "WarringStates",
+  "map": {
+    "height": 2024,
+    "num_land_tiles": 1570704,
+    "width": 2248
+  },
+  "map16x": {
+    "height": 506,
+    "num_land_tiles": 94112,
+    "width": 562
+  },
+  "map4x": {
+    "height": 1012,
+    "num_land_tiles": 386972,
+    "width": 1124
+  },
+  "name": "Warring States",
+  "nations": [
+    {
+      "coordinates": [1280, 1190],
+      "flag": "Qin",
+      "name": "Qin"
+    },
+    {
+      "coordinates": [1450, 1360],
+      "flag": "Chu",
+      "name": "Chu"
+    },
+    {
+      "coordinates": [1720, 1060],
+      "flag": "Qi",
+      "name": "Qi"
+    },
+    {
+      "coordinates": [1631, 880],
+      "flag": "Yan",
+      "name": "Yan"
+    },
+    {
+      "coordinates": [1560, 1060],
+      "flag": "Zhao",
+      "name": "Zhao"
+    },
+    {
+      "coordinates": [1560, 1150],
+      "flag": "Wei",
+      "name": "Wei"
+    },
+    {
+      "coordinates": [1500, 1190],
+      "flag": "Han",
+      "name": "Han"
+    },
+    {
+      "coordinates": [1440, 1165],
+      "flag": "Zhou",
+      "name": "Zhou"
+    },
+    {
+      "coordinates": [1082, 1322],
+      "flag": "Shu",
+      "name": "Shu"
+    },
+    {
+      "coordinates": [1245, 1363],
+      "flag": "Ba Kingdom",
+      "name": "Ba"
+    }
+  ],
+  "special_team_count": 2,
+  "themes": ["asia"],
+  "translation_key": "map.warringstates"
+}

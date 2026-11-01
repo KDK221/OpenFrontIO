@@ -6,6 +6,7 @@ import {
   GameType,
   listedMaps,
   UnitType,
+  DEFAULT_MAP,
 } from "@openfront/engine-api/game/GameTypes";
 import type { SnapshotHeader } from "@openfront/engine-api/game/SnapshotHeader";
 import { TeamCountConfig } from "@openfront/engine-api/Schemas";
@@ -119,7 +120,7 @@ const TUTORIAL_DISABLED_UNITS: UnitType[] = [
 ];
 
 const DEFAULT_OPTIONS = {
-  selectedMap: GameMapType.World,
+  selectedMap: DEFAULT_MAP,
   selectedDifficulty: Difficulty.Easy,
   bots: 400,
   infiniteGold: false,

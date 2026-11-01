@@ -1,7 +1,9 @@
 import {
+  DEFAULT_MAP,
   GameMapType,
   listedMaps,
   maps,
+  SCENARIO_MAPS,
 } from "@openfront/engine-api/game/GameTypes";
 import { describe, expect, test } from "vitest";
 
@@ -13,8 +15,17 @@ describe("listedMaps", () => {
     expect(listedMaps.some((m) => m.type === GameMapType.Tutorial)).toBe(false);
   });
 
-  test("keeps every map that isn't hidden", () => {
-    expect(listedMaps).toEqual(maps.filter((m) => m.hidden !== true));
-    expect(listedMaps.length).toBe(maps.length - 1);
+  test("lists exactly the scenario maps", () => {
+    expect(listedMaps.map((m) => m.type).sort()).toEqual(
+      [...SCENARIO_MAPS].sort(),
+    );
+    expect(listedMaps.some((m) => m.type === GameMapType.World)).toBe(false);
+  });
+
+  test("every scenario map exists and the default map is one of them", () => {
+    for (const type of SCENARIO_MAPS) {
+      expect(maps.some((m) => m.type === type)).toBe(true);
+    }
+    expect(SCENARIO_MAPS).toContain(DEFAULT_MAP);
   });
 });

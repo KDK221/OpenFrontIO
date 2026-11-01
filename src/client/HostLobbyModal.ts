@@ -4,6 +4,7 @@ import {
   GameMapType,
   GameMode,
   UnitType,
+  DEFAULT_MAP,
 } from "@openfront/engine-api/game/GameTypes";
 import {
   GameConfigPatch,
@@ -65,7 +66,7 @@ import {
 
 @customElement("host-lobby-modal")
 export class HostLobbyModal extends BaseModal {
-  @state() private selectedMap: GameMapType = GameMapType.World;
+  @state() private selectedMap: GameMapType = DEFAULT_MAP;
   @state() private selectedDifficulty: Difficulty = Difficulty.Easy;
   @state() private nations: number = 0;
   @state() private defaultNationCount: number = 0;
@@ -1058,7 +1059,7 @@ export class HostLobbyModal extends BaseModal {
     }
 
     // Reset all transient form state to ensure clean slate
-    this.selectedMap = GameMapType.World;
+    this.selectedMap = DEFAULT_MAP;
     this.selectedDifficulty = Difficulty.Easy;
     this.nations = 0;
     this.defaultNationCount = 0;

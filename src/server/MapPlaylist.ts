@@ -720,8 +720,12 @@ export class MapPlaylist {
     playlist: GameMapType[],
     source: GameMapType[],
   ): boolean {
-    const nonConsecutiveNum = 5;
-    const lastMaps = playlist.slice(-nonConsecutiveNum);
+    // With only a few scenario maps, "no repeat within the last 5" is
+    // impossible; keep the window below the number of distinct maps.
+    const distinctMaps = new Set([...playlist, ...source]).size;
+    const nonConsecutiveNum = Math.max(0, Math.min(5, distinctMaps - 1));
+    const lastMaps =
+      nonConsecutiveNum === 0 ? [] : playlist.slice(-nonConsecutiveNum);
 
     for (let i = 0; i < source.length; i++) {
       const map = source[i];
