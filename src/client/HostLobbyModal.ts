@@ -12,6 +12,7 @@ import {
 } from "@openfront/engine-api/Schemas";
 import { DoomsdayClockSpeed } from "@openfront/engine-lib/game/DoomsdayClock";
 import { GameEnv } from "@openfront/shared/configuration/Env";
+import { ERA_DISABLED_UNITS } from "@openfront/shared/EraDefaults";
 import { EventBus } from "@openfront/shared/EventBus";
 import {
   ClientInfo,
@@ -111,7 +112,7 @@ export class HostLobbyModal extends BaseModal {
   @state() private lobbyUrlSuffix = "";
   @state() private clients: ClientInfo[] = [];
   @state() private useRandomMap: boolean = false;
-  @state() private disabledUnits: UnitType[] = [];
+  @state() private disabledUnits: UnitType[] = [...ERA_DISABLED_UNITS];
   @state() private hostCheatsEnabled: boolean = false;
   @state() private hostCheatInfiniteGold: boolean = false;
   @state() private hostCheatInfiniteTroops: boolean = false;
@@ -1083,7 +1084,7 @@ export class HostLobbyModal extends BaseModal {
     this.randomSpawn = false;
     this.compactMap = false;
     this.useRandomMap = false;
-    this.disabledUnits = [];
+    this.disabledUnits = [...ERA_DISABLED_UNITS];
     this.lobbyId = "";
     this.clients = [];
     this.lobbyCreatorClientID = "";

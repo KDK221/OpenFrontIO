@@ -18,6 +18,7 @@ import {
 import { GameConfig, TeamCountConfig } from "@openfront/engine-api/Schemas";
 import { SAM_CONSTRUCTION_TICKS } from "@openfront/engine-lib/configuration/Config";
 import { PseudoRandom } from "@openfront/engine-lib/PseudoRandom";
+import { ERA_DISABLED_UNITS } from "@openfront/shared/EraDefaults";
 import { mapPlayerCounts } from "@openfront/shared/MapPlayerCounts";
 import { ScheduledPublicGameType } from "@openfront/shared/WireSchemas";
 import { logger } from "./Logger";
@@ -233,7 +234,7 @@ export class MapPlaylist {
       playerTeams,
       bots: isCompact ? 100 : 400,
       spawnImmunityDuration: this.getSpawnImmunityDuration(playerTeams),
-      disabledUnits: [],
+      disabledUnits: [...ERA_DISABLED_UNITS],
       disableClanTags: mode === GameMode.FFA ? true : undefined,
       // Overtime (the win threshold sinking after 30 minutes) is the default
       // for every public FFA game, so it carries no lobby modifier badge.
@@ -439,7 +440,7 @@ export class MapPlaylist {
         : "default";
 
     // Build disabledUnits from modifiers
-    const disabledUnits: UnitType[] = [];
+    const disabledUnits: UnitType[] = [...ERA_DISABLED_UNITS];
     if (isNukesDisabled) {
       disabledUnits.push(
         UnitType.MissileSilo,
@@ -507,7 +508,7 @@ export class MapPlaylist {
       spawnImmunityDuration:
         peaceTimeDuration ??
         this.getSpawnImmunityDuration(playerTeams, startingGold),
-      disabledUnits,
+      disabledUnits: [...new Set(disabledUnits)],
       waterNukes: isWaterNukes ? true : undefined,
       disableClanTags: mode === GameMode.FFA ? true : undefined,
     } satisfies GameConfig;
@@ -540,7 +541,7 @@ export class MapPlaylist {
       gameMode: GameMode.FFA,
       bots: isCompact ? 100 : 400,
       spawnImmunityDuration: 30 * 10,
-      disabledUnits: [],
+      disabledUnits: [...ERA_DISABLED_UNITS],
     } satisfies GameConfig;
   }
 
@@ -572,7 +573,7 @@ export class MapPlaylist {
       playerTeams: 2,
       bots: isCompact ? 100 : 400,
       spawnImmunityDuration: 60 * 10,
-      disabledUnits: [],
+      disabledUnits: [...ERA_DISABLED_UNITS],
     } satisfies GameConfig;
   }
 
@@ -605,7 +606,7 @@ export class MapPlaylist {
       gameMode: GameMode.FFA,
       bots: 400,
       spawnImmunityDuration: 30 * 10,
-      disabledUnits: [],
+      disabledUnits: [...ERA_DISABLED_UNITS],
       // Same as public FFA: no tags to rally a clan around.
       disableClanTags: true,
     } satisfies GameConfig;
@@ -650,7 +651,7 @@ export class MapPlaylist {
       playerTeams: teamCount,
       bots: 400,
       spawnImmunityDuration: 60 * 10,
-      disabledUnits: [],
+      disabledUnits: [...ERA_DISABLED_UNITS],
     } satisfies GameConfig;
   }
 

@@ -1,0 +1,55 @@
+{
+  "categories": ["asia", "new"],
+  "id": "Samguk",
+  "map": {
+    "height": 2188,
+    "num_land_tiles": 782048,
+    "width": 1088
+  },
+  "map16x": {
+    "height": 547,
+    "num_land_tiles": 46830,
+    "width": 272
+  },
+  "map4x": {
+    "height": 1094,
+    "num_land_tiles": 192353,
+    "width": 544
+  },
+  "name": "Three Kingdoms",
+  "nations": [
+    {
+      "coordinates": [294, 986],
+      "flag": "Goguryeo",
+      "name": "Goguryeo"
+    },
+    {
+      "coordinates": [473, 1251],
+      "flag": "Baekje",
+      "name": "Baekje"
+    },
+    {
+      "coordinates": [800, 1520],
+      "flag": "Silla",
+      "name": "Silla"
+    },
+    {
+      "coordinates": [770, 1670],
+      "flag": "Gaya",
+      "name": "Gaya"
+    },
+    {
+      "coordinates": [395, 2105],
+      "flag": "Tamna",
+      "name": "Tamna"
+    },
+    {
+      "coordinates": [1046, 2120],
+      "flag": "Wa",
+      "name": "Wa"
+    }
+  ],
+  "special_team_count": 3,
+  "themes": ["asia"],
+  "translation_key": "map.samguk"
+}

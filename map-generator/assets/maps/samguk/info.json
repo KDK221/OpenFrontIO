@@ -1,0 +1,43 @@
+{
+  "$schema": "../../../info.schema.json",
+  "id": "Samguk",
+  "name": "Three Kingdoms",
+  "translation_key": "map.samguk",
+  "categories": ["asia", "new"],
+  "location": { "lat": 37.5, "lon": 127.5 },
+  "author": "crunchybbb (base map), KDK221",
+  "special_team_count": 3,
+  "nations": [
+    {
+      "coordinates": [294, 986],
+      "name": "Goguryeo",
+      "flag": "Goguryeo"
+    },
+    {
+      "coordinates": [473, 1251],
+      "name": "Baekje",
+      "flag": "Baekje"
+    },
+    {
+      "coordinates": [800, 1520],
+      "name": "Silla",
+      "flag": "Silla"
+    },
+    {
+      "coordinates": [770, 1670],
+      "name": "Gaya",
+      "flag": "Gaya"
+    },
+    {
+      "coordinates": [395, 2105],
+      "name": "Tamna",
+      "flag": "Tamna"
+    },
+    {
+      "coordinates": [1046, 2120],
+      "name": "Wa",
+      "flag": "Wa"
+    }
+  ],
+  "themes": ["asia"]
+}

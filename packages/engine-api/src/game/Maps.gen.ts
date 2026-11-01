@@ -107,6 +107,7 @@ export enum GameMapType {
   QingChina = "Qing China", // map-generator/assets/maps/qingchina/info.json
   RioDeJaneiro = "Rio de Janeiro", // map-generator/assets/maps/riodejaneiro/info.json
   Russia = "Russia", // map-generator/assets/maps/russia/info.json
+  Samguk = "Three Kingdoms", // map-generator/assets/maps/samguk/info.json
   SanFrancisco = "San Francisco", // map-generator/assets/maps/sanfrancisco/info.json
   Scandinavia = "Scandinavia", // map-generator/assets/maps/scandinavia/info.json
   Sierpinski = "Sierpinski", // map-generator/assets/maps/sierpinski/info.json
@@ -1950,6 +1951,17 @@ export const maps: readonly MapInfo[] = [
     themes: ["europe", "asia"],
     author: "Tristar",
     location: { lat: 61.5, lon: 100 },
+  },
+  {
+    id: "Samguk",
+    type: GameMapType.Samguk,
+    translationKey: "map.samguk",
+    categories: ["asia", "new"],
+    defaultNationCount: 6,
+    specialTeamCount: 3,
+    themes: ["asia"],
+    author: "crunchybbb (base map), KDK221",
+    location: { lat: 37.5, lon: 127.5 },
   },
   {
     id: "SanFrancisco",

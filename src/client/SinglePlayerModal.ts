@@ -11,6 +11,7 @@ import type { SnapshotHeader } from "@openfront/engine-api/game/SnapshotHeader";
 import { TeamCountConfig } from "@openfront/engine-api/Schemas";
 import { DoomsdayClockSpeed } from "@openfront/engine-lib/game/DoomsdayClock";
 import { UserMeResponse } from "@openfront/shared/ApiSchemas";
+import { ERA_DISABLED_UNITS } from "@openfront/shared/EraDefaults";
 import { assetUrl } from "@openfront/shared/AssetUrls";
 import { generateID } from "@openfront/shared/SharedUtil";
 import { PlayerCosmetics } from "@openfront/shared/WireSchemas";
@@ -135,7 +136,7 @@ const DEFAULT_OPTIONS = {
   goldMultiplierValue: undefined as number | undefined,
   startingGold: false,
   startingGoldValue: undefined as number | undefined,
-  disabledUnits: [] as UnitType[],
+  disabledUnits: [...ERA_DISABLED_UNITS] as UnitType[],
   customAlliances: false,
   customAllianceMinutes: undefined as number | undefined,
   waterNukes: false,
