@@ -21,34 +21,139 @@
   "name": "Samguk",
   "nations": [
     {
-      "coordinates": [294, 986],
+      "coordinates": [247, 925],
       "flag": "Goguryeo",
-      "name": "Goguryeo"
+      "name": "Pyongyang"
     },
     {
-      "coordinates": [473, 1251],
+      "coordinates": [238, 1134],
+      "flag": "Goguryeo",
+      "name": "Haeju"
+    },
+    {
+      "coordinates": [251, 1007],
+      "flag": "Goguryeo",
+      "name": "Hwangju"
+    },
+    {
+      "coordinates": [560, 738],
+      "flag": "Goguryeo",
+      "name": "Hamhung"
+    },
+    {
+      "coordinates": [544, 901],
+      "flag": "Goguryeo",
+      "name": "Wonsan"
+    },
+    {
+      "coordinates": [395, 511],
+      "flag": "Goguryeo",
+      "name": "Kanggye"
+    },
+    {
+      "coordinates": [954, 334],
+      "flag": "Goguryeo",
+      "name": "Chongjin"
+    },
+    {
+      "coordinates": [775, 1216],
+      "flag": "Goguryeo",
+      "name": "Gangneung"
+    },
+    {
+      "coordinates": [486, 1242],
       "flag": "Baekje",
-      "name": "Baekje"
+      "name": "Hanseong"
     },
     {
-      "coordinates": [800, 1520],
+      "coordinates": [486, 1462],
+      "flag": "Baekje",
+      "name": "Ungjin"
+    },
+    {
+      "coordinates": [449, 1497],
+      "flag": "Baekje",
+      "name": "Sabi"
+    },
+    {
+      "coordinates": [458, 1564],
+      "flag": "Baekje",
+      "name": "Iksan"
+    },
+    {
+      "coordinates": [491, 1590],
+      "flag": "Baekje",
+      "name": "Jeonju"
+    },
+    {
+      "coordinates": [414, 1751],
+      "flag": "Baekje",
+      "name": "Naju"
+    },
+    {
+      "coordinates": [855, 1582],
       "flag": "Silla",
-      "name": "Silla"
+      "name": "Geumseong"
     },
     {
-      "coordinates": [770, 1670],
+      "coordinates": [669, 1470],
+      "flag": "Silla",
+      "name": "Sabeol"
+    },
+    {
+      "coordinates": [769, 1438],
+      "flag": "Silla",
+      "name": "Andong"
+    },
+    {
+      "coordinates": [629, 1356],
+      "flag": "Silla",
+      "name": "Chungju"
+    },
+    {
+      "coordinates": [746, 1580],
+      "flag": "Silla",
+      "name": "Daegu"
+    },
+    {
+      "coordinates": [869, 1645],
+      "flag": "Silla",
+      "name": "Ulsan"
+    },
+    {
+      "coordinates": [797, 1709],
       "flag": "Gaya",
-      "name": "Gaya"
+      "name": "Geumgwan"
     },
     {
-      "coordinates": [395, 2105],
+      "coordinates": [687, 1608],
+      "flag": "Gaya",
+      "name": "Goryeong"
+    },
+    {
+      "coordinates": [713, 1701],
+      "flag": "Gaya",
+      "name": "Ara"
+    },
+    {
+      "coordinates": [697, 1761],
+      "flag": "Gaya",
+      "name": "Goseong"
+    },
+    {
+      "coordinates": [397, 2073],
       "flag": "Tamna",
       "name": "Tamna"
     },
     {
-      "coordinates": [1046, 2120],
+      "coordinates": [857, 1913],
       "flag": "Wa",
-      "name": "Wa"
+      "name": "Tsushima"
+    },
+    {
+      "coordinates": [1063, 2035],
+      "flag": "Wa",
+      "name": "Nakoku"
     }
   ],
   "special_team_count": 3,
