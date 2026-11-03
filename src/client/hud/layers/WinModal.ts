@@ -58,7 +58,6 @@ import {
   reconcileXp,
 } from "../../ProvisionalXpAtDeath";
 import { PlaySoundEffectEvent } from "../../sound/Sounds";
-import { steamSDK } from "../../SteamSDK";
 import { SendWinnerEvent } from "../../Transport";
 import { GameView } from "../../view";
 
@@ -501,9 +500,9 @@ export class WinModal extends LitElement implements Controller {
   }
 
   innerHtml() {
-    // The Steam desktop build has nothing to wishlist — fall through to the
-    // other promos so the box is never empty.
-    const canWishlist = !steamSDK.isOnSteam();
+    // This fork does not advertise OpenFront's Steam page, so the wishlist
+    // promo is never shown; the other promos fill the box.
+    const canWishlist = false;
 
     if (isInIframe()) {
       return canWishlist ? this.steamWishlist() : this.discordDisplay();
