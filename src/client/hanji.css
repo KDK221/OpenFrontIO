@@ -1,0 +1,196 @@
+/* Hanji / ink-wash theme (the default look of this fork).
+
+   Same ground rules as halloween.css: decorative overrides only (colors,
+   shadows, backgrounds, fonts). It must not change layout, padding, margin or
+   sizing. It applies to the homepage and lobby modals, not to the in-game HUD
+   (`:not(.in-game)`), and it is imported before halloween.css so the seasonal
+   theme still wins when it is switched on.
+
+   Palette
+     ink        #15110d   page background
+     lacquer    #1c1611   panels
+     vermilion  #d2553a   primary accent (replaces malibu blue)
+     gold       #d9a84a   secondary accent / titles (replaces aquarius)
+     hanji      #efe6d2   paper tone, used for the watermark and highlights
+*/
+
+:root {
+  --hanji-ink: #15110d;
+  --hanji-lacquer: rgba(28, 22, 17, 0.94);
+  --hanji-vermilion: #d2553a;
+  --hanji-gold: #d9a84a;
+  --hanji-paper: #efe6d2;
+  --hanji-serif:
+    "Noto Serif KR", "Nanum Myeongjo", "Batang", "Noto Serif CJK KR",
+    "Songti SC", "Hiragino Mincho ProN", "MS Mincho", serif;
+  /* Fractal-noise paper grain, tinted warm. Inline so no asset is needed. */
+  --hanji-grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.94  0 0 0 0 0.9  0 0 0 0 0.82  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Theme variables. <o-modal> is a Shadow DOM host that adopts the document's
+   Tailwind sheet (which re-declares the brand tokens on :host), so the tokens
+   are set on it explicitly, the same way halloween.css does. In-game modals
+   are left alone so the HUD keeps its original contrast. */
+body.hanji-theme:not(.in-game),
+body.hanji-theme:not(.in-game)
+  o-modal:not(
+    #game-settings *,
+    settings-modal *,
+    win-modal *,
+    new-lobby-prompt *,
+    player-panel *,
+    chat-modal *,
+    multi-tab-modal *,
+    alert-frame *
+  ) {
+  --color-malibu-blue: #d2553a;
+  --color-aquarius: #d9a84a;
+  --color-bright-blue: #d2553a;
+  --color-deep-navy: #15110d;
+  --color-surface: #1c1611;
+  --font-display: var(--hanji-serif);
+  --shadow-malibu-blue: 0 0 14px rgba(210, 85, 58, 0.22);
+  --shadow-malibu-blue-soft: 0 0 12px rgba(210, 85, 58, 0.2);
+  --shadow-malibu-blue-strong: 0 0 15px rgba(210, 85, 58, 0.3);
+  --shadow-malibu-blue-pill: 0 0 6px rgba(210, 85, 58, 0.35);
+  --shadow-malibu-blue-ring-sm: 0 0 0 4px rgba(210, 85, 58, 0.2);
+  --shadow-malibu-blue-ring-lg: 0 0 0 6px rgba(210, 85, 58, 0.3);
+  --shadow-lobby-card-hover: 0 0 0 2px #d2553a, 0 0 20px rgba(210, 85, 58, 0.45);
+  --shadow-action-card-hover:
+    0 0 0 1px #d2553a, 0 0 12px rgba(210, 85, 58, 0.35);
+}
+
+:host-context(body.hanji-theme:not(.in-game)) {
+  --color-malibu-blue: #d2553a;
+  --color-aquarius: #d9a84a;
+  --color-bright-blue: #d2553a;
+  --color-deep-navy: #15110d;
+  --color-surface: #1c1611;
+  --font-display: var(--hanji-serif);
+  --shadow-malibu-blue: 0 0 14px rgba(210, 85, 58, 0.22);
+  --shadow-malibu-blue-soft: 0 0 12px rgba(210, 85, 58, 0.2);
+  --shadow-malibu-blue-strong: 0 0 15px rgba(210, 85, 58, 0.3);
+  --shadow-malibu-blue-pill: 0 0 6px rgba(210, 85, 58, 0.35);
+  --shadow-malibu-blue-ring-sm: 0 0 0 4px rgba(210, 85, 58, 0.2);
+  --shadow-malibu-blue-ring-lg: 0 0 0 6px rgba(210, 85, 58, 0.3);
+  --shadow-lobby-card-hover: 0 0 0 2px #d2553a, 0 0 20px rgba(210, 85, 58, 0.45);
+  --shadow-action-card-hover:
+    0 0 0 1px #d2553a, 0 0 12px rgba(210, 85, 58, 0.35);
+}
+
+/* --- Page background: ink, warm tint, paper grain, vignette, watermark --- */
+body.hanji-theme:not(.in-game) {
+  background-color: var(--hanji-ink) !important;
+  scrollbar-color: #7a2f22 #1c1611;
+}
+
+body.hanji-theme:not(.in-game) ::selection {
+  background: rgba(210, 85, 58, 0.45);
+  color: #fff;
+}
+
+/* The background photo, washed out to a warm sepia like aged paper. */
+body.hanji-theme:not(.in-game) #background-layer {
+  filter: sepia(0.85) saturate(0.7) brightness(0.55) contrast(1.05) !important;
+  opacity: 0.35 !important;
+}
+
+/* Paper grain over the whole backdrop. */
+body.hanji-theme:not(.in-game) #hex-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 40%, transparent 35%, rgba(0, 0, 0, 0.65) 100%),
+    var(--hanji-grain);
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* A large faint seal-style watermark behind the menu: 天下, "all under heaven",
+   the goal in all three eras (Three Kingdoms, Sengoku, Warring States). */
+body.hanji-theme:not(.in-game) #hex-grid::before {
+  content: "天下";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--hanji-serif);
+  font-weight: 900;
+  font-size: min(62vw, 62vh);
+  letter-spacing: 0.04em;
+  color: var(--hanji-vermilion);
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.hanji-theme.in-game #hex-grid {
+  display: none !important;
+}
+
+/* --- Brand title (replaces the logo image in the nav bars) --- */
+.brand-title {
+  font-family: var(--hanji-serif);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+  color: var(--hanji-gold);
+  text-shadow:
+    0 0 14px rgba(210, 85, 58, 0.45),
+    0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* --- Navigation bars, sidebar and footer: lacquer panels with a gold hairline --- */
+body.hanji-theme:not(.in-game) desktop-nav-bar nav,
+body.hanji-theme:not(.in-game) mobile-nav-bar,
+body.hanji-theme:not(.in-game) #sidebar-menu,
+body.hanji-theme:not(.in-game) play-page > div > div.fixed.bg-surface,
+body.hanji-theme:not(.in-game) page-footer footer {
+  background-color: var(--hanji-lacquer) !important;
+  box-shadow:
+    inset 0 -1px 0 rgba(217, 168, 74, 0.3),
+    0 4px 20px rgba(0, 0, 0, 0.7) !important;
+}
+
+body.hanji-theme:not(.in-game) desktop-nav-bar .nav-menu-item:hover,
+body.hanji-theme:not(.in-game) desktop-nav-bar .nav-menu-item.active,
+body.hanji-theme:not(.in-game) mobile-nav-bar .nav-menu-item:hover,
+body.hanji-theme:not(.in-game) mobile-nav-bar .nav-menu-item.active {
+  color: var(--hanji-vermilion) !important;
+  filter: drop-shadow(0 0 12px rgba(210, 85, 58, 0.45)) !important;
+}
+
+body.hanji-theme:not(.in-game) .l-header__highlightText {
+  color: var(--hanji-gold) !important;
+}
+
+/* --- Modals and panels --- */
+body.hanji-theme:not(.in-game) .page-content > div,
+body.hanji-theme:not(.in-game) [role="dialog"]:not(#clan-tag-menu) > div {
+  background-color: var(--hanji-lacquer) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(217, 168, 74, 0.18),
+    0 0 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+:host-context(body.hanji-theme:not(.in-game)) section.bg-black\/70 {
+  background-color: var(--hanji-lacquer) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(217, 168, 74, 0.18),
+    0 0 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+body.hanji-theme:not(.in-game) [role="menu"] {
+  background-color: var(--hanji-lacquer) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8) !important;
+}
+
+body.hanji-theme:not(.in-game)
+  [role="menu"]
+  button[role="menuitem"]:hover:not([class*="text-red"]) {
+  background-color: rgba(210, 85, 58, 0.14) !important;
+  color: #fff !important;
+}

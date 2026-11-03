@@ -1,4 +1,3 @@
-import { assetUrl } from "@openfront/shared/AssetUrls";
 import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import "./CosmeticBackground";
@@ -7,6 +6,7 @@ import "./NavUtilityIcons";
 import "./NewsBox";
 import "./SteamWishlist";
 import "./StreamingNow";
+import { translateText } from "../Utils";
 
 @customElement("play-page")
 export class PlayPage extends LitElement {
@@ -58,11 +58,9 @@ export class PlayPage extends LitElement {
             <div
               class="col-start-2 flex items-center justify-center text-malibu-blue min-w-0"
             >
-              <img
-                src=${assetUrl("images/OpenFrontLogo.svg")}
-                alt="OpenFront"
-                class="h-full w-auto"
-              />
+              <span class="brand-title text-2xl leading-none"
+                >${translateText("main.brand_name")}</span
+              >
             </div>
 
             <!-- Right slot: bell, help, settings and the profile control. The menu is

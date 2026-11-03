@@ -1,9 +1,9 @@
-import { assetUrl } from "@openfront/shared/AssetUrls";
 import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import "./NavAccountMenu";
 import { NavNotificationsController } from "./NavNotificationsController";
 import "./NavUtilityIcons";
+import { translateText } from "../Utils";
 
 @customElement("desktop-nav-bar")
 export class DesktopNavBar extends LitElement {
@@ -57,12 +57,10 @@ export class DesktopNavBar extends LitElement {
         class="hidden lg:flex w-full bg-zinc-900/90 backdrop-blur-md items-center justify-center gap-8 py-4 shrink-0 z-50 relative compact:[zoom:0.75]"
       >
         <div class="flex flex-col items-center justify-center">
-          <div class="h-8">
-            <img
-              class="block h-full aspect-[1364/259]"
-              src=${assetUrl("images/OpenFrontLogo.svg")}
-              alt="OpenFront"
-            />
+          <div class="h-8 flex items-center">
+            <span class="brand-title text-3xl leading-none"
+              >${translateText("main.brand_name")}</span
+            >
           </div>
           <div
             id="game-version"

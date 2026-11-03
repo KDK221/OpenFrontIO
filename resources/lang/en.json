@@ -1466,6 +1466,7 @@
   },
   "main": {
     "account": "Account",
+    "brand_name": "天下 Cheonha",
     "clans": "Clans",
     "copyright": "© OpenFront™ and Contributors",
     "create": "Create Lobby",
@@ -1489,7 +1490,7 @@
     "solo": "Solo",
     "store": "Store",
     "terms_of_service": "Terms of Service",
-    "title": "OpenFront (ALPHA)",
+    "title": "Cheonha (ALPHA)",
     "troubleshooting": "Troubleshooting",
     "tutorial": "Tutorial",
     "user_avatar_alt": "{username}'s avatar",
