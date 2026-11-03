@@ -104,7 +104,7 @@ const UNIT_ICONS = {
   city: "images/CityIconWhite.svg",
   port: "images/PortIcon.svg",
   factory: "images/FactoryIconWhite.svg",
-  defensePost: "images/ShieldIconWhite.svg",
+  defensePost: "images/FortressIconWhite.svg",
   transport: "images/BoatIconWhite.svg",
   tradeShip: "images/TradeShipIconWhite.svg",
   troop: "images/SoldierIcon.svg",

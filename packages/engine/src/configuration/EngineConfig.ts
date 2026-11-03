@@ -138,12 +138,14 @@ export class EngineConfig extends Config {
     return 5 - falloutRatio * 2;
   }
 
+  // Attacker losses on a tile covered by the defender's fortress (was 5).
   defensePostDefenseBonus(): number {
-    return 5;
+    return 7;
   }
 
+  // How much slower an attack advances on a covered tile (was 3).
   defensePostSpeedBonus(): number {
-    return 3;
+    return 4;
   }
 
   playerTeams(): TeamCountConfig {

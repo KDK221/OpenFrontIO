@@ -172,8 +172,10 @@ export class Config {
     return 90;
   }
 
+  // Reach of a fortress (defense post), in tiles. Raised from OpenFront's 30:
+  // in the historical scenarios fortresses are the main way to hold a line.
   defensePostRange(): number {
-    return 30;
+    return 40;
   }
 
   isUnitDisabled(unitType: UnitType): boolean {
