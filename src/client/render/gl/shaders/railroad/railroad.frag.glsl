@@ -223,6 +223,9 @@ void main() {
       : (owner == uint(uLocalPlayerID)
         ? uLocalRailColor
         : texture(uPalette, vec2((float(owner) + 0.5) / float(PALETTE_SIZE), 0.75)).rgb);
+    // Trade roads: in this fork the "rails" are dirt roads, so pull the owner
+    // color most of the way toward an earthy tone. Cosmetics below still win.
+    railColor = mix(vec3(0.60, 0.46, 0.28), railColor, 0.3);
     // railroad cosmetic: rails are colored by the tile owner, so the owner's
     // railroad effect (raw catalog colors, like trails) replaces that color —
     // including the local player's white/black rail color. Like the
