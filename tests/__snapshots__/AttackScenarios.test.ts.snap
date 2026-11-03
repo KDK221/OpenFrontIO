@@ -255,18 +255,18 @@ exports[`attack scenarios > plains 100-troop attack vs 1M defender 1`] = `
 exports[`attack scenarios > plains 400-tile turtle, 4M troops (10k/tile) under a defense post, attacked with 1M 1`] = `
 {
   "attackerLossPerSecond": 714300,
-  "attackerLossPerTile": 62500,
+  "attackerLossPerTile": 71430,
   "attackerTiles": 9600,
   "attackerTroopsLost": 1000000,
   "defenderEliminated": false,
-  "defenderLossPerSecond": 114300,
+  "defenderLossPerSecond": 100000,
   "defenderLossPerTile": 10000,
   "defenderTiles": 400,
-  "defenderTroopsLost": 160000,
+  "defenderTroopsLost": 140000,
   "finished": true,
   "ticks": 14,
-  "tilesConquered": 16,
-  "tilesPerSecond": 11.43,
+  "tilesConquered": 14,
+  "tilesPerSecond": 10,
 }
 `;
 
@@ -344,37 +344,37 @@ exports[`attack scenarios > plains bot vs terra nullius, attack 2k 1`] = `
 
 exports[`attack scenarios > plains defender with defense posts covering the whole border 1`] = `
 {
-  "attackerLossPerSecond": 10000,
-  "attackerLossPerTile": 769.2,
+  "attackerLossPerSecond": 9091,
+  "attackerLossPerTile": 909.1,
   "attackerTiles": 5000,
   "attackerTroopsLost": 10000,
   "defenderEliminated": false,
-  "defenderLossPerSecond": 130,
+  "defenderLossPerSecond": 100,
   "defenderLossPerTile": 10,
   "defenderTiles": 5000,
-  "defenderTroopsLost": 130,
+  "defenderTroopsLost": 110,
   "finished": true,
-  "ticks": 10,
-  "tilesConquered": 13,
-  "tilesPerSecond": 13,
+  "ticks": 11,
+  "tilesConquered": 11,
+  "tilesPerSecond": 10,
 }
 `;
 
 exports[`attack scenarios > plains defender with one defense post at the border 1`] = `
 {
   "attackerLossPerSecond": 9091,
-  "attackerLossPerTile": 625,
+  "attackerLossPerTile": 555.6,
   "attackerTiles": 5000,
   "attackerTroopsLost": 10000,
   "defenderEliminated": false,
-  "defenderLossPerSecond": 145.5,
+  "defenderLossPerSecond": 163.6,
   "defenderLossPerTile": 10,
   "defenderTiles": 5000,
-  "defenderTroopsLost": 160,
+  "defenderTroopsLost": 180,
   "finished": true,
   "ticks": 11,
-  "tilesConquered": 16,
-  "tilesPerSecond": 14.55,
+  "tilesConquered": 18,
+  "tilesPerSecond": 16.36,
 }
 `;
 
