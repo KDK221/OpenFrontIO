@@ -5,22 +5,33 @@ import { translateText } from "../Utils";
 
 export type PlayMode = "scenario" | "free";
 
-/** A playable faction of a scenario map: its banner id and city count. */
+/**
+ * A playable faction of a scenario map: its banner id and its capital, the
+ * one city the player starts from (the faction's first city in the
+ * manifest).
+ */
 export interface FactionOption {
   id: string;
-  cities: number;
+  capital: string;
 }
 
-/** Groups a map's nations (cities) by faction banner, in manifest order. */
+/** The map's factions in manifest order, each with its capital. */
 export function factionsOf(
-  nations: readonly { flag?: string | null }[],
+  nations: readonly { flag?: string | null; name: string }[],
 ): FactionOption[] {
-  const counts = new Map<string, number>();
+  const capitals = new Map<string, string>();
   for (const n of nations) {
-    if (!n.flag) continue;
-    counts.set(n.flag, (counts.get(n.flag) ?? 0) + 1);
+    if (!n.flag || capitals.has(n.flag)) continue;
+    capitals.set(n.flag, n.name);
   }
-  return [...counts].map(([id, cities]) => ({ id, cities }));
+  return [...capitals].map(([id, capital]) => ({ id, capital }));
+}
+
+/** A capital's display name, falling back to the manifest's name. */
+function capitalName(name: string): string {
+  const key = `capital.${name}`;
+  const text = translateText(key);
+  return text === key ? name : text;
 }
 
 /** The faction's display name, falling back to its id. */
@@ -111,7 +122,9 @@ export class PlayModePicker extends LitElement {
         >${factionName(f.id)}</span
       >
       <span class="text-[10px] text-white/50"
-        >${translateText("play_mode.cities", { count: f.cities })}</span
+        >${translateText("play_mode.capital", {
+          name: capitalName(f.capital),
+        })}</span
       >
     </button>`;
   }
