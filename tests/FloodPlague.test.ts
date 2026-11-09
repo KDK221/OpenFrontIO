@@ -147,4 +147,13 @@ describe("Plague (MIRV slot)", () => {
     expect(execs.some((e) => e instanceof MirvExecution)).toBe(false);
     expect(a.units(UnitType.MIRV)).toHaveLength(0);
   });
+
+  test("costs 3M when it replaces the MIRV", async () => {
+    const { game, a } = await plagueGame();
+    vi.spyOn(game.config(), "plagueReplacesMirv").mockReturnValue(true);
+    vi.spyOn(game.config(), "infiniteGold").mockReturnValue(false);
+    expect(game.config().unitInfo(UnitType.MIRV).cost(game, a)).toBe(
+      3_000_000n,
+    );
+  });
 });

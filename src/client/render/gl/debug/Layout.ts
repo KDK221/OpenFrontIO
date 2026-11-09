@@ -341,6 +341,7 @@ export function buildTree(s: RenderSettings, d: RenderSettings): DebugNode[] {
       slider(s.name, "cullThreshold", d.name, 0, 0.05, 0.001),
       slider(s.name, "nameScaleFactor", d.name, 0.1, 1, 0.05),
       slider(s.name, "nameScaleCap", d.name, 1, 10, 0.5),
+      slider(s.name, "maxNameSize", d.name, 5, 200, 1),
       slider(s.name, "troopSizeMultiplier", d.name, 0.1, 2, 0.05),
       slider(s.name, "outlineWidth", d.name, 0, 10, 0.1, "Outline Width (px)"),
       color(

@@ -498,11 +498,15 @@ export class NamePass {
         }
       }
 
+      // Big realms would otherwise get names that cover half the map: the
+      // label grows with the territory, so cap it.
+      const size = Math.min(entry.size, this.settings.name.maxNameSize);
+
       // Check if target position changed — only then recompute lerp source
       if (
         entry.x !== slot.tgtX ||
         entry.y !== slot.tgtY ||
-        entry.size !== slot.tgtScale
+        size !== slot.tgtScale
       ) {
         if (!shouldSnap) {
           const elapsed = now - slot.startTime;
@@ -516,11 +520,11 @@ export class NamePass {
         } else {
           slot.srcX = entry.x;
           slot.srcY = entry.y;
-          slot.srcScale = entry.size;
+          slot.srcScale = size;
         }
         slot.tgtX = entry.x;
         slot.tgtY = entry.y;
-        slot.tgtScale = entry.size;
+        slot.tgtScale = size;
         slot.startTime = now;
         dirty = true;
       } else if (

@@ -278,6 +278,8 @@ export interface RenderSettings {
     cullThreshold: number;
     nameScaleFactor: number;
     nameScaleCap: number;
+    /** Largest label size, in the same units as the placement size. */
+    maxNameSize: number;
     troopSizeMultiplier: number;
     outlineWidth: number;
     outlineR: number;

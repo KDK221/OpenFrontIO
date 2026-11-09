@@ -369,6 +369,11 @@ export class EngineConfig extends Config {
           ) {
             return 0n;
           }
+          // The MIRV slot is the Plague in the eras: priced between the
+          // Fire Attack (750K) and the Flood Attack (5M), not the MIRV's 25M+.
+          if (this.plagueReplacesMirv()) {
+            return 3_000_000n;
+          }
           return 25_000_000n + BigInt(game.mirvsLaunched()) * 15_000_000n;
         };
       case UnitType.MissileSilo:

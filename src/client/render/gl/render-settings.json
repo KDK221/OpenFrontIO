@@ -220,6 +220,7 @@
     "cullThreshold": 0.008,
     "nameScaleFactor": 0.4,
     "nameScaleCap": 3,
+    "maxNameSize": 30,
     "troopSizeMultiplier": 0.6,
     "outlineWidth": 1.4,
     "outlineR": 0.0,

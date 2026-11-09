@@ -14,6 +14,7 @@ describe("NamePass verified badge hover", () => {
     const name: any = {
       lerpSpeed: 10,
       nameScaleCap: 10,
+      maxNameSize: 1000,
       troopSizeMultiplier: 0.8,
     };
     name.nameScaleFactor = 1;
@@ -51,6 +52,7 @@ describe("NamePass targeted nameplate hover", () => {
     const name: any = {
       lerpSpeed: 10,
       nameScaleCap: 10,
+      maxNameSize: 1000,
       nameScaleFactor: 1,
       cullThreshold: 0.1,
       troopSizeMultiplier: 0.8,
@@ -113,6 +115,7 @@ describe("NamePass draw hover-owner forwarding", () => {
       const name: any = {
         lerpSpeed: 10,
         nameScaleCap: 10,
+        maxNameSize: 1000,
         nameScaleFactor: 1,
         cullThreshold: 0.1,
         troopSizeMultiplier: 0.8,
