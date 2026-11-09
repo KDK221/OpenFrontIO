@@ -472,9 +472,9 @@ export class Config {
     return 0.1;
   }
 
-  /** Cap on the summed golden-land bonus (+50%). */
+  /** Cap on the summed golden-land bonus: at most x1.1 however many. */
   goldenLandMaxBonus(): number {
-    return 0.5;
+    return 0.1;
   }
 
   /** Troop growth multiplier for a golden-land share (see goldenShares). */

@@ -81,14 +81,13 @@ describe("golden lands: proportional bonus", () => {
     expect(shares.get(2)).toBeCloseTo(0.4);
   });
 
-  test("+10% per whole land, summed, capped at +50%", async () => {
+  test("+10% for a whole land, its share for part, x1.1 at most", async () => {
     const game = await setup("plains", {});
     const c = game.config();
     expect(c.goldenLandMultiplier(0)).toBe(1);
-    expect(c.goldenLandMultiplier(1)).toBeCloseTo(1.1);
     expect(c.goldenLandMultiplier(0.6)).toBeCloseTo(1.06);
-    expect(c.goldenLandMultiplier(2.5)).toBeCloseTo(1.25);
-    expect(c.goldenLandMultiplier(9)).toBeCloseTo(1.5);
+    expect(c.goldenLandMultiplier(1)).toBeCloseTo(1.1);
+    expect(c.goldenLandMultiplier(2.5)).toBeCloseTo(1.1);
   });
 
   test("troop growth follows the share", async () => {
