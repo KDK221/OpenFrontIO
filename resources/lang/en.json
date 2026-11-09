@@ -2471,7 +2471,8 @@
   "side_ads": {
     "blocked_body": "This game is free thanks to ads. Please add this site to your ad blocker's allowlist and refresh.",
     "blocked_title": "Ad blocker on",
-    "placeholder": "Ad slot 160×600 (set ADSENSE_CLIENT in AdConfig.ts)"
+    "coupang_disclosure": "This ad is part of Coupang Partners, and we receive a commission from it.",
+    "placeholder": "Ad slot 160×600 (set a provider in AdConfig.ts)"
   },
   "single_modal": {
     "max_timer_invalid": "Please enter a valid max timer value (1-120 minutes)",

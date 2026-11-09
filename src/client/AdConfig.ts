@@ -1,20 +1,45 @@
 /**
- * Your own ads. Fill these in once Google AdSense approves the site:
- *   - ADSENSE_CLIENT: your publisher id, "ca-pub-1234567890123456"
- *   - SIDE_AD_SLOTS: the ad unit ids of two vertical display units
- *     (AdSense → Ads → By ad unit → Display ads, size 160x600 or responsive)
- * Also put an ads.txt at the site root with the line AdSense gives you.
+ * Your own ads in the two side columns of the homepage (side-ads).
  *
- * Left empty, no ad script loads. In dev the slots show a dashed placeholder
- * so the layout can be checked.
+ * Each column shows one provider:
+ *   - "coupang": a Coupang Partners dynamic banner (COUPANG below), with
+ *     the disclosure line Coupang requires under it
+ *   - "adsense": a Google AdSense display unit (ADSENSE_CLIENT and the
+ *     column's slot id), once AdSense approves the site; put an ads.txt
+ *     with AdSense's line at the site root too
+ *   - "none": nothing
  */
+export type SideAdProvider = "coupang" | "adsense" | "none";
+
+export const SIDE_ADS: { left: SideAdProvider; right: SideAdProvider } = {
+  left: "coupang",
+  right: "coupang",
+};
+
+/** Coupang Partners dynamic banner (Partners → 다이나믹 배너). */
+export const COUPANG = {
+  id: 1039894,
+  trackingCode: "AF9798338",
+  template: "carousel",
+};
+
+/** Google AdSense publisher id, "ca-pub-1234567890123456". */
 export const ADSENSE_CLIENT = "";
 
-export const SIDE_AD_SLOTS = {
+/** AdSense ad unit ids for each column (vertical display units). */
+export const ADSENSE_SLOTS = {
   left: "",
   right: "",
 };
 
-export function adsConfigured(): boolean {
-  return ADSENSE_CLIENT !== "";
+/** Whether a column has a provider that can actually show something. */
+export function sideAdReady(side: "left" | "right"): boolean {
+  switch (SIDE_ADS[side]) {
+    case "coupang":
+      return COUPANG.trackingCode !== "";
+    case "adsense":
+      return ADSENSE_CLIENT !== "" && ADSENSE_SLOTS[side] !== "";
+    case "none":
+      return false;
+  }
 }
