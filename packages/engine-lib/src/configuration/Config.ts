@@ -435,6 +435,15 @@ export class Config {
     return 100;
   }
 
+  /**
+   * Max distance (in tiles) between a Siege Camp (the former missile silo)
+   * and the target of a Fire Attack (the former atom bomb). Catapults and
+   * fire arrows cannot reach across the whole map.
+   */
+  siegeRange(): number {
+    return 120;
+  }
+
   samRange(level: number): number {
     // rational growth function (level 1 = 70, level 5 just above hydro range, asymptotically approaches 150)
     return this.maxSamRange() - 480 / (level + 5);

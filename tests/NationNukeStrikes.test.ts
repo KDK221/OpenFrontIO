@@ -27,6 +27,12 @@ class RealNukeRadiusConfig extends TestConfig {
   nukeMagnitudes(unitType: UnitType): NukeMagnitude {
     return Config.prototype.nukeMagnitudes.call(this, unitType);
   }
+
+  // These tests are about nation targeting on a 200x200 map, not about the
+  // Fire Attack's siege range.
+  siegeRange(): number {
+    return Infinity;
+  }
 }
 
 const RESERVE_RATIO = 0.3;

@@ -1674,9 +1674,16 @@ export class PlayerImpl implements Player {
     }
 
     // only get missilesilos that are not on cooldown and not under construction
+    // Fire Attacks (AtomBomb) can only be launched from a Siege Camp within
+    // siegeRange of the target.
+    const siegeRangeSquared =
+      nukeType === UnitType.AtomBomb ? config.siegeRange() ** 2 : Infinity;
     const readySilos = this.units(UnitType.MissileSilo).filter(
       (silo) =>
-        silo.isActive() && !silo.isInCooldown() && !silo.isUnderConstruction(),
+        silo.isActive() &&
+        !silo.isInCooldown() &&
+        !silo.isUnderConstruction() &&
+        mg.euclideanDistSquared(silo.tile(), tile) <= siegeRangeSquared,
     );
     readySilos.sort(
       (a, b) =>
