@@ -869,6 +869,18 @@
     "ranks": "Ranks",
     "things": "Things"
   },
+  "era_hero": {
+    "samguk_desc": "Goguryeo, Baekje, Silla and Gaya contest the peninsula.",
+    "samguk_name": "Three Kingdoms of Korea",
+    "samguk_years": "c. 400 – 668",
+    "sengoku_desc": "Daimyo clans from Oda to Shimazu fight to unify the realm.",
+    "sengoku_name": "Sengoku Japan",
+    "sengoku_years": "1467 – 1615",
+    "tagline": "Unite all under heaven. Choose an age, take up a banner, and conquer the land city by city.",
+    "warring_states_desc": "Seven great states and their neighbors race to rule the Central Plain.",
+    "warring_states_name": "Warring States China",
+    "warring_states_years": "475 – 221 BC"
+  },
   "error_modal": {
     "connection_error": "Connection error!",
     "connection_lost": "Lost connection to the game server and could not reconnect. Refresh the page to try rejoining.",
@@ -1557,6 +1569,7 @@
     "settings": "Settings",
     "sign_in": "Sign in",
     "solo": "Solo",
+    "source_code": "Source code (AGPL) · based on OpenFront",
     "store": "Store",
     "terms_of_service": "Terms of Service",
     "title": "Cheonha (ALPHA)",

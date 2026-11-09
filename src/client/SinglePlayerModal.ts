@@ -816,6 +816,18 @@ export class SinglePlayerModal extends BaseModal {
   }
 
   protected onOpen(args?: Record<string, unknown>): void {
+    // The home screen's era cards open straight into a map and mode.
+    const map = args?.map;
+    if (
+      typeof map === "string" &&
+      (Object.values(GameMapType) as string[]).includes(map)
+    ) {
+      this.selectedMap = map as GameMapType;
+      this.useRandomMap = false;
+    }
+    if (args?.mode === "scenario" || args?.mode === "free") {
+      this.playMode = args.mode;
+    }
     const save = args?.save;
     this.sharedSaveId = typeof save === "string" ? savedGameIdFrom(save) : null;
     // Saves made since the list last loaded (a game played in between).

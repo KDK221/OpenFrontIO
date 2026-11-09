@@ -1343,7 +1343,8 @@
     "troubleshooting": "문제 해결하기",
     "tutorial": "튜토리얼",
     "user_avatar_alt": "{username}의 프사",
-    "wiki": "위키"
+    "wiki": "위키",
+    "source_code": "소스 코드 (AGPL) · OpenFront 기반"
   },
   "map": {
     "achiran": "아치란",
@@ -2515,5 +2516,17 @@
     "loading_factions": "세력 불러오는 중…",
     "scenario": "시나리오 모드",
     "scenario_desc": "역사 속 나라가 되어 실제 성들에서 시작합니다."
+  },
+  "era_hero": {
+    "tagline": "천하를 통일하라. 시대를 고르고, 깃발을 들고, 성 하나하나를 차지하라.",
+    "samguk_name": "한국 삼국시대",
+    "samguk_years": "약 400 – 668년",
+    "samguk_desc": "고구려·백제·신라·가야가 한반도를 두고 다툽니다.",
+    "sengoku_name": "일본 전국시대",
+    "sengoku_years": "1467 – 1615년",
+    "sengoku_desc": "오다부터 시마즈까지, 다이묘들이 천하통일을 겨룹니다.",
+    "warring_states_name": "중국 춘추전국시대",
+    "warring_states_years": "기원전 475 – 221년",
+    "warring_states_desc": "전국칠웅과 주변 세력이 중원의 패권을 다툽니다."
   }
 }

@@ -3,8 +3,7 @@ import { customElement } from "lit/decorators.js";
 import "./CosmeticBackground";
 import "./NavAccountMenu";
 import "./NavUtilityIcons";
-import "./NewsBox";
-import "./StreamingNow";
+import "./EraHero";
 import { translateText } from "../Utils";
 
 @customElement("play-page")
@@ -87,8 +86,8 @@ export class PlayPage extends LitElement {
 
           <!-- Left column: news banner + identity row, stacked tight. -->
           <div class="flex flex-col gap-2 min-w-0">
-            <!-- Off on compact screens (see styles.css), like Streaming Now. -->
-            <news-box class="compact:hidden"></news-box>
+            <!-- The game's title and one card per era. -->
+            <era-hero class="block mb-2"></era-hero>
 
             <!-- Identity row: username over the currently selected cosmetic background. -->
             <div
@@ -108,11 +107,6 @@ export class PlayPage extends LitElement {
             </div>
           </div>
 
-          <!-- Right column: Streaming Now (desktop only), stretched to the left column's
-               full height so the top strip has no dead space. -->
-          <streaming-now
-            class="hidden lg:flex lg:h-full lg:flex-col w-full min-w-0"
-          ></streaming-now>
         </div>
 
         <game-mode-selector></game-mode-selector>
