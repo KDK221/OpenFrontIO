@@ -178,11 +178,11 @@
       "city": "최대 인구 수를 증가시킵니다",
       "defense_post": "산성: 주변 국경에 대한 공격을 크게 늦추고 적의 병력 손실을 키웁니다",
       "factory": "가도를 건설하고 상단을 생성합니다",
-      "hydrogen_bomb": "물 근처의 넓은 지역을 수몰시킵니다",
+      "hydrogen_bomb": "거대한 투석기로 넓은 지역을 부숩니다",
       "mirv": "선택한 플레이어에게 역병을 퍼뜨립니다",
       "missile_silo": "사거리 안에 화공을 가할 수 있습니다",
       "port": "무역선을 보내 금을 생산합니다",
-      "sam_launcher": "날아오는 화공과 수공을 쏘아 떨어뜨립니다",
+      "sam_launcher": "날아오는 화공과 벽력거의 돌덩이를 쏘아 떨어뜨립니다",
       "warship": "무역선을 나포하고, 수송선과 함선을 파괴합니다"
     },
     "not_enough_money": "돈이 부족합니다",
@@ -199,7 +199,12 @@
       "build_warships": "군함을 건조해!",
       "finish": "[P1]을(를) 끝장내버리자!",
       "focus": "[P1]에게 집중 공격하자!",
-      "mirv": "[P1]에게 다탄두 미사일을 발사 해야해!"
+      "mirv": "[P1]에게 다탄두 미사일을 발사 해야해!",
+      "betray": "[P1]을(를) 배신해!",
+      "build_sams": "쇠뇌 진지를 지어!",
+      "crown": "1등을 공격해!",
+      "nuke": "[P1]에게 화공을!",
+      "spend_gold": "금 쌓아두지 말고 써!"
     },
     "cat": {
       "attack": "공격",
@@ -207,14 +212,16 @@
       "greet": "인사말",
       "help": "도움말",
       "misc": "기타",
-      "warnings": "경고"
+      "warnings": "경고",
+      "recent": "최근"
     },
     "defend": {
       "ally": "[P1]은(는) 내 동맹이야!",
       "build_posts": "산성을 건설해!",
       "defend": "[P1]을(를) 막아!",
       "defend_from": "[P1]을(를) 막아!",
-      "dont_attack": "[P1]을(를) 치지 마!"
+      "dont_attack": "[P1]을(를) 치지 마!",
+      "make_ally": "[P1]와(과) 동맹을 맺어!"
     },
     "from": "{user}: {msg}",
     "greet": {
@@ -233,7 +240,9 @@
       "thanks": "고마워!",
       "trust_broken": "믿었는데...",
       "trust_me": "날 믿어, 약속할게!",
-      "well_played": "잘 했어!"
+      "well_played": "잘 했어!",
+      "what_doing": "뭐 하는 거야?!",
+      "why_attack": "왜 나를 공격해?!"
     },
     "help": {
       "alliance": "동맹할래?",
@@ -243,7 +252,11 @@
       "sorry_attack": "미안, 치려던게 아니였어;",
       "trade_partners": "무역 파트너가 되자!",
       "troops": "병력 좀 줘!",
-      "troops_frontlines": "전선으로 병력을 보내!"
+      "troops_frontlines": "전선으로 병력을 보내!",
+      "break_alliance": "나도 땅을 얻을 수 있게 동맹을 풀어 줘!",
+      "renew_alliance": "동맹이 끝나기 전에 갱신해 줘!",
+      "send_gold_to": "[P1]에게 금을 보내!",
+      "send_troops_to": "[P1]에게 병력을 보내!"
     },
     "misc": {
       "build_closer": "가도를 공유하려면 더 가까이 건설해!",
@@ -252,7 +265,9 @@
       "go": "가자!",
       "pr": "내 PR은 도대체 언제 머지되는 걸까...?",
       "strategy": "좋은 전략이야!",
-      "team_up": "힘을 합쳐 [P1]을(를) 공격하자!"
+      "team_up": "힘을 합쳐 [P1]을(를) 공격하자!",
+      "alliances_end_together": "우리 [P1]와(과)의 동맹이 비슷한 때에 끝나!",
+      "join_discord": "우리 커뮤니티에 들어와!"
     },
     "search": "플레이어 찾기...",
     "title": "빠른 채팅",
@@ -274,14 +289,50 @@
       "stop_trading_all": "모든 교역을 중단해 줘!",
       "strong": "[P1]은(는) 강해.",
       "weak": "[P1]은(는) 약해.",
-      "number1_warning": "우리가 힘을 합치지 않으면 1등 플레이어가 곧 이길 거야!"
+      "number1_warning": "우리가 힘을 합치지 않으면 1등 플레이어가 곧 이길 거야!",
+      "disconnected": "[P1]의 연결이 끊겼어!",
+      "nuke_threat": "당장 멈추지 않으면 화공을 퍼붓겠다!",
+      "pirating": "[P1]이(가) 우리 교역을 다 약탈하고 있어!",
+      "renew_or_nuke": "동맹을 갱신하지 않으면 화공을 퍼붓겠다!",
+      "stop_trading_enemies": "적과의 교역을 멈춰 줘!",
+      "stop_war": "다른 나라가 이득을 보기 전에 이 전쟁을 멈추자!"
     },
     "build": "메시지를 작성하세요...",
     "category": "카테고리",
     "phrase": "문장",
     "player": "플레이어",
     "send": "보내기",
-    "sort_by_territory": "영토순 정렬"
+    "sort_by_territory": "영토순 정렬",
+    "all_phrases": "전체 문구",
+    "no_phrases": "맞는 문구가 없어요",
+    "search_phrases": "문구 검색…",
+    "short": {
+      "greet": {
+        "ruining_games": "판을 망치네"
+      },
+      "help": {
+        "break_alliance": "동맹 풀어 줘, 땅이 필요해!",
+        "renew_alliance": "동맹 갱신하자!",
+        "sorry_attack": "공격해서 미안!",
+        "troops_frontlines": "전선으로 병력을!"
+      },
+      "misc": {
+        "alliances_end_together": "[P1] 동맹이 같이 끝나",
+        "coastline": "해안 좀 줘",
+        "join_discord": "커뮤니티에 들어와!",
+        "pr": "내 수정 반영됐어?"
+      },
+      "warnings": {
+        "mirv_ready": "[P1]이(가) 역병을 쓸 수 있어!",
+        "pirating": "[P1]이(가) 약탈 중",
+        "renew_or_nuke": "갱신 안 하면 화공이다!",
+        "saving_for_mirv": "[P1]이(가) 역병 모으는 중",
+        "snowballing": "[P1]이(가) 너무 커지고 있어",
+        "stalemate": "휴전? 교착 상태야.",
+        "stop_trading_enemies": "적과 교역 그만해!",
+        "stop_war": "다른 나라가 덮치기 전에 멈추자"
+      }
+    }
   },
   "clan_modal": {
     "applied": "적용됨",
@@ -529,7 +580,8 @@
     "slider_tooltip": "{percent}% • {amount}",
     "summary_keep": "유지",
     "target_dead": "목표 제거 완료",
-    "target_dead_note": "제거된 플레이어에게 자원을 보낼수 없습니다."
+    "target_dead_note": "제거된 플레이어에게 자원을 보낼수 없습니다.",
+    "scroll_to_top": "맨 위로"
   },
   "control_panel": {
     "allied_afk_neighbor_info": "동맹 상태라도 접속이 끊긴 플레이어는 공격할 수 있습니다.",
@@ -686,7 +738,9 @@
     "tab_all": "전체",
     "team_count": "팀 수",
     "team_size": "팀 인원수",
-    "title": "상세 보기"
+    "title": "상세 보기",
+    "default_profile": "기본 프로필",
+    "no_default_profile": "기본 프로필 없음"
   },
   "difficulty": {
     "difficulty": "국가 난이도",
@@ -760,7 +814,8 @@
       "description": "자동 시작 지점 선택에 실패했습니다. 이 게임을 플레이할 수 없습니다.",
       "title": "시작 지점 생성 실패"
     },
-    "turnstile_error": "인증 오류: {code}. 새로고침한 후 다시 시도해 주세요."
+    "turnstile_error": "인증 오류: {code}. 새로고침한 후 다시 시도해 주세요.",
+    "game_client_failed": "게임을 불러오지 못했어요. 연결을 확인하고 다시 시도해 주세요. 계속 그러면 게임을 다시 시작해 주세요."
   },
   "events_display": {
     "about_to_expire": "{name}와(과)의 동맹이 곧 만료됩니다!",
@@ -783,7 +838,7 @@
     "duration_second": "1초",
     "duration_seconds_plural": "{seconds}초",
     "focus": "초점",
-    "hydrogen_bomb_detonated": "{name} - 수공 명중",
+    "hydrogen_bomb_detonated": "{name} - 벽력거 명중",
     "ignore": "무시하기",
     "missile_intercepted": "쇠뇌 진지가 {unit}을(를) 격추했습니다",
     "no_boats_available": "배를 사용할 수 없습니다. 최대 {max}대",
@@ -801,7 +856,12 @@
     "trade_ship_captured": "{name}님에게 무역선이 나포되었습니다",
     "unit_destroyed": "당신의 {unit}이(가) 파괴되었습니다",
     "unit_voluntarily_deleted": "유닛이 해산되었습니다",
-    "wants_to_renew_alliance": "{name}님이 동맹 갱신을 원합니다"
+    "wants_to_renew_alliance": "{name}님이 동맹 갱신을 원합니다",
+    "atom_bomb_inbound": "{name} - 화공 접근",
+    "hydrogen_bomb_inbound": "{name} - 벽력거 접근",
+    "mirv_inbound": "☠️☠️☠️ {name} - 역병이 퍼진다 ☠️☠️☠️",
+    "naval_invasion_inbound": "{name}의 수군 상륙 접근 ({troops})",
+    "sent_emoji_all": "모두에게 보냄: {emoji}"
   },
   "featured_stream": {
     "expand": "펼치기",
@@ -906,7 +966,8 @@
     "start": "게임 시작",
     "starting": "시작 중...",
     "starting_gold": "시작 금 (M)",
-    "water_nukes": "수몰 폭탄"
+    "water_nukes": "수몰 폭탄",
+    "win_threshold": "승리 기준 (%)"
   },
   "game_starting_modal": {
     "code_license": "코드는 AGPL-3.0 라이선스에 따르며, 보증은 제공되지 않습니다.",
@@ -1039,7 +1100,8 @@
     "territory_alpha_desc": "영토 채우기 불투명도입니다 (낮을수록 지형이 더 비쳐 보입니다)",
     "territory_alpha_label": "영토 불투명도",
     "territory_sat_desc": "영토 채우기 채도입니다 (낮을수록 색상이 흐려집니다)",
-    "territory_sat_label": "영토 채도"
+    "territory_sat_label": "영토 채도",
+    "cosmetics_show_from_none": "아무도 없음"
   },
   "heads_up_message": {
     "catching_up": "따라잡는 중...",
@@ -1079,14 +1141,14 @@
     "build_defense_desc": "체크무늬 패턴을 보이는 근처 국경 주변의 방어력을 강화합니다. 적의 공격 속도가 느려지고 사상자가 증가합니다.",
     "build_desc": "설명",
     "build_factory_desc": "자동으로 인근 성읍, 포구, 다른 상업지구까지 가도를 건설하며, 우호적인 이웃과도 연결할 수 있습니다. 상단은 일정 간격으로 등장해 경로상의 각 건물을 방문할 때마다 일정량의 금을 제공하며, 이웃의 건물을 방문할 경우 추가 금을 얻을 수 있습니다.",
-    "build_hydrogen_desc": "제방을 무너뜨려 넓은 지역을 수몰시킵니다. 물 근처의 땅에만 쓸 수 있고, 가장 가까운 공성 진지에서 발동됩니다.",
+    "build_hydrogen_desc": "벽력거(霹靂車): 거대한 투석기가 돌덩이를 비처럼 퍼부어 넓은 지역의 병력과 건물을 부숩니다. 250칸 안의 가장 가까운 공성 진지에서 발사됩니다.",
     "build_icon": "아이콘",
     "build_menu_desc": "다음 건물들을 건설하거나, 현재 몇 개를 보유하고 있는지 확인할 수 있습니다:",
     "build_menu_title": "건설 메뉴",
     "build_mirv_desc": "목표에서 이웃으로 번지며 병력을 갉아먹지만 땅은 그대로 남는 역병입니다. 처음 클릭한 플레이어와 병이 번진 대상만 피해를 입습니다. 준비된 공성 진지가 필요합니다.",
     "build_name": "이름",
     "build_port_desc": "물가 근처에만 건설할 수 있습니다. 군함을 건조할 수 있게 됩니다. (무역 중단 시를 제외하고) 자국 포구와 다른 국가의 포구 간에 무역선을 자동으로 보내 양측 모두에게 금을 지급합니다. 플레이어를 공격하거나 공격받으면 해당 플레이어와의 무역이 자동으로 중단됩니다. 5분 후 또는 동맹 관계가 되면 무역이 재개됩니다. '무역 중단' 또는 '무역 시작'을 통해 수동으로 무역 상태를 변경할 수 있습니다.",
-    "build_sam_desc": "사거리 안으로 날아오는 적의 화공과 수공을 큰 쇠뇌로 쏘아 떨어뜨립니다. 한 번 쏘면 7.5초 동안 재장전합니다. 역병은 막을 수 없습니다.",
+    "build_sam_desc": "사거리 안으로 날아오는 적의 화공과 벽력거 돌덩이를 큰 쇠뇌로 쏘아 떨어뜨립니다. 한 번 쏘면 7.5초 동안 재장전합니다. 역병은 막을 수 없습니다.",
     "build_silo_desc": "투석기와 불화살을 갖춘 진지입니다. 사거리 안에 화공을 쏘려면 필요합니다.",
     "build_warship_desc": "특정 지역을 순찰하며 적 무역선을 나포하고 수송선과 군함을 파괴합니다. 가장 가까운 포구에서 생성되며 건조를 위해 처음 클릭한 지역을 순찰합니다. 군함을 공격 클릭한 후(단축키 항목의 '공격' 참조) 이동시키려는 새 지역을 공격 클릭하여 제어할 수 있습니다. 군함은 적 무역선을 나포하거나 수송선 및 군함을 파괴하여 레벨업(최대 레벨 3)할 수 있습니다. 레벨업 시 군함의 공격력과 내구도가 증가합니다.",
     "drag": "드래그",
@@ -1149,7 +1211,8 @@
     "ui_wilderness": "무주지",
     "ui_your_team": "나의 팀:",
     "video_tutorial": "동영상 튜토리얼",
-    "video_tutorial_title": "오픈프론트 튜토리얼"
+    "video_tutorial_title": "오픈프론트 튜토리얼",
+    "action_quick_chat": "빠른 채팅 열기"
   },
   "host_modal": {
     "anonymous_players": "익명 플레이어",
@@ -1204,7 +1267,9 @@
     "visibility_private": "비공개",
     "visibility_public": "공개",
     "waiting": "플레이어들을 기다리고 있습니다...",
-    "teams_Humans Vs Nations": "인간 대 국가"
+    "teams_Humans Vs Nations": "인간 대 국가",
+    "player_limit": "인원 제한",
+    "player_limit_placeholder": "인원"
   },
   "inventory": {
     "equipped": "장착됨",
@@ -1312,7 +1377,8 @@
     "win_loss_ratio": "승/패",
     "win_score": "승점",
     "win_score_tooltip": "클랜 참여도와 경기 난이도를 기반으로 한 가중치 승리",
-    "your_ranking": "나의 순위"
+    "your_ranking": "나의 순위",
+    "ranked_ffa_tab": "개인전 랭크"
   },
   "main": {
     "account": "계정",
@@ -1345,7 +1411,8 @@
     "user_avatar_alt": "{username}의 프사",
     "wiki": "위키",
     "source_code": "소스 코드 (AGPL) · OpenFront 기반",
-    "solo_desc": "컴퓨터와 대결합니다. 시나리오 모드로 역사 속 나라가 되거나, 자유 모드로 어디서든 시작하세요."
+    "solo_desc": "컴퓨터와 대결합니다. 시나리오 모드로 역사 속 나라가 되거나, 자유 모드로 어디서든 시작하세요.",
+    "brand_name": "天下 Cheonha"
   },
   "map": {
     "achiran": "아치란",
@@ -1484,7 +1551,12 @@
     "worldinverted": "반전된 세계",
     "yangtzeriver": "양쯔강",
     "yellowsea": "서해",
-    "yenisei": "예니셰이 강"
+    "yenisei": "예니셰이 강",
+    "samguk": "삼국시대",
+    "sengoku": "전국시대",
+    "warringstates": "춘추전국시대",
+    "tutorial": "튜토리얼",
+    "earth": "지구"
   },
   "map_categories": {
     "africa": "아프리카",
@@ -1513,7 +1585,17 @@
     "no_results": "지도를 찾을 수 없습니다",
     "search_maps": "지도 검색...",
     "search_results": "검색 결과",
-    "unfavorite": "즐겨찾기에서 제거"
+    "unfavorite": "즐겨찾기에서 제거",
+    "by_author": "제작: {author}",
+    "earth_continental": "대륙",
+    "earth_regional": "지역",
+    "earth_reset": "시점 초기화",
+    "info": "지도 정보",
+    "stat_land": "육지 {percent}%",
+    "stat_nations": "국가 {count}개",
+    "stat_players": "약 {count}명",
+    "zoom_in": "확대",
+    "zoom_out": "축소"
   },
   "map_layers": {
     "label": "라벨"
@@ -1556,7 +1638,9 @@
     "teams_count": "{teamCount} 팀",
     "teams_of": "{playersPerTeam}인 {teamCount}개 팀",
     "teams_title": "팀전",
-    "coming_soon": "출시 예정"
+    "coming_soon": "출시 예정",
+    "ranked_ffa_title": "개인전",
+    "teams_preset": "{preset} ({teams})"
   },
   "multi_tab": {
     "detected": "여러 개의 열린 게임 탭이 감지되었습니다.",
@@ -1573,7 +1657,8 @@
     "log_out": "로그아웃",
     "log_out_confirm": "이 계정에서 로그아웃 할까요?",
     "title": "계정 메뉴",
-    "view_account": "계정 보기"
+    "view_account": "계정 보기",
+    "account_with_level": "계정 ({level})"
   },
   "new_lobby_prompt": {
     "confirm": "새로운 로비를 만들까요? 모든 플레이어에게 초대를 보냅니다.",
@@ -1657,7 +1742,11 @@
     "target": "목표",
     "trading": "무역",
     "traitor": "배신자",
-    "troops": "병력"
+    "troops": "병력",
+    "cosmetic_get_label": "{name} (상점에서 얻기)",
+    "cosmetics": "장착 중",
+    "start_trade_enemies": "적과 교역 시작",
+    "stop_trade_enemies": "적과 교역 중지"
   },
   "player_profile": {
     "loading": "프로필 불러오는 중...",
@@ -1870,7 +1959,8 @@
     "unavailable_not_found": "이 게임을 찾을 수 없습니다.",
     "unavailable_other_build": "다른 버전의 OpenFront에서 플레이한 게임입니다.",
     "unavailable_unreachable": "게임을 다운로드할 수 없습니다. 연결 상태를 확인하고 다시 시도하세요.",
-    "watch_classic": "대신 이전 버전의 리플레이 시청"
+    "watch_classic": "대신 이전 버전의 리플레이 시청",
+    "unverified": "이 게임 기록에는 검증 정보가 없어서, 이 리플레이가 실제 게임과 같은지 확인할 수 없었어요."
   },
   "rewards_modal": {
     "title": "보상"
@@ -2163,7 +2253,7 @@
       "port_info_ships": "포구는 무역선을 출항시켜 금을 벌어다 줍니다.",
       "port_info_warships": "포구는 군함을 건조하는 데에도 사용됩니다.",
       "propose_alliance": "동맹은 국경을 안전하게 지켜줍니다. 표적이 표시된 국가를 우클릭하여 동맹을 제안하세요.",
-      "sam_info": "쇠뇌 진지 — 날아오는 화공과 수공을 쏘아 떨어뜨려 막습니다.",
+      "sam_info": "쇠뇌 진지 — 날아오는 화공과 벽력거를 쏘아 떨어뜨려 막습니다.",
       "send_boat": "배는 병력을 바다 건너로 수송합니다. 물 건너편 적의 해안선을 우클릭하여 원형 메뉴를 연 다음, 배를 선택하세요.",
       "silo_loading": "미사일 발사대를 장전 중입니다 — 완전히 준비되면 핵을 발사할 수 있습니다.",
       "spawn": "지도의 아무 곳이나 클릭하여 시작 위치를 선택하세요.",
@@ -2194,7 +2284,7 @@
     "city": "성읍",
     "defense_post": "산성",
     "factory": "상업지구",
-    "hydrogen_bomb": "수공",
+    "hydrogen_bomb": "벽력거",
     "mirv": "역병",
     "missile_silo": "공성 진지",
     "port": "포구",
@@ -2258,8 +2348,8 @@
     "build_defense_post_desc": "커서 위치에 산성을 건설합니다.",
     "build_factory": "상업지구 건설",
     "build_factory_desc": "커서 위치에 상업지구를 건설합니다.",
-    "build_hydrogen_bomb": "수공 개시",
-    "build_hydrogen_bomb_desc": "커서 위치에 수공을 가합니다.",
+    "build_hydrogen_bomb": "벽력거 발사",
+    "build_hydrogen_bomb_desc": "커서 위치에 벽력거를 퍼붓습니다.",
     "build_menu_modifier": "건설 메뉴 수정기",
     "build_menu_modifier_desc": "빌드 메뉴를 열려면 이 키를 누른 상태로 클릭하십시오.",
     "build_mirv": "역병 유포",
@@ -2383,7 +2473,27 @@
     "zoom_in": "확대",
     "zoom_in_desc": "지도로 확대",
     "zoom_out": "축소",
-    "zoom_out_desc": "지도로 축소"
+    "zoom_out_desc": "지도로 축소",
+    "build_scroll_modifier": "건설 스크롤 보조키",
+    "build_scroll_modifier_desc": "이 키를 누른 채 스크롤하면 건설 수량이 바뀌어요.",
+    "emoji_menu": "이모지 메뉴",
+    "emoji_menu_desc": "커서 아래 땅의 주인에게 보낼 이모지 메뉴를 열어요.",
+    "halloween_theme_desc": "홈 화면에 할로윈 테마를 보여요.",
+    "halloween_theme_label": "할로윈 테마",
+    "hud_opacity_desc": "글자와 아이콘은 그대로 두고 패널 배경의 투명도만 조절해요. 100%는 원래 모습이에요.",
+    "hud_opacity_label": "HUD 배경 불투명도",
+    "keybind_shift_prefix": "Shift+",
+    "map_layers_desc": "일부 지도가 지형 위에 덧그리는 그림을 보여요. 끄면 모든 지도에서 숨겨요.",
+    "map_layers_label": "지도 레이어",
+    "modifiers": "보조키",
+    "prevent_stacking": "건물 겹치기 방지",
+    "prevent_stacking_desc": "누르고 있으면 근처 건물을 업그레이드하지 않고 새 건물을 지어요. 일반 배치 제한은 그대로 적용돼요.",
+    "quick_chat": "빠른 채팅",
+    "quick_chat_desc": "커서 아래 땅의 주인과 빠른 채팅을 열어요.",
+    "snap_build_preview_desc": "건설 미리보기를 실제로 지어질 칸으로 옮겨요",
+    "snap_build_preview_label": "건설 미리보기 맞춤",
+    "target_player": "목표 지정",
+    "target_player_desc": "커서 아래 땅의 주인을 나와 동맹의 공격 목표로 표시해요."
   },
   "username": {
     "account_invalid_chars": "사용자명에는 문자, 숫자, 밑줄, 하이픈 및 단어 사이의 단일 공백만 사용할 수 있습니다.",
@@ -2439,7 +2549,8 @@
     "territory_pattern": "영토 스킨을 구매하고 광고 없이 플레이하세요!",
     "you_won": "나의 승리!",
     "your_team": "우리팀이 승리했습니다!",
-    "youtube_tutorial": "도움이 필요하신가요?"
+    "youtube_tutorial": "도움이 필요하신가요?",
+    "share": "공유"
   },
   "faction": {
     "Goguryeo": "고구려",
@@ -2590,5 +2701,99 @@
     "placeholder": "광고 자리 160×600 (AdConfig.ts에 ADSENSE_CLIENT 입력)",
     "blocked_title": "광고 차단기가 켜져 있어요",
     "blocked_body": "이 게임은 광고 수익으로 무료로 운영돼요. 광고 차단기에서 이 사이트를 허용하고 새로고침해 주세요."
+  },
+  "emoji_table": {
+    "diplomacy": "외교",
+    "directions": "방향",
+    "faces": "표정",
+    "favorite_remove_hint": "밖으로 끌어내면 삭제돼요",
+    "favorites": "즐겨찾기",
+    "favorites_hint": "이모지를 여기로 끌어오면 단축키가 생겨요",
+    "favorites_hint_touch": "이모지를 여기로 끌어와 가까이 두세요",
+    "gestures": "몸짓",
+    "ranks": "계급",
+    "things": "사물"
+  },
+  "onboarding": {
+    "got_it": "알겠어요",
+    "intro_body": "천하는 땅을 넓히고 이웃 나라를 정복해 지도를 차지하는 전략 게임이에요.",
+    "intro_start": "시작",
+    "intro_title": "천하에 오신 것을 환영해요",
+    "low_troops": "병력이 다시 늘어날 때까지 기다렸다가 공격하세요.",
+    "low_troops_title": "병력이 부족해요!",
+    "main_menu": "메인 메뉴",
+    "play_solo": "혼자 하기",
+    "step": {
+      "coast": "내 땅이 물에 닿을 때까지 빈 땅을 계속 클릭하세요.",
+      "coast_touch": "내 땅이 물에 닿을 때까지 빈 땅을 계속 누르세요.",
+      "empire": "마지막은 붉은 제국이에요. 해안을 클릭해 배를 보내 무너뜨리세요.",
+      "empire_land": "이제 그 땅을 클릭하고, 무너질 때까지 계속하세요.",
+      "empire_land_touch": "이제 그 땅을 누르고, 무너질 때까지 계속하세요.",
+      "empire_touch": "마지막은 붉은 제국이에요. 해안을 눌러 배를 보내 무너뜨리세요.",
+      "expand": "여기가 내 땅이에요. 옆의 빈 땅을 클릭해 넓혀 보세요.",
+      "expand_touch": "여기가 내 땅이에요. 옆의 빈 땅을 눌러 넓혀 보세요.",
+      "kingdom": "저기가 철의 왕국이고, 공성 진지에서 화공을 쏘고 있어요! 그 땅을 클릭해 공격하고, 공성 진지를 빼앗을 때까지 계속하세요.",
+      "kingdom_touch": "저기가 철의 왕국이고, 공성 진지에서 화공을 쏘고 있어요! 그 땅을 눌러 공격하고, 공성 진지를 빼앗을 때까지 계속하세요.",
+      "nuke": "공성 진지가 내 것이 됐어요! 화면 아래의 화공을 클릭하세요.",
+      "nuke_aim": "이제 붉은 제국의 포구와 그 옆의 전함을 클릭해 화공을 쏘세요.",
+      "nuke_aim_touch": "이제 붉은 제국의 포구와 그 옆의 전함을 눌러 화공을 쏘세요.",
+      "nuke_reload": "공성 진지가 재장전 중이에요. 준비하세요…",
+      "nuke_touch": "공성 진지가 내 것이 됐어요! 화면 아래의 화공을 누르세요.",
+      "spawn": "빛나는 원 안을 클릭해 시작할 곳을 고르세요.",
+      "spawn_touch": "빛나는 원 안을 눌러 시작할 곳을 고르세요.",
+      "troops": "이 막대가 내 병력이에요. 절반쯤 찼을 때 가장 빨리 늘어나니, 너무 많지도 적지도 않게 유지하세요.",
+      "wrong_target": "거기가 아니에요. 화살표가 가리키는 곳을 클릭하세요.",
+      "wrong_target_touch": "거기가 아니에요. 화살표가 가리키는 곳을 누르세요."
+    },
+    "step_counter": "{current} / {total}단계",
+    "won_body": "기본기를 익혔어요. 이제 실제 게임을 해 보세요. 안내가 건물, 동맹, 전략무기 등을 알려 줄 거예요.",
+    "won_title": "승리했어요!"
+  },
+  "report_thanks": {
+    "body": "최근 신고하신 플레이어가 제재되었어요. 더 안전하고 즐거운 게임을 만들어 주셔서 고마워요.",
+    "heading": "고마워요"
+  },
+  "saved_games": {
+    "code_placeholder": "공유된 게임 링크나 코드를 붙여 넣으세요",
+    "copy_link": "링크 복사",
+    "delete": "삭제",
+    "delete_confirm": "\"{name}\"을(를) 삭제할까요? 되돌릴 수 없어요.",
+    "empty": "저장한 게임이 아직 없어요. 게임 메뉴에서 저장해 보세요.",
+    "error": {
+      "code_invalid": "공유된 게임 링크나 코드가 아니에요.",
+      "copy_failed": "링크를 복사하지 못했어요.",
+      "download_failed": "저장한 게임을 받지 못했어요. 다시 시도해 주세요.",
+      "list_failed": "저장한 게임 목록을 불러오지 못했어요.",
+      "load_failed": "저장한 게임을 시작하지 못했어요.",
+      "name_invalid": "그 이름은 쓸 수 없어요.",
+      "name_not_shareable": "그 이름은 공유 게임에 표시할 수 없어요. 먼저 이름을 바꿔 주세요.",
+      "not_found": "그 저장 게임은 더 이상 없어요.",
+      "not_singleplayer": "혼자 하기 게임만 불러올 수 있어요.",
+      "request_failed": "문제가 생겼어요. 다시 시도해 주세요.",
+      "shared_not_found": "이 공유 게임은 볼 수 없어요. 삭제되었거나 비공개가 되었을 수 있어요.",
+      "unreadable": "이 버전의 게임에서는 이 저장 게임을 불러올 수 없어요."
+    },
+    "link_copied": "링크를 복사했어요",
+    "loading": "불러오는 중…",
+    "open": "열기",
+    "play": "플레이",
+    "rename": "이름 바꾸기",
+    "rename_save": "저장",
+    "save_desc": "이 게임을 계정에 저장해 나중에 이어서 하세요",
+    "save_label": "게임 저장",
+    "save_status": {
+      "limit": "저장 가능한 게임 수를 넘었어요. 혼자 하기 메뉴에서 하나를 먼저 지워 주세요.",
+      "not_found": "게임을 저장하지 못했어요. 다시 시도해 주세요.",
+      "rejected": "이 게임은 저장할 수 없어요.",
+      "request_failed": "게임을 저장하지 못했어요. 다시 시도해 주세요.",
+      "saved": "저장했어요. 혼자 하기 메뉴에서 찾을 수 있어요.",
+      "saving": "저장 중…",
+      "unauthorized": "게임을 저장하려면 로그인하세요."
+    },
+    "share": "공유",
+    "shared_badge": "공유됨",
+    "shared_title": "공유된 게임",
+    "title": "저장한 게임",
+    "unshare": "공유 해제"
   }
 }

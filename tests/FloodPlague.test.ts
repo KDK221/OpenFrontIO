@@ -70,12 +70,12 @@ describe("Flood Attack (hydrogen bomb slot)", () => {
     expect(a.canBuild(UnitType.HydrogenBomb, land)).toBe(silo.tile());
   });
 
-  test("defaults: water required, 250 tile reach, 25 tile water check", async () => {
+  test("defaults: no water needed, 250 tile reach", async () => {
     const { Config } = await import(
       "@openfront/engine-lib/configuration/Config"
     );
     const proto = Config.prototype;
-    expect(proto.floodNeedsWater.call({})).toBe(true);
+    expect(proto.floodNeedsWater.call({})).toBe(false);
     expect(proto.floodRange.call({})).toBe(250);
     expect(proto.floodWaterRange.call({})).toBe(25);
   });

@@ -1676,7 +1676,8 @@ export class PlayerImpl implements Player {
     // only get missilesilos that are not on cooldown and not under construction
     // Fire Attacks (AtomBomb) can only be launched from a Siege Camp within
     // siegeRange of the target.
-    // Flood Attacks (HydrogenBomb) reach further, but only land near water.
+    // The Thunder Catapult (HydrogenBomb) reaches further than a Fire
+    // Attack; the water rule is a switch left from the flood design.
     if (
       nukeType === UnitType.HydrogenBomb &&
       config.floodNeedsWater() &&

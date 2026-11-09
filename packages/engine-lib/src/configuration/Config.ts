@@ -454,12 +454,12 @@ export class Config {
     return 120;
   }
 
-  /** Max Siege Camp distance for a Flood Attack (the former hydrogen bomb). */
+  /** Max Siege Camp distance for a Thunder Catapult (hydrogen bomb slot). */
   floodRange(): number {
     return 250;
   }
 
-  /** A Flood Attack needs water within this many tiles of its target. */
+  /** If floodNeedsWater, the target needs water within this many tiles. */
   floodWaterRange(): number {
     return 25;
   }
@@ -484,9 +484,12 @@ export class Config {
     );
   }
 
-  /** Whether the Flood Attack's water requirement is enforced. */
+  /**
+   * Whether the hydrogen-bomb slot needs water near its target. Off: it is
+   * the Thunder Catapult now (a stone barrage), no longer a flood.
+   */
   floodNeedsWater(): boolean {
-    return true;
+    return false;
   }
 
   samRange(level: number): number {
