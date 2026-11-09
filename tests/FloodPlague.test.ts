@@ -148,12 +148,24 @@ describe("Plague (MIRV slot)", () => {
     expect(a.units(UnitType.MIRV)).toHaveLength(0);
   });
 
-  test("costs 3M when it replaces the MIRV", async () => {
+  test("costs 15M, +5M per plague already released", async () => {
     const { game, a } = await plagueGame();
     vi.spyOn(game.config(), "plagueReplacesMirv").mockReturnValue(true);
     vi.spyOn(game.config(), "infiniteGold").mockReturnValue(false);
-    expect(game.config().unitInfo(UnitType.MIRV).cost(game, a)).toBe(
-      3_000_000n,
-    );
+    const cost = () => game.config().unitInfo(UnitType.MIRV).cost(game, a);
+    expect(cost()).toBe(15_000_000n);
+    a.addGold(100_000_000n);
+    game.addExecution(new PlagueExecution(a, game.ref(15, 5)));
+    executeTicks(game, 3);
+    expect(cost()).toBe(20_000_000n);
+  });
+
+  test("fire and flood attacks cost 1.5M and 8M in the eras", async () => {
+    const { game, a } = await plagueGame();
+    vi.spyOn(game.config(), "plagueReplacesMirv").mockReturnValue(true);
+    vi.spyOn(game.config(), "infiniteGold").mockReturnValue(false);
+    const cost = (t: UnitType) => game.config().unitInfo(t).cost(game, a);
+    expect(cost(UnitType.AtomBomb)).toBe(1_500_000n);
+    expect(cost(UnitType.HydrogenBomb)).toBe(8_000_000n);
   });
 });

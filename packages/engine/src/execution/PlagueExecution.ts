@@ -95,6 +95,8 @@ export class PlagueExecution implements Execution {
     }
     this.started = true;
     this.infected = [target];
+    // Counts toward the price of the next plague (see EngineConfig).
+    this.mg.recordMirvLaunch();
     this.mg.stats().bombLaunch(this.player, target, UnitType.MIRV);
 
     // Betrayal on release, same as the strike it replaces.

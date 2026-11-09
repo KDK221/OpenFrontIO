@@ -357,10 +357,18 @@ export class EngineConfig extends Config {
           UnitType.Port,
           UnitType.Factory,
         );
+      // Fire Attack and Flood Attack in the eras: strategic weapons, priced
+      // so they come mid-game rather than as an opening move.
       case UnitType.AtomBomb:
-        return this.costWrapper(() => 750_000, UnitType.AtomBomb);
+        return this.costWrapper(
+          () => (this.plagueReplacesMirv() ? 1_500_000 : 750_000),
+          UnitType.AtomBomb,
+        );
       case UnitType.HydrogenBomb:
-        return this.costWrapper(() => 5_000_000, UnitType.HydrogenBomb);
+        return this.costWrapper(
+          () => (this.plagueReplacesMirv() ? 8_000_000 : 5_000_000),
+          UnitType.HydrogenBomb,
+        );
       case UnitType.MIRV:
         return (game: Game, player: Player) => {
           if (
@@ -369,10 +377,10 @@ export class EngineConfig extends Config {
           ) {
             return 0n;
           }
-          // The MIRV slot is the Plague in the eras: priced between the
-          // Fire Attack (750K) and the Flood Attack (5M), not the MIRV's 25M+.
+          // The MIRV slot is the Plague in the eras: the last resort. 15M,
+          // and 5M more for every plague already released this game.
           if (this.plagueReplacesMirv()) {
-            return 3_000_000n;
+            return 15_000_000n + BigInt(game.mirvsLaunched()) * 5_000_000n;
           }
           return 25_000_000n + BigInt(game.mirvsLaunched()) * 15_000_000n;
         };
