@@ -299,6 +299,12 @@ export class LangSelector extends LitElement {
       "steam-wishlist-button",
       "streaming-now",
       "tutorial-panel",
+      "solo-hero",
+      "play-mode-picker",
+      // They show the game's name (main.brand_name).
+      "play-page",
+      "desktop-nav-bar",
+      "mobile-nav-bar",
     ];
 
     document.title = this.translateText("main.title") ?? document.title;

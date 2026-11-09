@@ -54,8 +54,6 @@ import {
 } from "./Utils";
 import { isReplayShellHost } from "./VersionedReplay";
 
-const PRIMARY_ACTION =
-  "bg-malibu-blue hover:bg-aquarius active:bg-malibu-blue/80 hover:scale-y-105 hover:scale-x-[1.01]";
 const SECONDARY_ACTION =
   "bg-surface hover:brightness-[1.08] active:brightness-[0.95] hover:scale-105 hover:shadow-[var(--shadow-action-card-hover)]";
 const DISABLED = "opacity-50 cursor-not-allowed pointer-events-none";
@@ -676,30 +674,25 @@ export class GameModeSelector extends LitElement {
           class="no-game-portal [&:empty]:hidden sm:col-span-2 sm:row-start-1"
         ></ios-add-to-home-screen-banner>
 
-        <div
-          class="flex gap-4 sm:compact:gap-3 h-14 sm:col-span-2 sm:row-start-3 ${
-            heroSlot ? "sm:compact:col-span-1!" : ""
-          }"
-        >
-          <div class="flex-[2]">
-            ${this.renderSmallActionCard(
-              translateText("main.solo"),
-              this.openSinglePlayerModal,
-              PRIMARY_ACTION,
-            )}
-          </div>
-          ${
-            getGamesPlayed() < TUTORIAL_CARD_MAX_GAMES
-              ? html`<div class="flex-1">
+        <!-- Solo is the home screen's top card (solo-hero), so this row only
+             holds the tutorial, while it's still offered. -->
+        ${
+          getGamesPlayed() < TUTORIAL_CARD_MAX_GAMES
+            ? html`<div
+                class="flex gap-4 sm:compact:gap-3 h-14 sm:col-span-2 sm:row-start-3 ${
+                  heroSlot ? "sm:compact:col-span-1!" : ""
+                }"
+              >
+                <div class="flex-1">
                   ${this.renderSmallActionCard(
                     translateText("main.tutorial"),
                     this.startTutorial,
                     TUTORIAL_ACTION,
                   )}
-                </div>`
-              : nothing
-          }
-        </div>
+                </div>
+              </div>`
+            : nothing
+        }
         <div
           class="grid grid-cols-3 gap-4 sm:compact:gap-3 h-14 sm:col-span-2 sm:row-start-4"
         >
@@ -863,12 +856,13 @@ export class GameModeSelector extends LitElement {
     window.showPage?.("page-detailed-view");
   };
 
-  private openSinglePlayerModal = () => {
+  /** Opens the singleplayer setup; called by the home screen's solo card. */
+  public openSinglePlayerModal = (args?: Record<string, unknown>) => {
     if (!this.validateUsername()) return;
     whenModalLoaded("single-player-modal", () =>
       (
         document.querySelector("single-player-modal") as SinglePlayerModal
-      )?.open(),
+      )?.open(args),
     );
   };
 

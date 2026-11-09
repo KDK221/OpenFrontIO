@@ -3,7 +3,7 @@ import { customElement } from "lit/decorators.js";
 import "./CosmeticBackground";
 import "./NavAccountMenu";
 import "./NavUtilityIcons";
-import "./EraHero";
+import "./SoloHero";
 import { translateText } from "../Utils";
 
 @customElement("play-page")
@@ -86,8 +86,8 @@ export class PlayPage extends LitElement {
 
           <!-- Left column: news banner + identity row, stacked tight. -->
           <div class="flex flex-col gap-2 min-w-0">
-            <!-- The game's title and one card per era. -->
-            <era-hero class="block mb-2"></era-hero>
+            <!-- Play alone; the multiplayer lobbies are below the name row. -->
+            <solo-hero class="block mb-2"></solo-hero>
 
             <!-- Identity row: username over the currently selected cosmetic background. -->
             <div

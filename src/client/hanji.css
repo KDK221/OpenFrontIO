@@ -195,10 +195,23 @@ body.hanji-theme:not(.in-game)
   color: #fff !important;
 }
 
-/* ── Era hero (home) and play-mode picker (singleplayer) ───────────────── */
+/* ── Solo card (home) and play-mode picker (singleplayer) ─────────────── */
 
-/* Vermilion seal stamped in the corner of each era card. */
-.era-seal {
+.solo-hero {
+  background:
+    linear-gradient(90deg, rgba(210, 85, 58, 0.28), rgba(28, 22, 17, 0.9) 70%),
+    var(--hanji-lacquer);
+  border-color: rgba(217, 168, 74, 0.35);
+  font-family: var(--hanji-serif);
+}
+
+.solo-hero:hover {
+  border-color: rgba(217, 168, 74, 0.7);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* Vermilion seal stamped on the solo card. */
+.solo-seal {
   background: var(--hanji-vermilion);
   color: var(--hanji-paper);
   font-family: var(--hanji-serif);
@@ -206,34 +219,6 @@ body.hanji-theme:not(.in-game)
     inset 0 0 0 2px rgba(239, 230, 210, 0.35),
     0 2px 8px rgba(0, 0, 0, 0.45);
   transform: rotate(-4deg);
-}
-
-.era-card {
-  border-color: rgba(217, 168, 74, 0.25);
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.era-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(217, 168, 74, 0.6);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
-}
-
-.era-card h3,
-.era-hero header p {
-  font-family: var(--hanji-serif);
-}
-
-.era-primary {
-  background: var(--hanji-vermilion);
-  color: var(--hanji-paper);
-}
-
-.era-primary:hover {
-  background: #e0674b;
 }
 
 .play-mode-glyph {
