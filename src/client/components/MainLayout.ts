@@ -1,5 +1,6 @@
 import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
+import "./SideAds";
 
 @customElement("main-layout")
 export class MainLayout extends LitElement {
@@ -26,6 +27,8 @@ export class MainLayout extends LitElement {
         >
           ${this._initialChildren}
         </div>
+        <!-- Your ads, in the margins beside the content (see AdConfig). -->
+        <side-ads></side-ads>
       </main>
     `;
   }

@@ -2468,6 +2468,11 @@
     "capacity_note": "Receiver can accept only {amount} right now.",
     "title_with_name": "Send Troops to {name}"
   },
+  "side_ads": {
+    "blocked_body": "This game is free thanks to ads. Please add this site to your ad blocker's allowlist and refresh.",
+    "blocked_title": "Ad blocker on",
+    "placeholder": "Ad slot 160×600 (set ADSENSE_CLIENT in AdConfig.ts)"
+  },
   "single_modal": {
     "max_timer_invalid": "Please enter a valid max timer value (1-120 minutes)",
     "medals_earned": "Medals",

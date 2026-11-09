@@ -2585,5 +2585,10 @@
     "Ying": "영",
     "Yonezawa": "요네자와",
     "Yuzuki": "유즈키"
+  },
+  "side_ads": {
+    "placeholder": "광고 자리 160×600 (AdConfig.ts에 ADSENSE_CLIENT 입력)",
+    "blocked_title": "광고 차단기가 켜져 있어요",
+    "blocked_body": "이 게임은 광고 수익으로 무료로 운영돼요. 광고 차단기에서 이 사이트를 허용하고 새로고침해 주세요."
   }
 }

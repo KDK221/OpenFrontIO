@@ -301,6 +301,7 @@ export class LangSelector extends LitElement {
       "tutorial-panel",
       "solo-hero",
       "play-mode-picker",
+      "side-ads",
       // They show the game's name (main.brand_name).
       "play-page",
       "desktop-nav-bar",
