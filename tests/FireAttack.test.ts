@@ -63,7 +63,7 @@ describe("Fire Attack siege range", () => {
 });
 
 describe("era defaults", () => {
-  test("the former nukes are enabled, only SAM stays off", () => {
-    expect(ERA_DISABLED_UNITS).toEqual([UnitType.SAMLauncher]);
+  test("every unit is on: the SAM is the Ballista Tower", () => {
+    expect(ERA_DISABLED_UNITS).toEqual([]);
   });
 });

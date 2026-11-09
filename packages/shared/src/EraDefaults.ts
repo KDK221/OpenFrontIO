@@ -8,6 +8,7 @@ import { UnitType } from "@openfront/engine-api/game/GameTypes";
  * The former nukes are re-themed instead of removed:
  *   MissileSilo -> Siege Camp, AtomBomb -> Fire Attack,
  *   HydrogenBomb -> Flood Attack, MIRV -> Plague.
- * Only the SAM launcher (no missiles to shoot down) stays off.
+ * The SAM launcher is the Ballista Tower, which shoots them down.
+ * Nothing is disabled by default any more; the list stays as the hook.
  */
-export const ERA_DISABLED_UNITS: readonly UnitType[] = [UnitType.SAMLauncher];
+export const ERA_DISABLED_UNITS: readonly UnitType[] = [];
