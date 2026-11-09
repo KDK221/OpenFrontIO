@@ -50,6 +50,9 @@ export class PlayModePicker extends LitElement {
   @property({ type: String }) mode: PlayMode = "scenario";
   @property({ attribute: false }) factions: FactionOption[] = [];
   @property({ type: String }) selectedFaction: string | null = null;
+  // Which part to show: the two mode cards, or the faction grid (shown
+  // under the map picker, since the factions depend on the map).
+  @property({ type: String }) part: "modes" | "factions" = "modes";
 
   createRenderRoot() {
     return this;
@@ -129,44 +132,44 @@ export class PlayModePicker extends LitElement {
     </button>`;
   }
 
-  render() {
-    return html`<section class="space-y-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        ${this.renderModeCard(
-          "scenario",
-          "史",
-          "play_mode.scenario",
-          "play_mode.scenario_desc",
-        )}
-        ${this.renderModeCard(
-          "free",
-          "遊",
-          "play_mode.free",
-          "play_mode.free_desc",
-        )}
-      </div>
+  private renderFactions(): TemplateResult {
+    return html`<section>
+      <h4
+        class="text-xs font-bold text-white/50 uppercase tracking-widest mb-3 pl-1"
+      >
+        ${translateText("play_mode.choose_faction")}
+      </h4>
       ${
-        this.mode === "scenario"
-          ? html`<div>
-              <h4
-                class="text-xs font-bold text-white/50 uppercase tracking-widest mb-3 pl-1"
-              >
-                ${translateText("play_mode.choose_faction")}
-              </h4>
-              ${
-                this.factions.length === 0
-                  ? html`<p class="text-sm text-white/50 pl-1">
-                      ${translateText("play_mode.loading_factions")}
-                    </p>`
-                  : html`<div
-                      class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2"
-                    >
-                      ${this.factions.map((f) => this.renderFaction(f))}
-                    </div>`
-              }
+        this.factions.length === 0
+          ? html`<p class="text-sm text-white/50 pl-1">
+              ${translateText("play_mode.loading_factions")}
+            </p>`
+          : html`<div
+              class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2"
+            >
+              ${this.factions.map((f) => this.renderFaction(f))}
             </div>`
-          : nothing
       }
+    </section>`;
+  }
+
+  render() {
+    if (this.part === "factions") {
+      return this.mode === "scenario" ? this.renderFactions() : nothing;
+    }
+    return html`<section class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      ${this.renderModeCard(
+        "scenario",
+        "史",
+        "play_mode.scenario",
+        "play_mode.scenario_desc",
+      )}
+      ${this.renderModeCard(
+        "free",
+        "遊",
+        "play_mode.free",
+        "play_mode.free_desc",
+      )}
     </section>`;
   }
 }

@@ -541,13 +541,10 @@ export class SinglePlayerModal extends BaseModal {
           ></saved-games-panel>
           <play-mode-picker
             class="block mb-6"
+            part="modes"
             .mode=${this.playMode}
-            .factions=${this.factions}
-            .selectedFaction=${this.scenarioFaction}
             @play-mode-selected=${(e: CustomEvent<{ mode: PlayMode }>) =>
               (this.playMode = e.detail.mode)}
-            @faction-selected=${(e: CustomEvent<{ faction: string }>) =>
-              (this.scenarioFaction = e.detail.faction)}
           ></play-mode-picker>
           <game-config-settings
             class="block"
@@ -558,6 +555,16 @@ export class SinglePlayerModal extends BaseModal {
                 useRandom: this.useRandomMap,
                 showMedals: this.showAchievements,
                 mapWins: this.mapWins,
+                // Map first, then the factions of that map.
+                afterMap: html`<play-mode-picker
+                  class="block"
+                  part="factions"
+                  .mode=${this.playMode}
+                  .factions=${this.factions}
+                  .selectedFaction=${this.scenarioFaction}
+                  @faction-selected=${(e: CustomEvent<{ faction: string }>) =>
+                    (this.scenarioFaction = e.detail.faction)}
+                ></play-mode-picker>`,
               },
               difficulty: {
                 selected: this.selectedDifficulty,

@@ -197,6 +197,8 @@ export interface GameConfigSettingsData {
     randomMapDivider?: boolean;
     showMedals?: boolean;
     mapWins?: Map<GameMapType, Set<Difficulty>>;
+    // Rendered right under the map picker (the singleplayer faction picker).
+    afterMap?: TemplateResult;
   };
   difficulty: {
     selected: Difficulty;
@@ -407,6 +409,7 @@ export class GameConfigSettings extends LitElement {
             .onSelectRandom=${this.handleSelectRandom}
           ></map-picker>`,
         )}
+        ${settings.map.afterMap ?? nothing}
         ${renderSection(
           DIFFICULTY_ICON,
           "text-green-400",
