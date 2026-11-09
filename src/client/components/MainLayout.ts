@@ -1,5 +1,6 @@
 import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
+import "./AdblockWall";
 import "./SideAds";
 
 @customElement("main-layout")
@@ -29,6 +30,8 @@ export class MainLayout extends LitElement {
         </div>
         <!-- Your ads, in the margins beside the content (see AdConfig). -->
         <side-ads></side-ads>
+        <!-- Asks to allow ads when a blocker stops them (dismissable). -->
+        <adblock-wall></adblock-wall>
       </main>
     `;
   }

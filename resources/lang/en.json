@@ -167,6 +167,12 @@
   "account_settings_modal": {
     "title": "Account Settings"
   },
+  "adblock_wall": {
+    "allowed_reload": "I've allowed ads, refresh",
+    "body": "This game is free to play thanks to ads. Please add this site to your ad blocker's allowlist, then refresh.",
+    "continue": "Continue without disabling",
+    "title": "Ad blocker detected"
+  },
   "ban_notice": {
     "appeal": "If you believe this is a mistake, contact us on Discord.",
     "category": {

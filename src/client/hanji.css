@@ -229,3 +229,20 @@ body.hanji-theme:not(.in-game)
   background: var(--hanji-vermilion);
   color: var(--hanji-paper);
 }
+
+/* ── Ad-blocker notice ─────────────────────────────────────────────────── */
+
+.adblock-wall {
+  background: var(--hanji-lacquer);
+  border-color: rgba(217, 168, 74, 0.45);
+  font-family: var(--hanji-serif);
+}
+
+.adblock-wall-primary {
+  background: var(--hanji-vermilion);
+  color: var(--hanji-paper);
+}
+
+.adblock-wall-primary:hover {
+  background: #e0674b;
+}
