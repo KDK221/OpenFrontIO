@@ -668,33 +668,20 @@ export class GameModeSelector extends LitElement {
     // There the grid also pulls up over the gap after the banner's row when it's empty.
     return html`
       <div
-        class="flex flex-col gap-4 sm:compact:gap-3 sm:compact:has-[>ios-add-to-home-screen-banner:empty]:-mt-3 w-full px-4 pb-4 mx-auto sm:px-0 sm:pb-0 sm:grid sm:grid-cols-[2fr_1fr] sm:grid-rows-[auto_min(24rem,40vh)_auto_auto] sm:compact:grid-rows-[auto_minmax(min(24rem,40vh),auto)_3.5rem_auto] desktop:sm:grid-rows-[auto_40vh_auto_auto] sm:[reading-flow:grid-rows]"
+        class="flex flex-col gap-4 sm:compact:gap-3 sm:compact:has-[>ios-add-to-home-screen-banner:empty]:-mt-3 w-full px-4 pb-4 mx-auto sm:px-0 sm:pb-0 sm:grid sm:grid-cols-[2fr_1fr] sm:grid-rows-[auto_auto_auto_min(24rem,40vh)_auto] sm:compact:grid-rows-[auto_auto_auto_minmax(min(24rem,40vh),auto)_auto] desktop:sm:grid-rows-[auto_auto_auto_40vh_auto] sm:[reading-flow:grid-rows]"
       >
         <ios-add-to-home-screen-banner
           class="no-game-portal [&:empty]:hidden sm:col-span-2 sm:row-start-1"
         ></ios-add-to-home-screen-banner>
 
-        <!-- Solo is the home screen's top card (solo-hero), so this row only
-             holds the tutorial, while it's still offered. -->
-        ${
-          getGamesPlayed() < TUTORIAL_CARD_MAX_GAMES
-            ? html`<div
-                class="flex gap-4 sm:compact:gap-3 h-14 sm:col-span-2 sm:row-start-3 ${
-                  heroSlot ? "sm:compact:col-span-1!" : ""
-                }"
-              >
-                <div class="flex-1">
-                  ${this.renderSmallActionCard(
-                    translateText("main.tutorial"),
-                    this.startTutorial,
-                    TUTORIAL_ACTION,
-                  )}
-                </div>
-              </div>`
-            : nothing
-        }
+        <!-- "Play together": the multiplayer actions, then the lobbies. -->
+        <h2
+          class="together-heading sm:col-span-2 sm:row-start-2 text-lg font-bold text-white tracking-wider pl-1"
+        >
+          ${translateText("main.play_together")}
+        </h2>
         <div
-          class="grid grid-cols-3 gap-4 sm:compact:gap-3 h-14 sm:col-span-2 sm:row-start-4"
+          class="grid grid-cols-3 gap-4 sm:compact:gap-3 h-14 sm:col-span-2 sm:row-start-3"
         >
           ${this.renderSmallActionCard(
             translateText("main.create"),
@@ -734,7 +721,7 @@ export class GameModeSelector extends LitElement {
 
         ${
           heroSlot
-            ? html`<div class="min-w-0 sm:col-start-1 sm:row-start-2">
+            ? html`<div class="min-w-0 sm:col-start-1 sm:row-start-4">
                 ${
                   ffa
                     ? this.renderLobbyCard(
@@ -757,9 +744,9 @@ export class GameModeSelector extends LitElement {
 
         <!-- Always rendered: the heading is the only way into the lobby browser. -->
         <section
-          class="flex flex-col gap-4 sm:compact:gap-3 min-w-0 sm:grid sm:grid-rows-[auto_1fr_1fr] sm:row-start-2 sm:min-h-0 sm:[reading-flow:grid-rows] ${
+          class="flex flex-col gap-4 sm:compact:gap-3 min-w-0 sm:grid sm:grid-rows-[auto_1fr_1fr] sm:row-start-4 sm:min-h-0 sm:[reading-flow:grid-rows] ${
             heroSlot
-              ? "sm:col-start-2 sm:compact:row-end-4 sm:compact:grid-rows-[auto_minmax(7.5rem,1fr)_minmax(7.5rem,1fr)]"
+              ? "sm:col-start-2 sm:compact:grid-rows-[auto_minmax(7.5rem,1fr)_minmax(7.5rem,1fr)]"
               : "sm:col-start-1 sm:col-span-2"
           }"
         >
@@ -785,6 +772,23 @@ export class GameModeSelector extends LitElement {
           }
           ${this.renderUpcomingHeading()}
         </section>
+
+        <!-- Tutorial, while it's still offered (solo is the solo-hero card). -->
+        ${
+          getGamesPlayed() < TUTORIAL_CARD_MAX_GAMES
+            ? html`<div
+                class="flex gap-4 sm:compact:gap-3 h-14 sm:col-span-2 sm:row-start-5"
+              >
+                <div class="flex-1">
+                  ${this.renderSmallActionCard(
+                    translateText("main.tutorial"),
+                    this.startTutorial,
+                    TUTORIAL_ACTION,
+                  )}
+                </div>
+              </div>`
+            : nothing
+        }
 
         ${
           this.showTrustRequired

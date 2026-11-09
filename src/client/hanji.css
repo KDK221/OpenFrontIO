@@ -210,15 +210,10 @@ body.hanji-theme:not(.in-game)
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
 }
 
-/* Vermilion seal stamped on the solo card. */
-.solo-seal {
-  background: var(--hanji-vermilion);
-  color: var(--hanji-paper);
+/* "Play together" heading above the multiplayer section. */
+.together-heading {
   font-family: var(--hanji-serif);
-  box-shadow:
-    inset 0 0 0 2px rgba(239, 230, 210, 0.35),
-    0 2px 8px rgba(0, 0, 0, 0.45);
-  transform: rotate(-4deg);
+  color: var(--hanji-gold);
 }
 
 .play-mode-glyph {

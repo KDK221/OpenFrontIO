@@ -1412,7 +1412,8 @@
     "wiki": "위키",
     "source_code": "소스 코드 (AGPL) · OpenFront 기반",
     "solo_desc": "컴퓨터와 대결합니다. 시나리오 모드로 역사 속 나라가 되거나, 자유 모드로 어디서든 시작하세요.",
-    "brand_name": "天下統一"
+    "brand_name": "天下統一",
+    "play_together": "같이 하기"
   },
   "map": {
     "achiran": "아치란",

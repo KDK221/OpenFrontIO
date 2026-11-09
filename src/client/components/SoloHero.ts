@@ -28,11 +28,6 @@ export class SoloHero extends LitElement {
       class="solo-hero group w-full text-left rounded-xl border p-4 sm:p-5 flex items-center gap-4 transition-all active:scale-[0.99]"
       @click=${() => this.open()}
     >
-      <span
-        class="solo-seal shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-lg flex items-center justify-center text-3xl font-bold"
-        aria-hidden="true"
-        >獨</span
-      >
       <span class="min-w-0 flex-1">
         <span class="block text-2xl sm:text-3xl font-bold text-white">
           ${translateText("main.solo")}

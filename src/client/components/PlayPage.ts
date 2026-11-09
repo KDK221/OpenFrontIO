@@ -84,11 +84,8 @@ export class PlayPage extends LitElement {
             class="lg:hidden h-[calc(env(safe-area-inset-top)+56px)] -mb-4"
           ></div>
 
-          <!-- Left column: news banner + identity row, stacked tight. -->
+          <!-- Name row on top, then the solo card. -->
           <div class="flex flex-col gap-2 min-w-0">
-            <!-- Play alone; the multiplayer lobbies are below the name row. -->
-            <solo-hero class="block mb-2"></solo-hero>
-
             <!-- Identity row: username over the currently selected cosmetic background. -->
             <div
               class="relative bg-surface border-y border-white/10 overflow-visible flex items-center sm:min-h-[60px] sm:compact:min-h-[45px] sm:flex-1 sm:z-20 sm:border-y-0 sm:rounded-xl"
@@ -105,8 +102,10 @@ export class PlayPage extends LitElement {
                 ></username-input>
               </div>
             </div>
-          </div>
 
+            <!-- Play alone; "play together" (multiplayer) follows below. -->
+            <solo-hero class="block mt-2"></solo-hero>
+          </div>
         </div>
 
         <game-mode-selector></game-mode-selector>
