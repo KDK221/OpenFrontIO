@@ -5,12 +5,9 @@ import { UnitType } from "@openfront/engine-api/game/GameTypes";
  * Warring States). They are disabled by default in every lobby type.
  * Hosts can still re-enable them in private lobbies / singleplayer.
  *
- * MissileSilo (Siege Camp) and AtomBomb (Fire Attack) are re-themed rather
- * than removed, so they are enabled. HydrogenBomb is reserved for the
- * Flood Attack and MIRV/SAM stay off.
+ * The former nukes are re-themed instead of removed:
+ *   MissileSilo -> Siege Camp, AtomBomb -> Fire Attack,
+ *   HydrogenBomb -> Flood Attack, MIRV -> Plague.
+ * Only the SAM launcher (no missiles to shoot down) stays off.
  */
-export const ERA_DISABLED_UNITS: readonly UnitType[] = [
-  UnitType.HydrogenBomb,
-  UnitType.MIRV,
-  UnitType.SAMLauncher,
-];
+export const ERA_DISABLED_UNITS: readonly UnitType[] = [UnitType.SAMLauncher];

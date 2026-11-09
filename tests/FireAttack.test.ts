@@ -3,6 +3,7 @@ import {
   PlayerType,
   UnitType,
 } from "@openfront/engine-api/game/GameTypes";
+import { Config } from "@openfront/engine-lib/configuration/Config";
 import { ERA_DISABLED_UNITS } from "@openfront/shared/EraDefaults";
 import { SpawnExecution } from "@openfront/engine/execution/SpawnExecution";
 import { Game, Player } from "@openfront/engine/game/Game";
@@ -31,10 +32,11 @@ describe("Fire Attack siege range", () => {
   });
 
   test("siege range is 120 tiles", () => {
-    expect(game.config().siegeRange()).toBe(120);
+    expect(Config.prototype.siegeRange.call({})).toBe(120);
   });
 
   test("a target inside siege range can be hit from the Siege Camp", () => {
+    vi.spyOn(game.config(), "siegeRange").mockReturnValue(120);
     const silo = attacker.units(UnitType.MissileSilo)[0];
     const target = game.ref(30, 30);
     expect(attacker.canBuild(UnitType.AtomBomb, target)).toBe(silo.tile());
@@ -49,8 +51,11 @@ describe("Fire Attack siege range", () => {
     );
   });
 
-  test("hydrogen bombs keep the unlimited silo reach", () => {
+  test("flood attacks reach further than fire attacks", () => {
     const silo = attacker.units(UnitType.MissileSilo)[0];
+    vi.spyOn(game.config(), "siegeRange").mockReturnValue(10);
+    vi.spyOn(game.config(), "floodRange").mockReturnValue(100);
+    expect(attacker.canBuild(UnitType.AtomBomb, game.ref(30, 30))).toBe(false);
     expect(attacker.canBuild(UnitType.HydrogenBomb, game.ref(30, 30))).toBe(
       silo.tile(),
     );
@@ -58,18 +63,7 @@ describe("Fire Attack siege range", () => {
 });
 
 describe("era defaults", () => {
-  test("Siege Camp and Fire Attack are enabled by default", () => {
-    expect(ERA_DISABLED_UNITS).not.toContain(UnitType.MissileSilo);
-    expect(ERA_DISABLED_UNITS).not.toContain(UnitType.AtomBomb);
-  });
-
-  test("hydrogen bomb, MIRV and SAM stay disabled", () => {
-    expect(ERA_DISABLED_UNITS).toEqual(
-      expect.arrayContaining([
-        UnitType.HydrogenBomb,
-        UnitType.MIRV,
-        UnitType.SAMLauncher,
-      ]),
-    );
+  test("the former nukes are enabled, only SAM stays off", () => {
+    expect(ERA_DISABLED_UNITS).toEqual([UnitType.SAMLauncher]);
   });
 });

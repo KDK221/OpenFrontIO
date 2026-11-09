@@ -24,6 +24,7 @@ import { NationExecutionSnapshot } from "../execution/NationExecution";
 import { NoOpExecutionSnapshot } from "../execution/NoOpExecution";
 import { NukeExecutionSnapshot } from "../execution/NukeExecution";
 import { PauseExecutionSnapshot } from "../execution/PauseExecution";
+import { PlagueExecutionSnapshot } from "../execution/PlagueExecution";
 import { PlayerExecutionSnapshot } from "../execution/PlayerExecution";
 import { PortExecutionSnapshot } from "../execution/PortExecution";
 import { QuickChatExecutionSnapshot } from "../execution/QuickChatExecution";
@@ -78,6 +79,7 @@ export const EXECUTION_SNAPSHOT_TYPES = [
   NoOpExecutionSnapshot,
   NukeExecutionSnapshot,
   PauseExecutionSnapshot,
+  PlagueExecutionSnapshot,
   PlayerExecutionSnapshot,
   PortExecutionSnapshot,
   QuickChatExecutionSnapshot,

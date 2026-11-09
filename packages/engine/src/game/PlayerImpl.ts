@@ -1676,8 +1676,20 @@ export class PlayerImpl implements Player {
     // only get missilesilos that are not on cooldown and not under construction
     // Fire Attacks (AtomBomb) can only be launched from a Siege Camp within
     // siegeRange of the target.
+    // Flood Attacks (HydrogenBomb) reach further, but only land near water.
+    if (
+      nukeType === UnitType.HydrogenBomb &&
+      config.floodNeedsWater() &&
+      !this.isNearWater(tile, config.floodWaterRange())
+    ) {
+      return false;
+    }
     const siegeRangeSquared =
-      nukeType === UnitType.AtomBomb ? config.siegeRange() ** 2 : Infinity;
+      nukeType === UnitType.AtomBomb
+        ? config.siegeRange() ** 2
+        : nukeType === UnitType.HydrogenBomb
+          ? config.floodRange() ** 2
+          : Infinity;
     const readySilos = this.units(UnitType.MissileSilo).filter(
       (silo) =>
         silo.isActive() &&
@@ -1690,6 +1702,28 @@ export class PlayerImpl implements Player {
         mg.manhattanDist(a.tile(), tile) - mg.manhattanDist(b.tile(), tile),
     );
     return readySilos[0]?.tile() ?? false;
+  }
+
+  /** Whether any water tile lies within `range` tiles (sampled every 2). */
+  private isNearWater(tile: TileRef, range: number): boolean {
+    const mg = this.mg;
+    const cx = mg.x(tile);
+    const cy = mg.y(tile);
+    const x0 = Math.max(0, cx - range);
+    const x1 = Math.min(mg.width() - 1, cx + range);
+    const y0 = Math.max(0, cy - range);
+    const y1 = Math.min(mg.height() - 1, cy + range);
+    const r2 = range * range;
+    for (let y = y0; y <= y1; y += 2) {
+      for (let x = x0; x <= x1; x += 2) {
+        const dx = x - cx;
+        const dy = y - cy;
+        if (dx * dx + dy * dy <= r2 && mg.isWater(mg.ref(x, y))) {
+          return true;
+        }
+      }
+    }
+    return false;
   }
 
   portSpawn(tile: TileRef, validTiles: TileRef[] | null): TileRef | false {

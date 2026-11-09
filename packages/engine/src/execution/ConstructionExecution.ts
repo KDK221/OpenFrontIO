@@ -19,6 +19,7 @@ import { DefensePostExecution } from "./DefensePostExecution";
 import { FactoryExecution } from "./FactoryExecution";
 import { MirvExecution } from "./MIRVExecution";
 import { MissileSiloExecution } from "./MissileSiloExecution";
+import { PlagueExecution } from "./PlagueExecution";
 import { NukeExecution } from "./NukeExecution";
 import { PortExecution } from "./PortExecution";
 import { SAMLauncherExecution } from "./SAMLauncherExecution";
@@ -137,7 +138,12 @@ export class ConstructionExecution implements Execution {
         break;
       }
       case UnitType.MIRV:
-        this.mg.addExecution(new MirvExecution(player, this.tile));
+        // In the historical eras the MIRV slot is the Plague.
+        this.mg.addExecution(
+          this.mg.config().plagueReplacesMirv()
+            ? new PlagueExecution(player, this.tile)
+            : new MirvExecution(player, this.tile),
+        );
         break;
       case UnitType.Warship:
         this.mg.addExecution(

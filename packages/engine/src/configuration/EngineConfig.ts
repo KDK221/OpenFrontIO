@@ -164,6 +164,10 @@ export class EngineConfig extends Config {
   disableNavMesh(): boolean {
     return this._gameConfig.disableNavMesh ?? false;
   }
+  /** The MIRV slot is the Plague (see PlagueExecution). */
+  plagueReplacesMirv(): boolean {
+    return true;
+  }
   waterNukes(): boolean {
     return this._gameConfig.waterNukes ?? false;
   }

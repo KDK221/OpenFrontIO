@@ -444,6 +444,21 @@ export class Config {
     return 120;
   }
 
+  /** Max Siege Camp distance for a Flood Attack (the former hydrogen bomb). */
+  floodRange(): number {
+    return 250;
+  }
+
+  /** A Flood Attack needs water within this many tiles of its target. */
+  floodWaterRange(): number {
+    return 25;
+  }
+
+  /** Whether the Flood Attack's water requirement is enforced. */
+  floodNeedsWater(): boolean {
+    return true;
+  }
+
   samRange(level: number): number {
     // rational growth function (level 1 = 70, level 5 just above hydro range, asymptotically approaches 150)
     return this.maxSamRange() - 480 / (level + 5);

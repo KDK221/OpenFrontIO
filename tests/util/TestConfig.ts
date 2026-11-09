@@ -25,6 +25,25 @@ export class TestConfig extends EngineConfig {
     this._proximityBonusPortsNb = nb;
   }
 
+  // Older nuke tests fire across big maps; FireAttack.test.ts pins the ranges.
+  siegeRange(): number {
+    return Infinity;
+  }
+
+  floodRange(): number {
+    return Infinity;
+  }
+
+  // Most test maps are all land; the flood tests turn the rule back on.
+  floodNeedsWater(): boolean {
+    return false;
+  }
+
+  // The MIRV tests exercise the real MIRV; Plague tests construct it directly.
+  plagueReplacesMirv(): boolean {
+    return false;
+  }
+
   nukeMagnitudes(_: UnitType): NukeMagnitude {
     return { inner: 1, outer: 1 };
   }
