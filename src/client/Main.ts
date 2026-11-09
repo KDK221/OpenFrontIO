@@ -549,7 +549,8 @@ class Client {
     // can click Join or Create the list is already known and the click
     // never waits on a fetch (docs/MultiServer.md, "Server list v2"). It
     // never throws and keeps itself alive with a heartbeat afterwards.
-    startServerListPolling();
+    // A static singleplayer build has no API to list servers.
+    if (!ClientEnv.singleplayerOnly()) startServerListPolling();
 
     // Prefetch turnstile token so it is available when the user joins a lobby.
     // Desktop (Steam) has no Turnstile script and is server-side exempt, so
@@ -559,7 +560,9 @@ class Client {
     // so rendering the widget there just fails — and replays never
     // send a token anyway (see getTurnstileToken below).
     const turnstilePrefetch =
-      isDesktopShell() || isReplayShellHost(window.location.hostname)
+      isDesktopShell() ||
+      isReplayShellHost(window.location.hostname) ||
+      ClientEnv.singleplayerOnly()
         ? null
         : getTurnstileToken();
     // A prefetch that fails is not an error anyone has asked about yet: the

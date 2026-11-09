@@ -43,6 +43,9 @@ declare global {
       // standalone deployments (beta, branch previews, dev), desktop, and
       // static pages.
       siteHost?: string;
+      // A server-less static build (scripts/buildStatic.ts): the page has no
+      // game server or API behind it, so only singleplayer is offered.
+      singleplayerOnly?: boolean;
     };
   }
 }

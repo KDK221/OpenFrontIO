@@ -398,6 +398,47 @@ describe("RenderHtml environment-only render", () => {
     expect(match).not.toBeNull();
     const data = JSON.parse(match![1]);
     expect(data["@type"]).toBe("VideoGame");
-    expect(data.name).toBe("OpenFront");
+    expect(data.name).toBe("천하통일 天下統一");
+  });
+});
+
+// scripts/buildStatic.ts renders the same template with singleplayerOnly for
+// the server-less site; a server render must never carry it.
+describe("RenderHtml singleplayer-only static page", () => {
+  const LOCALS = {
+    gitCommit: '"abc"',
+    assetManifest: "{}",
+    cdnBase: '""',
+    cdnBaseRaw: "",
+    gameEnv: '"prod"',
+    turnstileSiteKey: '"key"',
+    jwtAudience: '"invalid"',
+    manifestHref: "/manifest.json",
+    faviconHref: "/f.svg",
+    gameplayScreenshotUrl: "/g.png",
+    backgroundImageUrl: "/b.webp",
+    desktopLogoImageUrl: "/o.png",
+    mobileLogoImageUrl: "/of.png",
+  };
+
+  async function render(locals: Record<string, unknown>) {
+    const ejs = await import("ejs");
+    return ejs.render(await fs.readFile(REAL_TEMPLATE, "utf8"), locals);
+  }
+
+  it("flags the page and drops Turnstile and the CrazyGames SDK", async () => {
+    const html = await render({ ...LOCALS, singleplayerOnly: true });
+
+    expect(bootstrapConfig(html).singleplayerOnly).toBe(true);
+    expect(html).not.toContain("challenges.cloudflare.com/turnstile");
+    expect(html).not.toContain("crazygames-sdk");
+  });
+
+  it("leaves a normal page unchanged", async () => {
+    const html = await render(LOCALS);
+
+    expect(bootstrapConfig(html)).not.toHaveProperty("singleplayerOnly");
+    expect(html).toContain("challenges.cloudflare.com/turnstile");
+    expect(html).toContain("crazygames-sdk");
   });
 });

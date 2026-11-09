@@ -398,6 +398,15 @@ export class ClientEnv {
   static siteHost(): string | undefined {
     return ClientEnv.get().siteHost;
   }
+  // A server-less static build (scripts/buildStatic.ts): no game server or
+  // API, singleplayer only. Read straight off the page rather than through
+  // get(), so it never throws: absent means a normal, server-backed page.
+  static singleplayerOnly(): boolean {
+    return (
+      typeof window !== "undefined" &&
+      window.BOOTSTRAP_CONFIG?.singleplayerOnly === true
+    );
+  }
   // Origin of the WEBSITE this page belongs to (scheme + host, no trailing
   // slash), for links that must leave the game and land on the site — the
   // desktop shell opening account settings in a browser, say.

@@ -552,6 +552,8 @@ export class GameModeSelector extends LitElement {
   }
 
   private openLobbyFeed(refreshList = false) {
+    // A static singleplayer build has no lobby server to listen to.
+    if (ClientEnv.singleplayerOnly()) return;
     this.feedWanted = true;
     this.feedGaveUp = false;
     if (lobbyFeedSuspended(this.desktopSessionState)) {
@@ -645,6 +647,128 @@ export class GameModeSelector extends LitElement {
     }
   }
 
+  // Static singleplayer builds: say multiplayer is coming instead of showing
+  // buttons and lobbies that have no server behind them.
+  private renderOfflineTogether() {
+    return html`<h2
+        class="together-heading sm:col-span-2 sm:row-start-2 text-lg font-bold text-white tracking-wider pl-1"
+      >
+        ${translateText("main.play_together")}
+      </h2>
+      <p
+        class="sm:col-span-2 sm:row-start-3 rounded-lg border border-white/10 bg-black/30 px-4 py-3 text-sm text-white/70"
+      >
+        ${translateText("main.multiplayer_coming_soon")}
+      </p>`;
+  }
+
+  private renderTogether(
+    heroSlot: boolean,
+    ffa: PublicGameInfo | undefined,
+    teams: PublicGameInfo | undefined,
+    special: PublicGameInfo | undefined,
+    cardRows: { special: string; teams: string },
+  ) {
+    return html`<!-- "Play together": the multiplayer actions, then the lobbies. -->
+      <h2
+        class="together-heading sm:col-span-2 sm:row-start-2 text-lg font-bold text-white tracking-wider pl-1"
+      >
+        ${translateText("main.play_together")}
+      </h2>
+      <div
+        class="grid grid-cols-3 gap-4 sm:compact:gap-3 h-14 sm:col-span-2 sm:row-start-3"
+      >
+        ${this.renderSmallActionCard(
+          translateText("main.create"),
+          this.openHostLobby,
+          SECONDARY_ACTION,
+          undefined,
+          true,
+        )}
+        ${this.renderSmallActionCard(
+          translateText("mode_selector.ranked_title"),
+          this.openRankedMenu,
+          SECONDARY_ACTION,
+          undefined,
+          true,
+          // Ranked admits trusted accounts only. A trusted viewer gets the
+          // green open lock; anyone else meets the red locks and the trust
+          // popup inside the ranked modal. Small, so it clears the label on
+          // narrow (mobile) buttons.
+          this.viewerTrusted
+            ? trustLockIcon(true, {
+                tooltipTitle: translateText(
+                  "mode_selector.ranked_trust_tooltip_title",
+                ),
+                position: "top-1 right-1",
+                small: true,
+              })
+            : nothing,
+        )}
+        ${this.renderSmallActionCard(
+          translateText("main.join"),
+          this.openJoinLobby,
+          SECONDARY_ACTION,
+          this.hostedLobbyCount(),
+          true,
+        )}
+      </div>
+
+      ${
+        heroSlot
+          ? html`<div class="min-w-0 sm:col-start-1 sm:row-start-4">
+              ${
+                ffa
+                  ? this.renderLobbyCard(
+                      ffa,
+                      getGameModeLabel(ffa.gameConfig!),
+                    )
+                  : this.offlineForLobbies()
+                    ? this.renderLobbiesUnavailable()
+                    : html`<div
+                        class="flex items-center justify-center h-44 sm:h-full"
+                      >
+                        <span
+                          class="size-24 rounded-full border-[6px] border-blue-500/30 border-t-blue-500 animate-spin"
+                        ></span>
+                      </div>`
+              }
+            </div>`
+          : nothing
+      }
+
+      <!-- Always rendered: the heading is the only way into the lobby browser. -->
+      <section
+        class="flex flex-col gap-4 sm:compact:gap-3 min-w-0 sm:grid sm:grid-rows-[auto_1fr_1fr] sm:row-start-4 sm:min-h-0 sm:[reading-flow:grid-rows] ${
+          heroSlot
+            ? "sm:col-start-2 sm:compact:grid-rows-[auto_minmax(7.5rem,1fr)_minmax(7.5rem,1fr)]"
+            : "sm:col-start-1 sm:col-span-2"
+        }"
+      >
+        ${
+          teams
+            ? html`<div class="min-w-0 sm:min-h-0 ${cardRows.teams}">
+                ${this.renderLobbyCard(
+                  teams,
+                  getGameModeLabel(teams.gameConfig!),
+                )}
+              </div>`
+            : nothing
+        }
+        ${
+          special
+            ? html`<div class="min-w-0 sm:min-h-0 ${cardRows.special}">
+                ${this.renderLobbyCard(
+                  special,
+                  getGameModeLabel(special.gameConfig!),
+                )}
+              </div>`
+            : nothing
+        }
+        ${this.renderUpcomingHeading()}
+      </section>`;
+  }
+
   render() {
     const ffa = this.lobbies?.games?.["ffa"]?.[0];
     const teams = this.lobbies?.games?.["team"]?.[0];
@@ -668,110 +792,17 @@ export class GameModeSelector extends LitElement {
     // There the grid also pulls up over the gap after the banner's row when it's empty.
     return html`
       <div
-        class="flex flex-col gap-4 sm:compact:gap-3 sm:compact:has-[>ios-add-to-home-screen-banner:empty]:-mt-3 w-full px-4 pb-4 mx-auto sm:px-0 sm:pb-0 sm:grid sm:grid-cols-[2fr_1fr] sm:grid-rows-[auto_auto_auto_min(24rem,40vh)_auto] sm:compact:grid-rows-[auto_auto_auto_minmax(min(24rem,40vh),auto)_auto] desktop:sm:grid-rows-[auto_auto_auto_40vh_auto] sm:[reading-flow:grid-rows]"
+        class="flex flex-col gap-4 sm:compact:gap-3 sm:compact:has-[>ios-add-to-home-screen-banner:empty]:-mt-3 w-full px-4 pb-4 mx-auto sm:px-0 sm:pb-0 sm:grid sm:grid-cols-[2fr_1fr] ${
+          ClientEnv.singleplayerOnly()
+            ? "sm:grid-rows-[auto_auto_auto_auto]"
+            : "sm:grid-rows-[auto_auto_auto_min(24rem,40vh)_auto] sm:compact:grid-rows-[auto_auto_auto_minmax(min(24rem,40vh),auto)_auto] desktop:sm:grid-rows-[auto_auto_auto_40vh_auto]"
+        } sm:[reading-flow:grid-rows]"
       >
         <ios-add-to-home-screen-banner
           class="no-game-portal [&:empty]:hidden sm:col-span-2 sm:row-start-1"
         ></ios-add-to-home-screen-banner>
 
-        <!-- "Play together": the multiplayer actions, then the lobbies. -->
-        <h2
-          class="together-heading sm:col-span-2 sm:row-start-2 text-lg font-bold text-white tracking-wider pl-1"
-        >
-          ${translateText("main.play_together")}
-        </h2>
-        <div
-          class="grid grid-cols-3 gap-4 sm:compact:gap-3 h-14 sm:col-span-2 sm:row-start-3"
-        >
-          ${this.renderSmallActionCard(
-            translateText("main.create"),
-            this.openHostLobby,
-            SECONDARY_ACTION,
-            undefined,
-            true,
-          )}
-          ${this.renderSmallActionCard(
-            translateText("mode_selector.ranked_title"),
-            this.openRankedMenu,
-            SECONDARY_ACTION,
-            undefined,
-            true,
-            // Ranked admits trusted accounts only. A trusted viewer gets the
-            // green open lock; anyone else meets the red locks and the trust
-            // popup inside the ranked modal. Small, so it clears the label on
-            // narrow (mobile) buttons.
-            this.viewerTrusted
-              ? trustLockIcon(true, {
-                  tooltipTitle: translateText(
-                    "mode_selector.ranked_trust_tooltip_title",
-                  ),
-                  position: "top-1 right-1",
-                  small: true,
-                })
-              : nothing,
-          )}
-          ${this.renderSmallActionCard(
-            translateText("main.join"),
-            this.openJoinLobby,
-            SECONDARY_ACTION,
-            this.hostedLobbyCount(),
-            true,
-          )}
-        </div>
-
-        ${
-          heroSlot
-            ? html`<div class="min-w-0 sm:col-start-1 sm:row-start-4">
-                ${
-                  ffa
-                    ? this.renderLobbyCard(
-                        ffa,
-                        getGameModeLabel(ffa.gameConfig!),
-                      )
-                    : this.offlineForLobbies()
-                      ? this.renderLobbiesUnavailable()
-                      : html`<div
-                          class="flex items-center justify-center h-44 sm:h-full"
-                        >
-                          <span
-                            class="size-24 rounded-full border-[6px] border-blue-500/30 border-t-blue-500 animate-spin"
-                          ></span>
-                        </div>`
-                }
-              </div>`
-            : nothing
-        }
-
-        <!-- Always rendered: the heading is the only way into the lobby browser. -->
-        <section
-          class="flex flex-col gap-4 sm:compact:gap-3 min-w-0 sm:grid sm:grid-rows-[auto_1fr_1fr] sm:row-start-4 sm:min-h-0 sm:[reading-flow:grid-rows] ${
-            heroSlot
-              ? "sm:col-start-2 sm:compact:grid-rows-[auto_minmax(7.5rem,1fr)_minmax(7.5rem,1fr)]"
-              : "sm:col-start-1 sm:col-span-2"
-          }"
-        >
-          ${
-            teams
-              ? html`<div class="min-w-0 sm:min-h-0 ${cardRows.teams}">
-                  ${this.renderLobbyCard(
-                    teams,
-                    getGameModeLabel(teams.gameConfig!),
-                  )}
-                </div>`
-              : nothing
-          }
-          ${
-            special
-              ? html`<div class="min-w-0 sm:min-h-0 ${cardRows.special}">
-                  ${this.renderLobbyCard(
-                    special,
-                    getGameModeLabel(special.gameConfig!),
-                  )}
-                </div>`
-              : nothing
-          }
-          ${this.renderUpcomingHeading()}
-        </section>
+        ${ClientEnv.singleplayerOnly() ? this.renderOfflineTogether() : this.renderTogether(heroSlot, ffa, teams, special, cardRows)}
 
         <!-- Tutorial, while it's still offered (solo is the solo-hero card). -->
         ${
