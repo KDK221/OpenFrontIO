@@ -95,9 +95,9 @@ export class PlayerExecution implements Execution {
     }
 
     let troopInc = this.config.troopIncreaseRate(this.player);
-    if (this.mg.holdsGoldenLand(this.player)) {
-      troopInc *= this.config.goldenLandTroopMultiplier();
-    }
+    troopInc *= this.config.goldenLandMultiplier(
+      this.mg.goldenShare(this.player),
+    );
     this.player.addTroops(troopInc);
     const goldFromWorkers = this.config.goldAdditionRate(this.player);
     this.player.addGold(goldFromWorkers);

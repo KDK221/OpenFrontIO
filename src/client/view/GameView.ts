@@ -30,7 +30,11 @@ import {
   UNIT_UPDATE_STRIDE,
   unpackUnitUpdates,
 } from "@openfront/engine-lib/game/PackedUnitUpdates";
-import { computeGoldenLands } from "@openfront/engine-lib/game/GoldenLands";
+import {
+  GoldenLand,
+  goldenLandsFor,
+} from "@openfront/engine-lib/game/GoldenLands";
+import { simpleHash } from "@openfront/engine-lib/Util";
 import { TerrainMapData } from "@openfront/engine-lib/game/TerrainMapLoader";
 import { TerraNulliusImpl } from "@openfront/engine-lib/game/TerraNulliusImpl";
 import { UnitGrid } from "@openfront/engine-lib/game/UnitGrid";
@@ -165,7 +169,13 @@ export class GameView implements GameLike {
   ) {
     this._map = this._mapData.gameMap;
     // From the pristine map, before any terrain update (water nukes) lands.
-    this._goldenLands = computeGoldenLands(this._map, this._mapData.nations);
+    const gc = this._config.gameConfig();
+    this._goldenLands = goldenLandsFor(this._map, {
+      mapType: gc.gameMap,
+      mapSize: gc.gameMapSize,
+      scenario: (gc.scenarioFaction ?? null) !== null,
+      seed: simpleHash(this._gameID),
+    });
     this.lastUpdate = null;
     this.unitGrid = new UnitGrid<UnitView>(this._map);
     this._cosmetics = new Map(
@@ -864,25 +874,31 @@ export class GameView implements GameLike {
     return Array.from(this._players.values());
   }
 
-  private _goldenLands: TileRef[];
+  private _goldenLands: GoldenLand[];
 
-  /** Golden lands' centre tiles, derived from the map as the engine does. */
-  goldenLands(): readonly TileRef[] {
+  /** Golden lands, derived from the map and game as the engine does. */
+  goldenLands(): readonly GoldenLand[] {
     return this._goldenLands;
   }
 
-  /** Whether `player` owns the centre of any golden land. */
-  holdsGoldenLand(player: PlayerView): boolean {
+  /** The player's golden-land share (fraction of each land, summed). */
+  goldenShare(player: PlayerView): number {
     const id = player.smallID();
-    return this.goldenLands().some((t) => this.ownerID(t) === id);
+    let share = 0;
+    for (const land of this._goldenLands) {
+      let owned = 0;
+      for (const t of land.tiles) if (this.ownerID(t) === id) owned++;
+      share += owned / land.tiles.length;
+    }
+    return share;
   }
 
   /** Troop growth per tick, golden-land bonus included (as PlayerExecution). */
   troopIncreaseRate(player: PlayerView): number {
-    const rate = this._config.troopIncreaseRate(player);
-    return this.holdsGoldenLand(player)
-      ? rate * this._config.goldenLandTroopMultiplier()
-      : rate;
+    return (
+      this._config.troopIncreaseRate(player) *
+      this._config.goldenLandMultiplier(this.goldenShare(player))
+    );
   }
 
   owner(tile: TileRef): PlayerView | TerraNullius {

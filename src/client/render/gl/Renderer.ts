@@ -1062,9 +1062,13 @@ export class GPURenderer {
     this.fxPass.updateAttackRings(rings);
   }
 
-  /** Golden lands to ring in gold (tile coordinates of each centre). */
-  setGoldenLands(centers: [number, number][], radius: number): void {
-    this.goldenLandPass.setLands(centers, radius);
+  /** Golden lands to paint, as a per-tile mask (255 = golden). */
+  setGoldenLands(
+    mask: Uint8Array,
+    mapWidth: number,
+    mapHeight: number,
+  ): void {
+    this.goldenLandPass.setMask(mask, mapWidth, mapHeight);
   }
 
   updateGhostPreview(data: GhostPreviewData | null): void {

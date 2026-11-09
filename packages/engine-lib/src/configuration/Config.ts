@@ -464,9 +464,24 @@ export class Config {
     return 25;
   }
 
-  /** Troop growth multiplier for a player holding any golden land. */
-  goldenLandTroopMultiplier(): number {
-    return 1.3;
+  /**
+   * Troop growth bonus per golden land held whole (+10%). A player holding
+   * part of one gets that share of it; lands add up, to goldenLandMaxBonus.
+   */
+  goldenLandBonus(): number {
+    return 0.1;
+  }
+
+  /** Cap on the summed golden-land bonus (+50%). */
+  goldenLandMaxBonus(): number {
+    return 0.5;
+  }
+
+  /** Troop growth multiplier for a golden-land share (see goldenShares). */
+  goldenLandMultiplier(share: number): number {
+    return (
+      1 + Math.min(share * this.goldenLandBonus(), this.goldenLandMaxBonus())
+    );
   }
 
   /** Whether the Flood Attack's water requirement is enforced. */

@@ -1,4 +1,5 @@
 import { GameMap, TileRef } from "@openfront/engine-api/game/GameMap";
+import type { GoldenLand } from "@openfront/engine-lib/game/GoldenLands";
 import {
   AllianceInfo,
   AllPlayers,
@@ -633,14 +634,17 @@ export interface Game extends GameLike {
   // Nations
   nations(): Nation[];
   /**
-   * Golden lands' centre tiles (see engine-lib GoldenLands). Derived from the
-   * map, so set by the runner after creating or restoring the game, never
+   * Golden lands (see engine-lib GoldenLands). Derived from the map and the
+   * game, so set by the runner after creating or restoring the game, never
    * snapshotted.
    */
-  goldenLands(): readonly TileRef[];
-  setGoldenLands(tiles: readonly TileRef[]): void;
-  /** Whether `player` owns the centre of any golden land. */
-  holdsGoldenLand(player: Player): boolean;
+  goldenLands(): readonly GoldenLand[];
+  setGoldenLands(lands: readonly GoldenLand[]): void;
+  /**
+   * The player's golden-land share: the fraction of each land they own,
+   * summed over the lands.
+   */
+  goldenShare(player: Player): number;
 
   numTilesWithFallout(): number;
   stats(): Stats;

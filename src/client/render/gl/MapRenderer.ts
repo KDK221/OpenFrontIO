@@ -130,7 +130,10 @@ export class MapRenderer {
       console.error("[Renderer] context restore failed", err);
       return;
     }
-    this.renderer?.setGoldenLands(this.goldenLands, this.goldenRadius);
+    if (this.goldenMask !== null) {
+      const { mask, w, h } = this.goldenMask;
+      this.renderer?.setGoldenLands(mask, w, h);
+    }
     // Re-apply stored layers to the new renderer.
     if (this.storedLayers.length > 0 && this.storedLayerImages.size > 0) {
       this.renderer?.setMapLayers(this.storedLayers, this.storedLayerImages);
@@ -313,14 +316,17 @@ export class MapRenderer {
 
   // ---- Golden lands ----
 
-  private goldenLands: [number, number][] = [];
-  private goldenRadius = 0;
+  private goldenMask: { mask: Uint8Array; w: number; h: number } | null =
+    null;
 
-  /** Ring the golden lands in gold; kept for context restore. */
-  setGoldenLands(centers: [number, number][], radius: number): void {
-    this.goldenLands = centers;
-    this.goldenRadius = radius;
-    this.renderer?.setGoldenLands(centers, radius);
+  /** Paint the golden lands; the mask is kept for context restore. */
+  setGoldenLands(
+    mask: Uint8Array,
+    mapWidth: number,
+    mapHeight: number,
+  ): void {
+    this.goldenMask = { mask, w: mapWidth, h: mapHeight };
+    this.renderer?.setGoldenLands(mask, mapWidth, mapHeight);
   }
 
   // ---- Map layers ----

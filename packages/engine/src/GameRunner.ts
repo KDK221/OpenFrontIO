@@ -25,7 +25,7 @@ import {
 import { MapFiles } from "@openfront/engine-api/game/MapFiles";
 import { ClientID, GameStartInfo, Turn } from "@openfront/engine-api/Schemas";
 import { packUnitUpdates } from "@openfront/engine-lib/game/PackedUnitUpdates";
-import { computeGoldenLands } from "@openfront/engine-lib/game/GoldenLands";
+import { goldenLandsFor } from "@openfront/engine-lib/game/GoldenLands";
 import { loadTerrainMap } from "@openfront/engine-lib/game/TerrainMapLoader";
 import { PseudoRandom } from "@openfront/engine-lib/PseudoRandom";
 import { simpleHash } from "@openfront/engine-lib/Util";
@@ -58,7 +58,12 @@ export async function createGameRunner(
   // Before nation creation, which reorders the manifest's nations: golden
   // lands come from the manifest as loaded, like the client's and a
   // restored game's.
-  const goldenLands = computeGoldenLands(gameMap.gameMap, gameMap.nations);
+  const goldenLands = goldenLandsFor(gameMap.gameMap, {
+    mapType: gameStart.config.gameMap,
+    mapSize: gameStart.config.gameMapSize,
+    scenario: (gameStart.config.scenarioFaction ?? null) !== null,
+    seed: simpleHash(gameStart.gameID),
+  });
   const random = new PseudoRandom(simpleHash(gameStart.gameID));
 
   // Scenario mode (one human only): the human becomes the chosen faction,
@@ -158,7 +163,12 @@ export async function createGameRunnerFromSnapshot(
   const gameMap = await loadGameMap(header.gameConfig, map);
   // From the pristine map, as at game start: restoring applies the
   // snapshot's terrain changes (water nukes) to this map.
-  const goldenLands = computeGoldenLands(gameMap.gameMap, gameMap.nations);
+  const goldenLands = goldenLandsFor(gameMap.gameMap, {
+    mapType: header.gameConfig.gameMap,
+    mapSize: header.gameConfig.gameMapSize,
+    scenario: (header.gameConfig.scenarioFaction ?? null) !== null,
+    seed: simpleHash(gameStart.gameID),
+  });
   const game = restoreGame(snapshot, {
     config: (gc) => new EngineConfig(gc, false, gameStart.listed),
     gameMap: gameMap.gameMap,

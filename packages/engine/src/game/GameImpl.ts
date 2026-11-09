@@ -1,5 +1,9 @@
 import { GameMap, TileRef } from "@openfront/engine-api/game/GameMap";
 import {
+  GoldenLand,
+  goldenShares,
+} from "@openfront/engine-lib/game/GoldenLands";
+import {
   Cell,
   ColoredTeams,
   Duos,
@@ -427,21 +431,29 @@ export class GameImpl implements Game {
     return this._nations;
   }
 
-  private _goldenLands: readonly TileRef[] = [];
+  private _goldenLands: readonly GoldenLand[] = [];
+  // Shares are computed once per tick for every player.
+  private _goldenSharesTick = -1;
+  private _goldenShares: Map<number, number> = new Map();
 
-  goldenLands(): readonly TileRef[] {
+  goldenLands(): readonly GoldenLand[] {
     return this._goldenLands;
   }
 
-  setGoldenLands(tiles: readonly TileRef[]): void {
-    this._goldenLands = tiles;
+  setGoldenLands(lands: readonly GoldenLand[]): void {
+    this._goldenLands = lands;
+    this._goldenSharesTick = -1;
   }
 
-  holdsGoldenLand(player: Player): boolean {
-    for (const t of this._goldenLands) {
-      if (this.ownerID(t) === player.smallID()) return true;
+  goldenShare(player: Player): number {
+    if (this._goldenLands.length === 0) return 0;
+    if (this._goldenSharesTick !== this.ticks()) {
+      this._goldenShares = goldenShares(this._goldenLands, (t) =>
+        this.ownerID(t),
+      );
+      this._goldenSharesTick = this.ticks();
     }
-    return false;
+    return this._goldenShares.get(player.smallID()) ?? 0;
   }
 
   createAllianceRequest(

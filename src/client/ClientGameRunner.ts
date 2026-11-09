@@ -13,7 +13,7 @@ import {
 } from "@openfront/engine-api/game/GameUpdates";
 import { ClientID, GameID } from "@openfront/engine-api/Schemas";
 import { Config } from "@openfront/engine-lib/configuration/Config";
-import { GOLDEN_LAND_RADIUS } from "@openfront/engine-lib/game/GoldenLands";
+import { goldenLandMask } from "@openfront/engine-lib/game/GoldenLands";
 import { TerrainMapData } from "@openfront/engine-lib/game/TerrainMapLoader";
 import { findClosestBy } from "@openfront/engine-lib/Util";
 import { EventBus } from "@openfront/shared/EventBus";
@@ -770,12 +770,11 @@ async function createClientGame(
 
     const graphicsListenerAbort = new AbortController();
 
-    // Gold rings around the golden lands (same list the engine uses).
+    // Gold fields over the golden lands (same lands the engine uses).
     view.setGoldenLands(
-      gameView
-        .goldenLands()
-        .map((t) => [gameView.x(t), gameView.y(t)] as [number, number]),
-      GOLDEN_LAND_RADIUS,
+      goldenLandMask(gameView, gameView.goldenLands()),
+      gameView.width(),
+      gameView.height(),
     );
 
     const mapLayerController = new MapLayerController(
