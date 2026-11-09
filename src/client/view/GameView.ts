@@ -30,6 +30,7 @@ import {
   UNIT_UPDATE_STRIDE,
   unpackUnitUpdates,
 } from "@openfront/engine-lib/game/PackedUnitUpdates";
+import { computeGoldenLands } from "@openfront/engine-lib/game/GoldenLands";
 import { TerrainMapData } from "@openfront/engine-lib/game/TerrainMapLoader";
 import { TerraNulliusImpl } from "@openfront/engine-lib/game/TerraNulliusImpl";
 import { UnitGrid } from "@openfront/engine-lib/game/UnitGrid";
@@ -163,6 +164,8 @@ export class GameView implements GameLike {
     private _resumedFromSave = false,
   ) {
     this._map = this._mapData.gameMap;
+    // From the pristine map, before any terrain update (water nukes) lands.
+    this._goldenLands = computeGoldenLands(this._map, this._mapData.nations);
     this.lastUpdate = null;
     this.unitGrid = new UnitGrid<UnitView>(this._map);
     this._cosmetics = new Map(
@@ -859,6 +862,27 @@ export class GameView implements GameLike {
   }
   playerViews(): PlayerView[] {
     return Array.from(this._players.values());
+  }
+
+  private _goldenLands: TileRef[];
+
+  /** Golden lands' centre tiles, derived from the map as the engine does. */
+  goldenLands(): readonly TileRef[] {
+    return this._goldenLands;
+  }
+
+  /** Whether `player` owns the centre of any golden land. */
+  holdsGoldenLand(player: PlayerView): boolean {
+    const id = player.smallID();
+    return this.goldenLands().some((t) => this.ownerID(t) === id);
+  }
+
+  /** Troop growth per tick, golden-land bonus included (as PlayerExecution). */
+  troopIncreaseRate(player: PlayerView): number {
+    const rate = this._config.troopIncreaseRate(player);
+    return this.holdsGoldenLand(player)
+      ? rate * this._config.goldenLandTroopMultiplier()
+      : rate;
   }
 
   owner(tile: TileRef): PlayerView | TerraNullius {

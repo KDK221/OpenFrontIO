@@ -25,6 +25,7 @@ import {
 import { MapFiles } from "@openfront/engine-api/game/MapFiles";
 import { ClientID, GameStartInfo, Turn } from "@openfront/engine-api/Schemas";
 import { packUnitUpdates } from "@openfront/engine-lib/game/PackedUnitUpdates";
+import { computeGoldenLands } from "@openfront/engine-lib/game/GoldenLands";
 import { loadTerrainMap } from "@openfront/engine-lib/game/TerrainMapLoader";
 import { PseudoRandom } from "@openfront/engine-lib/PseudoRandom";
 import { simpleHash } from "@openfront/engine-lib/Util";
@@ -54,6 +55,10 @@ export async function createGameRunner(
 ): Promise<GameRunner> {
   const config = new EngineConfig(gameStart.config, false, gameStart.listed);
   const gameMap = await loadGameMap(gameStart.config, map);
+  // Before nation creation, which reorders the manifest's nations: golden
+  // lands come from the manifest as loaded, like the client's and a
+  // restored game's.
+  const goldenLands = computeGoldenLands(gameMap.gameMap, gameMap.nations);
   const random = new PseudoRandom(simpleHash(gameStart.gameID));
 
   // Scenario mode (one human only): the human becomes the chosen faction,
@@ -93,6 +98,7 @@ export async function createGameRunner(
     config,
     gameMap.teamGameSpawnAreas,
   );
+  game.setGoldenLands(goldenLands);
 
   const gr = new GameRunner(
     game,
@@ -106,10 +112,17 @@ export async function createGameRunner(
   );
   gr.init();
   if (faction !== null) {
-    const cities = gameMap.nations
-      .filter((n) => n.flag === faction && n.coordinates !== undefined)
-      .map((n) => game.ref(n.coordinates![0], n.coordinates![1]));
-    game.addExecution(new ScenarioSpawnExecution(humans[0], cities));
+    // One city, like every AI lord: the faction's capital (its first city
+    // in the manifest).
+    const capital = gameMap.nations.find(
+      (n) => n.flag === faction && n.coordinates !== undefined,
+    );
+    if (capital !== undefined) {
+      const [x, y] = capital.coordinates!;
+      game.addExecution(
+        new ScenarioSpawnExecution(humans[0], [game.ref(x, y)]),
+      );
+    }
   }
   return gr;
 }
@@ -143,12 +156,16 @@ export async function createGameRunnerFromSnapshot(
 ): Promise<GameRunner> {
   const header = readSnapshotHeader(snapshot);
   const gameMap = await loadGameMap(header.gameConfig, map);
+  // From the pristine map, as at game start: restoring applies the
+  // snapshot's terrain changes (water nukes) to this map.
+  const goldenLands = computeGoldenLands(gameMap.gameMap, gameMap.nations);
   const game = restoreGame(snapshot, {
     config: (gc) => new EngineConfig(gc, false, gameStart.listed),
     gameMap: gameMap.gameMap,
     miniGameMap: gameMap.miniGameMap,
     teamGameSpawnAreas: gameMap.teamGameSpawnAreas,
   });
+  game.setGoldenLands(goldenLands);
   // No init(): the snapshot already holds every execution init() adds.
   return new GameRunner(
     game,

@@ -632,6 +632,15 @@ export interface Game extends GameLike {
 
   // Nations
   nations(): Nation[];
+  /**
+   * Golden lands' centre tiles (see engine-lib GoldenLands). Derived from the
+   * map, so set by the runner after creating or restoring the game, never
+   * snapshotted.
+   */
+  goldenLands(): readonly TileRef[];
+  setGoldenLands(tiles: readonly TileRef[]): void;
+  /** Whether `player` owns the centre of any golden land. */
+  holdsGoldenLand(player: Player): boolean;
 
   numTilesWithFallout(): number;
   stats(): Stats;

@@ -49,6 +49,7 @@ import { NukeTelegraphPass } from "./passes/NukeTelegraphPass";
 import { NukeTrajectoryPass } from "./passes/NukeTrajectoryPass";
 import { PointLightPass } from "./passes/PointLightPass";
 import { RailroadPass } from "./passes/RailroadPass";
+import { GoldenLandPass } from "./passes/GoldenLandPass";
 import { RangeCirclePass } from "./passes/RangeCirclePass";
 import { SAMRadiusPass } from "./passes/SamRadiusPass";
 import { SelectionBoxPass } from "./passes/SelectionBoxPass";
@@ -135,6 +136,7 @@ export class GPURenderer {
   private namePass: NamePass;
   private fxPass: FxPass;
   private rangeCirclePass: RangeCirclePass;
+  private goldenLandPass: GoldenLandPass;
   private samRadiusPass: SAMRadiusPass;
   private crosshairPass: CrosshairPass;
   private railroadPass: RailroadPass;
@@ -554,6 +556,7 @@ export class GPURenderer {
 
     // --- Range circle (ghost preview radius) ---
     this.rangeCirclePass = new RangeCirclePass(gl);
+    this.goldenLandPass = new GoldenLandPass(gl);
 
     // --- SAM radius overlay (dashed green circles during build mode) ---
     this.samRadiusPass = new SAMRadiusPass(gl, mapW, this.settings);
@@ -1059,6 +1062,11 @@ export class GPURenderer {
     this.fxPass.updateAttackRings(rings);
   }
 
+  /** Golden lands to ring in gold (tile coordinates of each centre). */
+  setGoldenLands(centers: [number, number][], radius: number): void {
+    this.goldenLandPass.setLands(centers, radius);
+  }
+
   updateGhostPreview(data: GhostPreviewData | null): void {
     this.structurePass.updateGhostPreview(data);
     this.railroadPass.updateGhostPreview(data);
@@ -1367,6 +1375,7 @@ export class GPURenderer {
     if (pe.railroad) this.railroadPass.draw(cam, zoom);
     if (pe.unit) this.unitPass.drawGround(cam);
     if (pe.falloutBloom) this.bloomPass.draw(cam, this.frameTick);
+    this.goldenLandPass.draw(cam);
     this.samRadiusPass.draw(cam);
     this.rangeCirclePass.draw(cam);
     this.nukeTrajectoryPass.draw(cam);
@@ -1506,6 +1515,7 @@ export class GPURenderer {
     this.smallPlayerGlowPass.dispose();
     this.railroadPass.dispose();
     this.rangeCirclePass.dispose();
+    this.goldenLandPass.dispose();
     this.samRadiusPass.dispose();
     this.crosshairPass.dispose();
     this.structurePass.dispose();

@@ -130,6 +130,7 @@ export class MapRenderer {
       console.error("[Renderer] context restore failed", err);
       return;
     }
+    this.renderer?.setGoldenLands(this.goldenLands, this.goldenRadius);
     // Re-apply stored layers to the new renderer.
     if (this.storedLayers.length > 0 && this.storedLayerImages.size > 0) {
       this.renderer?.setMapLayers(this.storedLayers, this.storedLayerImages);
@@ -308,6 +309,18 @@ export class MapRenderer {
   /** Set the small-player glow set (1 byte per owner smallID), or null = off. */
   updateSmallPlayerGlow(set: Uint8Array | null): void {
     this.renderer?.updateSmallPlayerGlow(set);
+  }
+
+  // ---- Golden lands ----
+
+  private goldenLands: [number, number][] = [];
+  private goldenRadius = 0;
+
+  /** Ring the golden lands in gold; kept for context restore. */
+  setGoldenLands(centers: [number, number][], radius: number): void {
+    this.goldenLands = centers;
+    this.goldenRadius = radius;
+    this.renderer?.setGoldenLands(centers, radius);
   }
 
   // ---- Map layers ----

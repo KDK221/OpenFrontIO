@@ -53,10 +53,14 @@ export function createNationsForGame(
       ),
     );
 
-  // Scenario mode: the human plays this faction, so its cities aren't AI.
+  // Scenario mode: the human takes the faction's capital (its first city),
+  // so that city isn't an AI lord. The faction's other cities stay AI.
   const faction = gameStart.config.scenarioFaction;
   if (faction !== undefined && faction !== null) {
-    manifestNations = manifestNations.filter((n) => n.flag !== faction);
+    const capital = manifestNations.findIndex((n) => n.flag === faction);
+    if (capital >= 0) {
+      manifestNations = manifestNations.filter((_, i) => i !== capital);
+    }
   }
 
   const isCompactMap = gameStart.config.gameMapSize === GameMapSize.Compact;

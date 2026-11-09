@@ -464,6 +464,11 @@ export class Config {
     return 25;
   }
 
+  /** Troop growth multiplier for a player holding any golden land. */
+  goldenLandTroopMultiplier(): number {
+    return 1.3;
+  }
+
   /** Whether the Flood Attack's water requirement is enforced. */
   floodNeedsWater(): boolean {
     return true;

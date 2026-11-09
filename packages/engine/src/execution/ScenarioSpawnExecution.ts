@@ -22,8 +22,8 @@ import { PlayerExecution } from "./PlayerExecution";
 import { getSpawnTiles } from "./Util";
 
 /**
- * Scenario mode: places the human on every city of the faction they play.
- * The first city is the capital (the player's spawn tile). Runs once, a few
+ * Scenario mode: places the human on the faction's capital (the runner
+ * passes just that city, though any list works; the first is the spawn). Runs once, a few
  * ticks into the spawn phase so the AI nations have claimed their cities
  * first; in singleplayer it then ends the spawn phase, as a manual spawn does.
  */

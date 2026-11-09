@@ -48,7 +48,7 @@ function gameStart(config: Partial<GameConfig>): GameStartInfo {
 }
 
 describe("scenario mode: nations", () => {
-  test("the played faction's cities are not AI nations", () => {
+  test("only the played faction's capital leaves the AI", () => {
     const nations = createNationsForGame(
       gameStart({ scenarioFaction: "Goguryeo" }),
       manifest,
@@ -57,6 +57,7 @@ describe("scenario mode: nations", () => {
       new PseudoRandom(1),
     );
     expect(nations.map((n) => n.playerInfo.name)).toEqual([
+      "Gungnae",
       "Hanseong",
       "Gyeongju",
     ]);

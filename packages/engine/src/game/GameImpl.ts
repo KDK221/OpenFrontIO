@@ -427,6 +427,23 @@ export class GameImpl implements Game {
     return this._nations;
   }
 
+  private _goldenLands: readonly TileRef[] = [];
+
+  goldenLands(): readonly TileRef[] {
+    return this._goldenLands;
+  }
+
+  setGoldenLands(tiles: readonly TileRef[]): void {
+    this._goldenLands = tiles;
+  }
+
+  holdsGoldenLand(player: Player): boolean {
+    for (const t of this._goldenLands) {
+      if (this.ownerID(t) === player.smallID()) return true;
+    }
+    return false;
+  }
+
   createAllianceRequest(
     requestor: Player,
     recipient: Player,
