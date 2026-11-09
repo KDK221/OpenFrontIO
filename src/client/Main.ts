@@ -820,8 +820,11 @@ class Client {
       }
       const isAdFree =
         userMeResponse !== false && userMeResponse.player?.adfree === true;
-      window.adsEnabled =
-        !isAdFree && !gamePortal.isOnGamePortal() && !isDesktopShell();
+      // This fork runs no ads. The ad stack (Playwire RAMP, Admiral's
+      // adblock wall, in-game promos) belongs to the original OpenFront and
+      // pays its accounts, so it stays off for everyone.
+      window.adsEnabled = false;
+      void isAdFree;
       syncHashedEmail(userMeResponse, window.adsEnabled).catch((e) =>
         console.warn("Hashed email sync failed", e),
       );
