@@ -4,7 +4,6 @@ import {
   formatPlayerDisplayName,
   GameUpdates,
   PlayerID,
-  PlayerType,
   Team,
   TerrainType,
   TerraNullius,
@@ -355,13 +354,14 @@ export class GameView implements GameLike {
           // directly on the update (see PlayerUpdate.nationFlag) rather than
           // being looked up by name — some maps define multiple nations with
           // the same display name (e.g. India's and Pakistan's "Punjab").
-          this._cosmetics.get(pu.clientID ?? "") ??
-            (pu.playerType === PlayerType.Nation && pu.nationFlag
-              ? ({
-                  flag: `/flags/${pu.nationFlag}.svg`,
-                } satisfies PlayerCosmetics)
-              : undefined) ??
-            {},
+          // A scenario-mode human carries its faction's banner the same way,
+          // over its own cosmetic flag.
+          pu.nationFlag
+            ? ({
+                ...(this._cosmetics.get(pu.clientID ?? "") ?? {}),
+                flag: `/flags/${pu.nationFlag}.svg`,
+              } satisfies PlayerCosmetics)
+            : (this._cosmetics.get(pu.clientID ?? "") ?? {}),
         );
         this._players.set(pu.id, player);
         this._playerStates.set(pu.smallID!, player.state);

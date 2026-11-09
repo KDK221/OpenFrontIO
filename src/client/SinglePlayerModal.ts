@@ -24,6 +24,12 @@ import "./components/baseComponents/Button";
 import "./components/baseComponents/Modal";
 import { BaseModal } from "./components/BaseModal";
 import "./components/GameConfigSettings";
+import {
+  FactionOption,
+  factionsOf,
+  PlayMode,
+} from "./components/PlayModePicker";
+import "./components/PlayModePicker";
 import { MEDAL_ORDER, medalIcon } from "./components/map/Medals";
 import {
   type LoadSavedGameDetail,
@@ -194,6 +200,11 @@ export class SinglePlayerModal extends BaseModal {
   protected routerName = "single-player";
 
   @state() private selectedMap: GameMapType = DEFAULT_OPTIONS.selectedMap;
+  // Scenario: play one of the map's factions from its real cities.
+  // Free: pick any starting spot, as in a regular game.
+  @state() private playMode: PlayMode = "scenario";
+  @state() private factions: FactionOption[] = [];
+  @state() private scenarioFaction: string | null = null;
   @state() private selectedDifficulty: Difficulty =
     DEFAULT_OPTIONS.selectedDifficulty;
   @state() private nations: number = 0;
@@ -528,6 +539,16 @@ export class SinglePlayerModal extends BaseModal {
             @open-shared-save=${(e: CustomEvent<string>) =>
               (this.sharedSaveId = e.detail)}
           ></saved-games-panel>
+          <play-mode-picker
+            class="block mb-6"
+            .mode=${this.playMode}
+            .factions=${this.factions}
+            .selectedFaction=${this.scenarioFaction}
+            @play-mode-selected=${(e: CustomEvent<{ mode: PlayMode }>) =>
+              (this.playMode = e.detail.mode)}
+            @faction-selected=${(e: CustomEvent<{ faction: string }>) =>
+              (this.scenarioFaction = e.detail.faction)}
+          ></play-mode-picker>
           <game-config-settings
             class="block"
             .sectionGapClass=${"space-y-6"}
@@ -1191,7 +1212,7 @@ export class SinglePlayerModal extends BaseModal {
               ? GameMapSize.Compact
               : GameMapSize.Normal,
             gameType: GameType.Singleplayer,
-            gameMode: this.gameMode,
+            gameMode: this.isScenario() ? GameMode.FFA : this.gameMode,
             playerTeams: this.teamCount,
             difficulty: this.selectedDifficulty,
             maxTimerValue: finalMaxTimerValue,
@@ -1201,14 +1222,17 @@ export class SinglePlayerModal extends BaseModal {
             donateTroops: this.gameMode === GameMode.Team,
             infiniteTroops: this.infiniteTroops,
             instantBuild: this.instantBuild,
-            randomSpawn: this.randomSpawn,
+            randomSpawn: this.isScenario() ? false : this.randomSpawn,
+            ...(this.isScenario()
+              ? { scenarioFaction: this.scenarioFaction }
+              : {}),
             disabledUnits: this.disabledUnits.filter((unit): unit is UnitType =>
               Object.values(UnitType).includes(unit),
             ),
-            nations: sliderToNationsConfig(
-              this.nations,
-              this.defaultNationCount,
-            ),
+            // A scenario keeps every historical city on the map.
+            nations: this.isScenario()
+              ? "default"
+              : sliderToNationsConfig(this.nations, this.defaultNationCount),
             ...(this.goldMultiplier && this.goldMultiplierValue
               ? { goldMultiplier: this.goldMultiplierValue }
               : {}),
@@ -1418,6 +1442,11 @@ export class SinglePlayerModal extends BaseModal {
     }
   }
 
+  /** Scenario mode with a faction picked (otherwise the game is free mode). */
+  private isScenario(): boolean {
+    return this.playMode === "scenario" && this.scenarioFaction !== null;
+  }
+
   private async loadNationCount() {
     const currentMap = this.selectedMap;
     try {
@@ -1425,6 +1454,10 @@ export class SinglePlayerModal extends BaseModal {
       const manifest = await mapData.manifest();
       // Only update if the map hasn't changed
       if (this.selectedMap === currentMap) {
+        this.factions = factionsOf(manifest.nations);
+        if (!this.factions.some((f) => f.id === this.scenarioFaction)) {
+          this.scenarioFaction = this.factions[0]?.id ?? null;
+        }
         this.defaultNationCount = manifest.nations.length;
         this.nations = this.compactMap
           ? Math.max(0, Math.floor(manifest.nations.length * 0.25))

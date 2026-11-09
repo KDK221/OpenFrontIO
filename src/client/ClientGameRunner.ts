@@ -1091,7 +1091,7 @@ export class ClientGameRunner {
         console.log("starting game! in client game runner");
         this.awaitingStart = false;
 
-        if (this.gameView.config().isRandomSpawn()) {
+        if (this.gameView.config().isSpawnAssigned()) {
           const goToPlayer = () => {
             const myPlayer = this.gameView.myPlayer();
 
@@ -1269,7 +1269,7 @@ export class ClientGameRunner {
       this.gameView.isLand(tile) &&
       !this.gameView.hasOwner(tile) &&
       this.gameView.inSpawnPhase() &&
-      !this.gameView.config().isRandomSpawn()
+      !this.gameView.config().isSpawnAssigned()
     ) {
       this.eventBus.emit(new SendSpawnIntentEvent(tile));
       return;

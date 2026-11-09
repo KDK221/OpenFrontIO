@@ -86,6 +86,12 @@ export class SpawnExecution implements Execution {
       return;
     }
 
+    // Scenario mode: the human starts on its faction's cities
+    // (ScenarioSpawnExecution) and can't pick another spot.
+    if (this.fromIntent && this.mg.config().scenarioFaction() !== null) {
+      return;
+    }
+
     // Security: If random spawn is enabled, prevent players from re-rolling their spawn location
     if (this.mg.config().isRandomSpawn() && player.hasSpawned()) {
       return;

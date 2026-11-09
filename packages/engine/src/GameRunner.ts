@@ -32,6 +32,7 @@ import { EngineConfig } from "./configuration/EngineConfig";
 import { DoomsdayClockExecution } from "./execution/DoomsdayClockExecution";
 import { Executor } from "./execution/ExecutionManager";
 import { RecomputeRailClusterExecution } from "./execution/RecomputeRailClusterExecution";
+import { ScenarioSpawnExecution } from "./execution/ScenarioSpawnExecution";
 import { SpawnTimerExecution } from "./execution/SpawnTimerExecution";
 import { WinCheckExecution } from "./execution/WinCheckExecution";
 import { Game, Player } from "./game/Game";
@@ -55,9 +56,16 @@ export async function createGameRunner(
   const gameMap = await loadGameMap(gameStart.config, map);
   const random = new PseudoRandom(simpleHash(gameStart.gameID));
 
+  // Scenario mode (one human only): the human becomes the chosen faction,
+  // with its name and banner.
+  const faction =
+    gameStart.players.length === 1
+      ? (gameStart.config.scenarioFaction ?? null)
+      : null;
+
   const humans = gameStart.players.map((p) => {
     return new PlayerInfo(
-      p.username,
+      faction ?? p.username,
       PlayerType.Human,
       p.clientID,
       random.nextID(),
@@ -65,6 +73,7 @@ export async function createGameRunner(
       p.clanTag,
       p.friends ?? [],
       p.teamIndex ?? null,
+      faction,
     );
   });
 
@@ -96,6 +105,12 @@ export async function createGameRunner(
     callBack,
   );
   gr.init();
+  if (faction !== null) {
+    const cities = gameMap.nations
+      .filter((n) => n.flag === faction && n.coordinates !== undefined)
+      .map((n) => game.ref(n.coordinates![0], n.coordinates![1]));
+    game.addExecution(new ScenarioSpawnExecution(humans[0], cities));
+  }
   return gr;
 }
 

@@ -53,6 +53,12 @@ export function createNationsForGame(
       ),
     );
 
+  // Scenario mode: the human plays this faction, so its cities aren't AI.
+  const faction = gameStart.config.scenarioFaction;
+  if (faction !== undefined && faction !== null) {
+    manifestNations = manifestNations.filter((n) => n.flag !== faction);
+  }
+
   const isCompactMap = gameStart.config.gameMapSize === GameMapSize.Compact;
 
   const isHumansVsNations =

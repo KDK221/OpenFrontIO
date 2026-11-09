@@ -198,7 +198,9 @@ describe.each(VARIANTS)("full game snapshots: %s", (_, overrides) => {
       // alive at a tick boundary. BasicExecutions.test.ts covers it directly.
       // The scripted game runs the real era config, where the MIRV slot is the
       // Plague, so MirvExecution never appears (MIRVExecution.test.ts covers it).
-      const neverStored = new Set(["Pause", "MIRV"]);
+      // It is also a free-mode game, so there's no ScenarioSpawn
+      // (ScenarioMode.test.ts covers it).
+      const neverStored = new Set(["Pause", "MIRV", "ScenarioSpawn"]);
       const missing = EXECUTION_SNAPSHOT_TYPES.map((t) => t.name).filter(
         (name) => !reference.execTypes.has(name) && !neverStored.has(name),
       );

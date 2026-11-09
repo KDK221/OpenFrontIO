@@ -739,7 +739,7 @@ export const centerButtonElement: CenterButtonElement = {
       return true;
     }
     if (params.game.inSpawnPhase()) {
-      if (params.game.config().isRandomSpawn()) {
+      if (params.game.config().isSpawnAssigned()) {
         return true;
       }
       if (tileOwner.isPlayer()) {

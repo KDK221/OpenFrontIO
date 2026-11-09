@@ -309,6 +309,10 @@ export const GameConfigSchema = z.object({
   nameRevealPublicIds: z.string().array().max(200).optional(),
   waterNukes: z.boolean().nullable().optional(),
   randomSpawn: z.boolean(),
+  // Scenario mode: the faction (a manifest nation flag, e.g. "Goguryeo") the
+  // single human plays. Its cities are taken from the AI and handed to the
+  // human at the start; the human can't pick a spawn. Unset = free mode.
+  scenarioFaction: z.string().max(64).nullable().optional(),
   // The onboarding tutorial (docs/OnboardingTutorial.md): nations and tribes
   // only grow into free land, and the game ends once the human is alone.
   tutorial: z.boolean().optional(),

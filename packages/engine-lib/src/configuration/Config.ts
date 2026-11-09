@@ -193,6 +193,16 @@ export class Config {
   isRandomSpawn(): boolean {
     return this._gameConfig.randomSpawn;
   }
+
+  /** The faction the human plays in scenario mode, or null in free mode. */
+  scenarioFaction(): string | null {
+    return this._gameConfig.scenarioFaction ?? null;
+  }
+
+  /** True when players don't choose where they start (random or scenario). */
+  isSpawnAssigned(): boolean {
+    return this.isRandomSpawn() || this.scenarioFaction() !== null;
+  }
   infiniteTroops(): boolean {
     return this._gameConfig.infiniteTroops;
   }

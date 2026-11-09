@@ -226,6 +226,9 @@ export class HeadsUpMessage extends LitElement implements Controller {
         ? translateText("heads_up_message.random_spawn_spectator")
         : translateText("heads_up_message.choose_spawn_spectator");
     }
+    if (this.game.config().scenarioFaction() !== null) {
+      return translateText("heads_up_message.scenario_spawn");
+    }
     return this.game.config().isRandomSpawn()
       ? translateText("heads_up_message.random_spawn")
       : translateText("heads_up_message.choose_spawn");
