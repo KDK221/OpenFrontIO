@@ -75,6 +75,45 @@ describe("scenario mode: nations", () => {
   });
 });
 
+describe("free mode: extra nations", () => {
+  test("get era names and banners on the historical maps", () => {
+    const nations = createNationsForGame(
+      gameStart({ nations: 10 }),
+      manifest,
+      [],
+      1,
+      new PseudoRandom(3),
+    );
+    expect(nations).toHaveLength(10);
+    const extras = nations.filter(
+      (n) => !manifest.some((m) => m.name === n.playerInfo.name),
+    );
+    expect(extras).toHaveLength(6);
+    for (const n of extras) {
+      expect(n.playerInfo.name).toMatch(
+        / (Kingdom|Confederacy|Chiefdom|Realm)( \d+)?$/,
+      );
+      expect(n.playerInfo.nationFlag).toMatch(/^era_banner_(0[1-9]|1[0-6])$/);
+    }
+    expect(new Set(nations.map((n) => n.playerInfo.name)).size).toBe(10);
+  });
+
+  test("other maps keep the procedural names", () => {
+    const nations = createNationsForGame(
+      gameStart({ nations: 6, gameMap: GameMapType.World }),
+      manifest,
+      [],
+      1,
+      new PseudoRandom(3),
+    );
+    const extras = nations.filter(
+      (n) => !manifest.some((m) => m.name === n.playerInfo.name),
+    );
+    expect(extras).toHaveLength(2);
+    for (const n of extras) expect(n.playerInfo.nationFlag).toBeNull();
+  });
+});
+
 describe("scenario mode: spawn", () => {
   const human = new PlayerInfo(
     "Goguryeo",

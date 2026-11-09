@@ -565,6 +565,8 @@ export class SinglePlayerModal extends BaseModal {
               },
               gameMode: {
                 selected: this.gameMode,
+                // A scenario is always every lord for themselves.
+                hidden: this.isScenario(),
               },
               teamCount: {
                 selected: this.teamCount,
@@ -581,16 +583,23 @@ export class SinglePlayerModal extends BaseModal {
                   defaultValue: this.defaultNationCount,
                   labelKey: "game_settings.nations",
                   disabledKey: "common.disabled",
+                  // A scenario always has its map's historical lords.
+                  hidden: this.isScenario(),
                 },
                 toggles: [
                   {
                     labelKey: "game_settings.instant_build",
                     checked: this.instantBuild,
                   },
-                  {
-                    labelKey: "game_settings.random_spawn",
-                    checked: this.randomSpawn,
-                  },
+                  // A scenario starts you on your capital.
+                  ...(this.isScenario()
+                    ? []
+                    : [
+                        {
+                          labelKey: "game_settings.random_spawn",
+                          checked: this.randomSpawn,
+                        },
+                      ]),
                   {
                     labelKey: "game_settings.infinite_gold",
                     checked: this.infiniteGold,

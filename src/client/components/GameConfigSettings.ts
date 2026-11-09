@@ -204,6 +204,8 @@ export interface GameConfigSettingsData {
   };
   gameMode: {
     selected: GameMode;
+    // Hides the FFA/Teams picker and team count (scenario mode is FFA).
+    hidden?: boolean;
   };
   teamCount: {
     selected: TeamCountConfig;
@@ -453,36 +455,41 @@ export class GameConfigSettings extends LitElement {
             </div>
           `,
         )}
-        ${renderSection(
-          MODE_ICON,
-          "text-purple-400",
-          "bg-purple-500/20",
-          "host_modal.mode",
-          html`
-            <div class="grid grid-cols-2 gap-4">
-              ${[GameMode.FFA, GameMode.Team].map((mode) => {
-                const isSelected = settings.gameMode.selected === mode;
-                return html`
-                  <button
-                    class="${cardClass(isSelected, "py-6 text-center")}"
-                    @click=${() => this.handleGameModeSelect(mode)}
-                  >
-                    <span
-                      class="text-sm font-bold text-white uppercase tracking-widest"
-                    >
-                      ${
-                        mode === GameMode.FFA
-                          ? translateText("game_mode.ffa")
-                          : translateText("game_mode.teams")
-                      }
-                    </span>
-                  </button>
-                `;
-              })}
-            </div>
-          `,
-        )}
         ${
+          settings.gameMode.hidden
+            ? nothing
+            : renderSection(
+                MODE_ICON,
+                "text-purple-400",
+                "bg-purple-500/20",
+                "host_modal.mode",
+                html`
+                  <div class="grid grid-cols-2 gap-4">
+                    ${[GameMode.FFA, GameMode.Team].map((mode) => {
+                      const isSelected = settings.gameMode.selected === mode;
+                      return html`
+                        <button
+                          class="${cardClass(isSelected, "py-6 text-center")}"
+                          @click=${() => this.handleGameModeSelect(mode)}
+                        >
+                          <span
+                            class="text-sm font-bold text-white uppercase tracking-widest"
+                          >
+                            ${
+                              mode === GameMode.FFA
+                                ? translateText("game_mode.ffa")
+                                : translateText("game_mode.teams")
+                            }
+                          </span>
+                        </button>
+                      `;
+                    })}
+                  </div>
+                `,
+              )
+        }
+        ${
+          settings.gameMode.hidden ||
           settings.gameMode.selected === GameMode.FFA
             ? nothing
             : html`

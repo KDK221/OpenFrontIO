@@ -1,6 +1,7 @@
 import {
   Cell,
   GameMapSize,
+  GameMapType,
   GameMode,
   GameType,
   HumansVsNations,
@@ -13,7 +14,33 @@ import {
   Nation as ManifestNation,
 } from "@openfront/engine-api/game/MapFiles";
 import { GameStartInfo } from "@openfront/engine-api/Schemas";
+import { resolveTribeNameData } from "@openfront/engine-lib/execution/utils/TribeNames";
 import { PseudoRandom } from "@openfront/engine-lib/PseudoRandom";
+
+/** Generic era banners (resources/flags/era_banner_01..16.svg). */
+const ERA_BANNER_COUNT = 16;
+
+/**
+ * Titles for extra lords on the historical maps. Their names pair the map's
+ * tribe-theme places and clans (resolveTribeNameData) with one of these, and
+ * they fly a generic era banner, instead of the procedural English names.
+ */
+const ERA_NATION_TITLES: Partial<Record<GameMapType, string[]>> = {
+  [GameMapType.Samguk]: ["Kingdom", "Confederacy", "Chiefdom", "Realm"],
+  [GameMapType.Sengoku]: ["Clan", "Domain", "House", "Daimyo"],
+  [GameMapType.WarringStates]: ["State", "Marquisate", "Duchy", "Kingdom"],
+};
+
+interface EraNames {
+  places: string[];
+  titles: string[];
+}
+
+function eraNamesFor(map: GameMapType): EraNames | undefined {
+  const titles = ERA_NATION_TITLES[map];
+  if (titles === undefined) return undefined;
+  return { places: resolveTribeNameData(map).prefixes, titles };
+}
 
 /**
  * Creates the nations array for a game.
@@ -81,6 +108,7 @@ export function createNationsForGame(
       additionalNations,
       toNation,
       random,
+      eraNamesFor(gameStart.config.gameMap),
     );
   }
 
@@ -93,6 +121,7 @@ export function createNationsForGame(
         additionalNations,
         toNation,
         random,
+        eraNamesFor(gameStart.config.gameMap),
       );
     }
 
@@ -123,6 +152,7 @@ function createRandomNations(
   additionalNations: AdditionalNation[],
   toNation: (n: ManifestNation) => Nation,
   random: PseudoRandom,
+  era?: EraNames,
 ): Nation[] {
   const shuffled = random.shuffleArray(manifestNations);
   if (targetCount <= manifestNations.length) {
@@ -163,6 +193,28 @@ function createRandomNations(
   }
 
   for (let i = 0; i < remaining; i++) {
+    if (era !== undefined) {
+      const name = generateUniqueEraName(random, usedNames, era);
+      usedNames.add(name);
+      const banner = random.nextInt(1, ERA_BANNER_COUNT + 1);
+      nations.push(
+        new Nation(
+          undefined,
+          new PlayerInfo(
+            name,
+            PlayerType.Nation,
+            null,
+            random.nextID(),
+            false,
+            null,
+            [],
+            null,
+            `era_banner_${String(banner).padStart(2, "0")}`,
+          ),
+        ),
+      );
+      continue;
+    }
     const name = generateUniqueNationName(random, usedNames);
     usedNames.add(name);
     nations.push(
@@ -207,6 +259,26 @@ function generateUniqueNationName(
     counter++;
   }
   return `${baseName} ${counter}`;
+}
+
+/** "<place> <title>", e.g. "Okjeo Chiefdom"; numbered once they run out. */
+function generateUniqueEraName(
+  random: PseudoRandom,
+  usedNames: Set<string>,
+  era: EraNames,
+): string {
+  for (let attempt = 0; attempt < 20; attempt++) {
+    const place = era.places[random.nextInt(0, era.places.length)];
+    const title = era.titles[random.nextInt(0, era.titles.length)];
+    const name = `${place} ${title}`;
+    if (!usedNames.has(name)) return name;
+  }
+  const base = `${era.places[random.nextInt(0, era.places.length)]} ${
+    era.titles[random.nextInt(0, era.titles.length)]
+  }`;
+  let n = 2;
+  while (usedNames.has(`${base} ${n}`)) n++;
+  return `${base} ${n}`;
 }
 
 function generateNationName(random: PseudoRandom): string {
