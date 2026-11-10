@@ -40,6 +40,7 @@ import { DefenseCoveragePass } from "./passes/DefenseCoveragePass";
 import { FalloutBloomPass } from "./passes/FalloutBloomPass";
 import { FalloutLightPass } from "./passes/FalloutLightPass";
 import { FxPass } from "./passes/fx-pass";
+import { GoldenLandPass } from "./passes/GoldenLandPass";
 import { LightmapPass } from "./passes/LightmapPass";
 import { MapLayerPass } from "./passes/MapLayerPass";
 import { MoveIndicatorPass } from "./passes/MoveIndicatorPass";
@@ -49,7 +50,6 @@ import { NukeTelegraphPass } from "./passes/NukeTelegraphPass";
 import { NukeTrajectoryPass } from "./passes/NukeTrajectoryPass";
 import { PointLightPass } from "./passes/PointLightPass";
 import { RailroadPass } from "./passes/RailroadPass";
-import { GoldenLandPass } from "./passes/GoldenLandPass";
 import { RangeCirclePass } from "./passes/RangeCirclePass";
 import { SAMRadiusPass } from "./passes/SamRadiusPass";
 import { SelectionBoxPass } from "./passes/SelectionBoxPass";
@@ -572,6 +572,7 @@ export class GPURenderer {
       this.paletteTex,
       this.effectTex,
       this.settings,
+      config.gameConfig().gameMap,
     );
     this.structureLevelPass = new StructureLevelPass(gl, header, this.settings);
     this.unitPass = new UnitPass(
@@ -1063,11 +1064,7 @@ export class GPURenderer {
   }
 
   /** Golden lands to paint, as a per-tile mask (255 = golden). */
-  setGoldenLands(
-    mask: Uint8Array,
-    mapWidth: number,
-    mapHeight: number,
-  ): void {
+  setGoldenLands(mask: Uint8Array, mapWidth: number, mapHeight: number): void {
     this.goldenLandPass.setMask(mask, mapWidth, mapHeight);
   }
 

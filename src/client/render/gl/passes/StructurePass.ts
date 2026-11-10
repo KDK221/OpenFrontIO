@@ -32,11 +32,10 @@ import {
 } from "../utils/ColorUtils";
 import { createProgram, shaderSrc } from "../utils/GlUtils";
 
-import { assetUrl } from "@openfront/shared/AssetUrls";
+import { GameMapType } from "@openfront/engine-api/game/Maps.gen";
+import { buildingAtlasUrl } from "../../../BuildingTheme";
 import structureFragSrc from "../shaders/structure/structure.frag.glsl?raw";
 import structureVertSrc from "../shaders/structure/structure.vert.glsl?raw";
-
-const iconAtlasUrl = assetUrl("atlases/korea-buildings.png");
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -133,6 +132,7 @@ export class StructurePass {
     paletteTex: WebGLTexture,
     effectTex: WebGLTexture,
     settings: RenderSettings,
+    private readonly mapType?: GameMapType,
   ) {
     this.gl = gl;
     this.settings = settings;
@@ -281,7 +281,7 @@ export class StructurePass {
   private async loadAtlas(): Promise<void> {
     const img = new Image();
     img.crossOrigin = "anonymous";
-    img.src = iconAtlasUrl;
+    img.src = buildingAtlasUrl(this.mapType);
     await img.decode();
     const gl = this.gl;
     gl.activeTexture(gl.TEXTURE1);

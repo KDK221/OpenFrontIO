@@ -12,6 +12,7 @@ import { EventBus } from "@openfront/shared/EventBus";
 import { css, html, LitElement } from "lit";
 import { customElement, state } from "lit/decorators.js";
 import { translateText } from "../../../client/Utils";
+import { themedBuildingIcon } from "../../BuildingTheme";
 import { Controller } from "../../Controller";
 import {
   CloseViewEvent,
@@ -434,7 +435,7 @@ export class BuildMenu extends LitElement implements Controller {
                     }
                   >
                     <img
-                      src=${item.icon}
+                      src=${themedBuildingIcon(item.icon, this.game.config().gameConfig().gameMap)}
                       alt="${item.unitType}"
                       width="40"
                       height="40"

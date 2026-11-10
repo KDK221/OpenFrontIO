@@ -12,6 +12,7 @@ import { assetUrl } from "@openfront/shared/AssetUrls";
 import { EventBus } from "@openfront/shared/EventBus";
 import { html, LitElement, TemplateResult } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
+import { themedBuildingIcon } from "../../BuildingTheme";
 import { Controller } from "../../Controller";
 import {
   ContextMenuEvent,
@@ -354,7 +355,7 @@ export class PlayerInfoOverlay extends LitElement implements Controller {
           translate="no"
         >
           <img
-            src=${icon}
+            src=${themedBuildingIcon(icon, this.game.config().gameConfig().gameMap)}
             class="w-3 h-3 lg:w-4 lg:h-4 object-contain shrink-0"
           />
           <span>${player.totalUnitLevels(type)}</span>
@@ -508,7 +509,11 @@ export class PlayerInfoOverlay extends LitElement implements Controller {
         this.hide();
       }}
     >
-      <img src=${icon} alt="" class="size-5 object-contain" />
+      <img
+        src=${themedBuildingIcon(icon, this.game.config().gameConfig().gameMap)}
+        alt=""
+        class="size-5 object-contain"
+      />
       ${
         key
           ? html`<span

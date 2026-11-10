@@ -9,6 +9,7 @@ import { renderNumber } from "@openfront/engine-lib/Format";
 import { EventBus } from "@openfront/shared/EventBus";
 import { html, LitElement, nothing } from "lit";
 import { customElement } from "lit/decorators.js";
+import { themedBuildingIcon } from "../../BuildingTheme";
 import { Controller } from "../../Controller";
 import { InputHandler, ToggleStructureEvent } from "../../InputHandler";
 import { KeyboardLayoutController } from "../../KeyboardLayout";
@@ -356,7 +357,11 @@ export class UnitDisplay extends LitElement implements Controller {
               : nothing
           }
           <div class="flex items-center gap-0.5 pt-0.5">
-            <img src=${icon} alt=${structureKey} class="align-middle size-5" />
+            <img
+              src=${themedBuildingIcon(icon, this.game.config().gameConfig().gameMap)}
+              alt=${structureKey}
+              class="align-middle size-5"
+            />
             ${
               number !== null
                 ? html`<span class="text-xs">${renderNumber(number)}</span>`

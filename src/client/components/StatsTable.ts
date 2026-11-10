@@ -1,6 +1,7 @@
 import { LitElement, html, nothing } from "lit";
 import { property, state } from "lit/decorators.js";
 import { repeat } from "lit/directives/repeat.js";
+import { themedBuildingIcon } from "../BuildingTheme";
 import "../hud/layers/ColumnPicker";
 import {
   type ColumnAlignment,
@@ -179,7 +180,7 @@ export abstract class StatsTable extends LitElement {
         class="size-[1.1rem] object-contain ${
           visual.white === true ? "brightness-0 invert" : ""
         }"
-        src=${visual.src}
+        src=${themedBuildingIcon(visual.src, this.game?.config().gameConfig().gameMap)}
         alt=""
         aria-hidden="true"
       />${
@@ -189,7 +190,7 @@ export abstract class StatsTable extends LitElement {
                 class="size-[0.825rem] object-contain -ml-0.5 ${
                   visual.superscript.white === true ? "brightness-0 invert" : ""
                 }"
-                src=${visual.superscript.src}
+                src=${themedBuildingIcon(visual.superscript.src, this.game?.config().gameConfig().gameMap)}
                 alt=""
                 aria-hidden="true"
               />`
