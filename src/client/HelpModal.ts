@@ -1026,7 +1026,7 @@ export class HelpModal extends BaseModal {
                     </td>
                     <td class="py-3 border-b border-white/5">
                       <img
-                        src=${assetUrl("images/CityIconWhite.svg")}
+                        src=${assetUrl("images/korea/house.png")}
                         class="w-8 h-8 scale-75 origin-left"
                       />
                     </td>
@@ -1042,7 +1042,7 @@ export class HelpModal extends BaseModal {
                     </td>
                     <td class="py-3 border-b border-white/5">
                       <img
-                        src=${assetUrl("images/FortressIconWhite.svg")}
+                        src=${assetUrl("images/korea/fortress.png")}
                         class="w-8 h-8 scale-75 origin-left"
                       />
                     </td>
@@ -1058,7 +1058,7 @@ export class HelpModal extends BaseModal {
                     </td>
                     <td class="py-3 border-b border-white/5">
                       <img
-                        src=${assetUrl("images/PortIcon.svg")}
+                        src=${assetUrl("images/korea/port.png")}
                         class="w-8 h-8 scale-75 origin-left"
                       />
                     </td>
@@ -1074,7 +1074,7 @@ export class HelpModal extends BaseModal {
                     </td>
                     <td class="py-3 border-b border-white/5">
                       <img
-                        src=${assetUrl("images/FactoryIconWhite.svg")}
+                        src=${assetUrl("images/korea/market.png")}
                         class="w-8 h-8 scale-75 origin-left"
                       />
                     </td>
@@ -1106,7 +1106,7 @@ export class HelpModal extends BaseModal {
                     </td>
                     <td class="py-3 border-b border-white/5">
                       <img
-                        src=${assetUrl("images/MissileSiloIconWhite.svg")}
+                        src=${assetUrl("images/korea/trebuchet.png")}
                         class="w-8 h-8 scale-75 origin-left"
                       />
                     </td>
@@ -1122,7 +1122,7 @@ export class HelpModal extends BaseModal {
                     </td>
                     <td class="py-3 border-b border-white/5">
                       <img
-                        src=${assetUrl("images/SamLauncherIconWhite.svg")}
+                        src=${assetUrl("images/korea/tower.png")}
                         class="w-8 h-8 scale-75 origin-left"
                       />
                     </td>

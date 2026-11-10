@@ -36,7 +36,7 @@ import { assetUrl } from "@openfront/shared/AssetUrls";
 import structureFragSrc from "../shaders/structure/structure.frag.glsl?raw";
 import structureVertSrc from "../shaders/structure/structure.vert.glsl?raw";
 
-const iconAtlasUrl = assetUrl("atlases/icon-atlas.png");
+const iconAtlasUrl = assetUrl("atlases/korea-buildings.png");
 
 // ---------------------------------------------------------------------------
 // Constants

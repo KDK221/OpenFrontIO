@@ -55,12 +55,12 @@ const requestAllianceIcon = assetUrl("images/AllianceIconWhite.svg");
 const breakAllianceIcon = assetUrl("images/TraitorIconWhite.svg");
 const targetIcon = assetUrl("images/TargetIconWhite.svg");
 const boatIcon = assetUrl("images/BoatIconWhite.svg");
-const cityIcon = assetUrl("images/CityIconWhite.svg");
-const factoryIcon = assetUrl("images/FactoryIconWhite.svg");
+const cityIcon = assetUrl("images/korea/house.png");
+const factoryIcon = assetUrl("images/korea/market.png");
 const goldCoinIcon = assetUrl("images/GoldCoinIcon.svg");
-const missileSiloIcon = assetUrl("images/MissileSiloIconWhite.svg");
-const portIcon = assetUrl("images/PortIcon.svg");
-const samLauncherIcon = assetUrl("images/SamLauncherIconWhite.svg");
+const missileSiloIcon = assetUrl("images/korea/trebuchet.png");
+const portIcon = assetUrl("images/korea/port.png");
+const samLauncherIcon = assetUrl("images/korea/tower.png");
 const soldierIcon = assetUrl("images/SoldierIcon.svg");
 
 function euclideanDistWorld(

@@ -15,7 +15,6 @@ import {
 } from "./StatsConstants";
 // DesktopShell.ts imports nothing, so this cannot introduce an import cycle
 // (verified with madge: 58 cycles before and after, none involving it).
-import { isDesktopShell } from "./DesktopShell";
 
 export function getDefaultKeybinds(isMac: boolean): Record<string, string> {
   return {
@@ -103,15 +102,8 @@ export type AudioCategory =
   | "interface";
 
 const AUDIO_DEFAULTS: Record<AudioCategory, number> = {
-  // Not 1.0, in answer to the "too loud on desktop" reports. perceptualGain
-  // squares the slider position, so the cut is twice what the number reads
-  // as: 0.9 is -0.9 dB on the handle and -1.8 dB by the time it is heard.
-  //
-  // Desktop is where it is felt, because that is the platform this default
-  // actually applies on (see defaultMasterVolume), but it is not a
-  // desktop-only value: it is also where the web carve-out lands a player
-  // who opts in, and the two should agree about how loud "default" is.
-  master: 0.9,
+  // New players start with full master volume; saved choices remain respected.
+  master: 1,
   music: 0.5,
   effects: 0.7,
   alerts: 0.8,
@@ -180,13 +172,6 @@ const AUDIO_RESET_KEYS: readonly string[] = [
  */
 const AUDIO_RESET_VERSION = 1;
 const AUDIO_RESET_VERSION_KEY = "settings.audio.resetVersion";
-
-/** Every key that means "this player has chosen an audio volume before". */
-const AUDIO_VOLUME_KEYS: readonly string[] = [
-  "settings.backgroundMusicVolume",
-  "settings.soundEffectsVolume",
-  ...AUDIO_CHANNELS.map((category) => `settings.audio.${category}`),
-];
 
 const AUDIO_LEGACY_KEY: Partial<Record<AudioCategory, string>> = {
   music: "settings.backgroundMusicVolume",
@@ -935,28 +920,9 @@ export class UserSettings {
    * the only writer is a slider drag, so 0 is always a deliberate choice and
    * never means "unset".
    */
-  /**
-   * What master falls back to with nothing stored for it.
-   *
-   * The desktop shell is a game the player deliberately launched, so it starts
-   * audible. The web build starts silent, matching main today — both of the
-   * old sliders defaulted to 0, and audio that starts by itself on the web is
-   * bad manners besides.
-   *
-   * The carve-out: master has no legacy key of its own, so defaulting it to 0
-   * would silence a returning player who had deliberately set the old
-   * sliders. If any audio value is stored at all, master falls back to
-   * AUDIO_DEFAULTS.master and that player keeps hearing what they chose.
-   *
-   * Named rather than quoted, here and in setAudioVolume below, so the two
-   * cannot drift apart the next time the default moves.
-   */
+  /** Default master level for players without a saved volume preference. */
   private defaultMasterVolume(): number {
-    if (isDesktopShell()) return AUDIO_DEFAULTS.master;
-    const chosenBefore = AUDIO_VOLUME_KEYS.some(
-      (key) => this.getCached(key) !== null,
-    );
-    return chosenBefore ? AUDIO_DEFAULTS.master : 0;
+    return AUDIO_DEFAULTS.master;
   }
 
   audioVolume(category: AudioCategory): number {

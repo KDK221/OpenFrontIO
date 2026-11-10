@@ -169,7 +169,7 @@ void main() {
   uint ghostRailType = texelFetch(uGhostRailTex, tc, 0).r;
   vec2 f = fract(vWorldPos);
 
-  bool detailMode = uZoom >= uRailDetailZoom;
+  bool detailMode = false; // Dirt paths keep the original thin orthogonal centerline.
 
   // Compute coverage for real and ghost rails. In line mode, real coverage is
   // accumulated from the 3x3 neighborhood below so thick lines can spill into

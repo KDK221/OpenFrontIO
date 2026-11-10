@@ -27,16 +27,16 @@ import {
 import { UIState } from "../../UIState";
 import { GameView } from "../../view";
 const warshipIcon = assetUrl("images/BattleshipIconWhite.svg");
-const cityIcon = assetUrl("images/CityIconWhite.svg");
-const factoryIcon = assetUrl("images/FactoryIconWhite.svg");
+const cityIcon = assetUrl("images/korea/house.png");
+const factoryIcon = assetUrl("images/korea/market.png");
 const goldCoinIcon = assetUrl("images/GoldCoinIcon.svg");
 const mirvIcon = assetUrl("images/MIRVIcon.svg");
-const missileSiloIcon = assetUrl("images/MissileSiloIconWhite.svg");
+const missileSiloIcon = assetUrl("images/korea/trebuchet.png");
 const hydrogenBombIcon = assetUrl("images/MushroomCloudIconWhite.svg");
 const atomBombIcon = assetUrl("images/NukeIconWhite.svg");
-const portIcon = assetUrl("images/PortIcon.svg");
-const samlauncherIcon = assetUrl("images/SamLauncherIconWhite.svg");
-const shieldIcon = assetUrl("images/FortressIconWhite.svg");
+const portIcon = assetUrl("images/korea/port.png");
+const samlauncherIcon = assetUrl("images/korea/tower.png");
+const shieldIcon = assetUrl("images/korea/fortress.png");
 
 export interface BuildItemDisplay {
   unitType: PlayerBuildableUnitType;

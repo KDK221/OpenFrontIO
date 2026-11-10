@@ -1,16 +1,16 @@
 import { assetUrl } from "@openfront/shared/AssetUrls";
 
 export const warshipIcon = assetUrl("images/BattleshipIconWhite.svg");
-export const cityIcon = assetUrl("images/CityIconWhite.svg");
-export const factoryIcon = assetUrl("images/FactoryIconWhite.svg");
+export const cityIcon = assetUrl("images/korea/house.png");
+export const factoryIcon = assetUrl("images/korea/market.png");
 export const goldCoinIcon = assetUrl("images/GoldCoinIcon.svg");
 export const mirvIcon = assetUrl("images/MIRVIcon.svg");
-export const missileSiloIcon = assetUrl("images/MissileSiloIconWhite.svg");
+export const missileSiloIcon = assetUrl("images/korea/trebuchet.png");
 export const hydrogenBombIcon = assetUrl("images/MushroomCloudIconWhite.svg");
 export const atomBombIcon = assetUrl("images/NukeIconWhite.svg");
-export const portIcon = assetUrl("images/PortIcon.svg");
-export const samLauncherIcon = assetUrl("images/SamLauncherIconWhite.svg");
-export const defensePostIcon = assetUrl("images/FortressIconWhite.svg");
+export const portIcon = assetUrl("images/korea/port.png");
+export const samLauncherIcon = assetUrl("images/korea/tower.png");
+export const defensePostIcon = assetUrl("images/korea/fortress.png");
 export const soldierIcon = assetUrl("images/SoldierIcon.svg");
 export const claimIcon = assetUrl("images/ClaimIcon.svg");
 export const profileIcon = assetUrl("images/ProfileIcon.svg");

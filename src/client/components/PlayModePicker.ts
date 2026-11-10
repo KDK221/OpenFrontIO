@@ -52,7 +52,7 @@ export class PlayModePicker extends LitElement {
   @property({ type: String }) selectedFaction: string | null = null;
   // Which part to show: the two mode cards, or the faction grid (shown
   // under the map picker, since the factions depend on the map).
-  @property({ type: String }) part: "modes" | "factions" = "modes";
+  @property({ type: String }) pickerSection: "modes" | "factions" = "modes";
 
   createRenderRoot() {
     return this;
@@ -154,7 +154,7 @@ export class PlayModePicker extends LitElement {
   }
 
   render() {
-    if (this.part === "factions") {
+    if (this.pickerSection === "factions") {
       return this.mode === "scenario" ? this.renderFactions() : nothing;
     }
     return html`<section class="grid grid-cols-1 sm:grid-cols-2 gap-3">

@@ -541,7 +541,7 @@ export class SinglePlayerModal extends BaseModal {
           ></saved-games-panel>
           <play-mode-picker
             class="block mb-6"
-            part="modes"
+            pickerSection="modes"
             .mode=${this.playMode}
             @play-mode-selected=${(e: CustomEvent<{ mode: PlayMode }>) =>
               (this.playMode = e.detail.mode)}
@@ -558,7 +558,7 @@ export class SinglePlayerModal extends BaseModal {
                 // Map first, then the factions of that map.
                 afterMap: html`<play-mode-picker
                   class="block"
-                  part="factions"
+                  pickerSection="factions"
                   .mode=${this.playMode}
                   .factions=${this.factions}
                   .selectedFaction=${this.scenarioFaction}

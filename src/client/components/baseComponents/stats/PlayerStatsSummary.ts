@@ -101,10 +101,10 @@ const METRIC_GROUPS = [
 }[];
 
 const UNIT_ICONS = {
-  city: "images/CityIconWhite.svg",
-  port: "images/PortIcon.svg",
-  factory: "images/FactoryIconWhite.svg",
-  defensePost: "images/FortressIconWhite.svg",
+  city: "images/korea/house.png",
+  port: "images/korea/port.png",
+  factory: "images/korea/market.png",
+  defensePost: "images/korea/fortress.png",
   transport: "images/BoatIconWhite.svg",
   tradeShip: "images/TradeShipIconWhite.svg",
   troop: "images/SoldierIcon.svg",

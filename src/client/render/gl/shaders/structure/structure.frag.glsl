@@ -130,6 +130,23 @@ float shapeSDF(vec2 p, float R) {
 }
 
 void main() {
+  // Full-color historical sprites use the existing size/zoom and hit-test geometry.
+  // Keep affiliation dots at far zoom; construction, alt-view and deletion stay visible.
+  if (vZoom > uDotsThreshold) {
+    float lo = vAtlasIdx / float(ATLAS_COLS);
+    float hi = (vAtlasIdx + 1.0) / float(ATLAS_COLS);
+    if (vAtlasUV.x <= lo || vAtlasUV.x >= hi || vAtlasUV.y <= 0.0 || vAtlasUV.y >= 1.0) discard;
+    vec4 c = texture(uAtlas, vAtlasUV);
+    if (c.a < 0.02) discard;
+    if (vUnderConstruction > 0.5) c.rgb = mix(c.rgb, vec3(0.55), 0.65);
+    if (uAltView != 0) c.rgb = mix(c.rgb, texelFetch(uAffiliation, ivec2(int(vOwnerID), 1), 0).rgb, 0.7);
+    if (vMarkedForDeletion > 0.5 && min(abs(vLocalPos.x-vLocalPos.y),abs(vLocalPos.x+vLocalPos.y)) < 0.045) c.rgb = vec3(1.0,0.2,0.2);
+    if (dot(uOutlineColor,uOutlineColor)>0.01) c.rgb=mix(c.rgb,uOutlineColor,0.5);
+    if (uHighlightMask != 0 && (uHighlightMask & (1 << int(vAtlasIdx+0.5))) == 0) c.a *= uHighlightDimAlpha;
+    fragColor=vec4(c.rgb,c.a*uGhostAlpha*uIconAlpha);
+    return;
+  }
+
   float dist = length(vLocalPos);
   float radius = 0.45;
   float borderWidth = 0.06 / vShapeScale;
