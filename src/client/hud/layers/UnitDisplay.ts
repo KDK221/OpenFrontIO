@@ -9,7 +9,7 @@ import { renderNumber } from "@openfront/engine-lib/Format";
 import { EventBus } from "@openfront/shared/EventBus";
 import { html, LitElement, nothing } from "lit";
 import { customElement } from "lit/decorators.js";
-import { themedBuildingIcon } from "../../BuildingTheme";
+import { buildingButtonIcon } from "../../BuildingTheme";
 import { Controller } from "../../Controller";
 import { InputHandler, ToggleStructureEvent } from "../../InputHandler";
 import { KeyboardLayoutController } from "../../KeyboardLayout";
@@ -358,7 +358,7 @@ export class UnitDisplay extends LitElement implements Controller {
           }
           <div class="flex items-center gap-0.5 pt-0.5">
             <img
-              src=${themedBuildingIcon(icon, this.game.config().gameConfig().gameMap)}
+              src=${buildingButtonIcon(icon)}
               alt=${structureKey}
               class="align-middle size-5"
             />

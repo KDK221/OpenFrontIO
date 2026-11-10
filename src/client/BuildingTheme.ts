@@ -27,3 +27,17 @@ export function themedBuildingIcon(icon: string, map?: GameMapType): string {
   }
   return icon;
 }
+
+/** High-contrast action glyphs; world structures keep their colored atlas. */
+export function buildingButtonIcon(icon: string): string {
+  for (const name of buildings) {
+    if (
+      ["korea", "japan", "china"].some(
+        (theme) => icon === assetUrl(`images/${theme}/${name}.png`),
+      )
+    ) {
+      return assetUrl(`images/buildings-ui/${name}.svg`);
+    }
+  }
+  return icon;
+}
