@@ -179,8 +179,8 @@
     },
     {
       "coordinates": [
-        797,
-        1709
+        610,
+        1730
       ],
       "name": "Geumgwan",
       "flag": "Gaya"
@@ -268,7 +268,7 @@
     {
       "coordinates": [
         580,
-        130
+        230
       ],
       "name": "BalhaeWest",
       "flag": "Balhae"
@@ -276,7 +276,7 @@
     {
       "coordinates": [
         960,
-        150
+        230
       ],
       "name": "BalhaeEast",
       "flag": "Balhae"
@@ -284,5 +284,13 @@
   ],
   "themes": [
     "samguk"
+  ],
+  "layers": [
+    {
+      "id": "island-labels",
+      "placement": "water",
+      "nukeable": false,
+      "alpha": 1
+    }
   ]
 }

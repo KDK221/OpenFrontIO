@@ -3,20 +3,28 @@
   "display_name": "Three Kingdoms",
   "featured_rank": 1,
   "id": "Samguk",
+  "layers": [
+    {
+      "alpha": 1,
+      "id": "island-labels",
+      "nukeable": false,
+      "placement": "water"
+    }
+  ],
   "map": {
     "height": 2188,
-    "num_land_tiles": 1164658,
-    "width": 1088
+    "num_land_tiles": 1084387,
+    "width": 1344
   },
   "map16x": {
     "height": 547,
-    "num_land_tiles": 70240,
-    "width": 272
+    "num_land_tiles": 65334,
+    "width": 336
   },
   "map4x": {
     "height": 1094,
-    "num_land_tiles": 287341,
-    "width": 544
+    "num_land_tiles": 267368,
+    "width": 672
   },
   "name": "Samguk",
   "nations": [
@@ -121,7 +129,7 @@
       "name": "Ulsan"
     },
     {
-      "coordinates": [797, 1709],
+      "coordinates": [610, 1730],
       "flag": "Gaya",
       "name": "Geumgwan"
     },
@@ -176,12 +184,12 @@
       "name": "BalhaeFrontier"
     },
     {
-      "coordinates": [580, 130],
+      "coordinates": [580, 230],
       "flag": "Balhae",
       "name": "BalhaeWest"
     },
     {
-      "coordinates": [960, 150],
+      "coordinates": [960, 230],
       "flag": "Balhae",
       "name": "BalhaeEast"
     }

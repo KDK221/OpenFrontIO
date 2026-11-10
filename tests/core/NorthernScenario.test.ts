@@ -15,7 +15,7 @@ const source = JSON.parse(
   readFileSync("resources/maps/samguk/manifest.json", "utf8"),
 );
 describe("Northern factions on the actual Samguk map", () => {
-  for (const faction of ["NorthernWei", "Balhae"]) {
+  for (const faction of ["NorthernWei", "Balhae", "Gaya"]) {
     for (const size of [GameMapSize.Normal, GameMapSize.Compact]) {
       test(`${faction} starts at its marked city (${size})`, async () => {
         const errors: string[] = [];

@@ -15,8 +15,9 @@ h, w = a.shape[:2]
 y, x = np.mgrid[:h, :w]
 # Leave an irregular northern edge; fill the formerly inaccessible continental
 # region only. This is a gameplay frontier, not a historical territory claim.
-border = 75 + 22*np.sin(x/95) + 15*np.sin(x/41)
-mask = (a[:,:,:3] == 0).all(axis=2) & (y >= border) & (y < 850)
+border = np.interp(x, [0,110,200,320,470,650,760,890,1000,1088],
+                   [145,142,150,154,160,160,150,150,146,148])
+mask = (a[:,:,:3] == 0).all(axis=2) & (y >= border) & (y < 850) & (x < 1088)
 rng = np.random.default_rng(698423)
 height = np.full((h,w), 157.0)
 for grid, weight in [((12,8),22), ((40,24),12), ((120,70),5)]:
