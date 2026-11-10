@@ -3,28 +3,20 @@
   "display_name": "Three Kingdoms",
   "featured_rank": 1,
   "id": "Samguk",
-  "layers": [
-    {
-      "alpha": 1,
-      "id": "island-labels",
-      "nukeable": false,
-      "placement": "water"
-    }
-  ],
   "map": {
     "height": 2188,
-    "num_land_tiles": 1084387,
-    "width": 1344
+    "num_land_tiles": 1130109,
+    "width": 1088
   },
   "map16x": {
     "height": 547,
-    "num_land_tiles": 65334,
-    "width": 336
+    "num_land_tiles": 68150,
+    "width": 272
   },
   "map4x": {
     "height": 1094,
-    "num_land_tiles": 267368,
-    "width": 672
+    "num_land_tiles": 278964,
+    "width": 544
   },
   "name": "Samguk",
   "nations": [

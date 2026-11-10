@@ -284,13 +284,5 @@
   ],
   "themes": [
     "samguk"
-  ],
-  "layers": [
-    {
-      "id": "island-labels",
-      "placement": "water",
-      "nukeable": false,
-      "alpha": 1
-    }
   ]
 }
