@@ -1823,5 +1823,37 @@
       "Lords",
       "Remnants"
     ]
+  },
+  "three_kingdoms": {
+    "prefixes": [
+      "Xiahou",
+      "Guan",
+      "Zhang",
+      "Zhao",
+      "Huang",
+      "Zhou",
+      "Lu",
+      "Xu",
+      "Yu",
+      "Taishi",
+      "Gan",
+      "Wei",
+      "Cheng",
+      "Han",
+      "Jiang",
+      "Ding",
+      "Yan",
+      "Wen",
+      "Cao",
+      "Sun"
+    ],
+    "suffixes": [
+      "Clan",
+      "Army",
+      "Garrison",
+      "Commandery",
+      "Volunteers",
+      "Retainers"
+    ]
   }
 }

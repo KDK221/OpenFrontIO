@@ -10,7 +10,7 @@ vi.mock("../../src/client/Utils", () => ({
 }));
 afterEach(() => document.body.replaceChildren());
 
-it("shows all 21 Chinese portraits and preserves each faction's actual starting city", async () => {
+it("shows all 21 Three Kingdoms portraits and preserves each faction's actual starting city", async () => {
   const picker = new PlayModePicker();
   picker.pickerSection = "factions";
   picker.factions = factionsOf(manifest.nations, {
@@ -26,13 +26,11 @@ it("shows all 21 Chinese portraits and preserves each faction's actual starting 
   for (const [i, portrait] of [...portraits].entries()) {
     const faction = picker.factions[i];
     expect(portrait.getAttribute("src")).toBe(
-      `/images/rulers/china/${faction.id.replaceAll(" ", "")}.webp`,
+      `/images/rulers/china/${faction.id}.webp`,
     );
-    expect(
-      existsSync(
-        `resources/images/rulers/china/${faction.id.replaceAll(" ", "")}.webp`,
-      ),
-    ).toBe(true);
+    expect(existsSync(`resources/images/rulers/china/${faction.id}.webp`)).toBe(
+      true,
+    );
     const marker = portrait
       .closest("button")!
       .querySelector(".korean-start-marker")!;
@@ -42,7 +40,7 @@ it("shows all 21 Chinese portraits and preserves each faction's actual starting 
   const selected = vi.fn();
   picker.addEventListener("faction-selected", selected);
   picker.querySelector<HTMLButtonElement>("button")!.click();
-  expect(selected.mock.calls[0][0].detail).toEqual({ faction: "Qin" });
+  expect(selected.mock.calls[0][0].detail).toEqual({ faction: "LiuBei" });
   picker.factions = [{ id: "Goguryeo", capital: "Gungnae" }];
   await picker.updateComplete;
   expect(

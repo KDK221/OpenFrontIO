@@ -1,219 +1,222 @@
 {
   "$schema": "../../../info.schema.json",
   "id": "WarringStates",
-  "name": "Warring States",
+  "name": "Three Kingdoms — Warlords",
   "translation_key": "map.warringstates",
   "categories": ["featured", "asia", "new"],
   "featured_rank": 3,
-  "location": { "lat": 34.5, "lon": 112 },
+  "location": {
+    "lat": 34.5,
+    "lon": 112
+  },
   "author": "crunchybbb (base map), KDK221",
   "special_team_count": 2,
   "nations": [
     {
-      "coordinates": [1419, 1240],
-      "name": "Xianyang",
-      "flag": "Qin"
+      "flag": "LiuBei",
+      "name": "Xinye",
+      "coordinates": [1585, 1306]
     },
     {
-      "coordinates": [1368, 1239],
-      "name": "Yong",
-      "flag": "Qin"
+      "flag": "CaoCao",
+      "name": "Xuchang",
+      "coordinates": [1634, 1218]
     },
     {
-      "coordinates": [1306, 1245],
-      "name": "Tianshui",
-      "flag": "Qin"
+      "flag": "SunQuan",
+      "name": "Jianye",
+      "coordinates": [1820, 1295]
     },
     {
-      "coordinates": [1365, 1309],
-      "name": "Hanzhong",
-      "flag": "Qin"
+      "flag": "YuanShao",
+      "name": "Ye",
+      "coordinates": [1608, 1092]
     },
     {
-      "coordinates": [1446, 1082],
-      "name": "Suide",
-      "flag": "Qin"
-    },
-    {
-      "coordinates": [1267, 1437],
-      "name": "Chengdu",
-      "flag": "Shu"
-    },
-    {
-      "coordinates": [1372, 1475],
-      "name": "Jiangzhou",
-      "flag": "Ba Kingdom"
-    },
-    {
-      "coordinates": [1587, 1398],
-      "name": "Ying",
-      "flag": "Chu"
-    },
-    {
-      "coordinates": [1736, 1255],
+      "flag": "YuanShu",
       "name": "Shouchun",
-      "flag": "Chu"
+      "coordinates": [1736, 1255]
     },
     {
-      "coordinates": [1653, 1221],
-      "name": "Chen",
-      "flag": "Chu"
+      "flag": "DongZhuo",
+      "name": "Luoyang",
+      "coordinates": [1554, 1197]
     },
     {
-      "coordinates": [1573, 1274],
-      "name": "Wan",
-      "flag": "Chu"
+      "flag": "LuBu",
+      "name": "Puyang",
+      "coordinates": [1665, 1127]
     },
     {
-      "coordinates": [1638, 1491],
-      "name": "Qianzhong",
-      "flag": "Chu"
+      "flag": "LiuBiao",
+      "name": "Xiangyang",
+      "coordinates": [1573, 1340]
     },
     {
-      "coordinates": [1896, 1274],
-      "name": "Wu",
-      "flag": "Chu"
+      "flag": "LiuZhang",
+      "name": "Chengdu",
+      "coordinates": [1267, 1437]
     },
     {
-      "coordinates": [1913, 1333],
-      "name": "Kuaiji",
-      "flag": "Yue"
+      "flag": "ZhangLu",
+      "name": "Hanzhong",
+      "coordinates": [1365, 1309]
     },
     {
-      "coordinates": [1741, 1048],
-      "name": "Linzi",
-      "flag": "Qi"
+      "flag": "MaTeng",
+      "name": "Wuwei",
+      "coordinates": [1175, 1060]
     },
     {
-      "coordinates": [1822, 1045],
-      "name": "Jimo",
-      "flag": "Qi"
+      "flag": "HanSui",
+      "name": "Jincheng",
+      "coordinates": [1235, 1164]
     },
     {
-      "coordinates": [1775, 1099],
-      "name": "Ju",
-      "flag": "Qi"
+      "flag": "GongsunZan",
+      "name": "Beiping",
+      "coordinates": [1684, 900]
     },
     {
-      "coordinates": [1670, 1049],
-      "name": "Pingyuan",
-      "flag": "Qi"
-    },
-    {
-      "coordinates": [1637, 924],
-      "name": "Ji",
-      "flag": "Yan"
-    },
-    {
-      "coordinates": [1613, 957],
-      "name": "Xiadu",
-      "flag": "Yan"
-    },
-    {
-      "coordinates": [1845, 796],
+      "flag": "GongsunDu",
       "name": "Xiangping",
-      "flag": "Yan"
+      "coordinates": [1845, 796]
     },
     {
-      "coordinates": [1608, 1092],
-      "name": "Handan",
-      "flag": "Zhao"
+      "flag": "TaoQian",
+      "name": "Xiapi",
+      "coordinates": [1785, 1195]
     },
     {
-      "coordinates": [1526, 1048],
+      "flag": "KongRong",
+      "name": "Beihai",
+      "coordinates": [1790, 1048]
+    },
+    {
+      "flag": "ZhangXiu",
+      "name": "Wan",
+      "coordinates": [1573, 1274]
+    },
+    {
+      "flag": "ZhangYang",
+      "name": "Henei",
+      "coordinates": [1550, 1157]
+    },
+    {
+      "flag": "ZhangJiao",
+      "name": "Julu",
+      "coordinates": [1635, 1030]
+    },
+    {
+      "flag": "WangLang",
+      "name": "Kuaiji",
+      "coordinates": [1913, 1333]
+    },
+    {
+      "flag": "ShiXie",
+      "name": "Guangxin",
+      "coordinates": [1555, 1745]
+    },
+    {
+      "flag": "CaoCao",
+      "name": "Chenliu",
+      "coordinates": [1665, 1180]
+    },
+    {
+      "flag": "CaoCao",
+      "name": "Runan",
+      "coordinates": [1653, 1260]
+    },
+    {
+      "flag": "LiuBei",
+      "name": "Jiangxia",
+      "coordinates": [1680, 1400]
+    },
+    {
+      "flag": "SunQuan",
+      "name": "Wu",
+      "coordinates": [1896, 1274]
+    },
+    {
+      "flag": "SunQuan",
+      "name": "Jianan",
+      "coordinates": [1914, 1524]
+    },
+    {
+      "flag": "YuanShao",
+      "name": "Nanpi",
+      "coordinates": [1680, 1000]
+    },
+    {
+      "flag": "YuanShao",
+      "name": "Pingyuan",
+      "coordinates": [1670, 1049]
+    },
+    {
+      "flag": "YuanShu",
+      "name": "Lujiang",
+      "coordinates": [1740, 1328]
+    },
+    {
+      "flag": "DongZhuo",
+      "name": "Changan",
+      "coordinates": [1419, 1240]
+    },
+    {
+      "flag": "DongZhuo",
+      "name": "Hongnong",
+      "coordinates": [1490, 1218]
+    },
+    {
+      "flag": "LiuBiao",
+      "name": "Jiangling",
+      "coordinates": [1587, 1398]
+    },
+    {
+      "flag": "LiuBiao",
+      "name": "Changsha",
+      "coordinates": [1620, 1500]
+    },
+    {
+      "flag": "LiuZhang",
+      "name": "Jiangzhou",
+      "coordinates": [1372, 1475]
+    },
+    {
+      "flag": "LiuZhang",
+      "name": "Jianning",
+      "coordinates": [1242, 1704]
+    },
+    {
+      "flag": "ZhangLu",
+      "name": "Shangyong",
+      "coordinates": [1460, 1320]
+    },
+    {
+      "flag": "MaTeng",
+      "name": "Tianshui",
+      "coordinates": [1306, 1245]
+    },
+    {
+      "flag": "HanSui",
+      "name": "Xiping",
+      "coordinates": [1149, 1167]
+    },
+    {
+      "flag": "GongsunZan",
+      "name": "Ji",
+      "coordinates": [1637, 924]
+    },
+    {
+      "flag": "ZhangYang",
       "name": "Jinyang",
-      "flag": "Zhao"
+      "coordinates": [1526, 1048]
     },
     {
-      "coordinates": [1576, 942],
-      "name": "Dai",
-      "flag": "Zhao"
-    },
-    {
-      "coordinates": [1530, 940],
-      "name": "Pingcheng",
-      "flag": "Zhao"
-    },
-    {
-      "coordinates": [1586, 1014],
-      "name": "Lingshou",
-      "flag": "Zhongshan"
-    },
-    {
-      "coordinates": [1622, 1176],
-      "name": "Daliang",
-      "flag": "Wei"
-    },
-    {
-      "coordinates": [1504, 1185],
-      "name": "Anyi",
-      "flag": "Wei"
-    },
-    {
-      "coordinates": [1471, 1174],
-      "name": "Xihe",
-      "flag": "Wei"
-    },
-    {
-      "coordinates": [1604, 1199],
-      "name": "Xinzheng",
-      "flag": "Han"
-    },
-    {
-      "coordinates": [1564, 1131],
-      "name": "Shangdang",
-      "flag": "Han"
-    },
-    {
-      "coordinates": [1554, 1197],
-      "name": "Luoyi",
-      "flag": "Zhou"
-    },
-    {
-      "coordinates": [1674, 1183],
-      "name": "Shangqiu",
-      "flag": "Song"
-    },
-    {
-      "coordinates": [1709, 1116],
-      "name": "Qufu",
-      "flag": "Lu"
-    },
-    {
-      "coordinates": [1412, 937],
-      "name": "Baotou",
-      "flag": "Xiongnu"
-    },
-    {
-      "coordinates": [1694, 793],
-      "name": "Chifeng",
-      "flag": "Donghu"
-    },
-    {
-      "coordinates": [1149, 1167],
-      "name": "Xining",
-      "flag": "Qiang"
-    },
-    {
-      "coordinates": [1242, 1704],
-      "name": "Kunming",
-      "flag": "Dian"
-    },
-    {
-      "coordinates": [1395, 1609],
-      "name": "Guiyang",
-      "flag": "Yelang"
-    },
-    {
-      "coordinates": [1914, 1524],
-      "name": "Fuzhou",
-      "flag": "Minyue"
-    },
-    {
-      "coordinates": [1700, 1721],
-      "name": "Guangzhou",
-      "flag": "Baiyue"
+      "flag": "ShiXie",
+      "name": "Nanhai",
+      "coordinates": [1700, 1721]
     }
   ],
-  "themes": ["warring_states"]
+  "themes": ["three_kingdoms"]
 }

@@ -14,7 +14,6 @@ import {
 } from "./AccountIdentity";
 import { fetchPlayerById, getUserMe, invalidateUserMe } from "./Api";
 import {
-  discordLogin,
   googleLogin,
   linkGoogle,
   linkSteam,
@@ -992,7 +991,7 @@ export class AccountModal extends BaseModal {
   }
 
   private renderLoginOptions() {
-    // On the desktop shell both provider buttons open the shell's browser
+    // On the desktop shell Google opens the shell's browser
     // link flow rather than an in-place OAuth redirect (see discordLogin /
     // googleLogin in Auth.ts), and the captions say so. Keyed on the shell
     // itself, not on the link-flow bridge: Auth.ts never builds the redirect
@@ -1040,26 +1039,6 @@ export class AccountModal extends BaseModal {
           ${this.renderLoginError()}
 
           <div class="space-y-6">
-            <!-- Discord Login Button -->
-            <button
-              @click="${this.handleDiscordLogin}"
-              class="w-full px-6 py-4 text-white bg-[#5865F2] hover:bg-[#4752C4] border border-transparent rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5865F2] transition-colors duration-200 flex items-center justify-center gap-3 group relative overflow-hidden shadow-lg hover:shadow-[#5865F2]/20"
-            >
-              <img
-                src=${assetUrl("images/DiscordLogo.svg")}
-                alt="Discord"
-                class="w-6 h-6 relative z-10"
-              />
-              <span class="font-bold relative z-10 tracking-wide"
-                >${
-                  viaBrowser
-                    ? translateText("account_modal.desktop_login_discord")
-                    : translateText("main.login_discord") ||
-                      translateText("account_modal.link_discord")
-                }</span
-              >
-            </button>
-
             <!-- Google Login Button (Google brand guidelines: white surface,
                  dark text, the multicolor "G" mark) -->
             <button
@@ -1079,6 +1058,8 @@ export class AccountModal extends BaseModal {
                 }</span
               >
             </button>
+
+            ${ClientEnv.singleplayerOnly() ? html`<p class="text-white/60 text-sm" role="status">${translateText("account_modal.google_not_configured")}</p>` : nothing}
 
             <!-- Sign in through Steam. Hidden inside the desktop shell: the
                  player is already signed in there through the native Steam
@@ -1169,10 +1150,6 @@ export class AccountModal extends BaseModal {
     }
     this.portalUser = profile;
     this.requestUpdate();
-  }
-
-  private handleDiscordLogin() {
-    discordLogin();
   }
 
   private handleGoogleLogin() {

@@ -277,6 +277,13 @@ describe("provider login on the web", () => {
     );
   });
 
+  it("static build explains unavailable Google auth without navigating", () => {
+    (window as any).BOOTSTRAP_CONFIG.singleplayerOnly = true;
+    googleLogin();
+    expect(location.href).toBe(WEB_HREF);
+    expect(showInGameAlert).toHaveBeenCalled();
+  });
+
   it("linkGoogle fetches the authorize URL with the Bearer token and navigates to it", async () => {
     const jwt = sessionJwt();
     const authorizeUrl = "https://accounts.google.com/o/oauth2/auth?state=x";

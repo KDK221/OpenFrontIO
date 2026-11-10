@@ -2285,7 +2285,7 @@ export const maps: readonly MapInfo[] = [
     defaultNationCount: 41,
     featuredRank: 3,
     specialTeamCount: 2,
-    themes: ["warring_states"],
+    themes: ["three_kingdoms"],
     author: "crunchybbb (base map), KDK221",
     location: { lat: 34.5, lon: 112 },
   },

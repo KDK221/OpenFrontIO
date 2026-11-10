@@ -1,111 +1,111 @@
-/* Representative portraits across eras; unnamed rulers are creative reconstructions. */
+// Fictional cross-era Three Kingdoms warlords scenario.
 export const chineseRulers: Record<
   string,
   { portrait: string; name: string; kind: string }
 > = {
-  Qin: {
-    portrait: "china/Qin",
-    name: "china_qin",
+  LiuBei: {
+    portrait: "china/LiuBei",
+    name: "three_liubei",
     kind: "representative",
   },
-  Shu: {
-    portrait: "china/Shu",
-    name: "china_shu",
-    kind: "reconstructed",
-  },
-  "Ba Kingdom": {
-    portrait: "china/BaKingdom",
-    name: "china_ba_kingdom",
-    kind: "reconstructed",
-  },
-  Chu: {
-    portrait: "china/Chu",
-    name: "china_chu",
+  CaoCao: {
+    portrait: "china/CaoCao",
+    name: "three_caocao",
     kind: "representative",
   },
-  Yue: {
-    portrait: "china/Yue",
-    name: "china_yue",
+  SunQuan: {
+    portrait: "china/SunQuan",
+    name: "three_sunquan",
     kind: "representative",
   },
-  Qi: {
-    portrait: "china/Qi",
-    name: "china_qi",
+  YuanShao: {
+    portrait: "china/YuanShao",
+    name: "three_yuanshao",
     kind: "representative",
   },
-  Yan: {
-    portrait: "china/Yan",
-    name: "china_yan",
+  YuanShu: {
+    portrait: "china/YuanShu",
+    name: "three_yuanshu",
     kind: "representative",
   },
-  Zhao: {
-    portrait: "china/Zhao",
-    name: "china_zhao",
+  DongZhuo: {
+    portrait: "china/DongZhuo",
+    name: "three_dongzhuo",
     kind: "representative",
   },
-  Zhongshan: {
-    portrait: "china/Zhongshan",
-    name: "china_zhongshan",
+  LuBu: {
+    portrait: "china/LuBu",
+    name: "three_lubu",
     kind: "representative",
   },
-  Wei: {
-    portrait: "china/Wei",
-    name: "china_wei",
+  LiuBiao: {
+    portrait: "china/LiuBiao",
+    name: "three_liubiao",
     kind: "representative",
   },
-  Han: {
-    portrait: "china/Han",
-    name: "china_han",
+  LiuZhang: {
+    portrait: "china/LiuZhang",
+    name: "three_liuzhang",
     kind: "representative",
   },
-  Zhou: {
-    portrait: "china/Zhou",
-    name: "china_zhou",
+  ZhangLu: {
+    portrait: "china/ZhangLu",
+    name: "three_zhanglu",
     kind: "representative",
   },
-  Song: {
-    portrait: "china/Song",
-    name: "china_song",
+  MaTeng: {
+    portrait: "china/MaTeng",
+    name: "three_mateng",
     kind: "representative",
   },
-  Lu: {
-    portrait: "china/Lu",
-    name: "china_lu",
+  HanSui: {
+    portrait: "china/HanSui",
+    name: "three_hansui",
     kind: "representative",
   },
-  Xiongnu: {
-    portrait: "china/Xiongnu",
-    name: "china_xiongnu",
+  GongsunZan: {
+    portrait: "china/GongsunZan",
+    name: "three_gongsunzan",
     kind: "representative",
   },
-  Donghu: {
-    portrait: "china/Donghu",
-    name: "china_donghu",
-    kind: "reconstructed",
-  },
-  Qiang: {
-    portrait: "china/Qiang",
-    name: "china_qiang",
-    kind: "reconstructed",
-  },
-  Dian: {
-    portrait: "china/Dian",
-    name: "china_dian",
+  GongsunDu: {
+    portrait: "china/GongsunDu",
+    name: "three_gongsundu",
     kind: "representative",
   },
-  Yelang: {
-    portrait: "china/Yelang",
-    name: "china_yelang",
-    kind: "reconstructed",
-  },
-  Minyue: {
-    portrait: "china/Minyue",
-    name: "china_minyue",
+  TaoQian: {
+    portrait: "china/TaoQian",
+    name: "three_taoqian",
     kind: "representative",
   },
-  Baiyue: {
-    portrait: "china/Baiyue",
-    name: "china_baiyue",
-    kind: "reconstructed",
+  KongRong: {
+    portrait: "china/KongRong",
+    name: "three_kongrong",
+    kind: "representative",
+  },
+  ZhangXiu: {
+    portrait: "china/ZhangXiu",
+    name: "three_zhangxiu",
+    kind: "representative",
+  },
+  ZhangYang: {
+    portrait: "china/ZhangYang",
+    name: "three_zhangyang",
+    kind: "representative",
+  },
+  ZhangJiao: {
+    portrait: "china/ZhangJiao",
+    name: "three_zhangjiao",
+    kind: "representative",
+  },
+  WangLang: {
+    portrait: "china/WangLang",
+    name: "three_wanglang",
+    kind: "representative",
+  },
+  ShiXie: {
+    portrait: "china/ShiXie",
+    name: "three_shixie",
+    kind: "representative",
   },
 };

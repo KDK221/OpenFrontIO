@@ -102,6 +102,10 @@ export function discordLogin() {
 }
 
 export function googleLogin() {
+  if (ClientEnv.singleplayerOnly()) {
+    void showInGameAlert(translateText("account_modal.google_not_configured"));
+    return;
+  }
   if (startDesktopLinkFlow()) return;
   const redirectUri = encodeURIComponent(window.location.href);
   window.location.href = `${getApiBase()}/auth/login/google?redirect_uri=${redirectUri}`;
