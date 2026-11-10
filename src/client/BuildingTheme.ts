@@ -10,19 +10,26 @@ const buildings = [
   "trebuchet",
 ] as const;
 
+function buildingTheme(map?: GameMapType): "korea" | "japan" | "china" {
+  if (map === GameMapType.Sengoku) return "japan";
+  if (map === GameMapType.WarringStates) return "china";
+  return "korea";
+}
+
 /** Resolve per game, so switching maps never leaks a previous game's theme. */
 export function buildingAtlasUrl(map?: GameMapType): string {
   return assetUrl(
-    `atlases/${map === GameMapType.Sengoku ? "japan" : "korea"}-buildings.png`,
+    `atlases/${buildingTheme(map)}-buildings.png`,
   );
 }
 
 /** Preserve non-building icons and resolve through the hashed asset manifest. */
 export function themedBuildingIcon(icon: string, map?: GameMapType): string {
-  if (map !== GameMapType.Sengoku) return icon;
+  const theme = buildingTheme(map);
+  if (theme === "korea") return icon;
   for (const name of buildings) {
     if (icon === assetUrl(`images/korea/${name}.png`)) {
-      return assetUrl(`images/japan/${name}.png`);
+      return assetUrl(`images/${theme}/${name}.png`);
     }
   }
   return icon;
