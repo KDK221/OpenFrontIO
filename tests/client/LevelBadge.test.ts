@@ -225,17 +225,17 @@ describe("<level-badge>", () => {
     expect(await chipText(Number.NaN)).toBe("1");
   });
 
-  it("keeps the chip's digits on whole pixels, larger at larger sizes", async () => {
-    const digitPixel = async (size: number) => {
-      const d = chipOf(await render({ level: 8, prestige: 2, size }))
-        .querySelector("path")!
-        .getAttribute("d")!;
-      expect(d).not.toMatch(/\d\.\d/);
-      return Number(d.match(/v(\d+)/)![1]);
+  it("uses readable system-font digits that grow with the badge", async () => {
+    const digitSize = async (size: number) => {
+      const chip = chipOf(await render({ level: 8, prestige: 2, size }));
+      const text = chip.querySelector("text")!;
+      expect(text.textContent).toBe("8");
+      expect(text.getAttribute("font-family")).toBe("system-ui, sans-serif");
+      expect(chip.querySelector("path")).toBeNull();
+      return Number(text.getAttribute("font-size"));
     };
-    expect(await digitPixel(24)).toBe(1);
-    expect(await digitPixel(64)).toBe(2);
-    expect(await digitPixel(120)).toBe(3);
+    expect(await digitSize(64)).toBeGreaterThan(await digitSize(24));
+    expect(await digitSize(120)).toBeGreaterThan(await digitSize(64));
   });
 
   it("has an accessible name", async () => {

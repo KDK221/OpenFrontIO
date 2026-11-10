@@ -26,7 +26,7 @@ import {
 } from "./LevelBadgeIcons";
 
 // A player's level and prestige as a small emblem: the rank's OpenFront unit
-// icon on a round plate, the level in a chip of pixel digits overlapping the
+// icon on a round plate, the level in a chip of system-font digits overlapping the
 // plate's foot, and a 10-segment gauge on the rim with one segment lit per
 // prestige rank. The rank's tier colours the gauge, icon and chip (Iron at P1
 // up to a prismatic Champion at P10); the plate's finish rises with the tier
@@ -149,47 +149,8 @@ function mix(a: string, b: string, t: number): string {
 
 const f3 = (n: number): number => Math.round(n * 1000) / 1000;
 
-// 5x7 digits drawn from the OpenFront wordmark font.
-const DIGITS: Record<string, readonly string[]> = {
-  0: [".###.", "##.##", "##.##", "##.##", "##.##", "##.##", ".###."],
-  1: ["###", ".##", ".##", ".##", ".##", ".##", ".##"],
-  2: ["####.", "...##", "...##", ".###.", "##...", "##...", "#####"],
-  3: ["####.", "...##", "...##", ".###.", "...##", "...##", "####."],
-  4: ["##.##", "##.##", "##.##", "#####", "...##", "...##", "...##"],
-  5: ["#####", "##...", "##...", "####.", "...##", "...##", "####."],
-  6: [".###.", "##...", "##...", "####.", "##.##", "##.##", ".###."],
-  7: ["#####", "...##", "...##", "..##.", ".##..", ".##..", ".##.."],
-  8: [".###.", "##.##", "##.##", ".###.", "##.##", "##.##", ".###."],
-  9: [".###.", "##.##", "##.##", ".####", "...##", "...##", ".###."],
-};
-
-// Width of the digit block in digit pixels: glyphs plus the gaps between
-// them (no trailing gap, so the block centres exactly).
-const textWidth = (text: string): number =>
-  [...text].reduce((a, c) => a + DIGITS[c][0].length, 0) + text.length - 1;
-
-// The digits as one path of pixel runs.
-function digitsPath(text: string, x0: number, y0: number, s: number): string {
-  let d = "";
-  let x = x0;
-  for (const ch of text) {
-    DIGITS[ch].forEach((row, j) => {
-      let i = 0;
-      while (i < row.length) {
-        if (row[i] !== "#") {
-          i++;
-          continue;
-        }
-        let e = i;
-        while (e < row.length && row[e] === "#") e++;
-        d += `M${x + i * s} ${y0 + j * s}h${(e - i) * s}v${s}h${-(e - i) * s}z`;
-        i = e;
-      }
-    });
-    x += (DIGITS[ch][0].length + 1) * s;
-  }
-  return d;
-}
+// Reserve a fixed-width digit block; render with the device's own font.
+const textWidth = (text: string): number => text.length * 6 - 1;
 
 interface Chip {
   s: number; // digit pixel size
@@ -506,7 +467,7 @@ function draw(
   out +=
     `<g data-chip="${text}">` +
     `<rect x="${c.x + c.bw / 2}" y="${chipY + c.bw / 2}" width="${c.w - c.bw}" height="${c.h - c.bw}" rx="${r}" fill="${chipFill}" stroke="${INK}" stroke-width="${c.bw}"/>` +
-    `<path d="${digitsPath(text, c.x + c.bw + c.padX, chipY + c.bw + c.padY, c.s)}" fill="${ink}" shape-rendering="crispEdges"/>` +
+    `<text x="${c.x + c.w / 2}" y="${chipY + c.bw + c.padY + 7 * c.s}" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="${9 * c.s}" fill="${ink}">${text}</text>` +
     `</g>`;
 
   const drawing = {
