@@ -92,8 +92,9 @@ export interface PlayerSlot {
 // Constants
 // ---------------------------------------------------------------------------
 
-/** Max char ID in the atlas (Latin Extended-A goes to 383). */
-export const CHAR_RANGE = 384;
+/** Stable glyph slots: static Latin atlas plus runtime Unicode glyphs. */
+export const CHAR_RANGE = 2048;
+export const STATIC_CHAR_RANGE = 384;
 
 /** Max characters per text line (name or troop count). */
 export const MAX_CHARS = 32;

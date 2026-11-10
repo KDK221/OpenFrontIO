@@ -9,7 +9,7 @@ layout(location = 0) in vec2 aPos;
 // Data textures
 uniform sampler2D  uGlyphMetrics;  // CHAR_RANGE × 2, RGBA32F
 uniform sampler2D  uCursorX;       // MAX_CHARS × (MAX_PLAYERS*2), R32F — pre-computed centered cursor X
-uniform usampler2D uStrings;       // MAX_CHARS × (MAX_PLAYERS*2), R8UI
+uniform usampler2D uStrings;       // MAX_CHARS × (MAX_PLAYERS*2), R16UI
 uniform sampler2D  uPlayerData;    // 4 × MAX_PLAYERS, RGBA32F
 
 // Uniforms
@@ -31,12 +31,14 @@ uniform float uHighlightOwnerID;
 uniform float uFadeOwnerID;    // smallID of player whose name plate the cursor is over (0 = none)
 uniform float uHoverFadeAlpha; // alpha multiplier applied to that player's name plate
 
+flat out float vUnicode;
 out vec2 vUV;
 out vec4 vPlayerColor;  // player territory color (rgb) + alpha
 out float vNameShade;     // name fill grayscale shade (0.0 = black)
 flat out float vHighlight; // 1.0 when this player is hovered (white glow)
 
 void main() {
+  vUnicode = 0.0;
   // 1. Decode instance ID → playerIdx, lineIdx, charPos
   int slotsPerPlayer = LINES * MAX_CHARS_PER_LINE;
   int playerIdx = gl_InstanceID / slotsPerPlayer;
@@ -145,7 +147,8 @@ void main() {
   float u0 = m1.y;
   float v0 = m1.z;
   float u1 = m1.w;
-  float v1 = v0 + glyphH / uAtlasScaleH;
+  vUnicode = charCode >= 384u ? 1.0 : 0.0;
+  float v1 = v0 + (vUnicode > 0.5 ? (u1 - u0) : glyphH / uAtlasScaleH);
 
   // Degenerate if glyph has no size (e.g. space)
   if (glyphW <= 0.0 || glyphH <= 0.0) {

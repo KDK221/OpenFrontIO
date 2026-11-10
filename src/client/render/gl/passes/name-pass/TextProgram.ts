@@ -17,6 +17,7 @@ import { LINES_PER_PLAYER, MAX_CHARS } from "./Types";
 const atlasUrl = assetUrl("atlases/msdf-atlas.png");
 
 export interface TextProgramTextures {
+  unicodeAtlas: WebGLTexture;
   glyphMetrics: WebGLTexture;
   cursor: WebGLTexture;
   strings: WebGLTexture;
@@ -73,6 +74,7 @@ export class TextProgram {
     // Texture unit bindings
     gl.useProgram(this.program);
     gl.uniform1i(gl.getUniformLocation(this.program, "uAtlas"), 0);
+    gl.uniform1i(gl.getUniformLocation(this.program, "uUnicodeAtlas"), 5);
     gl.uniform1i(gl.getUniformLocation(this.program, "uGlyphMetrics"), 1);
     gl.uniform1i(gl.getUniformLocation(this.program, "uCursorX"), 2);
     gl.uniform1i(gl.getUniformLocation(this.program, "uStrings"), 3);
@@ -213,6 +215,8 @@ export class TextProgram {
     gl.activeTexture(gl.TEXTURE4);
     gl.bindTexture(gl.TEXTURE_2D, this.textures.playerData);
 
+    gl.activeTexture(gl.TEXTURE5);
+    gl.bindTexture(gl.TEXTURE_2D, this.textures.unicodeAtlas);
     gl.bindVertexArray(vao);
     gl.drawArraysInstanced(
       gl.TRIANGLES,

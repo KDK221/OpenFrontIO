@@ -48,6 +48,7 @@ import { FlagAtlasArray } from "./FlagAtlasArray";
 import { IconProgram } from "./IconProgram";
 import { StatusIconProgram } from "./StatusIconProgram";
 import { layoutString } from "./TextLayout";
+import { UnicodeAtlas } from "./UnicodeAtlas";
 import { TextProgram } from "./TextProgram";
 import type { PlayerSlot } from "./Types";
 import { LINES_PER_PLAYER, MAX_CHARS } from "./Types";
@@ -84,6 +85,7 @@ export class NamePass {
 
   // Atlas + glyph data
   private glyph: GlyphTables;
+  private unicodeAtlas: UnicodeAtlas;
   private kernTable: Int8Array;
   private fontSize: number;
   private fontBase: number;
@@ -103,14 +105,14 @@ export class NamePass {
 
   // CPU-side mirrors — batched upload in draw()
   private cpuPlayerData: Float32Array;
-  private cpuStringData: Uint8Array;
+  private cpuStringData: Uint16Array;
   private cpuCursorData: Float32Array;
   private playerDataDirty = false;
   private stringDataDirty = false;
   private cursorDataDirty = false;
 
   // Reusable buffers for text layout
-  private stringRow: Uint8Array;
+  private stringRow: Uint16Array;
   private cursorRow: Float32Array;
 
   /** Slots refreshed per updateNames call: index % UPDATE_SLICES === phase. */
@@ -193,9 +195,9 @@ export class NamePass {
     this.cpuPlayerData = new Float32Array(
       PLAYER_DATA_COLS * this.maxPlayers * 4,
     );
-    this.cpuStringData = new Uint8Array(MAX_CHARS * textRows);
+    this.cpuStringData = new Uint16Array(MAX_CHARS * textRows);
     this.cpuCursorData = new Float32Array(MAX_CHARS * textRows);
-    this.stringRow = new Uint8Array(MAX_CHARS);
+    this.stringRow = new Uint16Array(MAX_CHARS);
     this.cursorRow = new Float32Array(MAX_CHARS);
 
     // Shared VAO (unit [0,1]² quad)
@@ -203,12 +205,19 @@ export class NamePass {
 
     // Data textures
     this.glyphMetricsTex = buildGlyphMetricsTex(gl, atlas);
+    this.unicodeAtlas = new UnicodeAtlas(
+      gl,
+      this.glyphMetricsTex,
+      this.glyph,
+      atlas,
+    );
     this.cursorTex = buildCursorTex(gl, this.maxPlayers);
     this.stringTex = buildStringTex(gl, this.maxPlayers);
     this.playerDataTex = buildPlayerDataTex(gl, this.maxPlayers);
 
     // Sub-programs
     this.textProgram = new TextProgram(gl, atlas, {
+      unicodeAtlas: this.unicodeAtlas.texture,
       glyphMetrics: this.glyphMetricsTex,
       cursor: this.cursorTex,
       strings: this.stringTex,
@@ -284,6 +293,7 @@ export class NamePass {
     for (const [id, name] of displayNames) {
       const p = this.playerByID.get(id);
       if (p === undefined) continue;
+      if (p.displayName === name) continue;
       p.displayName = name;
       const slot = this.slots.get(id);
       if (slot !== undefined) slot.nameLen = 0;
@@ -471,7 +481,7 @@ export class NamePass {
       // Write name string (only on first encounter)
       if (slot.nameLen === 0) {
         const name = slot.static.displayName;
-        slot.nameLen = Math.min(name.length, MAX_CHARS);
+        slot.nameLen = Math.min(Array.from(name).length, MAX_CHARS);
         slot.nameHalfWidth = this.uploadStringRow(
           slot.index * LINES_PER_PLAYER,
           name,
@@ -638,6 +648,7 @@ export class NamePass {
       this.kernTable,
       this.stringRow,
       this.cursorRow,
+      (character) => this.unicodeAtlas.encode(character),
     );
 
     const off = row * MAX_CHARS;
@@ -842,7 +853,7 @@ export class NamePass {
         MAX_CHARS,
         this.maxPlayers * LINES_PER_PLAYER,
         gl.RED_INTEGER,
-        gl.UNSIGNED_BYTE,
+        gl.UNSIGNED_SHORT,
         this.cpuStringData,
       );
       this.stringDataDirty = false;
@@ -912,6 +923,7 @@ export class NamePass {
   dispose(): void {
     const gl = this.gl;
     this.textProgram.dispose();
+    this.unicodeAtlas.dispose();
     this.iconProgram.dispose();
     this.flagAtlas.dispose();
     this.crownAtlas.dispose();

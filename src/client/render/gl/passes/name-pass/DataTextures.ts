@@ -57,7 +57,7 @@ export function buildCursorTex(
   });
 }
 
-/** String data: MAX_CHARS x (maxPlayers * LINES_PER_PLAYER), R8UI. Dynamic. */
+/** String data: MAX_CHARS x (maxPlayers * LINES_PER_PLAYER), R16UI. Dynamic. */
 export function buildStringTex(
   gl: WebGL2RenderingContext,
   maxPlayers: number,
@@ -66,10 +66,10 @@ export function buildStringTex(
   return createTexture2D(gl, {
     width: MAX_CHARS,
     height,
-    internalFormat: gl.R8UI,
+    internalFormat: gl.R16UI,
     format: gl.RED_INTEGER,
-    type: gl.UNSIGNED_BYTE,
-    data: new Uint8Array(MAX_CHARS * height),
+    type: gl.UNSIGNED_SHORT,
+    data: new Uint16Array(MAX_CHARS * height),
   });
 }
 

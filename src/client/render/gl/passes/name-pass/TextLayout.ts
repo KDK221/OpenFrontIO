@@ -7,7 +7,7 @@ import type { GlyphTables } from "./AtlasData";
 import { CHAR_RANGE, MAX_CHARS } from "./Types";
 
 export interface LayoutResult {
-  charCodes: Uint8Array; // char code per slot (MAX_CHARS, zero-padded)
+  charCodes: Uint16Array; // char code per slot (MAX_CHARS, zero-padded)
   cursors: Float32Array; // centered cursor X per slot (MAX_CHARS)
   halfWidth: number; // visual half-width in font units
 }
@@ -22,15 +22,22 @@ export function layoutString(
   text: string,
   glyph: GlyphTables,
   kernTable: Int8Array,
-  charCodes: Uint8Array,
+  charCodes: Uint8Array | Uint16Array,
   cursors: Float32Array,
+  encode: (character: string) => number = (character) => {
+    const code = character.codePointAt(0)!;
+    return code < CHAR_RANGE && glyph.advance[code] > 0 ? code : 63;
+  },
 ): number {
   charCodes.fill(0);
   cursors.fill(0);
-  const len = Math.min(text.length, MAX_CHARS);
+  const characters = Array.from(text).slice(0, MAX_CHARS);
+  const len = characters.length;
+  if (len === 0) return 0;
 
   for (let i = 0; i < len; i++) {
-    charCodes[i] = text.charCodeAt(i);
+    const code = encode(characters[i]);
+    charCodes[i] = code <= (charCodes.BYTES_PER_ELEMENT === 1 ? 255 : 65535) ? code : 63;
   }
 
   // Advance-based cursor positions

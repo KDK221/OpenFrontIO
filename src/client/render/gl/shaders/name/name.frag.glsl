@@ -2,6 +2,8 @@
 precision highp float;
 
 uniform sampler2D uAtlas;
+uniform sampler2D uUnicodeAtlas;
+flat in float vUnicode;
 uniform float uDistRange;
 uniform float uOutlineWidth;
 uniform float uNightAmbient;
@@ -34,6 +36,22 @@ void main() {
   // (black for human, grayer for nation/bot). Applies in day and night.
   vec3 defaultFill = vec3(vNameShade);
   vec3 fillColor = mix(defaultFill, vPlayerColor.rgb, uFillUsePlayerColor);
+
+  if (vUnicode > 0.5) {
+    float fill = texture(uUnicodeAtlas, vUV).a;
+    float outline = fill;
+    vec2 stepUV = min(fwidth(vUV) * uOutlineWidth, vec2(2.0 / 2048.0));
+    for (int y = -1; y <= 1; y++) {
+      for (int x = -1; x <= 1; x++) {
+        outline = max(outline, texture(uUnicodeAtlas, vUV + vec2(x, y) * stepUV).a);
+      }
+    }
+    vec3 border = mix(mix(vec3(0.0), uOutlineColor, borderT), vPlayerColor.rgb, uOutlineUsePlayerColor);
+    if (vHighlight > 0.5) border = mix(border, vec3(1.0), uHoverGlowAlpha);
+    vec3 color = mix(border, fillColor, fill / max(outline, 0.001));
+    fragColor = vec4(color, vPlayerColor.a * outline);
+    return;
+  }
 
   vec3 msd = texture(uAtlas, vUV).rgb;
   float sd = median(msd.r, msd.g, msd.b);
