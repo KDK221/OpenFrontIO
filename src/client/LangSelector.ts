@@ -300,6 +300,7 @@ export class LangSelector extends LitElement {
       "streaming-now",
       "tutorial-panel",
       "solo-hero",
+      "ios-add-to-home-screen-banner",
       "play-mode-picker",
       "side-ads",
       "adblock-wall",

@@ -90,7 +90,7 @@ export class IOSAddToHomeScreenBanner extends LitElement {
             </div>
 
             <p class="text-slate-300 text-sm">
-              ${translateText("ios_banner.modal_desc")}
+              ${translateText("ios_banner.modal_desc").replace(/OpenFront/g, translateText("main.brand_name"))}
             </p>
 
             <ol class="flex flex-col gap-3 text-sm text-slate-200">
@@ -138,6 +138,10 @@ export class IOSAddToHomeScreenBanner extends LitElement {
 
   render() {
     if (!Platform.isIOS) return nothing;
+    // Installing an embedding page would add the portal, not this game.
+    if (window.self !== window.top) return nothing;
+    // Language data arrives asynchronously; LangSelector refreshes this banner.
+    if (translateText("ios_banner.text") === "ios_banner.text") return nothing;
     if (this.dismissed || this.later) return nothing;
     if (
       (navigator as any).standalone === true ||
@@ -166,7 +170,9 @@ export class IOSAddToHomeScreenBanner extends LitElement {
             <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
             <line x1="12" y1="18" x2="12.01" y2="18" />
           </svg>
-          <span>${translateText("ios_banner.text")}</span>
+          <span
+            >${translateText("ios_banner.text").replace(/OpenFront/g, translateText("main.brand_name"))}</span
+          >
         </div>
 
         <div class="flex flex-col gap-1.5">
