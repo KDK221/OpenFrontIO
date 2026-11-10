@@ -3,6 +3,7 @@ import { html, LitElement, nothing, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { translateText } from "../Utils";
 import "./scenario-factions.css";
+import { chineseRulers } from "./ChineseRulers";
 import { japaneseRulers } from "./JapaneseRulers";
 
 export type PlayMode = "scenario" | "free";
@@ -54,6 +55,7 @@ const scenarioRulers = {
     ]),
   ),
   ...japaneseRulers,
+  ...chineseRulers,
 };
 
 /** The map's factions in manifest order, each with its capital. */
