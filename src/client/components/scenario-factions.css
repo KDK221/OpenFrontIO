@@ -91,7 +91,7 @@
 }
 .korean-start-label {
   font-size: 10px;
-  color: #a59d90;
+  color: #ff8c98;
   margin-top: 12px;
 }
 .korean-start-name {
@@ -100,8 +100,8 @@
   margin-top: 2px;
 }
 .korean-start-map {
-  width: 49px;
-  height: 98px;
+  width: 68px;
+  height: 132px;
   flex-shrink: 0;
   border-radius: 4px;
   background: #262c2a;

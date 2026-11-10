@@ -70,6 +70,17 @@ describe("Korean scenario faction picker", () => {
     await picker.updateComplete;
     expect(picker.querySelectorAll(".korean-ruler-portrait")).toHaveLength(6);
     expect(picker.querySelectorAll("svg image")).toHaveLength(6);
+    const markers = picker.querySelectorAll(".korean-start-marker");
+    expect(markers).toHaveLength(6);
+    for (const [i, marker] of [...markers].entries()) {
+      const loc = picker.factions[i].location!;
+      expect(Number(marker.getAttribute("cx"))).toBe(loc.x);
+      expect(Number(marker.getAttribute("cy"))).toBe(loc.y);
+      expect(marker.getAttribute("fill")).toBe("#ef233c");
+      const bounds = marker.closest("svg")!.getAttribute("viewBox")!.split(" ").map(Number);
+      // Even Kyushu's near-edge marker fits without moving its true coordinate.
+      expect(loc.x + 100).toBeLessThanOrEqual(bounds[0] + bounds[2]);
+    }
     const selected = vi.fn();
     picker.addEventListener("faction-selected", selected);
     (picker.querySelectorAll("button")[1] as HTMLButtonElement).click();

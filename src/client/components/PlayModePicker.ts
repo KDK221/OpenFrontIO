@@ -191,7 +191,7 @@ export class PlayModePicker extends LitElement {
           loc
             ? html`<svg
                 class="korean-start-map"
-                viewBox=${`0 0 ${loc.width} ${loc.height}`}
+                viewBox=${`-100 -100 ${loc.width + 200} ${loc.height + 200}`}
                 role="img"
                 aria-label=${translateText("scenario_rulers.location", { name: capitalName(f.capital) })}
               >
@@ -203,17 +203,20 @@ export class PlayModePicker extends LitElement {
                 <circle
                   cx=${loc.x}
                   cy=${loc.y}
-                  r="62"
-                  fill="#17130e"
-                  fill-opacity="0.7"
+                  r="90"
+                  fill="#ef233c"
+                  fill-opacity="0.25"
+                  stroke="#ff5267"
+                  stroke-width="12"
                 />
                 <circle
+                  class="korean-start-marker"
                   cx=${loc.x}
                   cy=${loc.y}
-                  r="36"
-                  fill="#f6d787"
-                  stroke="#fff5d6"
-                  stroke-width="14"
+                  r="45"
+                  fill="#ef233c"
+                  stroke="#ffffff"
+                  stroke-width="20"
                 />
               </svg>`
             : nothing

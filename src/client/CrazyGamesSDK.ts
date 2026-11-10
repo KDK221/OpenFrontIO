@@ -1,3 +1,4 @@
+import { ClientEnv } from "./ClientEnv";
 export interface CrazyGamesUser {
   username: string;
   profilePictureUrl: string;
@@ -80,6 +81,7 @@ class CrazyGamesSDK {
   }
 
   isOnCrazyGames(): boolean {
+    if (ClientEnv.singleplayerOnly()) return false;
     try {
       // Check if we're in an iframe
       if (window.self !== window.top) {

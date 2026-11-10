@@ -1,3 +1,4 @@
+import { ClientEnv } from "./ClientEnv";
 import { gamePortal } from "./GamePortal";
 import { getGamesPlayed } from "./Utils";
 
@@ -9,6 +10,8 @@ import { getGamesPlayed } from "./Utils";
  * counts as a game played, so it happens once.
  */
 export async function shouldStartPortalTutorial(): Promise<boolean> {
+  // Embedded static games only enter the tutorial through an explicit button.
+  if (ClientEnv.singleplayerOnly()) return false;
   if (!gamePortal.isOnGamePortal() || getGamesPlayed() > 0) return false;
   if ((await gamePortal.getInviteGameId()) !== null) return false;
   return !(await gamePortal.isInstantMultiplayer());
