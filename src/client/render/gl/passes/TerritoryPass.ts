@@ -31,6 +31,7 @@ export class TerritoryPass {
   private uCamera: WebGLUniformLocation;
   private uMapSize: WebGLUniformLocation;
   private uAltView: WebGLUniformLocation;
+  private uFireTime: WebGLUniformLocation;
   private uStaleNukeBase: WebGLUniformLocation;
   private uStaleNukeVariation: WebGLUniformLocation;
   private uStaleNukeAlpha: WebGLUniformLocation;
@@ -147,6 +148,7 @@ export class TerritoryPass {
     this.uCamera = gl.getUniformLocation(this.program, "uCamera")!;
     this.uMapSize = gl.getUniformLocation(this.program, "uMapSize")!;
     this.uAltView = gl.getUniformLocation(this.program, "uAltView")!;
+    this.uFireTime = gl.getUniformLocation(this.program, "uFireTime")!;
     this.uStaleNukeBase = gl.getUniformLocation(
       this.program,
       "uStaleNukeBase",
@@ -428,6 +430,7 @@ export class TerritoryPass {
     gl.uniformMatrix3fv(this.uCamera, false, cameraMatrix);
     gl.uniform2f(this.uMapSize, this.mapW, this.mapH);
     gl.uniform1i(this.uAltView, this.altView ? 1 : 0);
+    gl.uniform1f(this.uFireTime, performance.now() / 1000);
     gl.uniform1f(this.uStaleNukeBase, mo.staleNukeBase);
     gl.uniform1f(this.uStaleNukeVariation, mo.staleNukeVariation);
     gl.uniform1f(this.uStaleNukeAlpha, mo.staleNukeAlpha);

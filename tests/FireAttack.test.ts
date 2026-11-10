@@ -32,7 +32,7 @@ describe("Fire Attack siege range", () => {
   });
 
   test("siege range is 120 tiles", () => {
-    expect(Config.prototype.siegeRange.call({})).toBe(120);
+    expect(Config.prototype.siegeRange.call(game.config())).toBe(120);
   });
 
   test("a target inside siege range can be hit from the Siege Camp", () => {

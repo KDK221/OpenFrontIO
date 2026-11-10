@@ -23,7 +23,7 @@ void main() {
   } else if (!isFallout && wasFallout) {
     heat = 0.0;
   } else {
-    heat = max(0.0, heat - uDecay / 255.0);
+    heat = isFallout ? max(0.45, heat - uDecay / 255.0) : 0.0;
   }
 
   fragColor = vec4(heat, 0.0, 0.0, 1.0);

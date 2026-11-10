@@ -9,6 +9,8 @@ import {
   Duos,
   EmojiMessage,
   GameMode,
+  GameMapType,
+  Structures,
   GameUpdates,
   HumansVsNations,
   MessageType,
@@ -129,6 +131,7 @@ export type CellString = string;
 
 export class GameImpl implements Game {
   private _ticks = 0;
+  private burningSince = new Map<TileRef, number>();
   private startTick: number | null = null;
 
   private unInitExecs: Execution[] = [];
@@ -294,12 +297,62 @@ export class GameImpl implements Game {
     if (value && this.hasOwner(tile)) {
       throw Error(`cannot set fallout, tile ${tile} has owner`);
     }
-    if (this._map.hasFallout(tile)) {
-      return;
-    }
+    if (this._map.hasFallout(tile) === value) return;
+    if (value) this.burningSince.set(tile, this._ticks);
+    else this.burningSince.delete(tile);
     this._territoryVersion++;
     this._map.setFallout(tile, value);
     this.recordTileUpdate(tile);
+  }
+
+  /** Slow, deterministic four-neighbour fire spread; conquest remains the
+   * existing troop-cost extinguishing action. New fire cannot spread this wave.
+   */
+  private spreadFire(): void {
+    if (this._ticks % 80 !== 0 || this.burningSince.size === 0) return;
+    const scenario = this.config().gameConfig().gameMap;
+    if (
+      scenario !== GameMapType.Samguk &&
+      scenario !== GameMapType.Sengoku &&
+      scenario !== GameMapType.WarringStates
+    )
+      return;
+    const next = new Set<TileRef>();
+    for (const [tile, since] of this.burningSince) {
+      if (!this.hasFallout(tile)) {
+        this.burningSince.delete(tile);
+        continue;
+      }
+      if (this._ticks - since < 120) continue;
+      for (const neighbor of this.neighbors(tile)) {
+        if (
+          !this.isLand(neighbor) ||
+          this.isImpassable(neighbor) ||
+          this.hasFallout(neighbor)
+        )
+          continue;
+        // Integer hash is replay-safe and does not consume the AI random stream.
+        let hash =
+          Math.imul(tile + 1, 73856093) ^
+          Math.imul(neighbor + 1, 19349663) ^
+          Math.imul(this._ticks / 80, 83492791);
+        hash ^= hash >>> 16;
+        hash = Math.imul(hash, 0x45d9f3b);
+        hash ^= hash >>> 16;
+        if ((hash >>> 0) % 100 < 8) next.add(neighbor);
+      }
+    }
+    if (next.size === 0) return;
+    // Destroy structures before losing their land, so they cannot be captured.
+    for (const unit of this.units()) {
+      if (Structures.has(unit.type()) && next.has(unit.tile()))
+        unit.delete(true);
+    }
+    for (const tile of next) {
+      const owner = this.owner(tile);
+      if (owner.isPlayer()) owner.relinquish(tile);
+      this.setFallout(tile, true);
+    }
   }
 
   setWater(tile: TileRef): void {
@@ -309,6 +362,7 @@ export class GameImpl implements Game {
     }
     // Clear fallout if present (water tiles shouldn't have fallout)
     if (this._map.hasFallout(tile)) {
+      this.burningSince.delete(tile);
       this._map.setFallout(tile, false);
     }
     this._territoryVersion++;
@@ -648,6 +702,7 @@ export class GameImpl implements Game {
     }
 
     this.removeInactiveExecutions();
+    if (!this.inSpawnPhase()) this.spreadFire();
 
     for (const player of this._playersBySmallID) {
       // Sampled before toUpdate so the reading is of the tick that just ran.
@@ -916,6 +971,7 @@ export class GameImpl implements Game {
     owner._lastTileChange = this._ticks;
     owner._tileChangeVersion++;
     this.updateBorders(tile);
+    this.burningSince.delete(tile);
     this._map.setFallout(tile, false);
     this.recordTileUpdate(tile);
   }
@@ -1546,6 +1602,7 @@ export class GameImpl implements Game {
     const unInitExecs = this.unInitExecs.map((e) => w.exec(e));
     return {
       ticks: this._ticks,
+      burningSince: [...this.burningSince],
       startTick: this.startTick,
       humans: this._humans.map(playerInfoData),
       nations: this._nations.map(nationData),
@@ -1598,6 +1655,7 @@ export class GameImpl implements Game {
    */
   restoreState(s: GameState, r: SnapshotReader): void {
     this._ticks = s.ticks;
+    this.burningSince = new Map(s.burningSince);
     this.startTick = s.startTick;
     this.execs = s.execs.map((i) => r.exec(i));
     this.unInitExecs = s.unInitExecs.map((i) => r.exec(i));
@@ -1734,6 +1792,7 @@ export const GameSnapshot = snapshotType({
   version: 1,
   schema: z.object({
     ticks: zInt(),
+    burningSince: z.array(z.tuple([zInt(), zInt()])).default([]),
     startTick: zInt().nullable(),
     humans: z.array(PlayerInfoSchema),
     nations: z.array(NationSchema),

@@ -16,6 +16,7 @@ const float SKIN_DIM = 1024.0;    // atlas cell size in tiles — must match Ski
 
 uniform vec2 uMapSize;
 uniform int uAltView;
+uniform float uFireTime;
 uniform float uStaleNukeBase;
 uniform float uStaleNukeVariation;
 uniform float uStaleNukeAlpha;
@@ -33,6 +34,12 @@ uniform float uAltFillAlpha;       // alt-view translucent fill opacity
 in vec2 vWorldPos;
 out vec4 fragColor;
 
+float fireHash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+float fireNoise(vec2 p) {
+  vec2 i = floor(p), f = fract(p); f = f*f*(3.0-2.0*f);
+  return mix(mix(fireHash(i), fireHash(i+vec2(1,0)), f.x),
+             mix(fireHash(i+vec2(0,1)), fireHash(i+vec2(1,1)), f.x), f.y);
+}
 void main() {
   ivec2 tc = ivec2(floor(vWorldPos));
   if (tc.x < 0 || tc.y < 0 || tc.x >= int(uMapSize.x) || tc.y >= int(uMapSize.y))
@@ -50,7 +57,26 @@ void main() {
   if (fallout) {
     float h = fract(sin(float(tc.x) * 12.9898 + float(tc.y) * 78.233) * 43758.5453);
     float noise = uStaleNukeBase + h * uStaleNukeVariation;
-    fragColor = vec4(uStaleNukeColor + vec3(noise), uStaleNukeAlpha);
+    // Thin translucent tongues rise through several noise scales. World-space
+    // anchoring keeps them stable while panning/zooming; no radioactive green.
+    vec2 cell = floor(vWorldPos / 4.0);
+    vec2 p = fract(vWorldPos / 4.0);
+    float seed = fireHash(cell);
+    float t = uFireTime * (1.1 + seed * 0.5);
+    float rise = 1.0 - p.y;
+    float warp = fireNoise(vec2(vWorldPos.x * 0.7, vWorldPos.y * 0.6 + t * 3.0));
+    float center = 0.5 + sin(t * 2.0 + seed * 12.0 + rise * 4.0) * rise * 0.16;
+    float width = (0.30 - rise * 0.24) * (0.7 + warp * 0.5);
+    float body = 1.0 - smoothstep(width * 0.3, width + 0.07, abs(p.x - center));
+    float height = 0.55 + 0.38 * fireNoise(vec2(seed * 19.0, t * 1.7));
+    float flame = body * (1.0 - smoothstep(height - 0.2, height, rise));
+    flame *= smoothstep(0.0, 0.14, p.y) * (0.6 + warp * 0.4);
+    vec3 color = mix(vec3(0.95, 0.22, 0.035), vec3(1.0, 0.76, 0.30), p.y * body);
+    float flameAlpha = flame * 0.62;
+    float groundAlpha = min(uStaleNukeAlpha, 0.38);
+    float alpha = flameAlpha + groundAlpha * (1.0 - flameAlpha);
+    vec3 ground = uStaleNukeColor + vec3(noise);
+    fragColor = vec4((color * flameAlpha + ground * groundAlpha * (1.0 - flameAlpha)) / max(alpha, 0.001), alpha);
     return;
   }
 
