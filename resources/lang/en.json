@@ -3223,5 +3223,37 @@
     "you_won": "You Won!",
     "your_team": "Your team won!",
     "youtube_tutorial": "Need some help?"
+  },
+  "scenario_names": {
+    "prefix": {
+      "Xiahou": "Xiahou",
+      "Guan": "Guan",
+      "Zhang": "Zhang",
+      "Zhao": "Zhao",
+      "Huang": "Huang",
+      "Zhou": "Zhou",
+      "Lu": "Lu",
+      "Xu": "Xu",
+      "Yu": "Yu",
+      "Taishi": "Taishi",
+      "Gan": "Gan",
+      "Wei": "Wei",
+      "Cheng": "Cheng",
+      "Han": "Han",
+      "Jiang": "Jiang",
+      "Ding": "Ding",
+      "Yan": "Yan",
+      "Wen": "Wen",
+      "Cao": "Cao",
+      "Sun": "Sun"
+    },
+    "suffix": {
+      "Clan": "{name} Clan",
+      "Army": "{name} Army",
+      "Garrison": "{name} Garrison",
+      "Commandery": "{name} Commandery",
+      "Volunteers": "{name} Volunteers",
+      "Retainers": "{name} Retainers"
+    }
   }
 }

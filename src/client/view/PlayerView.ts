@@ -28,6 +28,7 @@ import { PlayerCosmetics } from "@openfront/shared/WireSchemas";
 import { Colord, colord } from "colord";
 import { base64url } from "jose";
 import { PlayerState, PlayerStatic, PlayerTypeEnum } from "../render/types";
+import { scenarioDisplayName } from "../ScenarioNames";
 import { themeProvider } from "../theme/ThemeProvider";
 import { UserSettings } from "../UserSettings";
 import { type CosmeticOwner, visibleCosmetics } from "./CosmeticVisibility";
@@ -391,12 +392,20 @@ export class PlayerView implements PlayerLike {
   name(): string {
     return this.anonymousName !== null && userSettings.anonymousNames()
       ? this.anonymousName
-      : this.static.name;
+      : scenarioDisplayName(
+          this.static.name,
+          this.type(),
+          this.game.config().gameConfig().gameMap,
+        );
   }
   displayName(): string {
     return this.anonymousName !== null && userSettings.anonymousNames()
       ? this.anonymousName
-      : this.static.displayName;
+      : scenarioDisplayName(
+          this.static.displayName,
+          this.type(),
+          this.game.config().gameConfig().gameMap,
+        );
   }
   clanTag(): string | null {
     return this.anonymousName !== null && userSettings.anonymousNames()
