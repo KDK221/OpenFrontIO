@@ -102,6 +102,22 @@ export class PlayerExecution implements Execution {
     const goldFromWorkers = this.config.goldAdditionRate(this.player);
     this.player.addGold(goldFromWorkers);
 
+    // Step 5 must stay affordable even if the tutorial player spent their
+    // starting gold. Read the current price rather than duplicating a balance
+    // constant. Construction history survives snapshots and stops this aid
+    // permanently after the first launch.
+    if (
+      this.config.gameConfig().tutorial &&
+      this.player.type() === PlayerType.Human &&
+      this.player.unitsConstructed(UnitType.AtomBomb) === 0 &&
+      this.player.units(UnitType.MissileSilo).length > 0
+    ) {
+      const cost = this.mg.unitInfo(UnitType.AtomBomb).cost(this.mg, this.player);
+      if (this.player.gold() < cost) {
+        this.player.addGold(cost - this.player.gold());
+      }
+    }
+
     // Record stats
     this.mg.stats().goldWork(this.player, goldFromWorkers);
 

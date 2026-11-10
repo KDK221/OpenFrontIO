@@ -201,6 +201,9 @@ describe("Tutorial scenario", () => {
         const intents: StampedIntent[] = [];
         const mySilo = me.units(UnitType.MissileSilo)[0];
         if (!nuked && mySilo !== undefined && !mySilo.isInCooldown()) {
+          expect(me.gold()).toBeGreaterThanOrEqual(
+            g.unitInfo(UnitType.AtomBomb).cost(g, me),
+          );
           nuked = true;
           // At their port, as the overlay asks.
           intents.push({
@@ -255,6 +258,8 @@ describe("Tutorial scenario", () => {
           human(g).units(UnitType.MissileSilo).length > 0
         ) {
           siloCapturedAt = t;
+          // Reproduce a player reaching step 5 with no money at all.
+          human(g).removeGold(human(g).gold());
         }
         playerNukes = human(g).unitsConstructed(UnitType.AtomBomb);
         const e = empire(g);

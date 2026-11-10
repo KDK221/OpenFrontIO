@@ -451,7 +451,8 @@ export class Config {
    * fire arrows cannot reach across the whole map.
    */
   siegeRange(): number {
-    return 120;
+    // The tutorial targets the far harbor from the captured kingdom silo.
+    return this._gameConfig.tutorial ? 200 : 120;
   }
 
   /** Max Siege Camp distance for a Thunder Catapult (hydrogen bomb slot). */

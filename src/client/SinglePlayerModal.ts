@@ -768,7 +768,7 @@ export class SinglePlayerModal extends BaseModal {
             disableAlliances: true,
             // The only things built are the nation's silo, port and warship,
             // and the atom bomb the player fires from the silo once captured;
-            // the gold is that one bomb's.
+            // step 5 tops up any missing gold at the current bomb price.
             disabledUnits: TUTORIAL_DISABLED_UNITS,
             startingGold: 750_000,
             tutorial: true,
