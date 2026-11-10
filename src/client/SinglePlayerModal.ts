@@ -12,8 +12,8 @@ import type { SnapshotHeader } from "@openfront/engine-api/game/SnapshotHeader";
 import { TeamCountConfig } from "@openfront/engine-api/Schemas";
 import { DoomsdayClockSpeed } from "@openfront/engine-lib/game/DoomsdayClock";
 import { UserMeResponse } from "@openfront/shared/ApiSchemas";
-import { ERA_DISABLED_UNITS } from "@openfront/shared/EraDefaults";
 import { assetUrl } from "@openfront/shared/AssetUrls";
+import { ERA_DISABLED_UNITS } from "@openfront/shared/EraDefaults";
 import { generateID } from "@openfront/shared/SharedUtil";
 import { PlayerCosmetics } from "@openfront/shared/WireSchemas";
 import { html, TemplateResult } from "lit";
@@ -24,13 +24,13 @@ import "./components/baseComponents/Button";
 import "./components/baseComponents/Modal";
 import { BaseModal } from "./components/BaseModal";
 import "./components/GameConfigSettings";
+import { MEDAL_ORDER, medalIcon } from "./components/map/Medals";
+import "./components/PlayModePicker";
 import {
   FactionOption,
   factionsOf,
   PlayMode,
 } from "./components/PlayModePicker";
-import "./components/PlayModePicker";
-import { MEDAL_ORDER, medalIcon } from "./components/map/Medals";
 import {
   type LoadSavedGameDetail,
   savedGameIdFrom,
@@ -1482,7 +1482,11 @@ export class SinglePlayerModal extends BaseModal {
       const manifest = await mapData.manifest();
       // Only update if the map hasn't changed
       if (this.selectedMap === currentMap) {
-        this.factions = factionsOf(manifest.nations);
+        this.factions = factionsOf(manifest.nations, {
+          width: manifest.map.width,
+          height: manifest.map.height,
+          image: mapData.webpPath,
+        });
         if (!this.factions.some((f) => f.id === this.scenarioFaction)) {
           this.scenarioFaction = this.factions[0]?.id ?? null;
         }

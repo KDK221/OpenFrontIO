@@ -2,6 +2,7 @@ import { assetUrl } from "@openfront/shared/AssetUrls";
 import { html, LitElement, nothing, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { translateText } from "../Utils";
+import "./scenario-factions.css";
 
 export type PlayMode = "scenario" | "free";
 
@@ -13,18 +14,56 @@ export type PlayMode = "scenario" | "free";
 export interface FactionOption {
   id: string;
   capital: string;
+  location?: {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    image: string;
+  };
 }
+
+const koreanRulers: Record<
+  string,
+  { portrait: string; name: string; kind: string }
+> = {
+  Goguryeo: { portrait: "jangsu", name: "jangsu", kind: "representative" },
+  Baekje: { portrait: "geunchogo", name: "geunchogo", kind: "representative" },
+  Silla: { portrait: "jinheung", name: "jinheung", kind: "representative" },
+  Gaya: { portrait: "suro", name: "suro", kind: "legendary" },
+  Tamna: { portrait: "tamna", name: "tamna", kind: "fictional" },
+  Wa: { portrait: "wa", name: "wa", kind: "fictional" },
+};
 
 /** The map's factions in manifest order, each with its capital. */
 export function factionsOf(
-  nations: readonly { flag?: string | null; name: string }[],
+  nations: readonly {
+    flag?: string | null;
+    name: string;
+    coordinates?: readonly number[];
+  }[],
+  map?: { width: number; height: number; image: string },
 ): FactionOption[] {
-  const capitals = new Map<string, string>();
+  const capitals = new Map<string, FactionOption>();
   for (const n of nations) {
     if (!n.flag || capitals.has(n.flag)) continue;
-    capitals.set(n.flag, n.name);
+    const faction: FactionOption = { id: n.flag, capital: n.name };
+    if (map && map.width > 0 && map.height > 0 && n.coordinates?.length === 2) {
+      const [x, y] = n.coordinates;
+      if (
+        Number.isFinite(x) &&
+        Number.isFinite(y) &&
+        x >= 0 &&
+        x < map.width &&
+        y >= 0 &&
+        y < map.height
+      ) {
+        faction.location = { ...map, x, y };
+      }
+    }
+    capitals.set(n.flag, faction);
   }
-  return [...capitals].map(([id, capital]) => ({ id, capital }));
+  return [...capitals.values()];
 }
 
 /** A capital's display name, falling back to the manifest's name. */
@@ -84,7 +123,9 @@ export class PlayModePicker extends LitElement {
       <div class="flex items-center gap-3">
         <span
           class="play-mode-glyph shrink-0 w-12 h-12 rounded-lg flex items-center justify-center text-2xl font-bold ${
-            active ? "bg-malibu-blue/40 text-white" : "bg-black/30 text-white/70"
+            active
+              ? "bg-malibu-blue/40 text-white"
+              : "bg-black/30 text-white/70"
           }"
           aria-hidden="true"
           >${glyph}</span
@@ -101,7 +142,84 @@ export class PlayModePicker extends LitElement {
     </button>`;
   }
 
+  private renderKoreanFaction(f: FactionOption): TemplateResult {
+    const ruler = koreanRulers[f.id];
+    const active = this.selectedFaction === f.id;
+    const loc = f.location;
+    return html`<button
+      type="button"
+      class="korean-faction-card"
+      aria-pressed=${active}
+      aria-label=${`${factionName(f.id)} · ${translateText(`scenario_rulers.${ruler.name}`)} · ${capitalName(f.capital)}`}
+      @click=${() => this.emit("faction-selected", { faction: f.id })}
+    >
+      <span class="korean-faction-art">
+        <img
+          class="korean-ruler-portrait"
+          src=${assetUrl(`images/rulers/korea/${ruler.portrait}.webp`)}
+          alt=""
+          draggable="false"
+        />
+        <span class="korean-faction-heading">
+          <img
+            class="korean-faction-emblem"
+            src=${assetUrl(`flags/${f.id}.svg`)}
+            alt=""
+          />
+          <span>${factionName(f.id)}</span>
+          ${active ? html`<span class="korean-faction-check" aria-hidden="true">✓</span>` : nothing}
+        </span>
+      </span>
+      <span class="korean-faction-details">
+        <span class="korean-ruler-copy">
+          <span class="korean-ruler-kind"
+            >${translateText(`scenario_rulers.${ruler.kind}`)}</span
+          >
+          <span class="korean-ruler-name"
+            >${translateText(`scenario_rulers.${ruler.name}`)}</span
+          >
+          <span class="korean-start-label"
+            >${translateText("scenario_rulers.start")}</span
+          >
+          <span class="korean-start-name">${capitalName(f.capital)}</span>
+        </span>
+        ${
+          loc
+            ? html`<svg
+                class="korean-start-map"
+                viewBox=${`0 0 ${loc.width} ${loc.height}`}
+                role="img"
+                aria-label=${translateText("scenario_rulers.location", { name: capitalName(f.capital) })}
+              >
+                <image
+                  href=${loc.image}
+                  width=${loc.width}
+                  height=${loc.height}
+                />
+                <circle
+                  cx=${loc.x}
+                  cy=${loc.y}
+                  r="62"
+                  fill="#17130e"
+                  fill-opacity="0.7"
+                />
+                <circle
+                  cx=${loc.x}
+                  cy=${loc.y}
+                  r="36"
+                  fill="#f6d787"
+                  stroke="#fff5d6"
+                  stroke-width="14"
+                />
+              </svg>`
+            : nothing
+        }
+      </span>
+    </button>`;
+  }
+
   private renderFaction(f: FactionOption): TemplateResult {
+    if (koreanRulers[f.id]) return this.renderKoreanFaction(f);
     const active = this.selectedFaction === f.id;
     return html`<button
       type="button"
@@ -145,11 +263,12 @@ export class PlayModePicker extends LitElement {
               ${translateText("play_mode.loading_factions")}
             </p>`
           : html`<div
-              class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2"
+              class=${this.factions.every((f) => koreanRulers[f.id]) ? "korean-faction-grid" : "grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2"}
             >
               ${this.factions.map((f) => this.renderFaction(f))}
             </div>`
       }
+      ${this.factions.some((f) => koreanRulers[f.id]) ? html`<p class="korean-faction-note">${translateText("scenario_rulers.note")}</p>` : nothing}
     </section>`;
   }
 

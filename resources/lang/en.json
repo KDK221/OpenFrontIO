@@ -1999,6 +1999,20 @@
     "tps": "TPS:",
     "tps_avg_60s": "Avg:"
   },
+  "scenario_rulers": {
+    "jangsu": "King Jangsu",
+    "geunchogo": "King Geunchogo",
+    "jinheung": "King Jinheung",
+    "suro": "King Suro",
+    "tamna": "Ruler of Tamna",
+    "wa": "Ruler of Wa",
+    "representative": "Representative ruler",
+    "legendary": "Legendary ruler",
+    "fictional": "Fictional ruler",
+    "start": "Starting city",
+    "location": "Starting location: {name}",
+    "note": "Rulers represent their factions across different periods. Portraits are artistic interpretations; map markers show in-game starting cities."
+  },
   "play_mode": {
     "capital": "Capital: {name}",
     "choose_faction": "Choose your faction",
