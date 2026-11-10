@@ -34,12 +34,34 @@ describe("Korean scenario faction picker", () => {
       source.nations.find((n: { flag: string }) => n.flag === "Wa"),
     ).toEqual(city);
   });
+  it("opens passable northern starts at every map resolution", () => {
+    for (const id of ["NorthernWei", "Balhae"]) {
+      const cities = manifest.nations.filter((n) => n.flag === id);
+      expect(cities).toHaveLength(3);
+      for (const city of cities) {
+        for (const [file, width, scale] of [
+          ["map.bin", 1088, 1],
+          ["map4x.bin", 544, 2],
+          ["map16x.bin", 272, 4],
+        ] as const) {
+          const bytes = readFileSync(`resources/maps/samguk/${file}`);
+          const tile =
+            bytes[
+              Math.floor(city.coordinates[1] / scale) * width +
+                Math.floor(city.coordinates[0] / scale)
+            ];
+          expect(tile & 128).toBe(128);
+          expect(tile & 31).not.toBe(31);
+        }
+      }
+    }
+  });
   it("pins each faction's first city in the original map coordinate system", () => {
     const factions = factionsOf(manifest.nations, {
       ...manifest.map,
       image: "/map.webp",
     });
-    expect(factions).toHaveLength(6);
+    expect(factions).toHaveLength(8);
     for (const faction of factions) {
       const first = manifest.nations.find((n) => n.flag === faction.id)!;
       expect(faction.capital).toBe(first.name);
@@ -58,7 +80,7 @@ describe("Korean scenario faction picker", () => {
       })[0].location,
     ).toBeUndefined();
   });
-  it("renders six portraits with small emblems and preserves faction selection events", async () => {
+  it("renders eight portraits with small emblems and preserves faction selection events", async () => {
     const picker = new PlayModePicker();
     picker.pickerSection = "factions";
     picker.factions = factionsOf(manifest.nations, {
@@ -68,16 +90,20 @@ describe("Korean scenario faction picker", () => {
     picker.selectedFaction = "Goguryeo";
     document.body.append(picker);
     await picker.updateComplete;
-    expect(picker.querySelectorAll(".korean-ruler-portrait")).toHaveLength(6);
-    expect(picker.querySelectorAll("svg image")).toHaveLength(6);
+    expect(picker.querySelectorAll(".korean-ruler-portrait")).toHaveLength(8);
+    expect(picker.querySelectorAll("svg image")).toHaveLength(8);
     const markers = picker.querySelectorAll(".korean-start-marker");
-    expect(markers).toHaveLength(6);
+    expect(markers).toHaveLength(8);
     for (const [i, marker] of [...markers].entries()) {
       const loc = picker.factions[i].location!;
       expect(Number(marker.getAttribute("cx"))).toBe(loc.x);
       expect(Number(marker.getAttribute("cy"))).toBe(loc.y);
       expect(marker.getAttribute("fill")).toBe("#ef233c");
-      const bounds = marker.closest("svg")!.getAttribute("viewBox")!.split(" ").map(Number);
+      const bounds = marker
+        .closest("svg")!
+        .getAttribute("viewBox")!
+        .split(" ")
+        .map(Number);
       // Even Kyushu's near-edge marker fits without moving its true coordinate.
       expect(loc.x + 100).toBeLessThanOrEqual(bounds[0] + bounds[2]);
     }

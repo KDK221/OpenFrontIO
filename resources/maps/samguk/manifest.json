@@ -5,17 +5,17 @@
   "id": "Samguk",
   "map": {
     "height": 2188,
-    "num_land_tiles": 782048,
+    "num_land_tiles": 1164658,
     "width": 1088
   },
   "map16x": {
     "height": 547,
-    "num_land_tiles": 46830,
+    "num_land_tiles": 70240,
     "width": 272
   },
   "map4x": {
     "height": 1094,
-    "num_land_tiles": 192353,
+    "num_land_tiles": 287341,
     "width": 544
   },
   "name": "Samguk",
@@ -154,9 +154,39 @@
       "coordinates": [857, 1913],
       "flag": "Wa",
       "name": "Tsushima"
+    },
+    {
+      "coordinates": [180, 320],
+      "flag": "NorthernWei",
+      "name": "NorthernWeiFrontier"
+    },
+    {
+      "coordinates": [140, 510],
+      "flag": "NorthernWei",
+      "name": "NorthernWeiWest"
+    },
+    {
+      "coordinates": [360, 270],
+      "flag": "NorthernWei",
+      "name": "NorthernWeiEast"
+    },
+    {
+      "coordinates": [790, 210],
+      "flag": "Balhae",
+      "name": "BalhaeFrontier"
+    },
+    {
+      "coordinates": [580, 130],
+      "flag": "Balhae",
+      "name": "BalhaeWest"
+    },
+    {
+      "coordinates": [960, 150],
+      "flag": "Balhae",
+      "name": "BalhaeEast"
     }
   ],
   "special_team_count": 3,
-  "themes": ["asia"],
+  "themes": ["samguk"],
   "translation_key": "map.samguk"
 }

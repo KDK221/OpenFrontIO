@@ -1959,7 +1959,7 @@ export const maps: readonly MapInfo[] = [
     type: GameMapType.Samguk,
     translationKey: "map.samguk",
     categories: ["featured", "asia", "new"],
-    defaultNationCount: 27,
+    defaultNationCount: 33,
     featuredRank: 1,
     specialTeamCount: 3,
     themes: ["samguk"],

@@ -2620,7 +2620,9 @@
     "Dian": "전",
     "Yelang": "야랑",
     "Minyue": "민월",
-    "Baiyue": "백월"
+    "Baiyue": "백월",
+    "NorthernWei": "북위",
+    "Balhae": "발해"
   },
   "scenario_rulers": {
     "jangsu": "장수왕",
@@ -2639,7 +2641,9 @@
     "haji": "하지왕",
     "yuridora": "유리도라왕",
     "iwai": "이와이",
-    "regional": "규슈의 군주"
+    "regional": "규슈의 군주",
+    "taiwu": "태무제",
+    "daejoyeong": "대조영"
   },
   "play_mode": {
     "choose_faction": "세력 선택",
@@ -2717,7 +2721,13 @@
     "Yamaguchi": "야마구치",
     "Ying": "영",
     "Yonezawa": "요네자와",
-    "Yuzuki": "유즈키"
+    "Yuzuki": "유즈키",
+    "NorthernWeiFrontier": "북서 거점",
+    "NorthernWeiWest": "북위 서부성",
+    "NorthernWeiEast": "북위 동부성",
+    "BalhaeFrontier": "북동 거점",
+    "BalhaeWest": "발해 서부성",
+    "BalhaeEast": "발해 동부성"
   },
   "side_ads": {
     "placeholder": "광고 자리 160×600 (AdConfig.ts에서 설정)",

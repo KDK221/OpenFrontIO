@@ -37,6 +37,12 @@ const koreanRulers: Record<
   Gaya: { portrait: "haji", name: "haji", kind: "representative" },
   Tamna: { portrait: "yuridora", name: "yuridora", kind: "representative" },
   Wa: { portrait: "iwai", name: "iwai", kind: "regional" },
+  NorthernWei: { portrait: "taiwu", name: "taiwu", kind: "representative" },
+  Balhae: {
+    portrait: "daejoyeong",
+    name: "daejoyeong",
+    kind: "representative",
+  },
 };
 
 /** The map's factions in manifest order, each with its capital. */

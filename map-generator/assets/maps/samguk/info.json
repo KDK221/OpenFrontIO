@@ -4,147 +4,285 @@
   "name": "Samguk",
   "display_name": "Three Kingdoms",
   "translation_key": "map.samguk",
-  "categories": ["featured", "asia", "new"],
+  "categories": [
+    "featured",
+    "asia",
+    "new"
+  ],
   "featured_rank": 1,
-  "location": { "lat": 37.5, "lon": 127.5 },
+  "location": {
+    "lat": 37.5,
+    "lon": 127.5
+  },
   "author": "crunchybbb (base map), KDK221",
   "special_team_count": 3,
   "nations": [
     {
-      "coordinates": [247, 925],
+      "coordinates": [
+        247,
+        925
+      ],
       "name": "Pyongyang",
       "flag": "Goguryeo"
     },
     {
-      "coordinates": [238, 1134],
+      "coordinates": [
+        238,
+        1134
+      ],
       "name": "Haeju",
       "flag": "Goguryeo"
     },
     {
-      "coordinates": [251, 1007],
+      "coordinates": [
+        251,
+        1007
+      ],
       "name": "Hwangju",
       "flag": "Goguryeo"
     },
     {
-      "coordinates": [560, 738],
+      "coordinates": [
+        560,
+        738
+      ],
       "name": "Hamhung",
       "flag": "Goguryeo"
     },
     {
-      "coordinates": [544, 901],
+      "coordinates": [
+        544,
+        901
+      ],
       "name": "Wonsan",
       "flag": "Goguryeo"
     },
     {
-      "coordinates": [395, 511],
+      "coordinates": [
+        395,
+        511
+      ],
       "name": "Kanggye",
       "flag": "Goguryeo"
     },
     {
-      "coordinates": [954, 334],
+      "coordinates": [
+        954,
+        334
+      ],
       "name": "Chongjin",
       "flag": "Goguryeo"
     },
     {
-      "coordinates": [775, 1216],
+      "coordinates": [
+        775,
+        1216
+      ],
       "name": "Gangneung",
       "flag": "Goguryeo"
     },
     {
-      "coordinates": [486, 1242],
+      "coordinates": [
+        486,
+        1242
+      ],
       "name": "Hanseong",
       "flag": "Baekje"
     },
     {
-      "coordinates": [486, 1462],
+      "coordinates": [
+        486,
+        1462
+      ],
       "name": "Ungjin",
       "flag": "Baekje"
     },
     {
-      "coordinates": [449, 1497],
+      "coordinates": [
+        449,
+        1497
+      ],
       "name": "Sabi",
       "flag": "Baekje"
     },
     {
-      "coordinates": [458, 1564],
+      "coordinates": [
+        458,
+        1564
+      ],
       "name": "Iksan",
       "flag": "Baekje"
     },
     {
-      "coordinates": [491, 1590],
+      "coordinates": [
+        491,
+        1590
+      ],
       "name": "Jeonju",
       "flag": "Baekje"
     },
     {
-      "coordinates": [414, 1751],
+      "coordinates": [
+        414,
+        1751
+      ],
       "name": "Naju",
       "flag": "Baekje"
     },
     {
-      "coordinates": [855, 1582],
+      "coordinates": [
+        855,
+        1582
+      ],
       "name": "Geumseong",
       "flag": "Silla"
     },
     {
-      "coordinates": [669, 1470],
+      "coordinates": [
+        669,
+        1470
+      ],
       "name": "Sabeol",
       "flag": "Silla"
     },
     {
-      "coordinates": [769, 1438],
+      "coordinates": [
+        769,
+        1438
+      ],
       "name": "Andong",
       "flag": "Silla"
     },
     {
-      "coordinates": [629, 1356],
+      "coordinates": [
+        629,
+        1356
+      ],
       "name": "Chungju",
       "flag": "Silla"
     },
     {
-      "coordinates": [746, 1580],
+      "coordinates": [
+        746,
+        1580
+      ],
       "name": "Daegu",
       "flag": "Silla"
     },
     {
-      "coordinates": [869, 1645],
+      "coordinates": [
+        869,
+        1645
+      ],
       "name": "Ulsan",
       "flag": "Silla"
     },
     {
-      "coordinates": [797, 1709],
+      "coordinates": [
+        797,
+        1709
+      ],
       "name": "Geumgwan",
       "flag": "Gaya"
     },
     {
-      "coordinates": [687, 1608],
+      "coordinates": [
+        687,
+        1608
+      ],
       "name": "Goryeong",
       "flag": "Gaya"
     },
     {
-      "coordinates": [713, 1701],
+      "coordinates": [
+        713,
+        1701
+      ],
       "name": "Ara",
       "flag": "Gaya"
     },
     {
-      "coordinates": [697, 1761],
+      "coordinates": [
+        697,
+        1761
+      ],
       "name": "Goseong",
       "flag": "Gaya"
     },
     {
-      "coordinates": [397, 2073],
+      "coordinates": [
+        397,
+        2073
+      ],
       "name": "Tamna",
       "flag": "Tamna"
     },
     {
-      "coordinates": [1063, 2035],
+      "coordinates": [
+        1063,
+        2035
+      ],
       "name": "Tsukushi",
       "flag": "Wa"
     },
     {
-      "coordinates": [857, 1913],
+      "coordinates": [
+        857,
+        1913
+      ],
       "name": "Tsushima",
       "flag": "Wa"
+    },
+    {
+      "coordinates": [
+        180,
+        320
+      ],
+      "name": "NorthernWeiFrontier",
+      "flag": "NorthernWei"
+    },
+    {
+      "coordinates": [
+        140,
+        510
+      ],
+      "name": "NorthernWeiWest",
+      "flag": "NorthernWei"
+    },
+    {
+      "coordinates": [
+        360,
+        270
+      ],
+      "name": "NorthernWeiEast",
+      "flag": "NorthernWei"
+    },
+    {
+      "coordinates": [
+        790,
+        210
+      ],
+      "name": "BalhaeFrontier",
+      "flag": "Balhae"
+    },
+    {
+      "coordinates": [
+        580,
+        130
+      ],
+      "name": "BalhaeWest",
+      "flag": "Balhae"
+    },
+    {
+      "coordinates": [
+        960,
+        150
+      ],
+      "name": "BalhaeEast",
+      "flag": "Balhae"
     }
   ],
-  "themes": ["samguk"]
+  "themes": [
+    "samguk"
+  ]
 }
