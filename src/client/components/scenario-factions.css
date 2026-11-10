@@ -1,0 +1,126 @@
+/* Portrait cards retain the existing faction-selected event and starting cities. */
+.korean-faction-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.korean-faction-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  color: #eee4d1;
+  background: #191815;
+  border: 1px solid #514735;
+  border-radius: 10px;
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.korean-faction-card:hover {
+  border-color: #b9a176;
+}
+.korean-faction-card:focus-visible {
+  outline: 3px solid #f2d18a;
+  outline-offset: 3px;
+}
+.korean-faction-card[aria-pressed="true"] {
+  border-color: #e5bd6c;
+  box-shadow: 0 0 0 1px #e5bd6c;
+}
+.korean-faction-art {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.korean-ruler-portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.korean-faction-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  inset: auto 0 0;
+  padding: 32px 12px 10px;
+  background: linear-gradient(transparent, rgba(15, 13, 10, 0.94));
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.korean-faction-emblem {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 3px;
+}
+.korean-faction-check {
+  margin-left: auto;
+  font-size: 17px;
+  color: #f4ce7d;
+}
+.korean-faction-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 12px;
+  width: 100%;
+  flex: 1;
+}
+.korean-ruler-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.korean-ruler-kind {
+  font-size: 10px;
+  color: #b9a786;
+}
+.korean-ruler-name {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 3px;
+}
+.korean-start-label {
+  font-size: 10px;
+  color: #a59d90;
+  margin-top: 12px;
+}
+.korean-start-name {
+  font-size: 12px;
+  color: #dfd6c5;
+  margin-top: 2px;
+}
+.korean-start-map {
+  width: 49px;
+  height: 98px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: #262c2a;
+}
+.korean-faction-note {
+  color: #a69e91;
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 12px 0 0;
+}
+@media (max-width: 540px) {
+  .korean-faction-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .korean-faction-details {
+    padding: 10px;
+  }
+  .korean-faction-heading {
+    font-size: 18px;
+  }
+}

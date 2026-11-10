@@ -136,13 +136,13 @@
       "flag": "Tamna"
     },
     {
-      "coordinates": [857, 1913],
-      "name": "Tsushima",
+      "coordinates": [1063, 2035],
+      "name": "Tsukushi",
       "flag": "Wa"
     },
     {
-      "coordinates": [1063, 2035],
-      "name": "Nakoku",
+      "coordinates": [857, 1913],
+      "name": "Tsushima",
       "flag": "Wa"
     }
   ],

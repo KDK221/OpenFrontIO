@@ -146,14 +146,14 @@
       "name": "Tamna"
     },
     {
+      "coordinates": [1063, 2035],
+      "flag": "Wa",
+      "name": "Tsukushi"
+    },
+    {
       "coordinates": [857, 1913],
       "flag": "Wa",
       "name": "Tsushima"
-    },
-    {
-      "coordinates": [1063, 2035],
-      "flag": "Wa",
-      "name": "Nakoku"
     }
   ],
   "special_team_count": 3,

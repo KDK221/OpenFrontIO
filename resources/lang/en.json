@@ -212,6 +212,7 @@
     "warship_shift_hint": "Hold Shift and drag to select multiple warships at once"
   },
   "capital": {
+    "Tsukushi": "Tsukushi · Kyushu",
     "Aizu": "Aizu",
     "Akita": "Akita",
     "Akizuki": "Akizuki",
@@ -1998,6 +1999,25 @@
     "tick_layers_table_header": "avg / max",
     "tps": "TPS:",
     "tps_avg_60s": "Avg:"
+  },
+  "scenario_rulers": {
+    "jangsu": "King Jangsu",
+    "geunchogo": "King Geunchogo",
+    "jinheung": "King Jinheung",
+    "suro": "King Suro",
+    "tamna": "Ruler of Tamna",
+    "wa": "Ruler of Wa",
+    "representative": "Representative ruler",
+    "legendary": "Legendary ruler",
+    "fictional": "Fictional ruler",
+    "start": "Starting location",
+    "location": "Starting location: {name}",
+    "note": "Rulers represent their factions across different periods. Portraits are artistic interpretations; map markers show in-game starting cities.",
+    "gwanggaeto": "Gwanggaeto the Great",
+    "haji": "King Haji",
+    "yuridora": "King Yuridora",
+    "iwai": "Iwai",
+    "regional": "Lord of Kyushu"
   },
   "play_mode": {
     "capital": "Capital: {name}",

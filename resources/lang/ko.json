@@ -2622,6 +2622,25 @@
     "Minyue": "민월",
     "Baiyue": "백월"
   },
+  "scenario_rulers": {
+    "jangsu": "장수왕",
+    "geunchogo": "근초고왕",
+    "jinheung": "진흥왕",
+    "suro": "김수로왕",
+    "tamna": "탐라 군주",
+    "wa": "왜 군주",
+    "representative": "대표 군주",
+    "legendary": "전승 속 군주",
+    "fictional": "창작 군주",
+    "start": "시작 위치",
+    "location": "{name} 시작 위치",
+    "note": "군주는 각 세력의 대표 인물이며 같은 시대의 정세를 뜻하지 않습니다. 초상은 창작 재현이며, 지도 표식은 게임의 시작 도시입니다.",
+    "gwanggaeto": "광개토대왕",
+    "haji": "하지왕",
+    "yuridora": "유리도라왕",
+    "iwai": "이와이",
+    "regional": "규슈의 군주"
+  },
   "play_mode": {
     "choose_faction": "세력 선택",
     "free": "자유 모드",
@@ -2632,6 +2651,7 @@
     "capital": "수도: {name}"
   },
   "capital": {
+    "Tsukushi": "쓰쿠시 · 규슈",
     "Aizu": "아이즈",
     "Akita": "아키타",
     "Akizuki": "아키즈키",
