@@ -1,36 +1,7 @@
 import { PlayerType } from "@openfront/engine-api/game/GameTypes";
 import { GameMapType } from "@openfront/engine-api/game/Maps.gen";
+import { scenarioNameGroups } from "./ScenarioNameGroups";
 import { translateText } from "./Utils";
-const prefixes = new Set([
-  "Xiahou",
-  "Guan",
-  "Zhang",
-  "Zhao",
-  "Huang",
-  "Zhou",
-  "Lu",
-  "Xu",
-  "Yu",
-  "Taishi",
-  "Gan",
-  "Wei",
-  "Cheng",
-  "Han",
-  "Jiang",
-  "Ding",
-  "Yan",
-  "Wen",
-  "Cao",
-  "Sun",
-]);
-const suffixes = new Set([
-  "Clan",
-  "Army",
-  "Garrison",
-  "Commandery",
-  "Volunteers",
-  "Retainers",
-]);
 export function scenarioDisplayName(
   name: string,
   type: PlayerType,
@@ -42,14 +13,25 @@ export function scenarioDisplayName(
     const localized = translateText(key);
     return localized === key ? name : localized;
   }
-  if (map !== GameMapType.WarringStates) return name;
+  const group =
+    map === GameMapType.WarringStates
+      ? "three_kingdoms"
+      : map === GameMapType.Samguk
+        ? "samguk"
+        : map === GameMapType.Sengoku
+          ? "sengoku"
+          : null;
+  if (!group) return name;
+  const { prefixes, suffixes } = scenarioNameGroups[group];
+  const namespace =
+    group === "three_kingdoms" ? "scenario_names" : `scenario_names.${group}`;
   const split = name.lastIndexOf(" ");
   const prefix = name.slice(0, split),
     suffix = name.slice(split + 1);
-  if (!prefixes.has(prefix) || !suffixes.has(suffix)) return name;
-  const prefixKey = `scenario_names.prefix.${prefix}`;
+  if (!prefixes.includes(prefix) || !suffixes.includes(suffix)) return name;
+  const prefixKey = `${namespace}.prefix.${prefix}`;
   const localized = translateText(prefixKey);
-  const key = `scenario_names.suffix.${suffix}`;
+  const key = `${namespace}.suffix.${suffix}`;
   const result = translateText(key, {
     name: localized === prefixKey ? prefix : localized,
   });

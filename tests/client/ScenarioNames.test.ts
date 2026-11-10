@@ -19,11 +19,11 @@ vi.mock("../../src/client/Utils", () => ({
   },
 }));
 it.each([
-  [ko, "하내", "하비", "관씨군"],
-  [en, "Henei", "Xiapi", "Guan Army"],
-  [ja, "河内", "下邳", "関軍"],
-  [cn, "河内", "下邳", "关军"],
-  [tw, "河內", "下邳", "關軍"],
+  [ko, "하내", "하비", "관우군"],
+  [en, "Henei", "Xiapi", "Guan Yu Army"],
+  [ja, "河内", "下邳", "関羽軍"],
+  [cn, "河内", "下邳", "关羽军"],
+  [tw, "河內", "下邳", "關羽軍"],
 ])("localizes city and generated force names", (lang, henei, xiapi, guan) => {
   state.lang = lang as any;
   expect(
@@ -63,7 +63,7 @@ it("falls back for unknown names and resolves language on each call", () => {
       PlayerType.Bot,
       GameMapType.WarringStates,
     ),
-  ).toBe("손씨 의용군");
+  ).toBe("손권 의용군");
   state.lang = ja;
   expect(
     scenarioDisplayName(
@@ -71,5 +71,37 @@ it("falls back for unknown names and resolves language on each call", () => {
       PlayerType.Bot,
       GameMapType.WarringStates,
     ),
-  ).toBe("孫義勇軍");
+  ).toBe("孫権義勇軍");
+});
+
+it("localizes Korean and Japanese regional forces and full-name Chinese commanders", () => {
+  state.lang = ko;
+  expect(
+    scenarioDisplayName(
+      "Sun Quan Army",
+      PlayerType.Bot,
+      GameMapType.WarringStates,
+    ),
+  ).toBe("손권군");
+  expect(
+    scenarioDisplayName("Sanada Clan", PlayerType.Bot, GameMapType.Sengoku),
+  ).toBe("사나다 가문");
+  expect(
+    scenarioDisplayName("Buyeo Fortress", PlayerType.Bot, GameMapType.Samguk),
+  ).toBe("부여성");
+  state.lang = ja;
+  expect(
+    scenarioDisplayName("Sanada Clan", PlayerType.Bot, GameMapType.Sengoku),
+  ).toBe("真田家");
+  expect(
+    scenarioDisplayName("Pyongyang", PlayerType.Nation, GameMapType.Samguk),
+  ).toBe("平壌");
+  state.lang = cn;
+  expect(
+    scenarioDisplayName(
+      "Sun Quan Army",
+      PlayerType.Bot,
+      GameMapType.WarringStates,
+    ),
+  ).toBe("孙权军");
 });
