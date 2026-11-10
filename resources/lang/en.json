@@ -1609,7 +1609,7 @@
   },
   "main": {
     "account": "Account",
-    "brand_name": "天下統一",
+    "brand_name": "열국쟁패",
     "clans": "Clans",
     "copyright": "© OpenFront™ and Contributors",
     "create": "Create Lobby",
@@ -1637,7 +1637,7 @@
     "source_code": "Source code (AGPL) · based on OpenFront",
     "store": "Store",
     "terms_of_service": "Terms of Service",
-    "title": "Cheonha Tongil 天下統一",
+    "title": "Yeolguk Jaengpae 열국쟁패",
     "troubleshooting": "Troubleshooting",
     "tutorial": "Tutorial",
     "user_avatar_alt": "{username}'s avatar",

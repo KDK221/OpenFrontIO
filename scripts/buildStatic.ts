@@ -104,7 +104,7 @@ fs.rmSync(path.join(outDir, "404.html"), { force: true });
 // A cover image at a stable, unhashed address for game listings
 // (e.g. somusoft.com/games): https://<host>/cover.webp
 fs.copyFileSync(
-  path.join(root, "resources", "maps", "samguk", "thumbnail.webp"),
+  path.join(root, "resources", "cover.webp"),
   path.join(outDir, "cover.webp"),
 );
 

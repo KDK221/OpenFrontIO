@@ -398,7 +398,7 @@ describe("RenderHtml environment-only render", () => {
     expect(match).not.toBeNull();
     const data = JSON.parse(match![1]);
     expect(data["@type"]).toBe("VideoGame");
-    expect(data.name).toBe("천하통일 天下統一");
+    expect(data.name).toBe("열국쟁패");
   });
 });
 
