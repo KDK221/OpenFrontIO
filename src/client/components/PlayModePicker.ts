@@ -3,6 +3,7 @@ import { html, LitElement, nothing, TemplateResult } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { translateText } from "../Utils";
 import "./scenario-factions.css";
+import { japaneseRulers } from "./JapaneseRulers";
 
 export type PlayMode = "scenario" | "free";
 
@@ -43,6 +44,16 @@ const koreanRulers: Record<
     name: "daejoyeong",
     kind: "representative",
   },
+};
+
+const scenarioRulers = {
+  ...Object.fromEntries(
+    Object.entries(koreanRulers).map(([id, ruler]) => [
+      id,
+      { ...ruler, portrait: `korea/${ruler.portrait}` },
+    ]),
+  ),
+  ...japaneseRulers,
 };
 
 /** The map's factions in manifest order, each with its capital. */
@@ -152,8 +163,8 @@ export class PlayModePicker extends LitElement {
     </button>`;
   }
 
-  private renderKoreanFaction(f: FactionOption): TemplateResult {
-    const ruler = koreanRulers[f.id];
+  private renderPortraitFaction(f: FactionOption): TemplateResult {
+    const ruler = scenarioRulers[f.id];
     const active = this.selectedFaction === f.id;
     const loc = f.location;
     return html`<button
@@ -166,9 +177,11 @@ export class PlayModePicker extends LitElement {
       <span class="korean-faction-art">
         <img
           class="korean-ruler-portrait"
-          src=${assetUrl(`images/rulers/korea/${ruler.portrait}.webp`)}
+          src=${assetUrl(`images/rulers/${ruler.portrait}.webp`)}
           alt=""
           draggable="false"
+          loading="lazy"
+          decoding="async"
         />
         <span class="korean-faction-heading">
           <img
@@ -232,7 +245,7 @@ export class PlayModePicker extends LitElement {
   }
 
   private renderFaction(f: FactionOption): TemplateResult {
-    if (koreanRulers[f.id]) return this.renderKoreanFaction(f);
+    if (scenarioRulers[f.id]) return this.renderPortraitFaction(f);
     const active = this.selectedFaction === f.id;
     return html`<button
       type="button"
@@ -276,12 +289,12 @@ export class PlayModePicker extends LitElement {
               ${translateText("play_mode.loading_factions")}
             </p>`
           : html`<div
-              class=${this.factions.every((f) => koreanRulers[f.id]) ? "korean-faction-grid" : "grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2"}
+              class=${this.factions.every((f) => scenarioRulers[f.id]) ? "korean-faction-grid" : "grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2"}
             >
               ${this.factions.map((f) => this.renderFaction(f))}
             </div>`
       }
-      ${this.factions.some((f) => koreanRulers[f.id]) ? html`<p class="korean-faction-note">${translateText("scenario_rulers.note")}</p>` : nothing}
+      ${this.factions.some((f) => scenarioRulers[f.id]) ? html`<p class="korean-faction-note">${translateText("scenario_rulers.note")}</p>` : nothing}
     </section>`;
   }
 
