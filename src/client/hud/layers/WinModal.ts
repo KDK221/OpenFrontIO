@@ -501,11 +501,11 @@ export class WinModal extends LitElement implements Controller {
 
   innerHtml() {
     // This fork does not advertise OpenFront's Steam page, so the wishlist
-    // promo is never shown; the other promos fill the box.
+    // promo is never shown. This game has no Discord community CTA.
     const canWishlist = false;
 
     if (isInIframe()) {
-      return canWishlist ? this.steamWishlist() : this.discordDisplay();
+      return canWishlist ? this.steamWishlist() : html``;
     }
 
     if (!this.isWin && getGamesPlayed() < 3) {
@@ -514,7 +514,7 @@ export class WinModal extends LitElement implements Controller {
     if (this.rand < 0.25 && canWishlist) {
       return this.steamWishlist();
     } else if (this.rand < 0.5) {
-      return this.discordDisplay();
+      return html``;
     } else {
       return this.renderPatternButton();
     }
@@ -629,27 +629,6 @@ export class WinModal extends LitElement implements Controller {
           campaign="win_modal"
           .active=${this.isVisible}
         ></steam-wishlist>
-      </div>
-    `;
-  }
-
-  discordDisplay(): TemplateResult {
-    return html`
-      <div class="text-center mb-6 bg-black/30 p-2.5 rounded-sm">
-        <h3 class="text-xl font-semibold text-white mb-3">
-          ${translateText("win_modal.join_discord")}
-        </h3>
-        <p class="text-white mb-3">
-          ${translateText("win_modal.discord_description")}
-        </p>
-        <a
-          href="https://discord.com/invite/openfront"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block px-6 py-3 bg-indigo-600 text-white rounded-sm font-semibold transition-all duration-200 hover:bg-indigo-700 hover:-translate-y-px no-underline"
-        >
-          ${translateText("win_modal.join_server")}
-        </a>
       </div>
     `;
   }
