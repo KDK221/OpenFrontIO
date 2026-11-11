@@ -30,3 +30,19 @@ No gameplay balance values were changed by this benchmark.
 Geometry measures straight-line city distances and passable land within a
 200-tile radius on the same connected land component. It is potential local
 space before competition, not uncontested territory or travel distance.
+
+## Sengoku benchmark
+
+Run the same engine benchmark on the Sengoku scenario (39 selectable factions,
+46 independent Nation AI cities, 400 tribes):
+
+```sh
+node tests/perf/balance/RunSengokuMediumHard.mjs
+node tests/perf/balance/SummarizeSengokuMediumHard.mjs
+```
+
+The runner attempts eight paired seeds on Medium and Hard for 6,000 ticks each.
+Results are written to `tests/perf/balance/sengoku-run-20261111/`. The summarizer
+excludes an entire pair if either run has a missing initial capital. All general
+method limitations above also apply to Sengoku; same-flag cities are independent.
+The dated Sengoku report and aggregate JSON files preserve the completed run.
