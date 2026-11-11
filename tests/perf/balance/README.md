@@ -64,3 +64,21 @@ The runner now records a SHA-256 of the actual map manifest. Compare only seed
 pairs with successful initial capital placement in both versions and difficulties.
 The dated relocation comparison records that common sample. This is a tested
 first placement adjustment, not a guarantee of equal human win rates.
+
+## China: Three Kingdoms — Warlords benchmark
+
+The internal map id remains `WarringStates`, but the current scenario is
+`Three Kingdoms — Warlords` (삼국지 · 군웅할거). It has 21 selectable capitals and
+41 independent Nation AI cities. The benchmark uses the same normal-size map,
+400 tribes, scenario golden lands, 6,000 ticks and eight paired Medium/Hard seeds.
+
+```sh
+node tests/perf/balance/RunWarringStatesMediumHard.mjs tests/perf/balance/warringstates-run-20261111 SOURCE_COMMIT
+node tests/perf/balance/SummarizeWarringStatesMediumHard.mjs
+```
+
+The dated results, summary, geometry and report are preserved alongside the
+harness. Geometry counts other Nation start locations within straight-line
+100/200-tile radii; it does not measure navigable paths, alliances or uncontested
+land. A missing initial capital excludes both difficulties for that seed.
+No China gameplay or map placement changes are made by this benchmark.

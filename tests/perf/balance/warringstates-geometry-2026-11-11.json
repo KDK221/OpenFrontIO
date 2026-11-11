@@ -1,0 +1,317 @@
+[
+  {
+    "flag": "LiuBei",
+    "name": "Xinye",
+    "coordinates": [
+      1585,
+      1306
+    ],
+    "nearestCity": {
+      "name": "Wan",
+      "flag": "ZhangXiu",
+      "distance": 34.2
+    },
+    "citiesWithin100": 4,
+    "citiesWithin200": 16
+  },
+  {
+    "flag": "CaoCao",
+    "name": "Xuchang",
+    "coordinates": [
+      1634,
+      1218
+    ],
+    "nearestCity": {
+      "name": "Runan",
+      "flag": "CaoCao",
+      "distance": 46.1
+    },
+    "citiesWithin100": 5,
+    "citiesWithin200": 17
+  },
+  {
+    "flag": "SunQuan",
+    "name": "Jianye",
+    "coordinates": [
+      1820,
+      1295
+    ],
+    "nearestCity": {
+      "name": "Wu",
+      "flag": "SunQuan",
+      "distance": 78.8
+    },
+    "citiesWithin100": 3,
+    "citiesWithin200": 8
+  },
+  {
+    "flag": "YuanShao",
+    "name": "Ye",
+    "coordinates": [
+      1608,
+      1092
+    ],
+    "nearestCity": {
+      "name": "Puyang",
+      "flag": "LuBu",
+      "distance": 66.9
+    },
+    "citiesWithin100": 5,
+    "citiesWithin200": 14
+  },
+  {
+    "flag": "YuanShu",
+    "name": "Shouchun",
+    "coordinates": [
+      1736,
+      1255
+    ],
+    "nearestCity": {
+      "name": "Lujiang",
+      "flag": "YuanShu",
+      "distance": 73.1
+    },
+    "citiesWithin100": 4,
+    "citiesWithin200": 14
+  },
+  {
+    "flag": "DongZhuo",
+    "name": "Luoyang",
+    "coordinates": [
+      1554,
+      1197
+    ],
+    "nearestCity": {
+      "name": "Henei",
+      "flag": "ZhangYang",
+      "distance": 40.2
+    },
+    "citiesWithin100": 4,
+    "citiesWithin200": 16
+  },
+  {
+    "flag": "LuBu",
+    "name": "Puyang",
+    "coordinates": [
+      1665,
+      1127
+    ],
+    "nearestCity": {
+      "name": "Chenliu",
+      "flag": "CaoCao",
+      "distance": 53.0
+    },
+    "citiesWithin100": 4,
+    "citiesWithin200": 16
+  },
+  {
+    "flag": "LiuBiao",
+    "name": "Xiangyang",
+    "coordinates": [
+      1573,
+      1340
+    ],
+    "nearestCity": {
+      "name": "Xinye",
+      "flag": "LiuBei",
+      "distance": 36.1
+    },
+    "citiesWithin100": 3,
+    "citiesWithin200": 15
+  },
+  {
+    "flag": "LiuZhang",
+    "name": "Chengdu",
+    "coordinates": [
+      1267,
+      1437
+    ],
+    "nearestCity": {
+      "name": "Jiangzhou",
+      "flag": "LiuZhang",
+      "distance": 111.7
+    },
+    "citiesWithin100": 0,
+    "citiesWithin200": 3
+  },
+  {
+    "flag": "ZhangLu",
+    "name": "Hanzhong",
+    "coordinates": [
+      1365,
+      1309
+    ],
+    "nearestCity": {
+      "name": "Tianshui",
+      "flag": "MaTeng",
+      "distance": 87.0
+    },
+    "citiesWithin100": 3,
+    "citiesWithin200": 7
+  },
+  {
+    "flag": "MaTeng",
+    "name": "Wuwei",
+    "coordinates": [
+      1175,
+      1060
+    ],
+    "nearestCity": {
+      "name": "Xiping",
+      "flag": "HanSui",
+      "distance": 110.1
+    },
+    "citiesWithin100": 0,
+    "citiesWithin200": 2
+  },
+  {
+    "flag": "HanSui",
+    "name": "Jincheng",
+    "coordinates": [
+      1235,
+      1164
+    ],
+    "nearestCity": {
+      "name": "Xiping",
+      "flag": "HanSui",
+      "distance": 86.1
+    },
+    "citiesWithin100": 1,
+    "citiesWithin200": 5
+  },
+  {
+    "flag": "GongsunZan",
+    "name": "Beiping",
+    "coordinates": [
+      1684,
+      900
+    ],
+    "nearestCity": {
+      "name": "Ji",
+      "flag": "GongsunZan",
+      "distance": 52.8
+    },
+    "citiesWithin100": 1,
+    "citiesWithin200": 6
+  },
+  {
+    "flag": "GongsunDu",
+    "name": "Xiangping",
+    "coordinates": [
+      1845,
+      796
+    ],
+    "nearestCity": {
+      "name": "Beiping",
+      "flag": "GongsunZan",
+      "distance": 191.7
+    },
+    "citiesWithin100": 0,
+    "citiesWithin200": 1
+  },
+  {
+    "flag": "TaoQian",
+    "name": "Xiapi",
+    "coordinates": [
+      1785,
+      1195
+    ],
+    "nearestCity": {
+      "name": "Shouchun",
+      "flag": "YuanShu",
+      "distance": 77.5
+    },
+    "citiesWithin100": 1,
+    "citiesWithin200": 11
+  },
+  {
+    "flag": "KongRong",
+    "name": "Beihai",
+    "coordinates": [
+      1790,
+      1048
+    ],
+    "nearestCity": {
+      "name": "Nanpi",
+      "flag": "YuanShao",
+      "distance": 120.0
+    },
+    "citiesWithin100": 0,
+    "citiesWithin200": 9
+  },
+  {
+    "flag": "ZhangXiu",
+    "name": "Wan",
+    "coordinates": [
+      1573,
+      1274
+    ],
+    "nearestCity": {
+      "name": "Xinye",
+      "flag": "LiuBei",
+      "distance": 34.2
+    },
+    "citiesWithin100": 5,
+    "citiesWithin200": 16
+  },
+  {
+    "flag": "ZhangYang",
+    "name": "Henei",
+    "coordinates": [
+      1550,
+      1157
+    ],
+    "nearestCity": {
+      "name": "Luoyang",
+      "flag": "DongZhuo",
+      "distance": 40.2
+    },
+    "citiesWithin100": 3,
+    "citiesWithin200": 15
+  },
+  {
+    "flag": "ZhangJiao",
+    "name": "Julu",
+    "coordinates": [
+      1635,
+      1030
+    ],
+    "nearestCity": {
+      "name": "Pingyuan",
+      "flag": "YuanShao",
+      "distance": 39.8
+    },
+    "citiesWithin100": 3,
+    "citiesWithin200": 12
+  },
+  {
+    "flag": "WangLang",
+    "name": "Kuaiji",
+    "coordinates": [
+      1913,
+      1333
+    ],
+    "nearestCity": {
+      "name": "Wu",
+      "flag": "SunQuan",
+      "distance": 61.4
+    },
+    "citiesWithin100": 1,
+    "citiesWithin200": 6
+  },
+  {
+    "flag": "ShiXie",
+    "name": "Guangxin",
+    "coordinates": [
+      1555,
+      1745
+    ],
+    "nearestCity": {
+      "name": "Nanhai",
+      "flag": "ShiXie",
+      "distance": 147.0
+    },
+    "citiesWithin100": 0,
+    "citiesWithin200": 1
+  }
+]
