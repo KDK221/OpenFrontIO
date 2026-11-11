@@ -1,0 +1,621 @@
+{
+  "baseCommit": "9712a36dbb5df9dee31e3e4a7ae5fccd93ede109",
+  "mapManifestSha256": "ccad71db5d86c6e72eb34eaa4aa6a0892728d636440a69d572c37f4dda0c2f18",
+  "pairedSeeds": [
+    "balance01",
+    "balance02",
+    "balance03",
+    "balance04",
+    "balance05",
+    "balance06",
+    "balance07",
+    "balance08"
+  ],
+  "excluded": [],
+  "difficulties": {
+    "medium": {
+      "n": 8,
+      "rows": [
+        {
+          "flag": "LiuBei",
+          "name": "Xinye",
+          "before": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 0,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "CaoCao",
+          "name": "Xuchang",
+          "before": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "SunQuan",
+          "name": "Jianye",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "YuanShao",
+          "name": "Ye",
+          "before": {
+            "alive": 0,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 0,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "YuanShu",
+          "name": "Shouchun",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 1213.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "DongZhuo",
+          "name": "Luoyang",
+          "before": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "LuBu",
+          "name": "Puyang",
+          "before": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "LiuBiao",
+          "name": "Xiangyang",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "LiuZhang",
+          "name": "Chengdu",
+          "before": {
+            "alive": 8,
+            "medianLand": 100657.5,
+            "firstPlace": 1
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 10450.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "ZhangLu",
+          "name": "Hanzhong",
+          "before": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 1
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "MaTeng",
+          "name": "Wuwei",
+          "before": {
+            "alive": 8,
+            "medianLand": 325533.5,
+            "firstPlace": 5
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "HanSui",
+          "name": "Jincheng",
+          "before": {
+            "alive": 4,
+            "medianLand": 87.0,
+            "firstPlace": 1
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "GongsunZan",
+          "name": "Beiping",
+          "before": {
+            "alive": 6,
+            "medianLand": 98885.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 101067.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "GongsunDu",
+          "name": "Xiangping",
+          "before": {
+            "alive": 8,
+            "medianLand": 163040.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 114511.5,
+            "firstPlace": 2
+          }
+        },
+        {
+          "flag": "TaoQian",
+          "name": "Xiapi",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "KongRong",
+          "name": "Beihai",
+          "before": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 3641.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "ZhangXiu",
+          "name": "Wan",
+          "before": {
+            "alive": 0,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "ZhangYang",
+          "name": "Henei",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "ZhangJiao",
+          "name": "Julu",
+          "before": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "WangLang",
+          "name": "Kuaiji",
+          "before": {
+            "alive": 5,
+            "medianLand": 26471.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "ShiXie",
+          "name": "Guangxin",
+          "before": {
+            "alive": 6,
+            "medianLand": 29605.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 9988.5,
+            "firstPlace": 0
+          }
+        }
+      ],
+      "medianLargestCityBefore": 371104.0,
+      "medianLargestCityAfter": 324393.5,
+      "newOutpostFirstPlaces": 5
+    },
+    "hard": {
+      "n": 8,
+      "rows": [
+        {
+          "flag": "LiuBei",
+          "name": "Xinye",
+          "before": {
+            "alive": 6,
+            "medianLand": 4008.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 11512.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "CaoCao",
+          "name": "Xuchang",
+          "before": {
+            "alive": 6,
+            "medianLand": 2541.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 9010.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "SunQuan",
+          "name": "Jianye",
+          "before": {
+            "alive": 6,
+            "medianLand": 3567.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 561.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "YuanShao",
+          "name": "Ye",
+          "before": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 5562.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "YuanShu",
+          "name": "Shouchun",
+          "before": {
+            "alive": 5,
+            "medianLand": 1322.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 7577.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "DongZhuo",
+          "name": "Luoyang",
+          "before": {
+            "alive": 7,
+            "medianLand": 3619.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 9160.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "LuBu",
+          "name": "Puyang",
+          "before": {
+            "alive": 6,
+            "medianLand": 2287.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 649.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "LiuBiao",
+          "name": "Xiangyang",
+          "before": {
+            "alive": 8,
+            "medianLand": 2640.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 8,
+            "medianLand": 12108.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "LiuZhang",
+          "name": "Chengdu",
+          "before": {
+            "alive": 8,
+            "medianLand": 68712.5,
+            "firstPlace": 1
+          },
+          "after": {
+            "alive": 8,
+            "medianLand": 14045.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "ZhangLu",
+          "name": "Hanzhong",
+          "before": {
+            "alive": 8,
+            "medianLand": 168999.5,
+            "firstPlace": 2
+          },
+          "after": {
+            "alive": 8,
+            "medianLand": 37535.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "MaTeng",
+          "name": "Wuwei",
+          "before": {
+            "alive": 8,
+            "medianLand": 249378.5,
+            "firstPlace": 3
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 29031.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "HanSui",
+          "name": "Jincheng",
+          "before": {
+            "alive": 8,
+            "medianLand": 16128.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 21687.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "GongsunZan",
+          "name": "Beiping",
+          "before": {
+            "alive": 7,
+            "medianLand": 23184.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 8,
+            "medianLand": 153232.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "GongsunDu",
+          "name": "Xiangping",
+          "before": {
+            "alive": 7,
+            "medianLand": 177424.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 8,
+            "medianLand": 155757.0,
+            "firstPlace": 1
+          }
+        },
+        {
+          "flag": "TaoQian",
+          "name": "Xiapi",
+          "before": {
+            "alive": 6,
+            "medianLand": 3548.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 3303.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "KongRong",
+          "name": "Beihai",
+          "before": {
+            "alive": 5,
+            "medianLand": 7949.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 4657.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "ZhangXiu",
+          "name": "Wan",
+          "before": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 1747.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "ZhangYang",
+          "name": "Henei",
+          "before": {
+            "alive": 6,
+            "medianLand": 14081.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 10311.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "ZhangJiao",
+          "name": "Julu",
+          "before": {
+            "alive": 7,
+            "medianLand": 9822.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 8,
+            "medianLand": 18005.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "WangLang",
+          "name": "Kuaiji",
+          "before": {
+            "alive": 7,
+            "medianLand": 18778.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 10678.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "ShiXie",
+          "name": "Guangxin",
+          "before": {
+            "alive": 7,
+            "medianLand": 34527.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 8,
+            "medianLand": 50535.5,
+            "firstPlace": 0
+          }
+        }
+      ],
+      "medianLargestCityBefore": 413952.0,
+      "medianLargestCityAfter": 262563.0,
+      "newOutpostFirstPlaces": 7
+    }
+  }
+}

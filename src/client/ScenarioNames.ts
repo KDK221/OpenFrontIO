@@ -13,7 +13,16 @@ export function scenarioDisplayName(
     type === PlayerType.Nation ||
     (type === PlayerType.Bot &&
       ((map === GameMapType.Samguk && (name === "Sabeol" || name === "Ara")) ||
-        (map === GameMapType.Sengoku && name === "Gifu")))
+        (map === GameMapType.Sengoku && name === "Gifu") ||
+        (map === GameMapType.WarringStates &&
+          [
+            "Chenliu",
+            "Runan",
+            "Pingyuan",
+            "Hongnong",
+            "Jiangling",
+            "Lujiang",
+          ].includes(name))))
   ) {
     const key = `capital.${name}`;
     const localized = translateText(key);

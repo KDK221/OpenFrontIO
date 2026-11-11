@@ -213,6 +213,12 @@
     "warship_shift_hint": "Hold Shift and drag to select multiple warships at once"
   },
   "capital": {
+    "ChinaNorthwestWestOutpost": "Northwest Western Outpost",
+    "ChinaNorthwestNorthOutpost": "Northwest Northern Outpost",
+    "ChinaNorthwestSouthOutpost": "Northwest Southern Outpost",
+    "ChinaSouthwestNorthOutpost": "Southwest Northern Outpost",
+    "ChinaSouthwestWestOutpost": "Southwest Western Outpost",
+    "ChinaSouthwestSouthOutpost": "Southwest Southern Outpost",
     "Aizu": "Aizu",
     "Akita": "Akita",
     "Akizuki": "Akizuki",

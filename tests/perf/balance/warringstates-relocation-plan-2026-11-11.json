@@ -1,0 +1,122 @@
+{
+  "formerCities": [
+    {
+      "name": "Chenliu",
+      "coordinates": [
+        1665,
+        1180
+      ]
+    },
+    {
+      "name": "Runan",
+      "coordinates": [
+        1653,
+        1260
+      ]
+    },
+    {
+      "name": "Pingyuan",
+      "coordinates": [
+        1670,
+        1049
+      ]
+    },
+    {
+      "name": "Hongnong",
+      "coordinates": [
+        1490,
+        1218
+      ]
+    },
+    {
+      "name": "Jiangling",
+      "coordinates": [
+        1588,
+        1398
+      ]
+    },
+    {
+      "name": "Lujiang",
+      "coordinates": [
+        1740,
+        1328
+      ]
+    }
+  ],
+  "newCities": [
+    {
+      "name": "ChinaNorthwestWestOutpost",
+      "flag": "MaTeng",
+      "coordinates": [
+        750,
+        950
+      ]
+    },
+    {
+      "name": "ChinaNorthwestNorthOutpost",
+      "flag": "MaTeng",
+      "coordinates": [
+        980,
+        921
+      ]
+    },
+    {
+      "name": "ChinaNorthwestSouthOutpost",
+      "flag": "HanSui",
+      "coordinates": [
+        930,
+        1214
+      ]
+    },
+    {
+      "name": "ChinaSouthwestNorthOutpost",
+      "flag": "LiuZhang",
+      "coordinates": [
+        1081,
+        1434
+      ]
+    },
+    {
+      "name": "ChinaSouthwestWestOutpost",
+      "flag": "LiuZhang",
+      "coordinates": [
+        858,
+        1474
+      ]
+    },
+    {
+      "name": "ChinaSouthwestSouthOutpost",
+      "flag": "LiuZhang",
+      "coordinates": [
+        1390,
+        1634
+      ]
+    }
+  ],
+  "formerCityCoordinates": {
+    "Chenliu": [
+      1665,
+      1180
+    ],
+    "Runan": [
+      1653,
+      1260
+    ],
+    "Pingyuan": [
+      1670,
+      1049
+    ],
+    "Hongnong": [
+      1490,
+      1218
+    ],
+    "Jiangling": [
+      1587,
+      1398
+    ],
+    "Lujiang": [
+      1740,
+      1328
+    ]
+  }
+}

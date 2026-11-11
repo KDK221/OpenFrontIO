@@ -142,3 +142,36 @@ it("localizes relocated Sengoku city names and preserves human names", () => {
     ),
   ).toBe("에조 동부 변경성");
 });
+
+it("localizes former Chinese cities as tribes and western outposts", () => {
+  state.lang = ko;
+  for (const name of [
+    "Chenliu",
+    "Runan",
+    "Pingyuan",
+    "Hongnong",
+    "Jiangling",
+    "Lujiang",
+  ]) {
+    expect(
+      scenarioDisplayName(name, PlayerType.Bot, GameMapType.WarringStates),
+    ).toBe((ko.capital as Record<string, string>)[name]);
+    expect(
+      scenarioDisplayName(name, PlayerType.Human, GameMapType.WarringStates),
+    ).toBe(name);
+  }
+  expect(
+    scenarioDisplayName(
+      "ChinaNorthwestWestOutpost",
+      PlayerType.Nation,
+      GameMapType.WarringStates,
+    ),
+  ).toBe("서북 서부 변경성");
+  expect(
+    scenarioDisplayName(
+      "ChinaSouthwestSouthOutpost",
+      PlayerType.Nation,
+      GameMapType.WarringStates,
+    ),
+  ).toBe("서남 남부 변경성");
+});

@@ -1,0 +1,296 @@
+[
+  {
+    "flag": "LiuBei",
+    "name": "Xinye",
+    "before": {
+      "within100": 4,
+      "within200": 16,
+      "nearest": 34.2
+    },
+    "after": {
+      "within100": 2,
+      "within200": 11,
+      "nearest": 34.2
+    }
+  },
+  {
+    "flag": "CaoCao",
+    "name": "Xuchang",
+    "before": {
+      "within100": 5,
+      "within200": 17,
+      "nearest": 46.1
+    },
+    "after": {
+      "within100": 3,
+      "within200": 11,
+      "nearest": 82.7
+    }
+  },
+  {
+    "flag": "SunQuan",
+    "name": "Jianye",
+    "before": {
+      "within100": 3,
+      "within200": 8,
+      "nearest": 78.8
+    },
+    "after": {
+      "within100": 2,
+      "within200": 5,
+      "nearest": 78.8
+    }
+  },
+  {
+    "flag": "YuanShao",
+    "name": "Ye",
+    "before": {
+      "within100": 5,
+      "within200": 14,
+      "nearest": 66.9
+    },
+    "after": {
+      "within100": 4,
+      "within200": 10,
+      "nearest": 66.9
+    }
+  },
+  {
+    "flag": "YuanShu",
+    "name": "Shouchun",
+    "before": {
+      "within100": 4,
+      "within200": 14,
+      "nearest": 73.1
+    },
+    "after": {
+      "within100": 2,
+      "within200": 11,
+      "nearest": 77.5
+    }
+  },
+  {
+    "flag": "DongZhuo",
+    "name": "Luoyang",
+    "before": {
+      "within100": 4,
+      "within200": 16,
+      "nearest": 40.2
+    },
+    "after": {
+      "within100": 3,
+      "within200": 12,
+      "nearest": 40.2
+    }
+  },
+  {
+    "flag": "LuBu",
+    "name": "Puyang",
+    "before": {
+      "within100": 4,
+      "within200": 16,
+      "nearest": 53.0
+    },
+    "after": {
+      "within100": 2,
+      "within200": 12,
+      "nearest": 66.9
+    }
+  },
+  {
+    "flag": "LiuBiao",
+    "name": "Xiangyang",
+    "before": {
+      "within100": 3,
+      "within200": 15,
+      "nearest": 36.1
+    },
+    "after": {
+      "within100": 2,
+      "within200": 10,
+      "nearest": 36.1
+    }
+  },
+  {
+    "flag": "LiuZhang",
+    "name": "Chengdu",
+    "before": {
+      "within100": 0,
+      "within200": 3,
+      "nearest": 111.7
+    },
+    "after": {
+      "within100": 0,
+      "within200": 4,
+      "nearest": 111.7
+    }
+  },
+  {
+    "flag": "ZhangLu",
+    "name": "Hanzhong",
+    "before": {
+      "within100": 3,
+      "within200": 7,
+      "nearest": 87.0
+    },
+    "after": {
+      "within100": 3,
+      "within200": 6,
+      "nearest": 87.0
+    }
+  },
+  {
+    "flag": "MaTeng",
+    "name": "Wuwei",
+    "before": {
+      "within100": 0,
+      "within200": 2,
+      "nearest": 110.1
+    },
+    "after": {
+      "within100": 0,
+      "within200": 2,
+      "nearest": 110.1
+    }
+  },
+  {
+    "flag": "HanSui",
+    "name": "Jincheng",
+    "before": {
+      "within100": 1,
+      "within200": 5,
+      "nearest": 86.1
+    },
+    "after": {
+      "within100": 1,
+      "within200": 5,
+      "nearest": 86.1
+    }
+  },
+  {
+    "flag": "GongsunZan",
+    "name": "Beiping",
+    "before": {
+      "within100": 1,
+      "within200": 6,
+      "nearest": 52.8
+    },
+    "after": {
+      "within100": 1,
+      "within200": 5,
+      "nearest": 52.8
+    }
+  },
+  {
+    "flag": "GongsunDu",
+    "name": "Xiangping",
+    "before": {
+      "within100": 0,
+      "within200": 1,
+      "nearest": 191.7
+    },
+    "after": {
+      "within100": 0,
+      "within200": 1,
+      "nearest": 191.7
+    }
+  },
+  {
+    "flag": "TaoQian",
+    "name": "Xiapi",
+    "before": {
+      "within100": 1,
+      "within200": 11,
+      "nearest": 77.5
+    },
+    "after": {
+      "within100": 1,
+      "within200": 7,
+      "nearest": 77.5
+    }
+  },
+  {
+    "flag": "KongRong",
+    "name": "Beihai",
+    "before": {
+      "within100": 0,
+      "within200": 9,
+      "nearest": 120.0
+    },
+    "after": {
+      "within100": 0,
+      "within200": 7,
+      "nearest": 120.0
+    }
+  },
+  {
+    "flag": "ZhangXiu",
+    "name": "Wan",
+    "before": {
+      "within100": 5,
+      "within200": 16,
+      "nearest": 34.2
+    },
+    "after": {
+      "within100": 4,
+      "within200": 11,
+      "nearest": 34.2
+    }
+  },
+  {
+    "flag": "ZhangYang",
+    "name": "Henei",
+    "before": {
+      "within100": 3,
+      "within200": 15,
+      "nearest": 40.2
+    },
+    "after": {
+      "within100": 2,
+      "within200": 11,
+      "nearest": 40.2
+    }
+  },
+  {
+    "flag": "ZhangJiao",
+    "name": "Julu",
+    "before": {
+      "within100": 3,
+      "within200": 12,
+      "nearest": 39.8
+    },
+    "after": {
+      "within100": 2,
+      "within200": 10,
+      "nearest": 54.1
+    }
+  },
+  {
+    "flag": "WangLang",
+    "name": "Kuaiji",
+    "before": {
+      "within100": 1,
+      "within200": 6,
+      "nearest": 61.4
+    },
+    "after": {
+      "within100": 1,
+      "within200": 5,
+      "nearest": 61.4
+    }
+  },
+  {
+    "flag": "ShiXie",
+    "name": "Guangxin",
+    "before": {
+      "within100": 0,
+      "within200": 1,
+      "nearest": 147.0
+    },
+    "after": {
+      "within100": 0,
+      "within200": 2,
+      "nearest": 147.0
+    }
+  }
+]

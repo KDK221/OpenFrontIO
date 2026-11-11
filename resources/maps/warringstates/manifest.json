@@ -125,16 +125,6 @@
       "coordinates": [1555, 1745]
     },
     {
-      "flag": "CaoCao",
-      "name": "Chenliu",
-      "coordinates": [1665, 1180]
-    },
-    {
-      "flag": "CaoCao",
-      "name": "Runan",
-      "coordinates": [1653, 1260]
-    },
-    {
       "flag": "LiuBei",
       "name": "Jiangxia",
       "coordinates": [1680, 1400]
@@ -155,29 +145,9 @@
       "coordinates": [1680, 1000]
     },
     {
-      "flag": "YuanShao",
-      "name": "Pingyuan",
-      "coordinates": [1670, 1049]
-    },
-    {
-      "flag": "YuanShu",
-      "name": "Lujiang",
-      "coordinates": [1740, 1328]
-    },
-    {
       "flag": "DongZhuo",
       "name": "Changan",
       "coordinates": [1419, 1240]
-    },
-    {
-      "flag": "DongZhuo",
-      "name": "Hongnong",
-      "coordinates": [1490, 1218]
-    },
-    {
-      "flag": "LiuBiao",
-      "name": "Jiangling",
-      "coordinates": [1587, 1398]
     },
     {
       "flag": "LiuBiao",
@@ -223,9 +193,65 @@
       "flag": "ShiXie",
       "name": "Nanhai",
       "coordinates": [1700, 1721]
+    },
+    {
+      "name": "ChinaNorthwestWestOutpost",
+      "flag": "MaTeng",
+      "coordinates": [750, 950]
+    },
+    {
+      "name": "ChinaNorthwestNorthOutpost",
+      "flag": "MaTeng",
+      "coordinates": [980, 921]
+    },
+    {
+      "name": "ChinaNorthwestSouthOutpost",
+      "flag": "HanSui",
+      "coordinates": [930, 1214]
+    },
+    {
+      "name": "ChinaSouthwestNorthOutpost",
+      "flag": "LiuZhang",
+      "coordinates": [1081, 1434]
+    },
+    {
+      "name": "ChinaSouthwestWestOutpost",
+      "flag": "LiuZhang",
+      "coordinates": [858, 1474]
+    },
+    {
+      "name": "ChinaSouthwestSouthOutpost",
+      "flag": "LiuZhang",
+      "coordinates": [1390, 1634]
     }
   ],
   "special_team_count": 2,
   "themes": ["three_kingdoms"],
-  "translation_key": "map.warringstates"
+  "translation_key": "map.warringstates",
+  "custom_tribes": [
+    {
+      "name": "Chenliu",
+      "coordinates": [1665, 1180]
+    },
+    {
+      "name": "Runan",
+      "coordinates": [1653, 1260]
+    },
+    {
+      "name": "Pingyuan",
+      "coordinates": [1670, 1049]
+    },
+    {
+      "name": "Hongnong",
+      "coordinates": [1490, 1218]
+    },
+    {
+      "name": "Jiangling",
+      "coordinates": [1588, 1398]
+    },
+    {
+      "name": "Lujiang",
+      "coordinates": [1740, 1328]
+    }
+  ]
 }

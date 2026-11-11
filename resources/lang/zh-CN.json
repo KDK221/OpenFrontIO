@@ -1274,6 +1274,12 @@
     }
   },
   "capital": {
+    "ChinaNorthwestWestOutpost": "西北西部边城",
+    "ChinaNorthwestNorthOutpost": "西北北部边城",
+    "ChinaNorthwestSouthOutpost": "西北南部边城",
+    "ChinaSouthwestNorthOutpost": "西南北部边城",
+    "ChinaSouthwestWestOutpost": "西南西部边城",
+    "ChinaSouthwestSouthOutpost": "西南南部边城",
     "Xinye": "新野",
     "Xuchang": "许昌",
     "Jianye": "建业",

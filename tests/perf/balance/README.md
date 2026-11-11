@@ -82,3 +82,25 @@ harness. Geometry counts other Nation start locations within straight-line
 100/200-tile radii; it does not measure navigable paths, alliances or uncontested
 land. A missing initial capital excludes both difficulties for that seed.
 No China gameplay or map placement changes are made by this benchmark.
+
+### China six-city western redistribution
+
+Chenliu, Runan, Pingyuan, Hongnong, Jiangling and Lujiang are moved from extra
+Nation cities to ordinary positioned tribes, using six slots of the existing
+400-tribe budget. Six independent outpost Nation cities are placed in three
+northwestern and three southwestern locations. All 21 selectable capitals and
+41 Nation cities are retained. The plan JSON records exact before/after coordinates;
+Jiangling's tribe is shifted one normal-map tile east to remain passable on all
+map resolutions. New sites are connected to the mainland and at least 160 normal
+map tiles from retained Nation start coordinates. Golden lands are unchanged.
+
+```sh
+node tests/perf/balance/RunWarringStatesMediumHard.mjs tests/perf/balance/warringstates-relocated-final-run-20261111 SOURCE_COMMIT_PLUS_PATCH
+python3 tests/perf/balance/CompareWarringStatesRelocation.py
+```
+
+The comparison requires all 16 completed runs and uses only common valid paired
+seeds across both versions and difficulties. The final map manifest SHA-256 is
+recorded in the results and comparison. AI-only ten-minute outcomes are not human
+win rates or full-match wins; the same seeds were used to assess the adjustment,
+so this is not an independent holdout evaluation.

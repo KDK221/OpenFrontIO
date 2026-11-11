@@ -2738,6 +2738,12 @@
     "capital": "수도: {name}"
   },
   "capital": {
+    "ChinaNorthwestWestOutpost": "서북 서부 변경성",
+    "ChinaNorthwestNorthOutpost": "서북 북부 변경성",
+    "ChinaNorthwestSouthOutpost": "서북 남부 변경성",
+    "ChinaSouthwestNorthOutpost": "서남 북부 변경성",
+    "ChinaSouthwestWestOutpost": "서남 서부 변경성",
+    "ChinaSouthwestSouthOutpost": "서남 남부 변경성",
     "Tsukushi": "쓰쿠시",
     "Aizu": "아이즈",
     "Akita": "아키타",
