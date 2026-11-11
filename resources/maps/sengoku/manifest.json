@@ -26,11 +26,6 @@
       "name": "Kiyosu"
     },
     {
-      "coordinates": [1280, 1249],
-      "flag": "Oda",
-      "name": "Gifu"
-    },
-    {
       "coordinates": [1321, 1307],
       "flag": "Matsudaira",
       "name": "Okazaki"
@@ -249,9 +244,20 @@
       "coordinates": [660, 1712],
       "flag": "Shimazu",
       "name": "Kagoshima"
+    },
+    {
+      "name": "EzoEastOutpost",
+      "flag": "Kakizaki",
+      "coordinates": [1930, 210]
     }
   ],
   "special_team_count": 4,
   "themes": ["asia"],
-  "translation_key": "map.sengoku"
+  "translation_key": "map.sengoku",
+  "custom_tribes": [
+    {
+      "name": "Gifu",
+      "coordinates": [1280, 1249]
+    }
+  ]
 }

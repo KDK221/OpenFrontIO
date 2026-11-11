@@ -46,3 +46,21 @@ Results are written to `tests/perf/balance/sengoku-run-20261111/`. The summarize
 excludes an entire pair if either run has a missing initial capital. All general
 method limitations above also apply to Sengoku; same-flag cities are independent.
 The dated Sengoku report and aggregate JSON files preserve the completed run.
+
+### Sengoku relocation comparison
+
+The relocation keeps all 39 selectable capitals and 46 Nation AI cities. Gifu's
+extra Nation moves to the fictional Ezo Eastern Outpost at `[1930, 210]`; a
+positioned ordinary tribe named Gifu occupies `[1280, 1249]` within the existing
+400-tribe budget. Iida retains its original Nation city. Golden lands are unchanged.
+
+```sh
+node tests/perf/balance/RunSengokuMediumHard.mjs tests/perf/balance/sengoku-relocated-one-run-20261111 working-tree
+node tests/perf/balance/SummarizeSengokuMediumHard.mjs tests/perf/balance/sengoku-relocated-one-run-20261111
+python3 tests/perf/balance/CompareSengokuRelocation.py
+```
+
+The runner now records a SHA-256 of the actual map manifest. Compare only seed
+pairs with successful initial capital placement in both versions and difficulties.
+The dated relocation comparison records that common sample. This is a tested
+first placement adjustment, not a guarantee of equal human win rates.

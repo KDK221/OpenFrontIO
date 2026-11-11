@@ -1,8 +1,15 @@
 import { spawn } from "node:child_process";
+import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
-const dir = path.resolve("tests/perf/balance/sengoku-run-20261111");
+const dir = path.resolve(
+  process.argv[2] ?? "tests/perf/balance/sengoku-run-20261111",
+);
+const sourceCommit = process.argv[3] ?? "working-tree";
 fs.mkdirSync(dir, { recursive: true });
+const mapManifestSha256 = createHash("sha256")
+  .update(fs.readFileSync("resources/maps/sengoku/manifest.json"))
+  .digest("hex");
 const runs = [];
 async function worker(difficulty) {
   for (let i = 1; i <= 8; i++) {
@@ -84,7 +91,8 @@ async function worker(difficulty) {
       path.join(dir, "results.json"),
       JSON.stringify(
         {
-          sourceCommit: "5cfd8a39950a2a2160ffdeec61228f766b2b6f5f",
+          sourceCommit,
+          mapManifestSha256,
           ticks: 6000,
           bots: 400,
           runs,

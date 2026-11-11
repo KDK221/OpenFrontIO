@@ -125,3 +125,20 @@ it("localizes the former Samguk cities as tribes and the new northern outposts",
     scenarioDisplayName("BalhaeOutpost", PlayerType.Nation, GameMapType.Samguk),
   ).toBe("북동 변경성");
 });
+
+it("localizes relocated Sengoku city names and preserves human names", () => {
+  state.lang = ko;
+  expect(scenarioDisplayName("Gifu", PlayerType.Bot, GameMapType.Sengoku)).toBe(
+    "기후",
+  );
+  expect(
+    scenarioDisplayName("Gifu", PlayerType.Human, GameMapType.Sengoku),
+  ).toBe("Gifu");
+  expect(
+    scenarioDisplayName(
+      "EzoEastOutpost",
+      PlayerType.Nation,
+      GameMapType.Sengoku,
+    ),
+  ).toBe("에조 동부 변경성");
+});

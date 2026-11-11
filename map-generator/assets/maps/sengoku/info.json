@@ -6,240 +6,249 @@
   "translation_key": "map.sengoku",
   "categories": ["featured", "asia", "new"],
   "featured_rank": 2,
-  "location": { "lat": 36.5, "lon": 138.5 },
+  "location": {
+    "lat": 36.5,
+    "lon": 138.5
+  },
   "author": "Aotumuri (base map), KDK221",
   "special_team_count": 4,
   "nations": [
     {
       "coordinates": [1289, 1277],
-      "name": "Kiyosu",
-      "flag": "Oda"
-    },
-    {
-      "coordinates": [1280, 1249],
-      "name": "Gifu",
-      "flag": "Oda"
+      "flag": "Oda",
+      "name": "Kiyosu"
     },
     {
       "coordinates": [1321, 1307],
-      "name": "Okazaki",
-      "flag": "Matsudaira"
+      "flag": "Matsudaira",
+      "name": "Okazaki"
     },
     {
       "coordinates": [1442, 1305],
-      "name": "Sunpu",
-      "flag": "Imagawa"
+      "flag": "Imagawa",
+      "name": "Sunpu"
     },
     {
       "coordinates": [1461, 1221],
-      "name": "Kofu",
-      "flag": "Takeda"
+      "flag": "Takeda",
+      "name": "Kofu"
     },
     {
       "coordinates": [1415, 1175],
-      "name": "Suwa",
-      "flag": "Takeda"
+      "flag": "Takeda",
+      "name": "Suwa"
     },
     {
       "coordinates": [1386, 1238],
-      "name": "Iida",
-      "flag": "Takeda"
+      "flag": "Takeda",
+      "name": "Iida"
     },
     {
       "coordinates": [1519, 1271],
-      "name": "Odawara",
-      "flag": "Hojo"
+      "flag": "Hojo",
+      "name": "Odawara"
     },
     {
       "coordinates": [1552, 1190],
-      "name": "Kawagoe",
-      "flag": "Hojo"
+      "flag": "Hojo",
+      "name": "Kawagoe"
     },
     {
       "coordinates": [1579, 1218],
-      "name": "Edo",
-      "flag": "Hojo"
+      "flag": "Hojo",
+      "name": "Edo"
     },
     {
       "coordinates": [1429, 1047],
-      "name": "Kasugayama",
-      "flag": "Uesugi"
+      "flag": "Uesugi",
+      "name": "Kasugayama"
     },
     {
       "coordinates": [1651, 1134],
-      "name": "Mito",
-      "flag": "Satake"
+      "flag": "Satake",
+      "name": "Mito"
     },
     {
       "coordinates": [1592, 1113],
-      "name": "Utsunomiya",
-      "flag": "Utsunomiya"
+      "flag": "Utsunomiya",
+      "name": "Utsunomiya"
     },
     {
       "coordinates": [1591, 1301],
-      "name": "Tateyama",
-      "flag": "Satomi"
+      "flag": "Satomi",
+      "name": "Tateyama"
     },
     {
       "coordinates": [1597, 1000],
-      "name": "Aizu",
-      "flag": "Ashina"
+      "flag": "Ashina",
+      "name": "Aizu"
     },
     {
       "coordinates": [1615, 948],
-      "name": "Yonezawa",
-      "flag": "Date"
+      "flag": "Date",
+      "name": "Yonezawa"
     },
     {
       "coordinates": [1637, 908],
-      "name": "Yamagata",
-      "flag": "Mogami"
+      "flag": "Mogami",
+      "name": "Yamagata"
     },
     {
       "coordinates": [1727, 651],
-      "name": "Sannohe",
-      "flag": "Nanbu"
+      "flag": "Nanbu",
+      "name": "Sannohe"
     },
     {
       "coordinates": [1614, 730],
-      "name": "Akita",
-      "flag": "Ando"
+      "flag": "Ando",
+      "name": "Akita"
     },
     {
       "coordinates": [1650, 623],
-      "name": "Hirosaki",
-      "flag": "Tsugaru"
+      "flag": "Tsugaru",
+      "name": "Hirosaki"
     },
     {
       "coordinates": [1615, 523],
-      "name": "Matsumae",
-      "flag": "Kakizaki"
+      "flag": "Kakizaki",
+      "name": "Matsumae"
     },
     {
       "coordinates": [1270, 1112],
-      "name": "Kanazawa",
-      "flag": "Ikko"
+      "flag": "Ikko",
+      "name": "Kanazawa"
     },
     {
       "coordinates": [1301, 1054],
-      "name": "Nanao",
-      "flag": "Hatakeyama"
+      "flag": "Hatakeyama",
+      "name": "Nanao"
     },
     {
       "coordinates": [1234, 1181],
-      "name": "Ichijodani",
-      "flag": "Asakura"
+      "flag": "Asakura",
+      "name": "Ichijodani"
     },
     {
       "coordinates": [1224, 1253],
-      "name": "Odani",
-      "flag": "Azai"
+      "flag": "Azai",
+      "name": "Odani"
     },
     {
       "coordinates": [1211, 1286],
-      "name": "Kannonji",
-      "flag": "Rokkaku"
+      "flag": "Rokkaku",
+      "name": "Kannonji"
     },
     {
       "coordinates": [1181, 1300],
-      "name": "Kyoto",
-      "flag": "Ashikaga"
+      "flag": "Ashikaga",
+      "name": "Kyoto"
     },
     {
       "coordinates": [1172, 1347],
-      "name": "Shigisan",
-      "flag": "Matsunaga"
+      "flag": "Matsunaga",
+      "name": "Shigisan"
     },
     {
       "coordinates": [1152, 1353],
-      "name": "Sakai",
-      "flag": "Miyoshi"
+      "flag": "Miyoshi",
+      "name": "Sakai"
     },
     {
       "coordinates": [1139, 1277],
-      "name": "Yakami",
-      "flag": "Hatano"
+      "flag": "Hatano",
+      "name": "Yakami"
     },
     {
       "coordinates": [1103, 1325],
-      "name": "Miki",
-      "flag": "Bessho"
+      "flag": "Bessho",
+      "name": "Miki"
     },
     {
       "coordinates": [996, 1342],
-      "name": "Okayama",
-      "flag": "Ukita"
+      "flag": "Ukita",
+      "name": "Okayama"
     },
     {
       "coordinates": [918, 1256],
-      "name": "Gassantoda",
-      "flag": "Amago"
+      "flag": "Amago",
+      "name": "Gassantoda"
     },
     {
       "coordinates": [873, 1345],
-      "name": "Koriyama",
-      "flag": "Mori"
+      "flag": "Mori",
+      "name": "Koriyama"
     },
     {
       "coordinates": [751, 1400],
-      "name": "Yamaguchi",
-      "flag": "Ouchi"
+      "flag": "Ouchi",
+      "name": "Yamaguchi"
     },
     {
       "coordinates": [1059, 1414],
-      "name": "Tokushima",
-      "flag": "Miyoshi"
+      "flag": "Miyoshi",
+      "name": "Tokushima"
     },
     {
       "coordinates": [1009, 1380],
-      "name": "Takamatsu",
-      "flag": "Sogo"
+      "flag": "Sogo",
+      "name": "Takamatsu"
     },
     {
       "coordinates": [881, 1441],
-      "name": "Yuzuki",
-      "flag": "Kono"
+      "flag": "Kono",
+      "name": "Yuzuki"
     },
     {
       "coordinates": [967, 1473],
-      "name": "Oko",
-      "flag": "Chosokabe"
+      "flag": "Chosokabe",
+      "name": "Oko"
     },
     {
       "coordinates": [765, 1514],
-      "name": "Funai",
-      "flag": "Otomo"
+      "flag": "Otomo",
+      "name": "Funai"
     },
     {
       "coordinates": [644, 1472],
-      "name": "Hakata",
-      "flag": "Otomo"
+      "flag": "Otomo",
+      "name": "Hakata"
     },
     {
       "coordinates": [634, 1513],
-      "name": "Saga",
-      "flag": "Ryuzoji"
+      "flag": "Ryuzoji",
+      "name": "Saga"
     },
     {
       "coordinates": [673, 1495],
-      "name": "Akizuki",
-      "flag": "Akizuki"
+      "flag": "Akizuki",
+      "name": "Akizuki"
     },
     {
       "coordinates": [675, 1567],
-      "name": "Kumamoto",
-      "flag": "Sagara"
+      "flag": "Sagara",
+      "name": "Kumamoto"
     },
     {
       "coordinates": [746, 1675],
-      "name": "Miyazaki",
-      "flag": "Ito"
+      "flag": "Ito",
+      "name": "Miyazaki"
     },
     {
       "coordinates": [660, 1712],
-      "name": "Kagoshima",
-      "flag": "Shimazu"
+      "flag": "Shimazu",
+      "name": "Kagoshima"
+    },
+    {
+      "name": "EzoEastOutpost",
+      "flag": "Kakizaki",
+      "coordinates": [1930, 210]
     }
   ],
-  "themes": ["sengoku"]
+  "themes": ["sengoku"],
+  "custom_tribes": [
+    {
+      "name": "Gifu",
+      "coordinates": [1280, 1249]
+    }
+  ]
 }

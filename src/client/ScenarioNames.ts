@@ -12,8 +12,8 @@ export function scenarioDisplayName(
   if (
     type === PlayerType.Nation ||
     (type === PlayerType.Bot &&
-      map === GameMapType.Samguk &&
-      (name === "Sabeol" || name === "Ara"))
+      ((map === GameMapType.Samguk && (name === "Sabeol" || name === "Ara")) ||
+        (map === GameMapType.Sengoku && name === "Gifu")))
   ) {
     const key = `capital.${name}`;
     const localized = translateText(key);

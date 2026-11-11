@@ -1999,6 +1999,7 @@ export const maps: readonly MapInfo[] = [
     featuredRank: 2,
     specialTeamCount: 4,
     themes: ["sengoku"],
+    customTribes: [{ name: "Gifu", coordinates: [1280, 1249] }],
     author: "Aotumuri (base map), KDK221",
     location: { lat: 36.5, lon: 138.5 },
   },

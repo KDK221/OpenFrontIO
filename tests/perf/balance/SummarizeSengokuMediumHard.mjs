@@ -1,5 +1,5 @@
 import fs from "node:fs";
-const dir = "tests/perf/balance/sengoku-run-20261111";
+const dir = process.argv[2] ?? "tests/perf/balance/sengoku-run-20261111";
 const r = JSON.parse(fs.readFileSync(dir + "/results.json", "utf8"));
 const goodSeeds = [...new Set(r.runs.map((x) => x.seed))].filter((s) =>
   ["medium", "hard"].every((d) =>
@@ -17,6 +17,7 @@ const median = (a) => {
 };
 const summary = {
   sourceCommit: r.sourceCommit,
+  mapManifestSha256: r.mapManifestSha256,
   ticks: r.ticks,
   pairedSeeds: goodSeeds,
   attempted: r.runs.length,

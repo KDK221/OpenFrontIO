@@ -1,0 +1,1125 @@
+{
+  "baseCommit": "1136ac67f9c33de5135c76602f1bac69044b75c6",
+  "mapManifestSha256": "9b994d8964dbedffa02d764f428366b9a99dc7693351001393667301447d8163",
+  "pairedSeeds": [
+    "balance01",
+    "balance02",
+    "balance03",
+    "balance04",
+    "balance05",
+    "balance06",
+    "balance07",
+    "balance08"
+  ],
+  "excluded": [],
+  "difficulties": {
+    "medium": {
+      "n": 8,
+      "rows": [
+        {
+          "flag": "Oda",
+          "name": "Kiyosu",
+          "before": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 1
+          },
+          "after": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Matsudaira",
+          "name": "Okazaki",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Imagawa",
+          "name": "Sunpu",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Takeda",
+          "name": "Kofu",
+          "before": {
+            "alive": 5,
+            "medianLand": 28854.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Hojo",
+          "name": "Odawara",
+          "before": {
+            "alive": 4,
+            "medianLand": 91.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Uesugi",
+          "name": "Kasugayama",
+          "before": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Satake",
+          "name": "Mito",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Utsunomiya",
+          "name": "Utsunomiya",
+          "before": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 1
+          }
+        },
+        {
+          "flag": "Satomi",
+          "name": "Tateyama",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ashina",
+          "name": "Aizu",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 22.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Date",
+          "name": "Yonezawa",
+          "before": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 1
+          }
+        },
+        {
+          "flag": "Mogami",
+          "name": "Yamagata",
+          "before": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Nanbu",
+          "name": "Sannohe",
+          "before": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ando",
+          "name": "Akita",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Tsugaru",
+          "name": "Hirosaki",
+          "before": {
+            "alive": 5,
+            "medianLand": 598.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 1
+          }
+        },
+        {
+          "flag": "Kakizaki",
+          "name": "Matsumae",
+          "before": {
+            "alive": 8,
+            "medianLand": 132265.0,
+            "firstPlace": 7
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 1185.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ikko",
+          "name": "Kanazawa",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Hatakeyama",
+          "name": "Nanao",
+          "before": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Asakura",
+          "name": "Ichijodani",
+          "before": {
+            "alive": 0,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 274.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Azai",
+          "name": "Odani",
+          "before": {
+            "alive": 0,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Rokkaku",
+          "name": "Kannonji",
+          "before": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ashikaga",
+          "name": "Kyoto",
+          "before": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Matsunaga",
+          "name": "Shigisan",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 16.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Miyoshi",
+          "name": "Sakai",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Hatano",
+          "name": "Yakami",
+          "before": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 726.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Bessho",
+          "name": "Miki",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 671.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ukita",
+          "name": "Okayama",
+          "before": {
+            "alive": 4,
+            "medianLand": 6541.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Amago",
+          "name": "Gassantoda",
+          "before": {
+            "alive": 5,
+            "medianLand": 381.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 548.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Mori",
+          "name": "Koriyama",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 16.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ouchi",
+          "name": "Yamaguchi",
+          "before": {
+            "alive": 5,
+            "medianLand": 45.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 3105.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Sogo",
+          "name": "Takamatsu",
+          "before": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 16.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Kono",
+          "name": "Yuzuki",
+          "before": {
+            "alive": 5,
+            "medianLand": 4038.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Chosokabe",
+          "name": "Oko",
+          "before": {
+            "alive": 5,
+            "medianLand": 10169.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 138.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Otomo",
+          "name": "Funai",
+          "before": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ryuzoji",
+          "name": "Saga",
+          "before": {
+            "alive": 6,
+            "medianLand": 3251.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 1273.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Akizuki",
+          "name": "Akizuki",
+          "before": {
+            "alive": 2,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 341.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Sagara",
+          "name": "Kumamoto",
+          "before": {
+            "alive": 5,
+            "medianLand": 8509.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 2249.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ito",
+          "name": "Miyazaki",
+          "before": {
+            "alive": 6,
+            "medianLand": 10319.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 3937.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Shimazu",
+          "name": "Kagoshima",
+          "before": {
+            "alive": 6,
+            "medianLand": 2768.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 7643.0,
+            "firstPlace": 0
+          }
+        }
+      ],
+      "medianLargestCityBefore": 132265.0,
+      "medianLargestCityAfter": 139475.0,
+      "newOutpostFirstPlaces": 4
+    },
+    "hard": {
+      "n": 8,
+      "rows": [
+        {
+          "flag": "Oda",
+          "name": "Kiyosu",
+          "before": {
+            "alive": 6,
+            "medianLand": 4846.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 8,
+            "medianLand": 3829.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Matsudaira",
+          "name": "Okazaki",
+          "before": {
+            "alive": 7,
+            "medianLand": 6411.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 1504.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Imagawa",
+          "name": "Sunpu",
+          "before": {
+            "alive": 7,
+            "medianLand": 5365.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 4862.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Takeda",
+          "name": "Kofu",
+          "before": {
+            "alive": 4,
+            "medianLand": 2947.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 5548.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Hojo",
+          "name": "Odawara",
+          "before": {
+            "alive": 7,
+            "medianLand": 8882.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 6656.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Uesugi",
+          "name": "Kasugayama",
+          "before": {
+            "alive": 6,
+            "medianLand": 4609.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 8,
+            "medianLand": 7215.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Satake",
+          "name": "Mito",
+          "before": {
+            "alive": 5,
+            "medianLand": 1453.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 836.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Utsunomiya",
+          "name": "Utsunomiya",
+          "before": {
+            "alive": 7,
+            "medianLand": 7049.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 8965.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Satomi",
+          "name": "Tateyama",
+          "before": {
+            "alive": 6,
+            "medianLand": 5093.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 3056.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ashina",
+          "name": "Aizu",
+          "before": {
+            "alive": 6,
+            "medianLand": 6674.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 863.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Date",
+          "name": "Yonezawa",
+          "before": {
+            "alive": 7,
+            "medianLand": 6948.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 11947.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Mogami",
+          "name": "Yamagata",
+          "before": {
+            "alive": 6,
+            "medianLand": 9413.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 22386.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Nanbu",
+          "name": "Sannohe",
+          "before": {
+            "alive": 4,
+            "medianLand": 726.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ando",
+          "name": "Akita",
+          "before": {
+            "alive": 5,
+            "medianLand": 1931.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 18464.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Tsugaru",
+          "name": "Hirosaki",
+          "before": {
+            "alive": 5,
+            "medianLand": 893.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 3,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Kakizaki",
+          "name": "Matsumae",
+          "before": {
+            "alive": 8,
+            "medianLand": 148652.0,
+            "firstPlace": 8
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 11520.0,
+            "firstPlace": 1
+          }
+        },
+        {
+          "flag": "Ikko",
+          "name": "Kanazawa",
+          "before": {
+            "alive": 7,
+            "medianLand": 3892.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 6884.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Hatakeyama",
+          "name": "Nanao",
+          "before": {
+            "alive": 5,
+            "medianLand": 2595.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 1529.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Asakura",
+          "name": "Ichijodani",
+          "before": {
+            "alive": 5,
+            "medianLand": 5251.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 8,
+            "medianLand": 6540.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Azai",
+          "name": "Odani",
+          "before": {
+            "alive": 7,
+            "medianLand": 3673.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 4443.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Rokkaku",
+          "name": "Kannonji",
+          "before": {
+            "alive": 6,
+            "medianLand": 2016.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 2099.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ashikaga",
+          "name": "Kyoto",
+          "before": {
+            "alive": 1,
+            "medianLand": 0.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 1607.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Matsunaga",
+          "name": "Shigisan",
+          "before": {
+            "alive": 7,
+            "medianLand": 6682.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 4049.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Miyoshi",
+          "name": "Sakai",
+          "before": {
+            "alive": 7,
+            "medianLand": 5687.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 8,
+            "medianLand": 11977.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Hatano",
+          "name": "Yakami",
+          "before": {
+            "alive": 6,
+            "medianLand": 1795.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 3395.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Bessho",
+          "name": "Miki",
+          "before": {
+            "alive": 4,
+            "medianLand": 449.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 2557.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ukita",
+          "name": "Okayama",
+          "before": {
+            "alive": 8,
+            "medianLand": 6318.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 12895.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Amago",
+          "name": "Gassantoda",
+          "before": {
+            "alive": 8,
+            "medianLand": 16157.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 4155.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Mori",
+          "name": "Koriyama",
+          "before": {
+            "alive": 5,
+            "medianLand": 1029.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 8884.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ouchi",
+          "name": "Yamaguchi",
+          "before": {
+            "alive": 6,
+            "medianLand": 2514.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 3138.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Sogo",
+          "name": "Takamatsu",
+          "before": {
+            "alive": 4,
+            "medianLand": 2511.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 3386.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Kono",
+          "name": "Yuzuki",
+          "before": {
+            "alive": 8,
+            "medianLand": 5418.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 6,
+            "medianLand": 3144.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Chosokabe",
+          "name": "Oko",
+          "before": {
+            "alive": 7,
+            "medianLand": 5458.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 4,
+            "medianLand": 2645.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Otomo",
+          "name": "Funai",
+          "before": {
+            "alive": 7,
+            "medianLand": 8785.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 2502.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ryuzoji",
+          "name": "Saga",
+          "before": {
+            "alive": 8,
+            "medianLand": 12145.0,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 8,
+            "medianLand": 11289.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Akizuki",
+          "name": "Akizuki",
+          "before": {
+            "alive": 4,
+            "medianLand": 2310.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 5,
+            "medianLand": 581.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Sagara",
+          "name": "Kumamoto",
+          "before": {
+            "alive": 7,
+            "medianLand": 4594.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 5084.0,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Ito",
+          "name": "Miyazaki",
+          "before": {
+            "alive": 6,
+            "medianLand": 3504.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 6526.5,
+            "firstPlace": 0
+          }
+        },
+        {
+          "flag": "Shimazu",
+          "name": "Kagoshima",
+          "before": {
+            "alive": 6,
+            "medianLand": 6731.5,
+            "firstPlace": 0
+          },
+          "after": {
+            "alive": 7,
+            "medianLand": 5426.5,
+            "firstPlace": 0
+          }
+        }
+      ],
+      "medianLargestCityBefore": 148652.0,
+      "medianLargestCityAfter": 120952.5,
+      "newOutpostFirstPlaces": 7
+    }
+  }
+}
