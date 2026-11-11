@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#fff"><circle cx="44" cy="14" r="9"/><path d="M33 9l-6-4M34 17l-8 1M38 24l-5 6M50 26l2 6M55 12l6-3" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><path d="M6 50h40v5H6z"/><path d="M10 46h30l3 4H7z"/><path d="M22 46L42 22l3 2-18 24z"/><path d="M12 46l6-14h4l-4 14z"/><circle cx="12" cy="57" r="4"/><circle cx="40" cy="57" r="4"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>투석공격</title>
+  <path d="M7 13 27 25M5 25 23 34M10 38 22 42" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <path d="m35 17 14 2 9 12-4 14-15 6-13-9-1-14Z" fill="#fff"/>
+  <path d="m35 23 9 3 6 8M31 31l-1 7 9 7" stroke="#53606c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m15 54 9-4M50 55l6 3M60 45l2 3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+</svg>
