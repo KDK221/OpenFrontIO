@@ -339,7 +339,7 @@ export class GameImpl implements Game {
         hash ^= hash >>> 16;
         hash = Math.imul(hash, 0x45d9f3b);
         hash ^= hash >>> 16;
-        if ((hash >>> 0) % 100 < 8) next.add(neighbor);
+        if ((hash >>> 0) % 100 < 16) next.add(neighbor);
       }
     }
     if (next.size === 0) return;
