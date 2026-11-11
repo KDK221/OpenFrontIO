@@ -213,6 +213,10 @@
     "warship_shift_hint": "Hold Shift and drag to select multiple warships at once"
   },
   "capital": {
+    "ChinaFarWestOutpost": "Far Western Outpost",
+    "ChinaFarNorthwestOutpost": "Far Northwestern Outpost",
+    "ChinaNorthernFrontierOutpost": "Northern Frontier Outpost",
+    "ChinaLiaodongOutpost": "Liaodong Outpost",
     "ChinaNorthwestWestOutpost": "Northwest Western Outpost",
     "ChinaNorthwestNorthOutpost": "Northwest Northern Outpost",
     "ChinaNorthwestSouthOutpost": "Northwest Southern Outpost",

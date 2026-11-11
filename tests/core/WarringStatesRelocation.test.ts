@@ -26,6 +26,10 @@ const tribes = [
   { name: "Hongnong", coordinates: [1490, 1218] },
   { name: "Jiangling", coordinates: [1588, 1398] },
   { name: "Lujiang", coordinates: [1740, 1328] },
+  { name: "Jiangxia", coordinates: [1680, 1400] },
+  { name: "Nanpi", coordinates: [1680, 1000] },
+  { name: "Jinyang", coordinates: [1526, 1048] },
+  { name: "Shangyong", coordinates: [1460, 1320] },
 ];
 
 describe("WarringStates western city redistribution", () => {
@@ -35,6 +39,10 @@ describe("WarringStates western city redistribution", () => {
     expect(
       manifest.nations.some((n: { name: string }) =>
         [
+          "Jiangxia",
+          "Nanpi",
+          "Jinyang",
+          "Shangyong",
           "Chenliu",
           "Runan",
           "Pingyuan",
@@ -137,7 +145,7 @@ describe("WarringStates western city redistribution", () => {
 
   for (const size of [GameMapSize.Normal, GameMapSize.Compact]) {
     for (const difficulty of [Difficulty.Medium, Difficulty.Hard]) {
-      test(`spawns all six original sites as ordinary bots and all six western cities as nations (${size}, ${difficulty})`, async () => {
+      test(`spawns all ten original sites as ordinary bots and all ten western cities as nations (${size}, ${difficulty})`, async () => {
         const runner = await createGameRunner(
           {
             gameID: "balance01",
@@ -180,6 +188,10 @@ describe("WarringStates western city redistribution", () => {
           );
         }
         for (const name of [
+          "ChinaFarWestOutpost",
+          "ChinaFarNorthwestOutpost",
+          "ChinaNorthernFrontierOutpost",
+          "ChinaLiaodongOutpost",
           "ChinaNorthwestWestOutpost",
           "ChinaNorthwestNorthOutpost",
           "ChinaNorthwestSouthOutpost",

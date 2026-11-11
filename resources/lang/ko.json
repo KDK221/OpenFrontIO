@@ -2738,6 +2738,10 @@
     "capital": "수도: {name}"
   },
   "capital": {
+    "ChinaFarWestOutpost": "서북 서단 변경성",
+    "ChinaFarNorthwestOutpost": "서북 북단 변경성",
+    "ChinaNorthernFrontierOutpost": "북방 변경성",
+    "ChinaLiaodongOutpost": "요동 변경성",
     "ChinaNorthwestWestOutpost": "서북 서부 변경성",
     "ChinaNorthwestNorthOutpost": "서북 북부 변경성",
     "ChinaNorthwestSouthOutpost": "서북 남부 변경성",

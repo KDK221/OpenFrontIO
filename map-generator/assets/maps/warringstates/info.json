@@ -118,11 +118,6 @@
       "coordinates": [1555, 1745]
     },
     {
-      "flag": "LiuBei",
-      "name": "Jiangxia",
-      "coordinates": [1680, 1400]
-    },
-    {
       "flag": "SunQuan",
       "name": "Wu",
       "coordinates": [1896, 1274]
@@ -131,11 +126,6 @@
       "flag": "SunQuan",
       "name": "Jianan",
       "coordinates": [1914, 1524]
-    },
-    {
-      "flag": "YuanShao",
-      "name": "Nanpi",
-      "coordinates": [1680, 1000]
     },
     {
       "flag": "DongZhuo",
@@ -158,11 +148,6 @@
       "coordinates": [1242, 1704]
     },
     {
-      "flag": "ZhangLu",
-      "name": "Shangyong",
-      "coordinates": [1460, 1320]
-    },
-    {
       "flag": "MaTeng",
       "name": "Tianshui",
       "coordinates": [1306, 1245]
@@ -176,11 +161,6 @@
       "flag": "GongsunZan",
       "name": "Ji",
       "coordinates": [1637, 924]
-    },
-    {
-      "flag": "ZhangYang",
-      "name": "Jinyang",
-      "coordinates": [1526, 1048]
     },
     {
       "flag": "ShiXie",
@@ -216,6 +196,26 @@
       "name": "ChinaSouthwestSouthOutpost",
       "flag": "LiuZhang",
       "coordinates": [1390, 1634]
+    },
+    {
+      "name": "ChinaFarWestOutpost",
+      "flag": "MaTeng",
+      "coordinates": [530, 1000]
+    },
+    {
+      "name": "ChinaFarNorthwestOutpost",
+      "flag": "HanSui",
+      "coordinates": [734, 726]
+    },
+    {
+      "name": "ChinaNorthernFrontierOutpost",
+      "flag": "GongsunZan",
+      "coordinates": [1480, 820]
+    },
+    {
+      "name": "ChinaLiaodongOutpost",
+      "flag": "GongsunDu",
+      "coordinates": [1990, 678]
     }
   ],
   "themes": ["three_kingdoms"],
@@ -243,6 +243,22 @@
     {
       "name": "Lujiang",
       "coordinates": [1740, 1328]
+    },
+    {
+      "name": "Jiangxia",
+      "coordinates": [1680, 1400]
+    },
+    {
+      "name": "Nanpi",
+      "coordinates": [1680, 1000]
+    },
+    {
+      "name": "Jinyang",
+      "coordinates": [1526, 1048]
+    },
+    {
+      "name": "Shangyong",
+      "coordinates": [1460, 1320]
     }
   ]
 }

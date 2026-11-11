@@ -104,3 +104,20 @@ seeds across both versions and difficulties. The final map manifest SHA-256 is
 recorded in the results and comparison. AI-only ten-minute outcomes are not human
 win rates or full-match wins; the same seeds were used to assess the adjustment,
 so this is not an independent holdout evaluation.
+
+### China second redistribution: target current leaders
+
+Four more extra Nation cities are moved: Jiangxia and Nanpi to two additional
+northwestern outposts; Jinyang to a northern outpost near Gongsun Zan's expansion
+space; Shangyong to an outpost near Gongsun Du in Liaodong. The four original sites
+become ordinary fixed tribes. The total relocated sites are now ten, preserving
+21 selectable capitals, 41 Nation AI cities and 400 tribes. Exact coordinates
+are in `warringstates-relocation-v2-plan-2026-11-11.json`.
+
+```sh
+node tests/perf/balance/RunWarringStatesMediumHard.mjs tests/perf/balance/warringstates-relocated-v2-run-20261111 SOURCE_COMMIT_PLUS_PATCH
+python3 tests/perf/balance/CompareWarringStatesRelocationV2.py
+```
+
+V2 compares against the previous six-city placement, not the original map. All
+AI benchmark limitations and the common-paired-seed exclusion rule still apply.

@@ -146,6 +146,10 @@ it("localizes relocated Sengoku city names and preserves human names", () => {
 it("localizes former Chinese cities as tribes and western outposts", () => {
   state.lang = ko;
   for (const name of [
+    "Jiangxia",
+    "Nanpi",
+    "Jinyang",
+    "Shangyong",
     "Chenliu",
     "Runan",
     "Pingyuan",

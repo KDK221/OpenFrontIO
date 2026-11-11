@@ -16,6 +16,10 @@ export function scenarioDisplayName(
         (map === GameMapType.Sengoku && name === "Gifu") ||
         (map === GameMapType.WarringStates &&
           [
+            "Jiangxia",
+            "Nanpi",
+            "Jinyang",
+            "Shangyong",
             "Chenliu",
             "Runan",
             "Pingyuan",

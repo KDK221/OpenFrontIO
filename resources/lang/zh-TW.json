@@ -2507,6 +2507,10 @@
     }
   },
   "capital": {
+    "ChinaFarWestOutpost": "西北西端邊城",
+    "ChinaFarNorthwestOutpost": "西北北端邊城",
+    "ChinaNorthernFrontierOutpost": "北方邊城",
+    "ChinaLiaodongOutpost": "遼東邊城",
     "ChinaNorthwestWestOutpost": "西北西部邊城",
     "ChinaNorthwestNorthOutpost": "西北北部邊城",
     "ChinaNorthwestSouthOutpost": "西北南部邊城",
