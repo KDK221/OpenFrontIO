@@ -105,3 +105,23 @@ it("localizes Korean and Japanese regional forces and full-name Chinese commande
     ),
   ).toBe("孙权军");
 });
+
+it("localizes the former Samguk cities as tribes and the new northern outposts", () => {
+  state.lang = ko;
+  expect(
+    scenarioDisplayName("Sabeol", PlayerType.Bot, GameMapType.Samguk),
+  ).toBe("사벌");
+  expect(scenarioDisplayName("Ara", PlayerType.Bot, GameMapType.Samguk)).toBe(
+    "아라",
+  );
+  expect(
+    scenarioDisplayName(
+      "NorthernWeiOutpost",
+      PlayerType.Nation,
+      GameMapType.Samguk,
+    ),
+  ).toBe("북서 변경성");
+  expect(
+    scenarioDisplayName("BalhaeOutpost", PlayerType.Nation, GameMapType.Samguk),
+  ).toBe("북동 변경성");
+});

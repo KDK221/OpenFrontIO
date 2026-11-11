@@ -37,7 +37,7 @@ describe("Korean scenario faction picker", () => {
   it("opens passable northern starts at every map resolution", () => {
     for (const id of ["NorthernWei", "Balhae"]) {
       const cities = manifest.nations.filter((n) => n.flag === id);
-      expect(cities).toHaveLength(3);
+      expect(cities).toHaveLength(4);
       for (const city of cities) {
         for (const [file, width, scale] of [
           ["map.bin", 1088, 1],

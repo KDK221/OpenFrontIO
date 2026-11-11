@@ -8,7 +8,13 @@ export function scenarioDisplayName(
   map: GameMapType,
 ): string {
   if (type === PlayerType.Human) return name;
-  if (type === PlayerType.Nation) {
+  // Positioned former cities remain ordinary tribes, with their city names.
+  if (
+    type === PlayerType.Nation ||
+    (type === PlayerType.Bot &&
+      map === GameMapType.Samguk &&
+      (name === "Sabeol" || name === "Ara"))
+  ) {
     const key = `capital.${name}`;
     const localized = translateText(key);
     return localized === key ? name : localized;

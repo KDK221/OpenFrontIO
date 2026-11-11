@@ -1963,6 +1963,10 @@ export const maps: readonly MapInfo[] = [
     featuredRank: 1,
     specialTeamCount: 3,
     themes: ["samguk"],
+    customTribes: [
+      { name: "Sabeol", coordinates: [669, 1470] },
+      { name: "Ara", coordinates: [713, 1701] },
+    ],
     author: "crunchybbb (base map), KDK221",
     location: { lat: 37.5, lon: 127.5 },
   },

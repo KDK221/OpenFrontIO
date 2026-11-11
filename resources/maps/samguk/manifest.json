@@ -96,11 +96,6 @@
       "name": "Geumseong"
     },
     {
-      "coordinates": [669, 1470],
-      "flag": "Silla",
-      "name": "Sabeol"
-    },
-    {
       "coordinates": [769, 1438],
       "flag": "Silla",
       "name": "Andong"
@@ -129,11 +124,6 @@
       "coordinates": [687, 1608],
       "flag": "Gaya",
       "name": "Goryeong"
-    },
-    {
-      "coordinates": [713, 1701],
-      "flag": "Gaya",
-      "name": "Ara"
     },
     {
       "coordinates": [697, 1761],
@@ -184,9 +174,29 @@
       "coordinates": [960, 230],
       "flag": "Balhae",
       "name": "BalhaeEast"
+    },
+    {
+      "coordinates": [104, 742],
+      "flag": "NorthernWei",
+      "name": "NorthernWeiOutpost"
+    },
+    {
+      "coordinates": [812, 586],
+      "flag": "Balhae",
+      "name": "BalhaeOutpost"
     }
   ],
   "special_team_count": 3,
   "themes": ["samguk"],
-  "translation_key": "map.samguk"
+  "translation_key": "map.samguk",
+  "custom_tribes": [
+    {
+      "name": "Sabeol",
+      "coordinates": [669, 1470]
+    },
+    {
+      "name": "Ara",
+      "coordinates": [713, 1701]
+    }
+  ]
 }
