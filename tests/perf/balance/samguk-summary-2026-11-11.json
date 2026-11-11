@@ -1,0 +1,476 @@
+{
+  "sourceCommit": "c24228ecaf54747517fd44729a9b863a4c8fd304",
+  "ticks": 6000,
+  "pairedSeeds": [
+    "balance01",
+    "balance02",
+    "balance04",
+    "balance05",
+    "balance06",
+    "balance07",
+    "balance08"
+  ],
+  "attempted": 16,
+  "excluded": [
+    {
+      "seed": "balance03",
+      "difficulty": "hard",
+      "missing": [
+        "Balhae"
+      ]
+    },
+    {
+      "seed": "balance03",
+      "difficulty": "medium",
+      "missing": [
+        "Balhae"
+      ]
+    }
+  ],
+  "difficulties": {
+    "medium": {
+      "actualDifficulties": [
+        "Medium"
+      ],
+      "rows": [
+        {
+          "flag": "Goguryeo",
+          "name": "Pyongyang",
+          "n": 7,
+          "alive5": 7,
+          "alive10": 7,
+          "medianLand5": 75359,
+          "medianLand10": 111225,
+          "topCityCount": 0
+        },
+        {
+          "flag": "Baekje",
+          "name": "Hanseong",
+          "n": 7,
+          "alive5": 7,
+          "alive10": 5,
+          "medianLand5": 66381,
+          "medianLand10": 36034,
+          "topCityCount": 1
+        },
+        {
+          "flag": "Silla",
+          "name": "Geumseong",
+          "n": 7,
+          "alive5": 6,
+          "alive10": 1,
+          "medianLand5": 18930,
+          "medianLand10": 0,
+          "topCityCount": 0
+        },
+        {
+          "flag": "Gaya",
+          "name": "Geumgwan",
+          "n": 7,
+          "alive5": 7,
+          "alive10": 6,
+          "medianLand5": 22140,
+          "medianLand10": 1089,
+          "topCityCount": 0
+        },
+        {
+          "flag": "Tamna",
+          "name": "Tamna",
+          "n": 7,
+          "alive5": 4,
+          "alive10": 3,
+          "medianLand5": 63,
+          "medianLand10": 0,
+          "topCityCount": 0
+        },
+        {
+          "flag": "Wa",
+          "name": "Tsukushi",
+          "n": 7,
+          "alive5": 7,
+          "alive10": 7,
+          "medianLand5": 32308,
+          "medianLand10": 33197,
+          "topCityCount": 0
+        },
+        {
+          "flag": "NorthernWei",
+          "name": "NorthernWeiFrontier",
+          "n": 7,
+          "alive5": 7,
+          "alive10": 7,
+          "medianLand5": 84434,
+          "medianLand10": 147608,
+          "topCityCount": 1
+        },
+        {
+          "flag": "Balhae",
+          "name": "BalhaeFrontier",
+          "n": 7,
+          "alive5": 7,
+          "alive10": 6,
+          "medianLand5": 73486,
+          "medianLand10": 111513,
+          "topCityCount": 0
+        }
+      ],
+      "leaders": [
+        {
+          "seed": "balance01",
+          "city": {
+            "name": "Gangneung",
+            "flag": "Goguryeo",
+            "land": 186936
+          }
+        },
+        {
+          "seed": "balance02",
+          "city": {
+            "name": "Hamhung",
+            "flag": "Goguryeo",
+            "land": 259168
+          }
+        },
+        {
+          "seed": "balance04",
+          "city": {
+            "name": "NorthernWeiFrontier",
+            "flag": "NorthernWei",
+            "land": 147608
+          }
+        },
+        {
+          "seed": "balance05",
+          "city": {
+            "name": "Jeonju",
+            "flag": "Baekje",
+            "land": 306656
+          }
+        },
+        {
+          "seed": "balance06",
+          "city": {
+            "name": "Wonsan",
+            "flag": "Goguryeo",
+            "land": 295582
+          }
+        },
+        {
+          "seed": "balance07",
+          "city": {
+            "name": "Wonsan",
+            "flag": "Goguryeo",
+            "land": 353210
+          }
+        },
+        {
+          "seed": "balance08",
+          "city": {
+            "name": "Hanseong",
+            "flag": "Baekje",
+            "land": 295706
+          }
+        }
+      ]
+    },
+    "hard": {
+      "actualDifficulties": [
+        "Hard"
+      ],
+      "rows": [
+        {
+          "flag": "Goguryeo",
+          "name": "Pyongyang",
+          "n": 7,
+          "alive5": 7,
+          "alive10": 7,
+          "medianLand5": 89990,
+          "medianLand10": 85579,
+          "topCityCount": 0
+        },
+        {
+          "flag": "Baekje",
+          "name": "Hanseong",
+          "n": 7,
+          "alive5": 7,
+          "alive10": 6,
+          "medianLand5": 36973,
+          "medianLand10": 40189,
+          "topCityCount": 0
+        },
+        {
+          "flag": "Silla",
+          "name": "Geumseong",
+          "n": 7,
+          "alive5": 7,
+          "alive10": 6,
+          "medianLand5": 21588,
+          "medianLand10": 29180,
+          "topCityCount": 0
+        },
+        {
+          "flag": "Gaya",
+          "name": "Geumgwan",
+          "n": 7,
+          "alive5": 5,
+          "alive10": 4,
+          "medianLand5": 14717,
+          "medianLand10": 808,
+          "topCityCount": 0
+        },
+        {
+          "flag": "Tamna",
+          "name": "Tamna",
+          "n": 7,
+          "alive5": 5,
+          "alive10": 5,
+          "medianLand5": 5534,
+          "medianLand10": 5886,
+          "topCityCount": 0
+        },
+        {
+          "flag": "Wa",
+          "name": "Tsukushi",
+          "n": 7,
+          "alive5": 7,
+          "alive10": 6,
+          "medianLand5": 35655,
+          "medianLand10": 33100,
+          "topCityCount": 0
+        },
+        {
+          "flag": "NorthernWei",
+          "name": "NorthernWeiFrontier",
+          "n": 7,
+          "alive5": 7,
+          "alive10": 7,
+          "medianLand5": 104043,
+          "medianLand10": 108011,
+          "topCityCount": 4
+        },
+        {
+          "flag": "Balhae",
+          "name": "BalhaeFrontier",
+          "n": 7,
+          "alive5": 6,
+          "alive10": 4,
+          "medianLand5": 26873,
+          "medianLand10": 40932,
+          "topCityCount": 0
+        }
+      ],
+      "leaders": [
+        {
+          "seed": "balance01",
+          "city": {
+            "name": "NorthernWeiFrontier",
+            "flag": "NorthernWei",
+            "land": 108011
+          }
+        },
+        {
+          "seed": "balance02",
+          "city": {
+            "name": "NorthernWeiFrontier",
+            "flag": "NorthernWei",
+            "land": 153144
+          }
+        },
+        {
+          "seed": "balance04",
+          "city": {
+            "name": "BalhaeWest",
+            "flag": "Balhae",
+            "land": 111183
+          }
+        },
+        {
+          "seed": "balance05",
+          "city": {
+            "name": "Hamhung",
+            "flag": "Goguryeo",
+            "land": 162182
+          }
+        },
+        {
+          "seed": "balance06",
+          "city": {
+            "name": "NorthernWeiEast",
+            "flag": "NorthernWei",
+            "land": 134063
+          }
+        },
+        {
+          "seed": "balance07",
+          "city": {
+            "name": "NorthernWeiFrontier",
+            "flag": "NorthernWei",
+            "land": 125951
+          }
+        },
+        {
+          "seed": "balance08",
+          "city": {
+            "name": "NorthernWeiFrontier",
+            "flag": "NorthernWei",
+            "land": 144527
+          }
+        }
+      ]
+    }
+  },
+  "geometry": [
+    {
+      "flag": "Goguryeo",
+      "capital": "Pyongyang",
+      "within200": 1,
+      "nearest": [
+        {
+          "name": "Hwangju",
+          "d": 82
+        },
+        {
+          "name": "Haeju",
+          "d": 209
+        },
+        {
+          "name": "Wonsan",
+          "d": 298
+        }
+      ]
+    },
+    {
+      "flag": "Baekje",
+      "capital": "Hanseong",
+      "within200": 1,
+      "nearest": [
+        {
+          "name": "Chungju",
+          "d": 183
+        },
+        {
+          "name": "Ungjin",
+          "d": 220
+        },
+        {
+          "name": "Sabi",
+          "d": 258
+        }
+      ]
+    },
+    {
+      "flag": "Silla",
+      "capital": "Geumseong",
+      "within200": 5,
+      "nearest": [
+        {
+          "name": "Ulsan",
+          "d": 65
+        },
+        {
+          "name": "Daegu",
+          "d": 109
+        },
+        {
+          "name": "Andong",
+          "d": 168
+        }
+      ]
+    },
+    {
+      "flag": "Gaya",
+      "capital": "Geumgwan",
+      "within200": 5,
+      "nearest": [
+        {
+          "name": "Goseong",
+          "d": 92
+        },
+        {
+          "name": "Ara",
+          "d": 107
+        },
+        {
+          "name": "Goryeong",
+          "d": 144
+        }
+      ]
+    },
+    {
+      "flag": "Tamna",
+      "capital": "Tamna",
+      "within200": 0,
+      "nearest": [
+        {
+          "name": "Naju",
+          "d": 322
+        },
+        {
+          "name": "Geumgwan",
+          "d": 404
+        },
+        {
+          "name": "Goseong",
+          "d": 433
+        }
+      ]
+    },
+    {
+      "flag": "Wa",
+      "capital": "Tsukushi",
+      "within200": 0,
+      "nearest": [
+        {
+          "name": "Tsushima",
+          "d": 239
+        },
+        {
+          "name": "Ulsan",
+          "d": 436
+        },
+        {
+          "name": "Goseong",
+          "d": 457
+        }
+      ]
+    },
+    {
+      "flag": "NorthernWei",
+      "capital": "NorthernWeiFrontier",
+      "within200": 2,
+      "nearest": [
+        {
+          "name": "NorthernWeiEast",
+          "d": 187
+        },
+        {
+          "name": "NorthernWeiWest",
+          "d": 194
+        },
+        {
+          "name": "Kanggye",
+          "d": 288
+        }
+      ]
+    },
+    {
+      "flag": "Balhae",
+      "capital": "BalhaeFrontier",
+      "within200": 1,
+      "nearest": [
+        {
+          "name": "BalhaeEast",
+          "d": 171
+        },
+        {
+          "name": "Chongjin",
+          "d": 206
+        },
+        {
+          "name": "BalhaeWest",
+          "d": 211
+        }
+      ]
+    }
+  ]
+}

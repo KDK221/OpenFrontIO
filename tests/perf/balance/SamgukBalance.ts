@@ -36,7 +36,7 @@ const config: GameStartInfo["config"] = {
   gameMapSize: GameMapSize.Normal,
   gameMode: GameMode.FFA,
   gameType: GameType.Singleplayer,
-  difficulty: difficulty === "medium" ? Difficulty.Medium : Difficulty.Easy,
+  difficulty: ({ easy: Difficulty.Easy, medium: Difficulty.Medium, hard: Difficulty.Hard } as Record<string, Difficulty>)[difficulty] ?? (() => { throw new Error("Unsupported difficulty: " + difficulty); })(),
   nations: "default",
   bots: 400,
   donateGold: false,
