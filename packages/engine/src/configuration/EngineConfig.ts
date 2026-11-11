@@ -142,12 +142,12 @@ export class EngineConfig extends Config {
   // In the historical scenarios fortresses hold a line by being hard to crack
   // rather than by covering more ground, so the range stays at OpenFront's 30.
   defensePostDefenseBonus(): number {
-    return 12;
+    return 6;
   }
 
   // How much slower an attack advances on a covered tile (OpenFront: 3).
   defensePostSpeedBonus(): number {
-    return 8;
+    return 4;
   }
 
   playerTeams(): TeamCountConfig {

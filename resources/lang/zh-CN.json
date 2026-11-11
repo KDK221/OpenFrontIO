@@ -813,6 +813,8 @@
     "hide": "隐藏"
   },
   "events_display": {
+    "plague_failed": "瘟疫未释放。请检查目标领土、金币和攻城营地冷却。未扣除费用。",
+    "plague_released": "☠️ 已向{name}释放瘟疫！持续{seconds}秒削减兵力。攻城营地正在冷却。",
     "retreating": "正在撤退",
     "alliance_request_status": "{name} {status}你的联盟请求",
     "alliance_accepted": "已接受",

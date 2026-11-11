@@ -33,16 +33,16 @@ function attack(defenderHasDefensePost: boolean) {
 }
 
 describe("fortress (defense post) tuning", () => {
-  test("keeps the 30-tile range and multiplies attacker losses by 12 and tile cost by 8", () => {
+  test("keeps the 30-tile range and multiplies attacker losses by 6 and tile cost by 4", () => {
     expect(config.defensePostRange()).toBe(30);
-    expect(config.defensePostDefenseBonus()).toBe(12);
-    expect(config.defensePostSpeedBonus()).toBe(8);
+    expect(config.defensePostDefenseBonus()).toBe(6);
+    expect(config.defensePostSpeedBonus()).toBe(4);
   });
 
-  test("a covered tile costs the attacker 12x the troops and takes 8x as long", () => {
+  test("a covered tile costs the attacker 6x the troops and takes 4x as long", () => {
     const open = attack(false);
     const covered = attack(true);
-    expect(covered.attackerTroopLoss / open.attackerTroopLoss).toBeCloseTo(12, 5);
-    expect(covered.tickFraction / open.tickFraction).toBeCloseTo(8, 5);
+    expect(covered.attackerTroopLoss / open.attackerTroopLoss).toBeCloseTo(6, 5);
+    expect(covered.tickFraction / open.tickFraction).toBeCloseTo(4, 5);
   });
 });

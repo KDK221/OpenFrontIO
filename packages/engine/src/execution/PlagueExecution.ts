@@ -89,10 +89,14 @@ export class PlagueExecution implements Execution {
     const spawn = this.player.canBuild(UnitType.MIRV, this.dst);
     const target = this.mg.owner(this.dst);
     if (spawn === false || !target.isPlayer()) {
-      console.warn("cannot spread plague");
+      this.mg.displayMessage(
+        "events_display.plague_failed", MessageType.ATTACK_FAILED, this.player.id(),
+      );
       this.active = false;
       return;
     }
+    // Validate first, then charge the current price before incrementing launches.
+    this.player.removeGold(this.mg.unitInfo(UnitType.MIRV).cost(this.mg, this.player));
     this.started = true;
     this.infected = [target];
     // Counts toward the price of the next plague (see EngineConfig).
@@ -109,6 +113,15 @@ export class PlagueExecution implements Execution {
       this.player.updateRelation(target, -100);
     }
     this.notify(target);
+    this.mg.displayMessage(
+      "events_display.plague_released",
+      MessageType.MIRV_INBOUND,
+      this.player.id(),
+      undefined,
+      { name: target.displayName(), seconds: PlagueExecution.DURATION * this.mg.config().msPerTick() / 1000 },
+      undefined,
+      target.id(),
+    );
 
     const silo = this.player
       .units(UnitType.MissileSilo)

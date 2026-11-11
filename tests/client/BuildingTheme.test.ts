@@ -4,6 +4,12 @@ import { GameMapType } from "@openfront/engine-api/game/Maps.gen";
 import { buildingAtlasUrl, themedBuildingIcon, buildingButtonIcon } from "../../src/client/BuildingTheme";
 
 describe("scenario building themes", () => {
+  it("uses the boat icon in Korea and preserves other scenario warships", () => {
+    const icon = "/images/BattleshipIconWhite.svg";
+    expect(themedBuildingIcon(icon, GameMapType.Samguk)).toBe("/images/BoatIconWhite.svg");
+    expect(themedBuildingIcon(icon, GameMapType.Sengoku)).toBe(icon);
+    expect(themedBuildingIcon(icon, GameMapType.WarringStates)).toBe(icon);
+  });
   it("selects Chinese buildings for Three Kingdoms without leaking across maps", () => {
     expect(buildingAtlasUrl(GameMapType.WarringStates)).toBe("/atlases/china-buildings.png");
     expect(buildingAtlasUrl(GameMapType.Samguk)).toBe("/atlases/korea-buildings.png");

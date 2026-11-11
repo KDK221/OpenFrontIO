@@ -819,6 +819,7 @@
     "game_client_failed": "게임을 불러오지 못했어요. 연결을 확인하고 다시 시도해 주세요. 계속 그러면 게임을 다시 시작해 주세요."
   },
   "events_display": {
+    "plague_failed": "역병 발동 실패: 대상 영토, 금액, 공성 진지의 재사용 대기를 확인하세요. 비용은 차감되지 않았습니다.",
     "about_to_expire": "{name}와(과)의 동맹이 곧 만료됩니다!",
     "accept_alliance": "수락",
     "alliance_accepted": "수락",
@@ -861,6 +862,7 @@
     "atom_bomb_inbound": "{name} - 화공 접근",
     "hydrogen_bomb_inbound": "{name} - 투석공격 접근",
     "mirv_inbound": "☠️☠️☠️ {name} - 역병이 퍼진다 ☠️☠️☠️",
+    "plague_released": "☠️ {name}에 역병 발동! {seconds}초 동안 병력이 감소합니다. 공성 진지는 재사용 대기 중입니다.",
     "naval_invasion_inbound": "{name}의 수군 상륙 접근 ({troops})",
     "sent_emoji_all": "모두에게 보냄: {emoji}"
   },

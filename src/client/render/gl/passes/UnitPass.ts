@@ -32,6 +32,7 @@
  *   Shells emit 2 instances (pos + lastPos) to match live game's 2-pixel trail.
  */
 
+import { GameMapType } from "@openfront/engine-api/game/Maps.gen";
 import type { Config } from "@openfront/engine-lib/configuration/Config";
 import { assetUrl } from "@openfront/shared/AssetUrls";
 import type { RendererConfig, UnitState } from "../../types";
@@ -285,6 +286,11 @@ export class UnitPass {
       if (col >= 0) {
         this.typeToAtlasCol.set(header.unitTypes[i], col);
       }
+    }
+
+    // Korean scenario warships use the existing boat hull.
+    if (config.gameConfig().gameMap === GameMapType.Samguk) {
+      this.typeToAtlasCol.set(UT_WARSHIP, UNIT_ORDER.indexOf(UT_TRANSPORT));
     }
 
     // Compile shaders

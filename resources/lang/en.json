@@ -1048,6 +1048,7 @@
     "turnstile_error": "Verification error: {code}. Please refresh and try again."
   },
   "events_display": {
+    "plague_failed": "Plague not released. Check the target territory, gold, and Siege Camp cooldown. No gold was charged.",
     "about_to_expire": "Your alliance with {name} is about to expire!",
     "accept_alliance": "Accept",
     "alliance_accepted": "accepted",
@@ -1073,6 +1074,7 @@
     "hydrogen_bomb_inbound": "{name} - thunder catapult inbound",
     "ignore": "Ignore",
     "mirv_inbound": "☠️☠️☠️ {name} - PLAGUE SPREADING ☠️☠️☠️",
+    "plague_released": "☠️ Plague released on {name}! Troops drain for {seconds}s. The Siege Camp is now reloading.",
     "missile_intercepted": "Ballista tower shot down {unit}",
     "naval_invasion_inbound": "Naval invasion incoming from {name} ({troops})",
     "no_boats_available": "No boats available, max {max}",

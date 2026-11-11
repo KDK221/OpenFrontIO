@@ -763,6 +763,8 @@
     "turnstile_error": "認証エラー：{code}。ページを更新してもう一度お試しください。"
   },
   "events_display": {
+    "plague_failed": "疫病を発動できません。対象領地、資金、攻城陣地の待機時間を確認してください。費用は引かれていません。",
+    "plague_released": "☠️ {name}で疫病発動！{seconds}秒間兵力が減少します。攻城陣地は再使用待ちです。",
     "about_to_expire": "{name}との同盟は間もなく失効します！",
     "accept_alliance": "承諾",
     "alliance_accepted": "承諾",

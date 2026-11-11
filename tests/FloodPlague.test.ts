@@ -1,4 +1,5 @@
 import {
+  MessageType,
   PlayerInfo,
   PlayerType,
   UnitType,
@@ -158,6 +159,37 @@ describe("Plague (MIRV slot)", () => {
     game.addExecution(new PlagueExecution(a, game.ref(15, 5)));
     executeTicks(game, 3);
     expect(cost()).toBe(20_000_000n);
+  });
+
+  test("UI construction charges once, confirms release, and drains troops", async () => {
+    const { game, a, b } = await plagueGame();
+    vi.spyOn(game.config(), "plagueReplacesMirv").mockReturnValue(true);
+    vi.spyOn(game.config(), "infiniteGold").mockReturnValue(false);
+    a.addGold(100_000_000n);
+    const charge = vi.spyOn(a, "removeGold");
+    const message = vi.spyOn(game, "displayMessage");
+    game.addExecution(new ConstructionExecution(a, UnitType.MIRV, game.ref(15, 5)));
+    executeTicks(game, 25);
+    expect(charge).toHaveBeenCalledTimes(1);
+    expect(charge).toHaveBeenCalledWith(15_000_000n);
+    expect(b.troops()).toBeLessThan(100_000);
+    expect(message).toHaveBeenCalledWith(
+      "events_display.plague_released", MessageType.MIRV_INBOUND,
+      a.id(), undefined, { name: b.displayName(), seconds: 90 }, undefined, b.id(),
+    );
+  });
+
+  test("a rejected release does not charge or increase the next price", async () => {
+    const { game, a } = await plagueGame();
+    vi.spyOn(game.config(), "plagueReplacesMirv").mockReturnValue(true);
+    vi.spyOn(game.config(), "infiniteGold").mockReturnValue(false);
+    a.addGold(100_000_000n);
+    a.units(UnitType.MissileSilo)[0].delete(false);
+    const charge = vi.spyOn(a, "removeGold");
+    game.addExecution(new ConstructionExecution(a, UnitType.MIRV, game.ref(15, 5)));
+    executeTicks(game, 4);
+    expect(charge).not.toHaveBeenCalled();
+    expect(game.unitInfo(UnitType.MIRV).cost(game, a)).toBe(15_000_000n);
   });
 
   test("fire and flood attacks cost 1.5M and 8M in the eras", async () => {

@@ -25,6 +25,9 @@ export function buildingAtlasUrl(map?: GameMapType): string {
 
 /** Preserve non-building icons and resolve through the hashed asset manifest. */
 export function themedBuildingIcon(icon: string, map?: GameMapType): string {
+  if (map === GameMapType.Samguk && icon === assetUrl("images/BattleshipIconWhite.svg")) {
+    return assetUrl("images/BoatIconWhite.svg");
+  }
   const theme = buildingTheme(map);
   if (theme === "korea") return icon;
   for (const name of buildings) {

@@ -735,6 +735,8 @@
     "turnstile_error": "驗證錯誤：{code}。請刷新後重試。"
   },
   "events_display": {
+    "plague_failed": "瘟疫未釋放。請檢查目標領土、金幣和攻城營地冷卻。未扣除費用。",
+    "plague_released": "☠️ 已向{name}釋放瘟疫！持續{seconds}秒削減兵力。攻城營地正在冷卻。",
     "about_to_expire": "你與 {name} 的結盟即將到期！",
     "accept_alliance": "接受",
     "alliance_accepted": "已接受",

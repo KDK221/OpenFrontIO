@@ -9,7 +9,7 @@ import { renderNumber } from "@openfront/engine-lib/Format";
 import { EventBus } from "@openfront/shared/EventBus";
 import { html, LitElement, nothing } from "lit";
 import { customElement } from "lit/decorators.js";
-import { buildingButtonIcon } from "../../BuildingTheme";
+import { buildingButtonIcon, themedBuildingIcon } from "../../BuildingTheme";
 import { Controller } from "../../Controller";
 import { InputHandler, ToggleStructureEvent } from "../../InputHandler";
 import { KeyboardLayoutController } from "../../KeyboardLayout";
@@ -205,7 +205,7 @@ export class UnitDisplay extends LitElement implements Controller {
             this.getHotkey("buildSamLauncher", "Digit6"),
           )}
           ${this.renderUnitItem(
-            warshipIcon,
+            themedBuildingIcon(warshipIcon, this.game.config().gameConfig().gameMap),
             this._warships,
             UnitType.Warship,
             "warship",
