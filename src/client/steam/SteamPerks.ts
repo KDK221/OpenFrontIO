@@ -8,6 +8,10 @@
 
 import type { PlayerPattern } from "@openfront/shared/WireSchemas";
 import { z } from "zod";
+import { encodePattern } from "./PatternCodec";
+import { decodeDrawnPattern, DrawnFlagSchema } from "./SteamDrawing";
+
+export { encodePattern, toBase64url } from "./PatternCodec";
 
 // ---------------------------------------------------------------------------
 // Territory patterns
@@ -33,24 +37,6 @@ interface PatternDef {
 }
 
 const mod = (a: number, n: number) => ((a % n) + n) % n;
-
-const B64URL =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
-
-/** Unpadded base64url, the encoding PatternDataSchema expects. */
-export function toBase64url(bytes: Uint8Array): string {
-  let out = "";
-  for (let i = 0; i < bytes.length; i += 3) {
-    const b0 = bytes[i];
-    const b1 = i + 1 < bytes.length ? bytes[i + 1] : 0;
-    const b2 = i + 2 < bytes.length ? bytes[i + 2] : 0;
-    const n = (b0 << 16) | (b1 << 8) | b2;
-    out += B64URL[(n >> 18) & 63] + B64URL[(n >> 12) & 63];
-    if (i + 1 < bytes.length) out += B64URL[(n >> 6) & 63];
-    if (i + 2 < bytes.length) out += B64URL[n & 63];
-  }
-  return out;
-}
 
 const PATTERN_DEFS: readonly PatternDef[] = [
   // 비단: a fine checkerboard, like woven silk.
@@ -146,39 +132,6 @@ function patternDef(id: PatternId): PatternDef {
   const def = PATTERN_DEFS.find((p) => p.id === id);
   if (def === undefined) throw new Error(`unknown pattern ${id}`);
   return def;
-}
-
-/**
- * Encodes a bitmap in the PatternDecoder wire format: version byte 0, then
- * scale (3 bits) and width-2 (7 bits) and height-2 (6 bits) packed into two
- * bytes, then row-major bits where 0 marks the primary colour.
- */
-export function encodePattern(
-  width: number,
-  height: number,
-  scale: number,
-  primary: (x: number, y: number) => boolean,
-): string {
-  if (width < 2 || width > 129 || height < 2 || height > 65) {
-    throw new Error("pattern size out of range");
-  }
-  if (scale < 0 || scale > 7) throw new Error("pattern scale out of range");
-  const w = width - 2;
-  const h = height - 2;
-  const bits = width * height;
-  const bytes = new Uint8Array(3 + ((bits + 7) >> 3));
-  bytes[0] = 0;
-  bytes[1] = (scale & 0x07) | ((w & 0x1f) << 3);
-  bytes[2] = ((w >> 5) & 0x03) | ((h & 0x3f) << 2);
-  for (let y = 0; y < height; y++) {
-    for (let x = 0; x < width; x++) {
-      if (!primary(x, y)) {
-        const idx = y * width + x;
-        bytes[3 + (idx >> 3)] |= 1 << (idx & 7);
-      }
-    }
-  }
-  return toBase64url(bytes);
 }
 
 export interface PatternColors {
@@ -536,13 +489,32 @@ export function summarizeStats(stats: unknown): {
 // Saved choices
 // ---------------------------------------------------------------------------
 
+/** Pattern data the player drew, kept only if it still decodes. */
+const DrawnPatternDataSchema = z.string().max(1403).refine((data) => {
+  try {
+    decodeDrawnPattern(data);
+    return true;
+  } catch {
+    return false;
+  }
+});
+
 export const SteamPerksStateSchema = z.object({
-  pattern: z.enum(PATTERN_IDS as [PatternId, ...PatternId[]]).nullable().default(null),
+  // A preset pattern, "custom" for the one the player drew, or none.
+  pattern: z
+    .enum(["custom", ...PATTERN_IDS] as ["custom", ...PatternId[]])
+    .nullable()
+    .default(null),
+  customPattern: DrawnPatternDataSchema.nullable().default(null),
   patternColors: z
     .object({ primary: HexColor, secondary: HexColor })
     .nullable()
     .default(null),
   flag: FlagDesignSchema.nullable().default(null),
+  // A pixel banner the player drew, and whether it is the one in use (over
+  // the banner-maker design in `flag`).
+  drawnFlag: DrawnFlagSchema.nullable().default(null),
+  useDrawnFlag: z.boolean().default(false),
   title: z.enum(ACHIEVEMENT_IDS as [AchievementId, ...AchievementId[]]).nullable().default(null),
   progress: ProgressSchema.default(EMPTY_PROGRESS),
 });

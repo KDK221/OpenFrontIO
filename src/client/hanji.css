@@ -320,3 +320,21 @@ body.hanji-theme:not(.in-game)
   background: rgba(217, 168, 74, 0.18);
   color: var(--hanji-gold);
 }
+
+.steam-perks-editor {
+  border-color: rgba(239, 230, 210, 0.12);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.steam-perks-swatch {
+  border-color: transparent;
+}
+
+.steam-perks-swatch.is-active {
+  border-color: var(--hanji-gold);
+}
+
+.pixel-editor-canvas {
+  image-rendering: pixelated;
+  box-shadow: 0 0 0 1px rgba(239, 230, 210, 0.2);
+}

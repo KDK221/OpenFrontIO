@@ -2925,6 +2925,7 @@
     "card_desc": "Territory patterns · your own banner · titles",
     "card_title": "Steam Edition perks",
     "close": "Close",
+    "draw_own": "Draw your own",
     "emblem": {
       "diamond": "Diamond",
       "flower": "Flower",
@@ -2943,8 +2944,10 @@
     "flag_glyph_hint": "A Hanja or Hangul character, e.g. 王, 龍, 화",
     "flag_in_use": "In use",
     "flag_layout": "Layout",
+    "flag_mode_builder": "Banner maker",
     "flag_scenario_note": "In scenario mode you fly the banner of the nation you lead.",
     "flag_use": "Use this banner",
+    "grid_size": "Canvas size",
     "layout": {
       "band": "Band",
       "border": "Border",
@@ -2957,6 +2960,8 @@
     "locked_notice": "These are Steam Edition perks. Look around here — they unlock in the Steam version.",
     "new_title": "New title unlocked!",
     "new_title_hint": "Choose it under Steam Edition perks on the home screen.",
+    "palette": "Colours (click to pick, small square to change)",
+    "palette_edit": "Change this colour",
     "pattern": {
       "brocade": "Brocade",
       "diagonal": "Hatching",
@@ -2971,10 +2976,18 @@
     "pattern_color_2": "Pattern colour",
     "pattern_none": "None",
     "pattern_own_colors": "Use my territory colours",
+    "pattern_use": "Use this pattern",
+    "preview": "Preview",
     "singleplayer_note": "For now the perks show in single-player games.",
     "tab_flag": "My banner",
     "tab_pattern": "Territory pattern",
     "tab_title": "Titles",
+    "tile_scale": {
+      "0": "Small",
+      "1": "Medium",
+      "2": "Large"
+    },
+    "tile_size": "Size on the map",
     "title_hint": "Your title shows in front of your name in game, like [General].",
     "title_locked": "Locked",
     "title_none": "No title",
@@ -2987,7 +3000,14 @@
       "impossible_win": "WarGod",
       "plague_master": "Plague",
       "thunder_master": "Thunder"
-    }
+    },
+    "tool_clear": "Clear",
+    "tool_eraser": "Eraser",
+    "tool_fill": "Fill",
+    "tool_invert": "Invert",
+    "tool_pen": "Pen",
+    "tool_picture": "From a picture",
+    "tool_undo": "Undo"
   },
   "steam_user_header": {
     "avatar_alt": "Steam avatar",

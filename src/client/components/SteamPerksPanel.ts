@@ -2,6 +2,29 @@ import { html, LitElement, nothing, svg, type TemplateResult } from "lit";
 import { customElement, state } from "lit/decorators.js";
 import { ClientEnv } from "../ClientEnv";
 import {
+  blankFlag,
+  cloneGrid,
+  decodeDrawnPattern,
+  DEFAULT_FLAG_PALETTE,
+  drawnFlagDataUrl,
+  emptyGrid,
+  encodeDrawnPattern,
+  FLAG_GRID_H,
+  FLAG_GRID_W,
+  flagToGrid,
+  gridToFlag,
+  imageToFlag,
+  imageToPatternGrid,
+  PATTERN_SCALES,
+  PATTERN_SIZES,
+  resizeGrid,
+  starterPattern,
+  type DrawnPattern,
+  type Grid,
+} from "../steam/SteamDrawing";
+import "./PixelEditor";
+import type { PixelEditor } from "./PixelEditor";
+import {
   ACHIEVEMENTS,
   DEFAULT_FLAG,
   FLAG_EMBLEMS,
@@ -29,6 +52,73 @@ type Tab = "pattern" | "flag" | "title";
 const OWN_PRIMARY = "#b5543c";
 const OWN_SECONDARY = "#3a281c";
 
+/** The drawn pattern to start the editor from: the saved one, or a starter. */
+function savedDrawnPattern(s: SteamPerksState): DrawnPattern {
+  if (s.customPattern !== null) {
+    try {
+      return decodeDrawnPattern(s.customPattern);
+    } catch {
+      // Unreadable: start fresh.
+    }
+  }
+  return starterPattern(16);
+}
+
+/**
+ * Reads a picture file as RGBA pixels at width x height, cropped to fill
+ * (like CSS object-fit: cover) so it is not squashed.
+ */
+async function pictureToPixels(
+  file: File,
+  width: number,
+  height: number,
+): Promise<Uint8ClampedArray> {
+  const url = URL.createObjectURL(file);
+  try {
+    const img = new Image();
+    img.src = url;
+    await img.decode();
+    const canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext("2d", { willReadFrequently: true })!;
+    const scale = Math.max(width / img.naturalWidth, height / img.naturalHeight);
+    const sw = width / scale;
+    const sh = height / scale;
+    ctx.imageSmoothingQuality = "high";
+    ctx.drawImage(
+      img,
+      (img.naturalWidth - sw) / 2,
+      (img.naturalHeight - sh) / 2,
+      sw,
+      sh,
+      0,
+      0,
+      width,
+      height,
+    );
+    return ctx.getImageData(0, 0, width, height).data;
+  } finally {
+    URL.revokeObjectURL(url);
+  }
+}
+
+/** The tile as a PNG data URL, for a repeating CSS background preview. */
+function tileDataUrl(grid: Grid, primary: string, secondary: string): string {
+  const canvas = document.createElement("canvas");
+  canvas.width = grid.width;
+  canvas.height = grid.height;
+  const ctx = canvas.getContext("2d");
+  if (ctx === null) return "";
+  for (let y = 0; y < grid.height; y++) {
+    for (let x = 0; x < grid.width; x++) {
+      ctx.fillStyle = grid.cells[y * grid.width + x] === 1 ? secondary : primary;
+      ctx.fillRect(x, y, 1, 1);
+    }
+  }
+  return canvas.toDataURL();
+}
+
 const t = (key: string, params?: Record<string, string | number>) =>
   translateText(`steam_perks.${key}`, params);
 
@@ -43,6 +133,20 @@ export class SteamPerksPanel extends LitElement {
   @state() private tab: Tab = "pattern";
   @state() private perks: SteamPerksState = loadPerks();
   @state() private draft: FlagDesign = loadPerks().flag ?? DEFAULT_FLAG;
+  // Drawing a pattern.
+  @state() private patternDraft: DrawnPattern = savedDrawnPattern(loadPerks());
+  @state() private patternTool: "pen" | "eraser" | "fill" = "pen";
+  @state() private drawingPattern = false;
+  // Drawing a banner.
+  @state() private flagMode: "builder" | "draw" = loadPerks().useDrawnFlag
+    ? "draw"
+    : "builder";
+  @state() private flagGrid: Grid = flagToGrid(loadPerks().drawnFlag ?? blankFlag());
+  @state() private flagPalette: string[] = [
+    ...(loadPerks().drawnFlag?.palette ?? DEFAULT_FLAG_PALETTE),
+  ];
+  @state() private flagColor = 0;
+  @state() private flagTool: "pen" | "fill" = "pen";
 
   createRenderRoot() {
     return this;
@@ -69,6 +173,12 @@ export class SteamPerksPanel extends LitElement {
   private show() {
     this.perks = loadPerks();
     this.draft = this.perks.flag ?? DEFAULT_FLAG;
+    this.patternDraft = savedDrawnPattern(this.perks);
+    this.drawingPattern = this.perks.pattern === "custom";
+    this.flagMode = this.perks.useDrawnFlag ? "draw" : "builder";
+    const drawn = this.perks.drawnFlag ?? blankFlag();
+    this.flagGrid = flagToGrid(drawn);
+    this.flagPalette = [...drawn.palette];
     this.open = true;
   }
 
@@ -209,13 +319,29 @@ export class SteamPerksPanel extends LitElement {
     const options: (PatternId | null)[] = [null, ...PATTERN_IDS];
     return html`<div class="space-y-4">
       <div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+        <button
+          type="button"
+          class="steam-perks-option rounded-lg border overflow-hidden text-left ${current === "custom" || this.drawingPattern ? "is-active" : ""}"
+          @click=${() => (this.drawingPattern = true)}
+        >
+          <span
+            class="block aspect-[8/5] bg-center"
+            style=${this.tileStyle(this.patternDraft, 3)}
+          ></span>
+          <span class="block px-2 py-1 text-xs text-white/90"
+            >✏️ ${t("draw_own")}</span
+          >
+        </button>
         ${options.map(
           (id) =>
             html`<button
               type="button"
               class="steam-perks-option rounded-lg border overflow-hidden text-left ${current === id ? "is-active" : ""}"
               ?disabled=${!this.unlocked}
-              @click=${() => this.change((s) => ({ ...s, pattern: id }))}
+              @click=${() => {
+                this.drawingPattern = false;
+                this.change((s) => ({ ...s, pattern: id }));
+              }}
             >
               <span class="block aspect-[8/5]">${this.patternSwatch(id)}</span>
               <span class="block px-2 py-1 text-xs text-white/90"
@@ -224,6 +350,7 @@ export class SteamPerksPanel extends LitElement {
             </button>`,
         )}
       </div>
+      ${this.drawingPattern ? this.renderPatternEditor() : nothing}
       <div class="flex flex-wrap items-center gap-4 text-sm text-white/80">
         <label class="flex items-center gap-2">
           <input
@@ -281,6 +408,198 @@ export class SteamPerksPanel extends LitElement {
     </label>`;
   }
 
+  // -- Drawing a pattern ----------------------------------------------------
+
+  private patternInk(): { primary: string; secondary: string } {
+    const c = this.perks.patternColors;
+    return {
+      primary: c?.primary ?? OWN_PRIMARY,
+      secondary: c?.secondary ?? OWN_SECONDARY,
+    };
+  }
+
+  /** Inline style tiling the drawn pattern; `px` is screen pixels per tile. */
+  private tileStyle(p: DrawnPattern, px: number): string {
+    const { primary, secondary } = this.patternInk();
+    const size = px * (1 << p.scale);
+    return `background-image:url(${tileDataUrl(p.grid, primary, secondary)});background-size:${p.grid.width * size}px ${p.grid.height * size}px;image-rendering:pixelated;`;
+  }
+
+  private editor(): PixelEditor | null {
+    return this.querySelector<PixelEditor>("pixel-editor");
+  }
+
+  private setPatternGrid(grid: Grid) {
+    this.patternDraft = { ...this.patternDraft, grid };
+  }
+
+  private renderPatternEditor() {
+    const p = this.patternDraft;
+    const ink = this.patternInk();
+    const saved =
+      this.perks.pattern === "custom" &&
+      this.perks.customPattern === encodeDrawnPattern(p);
+    const tools: { id: "pen" | "eraser" | "fill"; label: string }[] = [
+      { id: "pen", label: `✏️ ${t("tool_pen")}` },
+      { id: "eraser", label: `🧽 ${t("tool_eraser")}` },
+      { id: "fill", label: `🪣 ${t("tool_fill")}` },
+    ];
+    return html`<div class="steam-perks-editor rounded-xl border p-3 space-y-3">
+      <div class="flex flex-wrap items-center gap-1.5">
+        ${tools.map(
+          (tool) =>
+            html`<button
+              type="button"
+              class="steam-perks-chip rounded-md border px-2.5 py-1 text-xs ${this.patternTool === tool.id ? "is-active" : ""}"
+              @click=${() => (this.patternTool = tool.id)}
+            >
+              ${tool.label}
+            </button>`,
+        )}
+        <span class="mx-1 h-5 w-px bg-white/15"></span>
+        <button
+          type="button"
+          class="steam-perks-chip rounded-md border px-2.5 py-1 text-xs"
+          @click=${() => this.editor()?.undo()}
+        >
+          ↶ ${t("tool_undo")}
+        </button>
+        <button
+          type="button"
+          class="steam-perks-chip rounded-md border px-2.5 py-1 text-xs"
+          @click=${() => {
+            this.editor()?.remember();
+            const g = cloneGrid(p.grid);
+            g.cells = g.cells.map((v) => 1 - v);
+            this.setPatternGrid(g);
+          }}
+        >
+          ◐ ${t("tool_invert")}
+        </button>
+        <button
+          type="button"
+          class="steam-perks-chip rounded-md border px-2.5 py-1 text-xs"
+          @click=${() => {
+            this.editor()?.remember();
+            this.setPatternGrid(emptyGrid(p.grid.width, p.grid.height));
+          }}
+        >
+          🗑 ${t("tool_clear")}
+        </button>
+        ${this.pictureButton((file) => this.importPatternPicture(file))}
+      </div>
+      <div class="grid gap-3 sm:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)]">
+        <pixel-editor
+          .grid=${p.grid}
+          .colors=${[ink.primary, ink.secondary]}
+          .value=${this.patternTool === "eraser" ? 0 : 1}
+          .tool=${this.patternTool === "fill" ? "fill" : "pen"}
+          @grid-change=${(e: CustomEvent<Grid>) => this.setPatternGrid(e.detail)}
+        ></pixel-editor>
+        <div class="space-y-3">
+          <div>
+            <div class="mb-1 text-xs text-white/60">${t("preview")}</div>
+            <div
+              class="h-36 w-full rounded-md border border-white/15"
+              style=${this.tileStyle(p, 2)}
+            ></div>
+          </div>
+          <div>
+            <div class="mb-1 text-xs text-white/60">${t("grid_size")}</div>
+            <div class="flex flex-wrap gap-1">
+              ${PATTERN_SIZES.map(
+                (n) =>
+                  html`<button
+                    type="button"
+                    class="steam-perks-chip rounded-md border px-2 py-0.5 text-xs ${p.grid.width === n ? "is-active" : ""}"
+                    @click=${() => {
+                      this.editor()?.remember();
+                      this.setPatternGrid(resizeGrid(p.grid, n, n));
+                    }}
+                  >
+                    ${n}
+                  </button>`,
+              )}
+            </div>
+          </div>
+          <div>
+            <div class="mb-1 text-xs text-white/60">${t("tile_size")}</div>
+            <div class="flex flex-wrap gap-1">
+              ${PATTERN_SCALES.map(
+                (sc) =>
+                  html`<button
+                    type="button"
+                    class="steam-perks-chip rounded-md border px-2 py-0.5 text-xs ${p.scale === sc ? "is-active" : ""}"
+                    @click=${() =>
+                      (this.patternDraft = { ...this.patternDraft, scale: sc })}
+                  >
+                    ${t(`tile_scale.${sc}`)}
+                  </button>`,
+              )}
+            </div>
+          </div>
+          <button
+            type="button"
+            class="steam-perks-primary w-full rounded-lg px-3 py-2 text-sm font-bold disabled:opacity-50"
+            ?disabled=${!this.unlocked || saved}
+            @click=${() =>
+              this.change((s) => ({
+                ...s,
+                pattern: "custom",
+                customPattern: encodeDrawnPattern(this.patternDraft),
+              }))}
+          >
+            ${saved ? `✓ ${t("flag_in_use")}` : t("pattern_use")}
+          </button>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  private pictureButton(onFile: (file: File) => void) {
+    return html`<label
+      class="steam-perks-chip cursor-pointer rounded-md border px-2.5 py-1 text-xs"
+    >
+      🖼 ${t("tool_picture")}
+      <input
+        type="file"
+        accept="image/*"
+        class="hidden"
+        @change=${(e: Event) => {
+          const input = e.target as HTMLInputElement;
+          const file = input.files?.[0];
+          input.value = "";
+          if (file !== undefined) onFile(file);
+        }}
+      />
+    </label>`;
+  }
+
+  private async importPatternPicture(file: File) {
+    const { width, height } = this.patternDraft.grid;
+    try {
+      const pixels = await pictureToPixels(file, width, height);
+      this.editor()?.remember();
+      this.setPatternGrid(imageToPatternGrid(pixels, width, height));
+    } catch (e) {
+      console.warn("Could not read the picture", e);
+    }
+  }
+
+  private async importFlagPicture(file: File) {
+    try {
+      const pixels = await pictureToPixels(file, FLAG_GRID_W, FLAG_GRID_H);
+      const flag = imageToFlag(pixels, FLAG_GRID_W, FLAG_GRID_H);
+      // The palette changes with the picture, so earlier strokes can't be
+      // undone onto it.
+      this.editor()?.resetHistory();
+      this.flagPalette = [...flag.palette];
+      this.flagGrid = flagToGrid(flag);
+    } catch (e) {
+      console.warn("Could not read the picture", e);
+    }
+  }
+
   // -- Banner maker ---------------------------------------------------------
 
   private setDraft(patch: Partial<FlagDesign>) {
@@ -288,8 +607,142 @@ export class SteamPerksPanel extends LitElement {
   }
 
   private renderFlag() {
+    const modes: ("builder" | "draw")[] = ["builder", "draw"];
+    return html`<div class="space-y-4">
+      <div class="flex gap-1.5">
+        ${modes.map(
+          (m) =>
+            html`<button
+              type="button"
+              class="steam-perks-chip rounded-md border px-3 py-1 text-sm ${this.flagMode === m ? "is-active" : ""}"
+              @click=${() => (this.flagMode = m)}
+            >
+              ${m === "builder" ? `🧩 ${t("flag_mode_builder")}` : `✏️ ${t("draw_own")}`}
+            </button>`,
+        )}
+      </div>
+      ${this.flagMode === "builder" ? this.renderFlagBuilder() : this.renderFlagDrawing()}
+    </div>`;
+  }
+
+  private clearFlagButton() {
+    if (this.perks.flag === null && !this.perks.useDrawnFlag) return nothing;
+    return html`<button
+      type="button"
+      class="rounded-lg border border-white/20 px-3 py-2 text-sm text-white/80 hover:text-white"
+      ?disabled=${!this.unlocked}
+      @click=${() => this.change((s) => ({ ...s, flag: null, useDrawnFlag: false }))}
+    >
+      ${t("flag_clear")}
+    </button>`;
+  }
+
+  private renderFlagDrawing() {
+    const flag = gridToFlag(this.flagGrid, this.flagPalette);
+    const inUse =
+      this.perks.useDrawnFlag &&
+      JSON.stringify(this.perks.drawnFlag) === JSON.stringify(flag);
+    return html`<div class="grid gap-4 sm:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
+      <div class="space-y-2">
+        <div class="flex flex-wrap items-center gap-1.5">
+          <button
+            type="button"
+            class="steam-perks-chip rounded-md border px-2.5 py-1 text-xs ${this.flagTool === "pen" ? "is-active" : ""}"
+            @click=${() => (this.flagTool = "pen")}
+          >
+            ✏️ ${t("tool_pen")}
+          </button>
+          <button
+            type="button"
+            class="steam-perks-chip rounded-md border px-2.5 py-1 text-xs ${this.flagTool === "fill" ? "is-active" : ""}"
+            @click=${() => (this.flagTool = "fill")}
+          >
+            🪣 ${t("tool_fill")}
+          </button>
+          <button
+            type="button"
+            class="steam-perks-chip rounded-md border px-2.5 py-1 text-xs"
+            @click=${() => this.editor()?.undo()}
+          >
+            ↶ ${t("tool_undo")}
+          </button>
+          <button
+            type="button"
+            class="steam-perks-chip rounded-md border px-2.5 py-1 text-xs"
+            @click=${() => {
+              this.editor()?.remember();
+              this.flagGrid = emptyGrid(FLAG_GRID_W, FLAG_GRID_H, this.flagColor);
+            }}
+          >
+            🗑 ${t("tool_clear")}
+          </button>
+          ${this.pictureButton((file) => this.importFlagPicture(file))}
+        </div>
+        <pixel-editor
+          .grid=${this.flagGrid}
+          .colors=${this.flagPalette}
+          .value=${this.flagColor}
+          .tool=${this.flagTool}
+          @grid-change=${(e: CustomEvent<Grid>) => (this.flagGrid = e.detail)}
+        ></pixel-editor>
+        <div>
+          <div class="mb-1 text-xs text-white/60">${t("palette")}</div>
+          <div class="flex flex-wrap gap-1.5">
+            ${this.flagPalette.map(
+              (c, i) =>
+                html`<span
+                  class="steam-perks-swatch relative rounded-md border-2 ${this.flagColor === i ? "is-active" : ""}"
+                >
+                  <button
+                    type="button"
+                    class="block h-8 w-8 rounded"
+                    style="background:${c}"
+                    aria-label=${c}
+                    @click=${() => (this.flagColor = i)}
+                  ></button>
+                  <input
+                    type="color"
+                    class="absolute -bottom-1 -right-1 h-4 w-4 cursor-pointer opacity-80"
+                    .value=${c}
+                    title=${t("palette_edit")}
+                    @input=${(e: Event) => {
+                      const next = [...this.flagPalette];
+                      next[i] = (e.target as HTMLInputElement).value;
+                      this.flagPalette = next;
+                    }}
+                  />
+                </span>`,
+            )}
+          </div>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <img
+          src=${drawnFlagDataUrl(flag)}
+          alt=""
+          class="w-full rounded-md border border-white/20 shadow-lg [image-rendering:pixelated]"
+        />
+        <div class="flex flex-wrap gap-2">
+          <button
+            type="button"
+            class="steam-perks-primary flex-1 rounded-lg px-3 py-2 text-sm font-bold disabled:opacity-50"
+            ?disabled=${!this.unlocked || inUse}
+            @click=${() =>
+              this.change((s) => ({ ...s, drawnFlag: flag, useDrawnFlag: true }))}
+          >
+            ${inUse ? `✓ ${t("flag_in_use")}` : t("flag_use")}
+          </button>
+          ${this.clearFlagButton()}
+        </div>
+        <p class="text-xs text-white/50">${t("flag_scenario_note")}</p>
+      </div>
+    </div>`;
+  }
+
+  private renderFlagBuilder() {
     const d = this.draft;
     const inUse =
+      !this.perks.useDrawnFlag &&
       this.perks.flag !== null &&
       JSON.stringify(this.perks.flag) === JSON.stringify(d);
     return html`<div class="grid gap-5 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
@@ -304,22 +757,12 @@ export class SteamPerksPanel extends LitElement {
             type="button"
             class="steam-perks-primary flex-1 rounded-lg px-3 py-2 text-sm font-bold disabled:opacity-50"
             ?disabled=${!this.unlocked || inUse}
-            @click=${() => this.change((s) => ({ ...s, flag: d }))}
+            @click=${() =>
+              this.change((s) => ({ ...s, flag: d, useDrawnFlag: false }))}
           >
             ${inUse ? `✓ ${t("flag_in_use")}` : t("flag_use")}
           </button>
-          ${
-            this.perks.flag === null
-              ? nothing
-              : html`<button
-                  type="button"
-                  class="rounded-lg border border-white/20 px-3 py-2 text-sm text-white/80 hover:text-white"
-                  ?disabled=${!this.unlocked}
-                  @click=${() => this.change((s) => ({ ...s, flag: null }))}
-                >
-                  ${t("flag_clear")}
-                </button>`
-          }
+          ${this.clearFlagButton()}
         </div>
         <p class="text-xs text-white/50">${t("flag_scenario_note")}</p>
       </div>

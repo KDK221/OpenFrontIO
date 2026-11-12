@@ -13,6 +13,7 @@ import {
   type GameEndSummary,
   type SteamPerksState,
 } from "./SteamPerks";
+import { drawnFlagDataUrl } from "./SteamDrawing";
 import type { PlayerCosmetics } from "@openfront/shared/WireSchemas";
 
 const STORAGE_KEY = "steamPerks.v1";
@@ -51,8 +52,29 @@ export function applySteamCosmetics(base: PlayerCosmetics): PlayerCosmetics {
   if (!ClientEnv.isSteamEdition()) return base;
   const s = loadPerks();
   const out: PlayerCosmetics = { ...base };
-  if (s.pattern !== null) out.pattern = steamPattern(s.pattern, s.patternColors);
-  if (s.flag !== null) out.flag = flagDataUrl(s.flag);
+  if (s.pattern === "custom") {
+    if (s.customPattern !== null) {
+      out.pattern = {
+        name: "steam_drawn",
+        patternData: s.customPattern,
+        colorPalette:
+          s.patternColors === null
+            ? undefined
+            : {
+                name: "steam_custom",
+                primaryColor: s.patternColors.primary,
+                secondaryColor: s.patternColors.secondary,
+              },
+      };
+    }
+  } else if (s.pattern !== null) {
+    out.pattern = steamPattern(s.pattern, s.patternColors);
+  }
+  if (s.useDrawnFlag && s.drawnFlag !== null) {
+    out.flag = drawnFlagDataUrl(s.drawnFlag);
+  } else if (s.flag !== null) {
+    out.flag = flagDataUrl(s.flag);
+  }
   return out;
 }
 
