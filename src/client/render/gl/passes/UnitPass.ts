@@ -23,9 +23,10 @@
  *   Col 6: SAM Missile (3×3)
  *   Col 7: Shell (1×1 white pixel)
  *   Col 8: MIRV Warhead (3×3 white square)
- *   Col 9: Train Engine (5×5) — drawn as a white bundle of goods
- *   Col 10: Train Carriage (5×5) — not drawn
- *   Col 11: Train Carriage Loaded (5×5) — not drawn
+ *   Col 9: Train Engine (5×5) — a white bundle of goods, used for the
+ *           three cars drawn per trade run (see isShownTrainCar)
+ *   Col 10: Train Carriage (5×5) — unused
+ *   Col 11: Train Carriage Loaded (5×5) — unused
  *
  * Data flow:
  *   FrameSnapshot.units → filter by typeToAtlasIdx → instance VBO → GPU
@@ -124,8 +125,34 @@ const FLAG_RETREATING = 4;
 const FLAG_FLICKER_UNTARGETABLE = 5;
 const FLAG_TRADE_SELF = 6;
 
-/** Atlas column of the trade-run sprite (the lead car; the rest aren't drawn). */
+/** Atlas column of the trade-run sprite (every shown car uses it). */
 const TRAIN_ENGINE_COL = UNIT_ORDER.indexOf("TrainEngine");
+
+/**
+ * Whether a train car is one of the three drawn per trade run, evenly spaced
+ * along the road. TrainExecution creates the engine, then the tail, then the
+ * carriages (consecutive ids), and places car i of [tail, c1, c2, ...] at
+ * (i + 1) * 2 + 2 tiles behind the engine: the tail at 4, c1 at 6, c4 at 12.
+ * A bundle is 5 tiles wide, so the engine, c1 and c4 (0, 6, 12) leave a gap
+ * between each.
+ */
+const SHOWN_CARRIAGES_AFTER_TAIL = [1, 4];
+
+export function isShownTrainCar(
+  unit: Pick<UnitState, "id" | "trainType">,
+  units: ReadonlyMap<number, Pick<UnitState, "unitType" | "trainType">>,
+): boolean {
+  if (unit.trainType === TrainType.Engine) return true;
+  if (unit.trainType !== TrainType.Carriage) return false;
+  return SHOWN_CARRIAGES_AFTER_TAIL.some((offset) => {
+    const tail = units.get(unit.id - offset);
+    return (
+      tail !== undefined &&
+      tail.unitType === UT_TRAIN &&
+      tail.trainType === TrainType.TailEngine
+    );
+  });
+}
 
 /** Nuke + warhead types — rendered with flickering hot colors */
 const FLICKER_TYPES: ReadonlySet<string> = new Set([
@@ -467,9 +494,9 @@ export class UnitPass {
       // Train sub-type resolution: "Train" isn't in UNIT_ORDER.
       // Resolve to engine/carriage/loaded carriage based on trainType + loaded fields.
       if (atlasIdx === undefined && unit.unitType === UT_TRAIN) {
-        // A trade run shows as a single white bundle of goods: only the
-        // lead car is drawn, the cars behind it and the tail are not.
-        if (unit.trainType !== TrainType.Engine) continue;
+        // A trade run shows as three evenly spaced white bundles of goods
+        // (see isShownTrainCar); the other cars aren't drawn.
+        if (!isShownTrainCar(unit, units)) continue;
         atlasIdx = TRAIN_ENGINE_COL;
       }
 
