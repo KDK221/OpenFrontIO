@@ -23,8 +23,8 @@
  *   Col 6: SAM Missile (3×3)
  *   Col 7: Shell (1×1 white pixel)
  *   Col 8: MIRV Warhead (3×3 white square)
- *   Col 9: Train Engine (5×5) — a white bundle of goods, used for the
- *           three cars drawn per trade run (see isShownTrainCar)
+ *   Col 9: Train Engine (2×3) — a white bundle of goods; a trade run is
+ *           drawn as TRADE_RUN_BUNDLES of them along the train
  *   Col 10: Train Carriage (5×5) — unused
  *   Col 11: Train Carriage Loaded (5×5) — unused
  *
@@ -128,30 +128,70 @@ const FLAG_TRADE_SELF = 6;
 /** Atlas column of the trade-run sprite (every shown car uses it). */
 const TRAIN_ENGINE_COL = UNIT_ORDER.indexOf("TrainEngine");
 
-/**
- * Whether a train car is one of the three drawn per trade run, evenly spaced
- * along the road. TrainExecution creates the engine, then the tail, then the
- * carriages (consecutive ids), and places car i of [tail, c1, c2, ...] at
- * (i + 1) * 2 + 2 tiles behind the engine: the tail at 4, c1 at 6, c4 at 12.
- * A bundle is 5 tiles wide, so the engine, c1 and c4 (0, 6, 12) leave a gap
- * between each.
- */
-const SHOWN_CARRIAGES_AFTER_TAIL = [1, 4];
+/** How many white bundles a trade run is drawn as. */
+export const TRADE_RUN_BUNDLES = 5;
 
-export function isShownTrainCar(
-  unit: Pick<UnitState, "id" | "trainType">,
-  units: ReadonlyMap<number, Pick<UnitState, "unitType" | "trainType">>,
-): boolean {
-  if (unit.trainType === TrainType.Engine) return true;
-  if (unit.trainType !== TrainType.Carriage) return false;
-  return SHOWN_CARRIAGES_AFTER_TAIL.some((offset) => {
-    const tail = units.get(unit.id - offset);
-    return (
-      tail !== undefined &&
-      tail.unitType === UT_TRAIN &&
-      tail.trainType === TrainType.TailEngine
-    );
-  });
+/**
+ * The tile positions of a train's cars, front to back. TrainExecution creates
+ * the engine, then the tail engine, then the carriages (consecutive ids) and
+ * keeps them in that order along the road: the tail right behind the engine,
+ * each carriage further back.
+ */
+export function trainChain(
+  engine: Pick<UnitState, "id" | "pos">,
+  units: ReadonlyMap<number, Pick<UnitState, "unitType" | "trainType" | "pos">>,
+  mapW: number,
+): [number, number][] {
+  const at = (pos: number): [number, number] => [
+    pos % mapW,
+    Math.floor(pos / mapW),
+  ];
+  const points = [at(engine.pos)];
+  const tail = units.get(engine.id + 1);
+  if (tail?.unitType !== UT_TRAIN || tail.trainType !== TrainType.TailEngine) {
+    return points;
+  }
+  points.push(at(tail.pos));
+  for (let id = engine.id + 2; ; id++) {
+    const car = units.get(id);
+    if (car?.unitType !== UT_TRAIN || car.trainType !== TrainType.Carriage) {
+      break;
+    }
+    points.push(at(car.pos));
+  }
+  return points;
+}
+
+/**
+ * `count` points evenly spaced along a polyline, from its first point to its
+ * last. Not snapped to whole tiles: rounding would pair the bundles up.
+ */
+export function evenlySpaced(
+  points: readonly [number, number][],
+  count: number,
+): [number, number][] {
+  if (points.length === 0) return [];
+  const lengths = [0];
+  for (let i = 1; i < points.length; i++) {
+    const [ax, ay] = points[i - 1];
+    const [bx, by] = points[i];
+    lengths.push(lengths[i - 1] + Math.hypot(bx - ax, by - ay));
+  }
+  const total = lengths[lengths.length - 1];
+  // Not strung out yet (just spawned): one bundle.
+  if (total < 1 || count < 2) return [points[0]];
+  const out: [number, number][] = [];
+  let seg = 1;
+  for (let k = 0; k < count; k++) {
+    const d = (total * k) / (count - 1);
+    while (seg < points.length - 1 && lengths[seg] < d) seg++;
+    const [ax, ay] = points[seg - 1];
+    const [bx, by] = points[seg];
+    const span = lengths[seg] - lengths[seg - 1];
+    const t = span > 0 ? (d - lengths[seg - 1]) / span : 0;
+    out.push([ax + (bx - ax) * t, ay + (by - ay) * t]);
+  }
+  return out;
 }
 
 /** Nuke + warhead types — rendered with flickering hot colors */
@@ -494,10 +534,19 @@ export class UnitPass {
       // Train sub-type resolution: "Train" isn't in UNIT_ORDER.
       // Resolve to engine/carriage/loaded carriage based on trainType + loaded fields.
       if (atlasIdx === undefined && unit.unitType === UT_TRAIN) {
-        // A trade run shows as three evenly spaced white bundles of goods
-        // (see isShownTrainCar); the other cars aren't drawn.
-        if (!isShownTrainCar(unit, units)) continue;
-        atlasIdx = TRAIN_ENGINE_COL;
+        // A trade run is drawn as five white bundles of goods spaced evenly
+        // along the whole train, from the engine to the last car. The cars
+        // themselves sit too close together for that, so the bundles are
+        // placed along the line through them instead.
+        if (unit.trainType === TrainType.Engine) {
+          for (const [bx, by] of evenlySpaced(
+            trainChain(unit, units, this.mapW),
+            TRADE_RUN_BUNDLES,
+          )) {
+            this.emitGround(bx, by, unit.ownerID, TRAIN_ENGINE_COL, FLAG_NORMAL);
+          }
+        }
+        continue;
       }
 
       if (atlasIdx === undefined) continue;
