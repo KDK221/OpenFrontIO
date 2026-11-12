@@ -191,6 +191,15 @@ export function goldenLandMask(
 }
 
 /**
+ * Land a golden field can cover: not water, and not impassable terrain (the
+ * void a map uses to close off its edges, e.g. Samguk above its northern
+ * frontier).
+ */
+function isFarmland(map: GameMap, t: TileRef): boolean {
+  return map.isLand(t) && !map.isImpassable(t);
+}
+
+/**
  * Grows an irregular patch from `center` across connected land: a tile joins
  * while within the radius, stretched or shrunk by smooth value noise so the
  * edge wanders like a field boundary instead of a circle.
@@ -222,7 +231,7 @@ function growPatch(
       const n = map.ref(nx, ny);
       if (seen.has(n)) continue;
       seen.add(n);
-      if (!map.isLand(n) || claimed.has(n)) continue;
+      if (!isFarmland(map, n) || claimed.has(n)) continue;
       const reach = radius * (0.45 + 1.1 * valueNoise(nx, ny, 7, seed));
       const dx = nx - cx;
       const dy = ny - cy;
@@ -272,7 +281,7 @@ function randomCenters(
     const x = random.nextInt(0, map.width());
     const y = random.nextInt(0, map.height());
     const t = map.ref(x, y);
-    if (!map.isLand(t)) continue;
+    if (!isFarmland(map, t)) continue;
     if (
       centers.some((c) => {
         const dx = map.x(c) - x;
@@ -296,7 +305,7 @@ function nearestLand(map: GameMap, cx: number, cy: number): TileRef | null {
         const y = cy + dy;
         if (!map.isValidCoord(x, y)) continue;
         const t = map.ref(x, y);
-        if (map.isLand(t)) return t;
+        if (isFarmland(map, t)) return t;
       }
     }
   }

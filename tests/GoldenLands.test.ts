@@ -10,6 +10,7 @@ import {
   goldenLandsFor,
   goldenShares,
 } from "@openfront/engine-lib/game/GoldenLands";
+import { GameMapImpl } from "@openfront/engine-lib/game/GameMapImpl";
 import { PlayerExecution } from "@openfront/engine/execution/PlayerExecution";
 import { setup } from "./util/Setup";
 
@@ -69,6 +70,56 @@ describe("golden lands: placement", () => {
     }
     const mask = goldenLandMask(game.map(), lands);
     expect(mask.filter((v) => v === 255).length).toBe(seen.size);
+  });
+});
+
+describe("golden lands: impassable edges", () => {
+  // Samguk closes off the land above its northern frontier with impassable
+  // terrain (land, magnitude 31). Golden lands must never be placed there,
+  // centre or patch: on screen it is the dark void beyond the map's edge.
+  function mapWithVoidTop(voidRows: number): GameMapImpl {
+    const w = 120;
+    const h = 120;
+    const terrain = new Uint8Array(w * h);
+    for (let y = 0; y < h; y++) {
+      for (let x = 0; x < w; x++) {
+        // 0x80 = land; magnitude 31 = impassable, 10 = ordinary plains.
+        terrain[y * w + x] = 0x80 | (y < voidRows ? 31 : 10);
+      }
+    }
+    return new GameMapImpl(w, h, terrain, w * (h - voidRows));
+  }
+
+  test.each([1, 2, 3, 4, 5, 6, 7, 8])(
+    "seed %i: no golden tile in the impassable void",
+    (seed) => {
+      const map = mapWithVoidTop(60);
+      const lands = goldenLandsFor(map, {
+        mapType: GameMapType.World,
+        mapSize: GameMapSize.Normal,
+        scenario: false,
+        seed,
+      });
+      expect(lands.length).toBeGreaterThan(0);
+      for (const land of lands) {
+        for (const t of land.tiles) {
+          expect(map.isImpassable(t)).toBe(false);
+        }
+      }
+    },
+  );
+
+  test("a scenario centre inside the void moves to farmland", () => {
+    const map = mapWithVoidTop(60);
+    const lands = goldenLandsFor(map, {
+      mapType: GameMapType.Samguk,
+      mapSize: GameMapSize.Normal,
+      scenario: true,
+      seed: 1,
+    });
+    for (const land of lands) {
+      expect(map.isImpassable(land.center)).toBe(false);
+    }
   });
 });
 
