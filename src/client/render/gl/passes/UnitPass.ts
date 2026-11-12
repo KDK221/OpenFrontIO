@@ -23,9 +23,9 @@
  *   Col 6: SAM Missile (3×3)
  *   Col 7: Shell (1×1 white pixel)
  *   Col 8: MIRV Warhead (3×3 white square)
- *   Col 9: Train Engine (5×5)
- *   Col 10: Train Carriage (5×5)
- *   Col 11: Train Carriage Loaded (5×5)
+ *   Col 9: Train Engine (5×5) — drawn as a white bundle of goods
+ *   Col 10: Train Carriage (5×5) — not drawn
+ *   Col 11: Train Carriage Loaded (5×5) — not drawn
  *
  * Data flow:
  *   FrameSnapshot.units → filter by typeToAtlasIdx → instance VBO → GPU
@@ -124,10 +124,8 @@ const FLAG_RETREATING = 4;
 const FLAG_FLICKER_UNTARGETABLE = 5;
 const FLAG_TRADE_SELF = 6;
 
-/** Atlas column indices for train sub-types (resolved from trainType + loaded) */
+/** Atlas column of the trade-run sprite (the lead car; the rest aren't drawn). */
 const TRAIN_ENGINE_COL = UNIT_ORDER.indexOf("TrainEngine");
-const TRAIN_CARRIAGE_COL = UNIT_ORDER.indexOf("TrainCarriage");
-const TRAIN_CARRIAGE_LOADED_COL = UNIT_ORDER.indexOf("TrainCarriageLoaded");
 
 /** Nuke + warhead types — rendered with flickering hot colors */
 const FLICKER_TYPES: ReadonlySet<string> = new Set([
@@ -469,14 +467,10 @@ export class UnitPass {
       // Train sub-type resolution: "Train" isn't in UNIT_ORDER.
       // Resolve to engine/carriage/loaded carriage based on trainType + loaded fields.
       if (atlasIdx === undefined && unit.unitType === UT_TRAIN) {
-        const tt = unit.trainType;
-        if (tt === TrainType.Engine || tt === TrainType.TailEngine) {
-          atlasIdx = TRAIN_ENGINE_COL;
-        } else {
-          atlasIdx = unit.loaded
-            ? TRAIN_CARRIAGE_LOADED_COL
-            : TRAIN_CARRIAGE_COL;
-        }
+        // A trade run shows as a single white bundle of goods: only the
+        // lead car is drawn, the cars behind it and the tail are not.
+        if (unit.trainType !== TrainType.Engine) continue;
+        atlasIdx = TRAIN_ENGINE_COL;
       }
 
       if (atlasIdx === undefined) continue;

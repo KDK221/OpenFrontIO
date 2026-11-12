@@ -218,5 +218,11 @@ void main() {
     color = borderColor;
   }
 
+  // Trade runs are a white bundle of goods whoever owns them: the fill white,
+  // the outline a soft grey so it still reads on pale ground.
+  if (vAtlasCol > float(TRAIN_FIRST_COL) - 0.1) {
+    color = gray > 0.6 ? vec3(0.97, 0.95, 0.9) : vec3(0.55, 0.53, 0.5);
+  }
+
   fragColor = vec4(color, texel.a * alphaMul);
 }
