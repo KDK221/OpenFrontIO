@@ -253,6 +253,8 @@ export default defineConfig(({ mode }) => {
       ? JSON.stringify(env.FARO_COLLECTOR_URL)
       : undefined,
     instanceId: JSON.stringify(env.INSTANCE_ID ?? "DEV_ID"),
+    // EDITION=steam in .env (or ?edition=steam in dev) unlocks the Steam perks.
+    edition: env.EDITION === "steam" ? "steam" : undefined,
     manifestHref: buildAssetUrl("manifest.json", assetManifest, cdnBase),
     faviconHref: buildAssetUrl("images/Favicon.svg", assetManifest, cdnBase),
     gameplayScreenshotUrl: buildAssetUrl(

@@ -29,6 +29,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const outDir = path.join(root, "static");
 
+// `--edition=steam` builds the Steam edition: the same page with the Steam
+// perks unlocked (src/client/steam/).
+const edition = process.argv.includes("--edition=steam") ? "steam" : "web";
+
 // Map folders under resources/maps that the game actually offers.
 const KEEP_MAPS = new Set(["samguk", "sengoku", "warringstates", "tutorial"]);
 
@@ -74,6 +78,7 @@ const html = ejs.render(template, {
   // leftover request to api.invalid fails at DNS without reaching anyone.
   jwtAudience: JSON.stringify("invalid"),
   singleplayerOnly: true,
+  edition,
   manifestHref: url("manifest.json"),
   faviconHref: url("images/Favicon.svg"),
   gameplayScreenshotUrl: url("images/GameplayScreenshot.png"),
@@ -82,7 +87,7 @@ const html = ejs.render(template, {
   mobileLogoImageUrl: url("images/OF.png"),
 });
 fs.writeFileSync(indexPath, html);
-console.log("rendered static/index.html (singleplayer only)");
+console.log(`rendered static/index.html (singleplayer only, ${edition} edition)`);
 
 // Unused maps.
 const mapsDir = path.join(outDir, "_assets", "maps");

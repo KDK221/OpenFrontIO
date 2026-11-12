@@ -3158,5 +3158,85 @@
         "Estate": "{name} 장원"
       }
     }
+  },
+  "steam_perks": {
+    "card_title": "스팀판 꾸미기",
+    "card_desc": "영토 무늬 · 나의 깃발 · 칭호",
+    "badge_steam": "STEAM",
+    "badge_locked": "스팀판 전용",
+    "locked_notice": "스팀판 전용 혜택이에요. 여기서 미리 둘러볼 수 있고, 스팀판에서 쓸 수 있어요.",
+    "singleplayer_note": "지금은 혼자 하기 게임에서 적용돼요.",
+    "tab_pattern": "영토 무늬",
+    "tab_flag": "나의 깃발",
+    "tab_title": "칭호",
+    "pattern_none": "없음",
+    "pattern_own_colors": "내 영토 색 그대로",
+    "pattern_color_1": "바탕색",
+    "pattern_color_2": "무늬색",
+    "flag_layout": "모양",
+    "flag_field": "바탕색",
+    "flag_accent": "두 번째 색",
+    "flag_emblem": "문양",
+    "flag_emblem_color": "문양 색",
+    "flag_glyph": "글자 한 자",
+    "flag_glyph_hint": "한자나 한글 한 글자 (예: 王, 龍, 화)",
+    "flag_use": "이 깃발 쓰기",
+    "flag_clear": "기본 깃발로",
+    "flag_in_use": "사용 중",
+    "flag_scenario_note": "시나리오 모드에서는 고른 나라의 깃발을 씁니다.",
+    "title_none": "칭호 없음",
+    "title_locked": "잠김",
+    "title_hint": "고른 칭호는 게임에서 이름 앞에 [명장]처럼 보여요.",
+    "new_title": "새 칭호를 얻었어요!",
+    "new_title_hint": "첫 화면의 스팀판 꾸미기에서 고를 수 있어요.",
+    "close": "닫기",
+    "pattern": {
+      "silk": "비단",
+      "lattice": "문살",
+      "wave": "물결",
+      "scales": "기와",
+      "stonewall": "돌담",
+      "dots": "점박이",
+      "diagonal": "빗살",
+      "brocade": "금박"
+    },
+    "layout": {
+      "plain": "단색",
+      "hsplit": "위아래 반",
+      "vsplit": "좌우 반",
+      "diagonal": "대각",
+      "border": "테두리",
+      "band": "가운데 띠",
+      "quarters": "네 칸"
+    },
+    "emblem": {
+      "none": "없음",
+      "sun": "해",
+      "moon": "달",
+      "ring": "고리",
+      "diamond": "마름모",
+      "flower": "꽃",
+      "star": "별"
+    },
+    "title_tag": {
+      "first_win": "패자",
+      "hard_win": "명장",
+      "impossible_win": "군신",
+      "all_scenarios": "천하인",
+      "fire_master": "화신",
+      "thunder_master": "벽력",
+      "plague_master": "역병왕",
+      "conqueror": "정복왕"
+    },
+    "achievement": {
+      "first_win": "게임에서 한 번 승리하기",
+      "hard_win": "어려움 이상 난이도에서 승리하기",
+      "impossible_win": "불가능 난이도에서 승리하기",
+      "all_scenarios": "세 지도의 시나리오를 모두 승리하기",
+      "fire_master": "화공 10번 쓰기",
+      "thunder_master": "벽력거 5번 쓰기",
+      "plague_master": "역병 3번 퍼뜨리기",
+      "conqueror": "한 게임에서 15개 세력 정복하기"
+    }
   }
 }

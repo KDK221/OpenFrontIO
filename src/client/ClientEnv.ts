@@ -407,6 +407,23 @@ export class ClientEnv {
       window.BOOTSTRAP_CONFIG?.singleplayerOnly === true
     );
   }
+  // The Steam build: unlocks the Steam perks. In dev, `?edition=steam` (or
+  // `?edition=web`) switches it for this tab so both can be tried locally.
+  static isSteamEdition(): boolean {
+    if (typeof window === "undefined") return false;
+    const config = window.BOOTSTRAP_CONFIG;
+    if (config?.edition === "steam") return true;
+    if (config?.gameEnv !== "dev") return false;
+    try {
+      const asked = new URLSearchParams(window.location.search).get("edition");
+      if (asked === "steam" || asked === "web") {
+        sessionStorage.setItem("dev.edition", asked);
+      }
+      return sessionStorage.getItem("dev.edition") === "steam";
+    } catch {
+      return false;
+    }
+  }
   // Origin of the WEBSITE this page belongs to (scheme + host, no trailing
   // slash), for links that must leave the game and land on the site — the
   // desktop shell opening account settings in a browser, say.

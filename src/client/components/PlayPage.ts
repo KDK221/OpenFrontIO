@@ -4,6 +4,7 @@ import "./CosmeticBackground";
 import "./NavAccountMenu";
 import "./NavUtilityIcons";
 import "./SoloHero";
+import "./SteamPerksPanel";
 import { translateText } from "../Utils";
 
 @customElement("play-page")
@@ -105,6 +106,8 @@ export class PlayPage extends LitElement {
 
             <!-- Play alone; "play together" (multiplayer) follows below. -->
             <solo-hero class="block mt-2"></solo-hero>
+            <!-- Steam-edition perks (a locked preview in the web edition). -->
+            <steam-perks class="block"></steam-perks>
           </div>
         </div>
 

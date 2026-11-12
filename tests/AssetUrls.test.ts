@@ -90,6 +90,14 @@ describe("AssetUrls", () => {
     expect(buildAssetUrl(first, manifest, "app://openfront")).toBe(first);
   });
 
+  // A Steam-edition banner is an SVG data: URL, which has no "//".
+  test("returns data: and blob: URLs unchanged", () => {
+    const svg = "data:image/svg+xml;charset=utf-8,%3Csvg%3E%3C%2Fsvg%3E";
+    expect(buildAssetUrl(svg, {}, "https://cdn.example.com")).toBe(svg);
+    const blob = "blob:https://example.com/0a1b";
+    expect(buildAssetUrl(blob, {}, "https://cdn.example.com")).toBe(blob);
+  });
+
   // Manifest miss → keep same-origin; the CDN only serves what was explicitly
   // hashed and uploaded, so unknown paths must not be prefixed.
   test("does not prefix baseUrl on manifest misses", () => {

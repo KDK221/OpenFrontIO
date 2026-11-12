@@ -42,6 +42,7 @@ import {
   purchaseOutcomeMessage,
   startPurchase,
 } from "./Payments";
+import { applySteamCosmetics } from "./steam/SteamPerkStore";
 import { STEAM_TIER_CHANGE_IN_APP } from "./SubscriptionPolicy";
 import { UserSettings } from "./UserSettings";
 import { translateText } from "./Utils";
@@ -1668,7 +1669,10 @@ export async function getPlayerCosmetics(
     result.verified = true;
   }
 
-  return result;
+  // Steam edition: the player's own pattern and banner. This path only feeds
+  // games this client starts itself (singleplayer); multiplayer joins send
+  // refs, which the server resolves.
+  return applySteamCosmetics(result);
 }
 
 export function translateCosmetic(prefix: string, name: string): string {

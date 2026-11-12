@@ -241,3 +241,82 @@ body.hanji-theme:not(.in-game)
 .adblock-wall-primary:hover {
   background: #e0674b;
 }
+
+/* Steam-edition perks: the home-screen card and its window. */
+.steam-perks-card {
+  background:
+    linear-gradient(90deg, rgba(217, 168, 74, 0.16), rgba(28, 22, 17, 0.9) 70%),
+    var(--hanji-lacquer);
+  border-color: rgba(217, 168, 74, 0.3);
+  font-family: var(--hanji-serif);
+}
+
+.steam-perks-card:hover {
+  border-color: rgba(217, 168, 74, 0.65);
+}
+
+.steam-perks-badge {
+  background: rgba(217, 168, 74, 0.18);
+  color: var(--hanji-gold);
+  border: 1px solid rgba(217, 168, 74, 0.45);
+  font-family: system-ui, sans-serif;
+}
+
+.steam-perks-panel {
+  background: var(--hanji-lacquer);
+  border-color: rgba(217, 168, 74, 0.45);
+  font-family: var(--hanji-serif);
+}
+
+.steam-perks-locked {
+  background: rgba(210, 85, 58, 0.15);
+  border: 1px solid rgba(210, 85, 58, 0.4);
+  color: var(--hanji-paper);
+}
+
+.steam-perks-tab {
+  color: rgba(239, 230, 210, 0.6);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.steam-perks-tab.is-active {
+  color: var(--hanji-paper);
+  border-bottom-color: var(--hanji-vermilion);
+}
+
+.steam-perks-option,
+.steam-perks-chip {
+  border-color: rgba(239, 230, 210, 0.15);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--hanji-paper);
+}
+
+.steam-perks-option:not(:disabled):hover,
+.steam-perks-chip:hover {
+  border-color: rgba(217, 168, 74, 0.6);
+}
+
+.steam-perks-option.is-active,
+.steam-perks-chip.is-active {
+  border-color: var(--hanji-gold);
+  box-shadow: 0 0 0 1px var(--hanji-gold) inset;
+}
+
+.steam-perks-option:disabled {
+  cursor: default;
+}
+
+.steam-perks-primary {
+  background: var(--hanji-vermilion);
+  color: var(--hanji-paper);
+}
+
+.steam-perks-primary:not(:disabled):hover {
+  background: #e0674b;
+}
+
+.steam-perks-title-tag {
+  background: rgba(217, 168, 74, 0.18);
+  color: var(--hanji-gold);
+}

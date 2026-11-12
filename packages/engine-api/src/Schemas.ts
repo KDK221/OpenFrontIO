@@ -180,6 +180,15 @@ export const ClanTagSchema = z
   .regex(/^[a-zA-Z0-9]{2,5}$/)
   .nullable();
 
+// The tag a player carries into a game: a clan tag, or (Steam edition) an
+// earned title such as "명장" or "General", shown in the same "[tag]" slot.
+// Only the in-game player record is this wide; clan tags themselves, and what
+// a multiplayer join may send, stay ClanTagSchema.
+export const PlayerTagSchema = z
+  .string()
+  .regex(/^[\p{L}\p{N}]{2,8}$/u)
+  .nullable();
+
 //
 // Utility types
 //
@@ -625,7 +634,7 @@ export const TurnSchema = z.object({
 export const PlayerSchema = z.object({
   clientID: ID,
   username: UsernameSchema,
-  clanTag: ClanTagSchema,
+  clanTag: PlayerTagSchema,
   isLobbyCreator: z.boolean().optional(),
   friends: z.array(ID).optional(),
   // Server-stamped team slot for matchmade team games (index into the

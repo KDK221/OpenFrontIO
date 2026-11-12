@@ -58,6 +58,9 @@ import {
   reconcileXp,
 } from "../../ProvisionalXpAtDeath";
 import { PlaySoundEffectEvent } from "../../sound/Sounds";
+import { recordSteamGameEnd } from "../../steam/SteamPerkStore";
+import { summarizeStats, type AchievementId } from "../../steam/SteamPerks";
+import { titleTagText } from "../../steam/SteamTitle";
 import { SendWinnerEvent } from "../../Transport";
 import { GameView } from "../../view";
 
@@ -126,6 +129,11 @@ export class WinModal extends LitElement implements Controller {
 
   @state()
   private isRankedGame = false;
+
+  // Steam edition: titles this game just unlocked, shown under the heading.
+  @state()
+  private newSteamTitles: AchievementId[] = [];
+  private steamGameRecorded = false;
 
   @state()
   private patternContent: TemplateResult | null = null;
@@ -204,6 +212,7 @@ export class WinModal extends LitElement implements Controller {
             .gameType=${this.game?.config().gameConfig().gameType ?? null}
             @xp-legend=${this.onXpLegend}
           ></game-xp-panel>
+          ${this.renderSteamTitles()}
           ${this.innerHtml()}
         </div>
         <!-- Leaving is the quieter action, on the left; staying in the game
@@ -1111,6 +1120,52 @@ export class WinModal extends LitElement implements Controller {
     });
     // After the vote, so a figure from the end has what was voted.
     if (winUpdates.length > 0) void this.updateXp(true);
+    if (winUpdates.length > 0) this.recordSteamProgress(winUpdates[0]);
+  }
+
+  // Steam edition, singleplayer: counts the game toward achievements once.
+  private recordSteamProgress(wu: {
+    allPlayersStats: AllPlayersStats;
+  }): void {
+    if (this.steamGameRecorded) return;
+    const config = this.game.config().gameConfig();
+    if (config.gameType !== GameType.Singleplayer) return;
+    const me = this.game.myPlayer();
+    const clientID = me?.clientID() ?? null;
+    if (me === null || clientID === null || !me.hasSpawned()) return;
+    this.steamGameRecorded = true;
+    const unlocked = recordSteamGameEnd({
+      won: this.isWin,
+      difficulty: String(config.difficulty),
+      map: String(config.gameMap),
+      scenario: (config.scenarioFaction ?? null) !== null,
+      ...summarizeStats(wu.allPlayersStats[clientID]),
+    });
+    if (unlocked.length > 0) this.newSteamTitles = unlocked;
+  }
+
+  private renderSteamTitles(): TemplateResult | null {
+    if (this.newSteamTitles.length === 0) return null;
+    return html`<div
+      class="mb-4 rounded-lg border border-amber-400/40 bg-amber-900/30 px-4 py-3 text-center"
+      data-steam-titles
+    >
+      <div class="text-sm text-amber-200/80">
+        ${translateText("steam_perks.new_title")}
+      </div>
+      <div class="mt-1 flex flex-wrap justify-center gap-2">
+        ${this.newSteamTitles.map(
+          (id) =>
+            html`<span
+              class="rounded bg-amber-500/20 px-2 py-0.5 text-lg font-bold text-amber-100"
+              >[${titleTagText(id)}]</span
+            >`,
+        )}
+      </div>
+      <div class="mt-1 text-xs text-white/60">
+        ${translateText("steam_perks.new_title_hint")}
+      </div>
+    </div>`;
   }
 
   private playEndOfGameSound(): void {

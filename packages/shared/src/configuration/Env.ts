@@ -46,6 +46,9 @@ declare global {
       // A server-less static build (scripts/buildStatic.ts): the page has no
       // game server or API behind it, so only singleplayer is offered.
       singleplayerOnly?: boolean;
+      // The Steam build (scripts/buildStatic.ts --edition=steam): unlocks the
+      // Steam perks (territory patterns, banner maker, titles).
+      edition?: "steam";
     };
   }
 }

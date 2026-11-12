@@ -59,6 +59,7 @@ import {
   toOptionalNumber,
 } from "./utilities/GameConfigHelpers";
 
+import { steamTitleTag } from "./steam/SteamTitle";
 import { terrainMapFileLoader } from "./TerrainMapFileLoader";
 
 /**
@@ -746,7 +747,7 @@ export class SinglePlayerModal extends BaseModal {
             {
               clientID: generateID(),
               username: resolvedName.name,
-              clanTag: usernameInput?.getClanTag() ?? null,
+              clanTag: steamTitleTag() ?? usernameInput?.getClanTag() ?? null,
               cosmetics,
             },
           ],
@@ -1230,7 +1231,7 @@ export class SinglePlayerModal extends BaseModal {
             {
               clientID,
               username: resolvedName.name,
-              clanTag: usernameInput?.getClanTag() ?? null,
+              clanTag: steamTitleTag() ?? usernameInput?.getClanTag() ?? null,
               cosmetics,
             },
           ],
@@ -1351,7 +1352,7 @@ export class SinglePlayerModal extends BaseModal {
                 // the clientID its intents carry.
                 clientID: human.clientID,
                 username: resolvedName.name,
-                clanTag: usernameInput?.getClanTag() ?? null,
+                clanTag: steamTitleTag() ?? usernameInput?.getClanTag() ?? null,
                 cosmetics,
               },
             ],
