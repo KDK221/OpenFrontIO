@@ -7,6 +7,7 @@ import {
 import { ConstructionExecution } from "@openfront/engine/execution/ConstructionExecution";
 import { MirvExecution } from "@openfront/engine/execution/MIRVExecution";
 import { PlagueExecution } from "@openfront/engine/execution/PlagueExecution";
+import { PlayerExecution } from "@openfront/engine/execution/PlayerExecution";
 import { Game, Player } from "@openfront/engine/game/Game";
 import { setup } from "./util/Setup";
 import { executeTicks } from "./util/utils";
@@ -114,6 +115,44 @@ describe("Plague (MIRV slot)", () => {
     expect(plague.infectedPlayers()).not.toContain(a);
     expect(a.troops()).toBeGreaterThanOrEqual(100_000);
     expect(b.troops()).toBeLessThan(100_000 * 0.6);
+  });
+
+  // With troop growth running, as in a real game. At 1% a step the target
+  // regrew nearly everything and the plague looked like it did nothing.
+  test("still takes a big bite out of a growing army", async () => {
+    async function run(withPlague: boolean) {
+      const game = await setup("plains", { infiniteGold: true, instantBuild: true });
+      const a = game.addPlayer(new PlayerInfo("a", PlayerType.Human, null, "a"));
+      const b = game.addPlayer(new PlayerInfo("b", PlayerType.Human, null, "b"));
+      conquerRect(game, a, 0, 0, 30, 30);
+      conquerRect(game, b, 40, 0, 90, 60);
+      game.addExecution(new PlayerExecution(a), new PlayerExecution(b));
+      while (game.inSpawnPhase()) game.executeNextTick();
+      a.buildUnit(UnitType.MissileSilo, game.ref(5, 5), {});
+      executeTicks(game, 600);
+      if (withPlague) game.addExecution(new PlagueExecution(a, game.ref(60, 30)));
+      executeTicks(game, PlagueExecution.DURATION);
+      return b.troops();
+    }
+    const healthy = await run(false);
+    const plagued = await run(true);
+    expect(plagued).toBeLessThan(healthy * 0.7);
+  });
+
+  test("reports the troops it took when it ends", async () => {
+    const { game, a, b } = await plagueGame();
+    const spy = vi.spyOn(game, "displayMessage");
+    const plague = new PlagueExecution(a, game.ref(15, 5));
+    game.addExecution(plague);
+    executeTicks(game, PlagueExecution.DURATION + 5);
+    expect(plague.troopsLost(b)).toBeGreaterThan(0);
+    const keys = spy.mock.calls.map((c) => c[0]);
+    expect(keys).toContain("events_display.plague_ended");
+    expect(keys).toContain("events_display.plague_ended_victim");
+    const toCaster = spy.mock.calls.find(
+      (c) => c[0] === "events_display.plague_ended" && c[2] === a.id(),
+    );
+    expect(toCaster?.[4]).toMatchObject({ name: b.displayName() });
   });
 
   test("ends after its duration and puts the Siege Camp on cooldown", async () => {

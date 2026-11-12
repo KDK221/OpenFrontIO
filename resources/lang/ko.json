@@ -864,7 +864,9 @@
     "mirv_inbound": "☠️☠️☠️ {name} - 역병이 퍼진다 ☠️☠️☠️",
     "plague_released": "☠️ {name}에 역병 발동! {seconds}초 동안 병력이 감소합니다. 공성 진지는 재사용 대기 중입니다.",
     "naval_invasion_inbound": "{name}의 수군 상륙 접근 ({troops})",
-    "sent_emoji_all": "모두에게 보냄: {emoji}"
+    "sent_emoji_all": "모두에게 보냄: {emoji}",
+    "plague_ended": "☠️ {name}의 역병이 끝났습니다. 병력 {troops} 감소.",
+    "plague_ended_victim": "☠️ 역병이 지나갔습니다. 병력 {troops}을(를) 잃었습니다."
   },
   "featured_stream": {
     "expand": "펼치기",

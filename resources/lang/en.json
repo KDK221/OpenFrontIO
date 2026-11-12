@@ -1076,6 +1076,8 @@
     "missile_intercepted": "Ballista tower shot down {unit}",
     "naval_invasion_inbound": "Naval invasion incoming from {name} ({troops})",
     "no_boats_available": "No boats available, max {max}",
+    "plague_ended": "☠️ The plague on {name} has run its course: {troops} troops lost.",
+    "plague_ended_victim": "☠️ The plague has passed. You lost {troops} troops.",
     "plague_failed": "Plague not released. Check the target territory, gold, and Siege Camp cooldown. No gold was charged.",
     "plague_released": "☠️ Plague released on {name}! Troops drain for {seconds}s. The Siege Camp is now reloading.",
     "received_gold_from_captured_ship": "Received {gold} gold from ship captured from {name}",
