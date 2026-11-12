@@ -14,9 +14,9 @@
  *   Missiles (nukes, shells, SAM, MIRV warheads) → rendered above structures
  *
  * Atlas layout (12 columns × 13px cells, pre-built by generate-sprite-atlases.mjs):
- *   Col 0: Transport (5×5)
- *   Col 1: Trade Ship (5×5)
- *   Col 2: Warship (11×11)
+ *   Col 0: Transport (10×8, a small sailboat)
+ *   Col 1: Trade Ship (13×10, a merchant junk with cargo)
+ *   Col 2: Warship (13×10, a two-sail junk)
  *   Col 3: Atom Bomb (7×7)
  *   Col 4: Hydrogen Bomb (9×9)
  *   Col 5: MIRV (13×13, grayscale colorized)
@@ -27,6 +27,7 @@
  *           drawn as TRADE_RUN_BUNDLES of them along the train
  *   Col 10: Train Carriage (5×5) — unused
  *   Col 11: Train Carriage Loaded (5×5) — unused
+ *   Col 12: Korean warship (13×10, a panokseon) — Samguk's warships
  *
  * Data flow:
  *   FrameSnapshot.units → filter by typeToAtlasIdx → instance VBO → GPU
@@ -87,6 +88,9 @@ const UNIT_ORDER = [
   "TrainEngine",
   "TrainCarriage",
   "TrainCarriageLoaded",
+  // Not a unit type: the Korean warship (panokseon) drawn for warships on the
+  // Samguk map (see the override in the constructor).
+  "KoreanWarship",
 ] as const;
 
 const ATLAS_COLS = UNIT_ORDER.length;
@@ -97,9 +101,14 @@ const HYDROGEN_BOMB_COL = UNIT_ORDER.indexOf(UT_HYDROGEN_BOMB);
 /** Atlas column of the warship — gates the warship cosmetic effect. */
 const WARSHIP_COL = UNIT_ORDER.indexOf(UT_WARSHIP);
 
-/** First atlas column of the train sprites (engine, carriage, loaded
- *  carriage are contiguous) — gates the train cosmetic effect. */
+/** Atlas column of the Samguk map's warship (panokseon); behaves as a warship. */
+const KOREAN_WARSHIP_COL = UNIT_ORDER.indexOf("KoreanWarship");
+
+/** First and last atlas columns of the train sprites (engine, carriage,
+ *  loaded carriage are contiguous) — gate the train cosmetic effect and the
+ *  white trade-run bundles. */
 const TRAIN_FIRST_COL = UNIT_ORDER.indexOf("TrainEngine");
+const TRAIN_LAST_COL = UNIT_ORDER.indexOf("TrainCarriageLoaded");
 
 // ---------------------------------------------------------------------------
 // Instance data layout
@@ -353,9 +362,9 @@ export class UnitPass {
       }
     }
 
-    // Korean scenario warships use the existing boat hull.
+    // Korean scenario warships are panokseon rather than junks.
     if (config.gameConfig().gameMap === GameMapType.Samguk) {
-      this.typeToAtlasCol.set(UT_WARSHIP, UNIT_ORDER.indexOf(UT_TRANSPORT));
+      this.typeToAtlasCol.set(UT_WARSHIP, KOREAN_WARSHIP_COL);
     }
 
     // Compile shaders
@@ -366,8 +375,10 @@ export class UnitPass {
         PALETTE_SIZE: getPaletteSize(),
         ATLAS_COLS,
         WARSHIP_COL,
+        KOREAN_WARSHIP_COL,
         WARSHIP_EFFECT_ROW_BASE: WARSHIP_EFFECT_BLOCK * MAX_TRAIL_COLORS,
         TRAIN_FIRST_COL,
+        TRAIN_LAST_COL,
         TRAIN_EFFECT_ROW_BASE: TRAIN_EFFECT_BLOCK * MAX_TRAIL_COLORS,
       }),
       "UnitPass",

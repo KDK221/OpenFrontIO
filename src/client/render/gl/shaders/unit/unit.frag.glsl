@@ -148,7 +148,8 @@ void main() {
   // the player color so ownership stays readable, and combat signals win: the
   // angry (attacking) override below replaces this with red, and the retreat
   // blink still darkens the center band.
-  if (abs(vAtlasCol - float(WARSHIP_COL)) < 0.1) {
+  if (abs(vAtlasCol - float(WARSHIP_COL)) < 0.1 ||
+      abs(vAtlasCol - float(KOREAN_WARSHIP_COL)) < 0.1) {
     vec3 effectRGB;
     float dn = (vCellUV.x + vCellUV.y) * 0.5; // sprite diagonal, 0..1
     if (spriteEffectColor(WARSHIP_EFFECT_ROW_BASE, int(vOwnerID + 0.5), dn, true, effectRGB)) {
@@ -165,7 +166,8 @@ void main() {
   // 5×5 train sprites fill only the middle of the 13-tile unit cell, so an
   // icon-space gradient would show a sliver of the palette per car, whereas a
   // world-space one runs along the whole train.
-  if (vAtlasCol > float(TRAIN_FIRST_COL) - 0.1) {
+  if (vAtlasCol > float(TRAIN_FIRST_COL) - 0.1 &&
+      vAtlasCol < float(TRAIN_LAST_COL) + 0.1) {
     vec3 effectRGB;
     float diag = vWorldPos.x + vWorldPos.y;
     if (spriteEffectColor(TRAIN_EFFECT_ROW_BASE, int(vOwnerID + 0.5), diag, false, effectRGB)) {
@@ -220,7 +222,8 @@ void main() {
 
   // Trade runs are a white bundle of goods whoever owns them: the fill white,
   // the outline a soft grey so it still reads on pale ground.
-  if (vAtlasCol > float(TRAIN_FIRST_COL) - 0.1) {
+  if (vAtlasCol > float(TRAIN_FIRST_COL) - 0.1 &&
+      vAtlasCol < float(TRAIN_LAST_COL) + 0.1) {
     color = gray > 0.6 ? vec3(0.97, 0.95, 0.9) : vec3(0.55, 0.53, 0.5);
   }
 
