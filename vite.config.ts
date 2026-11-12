@@ -255,6 +255,9 @@ export default defineConfig(({ mode }) => {
     instanceId: JSON.stringify(env.INSTANCE_ID ?? "DEV_ID"),
     // EDITION=steam in .env (or ?edition=steam in dev) unlocks the Steam perks.
     edition: env.EDITION === "steam" ? "steam" : undefined,
+    // This fork has no OpenFront account/cluster API: the dev page talks only
+    // to the local game server. OPENFRONT_API=1 restores the API behaviour.
+    selfHosted: env.OPENFRONT_API === "1" ? undefined : true,
     manifestHref: buildAssetUrl("manifest.json", assetManifest, cdnBase),
     faviconHref: buildAssetUrl("images/Favicon.svg", assetManifest, cdnBase),
     gameplayScreenshotUrl: buildAssetUrl(
@@ -510,6 +513,10 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 9000,
       host: process.env.VITE_HOST === "lan",
+      // Lets a friend open the dev server through a Cloudflare quick tunnel
+      // (`cloudflared tunnel --url http://localhost:9000`) for a multiplayer
+      // test; Vite otherwise refuses hosts other than localhost.
+      allowedHosts: [".trycloudflare.com"],
       // Automatically open the browser when the server starts
       open: process.env.SKIP_BROWSER_OPEN !== "true",
       proxy: {

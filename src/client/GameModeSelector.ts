@@ -676,7 +676,7 @@ export class GameModeSelector extends LitElement {
         ${translateText("main.play_together")}
       </h2>
       <div
-        class="grid grid-cols-3 gap-4 sm:compact:gap-3 h-14 sm:col-span-2 sm:row-start-3"
+        class="grid ${ClientEnv.selfHosted() ? "grid-cols-2" : "grid-cols-3"} gap-4 sm:compact:gap-3 h-14 sm:col-span-2 sm:row-start-3"
       >
         ${this.renderSmallActionCard(
           translateText("main.create"),
@@ -685,7 +685,12 @@ export class GameModeSelector extends LitElement {
           undefined,
           true,
         )}
-        ${this.renderSmallActionCard(
+        ${
+          // Ranked matchmaking runs on the OpenFront API, which a self-hosted
+          // server does not have.
+          ClientEnv.selfHosted()
+            ? nothing
+            : this.renderSmallActionCard(
           translateText("mode_selector.ranked_title"),
           this.openRankedMenu,
           SECONDARY_ACTION,
@@ -704,7 +709,8 @@ export class GameModeSelector extends LitElement {
                 small: true,
               })
             : nothing,
-        )}
+        )
+        }
         ${this.renderSmallActionCard(
           translateText("main.join"),
           this.openJoinLobby,

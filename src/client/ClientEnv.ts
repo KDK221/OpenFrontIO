@@ -407,6 +407,14 @@ export class ClientEnv {
       window.BOOTSTRAP_CONFIG?.singleplayerOnly === true
     );
   }
+  // Self-hosted: no OpenFront API behind this page, only our own game
+  // server (see Env.ts). Read straight off the page like singleplayerOnly.
+  static selfHosted(): boolean {
+    return (
+      typeof window !== "undefined" &&
+      window.BOOTSTRAP_CONFIG?.selfHosted === true
+    );
+  }
   // The Steam build: unlocks the Steam perks. In dev, `?edition=steam` (or
   // `?edition=web`) switches it for this tab so both can be tried locally.
   static isSteamEdition(): boolean {

@@ -49,6 +49,11 @@ declare global {
       // The Steam build (scripts/buildStatic.ts --edition=steam): unlocks the
       // Steam perks (territory patterns, banner maker, titles).
       edition?: "steam";
+      // Self-hosted: there is no OpenFront account/cluster API behind this
+      // page, only our own game server. Multiplayer goes straight to the
+      // page's server (no server-list lookup, no reachability gating) and
+      // features that need the API (ranked) are hidden.
+      selfHosted?: boolean;
     };
   }
 }

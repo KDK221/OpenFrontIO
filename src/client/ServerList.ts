@@ -258,6 +258,9 @@ export function backendReachable(): boolean | null {
  * bug, and the reason getDesktopUpdateState() exists in the same shape.
  */
 export function backendUnreachableConfirmed(): boolean {
+  // Self-hosted: there is no list API to be down; the page's own server is
+  // the whole backend.
+  if (ClientEnv.selfHosted()) return false;
   return (
     reachable === false && consecutiveFailures >= CONFIRM_OUTAGE_AFTER_FAILURES
   );
@@ -439,6 +442,8 @@ function fetchOnce(): Promise<ServerList | null> {
  */
 export function startServerListPolling(): void {
   if (polling) return;
+  // Self-hosted: no list API to poll; ClientEnv answers from the page.
+  if (ClientEnv.selfHosted()) return;
   try {
     if (safeSite() === undefined) return;
     if (isReplayShellHost(window.location.hostname)) return;
@@ -554,6 +559,9 @@ export function setServerListInGame(value: boolean): void {
  * still routes.
  */
 export async function ensureServerList(): Promise<ServerListStatus> {
+  // Self-hosted: the page's own server is the only one; never wait on a
+  // list API that does not exist.
+  if (ClientEnv.selfHosted()) return "fallback";
   try {
     if (cached === null) {
       // Join the attempt in flight (the page-load one, usually); otherwise

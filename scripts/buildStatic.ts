@@ -78,6 +78,7 @@ const html = ejs.render(template, {
   // leftover request to api.invalid fails at DNS without reaching anyone.
   jwtAudience: JSON.stringify("invalid"),
   singleplayerOnly: true,
+  selfHosted: true,
   edition,
   manifestHref: url("manifest.json"),
   faviconHref: url("images/Favicon.svg"),
