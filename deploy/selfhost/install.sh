@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # One-time setup of a self-hosted multiplayer server on a fresh Ubuntu VM
-# (made for an Oracle Cloud Ampere A1 instance; any Ubuntu 22.04+ works).
+# (Oracle Cloud Ampere A1, Vultr, or any Ubuntu 22.04+ with 1 GB RAM or more).
 #
 #   curl -fsSL https://raw.githubusercontent.com/KDK221/OpenFrontIO/samguk-skeleton/deploy/selfhost/install.sh | bash
 #   or, with your own domain already pointing at this server:
@@ -13,6 +13,18 @@ set -euo pipefail
 REPO="https://github.com/KDK221/OpenFrontIO.git"
 BRANCH="${BRANCH:-samguk-skeleton}"
 DIR="${DIR:-$HOME/game-server}"
+
+echo "==> Making sure there is enough memory to build"
+# The build (vite + tsc) needs a few GB. On a small VM (1-2 GB RAM) add a
+# swap file once, so the build runs slower instead of being killed.
+MEM_MB="$(awk '/MemTotal/ {print int($2/1024)}' /proc/meminfo)"
+if [ "$MEM_MB" -lt 6000 ] && ! swapon --show | grep -q /swapfile; then
+	sudo fallocate -l 4G /swapfile
+	sudo chmod 600 /swapfile
+	sudo mkswap /swapfile
+	sudo swapon /swapfile
+	echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab >/dev/null
+fi
 
 echo "==> Installing Docker"
 if ! command -v docker >/dev/null 2>&1; then
