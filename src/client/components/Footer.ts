@@ -61,6 +61,15 @@ export class Footer extends LitElement {
               />
               <span data-i18n="main.source_code"></span>
             </a>
+            <!-- CC BY-SA: OpenFront's art and sounds, and the map data, are
+                 credited here. -->
+            <a
+              href="https://github.com/KDK221/OpenFrontIO/blob/samguk-skeleton/CREDITS.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xs opacity-60 hover:opacity-100 transition-all"
+              data-i18n="main.credits"
+            ></a>
           </div>
           <!-- Steam build only. The nav bar shows the game version alone so it
                reads the same across web and Steam; the full string, shell
