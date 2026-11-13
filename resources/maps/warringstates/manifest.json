@@ -4,17 +4,17 @@
   "id": "WarringStates",
   "map": {
     "height": 2024,
-    "num_land_tiles": 1570704,
+    "num_land_tiles": 1552753,
     "width": 2248
   },
   "map16x": {
     "height": 506,
-    "num_land_tiles": 94112,
+    "num_land_tiles": 92050,
     "width": 562
   },
   "map4x": {
     "height": 1012,
-    "num_land_tiles": 386972,
+    "num_land_tiles": 381159,
     "width": 1124
   },
   "name": "Three Kingdoms — Warlords",

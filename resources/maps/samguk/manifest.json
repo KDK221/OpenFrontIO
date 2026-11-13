@@ -5,17 +5,17 @@
   "id": "Samguk",
   "map": {
     "height": 2188,
-    "num_land_tiles": 1129877,
+    "num_land_tiles": 1122995,
     "width": 1088
   },
   "map16x": {
     "height": 547,
-    "num_land_tiles": 68051,
+    "num_land_tiles": 67158,
     "width": 272
   },
   "map4x": {
     "height": 1094,
-    "num_land_tiles": 278768,
+    "num_land_tiles": 276395,
     "width": 544
   },
   "name": "Samguk",
