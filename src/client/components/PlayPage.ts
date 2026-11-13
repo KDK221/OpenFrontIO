@@ -106,12 +106,14 @@ export class PlayPage extends LitElement {
 
             <!-- Play alone; "play together" (multiplayer) follows below. -->
             <solo-hero class="block mt-2"></solo-hero>
-            <!-- Steam-edition perks (a locked preview in the web edition). -->
-            <steam-perks class="block"></steam-perks>
           </div>
         </div>
 
         <game-mode-selector></game-mode-selector>
+
+        <!-- Steam-edition perks (a locked preview in the web edition), after
+             both ways to play. -->
+        <steam-perks class="block mt-4 px-4 sm:px-0"></steam-perks>
       </div>
     `;
   }
