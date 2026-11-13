@@ -40,6 +40,11 @@ for port in 80 443; do
 		sudo iptables -I INPUT 1 -p tcp --dport "$port" -j ACCEPT
 	fi
 done
+# Vultr's Ubuntu images turn on ufw with only SSH allowed.
+if command -v ufw >/dev/null 2>&1 && sudo ufw status | grep -q "Status: active"; then
+	sudo ufw allow 80/tcp
+	sudo ufw allow 443/tcp
+fi
 if command -v netfilter-persistent >/dev/null 2>&1; then
 	sudo netfilter-persistent save
 fi
