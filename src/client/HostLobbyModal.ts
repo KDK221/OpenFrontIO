@@ -911,10 +911,11 @@ export class HostLobbyModal extends BaseModal {
     this.leaveLobbyOnClose = true;
     this.startLobbyUpdates();
     void getUserMe().then((userMe) => {
-      // Dev skips the entitlement gate (matching the server) so the
-      // listing flow is testable locally.
+      // Dev and self-hosted servers skip the entitlement gate (matching the
+      // server): there is no subscription to check.
       this.canListPublicly =
         ClientEnv.env() === GameEnv.Dev ||
+        ClientEnv.selfHosted() ||
         (userMe !== false && userMe.player.canCreatePublicLobbies);
       this.hardBalance =
         userMe === false ? 0 : (userMe.player.currency?.hard ?? 0);

@@ -2304,6 +2304,8 @@ class Client {
   ): Promise<string | null> {
     if (
       ClientEnv.env() === GameEnv.Dev ||
+      // A self-hosted server verifies no token (ServerEnv.hasApi).
+      ClientEnv.selfHosted() ||
       isDesktopShell() ||
       // Single-player and replays: no server to verify a token against (and
       // on the CDN replay shells Turnstile cannot load at all). Shared with
