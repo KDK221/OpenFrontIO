@@ -676,14 +676,12 @@ export class GameModeSelector extends LitElement {
         ${translateText("main.play_together")}
       </h2>
       <div
-        class="grid ${ClientEnv.selfHosted() ? "grid-cols-2" : "grid-cols-3"} gap-4 sm:compact:gap-3 h-14 sm:col-span-2 sm:row-start-3"
+        class="grid ${ClientEnv.selfHosted() ? "grid-cols-2" : "grid-cols-3"} gap-4 sm:compact:gap-3 sm:col-span-2 sm:row-start-3"
       >
-        ${this.renderSmallActionCard(
+        ${this.renderTogetherCard(
           translateText("main.create"),
+          translateText("main.create_desc"),
           this.openHostLobby,
-          SECONDARY_ACTION,
-          undefined,
-          true,
         )}
         ${
           // Ranked matchmaking runs on the OpenFront API, which a self-hosted
@@ -711,12 +709,11 @@ export class GameModeSelector extends LitElement {
             : nothing,
         )
         }
-        ${this.renderSmallActionCard(
+        ${this.renderTogetherCard(
           translateText("main.join"),
+          translateText("main.join_desc"),
           this.openJoinLobby,
-          SECONDARY_ACTION,
           this.hostedLobbyCount(),
-          true,
         )}
       </div>
 
@@ -949,7 +946,7 @@ export class GameModeSelector extends LitElement {
         <button
           @click=${this.openDetailedView}
           ?disabled=${!this.inputValid}
-          class="group/upcoming flex w-full items-center justify-between gap-2 rounded-lg border border-white/10 bg-white/[0.04] py-1.5 pl-2.5 pr-1.5 transition-colors hover:border-malibu-blue/50 hover:bg-malibu-blue/15 ${
+          class="lobby-upcoming group/upcoming flex w-full items-center justify-between gap-2 rounded-lg border border-white/10 bg-white/[0.04] py-1.5 pl-2.5 pr-1.5 transition-colors hover:border-malibu-blue/50 hover:bg-malibu-blue/15 ${
             this.inputValid ? "" : DISABLED
           }"
         >
@@ -991,6 +988,57 @@ export class GameModeSelector extends LitElement {
 
   private hostedLobbyCount(): number {
     return this.lobbies?.games?.hosted?.length ?? 0;
+  }
+
+  // The "play together" actions, drawn as cards in the solo card's style:
+  // a title, one line on what it does, and an arrow. Gated like the small
+  // action cards (shouldBlockMultiplayerAction) and disabled with them.
+  private renderTogetherCard(
+    title: string,
+    desc: string,
+    onClick: () => void,
+    badge?: number,
+  ) {
+    const blocked = shouldBlockMultiplayerAction(
+      this.desktopUpdateState,
+      this.desktopSessionState,
+      this.backendOutage,
+    );
+    return html`
+      <button
+        type="button"
+        @click=${onClick}
+        ?disabled=${!this.inputValid}
+        aria-disabled=${blocked}
+        class="together-card group relative w-full h-full text-left rounded-xl border p-3 sm:p-4 flex items-center gap-3 transition-all active:scale-[0.99] ${
+          !this.inputValid
+            ? DISABLED
+            : blocked
+              ? "opacity-50 cursor-not-allowed"
+              : ""
+        }"
+      >
+        <span class="min-w-0 flex-1">
+          <span class="block text-lg sm:text-xl font-bold text-white">
+            ${title}
+          </span>
+          <span class="block text-xs text-white/65 mt-0.5">${desc}</span>
+        </span>
+        <span
+          class="shrink-0 text-2xl text-white/50 group-hover:text-white group-hover:translate-x-1 transition-all"
+          aria-hidden="true"
+          >›</span
+        >
+        ${
+          badge
+            ? html`<span
+                class="absolute -top-2 -right-2 min-w-[1.375rem] h-[1.375rem] px-1.5 flex items-center justify-center rounded-full bg-red-500 text-white text-xs font-bold tracking-normal"
+                >${badge}</span
+              >`
+            : nothing
+        }
+      </button>
+    `;
   }
 
   private renderSmallActionCard(

@@ -216,6 +216,48 @@ body.hanji-theme:not(.in-game)
   color: var(--hanji-gold);
 }
 
+/* "Play together" actions: create / join lobby, in the solo card's style
+   with a cooler lacquer so the two sections read apart. */
+.together-card {
+  background:
+    linear-gradient(90deg, rgba(217, 168, 74, 0.14), rgba(28, 22, 17, 0.92) 75%),
+    var(--hanji-lacquer);
+  border-color: rgba(217, 168, 74, 0.3);
+  font-family: var(--hanji-serif);
+}
+
+.together-card:not(:disabled):hover {
+  border-color: rgba(217, 168, 74, 0.7);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* Public lobby cards and the "upcoming" bar: a lacquer frame like the
+   cards above them, map art inside. */
+body.hanji-theme .lobby-card {
+  border: 1px solid rgba(217, 168, 74, 0.3);
+  background-color: var(--hanji-lacquer);
+}
+
+body.hanji-theme .lobby-card:hover {
+  border-color: rgba(217, 168, 74, 0.7);
+}
+
+body.hanji-theme .lobby-card h3,
+body.hanji-theme .lobby-card .font-bold {
+  font-family: var(--hanji-serif);
+}
+
+body.hanji-theme .lobby-upcoming {
+  border-color: rgba(217, 168, 74, 0.3);
+  background: rgba(28, 22, 17, 0.75);
+  font-family: var(--hanji-serif);
+}
+
+body.hanji-theme .lobby-upcoming:hover {
+  border-color: rgba(217, 168, 74, 0.7);
+  background: rgba(210, 85, 58, 0.14);
+}
+
 .play-mode-glyph {
   font-family: var(--hanji-serif);
 }

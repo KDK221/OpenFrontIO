@@ -1432,7 +1432,9 @@
     "brand_name": "열국쟁패",
     "play_together": "같이 하기",
     "multiplayer_coming_soon": "멀티플레이는 준비 중입니다. 지금은 혼자 하기로 천하를 통일해 보세요.",
-    "credits": "크레딧"
+    "credits": "크레딧",
+    "create_desc": "방을 만들고 친구에게 방 코드를 보내세요.",
+    "join_desc": "받은 방 코드로 친구의 방에 들어가세요."
   },
   "map": {
     "achiran": "아치란",
