@@ -1298,9 +1298,21 @@
     "win_threshold": "Win threshold (%)"
   },
   "game_starting_modal": {
-    "code_license": "Code licensed under AGPL-3.0 (no warranty)",
-    "credits": "Credits",
-    "title": "Game is Starting..."
+    "tip_ally_aid": "You can send troops or gold to an ally who is under attack or saving up.",
+    "tip_ballista": "Ballista Towers shoot down Fire Attacks and catapult stones flying overhead, then reload for 7.5 seconds.",
+    "tip_betrayal": "Betray an ally and you are marked a traitor for 30 seconds, with your defense halved.",
+    "tip_catapult": "Thunder Catapults smash troops and buildings across a wide area, launched from a Siege Camp within 250 tiles.",
+    "tip_fire_attack": "Fire Attacks burn territory, buildings and ships. They need a Siege Camp in range.",
+    "tip_fortress": "Borders near a Fortress show a checkered pattern. Enemies attacking there are slower and lose more troops.",
+    "tip_golden_lands": "The golden patches on the map are fertile plains. The more of them you hold, the faster your troops grow.",
+    "tip_harbor": "Harbors send trade ships to other countries' harbors, and both sides earn gold.",
+    "tip_label": "Tip",
+    "tip_market": "A Market District lays trade roads to nearby towns and harbors. Every stop a caravan makes earns you gold.",
+    "tip_plague": "A plague drains troops and spreads to neighbors but leaves the land standing. Ballista Towers can't stop it.",
+    "tip_terrain": "Attacking into highlands and mountains costs more troops and goes slower than on plains. Hills at your back make a border easier to hold.",
+    "tip_town": "Towns raise your maximum population. Build them when you can't expand any further.",
+    "tip_warship": "Warships capture enemy trade ships and sink their boats, levelling up to 3 as they do.",
+    "title": "Preparing to march..."
   },
   "game_timer": {
     "one_minute_remaining": "One minute remaining!"
