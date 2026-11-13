@@ -380,3 +380,18 @@ body.hanji-theme .lobby-upcoming:hover {
   image-rendering: pixelated;
   box-shadow: 0 0 0 1px rgba(239, 230, 210, 0.2);
 }
+
+/* Free-mode map picker: tabs and region bars in lacquer and gold. */
+body.hanji-theme .map-tab.is-active {
+  background: rgba(210, 85, 58, 0.22);
+  color: #fff;
+}
+
+body.hanji-theme .map-category-bar {
+  font-family: var(--hanji-serif);
+}
+
+body.hanji-theme .map-category-bar.is-open {
+  background: rgba(210, 85, 58, 0.16);
+  border-color: rgba(217, 168, 74, 0.55);
+}

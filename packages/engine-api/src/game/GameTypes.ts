@@ -142,6 +142,12 @@ export const listedMaps: readonly MapInfo[] = maps.filter(
   (m) => !m.hidden && SCENARIO_MAPS.includes(m.type),
 );
 
+/**
+ * The maps singleplayer free mode offers: every map but the hidden ones,
+ * the ones inherited from OpenFront included (browsed by region).
+ */
+export const freeModeMaps: readonly MapInfo[] = maps.filter((m) => !m.hidden);
+
 export enum GameType {
   Singleplayer = "Singleplayer",
   Public = "Public",

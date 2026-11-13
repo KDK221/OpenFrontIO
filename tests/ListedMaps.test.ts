@@ -1,5 +1,6 @@
 import {
   DEFAULT_MAP,
+  freeModeMaps,
   GameMapType,
   listedMaps,
   maps,
@@ -27,5 +28,27 @@ describe("listedMaps", () => {
       expect(maps.some((m) => m.type === type)).toBe(true);
     }
     expect(SCENARIO_MAPS).toContain(DEFAULT_MAP);
+  });
+});
+
+describe("freeModeMaps", () => {
+  test("offers every map but the hidden tutorial, scenario maps included", () => {
+    expect(freeModeMaps.some((m) => m.type === GameMapType.Tutorial)).toBe(
+      false,
+    );
+    expect(freeModeMaps.length).toBe(maps.filter((m) => !m.hidden).length);
+    for (const type of [
+      ...SCENARIO_MAPS,
+      GameMapType.Korea,
+      GameMapType.TaiwanStrait,
+    ]) {
+      expect(freeModeMaps.some((m) => m.type === type)).toBe(true);
+    }
+  });
+
+  test("every free-mode map sits in at least one category", () => {
+    for (const m of freeModeMaps) {
+      expect(m.categories.length, m.id).toBeGreaterThan(0);
+    }
   });
 });

@@ -199,6 +199,9 @@ export interface GameConfigSettingsData {
     mapWins?: Map<GameMapType, Set<Difficulty>>;
     // Rendered right under the map picker (the singleplayer faction picker).
     afterMap?: TemplateResult;
+    // Offer every map, by region (singleplayer free mode), not just the
+    // scenario maps.
+    allMaps?: boolean;
   };
   difficulty: {
     selected: Difficulty;
@@ -404,6 +407,7 @@ export class GameConfigSettings extends LitElement {
             .useRandomMap=${settings.map.useRandom}
             .randomMapDivider=${settings.map.randomMapDivider ?? false}
             .showMedals=${settings.map.showMedals ?? false}
+            .allMaps=${settings.map.allMaps ?? false}
             .mapWins=${settings.map.mapWins ?? new Map()}
             .onSelectMap=${this.handleSelectMap}
             .onSelectRandom=${this.handleSelectRandom}

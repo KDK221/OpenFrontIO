@@ -7,6 +7,7 @@ import {
   listedMaps,
   UnitType,
   DEFAULT_MAP,
+  SCENARIO_MAPS,
 } from "@openfront/engine-api/game/GameTypes";
 import type { SnapshotHeader } from "@openfront/engine-api/game/SnapshotHeader";
 import { TeamCountConfig } from "@openfront/engine-api/Schemas";
@@ -545,7 +546,7 @@ export class SinglePlayerModal extends BaseModal {
             pickerSection="modes"
             .mode=${this.playMode}
             @play-mode-selected=${(e: CustomEvent<{ mode: PlayMode }>) =>
-              (this.playMode = e.detail.mode)}
+              this.setPlayMode(e.detail.mode)}
           ></play-mode-picker>
           <game-config-settings
             class="block"
@@ -556,6 +557,7 @@ export class SinglePlayerModal extends BaseModal {
                 useRandom: this.useRandomMap,
                 showMedals: this.showAchievements,
                 mapWins: this.mapWins,
+                allMaps: this.playMode === "free",
                 // Map first, then the factions of that map.
                 afterMap: html`<play-mode-picker
                   class="block"
@@ -1468,6 +1470,16 @@ export class SinglePlayerModal extends BaseModal {
         this.overlayAttempt = 0;
         overlay?.hide();
       }
+    }
+  }
+
+  // Free mode offers every map; a scenario only exists on the scenario maps,
+  // so switching back to one leaves any other map for the default.
+  private setPlayMode(mode: PlayMode) {
+    this.playMode = mode;
+    if (mode === "scenario" && !SCENARIO_MAPS.includes(this.selectedMap)) {
+      this.selectedMap = DEFAULT_MAP;
+      this.useRandomMap = false;
     }
   }
 

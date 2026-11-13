@@ -24,6 +24,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { buildAssetUrl } from "@openfront/shared/AssetPaths";
 import type { AssetManifest } from "@openfront/shared/AssetPaths";
+import { freeModeMaps } from "@openfront/engine-api/game/GameTypes";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
@@ -33,8 +34,12 @@ const outDir = path.join(root, "static");
 // perks unlocked (src/client/steam/).
 const edition = process.argv.includes("--edition=steam") ? "steam" : "web";
 
-// Map folders under resources/maps that the game actually offers.
-const KEEP_MAPS = new Set(["samguk", "sengoku", "warringstates", "tutorial"]);
+// Map folders under resources/maps that the game actually offers: every map
+// free mode lists (the scenario maps and OpenFront's), plus the tutorial's.
+const KEEP_MAPS = new Set([
+  ...freeModeMaps.map((m) => m.id.toLowerCase()),
+  "tutorial",
+]);
 
 function gitCommit(): string {
   if (process.env.GIT_COMMIT) return process.env.GIT_COMMIT;
