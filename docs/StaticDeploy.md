@@ -33,6 +33,20 @@ npm run deploy-static
 
 주소: `https://cheonha-tongil.pages.dev` — 브라우저에서 열어 혼자 하기가 되는지 먼저 확인.
 
+### 자동 배포 (GitHub Actions)
+
+`.github/workflows/deploy-static.yml`이 `samguk-skeleton`에 푸시될 때마다 위 두 명령을
+대신 돌린다. 처음 한 번, GitHub 저장소 Settings → Secrets and variables → Actions에
+두 값을 넣는다.
+
+- `CLOUDFLARE_API_TOKEN`: Cloudflare 대시보드 → 내 프로필 → API 토큰 → 토큰 만들기 →
+  "Cloudflare Pages 편집" 권한으로 만든 토큰
+- `CLOUDFLARE_ACCOUNT_ID`: Cloudflare 대시보드 오른쪽(또는 Workers & Pages 화면)에
+  보이는 계정 ID
+
+값이 없으면 빌드만 하고 업로드는 건너뛴다. Actions 탭에서 "Deploy static build"를
+수동으로 돌릴 수도 있다.
+
 왜 `play.somusoft.com/폴더/`(R2)가 아니라 Pages인가: 게임이 주소를 `/`와
 `/game/<id>`로 바꾸기 때문에 **도메인의 맨 위(root)** 에서 서비스해야 한다. Pages는
 모르는 경로에도 index.html을 돌려줘서 새로고침도 안전하다. 나중에 원하면 Pages에
