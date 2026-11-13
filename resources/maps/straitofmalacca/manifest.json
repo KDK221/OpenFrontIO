@@ -84,6 +84,164 @@
       "name": "Riau Islands"
     }
   ],
+  "places": [
+    {
+      "coordinates": [574, 437],
+      "name": "Medan"
+    },
+    {
+      "coordinates": [1000, 494],
+      "name": "Kuala Lumpur"
+    },
+    {
+      "coordinates": [1396, 1311],
+      "name": "Palembang"
+    },
+    {
+      "coordinates": [820, 195],
+      "name": "George Town"
+    },
+    {
+      "coordinates": [1456, 1636],
+      "name": "Bandar Lampung"
+    },
+    {
+      "coordinates": [1000, 528],
+      "name": "Putrajaya"
+    },
+    {
+      "coordinates": [1806, 1283],
+      "name": "Tanjung Pandan"
+    },
+    {
+      "coordinates": [979, 513],
+      "name": "Klang"
+    },
+    {
+      "coordinates": [948, 839],
+      "name": "Pekanbaru"
+    },
+    {
+      "coordinates": [1072, 622],
+      "name": "Melaka City"
+    },
+    {
+      "coordinates": [919, 304],
+      "name": "Ipoh"
+    },
+    {
+      "coordinates": [629, 519],
+      "name": "Pematangsiantar"
+    },
+    {
+      "coordinates": [872, 268],
+      "name": "Taiping"
+    },
+    {
+      "coordinates": [585, 680],
+      "name": "Sibolga"
+    },
+    {
+      "coordinates": [371, 222],
+      "name": "Lhokseumawe"
+    },
+    {
+      "coordinates": [1221, 1419],
+      "name": "Lahat"
+    },
+    {
+      "coordinates": [1408, 1557],
+      "name": "Kotabumi"
+    },
+    {
+      "coordinates": [553, 432],
+      "name": "Binjai"
+    },
+    {
+      "coordinates": [1032, 555],
+      "name": "Seremban"
+    },
+    {
+      "coordinates": [842, 164],
+      "name": "Sungai Petani"
+    },
+    {
+      "coordinates": [830, 103],
+      "name": "Alor Setar"
+    },
+    {
+      "coordinates": [640, 471],
+      "name": "Tebing Tinggi"
+    },
+    {
+      "coordinates": [650, 728],
+      "name": "Padang Sidempuan"
+    },
+    {
+      "coordinates": [1378, 795],
+      "name": "Tanjung Pinang"
+    },
+    {
+      "coordinates": [1167, 670],
+      "name": "Batu Pahat"
+    },
+    {
+      "coordinates": [1116, 645],
+      "name": "Muar"
+    },
+    {
+      "coordinates": [1222, 645],
+      "name": "Kluang"
+    },
+    {
+      "coordinates": [960, 45],
+      "name": "Yala"
+    },
+    {
+      "coordinates": [484, 292],
+      "name": "Langsa"
+    },
+    {
+      "coordinates": [1321, 1372],
+      "name": "Prabumulih"
+    },
+    {
+      "coordinates": [911, 382],
+      "name": "Teluk Intan"
+    },
+    {
+      "coordinates": [930, 1187],
+      "name": "Sungai Penuh"
+    },
+    {
+      "coordinates": [851, 1002],
+      "name": "Sawahlunto"
+    },
+    {
+      "coordinates": [801, 973],
+      "name": "Padang Panjang"
+    },
+    {
+      "coordinates": [1024, 411],
+      "name": "Raub"
+    },
+    {
+      "coordinates": [610, 645],
+      "name": "Tarutung"
+    },
+    {
+      "coordinates": [957, 4],
+      "name": "Pattani"
+    },
+    {
+      "coordinates": [806, 60],
+      "name": "Kangar"
+    },
+    {
+      "coordinates": [789, 36],
+      "name": "Satun"
+    }
+  ],
   "themes": ["asia"],
   "translation_key": "map.straitofmalacca"
 }

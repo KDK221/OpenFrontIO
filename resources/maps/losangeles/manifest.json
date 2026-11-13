@@ -703,6 +703,116 @@
       "name": "Encino"
     }
   ],
+  "places": [
+    {
+      "coordinates": [1278, 874],
+      "name": "Los Angeles"
+    },
+    {
+      "coordinates": [1750, 1418],
+      "name": "San Salvador"
+    },
+    {
+      "coordinates": [1726, 1430],
+      "name": "Guatemala City"
+    },
+    {
+      "coordinates": [1728, 681],
+      "name": "Tuxtla Gutiérrez"
+    },
+    {
+      "coordinates": [697, 601],
+      "name": "Kodiak"
+    },
+    {
+      "coordinates": [1589, 709],
+      "name": "San Luis Potosí"
+    },
+    {
+      "coordinates": [1421, 614],
+      "name": "Hermosillo"
+    },
+    {
+      "coordinates": [1263, 165],
+      "name": "Salinas"
+    },
+    {
+      "coordinates": [1260, 109],
+      "name": "Santa Cruz"
+    },
+    {
+      "coordinates": [1219, 778],
+      "name": "Monterey"
+    },
+    {
+      "coordinates": [1274, 1036],
+      "name": "Irvine"
+    },
+    {
+      "coordinates": [1747, 22],
+      "name": "Minatitlán"
+    },
+    {
+      "coordinates": [1679, 306],
+      "name": "Teziutlán"
+    },
+    {
+      "coordinates": [1512, 1397],
+      "name": "Fresnillo"
+    },
+    {
+      "coordinates": [1717, 1320],
+      "name": "Huehuetenango"
+    },
+    {
+      "coordinates": [1727, 125],
+      "name": "Santiago Tuxtla"
+    },
+    {
+      "coordinates": [685, 106],
+      "name": "Newhalen"
+    },
+    {
+      "coordinates": [1689, 272],
+      "name": "Xalapa"
+    },
+    {
+      "coordinates": [1715, 467],
+      "name": "Jaltipan de Morelos"
+    },
+    {
+      "coordinates": [1753, 1186],
+      "name": "Jutiapa"
+    },
+    {
+      "coordinates": [1219, 1115],
+      "name": "Paso Robles"
+    },
+    {
+      "coordinates": [1482, 1347],
+      "name": "Ciudad Canatlán"
+    },
+    {
+      "coordinates": [1790, 1014],
+      "name": "Usulután"
+    },
+    {
+      "coordinates": [1784, 957],
+      "name": "Cojutepeque"
+    },
+    {
+      "coordinates": [1760, 1348],
+      "name": "Zacatecoluca"
+    },
+    {
+      "coordinates": [1791, 893],
+      "name": "San Vicente"
+    },
+    {
+      "coordinates": [1714, 1450],
+      "name": "Santa Cruz del Quiché"
+    }
+  ],
   "themes": ["north_america"],
   "translation_key": "map.losangeles"
 }

@@ -7,6 +7,224 @@
   "location": { "lat": 58, "lon": -175 },
   "author": "Tristar",
   "special_team_count": 2,
+  "places": [
+    {
+      "coordinates": [2019, 837],
+      "name": "Valdez"
+    },
+    {
+      "coordinates": [2248, 647],
+      "name": "Dawson City"
+    },
+    {
+      "coordinates": [1936, 805],
+      "name": "Palmer"
+    },
+    {
+      "coordinates": [1864, 873],
+      "name": "Kenai"
+    },
+    {
+      "coordinates": [2445, 369],
+      "name": "Inuvik"
+    },
+    {
+      "coordinates": [1918, 902],
+      "name": "Seward"
+    },
+    {
+      "coordinates": [2354, 951],
+      "name": "Skagway"
+    },
+    {
+      "coordinates": [2471, 297],
+      "name": "Tuktoyaktuk"
+    },
+    {
+      "coordinates": [1243, 654],
+      "name": "Gambell"
+    },
+    {
+      "coordinates": [1707, 597],
+      "name": "Galena"
+    },
+    {
+      "coordinates": [1638, 209],
+      "name": "Wainwright"
+    },
+    {
+      "coordinates": [2146, 251],
+      "name": "Kaktovik"
+    },
+    {
+      "coordinates": [1682, 792],
+      "name": "Red Devil"
+    },
+    {
+      "coordinates": [2432, 1148],
+      "name": "Wrangell"
+    },
+    {
+      "coordinates": [1952, 666],
+      "name": "Denali Park"
+    },
+    {
+      "coordinates": [2404, 425],
+      "name": "Fort McPherson"
+    },
+    {
+      "coordinates": [1612, 803],
+      "name": "Aniak"
+    },
+    {
+      "coordinates": [1026, 314],
+      "name": "Mys Shmidta"
+    },
+    {
+      "coordinates": [1486, 398],
+      "name": "Kivalina"
+    },
+    {
+      "coordinates": [1688, 993],
+      "name": "King Salmon"
+    },
+    {
+      "coordinates": [1689, 443],
+      "name": "Ambler"
+    },
+    {
+      "coordinates": [1577, 582],
+      "name": "Koyuk"
+    },
+    {
+      "coordinates": [1529, 922],
+      "name": "Quinhagak"
+    },
+    {
+      "coordinates": [1747, 926],
+      "name": "Newhalen"
+    },
+    {
+      "coordinates": [1740, 714],
+      "name": "McGrath"
+    },
+    {
+      "coordinates": [2123, 691],
+      "name": "Tanacross"
+    },
+    {
+      "coordinates": [1623, 1150],
+      "name": "Chignik"
+    },
+    {
+      "coordinates": [2218, 943],
+      "name": "Yakutat"
+    },
+    {
+      "coordinates": [2112, 530],
+      "name": "Circle"
+    },
+    {
+      "coordinates": [1751, 1067],
+      "name": "Karluk"
+    },
+    {
+      "coordinates": [1796, 512],
+      "name": "Hughes"
+    },
+    {
+      "coordinates": [2248, 825],
+      "name": "Burwash Landing"
+    },
+    {
+      "coordinates": [1931, 424],
+      "name": "Wiseman"
+    },
+    {
+      "coordinates": [1633, 969],
+      "name": "Dillingham"
+    },
+    {
+      "coordinates": [1273, 536],
+      "name": "Lavrentiya"
+    },
+    {
+      "coordinates": [1908, 758],
+      "name": "Talkeetna"
+    },
+    {
+      "coordinates": [1620, 474],
+      "name": "Selawik"
+    },
+    {
+      "coordinates": [2049, 639],
+      "name": "Big Delta"
+    },
+    {
+      "coordinates": [1860, 570],
+      "name": "Tanana"
+    },
+    {
+      "coordinates": [1949, 688],
+      "name": "Cantwell"
+    },
+    {
+      "coordinates": [1719, 221],
+      "name": "Atqasuk"
+    },
+    {
+      "coordinates": [1650, 623],
+      "name": "Kaltag"
+    },
+    {
+      "coordinates": [1945, 859],
+      "name": "Whittier"
+    },
+    {
+      "coordinates": [2440, 429],
+      "name": "Tsiigehtchic"
+    },
+    {
+      "coordinates": [1719, 455],
+      "name": "Kobuk"
+    },
+    {
+      "coordinates": [2055, 763],
+      "name": "Gulkana"
+    },
+    {
+      "coordinates": [1598, 1174],
+      "name": "Perryville"
+    },
+    {
+      "coordinates": [2196, 599],
+      "name": "Eagle"
+    },
+    {
+      "coordinates": [1684, 587],
+      "name": "Koyukuk"
+    },
+    {
+      "coordinates": [1597, 840],
+      "name": "Nyac"
+    },
+    {
+      "coordinates": [1849, 479],
+      "name": "Allakaket"
+    },
+    {
+      "coordinates": [1417, 559],
+      "name": "Teller"
+    },
+    {
+      "coordinates": [1950, 611],
+      "name": "Nenana"
+    },
+    {
+      "coordinates": [1847, 655],
+      "name": "Lake Minchumina"
+    }
+  ],
   "nations": [
     {
       "coordinates": [1043, 121],

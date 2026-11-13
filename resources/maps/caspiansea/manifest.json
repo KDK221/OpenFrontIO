@@ -79,6 +79,104 @@
       "name": "Kalmykia"
     }
   ],
+  "places": [
+    {
+      "coordinates": [418, 1141],
+      "name": "Baku"
+    },
+    {
+      "coordinates": [418, 1622],
+      "name": "Rasht"
+    },
+    {
+      "coordinates": [115, 865],
+      "name": "Makhachkala"
+    },
+    {
+      "coordinates": [252, 1543],
+      "name": "Ardabil"
+    },
+    {
+      "coordinates": [1000, 160],
+      "name": "Beyneu"
+    },
+    {
+      "coordinates": [598, 32],
+      "name": "Balyqshy"
+    },
+    {
+      "coordinates": [999, 1456],
+      "name": "Gorgan"
+    },
+    {
+      "coordinates": [879, 1704],
+      "name": "Semnan"
+    },
+    {
+      "coordinates": [216, 966],
+      "name": "Derbent"
+    },
+    {
+      "coordinates": [131, 874],
+      "name": "Kaspiysk"
+    },
+    {
+      "coordinates": [70, 906],
+      "name": "Buynaksk"
+    },
+    {
+      "coordinates": [311, 1257],
+      "name": "Şirvan"
+    },
+    {
+      "coordinates": [91, 1152],
+      "name": "Shaki"
+    },
+    {
+      "coordinates": [54, 1381],
+      "name": "Stepanakert"
+    },
+    {
+      "coordinates": [19, 1490],
+      "name": "Kapan"
+    },
+    {
+      "coordinates": [164, 1205],
+      "name": "Goychay"
+    },
+    {
+      "coordinates": [743, 557],
+      "name": "Zhanaozen"
+    },
+    {
+      "coordinates": [389, 1124],
+      "name": "Sumqayit"
+    },
+    {
+      "coordinates": [102, 1568],
+      "name": "Ahar"
+    },
+    {
+      "coordinates": [94, 1240],
+      "name": "Yevlakh"
+    },
+    {
+      "coordinates": [815, 1128],
+      "name": "Hazar"
+    },
+    {
+      "coordinates": [174, 1151],
+      "name": "Qabala"
+    },
+    {
+      "coordinates": [51, 1258],
+      "name": "Goranboy"
+    },
+    {
+      "coordinates": [127, 1156],
+      "name": "Oğuz"
+    }
+  ],
   "special_team_count": 2,
   "teamGameSpawnAreas": {
     "2": [

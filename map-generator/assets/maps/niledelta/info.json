@@ -6,6 +6,52 @@
   "categories": ["africa"],
   "location": { "lat": 30.8, "lon": 31 },
   "author": "gabigabogabu",
+  "places": [
+    {
+      "coordinates": [1356, 386],
+      "name": "Port Said"
+    },
+    {
+      "coordinates": [1472, 1037],
+      "name": "Suez"
+    },
+    {
+      "coordinates": [861, 1033],
+      "name": "Giza"
+    },
+    {
+      "coordinates": [1342, 733],
+      "name": "Ismailia"
+    },
+    {
+      "coordinates": [539, 493],
+      "name": "Damanhur"
+    },
+    {
+      "coordinates": [777, 628],
+      "name": "Tanta"
+    },
+    {
+      "coordinates": [503, 280],
+      "name": "Rosetta"
+    },
+    {
+      "coordinates": [1009, 736],
+      "name": "Zagazig"
+    },
+    {
+      "coordinates": [732, 731],
+      "name": "Shibin Al Kawm"
+    },
+    {
+      "coordinates": [859, 796],
+      "name": "Banha"
+    },
+    {
+      "coordinates": [748, 463],
+      "name": "Kafr el-Sheikh"
+    }
+  ],
   "nations": [
     {
       "coordinates": [305, 414],

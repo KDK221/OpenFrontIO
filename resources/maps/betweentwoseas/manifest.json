@@ -94,6 +94,808 @@
       "name": "Circassia"
     }
   ],
+  "places": [
+    {
+      "coordinates": [1439, 1022],
+      "name": "Tehran"
+    },
+    {
+      "coordinates": [90, 878],
+      "name": "Athens"
+    },
+    {
+      "coordinates": [227, 224],
+      "name": "Kyiv"
+    },
+    {
+      "coordinates": [495, 782],
+      "name": "Ankara"
+    },
+    {
+      "coordinates": [754, 981],
+      "name": "Aleppo"
+    },
+    {
+      "coordinates": [107, 538],
+      "name": "Bucharest"
+    },
+    {
+      "coordinates": [1294, 771],
+      "name": "Baku"
+    },
+    {
+      "coordinates": [35, 38],
+      "name": "Minsk"
+    },
+    {
+      "coordinates": [1, 628],
+      "name": "Sofia"
+    },
+    {
+      "coordinates": [1118, 93],
+      "name": "Samara"
+    },
+    {
+      "coordinates": [1044, 778],
+      "name": "Yerevan"
+    },
+    {
+      "coordinates": [1034, 696],
+      "name": "Tbilisi"
+    },
+    {
+      "coordinates": [1373, 13],
+      "name": "Ufa"
+    },
+    {
+      "coordinates": [916, 326],
+      "name": "Volgograd"
+    },
+    {
+      "coordinates": [10, 733],
+      "name": "Thessaloniki"
+    },
+    {
+      "coordinates": [1735, 907],
+      "name": "Ashgabat"
+    },
+    {
+      "coordinates": [199, 404],
+      "name": "Chișinău"
+    },
+    {
+      "coordinates": [246, 856],
+      "name": "İzmir"
+    },
+    {
+      "coordinates": [311, 764],
+      "name": "Bursa"
+    },
+    {
+      "coordinates": [505, 251],
+      "name": "Kharkiv"
+    },
+    {
+      "coordinates": [1160, 890],
+      "name": "Tabriz"
+    },
+    {
+      "coordinates": [1036, 980],
+      "name": "Mosul"
+    },
+    {
+      "coordinates": [655, 939],
+      "name": "Adana"
+    },
+    {
+      "coordinates": [469, 331],
+      "name": "Dnipro"
+    },
+    {
+      "coordinates": [295, 433],
+      "name": "Odessa"
+    },
+    {
+      "coordinates": [610, 358],
+      "name": "Donetsk"
+    },
+    {
+      "coordinates": [507, 890],
+      "name": "Konya"
+    },
+    {
+      "coordinates": [623, 162],
+      "name": "Voronezh"
+    },
+    {
+      "coordinates": [946, 175],
+      "name": "Saratov"
+    },
+    {
+      "coordinates": [710, 517],
+      "name": "Krasnodar"
+    },
+    {
+      "coordinates": [1018, 32],
+      "name": "Ulyanovsk"
+    },
+    {
+      "coordinates": [1108, 1027],
+      "name": "Kirkuk"
+    },
+    {
+      "coordinates": [1374, 172],
+      "name": "Orenburg"
+    },
+    {
+      "coordinates": [601, 10],
+      "name": "Ryazan"
+    },
+    {
+      "coordinates": [873, 90],
+      "name": "Penza"
+    },
+    {
+      "coordinates": [1120, 454],
+      "name": "Astrakhan"
+    },
+    {
+      "coordinates": [371, 77],
+      "name": "Bryansk"
+    },
+    {
+      "coordinates": [1533, 88],
+      "name": "Magnitogorsk"
+    },
+    {
+      "coordinates": [851, 518],
+      "name": "Stavropol"
+    },
+    {
+      "coordinates": [136, 394],
+      "name": "Iași"
+    },
+    {
+      "coordinates": [952, 601],
+      "name": "Nalchik"
+    },
+    {
+      "coordinates": [142, 232],
+      "name": "Zhytomyr"
+    },
+    {
+      "coordinates": [1494, 253],
+      "name": "Aktobe"
+    },
+    {
+      "coordinates": [1726, 669],
+      "name": "Nukus"
+    },
+    {
+      "coordinates": [1053, 613],
+      "name": "Grozny"
+    },
+    {
+      "coordinates": [1292, 417],
+      "name": "Atyrau"
+    },
+    {
+      "coordinates": [1737, 116],
+      "name": "Rudniy"
+    },
+    {
+      "coordinates": [1447, 793],
+      "name": "Türkmenbaşy"
+    },
+    {
+      "coordinates": [752, 936],
+      "name": "Gaziantep"
+    },
+    {
+      "coordinates": [1079, 989],
+      "name": "Erbil"
+    },
+    {
+      "coordinates": [486, 364],
+      "name": "Zaporizhzhia"
+    },
+    {
+      "coordinates": [437, 941],
+      "name": "Antalya"
+    },
+    {
+      "coordinates": [1330, 934],
+      "name": "Rasht"
+    },
+    {
+      "coordinates": [637, 847],
+      "name": "Kayseri"
+    },
+    {
+      "coordinates": [1144, 632],
+      "name": "Makhachkala"
+    },
+    {
+      "coordinates": [627, 115],
+      "name": "Lipetsk"
+    },
+    {
+      "coordinates": [386, 787],
+      "name": "Eskişehir"
+    },
+    {
+      "coordinates": [508, 30],
+      "name": "Tula"
+    },
+    {
+      "coordinates": [611, 406],
+      "name": "Mariupol"
+    },
+    {
+      "coordinates": [220, 119],
+      "name": "Gomel"
+    },
+    {
+      "coordinates": [1362, 989],
+      "name": "Qazvin"
+    },
+    {
+      "coordinates": [817, 933],
+      "name": "Şanlıurfa"
+    },
+    {
+      "coordinates": [1252, 883],
+      "name": "Ardabil"
+    },
+    {
+      "coordinates": [477, 159],
+      "name": "Kursk"
+    },
+    {
+      "coordinates": [513, 218],
+      "name": "Belgorod"
+    },
+    {
+      "coordinates": [453, 94],
+      "name": "Oryol"
+    },
+    {
+      "coordinates": [711, 111],
+      "name": "Tambov"
+    },
+    {
+      "coordinates": [422, 201],
+      "name": "Sumy"
+    },
+    {
+      "coordinates": [1387, 75],
+      "name": "Sterlitamak"
+    },
+    {
+      "coordinates": [366, 734],
+      "name": "Adapazarı"
+    },
+    {
+      "coordinates": [1549, 205],
+      "name": "Orsk"
+    },
+    {
+      "coordinates": [1757, 103],
+      "name": "Kostanay"
+    },
+    {
+      "coordinates": [1725, 998],
+      "name": "Sabzevar"
+    },
+    {
+      "coordinates": [1752, 702],
+      "name": "Daşoguz"
+    },
+    {
+      "coordinates": [1023, 153],
+      "name": "Balakovo"
+    },
+    {
+      "coordinates": [938, 452],
+      "name": "Elista"
+    },
+    {
+      "coordinates": [488, 541],
+      "name": "Yalta"
+    },
+    {
+      "coordinates": [1394, 425],
+      "name": "Kulsary"
+    },
+    {
+      "coordinates": [1759, 441],
+      "name": "Aral"
+    },
+    {
+      "coordinates": [1646, 385],
+      "name": "Shalkar"
+    },
+    {
+      "coordinates": [939, 205],
+      "name": "Krasnoarmeysk"
+    },
+    {
+      "coordinates": [1555, 255],
+      "name": "Khromtau"
+    },
+    {
+      "coordinates": [1679, 599],
+      "name": "Mo‘ynoq"
+    },
+    {
+      "coordinates": [193, 173],
+      "name": "Chernobyl"
+    },
+    {
+      "coordinates": [1415, 1015],
+      "name": "Karaj"
+    },
+    {
+      "coordinates": [635, 943],
+      "name": "Tarsus"
+    },
+    {
+      "coordinates": [1156, 1023],
+      "name": "Sulaymaniyah"
+    },
+    {
+      "coordinates": [1084, 78],
+      "name": "Tolyatti"
+    },
+    {
+      "coordinates": [874, 894],
+      "name": "Diyarbakır"
+    },
+    {
+      "coordinates": [776, 869],
+      "name": "Malatya"
+    },
+    {
+      "coordinates": [673, 330],
+      "name": "Luhansk"
+    },
+    {
+      "coordinates": [895, 789],
+      "name": "Erzurum"
+    },
+    {
+      "coordinates": [347, 893],
+      "name": "Denizli"
+    },
+    {
+      "coordinates": [1016, 866],
+      "name": "Van"
+    },
+    {
+      "coordinates": [166, 40],
+      "name": "Mogilev"
+    },
+    {
+      "coordinates": [1009, 626],
+      "name": "Vladikavkaz"
+    },
+    {
+      "coordinates": [479, 517],
+      "name": "Simferopol"
+    },
+    {
+      "coordinates": [148, 286],
+      "name": "Vinnytsia"
+    },
+    {
+      "coordinates": [439, 12],
+      "name": "Kaluga"
+    },
+    {
+      "coordinates": [382, 427],
+      "name": "Kherson"
+    },
+    {
+      "coordinates": [432, 273],
+      "name": "Poltava"
+    },
+    {
+      "coordinates": [65, 473],
+      "name": "Brașov"
+    },
+    {
+      "coordinates": [908, 1031],
+      "name": "Deir ez-Zor"
+    },
+    {
+      "coordinates": [0, 542],
+      "name": "Craiova"
+    },
+    {
+      "coordinates": [867, 38],
+      "name": "Saransk"
+    },
+    {
+      "coordinates": [918, 896],
+      "name": "Batman"
+    },
+    {
+      "coordinates": [41, 333],
+      "name": "Chernivtsi"
+    },
+    {
+      "coordinates": [702, 962],
+      "name": "İskenderun"
+    },
+    {
+      "coordinates": [316, 278],
+      "name": "Cherkasy"
+    },
+    {
+      "coordinates": [695, 795],
+      "name": "Sivas"
+    },
+    {
+      "coordinates": [263, 793],
+      "name": "Balıkesir"
+    },
+    {
+      "coordinates": [22, 211],
+      "name": "Rivne"
+    },
+    {
+      "coordinates": [338, 327],
+      "name": "Kropyvnytskyi"
+    },
+    {
+      "coordinates": [6, 268],
+      "name": "Ternopil"
+    },
+    {
+      "coordinates": [257, 846],
+      "name": "Manisa"
+    },
+    {
+      "coordinates": [385, 298],
+      "name": "Kremenchuk"
+    },
+    {
+      "coordinates": [96, 511],
+      "name": "Ploiești"
+    },
+    {
+      "coordinates": [562, 184],
+      "name": "Stary Oskol"
+    },
+    {
+      "coordinates": [784, 900],
+      "name": "Adıyaman"
+    },
+    {
+      "coordinates": [1472, 980],
+      "name": "Amol"
+    },
+    {
+      "coordinates": [730, 375],
+      "name": "Shakhty"
+    },
+    {
+      "coordinates": [124, 80],
+      "name": "Babruysk"
+    },
+    {
+      "coordinates": [528, 787],
+      "name": "Kırıkkale"
+    },
+    {
+      "coordinates": [1090, 866],
+      "name": "Khoy"
+    },
+    {
+      "coordinates": [114, 425],
+      "name": "Bacău"
+    },
+    {
+      "coordinates": [812, 520],
+      "name": "Armavir"
+    },
+    {
+      "coordinates": [109, 569],
+      "name": "Ruse"
+    },
+    {
+      "coordinates": [846, 998],
+      "name": "Raqqa"
+    },
+    {
+      "coordinates": [1397, 1056],
+      "name": "Saveh"
+    },
+    {
+      "coordinates": [42, 515],
+      "name": "Pitești"
+    },
+    {
+      "coordinates": [1563, 6],
+      "name": "Miass"
+    },
+    {
+      "coordinates": [713, 1051],
+      "name": "Tartus"
+    },
+    {
+      "coordinates": [1152, 959],
+      "name": "Mahabad"
+    },
+    {
+      "coordinates": [1389, 89],
+      "name": "Salavat"
+    },
+    {
+      "coordinates": [511, 418],
+      "name": "Melitopol"
+    },
+    {
+      "coordinates": [1049, 705],
+      "name": "Rustavi"
+    },
+    {
+      "coordinates": [239, 413],
+      "name": "Tiraspol"
+    },
+    {
+      "coordinates": [403, 842],
+      "name": "Afyonkarahisar"
+    },
+    {
+      "coordinates": [74, 22],
+      "name": "Barysaw"
+    },
+    {
+      "coordinates": [350, 845],
+      "name": "Uşak"
+    },
+    {
+      "coordinates": [143, 363],
+      "name": "Bălți"
+    },
+    {
+      "coordinates": [2, 424],
+      "name": "Târgu Mureș"
+    },
+    {
+      "coordinates": [1753, 951],
+      "name": "Quchan"
+    },
+    {
+      "coordinates": [1003, 978],
+      "name": "Tal Afar"
+    },
+    {
+      "coordinates": [114, 644],
+      "name": "Stara Zagora"
+    },
+    {
+      "coordinates": [1195, 5],
+      "name": "Almetyevsk"
+    },
+    {
+      "coordinates": [162, 8],
+      "name": "Orsha"
+    },
+    {
+      "coordinates": [1002, 937],
+      "name": "Zakho"
+    },
+    {
+      "coordinates": [1074, 37],
+      "name": "Dimitrovgrad"
+    },
+    {
+      "coordinates": [454, 379],
+      "name": "Nikopol"
+    },
+    {
+      "coordinates": [812, 796],
+      "name": "Erzincan"
+    },
+    {
+      "coordinates": [939, 254],
+      "name": "Kamyshin"
+    },
+    {
+      "coordinates": [1533, 1030],
+      "name": "Semnan"
+    },
+    {
+      "coordinates": [625, 310],
+      "name": "Lysychansk"
+    },
+    {
+      "coordinates": [552, 928],
+      "name": "Karaman"
+    },
+    {
+      "coordinates": [51, 590],
+      "name": "Pleven"
+    },
+    {
+      "coordinates": [283, 192],
+      "name": "Nizhyn"
+    },
+    {
+      "coordinates": [866, 558],
+      "name": "Cherkessk"
+    },
+    {
+      "coordinates": [84, 363],
+      "name": "Botoșani"
+    },
+    {
+      "coordinates": [144, 138],
+      "name": "Mazyr"
+    },
+    {
+      "coordinates": [1195, 681],
+      "name": "Derbent"
+    },
+    {
+      "coordinates": [810, 175],
+      "name": "Balashov"
+    },
+    {
+      "coordinates": [430, 126],
+      "name": "Zheleznogorsk"
+    },
+    {
+      "coordinates": [346, 150],
+      "name": "Shostka"
+    },
+    {
+      "coordinates": [423, 738],
+      "name": "Bolu"
+    },
+    {
+      "coordinates": [950, 94],
+      "name": "Kuznetsk"
+    },
+    {
+      "coordinates": [1101, 830],
+      "name": "Nakhchivan"
+    },
+    {
+      "coordinates": [697, 986],
+      "name": "Samandağ"
+    },
+    {
+      "coordinates": [587, 911],
+      "name": "Ereğli"
+    },
+    {
+      "coordinates": [981, 801],
+      "name": "Ağrı"
+    },
+    {
+      "coordinates": [1224, 117],
+      "name": "Buzuluk"
+    },
+    {
+      "coordinates": [223, 492],
+      "name": "Izmail"
+    },
+    {
+      "coordinates": [625, 746],
+      "name": "Amasya"
+    },
+    {
+      "coordinates": [922, 851],
+      "name": "Muş"
+    },
+    {
+      "coordinates": [1646, 54],
+      "name": "Troitsk"
+    },
+    {
+      "coordinates": [745, 955],
+      "name": "Kilis"
+    },
+    {
+      "coordinates": [574, 267],
+      "name": "Kupiansk"
+    },
+    {
+      "coordinates": [970, 754],
+      "name": "Kars"
+    },
+    {
+      "coordinates": [268, 893],
+      "name": "Söke"
+    },
+    {
+      "coordinates": [1128, 639],
+      "name": "Buynaksk"
+    },
+    {
+      "coordinates": [168, 551],
+      "name": "Călărași"
+    },
+    {
+      "coordinates": [131, 195],
+      "name": "Korosten"
+    },
+    {
+      "coordinates": [78, 852],
+      "name": "Chalkida"
+    },
+    {
+      "coordinates": [908, 927],
+      "name": "Mardin"
+    },
+    {
+      "coordinates": [1257, 794],
+      "name": "Şirvan"
+    },
+    {
+      "coordinates": [1003, 153],
+      "name": "Volsk"
+    },
+    {
+      "coordinates": [1265, 22],
+      "name": "Tuymazy"
+    },
+    {
+      "coordinates": [274, 102],
+      "name": "Klintsy"
+    },
+    {
+      "coordinates": [1391, 120],
+      "name": "Kumertau"
+    },
+    {
+      "coordinates": [1155, 726],
+      "name": "Shaki"
+    },
+    {
+      "coordinates": [752, 474],
+      "name": "Tikhoretsk"
+    },
+    {
+      "coordinates": [184, 462],
+      "name": "Cahul"
+    },
+    {
+      "coordinates": [1292, 47],
+      "name": "Belebey"
+    },
+    {
+      "coordinates": [799, 539],
+      "name": "Labinsk"
+    },
+    {
+      "coordinates": [1528, 126],
+      "name": "Sibay"
+    },
+    {
+      "coordinates": [809, 442],
+      "name": "Salsk"
+    },
+    {
+      "coordinates": [1271, 857],
+      "name": "Lankaran"
+    },
+    {
+      "coordinates": [835, 253],
+      "name": "Mikhaylovka"
+    },
+    {
+      "coordinates": [1684, 636],
+      "name": "Qo‘ng‘irot"
+    },
+    {
+      "coordinates": [1156, 799],
+      "name": "Stepanakert"
+    }
+  ],
   "themes": ["europe", "asia"],
   "translation_key": "map.betweentwoseas"
 }

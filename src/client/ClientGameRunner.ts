@@ -29,6 +29,7 @@ import {
 } from "@openfront/shared/WireSchemas";
 import { ClientEnv } from "../client/ClientEnv";
 import { reloadForUpdate, translateText } from "../client/Utils";
+import { loadPlaceNames } from "./PlaceNames";
 import { MapLayerController } from "./controllers/MapLayerController";
 import { isDesktopShell } from "./DesktopShell";
 import { GameMetrics } from "./GameMetrics";
@@ -713,6 +714,8 @@ async function createClientGame(
   // Kick off the font-atlas fetch so it overlaps with worker init; the
   // render passes need it parsed before createWebGLView runs.
   const atlasDataLoad = preloadAtlasData();
+  // Local place names for the AI nations and tribes, awaited with the atlas.
+  const placeNamesLoad = loadPlaceNames();
   const worker = new WorkerClient(
     lobbyConfig.gameStartInfo,
     clientID,
@@ -720,6 +723,7 @@ async function createClientGame(
   );
   await worker.initialize();
   await atlasDataLoad;
+  await placeNamesLoad;
   const gameView = new GameView(
     worker,
     config,

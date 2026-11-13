@@ -54,6 +54,728 @@
       "name": "Tasmania"
     }
   ],
+  "places": [
+    {
+      "coordinates": [1773, 1045],
+      "name": "Sydney"
+    },
+    {
+      "coordinates": [1504, 1221],
+      "name": "Melbourne"
+    },
+    {
+      "coordinates": [236, 989],
+      "name": "Perth"
+    },
+    {
+      "coordinates": [1852, 762],
+      "name": "Brisbane"
+    },
+    {
+      "coordinates": [1226, 1100],
+      "name": "Adelaide"
+    },
+    {
+      "coordinates": [1801, 998],
+      "name": "Newcastle"
+    },
+    {
+      "coordinates": [1684, 1107],
+      "name": "Canberra"
+    },
+    {
+      "coordinates": [884, 124],
+      "name": "Darwin"
+    },
+    {
+      "coordinates": [1607, 1438],
+      "name": "Hobart"
+    },
+    {
+      "coordinates": [1018, 614],
+      "name": "Alice Springs"
+    },
+    {
+      "coordinates": [1474, 1175],
+      "name": "Bendigo"
+    },
+    {
+      "coordinates": [1742, 585],
+      "name": "Rockhampton"
+    },
+    {
+      "coordinates": [1683, 1019],
+      "name": "Orange"
+    },
+    {
+      "coordinates": [480, 931],
+      "name": "Kalgoorlie"
+    },
+    {
+      "coordinates": [1262, 479],
+      "name": "Mount Isa"
+    },
+    {
+      "coordinates": [1661, 975],
+      "name": "Dubbo"
+    },
+    {
+      "coordinates": [1794, 896],
+      "name": "Armidale"
+    },
+    {
+      "coordinates": [1564, 1367],
+      "name": "Devonport"
+    },
+    {
+      "coordinates": [1349, 968],
+      "name": "Broken Hill"
+    },
+    {
+      "coordinates": [278, 498],
+      "name": "Karratha"
+    },
+    {
+      "coordinates": [1550, 1066],
+      "name": "Griffith"
+    },
+    {
+      "coordinates": [354, 479],
+      "name": "Port Hedland"
+    },
+    {
+      "coordinates": [1562, 1156],
+      "name": "Wangaratta"
+    },
+    {
+      "coordinates": [1108, 1094],
+      "name": "Port Lincoln"
+    },
+    {
+      "coordinates": [1357, 1246],
+      "name": "Portland"
+    },
+    {
+      "coordinates": [215, 1064],
+      "name": "Busselton"
+    },
+    {
+      "coordinates": [946, 212],
+      "name": "Katherine"
+    },
+    {
+      "coordinates": [1400, 682],
+      "name": "Windorah"
+    },
+    {
+      "coordinates": [1761, 1067],
+      "name": "Wollongong"
+    },
+    {
+      "coordinates": [1479, 1236],
+      "name": "Geelong"
+    },
+    {
+      "coordinates": [1589, 1142],
+      "name": "Albury"
+    },
+    {
+      "coordinates": [1805, 767],
+      "name": "Toowoomba"
+    },
+    {
+      "coordinates": [1848, 936],
+      "name": "Port Macquarie"
+    },
+    {
+      "coordinates": [1381, 1064],
+      "name": "Mildura"
+    },
+    {
+      "coordinates": [1761, 923],
+      "name": "Tamworth"
+    },
+    {
+      "coordinates": [1864, 821],
+      "name": "Lismore"
+    },
+    {
+      "coordinates": [1396, 1247],
+      "name": "Warrnambool"
+    },
+    {
+      "coordinates": [1321, 1225],
+      "name": "Mount Gambier"
+    },
+    {
+      "coordinates": [1838, 679],
+      "name": "Maryborough"
+    },
+    {
+      "coordinates": [1546, 1362],
+      "name": "Burnie"
+    },
+    {
+      "coordinates": [1831, 969],
+      "name": "Forster"
+    },
+    {
+      "coordinates": [1190, 994],
+      "name": "Port Augusta"
+    },
+    {
+      "coordinates": [1546, 335],
+      "name": "Innisfail"
+    },
+    {
+      "coordinates": [1849, 860],
+      "name": "Grafton"
+    },
+    {
+      "coordinates": [1713, 852],
+      "name": "Moree"
+    },
+    {
+      "coordinates": [272, 975],
+      "name": "Northam"
+    },
+    {
+      "coordinates": [793, 272],
+      "name": "Kununurra"
+    },
+    {
+      "coordinates": [1667, 726],
+      "name": "Roma"
+    },
+    {
+      "coordinates": [403, 611],
+      "name": "Newman"
+    },
+    {
+      "coordinates": [1735, 812],
+      "name": "Goondiwindi"
+    },
+    {
+      "coordinates": [250, 1088],
+      "name": "Manjimup"
+    },
+    {
+      "coordinates": [1031, 437],
+      "name": "Tennant Creek"
+    },
+    {
+      "coordinates": [586, 343],
+      "name": "Derby"
+    },
+    {
+      "coordinates": [1363, 126],
+      "name": "Weipa"
+    },
+    {
+      "coordinates": [1557, 721],
+      "name": "Charleville"
+    },
+    {
+      "coordinates": [1011, 981],
+      "name": "Ceduna"
+    },
+    {
+      "coordinates": [751, 382],
+      "name": "Halls Creek"
+    },
+    {
+      "coordinates": [1306, 477],
+      "name": "Cloncurry"
+    },
+    {
+      "coordinates": [159, 553],
+      "name": "Exmouth"
+    },
+    {
+      "coordinates": [494, 995],
+      "name": "Norseman"
+    },
+    {
+      "coordinates": [893, 683],
+      "name": "Yulara"
+    },
+    {
+      "coordinates": [1437, 370],
+      "name": "Georgetown"
+    },
+    {
+      "coordinates": [776, 255],
+      "name": "Wyndham"
+    },
+    {
+      "coordinates": [350, 753],
+      "name": "Meekatharra"
+    },
+    {
+      "coordinates": [201, 540],
+      "name": "Onslow"
+    },
+    {
+      "coordinates": [1470, 732],
+      "name": "Quilpie"
+    },
+    {
+      "coordinates": [1466, 481],
+      "name": "Hughenden"
+    },
+    {
+      "coordinates": [521, 838],
+      "name": "Laverton"
+    },
+    {
+      "coordinates": [474, 850],
+      "name": "Leonora"
+    },
+    {
+      "coordinates": [1452, 793],
+      "name": "Thargomindah"
+    },
+    {
+      "coordinates": [232, 884],
+      "name": "Three Springs"
+    },
+    {
+      "coordinates": [1202, 445],
+      "name": "Camooweal"
+    },
+    {
+      "coordinates": [989, 681],
+      "name": "Erldunda"
+    },
+    {
+      "coordinates": [1518, 1233],
+      "name": "Cranbourne"
+    },
+    {
+      "coordinates": [1748, 1088],
+      "name": "Nowra"
+    },
+    {
+      "coordinates": [1455, 1210],
+      "name": "Ballarat"
+    },
+    {
+      "coordinates": [1856, 886],
+      "name": "Coffs Harbour"
+    },
+    {
+      "coordinates": [1607, 1101],
+      "name": "Wagga Wagga"
+    },
+    {
+      "coordinates": [1522, 1157],
+      "name": "Shepparton"
+    },
+    {
+      "coordinates": [1487, 1215],
+      "name": "Melton"
+    },
+    {
+      "coordinates": [1848, 746],
+      "name": "Caboolture"
+    },
+    {
+      "coordinates": [228, 1050],
+      "name": "Bunbury"
+    },
+    {
+      "coordinates": [1595, 1232],
+      "name": "Sale"
+    },
+    {
+      "coordinates": [1736, 1037],
+      "name": "Katoomba"
+    },
+    {
+      "coordinates": [1710, 1083],
+      "name": "Goulburn"
+    },
+    {
+      "coordinates": [1494, 1147],
+      "name": "Echuca"
+    },
+    {
+      "coordinates": [1572, 1236],
+      "name": "Traralgon"
+    },
+    {
+      "coordinates": [1255, 1108],
+      "name": "Murray Bridge"
+    },
+    {
+      "coordinates": [1754, 1032],
+      "name": "Richmond"
+    },
+    {
+      "coordinates": [1772, 986],
+      "name": "Singleton"
+    },
+    {
+      "coordinates": [1383, 1175],
+      "name": "Horsham"
+    },
+    {
+      "coordinates": [1200, 1025],
+      "name": "Port Pirie"
+    },
+    {
+      "coordinates": [1808, 796],
+      "name": "Warwick"
+    },
+    {
+      "coordinates": [1844, 920],
+      "name": "Kempsey"
+    },
+    {
+      "coordinates": [1836, 707],
+      "name": "Gympie"
+    },
+    {
+      "coordinates": [1760, 974],
+      "name": "Muswellbrook"
+    },
+    {
+      "coordinates": [1642, 1013],
+      "name": "Parkes"
+    },
+    {
+      "coordinates": [1619, 1219],
+      "name": "Bairnsdale"
+    },
+    {
+      "coordinates": [1731, 1123],
+      "name": "Batemans Bay"
+    },
+    {
+      "coordinates": [1634, 528],
+      "name": "Moranbah"
+    },
+    {
+      "coordinates": [1775, 752],
+      "name": "Dalby"
+    },
+    {
+      "coordinates": [1556, 446],
+      "name": "Charters Towers"
+    },
+    {
+      "coordinates": [1640, 594],
+      "name": "Emerald"
+    },
+    {
+      "coordinates": [1441, 1114],
+      "name": "Swan Hill"
+    },
+    {
+      "coordinates": [1743, 1108],
+      "name": "Ulladulla"
+    },
+    {
+      "coordinates": [1444, 1245],
+      "name": "Colac"
+    },
+    {
+      "coordinates": [1605, 422],
+      "name": "Ayr"
+    },
+    {
+      "coordinates": [1376, 1219],
+      "name": "Hamilton"
+    },
+    {
+      "coordinates": [1800, 723],
+      "name": "Kingaroy"
+    },
+    {
+      "coordinates": [1769, 864],
+      "name": "Inverell"
+    },
+    {
+      "coordinates": [1503, 1121],
+      "name": "Deniliquin"
+    },
+    {
+      "coordinates": [1648, 1065],
+      "name": "Young"
+    },
+    {
+      "coordinates": [1565, 1077],
+      "name": "Leeton"
+    },
+    {
+      "coordinates": [1733, 918],
+      "name": "Gunnedah"
+    },
+    {
+      "coordinates": [1712, 890],
+      "name": "Narrabri"
+    },
+    {
+      "coordinates": [1408, 1189],
+      "name": "Stawell"
+    },
+    {
+      "coordinates": [1521, 324],
+      "name": "Atherton"
+    },
+    {
+      "coordinates": [1664, 1043],
+      "name": "Cowra"
+    },
+    {
+      "coordinates": [1645, 1108],
+      "name": "Tumut"
+    },
+    {
+      "coordinates": [1684, 1148],
+      "name": "Cooma"
+    },
+    {
+      "coordinates": [1718, 1176],
+      "name": "Merimbula"
+    },
+    {
+      "coordinates": [1741, 630],
+      "name": "Biloela"
+    },
+    {
+      "coordinates": [1551, 383],
+      "name": "Ingham"
+    },
+    {
+      "coordinates": [1703, 1025],
+      "name": "Bathurst"
+    },
+    {
+      "coordinates": [1531, 1255],
+      "name": "Wonthaggi"
+    },
+    {
+      "coordinates": [1703, 989],
+      "name": "Mudgee"
+    },
+    {
+      "coordinates": [1313, 1070],
+      "name": "Berri"
+    },
+    {
+      "coordinates": [1533, 1137],
+      "name": "Cobram"
+    },
+    {
+      "coordinates": [294, 1031],
+      "name": "Narrogin"
+    },
+    {
+      "coordinates": [1511, 1352],
+      "name": "Smithton"
+    },
+    {
+      "coordinates": [1657, 458],
+      "name": "Proserpine"
+    },
+    {
+      "coordinates": [311, 1064],
+      "name": "Katanning"
+    },
+    {
+      "coordinates": [1511, 1186],
+      "name": "Seymour"
+    },
+    {
+      "coordinates": [1226, 1052],
+      "name": "Clare"
+    },
+    {
+      "coordinates": [1520, 289],
+      "name": "Port Douglas"
+    },
+    {
+      "coordinates": [1469, 594],
+      "name": "Longreach"
+    },
+    {
+      "coordinates": [1184, 1057],
+      "name": "Wallaroo"
+    },
+    {
+      "coordinates": [319, 583],
+      "name": "Tom Price"
+    },
+    {
+      "coordinates": [342, 966],
+      "name": "Merredin"
+    },
+    {
+      "coordinates": [1321, 1159],
+      "name": "Bordertown"
+    },
+    {
+      "coordinates": [1616, 1364],
+      "name": "Scottsdale"
+    },
+    {
+      "coordinates": [1531, 1406],
+      "name": "Queenstown"
+    },
+    {
+      "coordinates": [1867, 847],
+      "name": "Yamba"
+    },
+    {
+      "coordinates": [1117, 1078],
+      "name": "Tumby Bay"
+    },
+    {
+      "coordinates": [316, 1104],
+      "name": "Mount Barker"
+    },
+    {
+      "coordinates": [1236, 1014],
+      "name": "Peterborough"
+    },
+    {
+      "coordinates": [302, 1047],
+      "name": "Wagin"
+    },
+    {
+      "coordinates": [1324, 1205],
+      "name": "Penola"
+    },
+    {
+      "coordinates": [1259, 1133],
+      "name": "Meningie"
+    },
+    {
+      "coordinates": [239, 963],
+      "name": "Gingin"
+    },
+    {
+      "coordinates": [1388, 1103],
+      "name": "Ouyen"
+    },
+    {
+      "coordinates": [1610, 1414],
+      "name": "Oatlands"
+    },
+    {
+      "coordinates": [1416, 549],
+      "name": "Winton"
+    },
+    {
+      "coordinates": [1514, 598],
+      "name": "Barcaldine"
+    },
+    {
+      "coordinates": [1035, 1011],
+      "name": "Streaky Bay"
+    },
+    {
+      "coordinates": [255, 538],
+      "name": "Pannawonica"
+    },
+    {
+      "coordinates": [926, 184],
+      "name": "Pine Creek"
+    },
+    {
+      "coordinates": [1132, 1024],
+      "name": "Kimba"
+    },
+    {
+      "coordinates": [1280, 574],
+      "name": "Boulia"
+    },
+    {
+      "coordinates": [1153, 1047],
+      "name": "Cowell"
+    },
+    {
+      "coordinates": [1163, 905],
+      "name": "Andamooka"
+    },
+    {
+      "coordinates": [1769, 672],
+      "name": "Eidsvold"
+    },
+    {
+      "coordinates": [1147, 936],
+      "name": "Woomera Village"
+    },
+    {
+      "coordinates": [1434, 949],
+      "name": "Wilcannia"
+    },
+    {
+      "coordinates": [321, 818],
+      "name": "Mount Magnet"
+    },
+    {
+      "coordinates": [807, 709],
+      "name": "Kaltukatjara"
+    },
+    {
+      "coordinates": [1258, 705],
+      "name": "Birdsville"
+    },
+    {
+      "coordinates": [1474, 1007],
+      "name": "Ivanhoe"
+    },
+    {
+      "coordinates": [242, 869],
+      "name": "Morawa"
+    },
+    {
+      "coordinates": [1723, 655],
+      "name": "Theodore"
+    },
+    {
+      "coordinates": [895, 160],
+      "name": "Adelaide River"
+    },
+    {
+      "coordinates": [1281, 1182],
+      "name": "Kingston SE"
+    },
+    {
+      "coordinates": [1264, 348],
+      "name": "Burketown"
+    },
+    {
+      "coordinates": [387, 954],
+      "name": "Southern Cross"
+    },
+    {
+      "coordinates": [1262, 638],
+      "name": "Bedourie"
+    },
+    {
+      "coordinates": [1082, 927],
+      "name": "Kingoonya"
+    },
+    {
+      "coordinates": [999, 346],
+      "name": "Newcastle Waters"
+    },
+    {
+      "coordinates": [1853, 728],
+      "name": "Sunshine Coast Region"
+    },
+    {
+      "coordinates": [1778, 1023],
+      "name": "Central Coast"
+    },
+    {
+      "coordinates": [1544, 883],
+      "name": "Bourke"
+    }
+  ],
   "themes": ["oceania"],
   "translation_key": "map.australia"
 }

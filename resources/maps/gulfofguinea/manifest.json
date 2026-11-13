@@ -331,6 +331,84 @@
       "name": "Omboue"
     }
   ],
+  "places": [
+    {
+      "coordinates": [2490, 1238],
+      "name": "Oyem"
+    },
+    {
+      "coordinates": [1906, 650],
+      "name": "Limbe"
+    },
+    {
+      "coordinates": [2132, 706],
+      "name": "Edéa"
+    },
+    {
+      "coordinates": [1966, 501],
+      "name": "Kumba"
+    },
+    {
+      "coordinates": [2145, 370],
+      "name": "Baham"
+    },
+    {
+      "coordinates": [2319, 232],
+      "name": "Foumban"
+    },
+    {
+      "coordinates": [179, 89],
+      "name": "Ouidah"
+    },
+    {
+      "coordinates": [2468, 772],
+      "name": "Mbalmayo"
+    },
+    {
+      "coordinates": [2161, 1807],
+      "name": "Lambaréné"
+    },
+    {
+      "coordinates": [2289, 741],
+      "name": "Éséka"
+    },
+    {
+      "coordinates": [2465, 1124],
+      "name": "Bitam"
+    },
+    {
+      "coordinates": [1380, 224],
+      "name": "Orlu"
+    },
+    {
+      "coordinates": [1854, 230],
+      "name": "Eyumodjock"
+    },
+    {
+      "coordinates": [2487, 1442],
+      "name": "Mitzic"
+    },
+    {
+      "coordinates": [1965, 1364],
+      "name": "Calatrava"
+    },
+    {
+      "coordinates": [2201, 1717],
+      "name": "Bifoun"
+    },
+    {
+      "coordinates": [88, 27],
+      "name": "Lokossa"
+    },
+    {
+      "coordinates": [2428, 1107],
+      "name": "Ebebiyín"
+    },
+    {
+      "coordinates": [2243, 1280],
+      "name": "Evinayong"
+    }
+  ],
   "themes": ["africa"],
   "translation_key": "map.gulfofguinea"
 }

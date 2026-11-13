@@ -6,6 +6,36 @@
   "categories": ["europe"],
   "location": { "lat": 57, "lon": 24.5 },
   "author": "Tristar",
+  "places": [
+    {
+      "coordinates": [359, 879],
+      "name": "Liepāja"
+    },
+    {
+      "coordinates": [375, 1051],
+      "name": "Klaipėda"
+    },
+    {
+      "coordinates": [1183, 250],
+      "name": "Narva"
+    },
+    {
+      "coordinates": [37, 634],
+      "name": "Visby"
+    },
+    {
+      "coordinates": [632, 1002],
+      "name": "Šiauliai"
+    },
+    {
+      "coordinates": [1272, 1099],
+      "name": "Polotsk"
+    },
+    {
+      "coordinates": [1096, 879],
+      "name": "Rēzekne"
+    }
+  ],
   "nations": [
     {
       "coordinates": [10, 220],

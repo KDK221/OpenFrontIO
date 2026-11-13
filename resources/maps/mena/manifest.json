@@ -195,6 +195,808 @@
       "name": "Kazakhstan"
     }
   ],
+  "places": [
+    {
+      "coordinates": [1248, 119],
+      "name": "Istanbul"
+    },
+    {
+      "coordinates": [542, 962],
+      "name": "Lagos"
+    },
+    {
+      "coordinates": [1796, 548],
+      "name": "Riyadh"
+    },
+    {
+      "coordinates": [1917, 276],
+      "name": "Tehran"
+    },
+    {
+      "coordinates": [284, 105],
+      "name": "Madrid"
+    },
+    {
+      "coordinates": [1713, 328],
+      "name": "Baghdad"
+    },
+    {
+      "coordinates": [1581, 931],
+      "name": "Addis Ababa"
+    },
+    {
+      "coordinates": [1389, 761],
+      "name": "Khartoum"
+    },
+    {
+      "coordinates": [1290, 368],
+      "name": "Alexandria"
+    },
+    {
+      "coordinates": [1363, 152],
+      "name": "Ankara"
+    },
+    {
+      "coordinates": [488, 202],
+      "name": "Algiers"
+    },
+    {
+      "coordinates": [685, 828],
+      "name": "Kano"
+    },
+    {
+      "coordinates": [1431, 350],
+      "name": "Tel Aviv"
+    },
+    {
+      "coordinates": [1578, 619],
+      "name": "Jeddah"
+    },
+    {
+      "coordinates": [125, 141],
+      "name": "Lisbon"
+    },
+    {
+      "coordinates": [1496, 249],
+      "name": "Aleppo"
+    },
+    {
+      "coordinates": [2157, 269],
+      "name": "Mashhad"
+    },
+    {
+      "coordinates": [1474, 316],
+      "name": "Damascus"
+    },
+    {
+      "coordinates": [1825, 431],
+      "name": "Kuwait City"
+    },
+    {
+      "coordinates": [1734, 778],
+      "name": "Sanaa"
+    },
+    {
+      "coordinates": [1157, 32],
+      "name": "Bucharest"
+    },
+    {
+      "coordinates": [1596, 622],
+      "name": "Mecca"
+    },
+    {
+      "coordinates": [123, 952],
+      "name": "Monrovia"
+    },
+    {
+      "coordinates": [698, 208],
+      "name": "Tunis"
+    },
+    {
+      "coordinates": [1450, 306],
+      "name": "Beirut"
+    },
+    {
+      "coordinates": [200, 261],
+      "name": "Rabat"
+    },
+    {
+      "coordinates": [1930, 351],
+      "name": "Isfahan"
+    },
+    {
+      "coordinates": [660, 900],
+      "name": "Abuja"
+    },
+    {
+      "coordinates": [197, 796],
+      "name": "Bamako"
+    },
+    {
+      "coordinates": [34, 868],
+      "name": "Conakry"
+    },
+    {
+      "coordinates": [1960, 429],
+      "name": "Shiraz"
+    },
+    {
+      "coordinates": [220, 178],
+      "name": "Seville"
+    },
+    {
+      "coordinates": [1077, 74],
+      "name": "Sofia"
+    },
+    {
+      "coordinates": [997, 335],
+      "name": "Benghazi"
+    },
+    {
+      "coordinates": [388, 809],
+      "name": "Ouagadougou"
+    },
+    {
+      "coordinates": [1707, 157],
+      "name": "Yerevan"
+    },
+    {
+      "coordinates": [1713, 118],
+      "name": "Tbilisi"
+    },
+    {
+      "coordinates": [990, 17],
+      "name": "Belgrade"
+    },
+    {
+      "coordinates": [1465, 355],
+      "name": "Amman"
+    },
+    {
+      "coordinates": [1444, 358],
+      "name": "Jerusalem"
+    },
+    {
+      "coordinates": [254, 262],
+      "name": "Fez"
+    },
+    {
+      "coordinates": [1761, 844],
+      "name": "Aden"
+    },
+    {
+      "coordinates": [878, 831],
+      "name": "N'Djamena"
+    },
+    {
+      "coordinates": [494, 784],
+      "name": "Niamey"
+    },
+    {
+      "coordinates": [169, 320],
+      "name": "Marrakesh"
+    },
+    {
+      "coordinates": [1068, 123],
+      "name": "Thessaloniki"
+    },
+    {
+      "coordinates": [48, 895],
+      "name": "Freetown"
+    },
+    {
+      "coordinates": [382, 131],
+      "name": "Valencia"
+    },
+    {
+      "coordinates": [381, 225],
+      "name": "Oran"
+    },
+    {
+      "coordinates": [516, 962],
+      "name": "Cotonou"
+    },
+    {
+      "coordinates": [587, 798],
+      "name": "Sokoto"
+    },
+    {
+      "coordinates": [2119, 226],
+      "name": "Ashgabat"
+    },
+    {
+      "coordinates": [1378, 508],
+      "name": "Luxor"
+    },
+    {
+      "coordinates": [1503, 768],
+      "name": "Kassala"
+    },
+    {
+      "coordinates": [1169, 842],
+      "name": "Nyala"
+    },
+    {
+      "coordinates": [859, 869],
+      "name": "Maroua"
+    },
+    {
+      "coordinates": [696, 783],
+      "name": "Zinder"
+    },
+    {
+      "coordinates": [286, 944],
+      "name": "Yamoussoukro"
+    },
+    {
+      "coordinates": [1046, 794],
+      "name": "Abéché"
+    },
+    {
+      "coordinates": [1539, 841],
+      "name": "Gondar"
+    },
+    {
+      "coordinates": [1266, 954],
+      "name": "Wau"
+    },
+    {
+      "coordinates": [512, 310],
+      "name": "Ghardaia"
+    },
+    {
+      "coordinates": [662, 702],
+      "name": "Agadez"
+    },
+    {
+      "coordinates": [838, 457],
+      "name": "Sabha"
+    },
+    {
+      "coordinates": [581, 555],
+      "name": "Tamanrasset"
+    },
+    {
+      "coordinates": [338, 697],
+      "name": "Timbuktu"
+    },
+    {
+      "coordinates": [36, 594],
+      "name": "Atar"
+    },
+    {
+      "coordinates": [297, 768],
+      "name": "Djenné"
+    },
+    {
+      "coordinates": [1323, 670],
+      "name": "Karma"
+    },
+    {
+      "coordinates": [1049, 930],
+      "name": "N'Délé"
+    },
+    {
+      "coordinates": [557, 939],
+      "name": "Ibadan"
+    },
+    {
+      "coordinates": [1197, 184],
+      "name": "İzmir"
+    },
+    {
+      "coordinates": [1251, 141],
+      "name": "Bursa"
+    },
+    {
+      "coordinates": [656, 864],
+      "name": "Kaduna"
+    },
+    {
+      "coordinates": [1763, 211],
+      "name": "Tabriz"
+    },
+    {
+      "coordinates": [1672, 251],
+      "name": "Mosul"
+    },
+    {
+      "coordinates": [1584, 545],
+      "name": "Medina"
+    },
+    {
+      "coordinates": [1844, 384],
+      "name": "Ahwaz"
+    },
+    {
+      "coordinates": [565, 921],
+      "name": "Ogbomosho"
+    },
+    {
+      "coordinates": [1708, 872],
+      "name": "Djibouti"
+    },
+    {
+      "coordinates": [1355, 203],
+      "name": "Konya"
+    },
+    {
+      "coordinates": [822, 836],
+      "name": "Maiduguri"
+    },
+    {
+      "coordinates": [302, 34],
+      "name": "Bilbao"
+    },
+    {
+      "coordinates": [1731, 822],
+      "name": "Ta'izz"
+    },
+    {
+      "coordinates": [842, 195],
+      "name": "Catania"
+    },
+    {
+      "coordinates": [1713, 361],
+      "name": "Najaf"
+    },
+    {
+      "coordinates": [1359, 368],
+      "name": "Port Said"
+    },
+    {
+      "coordinates": [1464, 121],
+      "name": "Samsun"
+    },
+    {
+      "coordinates": [593, 216],
+      "name": "Constantine"
+    },
+    {
+      "coordinates": [292, 923],
+      "name": "Bouaké"
+    },
+    {
+      "coordinates": [1906, 512],
+      "name": "Manama"
+    },
+    {
+      "coordinates": [1489, 445],
+      "name": "Tabuk"
+    },
+    {
+      "coordinates": [1833, 295],
+      "name": "Hamadan"
+    },
+    {
+      "coordinates": [1422, 364],
+      "name": "Gaza City"
+    },
+    {
+      "coordinates": [627, 203],
+      "name": "Annaba"
+    },
+    {
+      "coordinates": [1802, 6],
+      "name": "Astrakhan"
+    },
+    {
+      "coordinates": [1023, 89],
+      "name": "Skopje"
+    },
+    {
+      "coordinates": [2010, 373],
+      "name": "Yazd"
+    },
+    {
+      "coordinates": [1014, 72],
+      "name": "Pristina"
+    },
+    {
+      "coordinates": [2073, 493],
+      "name": "Bandar Abbas"
+    },
+    {
+      "coordinates": [1332, 469],
+      "name": "Asyut"
+    },
+    {
+      "coordinates": [344, 249],
+      "name": "Taza"
+    },
+    {
+      "coordinates": [1324, 819],
+      "name": "Al-Ubayyid"
+    },
+    {
+      "coordinates": [132, 54],
+      "name": "Vigo"
+    },
+    {
+      "coordinates": [308, 836],
+      "name": "Bobo Dioulasso"
+    },
+    {
+      "coordinates": [713, 233],
+      "name": "Sousse"
+    },
+    {
+      "coordinates": [255, 167],
+      "name": "Córdoba"
+    },
+    {
+      "coordinates": [1319, 416],
+      "name": "Faiyum"
+    },
+    {
+      "coordinates": [1387, 549],
+      "name": "Aswan"
+    },
+    {
+      "coordinates": [1676, 73],
+      "name": "Nalchik"
+    },
+    {
+      "coordinates": [1231, 41],
+      "name": "Constanța"
+    },
+    {
+      "coordinates": [692, 935],
+      "name": "Makurdi"
+    },
+    {
+      "coordinates": [1673, 920],
+      "name": "Dire Dawa"
+    },
+    {
+      "coordinates": [2149, 114],
+      "name": "Nukus"
+    },
+    {
+      "coordinates": [1737, 79],
+      "name": "Grozny"
+    },
+    {
+      "coordinates": [1538, 866],
+      "name": "Bahir Dar"
+    },
+    {
+      "coordinates": [515, 889],
+      "name": "Parakou"
+    },
+    {
+      "coordinates": [179, 917],
+      "name": "Nzérékoré"
+    },
+    {
+      "coordinates": [1094, 805],
+      "name": "Geneina"
+    },
+    {
+      "coordinates": [1372, 912],
+      "name": "Malakal"
+    },
+    {
+      "coordinates": [247, 778],
+      "name": "Ségou"
+    },
+    {
+      "coordinates": [426, 713],
+      "name": "Gao"
+    },
+    {
+      "coordinates": [585, 752],
+      "name": "Tahoua"
+    },
+    {
+      "coordinates": [161, 851],
+      "name": "Kankan"
+    },
+    {
+      "coordinates": [1694, 836],
+      "name": "Assab"
+    },
+    {
+      "coordinates": [473, 933],
+      "name": "Atakpamé"
+    },
+    {
+      "coordinates": [93, 747],
+      "name": "Kayes"
+    },
+    {
+      "coordinates": [1104, 537],
+      "name": "Al Jawf"
+    },
+    {
+      "coordinates": [29, 703],
+      "name": "Kaédi"
+    },
+    {
+      "coordinates": [143, 694],
+      "name": "Ayoun el Atrous"
+    },
+    {
+      "coordinates": [879, 475],
+      "name": "Tmassa"
+    },
+    {
+      "coordinates": [1328, 399],
+      "name": "Giza"
+    },
+    {
+      "coordinates": [393, 951],
+      "name": "Kumasi"
+    },
+    {
+      "coordinates": [137, 81],
+      "name": "Porto"
+    },
+    {
+      "coordinates": [1485, 286],
+      "name": "Homs"
+    },
+    {
+      "coordinates": [1905, 301],
+      "name": "Qom"
+    },
+    {
+      "coordinates": [1698, 256],
+      "name": "Erbil"
+    },
+    {
+      "coordinates": [663, 850],
+      "name": "Zaria"
+    },
+    {
+      "coordinates": [431, 29],
+      "name": "Toulouse"
+    },
+    {
+      "coordinates": [1790, 304],
+      "name": "Kermanshah"
+    },
+    {
+      "coordinates": [123, 349],
+      "name": "Agadir"
+    },
+    {
+      "coordinates": [699, 880],
+      "name": "Jos"
+    },
+    {
+      "coordinates": [1698, 791],
+      "name": "Al Hudaydah"
+    },
+    {
+      "coordinates": [364, 76],
+      "name": "Zaragoza"
+    },
+    {
+      "coordinates": [1878, 533],
+      "name": "Hofuf"
+    },
+    {
+      "coordinates": [1862, 234],
+      "name": "Rasht"
+    },
+    {
+      "coordinates": [1443, 184],
+      "name": "Kayseri"
+    },
+    {
+      "coordinates": [2092, 416],
+      "name": "Kerman"
+    },
+    {
+      "coordinates": [1791, 89],
+      "name": "Makhachkala"
+    },
+    {
+      "coordinates": [1295, 153],
+      "name": "Eskişehir"
+    },
+    {
+      "coordinates": [1318, 446],
+      "name": "Minya"
+    },
+    {
+      "coordinates": [1598, 944],
+      "name": "Adama"
+    },
+    {
+      "coordinates": [1874, 260],
+      "name": "Qazvin"
+    },
+    {
+      "coordinates": [1542, 227],
+      "name": "Şanlıurfa"
+    },
+    {
+      "coordinates": [525, 491],
+      "name": "Arak"
+    },
+    {
+      "coordinates": [1821, 209],
+      "name": "Ardabil"
+    },
+    {
+      "coordinates": [363, 168],
+      "name": "Murcia"
+    },
+    {
+      "coordinates": [291, 186],
+      "name": "Granada"
+    },
+    {
+      "coordinates": [140, 27],
+      "name": "A Coruña"
+    },
+    {
+      "coordinates": [1832, 407],
+      "name": "Abadan"
+    },
+    {
+      "coordinates": [1396, 822],
+      "name": "Kosti"
+    },
+    {
+      "coordinates": [1420, 792],
+      "name": "Wad Madani"
+    },
+    {
+      "coordinates": [2152, 354],
+      "name": "Birjand"
+    },
+    {
+      "coordinates": [631, 886],
+      "name": "Minna"
+    },
+    {
+      "coordinates": [214, 199],
+      "name": "Cádiz"
+    },
+    {
+      "coordinates": [582, 235],
+      "name": "Batna"
+    },
+    {
+      "coordinates": [558, 219],
+      "name": "Sétif"
+    },
+    {
+      "coordinates": [340, 46],
+      "name": "Pamplona"
+    },
+    {
+      "coordinates": [1112, 340],
+      "name": "Tobruk"
+    },
+    {
+      "coordinates": [1290, 128],
+      "name": "Adapazarı"
+    },
+    {
+      "coordinates": [1880, 803],
+      "name": "Mukalla"
+    },
+    {
+      "coordinates": [251, 942],
+      "name": "Daloa"
+    },
+    {
+      "coordinates": [1180, 803],
+      "name": "Al-Fashir"
+    },
+    {
+      "coordinates": [2100, 269],
+      "name": "Sabzevar"
+    },
+    {
+      "coordinates": [1679, 705],
+      "name": "Abha"
+    },
+    {
+      "coordinates": [2023, 746],
+      "name": "Salalah"
+    },
+    {
+      "coordinates": [570, 253],
+      "name": "Biskra"
+    },
+    {
+      "coordinates": [2160, 130],
+      "name": "Daşoguz"
+    },
+    {
+      "coordinates": [1475, 803],
+      "name": "Al Qadarif"
+    },
+    {
+      "coordinates": [1200, 82],
+      "name": "Burgas"
+    },
+    {
+      "coordinates": [1605, 880],
+      "name": "Dessie"
+    },
+    {
+      "coordinates": [271, 878],
+      "name": "Korhogo"
+    },
+    {
+      "coordinates": [1312, 873],
+      "name": "Kaduqli"
+    },
+    {
+      "coordinates": [562, 325],
+      "name": "Ouargla"
+    },
+    {
+      "coordinates": [93, 909],
+      "name": "Bo"
+    },
+    {
+      "coordinates": [497, 255],
+      "name": "Djelfa"
+    },
+    {
+      "coordinates": [981, 909],
+      "name": "Sarh"
+    },
+    {
+      "coordinates": [1429, 709],
+      "name": "Atbarah"
+    },
+    {
+      "coordinates": [2126, 295],
+      "name": "Kashmar"
+    },
+    {
+      "coordinates": [1620, 118],
+      "name": "Batumi"
+    },
+    {
+      "coordinates": [2181, 138],
+      "name": "Urgench"
+    },
+    {
+      "coordinates": [1003, 369],
+      "name": "Ajdabiya"
+    },
+    {
+      "coordinates": [339, 326],
+      "name": "Béchar"
+    },
+    {
+      "coordinates": [72, 825],
+      "name": "Labé"
+    },
+    {
+      "coordinates": [582, 297],
+      "name": "Touggourt"
+    },
+    {
+      "coordinates": [1423, 813],
+      "name": "Sennar"
+    },
+    {
+      "coordinates": [1527, 963],
+      "name": "Jimma"
+    },
+    {
+      "coordinates": [1072, 321],
+      "name": "Derna"
+    },
+    {
+      "coordinates": [645, 108],
+      "name": "Sassari"
+    },
+    {
+      "coordinates": [157, 52],
+      "name": "Ourense"
+    }
+  ],
   "themes": ["asia", "africa"],
   "translation_key": "map.mena"
 }

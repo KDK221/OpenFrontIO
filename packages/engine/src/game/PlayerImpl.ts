@@ -423,6 +423,21 @@ export class PlayerImpl implements Player {
     return this._smallID;
   }
 
+  rename(name: string): void {
+    const i = this.playerInfo;
+    this.playerInfo = new PlayerInfo(
+      name,
+      i.playerType,
+      i.clientID,
+      i.id,
+      i.isLobbyCreator,
+      i.clanTag,
+      i.friends,
+      i.teamIndex,
+      i.nationFlag,
+    );
+  }
+
   name(): string {
     return this.playerInfo.name;
   }

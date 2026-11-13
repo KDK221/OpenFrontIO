@@ -6,6 +6,112 @@
   "categories": ["europe"],
   "location": { "lat": 55.7, "lon": 11.5 },
   "author": "Tristar",
+  "places": [
+    {
+      "coordinates": [598, 780],
+      "name": "Copenhagen"
+    },
+    {
+      "coordinates": [652, 800],
+      "name": "Malmö"
+    },
+    {
+      "coordinates": [549, 395],
+      "name": "Gothenburg"
+    },
+    {
+      "coordinates": [799, 401],
+      "name": "Jönköping"
+    },
+    {
+      "coordinates": [808, 1207],
+      "name": "Szczecin"
+    },
+    {
+      "coordinates": [307, 1019],
+      "name": "Kiel"
+    },
+    {
+      "coordinates": [366, 1107],
+      "name": "Lübeck"
+    },
+    {
+      "coordinates": [538, 1076],
+      "name": "Rostock"
+    },
+    {
+      "coordinates": [344, 822],
+      "name": "Odense"
+    },
+    {
+      "coordinates": [303, 518],
+      "name": "Aalborg"
+    },
+    {
+      "coordinates": [230, 932],
+      "name": "Flensburg"
+    },
+    {
+      "coordinates": [617, 713],
+      "name": "Helsingborg"
+    },
+    {
+      "coordinates": [355, 16],
+      "name": "Drammen"
+    },
+    {
+      "coordinates": [655, 403],
+      "name": "Borås"
+    },
+    {
+      "coordinates": [650, 1038],
+      "name": "Stralsund"
+    },
+    {
+      "coordinates": [868, 568],
+      "name": "Växjö"
+    },
+    {
+      "coordinates": [640, 598],
+      "name": "Halmstad"
+    },
+    {
+      "coordinates": [588, 301],
+      "name": "Trollhättan"
+    },
+    {
+      "coordinates": [783, 722],
+      "name": "Kristianstad"
+    },
+    {
+      "coordinates": [369, 884],
+      "name": "Svendborg"
+    },
+    {
+      "coordinates": [543, 784],
+      "name": "Roskilde"
+    },
+    {
+      "coordinates": [450, 1154],
+      "name": "Schwerin"
+    },
+    {
+      "coordinates": [572, 733],
+      "name": "Hillerød"
+    },
+    {
+      "coordinates": [592, 283],
+      "name": "Vänersborg"
+    },
+    {
+      "coordinates": [768, 227],
+      "name": "Mariestad"
+    },
+    {
+      "coordinates": [481, 822],
+      "name": "Sorø"
+    }
+  ],
   "nations": [
     {
       "coordinates": [37, 227],

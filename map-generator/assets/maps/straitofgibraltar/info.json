@@ -7,6 +7,60 @@
   "location": { "lat": 36, "lon": -5.5 },
   "author": "evanpelle",
   "special_team_count": 2,
+  "places": [
+    {
+      "coordinates": [1754, 1384],
+      "name": "Fez"
+    },
+    {
+      "coordinates": [1535, 1446],
+      "name": "Meknes"
+    },
+    {
+      "coordinates": [1124, 1306],
+      "name": "Kenitra"
+    },
+    {
+      "coordinates": [1944, 360],
+      "name": "Málaga"
+    },
+    {
+      "coordinates": [1378, 1016],
+      "name": "Ksar el-Kebir"
+    },
+    {
+      "coordinates": [2142, 1319],
+      "name": "Taza"
+    },
+    {
+      "coordinates": [2733, 313],
+      "name": "Almería"
+    },
+    {
+      "coordinates": [1276, 948],
+      "name": "Larache"
+    },
+    {
+      "coordinates": [1517, 1096],
+      "name": "Ouazzane"
+    },
+    {
+      "coordinates": [303, 210],
+      "name": "Portimão"
+    },
+    {
+      "coordinates": [543, 254],
+      "name": "Faro"
+    },
+    {
+      "coordinates": [1763, 439],
+      "name": "Marbella"
+    },
+    {
+      "coordinates": [1537, 590],
+      "name": "Algeciras"
+    }
+  ],
   "nations": [
     {
       "coordinates": [2733, 1190],

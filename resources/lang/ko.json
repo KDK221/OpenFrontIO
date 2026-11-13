@@ -3275,5 +3275,15 @@
       "1": "보통",
       "2": "크게"
     }
+  },
+  "place_tribe": {
+    "Village": "{name} 마을",
+    "Town": "{name} 읍내",
+    "Militia": "{name} 민병대",
+    "Guard": "{name} 수비대",
+    "Clan": "{name} 일가",
+    "Union": "{name} 연합",
+    "Commune": "{name} 공동체",
+    "Rebels": "{name} 반군"
   }
 }

@@ -189,6 +189,236 @@
       "name": "Rouyn-Noranda"
     }
   ],
+  "places": [
+    {
+      "coordinates": [33, 1233],
+      "name": "Cedar Rapids"
+    },
+    {
+      "coordinates": [1406, 404],
+      "name": "Greater Sudbury"
+    },
+    {
+      "coordinates": [1986, 1104],
+      "name": "Ithaca"
+    },
+    {
+      "coordinates": [1816, 110],
+      "name": "Val-d'Or"
+    },
+    {
+      "coordinates": [466, 1258],
+      "name": "Aurora"
+    },
+    {
+      "coordinates": [1059, 1025],
+      "name": "Flint"
+    },
+    {
+      "coordinates": [1056, 1150],
+      "name": "Ann Arbor"
+    },
+    {
+      "coordinates": [524, 1152],
+      "name": "Waukegan"
+    },
+    {
+      "coordinates": [815, 1157],
+      "name": "Kalamazoo"
+    },
+    {
+      "coordinates": [1571, 772],
+      "name": "Barrie"
+    },
+    {
+      "coordinates": [1658, 997],
+      "name": "Niagara Falls"
+    },
+    {
+      "coordinates": [528, 1088],
+      "name": "Racine"
+    },
+    {
+      "coordinates": [161, 1136],
+      "name": "Dubuque"
+    },
+    {
+      "coordinates": [1946, 1166],
+      "name": "Elmira"
+    },
+    {
+      "coordinates": [445, 906],
+      "name": "Fond du Lac"
+    },
+    {
+      "coordinates": [1634, 1172],
+      "name": "Jamestown"
+    },
+    {
+      "coordinates": [808, 722],
+      "name": "Traverse City"
+    },
+    {
+      "coordinates": [480, 966],
+      "name": "West Bend"
+    },
+    {
+      "coordinates": [34, 867],
+      "name": "Winona"
+    },
+    {
+      "coordinates": [1522, 855],
+      "name": "Orangeville"
+    },
+    {
+      "coordinates": [549, 670],
+      "name": "Marinette"
+    },
+    {
+      "coordinates": [1902, 506],
+      "name": "Pembroke"
+    },
+    {
+      "coordinates": [835, 813],
+      "name": "Cadillac"
+    },
+    {
+      "coordinates": [319, 581],
+      "name": "Rhinelander"
+    },
+    {
+      "coordinates": [5, 190],
+      "name": "Ely"
+    },
+    {
+      "coordinates": [31, 40],
+      "name": "Atikokan"
+    },
+    {
+      "coordinates": [1091, 177],
+      "name": "Chapleau"
+    },
+    {
+      "coordinates": [1386, 715],
+      "name": "Wiarton"
+    },
+    {
+      "coordinates": [1282, 500],
+      "name": "Northeastern Manitoulin and the Islands"
+    },
+    {
+      "coordinates": [1681, 858],
+      "name": "Oshawa"
+    },
+    {
+      "coordinates": [1469, 939],
+      "name": "Kitchener"
+    },
+    {
+      "coordinates": [467, 1210],
+      "name": "Elgin"
+    },
+    {
+      "coordinates": [543, 1207],
+      "name": "Evanston"
+    },
+    {
+      "coordinates": [1373, 1025],
+      "name": "London"
+    },
+    {
+      "coordinates": [367, 1172],
+      "name": "Rockford"
+    },
+    {
+      "coordinates": [474, 1039],
+      "name": "Waukesha"
+    },
+    {
+      "coordinates": [731, 1267],
+      "name": "South Bend"
+    },
+    {
+      "coordinates": [451, 819],
+      "name": "Appleton"
+    },
+    {
+      "coordinates": [767, 1266],
+      "name": "Elkhart"
+    },
+    {
+      "coordinates": [1225, 1029],
+      "name": "Sarnia"
+    },
+    {
+      "coordinates": [51, 1286],
+      "name": "Iowa City"
+    },
+    {
+      "coordinates": [85, 909],
+      "name": "La Crosse"
+    },
+    {
+      "coordinates": [1747, 783],
+      "name": "Peterborough"
+    },
+    {
+      "coordinates": [51, 733],
+      "name": "Eau Claire"
+    },
+    {
+      "coordinates": [868, 1151],
+      "name": "Battle Creek"
+    },
+    {
+      "coordinates": [372, 1099],
+      "name": "Janesville"
+    },
+    {
+      "coordinates": [1033, 923],
+      "name": "Bay City"
+    },
+    {
+      "coordinates": [540, 907],
+      "name": "Sheboygan"
+    },
+    {
+      "coordinates": [1870, 803],
+      "name": "Belleville"
+    },
+    {
+      "coordinates": [1608, 733],
+      "name": "Orillia"
+    },
+    {
+      "coordinates": [1423, 743],
+      "name": "Owen Sound"
+    },
+    {
+      "coordinates": [492, 544],
+      "name": "Iron Mountain"
+    },
+    {
+      "coordinates": [180, 875],
+      "name": "Tomah"
+    },
+    {
+      "coordinates": [1770, 32],
+      "name": "Amos"
+    },
+    {
+      "coordinates": [222, 439],
+      "name": "Ironwood"
+    },
+    {
+      "coordinates": [1572, 224],
+      "name": "Temiskaming Shores"
+    },
+    {
+      "coordinates": [1073, 456],
+      "name": "Thessalon"
+    }
+  ],
   "themes": ["north_america"],
   "translation_key": "map.greatlakes"
 }

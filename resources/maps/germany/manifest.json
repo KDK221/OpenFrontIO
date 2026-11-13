@@ -509,6 +509,276 @@
       "name": "Brandenburg"
     }
   ],
+  "places": [
+    {
+      "coordinates": [556, 965],
+      "name": "Frankfurt"
+    },
+    {
+      "coordinates": [971, 1286],
+      "name": "Munich"
+    },
+    {
+      "coordinates": [1251, 813],
+      "name": "Dresden"
+    },
+    {
+      "coordinates": [638, 1180],
+      "name": "Stuttgart"
+    },
+    {
+      "coordinates": [311, 830],
+      "name": "Cologne"
+    },
+    {
+      "coordinates": [893, 1072],
+      "name": "Nuremberg"
+    },
+    {
+      "coordinates": [439, 1212],
+      "name": "Strasbourg"
+    },
+    {
+      "coordinates": [207, 1044],
+      "name": "Luxembourg"
+    },
+    {
+      "coordinates": [532, 1063],
+      "name": "Mannheim"
+    },
+    {
+      "coordinates": [286, 783],
+      "name": "Düsseldorf"
+    },
+    {
+      "coordinates": [423, 1374],
+      "name": "Basel"
+    },
+    {
+      "coordinates": [326, 1103],
+      "name": "Saarbrücken"
+    },
+    {
+      "coordinates": [684, 598],
+      "name": "Hanover"
+    },
+    {
+      "coordinates": [331, 864],
+      "name": "Bonn"
+    },
+    {
+      "coordinates": [497, 968],
+      "name": "Wiesbaden"
+    },
+    {
+      "coordinates": [1064, 766],
+      "name": "Leipzig"
+    },
+    {
+      "coordinates": [405, 924],
+      "name": "Koblenz"
+    },
+    {
+      "coordinates": [397, 661],
+      "name": "Münster"
+    },
+    {
+      "coordinates": [459, 1306],
+      "name": "Freiburg im Breisgau"
+    },
+    {
+      "coordinates": [806, 354],
+      "name": "Lübeck"
+    },
+    {
+      "coordinates": [454, 611],
+      "name": "Osnabrück"
+    },
+    {
+      "coordinates": [949, 637],
+      "name": "Magdeburg"
+    },
+    {
+      "coordinates": [1148, 593],
+      "name": "Potsdam"
+    },
+    {
+      "coordinates": [389, 1347],
+      "name": "Mulhouse"
+    },
+    {
+      "coordinates": [1009, 322],
+      "name": "Rostock"
+    },
+    {
+      "coordinates": [751, 1242],
+      "name": "Ulm"
+    },
+    {
+      "coordinates": [734, 1015],
+      "name": "Würzburg"
+    },
+    {
+      "coordinates": [1040, 1142],
+      "name": "Regensburg"
+    },
+    {
+      "coordinates": [949, 1182],
+      "name": "Ingolstadt"
+    },
+    {
+      "coordinates": [718, 735],
+      "name": "Göttingen"
+    },
+    {
+      "coordinates": [519, 405],
+      "name": "Bremerhaven"
+    },
+    {
+      "coordinates": [1327, 696],
+      "name": "Cottbus"
+    },
+    {
+      "coordinates": [952, 832],
+      "name": "Jena"
+    },
+    {
+      "coordinates": [1020, 842],
+      "name": "Gera"
+    },
+    {
+      "coordinates": [628, 205],
+      "name": "Flensburg"
+    },
+    {
+      "coordinates": [1050, 1332],
+      "name": "Rosenheim"
+    },
+    {
+      "coordinates": [549, 887],
+      "name": "Gießen"
+    },
+    {
+      "coordinates": [1139, 285],
+      "name": "Stralsund"
+    },
+    {
+      "coordinates": [1003, 931],
+      "name": "Hof"
+    },
+    {
+      "coordinates": [1226, 1215],
+      "name": "Passau"
+    },
+    {
+      "coordinates": [317, 746],
+      "name": "Essen"
+    },
+    {
+      "coordinates": [280, 749],
+      "name": "Duisburg"
+    },
+    {
+      "coordinates": [340, 778],
+      "name": "Wuppertal"
+    },
+    {
+      "coordinates": [377, 733],
+      "name": "Dortmund"
+    },
+    {
+      "coordinates": [564, 1076],
+      "name": "Heidelberg"
+    },
+    {
+      "coordinates": [526, 1144],
+      "name": "Karlsruhe"
+    },
+    {
+      "coordinates": [876, 1251],
+      "name": "Augsburg"
+    },
+    {
+      "coordinates": [522, 652],
+      "name": "Bielefeld"
+    },
+    {
+      "coordinates": [1138, 848],
+      "name": "Chemnitz"
+    },
+    {
+      "coordinates": [662, 771],
+      "name": "Kassel"
+    },
+    {
+      "coordinates": [793, 617],
+      "name": "Brunswick"
+    },
+    {
+      "coordinates": [876, 825],
+      "name": "Erfurt"
+    },
+    {
+      "coordinates": [472, 473],
+      "name": "Oldenburg"
+    },
+    {
+      "coordinates": [872, 939],
+      "name": "Coburg"
+    },
+    {
+      "coordinates": [331, 434],
+      "name": "Emden"
+    },
+    {
+      "coordinates": [501, 984],
+      "name": "Mainz"
+    },
+    {
+      "coordinates": [911, 393],
+      "name": "Schwerin"
+    },
+    {
+      "coordinates": [136, 842],
+      "name": "Maastricht"
+    },
+    {
+      "coordinates": [670, 1401],
+      "name": "St. Gallen"
+    },
+    {
+      "coordinates": [567, 1354],
+      "name": "Schaffhausen"
+    },
+    {
+      "coordinates": [725, 1385],
+      "name": "Bregenz"
+    },
+    {
+      "coordinates": [633, 1377],
+      "name": "Frauenfeld"
+    },
+    {
+      "coordinates": [444, 1390],
+      "name": "Liestal"
+    },
+    {
+      "coordinates": [391, 1408],
+      "name": "Delémont"
+    },
+    {
+      "coordinates": [210, 1000],
+      "name": "Diekirch"
+    },
+    {
+      "coordinates": [678, 1415],
+      "name": "Appenzell"
+    },
+    {
+      "coordinates": [235, 1030],
+      "name": "Grevenmacher"
+    }
+  ],
   "themes": ["europe"],
   "translation_key": "map.germany"
 }

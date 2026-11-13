@@ -341,6 +341,252 @@
       "name": "Solvang"
     }
   ],
+  "places": [
+    {
+      "coordinates": [4033, 166],
+      "name": "Monterrey"
+    },
+    {
+      "coordinates": [4148, 163],
+      "name": "San Diego"
+    },
+    {
+      "coordinates": [3230, 149],
+      "name": "Durban"
+    },
+    {
+      "coordinates": [357, 1565],
+      "name": "Guatemala City"
+    },
+    {
+      "coordinates": [798, 1386],
+      "name": "Tegucigalpa"
+    },
+    {
+      "coordinates": [4352, 57],
+      "name": "Chihuahua City"
+    },
+    {
+      "coordinates": [1219, 1133],
+      "name": "Macapá"
+    },
+    {
+      "coordinates": [906, 1359],
+      "name": "Tuxtla Gutiérrez"
+    },
+    {
+      "coordinates": [705, 1385],
+      "name": "San Cristóbal"
+    },
+    {
+      "coordinates": [3510, 248],
+      "name": "Cayenne"
+    },
+    {
+      "coordinates": [1346, 1066],
+      "name": "São Luís"
+    },
+    {
+      "coordinates": [4426, 52],
+      "name": "Mexicali"
+    },
+    {
+      "coordinates": [3540, 383],
+      "name": "Hermosillo"
+    },
+    {
+      "coordinates": [252, 1608],
+      "name": "Quetzaltenango"
+    },
+    {
+      "coordinates": [3306, 130],
+      "name": "Welkom"
+    },
+    {
+      "coordinates": [3298, 164],
+      "name": "Walvis Bay"
+    },
+    {
+      "coordinates": [1506, 856],
+      "name": "Lüderitz"
+    },
+    {
+      "coordinates": [732, 1442],
+      "name": "Cuernavaca"
+    },
+    {
+      "coordinates": [3847, 147],
+      "name": "Cumaná"
+    },
+    {
+      "coordinates": [4442, 10],
+      "name": "Monclova"
+    },
+    {
+      "coordinates": [4244, 97],
+      "name": "Delicias"
+    },
+    {
+      "coordinates": [3572, 26],
+      "name": "Kroonstad"
+    },
+    {
+      "coordinates": [765, 1303],
+      "name": "Abaetetuba"
+    },
+    {
+      "coordinates": [4212, 63],
+      "name": "San Miguel de Cozumel"
+    },
+    {
+      "coordinates": [3404, 97],
+      "name": "Vryburg"
+    },
+    {
+      "coordinates": [3456, 102],
+      "name": "Swakopmund"
+    },
+    {
+      "coordinates": [3560, 230],
+      "name": "Kourou"
+    },
+    {
+      "coordinates": [4542, 134],
+      "name": "Unalaska"
+    },
+    {
+      "coordinates": [3617, 226],
+      "name": "Mabaruma"
+    },
+    {
+      "coordinates": [854, 1395],
+      "name": "Toluca"
+    },
+    {
+      "coordinates": [4324, 95],
+      "name": "Oceanside"
+    },
+    {
+      "coordinates": [3325, 357],
+      "name": "Maiquetía"
+    },
+    {
+      "coordinates": [631, 1488],
+      "name": "Zamora"
+    },
+    {
+      "coordinates": [4557, 13],
+      "name": "Santa Maria"
+    },
+    {
+      "coordinates": [4067, 169],
+      "name": "Cuauhtémoc"
+    },
+    {
+      "coordinates": [1153, 1158],
+      "name": "Porto Santana"
+    },
+    {
+      "coordinates": [3514, 46],
+      "name": "Bethlehem"
+    },
+    {
+      "coordinates": [669, 1395],
+      "name": "Arauca"
+    },
+    {
+      "coordinates": [3677, 228],
+      "name": "Oranjestad"
+    },
+    {
+      "coordinates": [4483, 30],
+      "name": "El Centro"
+    },
+    {
+      "coordinates": [4278, 40],
+      "name": "Tizimín"
+    },
+    {
+      "coordinates": [3503, 376],
+      "name": "Parras de la Fuente"
+    },
+    {
+      "coordinates": [3598, 307],
+      "name": "Ticul"
+    },
+    {
+      "coordinates": [3663, 16],
+      "name": "Rehoboth"
+    },
+    {
+      "coordinates": [3439, 280],
+      "name": "Saint-Laurent-du-Maroni"
+    },
+    {
+      "coordinates": [373, 1520],
+      "name": "Ayapel"
+    },
+    {
+      "coordinates": [3986, 156],
+      "name": "Izamal"
+    },
+    {
+      "coordinates": [3405, 304],
+      "name": "Anna Regina"
+    },
+    {
+      "coordinates": [4167, 21],
+      "name": "Carúpano"
+    },
+    {
+      "coordinates": [318, 1579],
+      "name": "Jutiapa"
+    },
+    {
+      "coordinates": [752, 1362],
+      "name": "Guasdualito"
+    },
+    {
+      "coordinates": [278, 1583],
+      "name": "Boaco"
+    },
+    {
+      "coordinates": [962, 1367],
+      "name": "Santiago Ixcuintla"
+    },
+    {
+      "coordinates": [1096, 1147],
+      "name": "Apodi"
+    },
+    {
+      "coordinates": [4513, 3],
+      "name": "Nacozari de García"
+    },
+    {
+      "coordinates": [1092, 1203],
+      "name": "Lethem"
+    },
+    {
+      "coordinates": [530, 1487],
+      "name": "Jinotega"
+    },
+    {
+      "coordinates": [586, 1475],
+      "name": "El Progreso"
+    },
+    {
+      "coordinates": [660, 1445],
+      "name": "Chiquimula"
+    },
+    {
+      "coordinates": [218, 1614],
+      "name": "San Vicente"
+    },
+    {
+      "coordinates": [755, 1408],
+      "name": "Zacapa"
+    }
+  ],
   "themes": ["north_america", "western"],
   "translation_key": "map.channelislands"
 }

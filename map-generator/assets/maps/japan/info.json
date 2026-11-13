@@ -6,6 +6,204 @@
   "categories": ["countries", "asia"],
   "location": { "lat": 36.5, "lon": 138.5 },
   "author": "Aotumuri",
+  "places": [
+    {
+      "coordinates": [1127, 1324],
+      "name": "Osaka"
+    },
+    {
+      "coordinates": [1745, 334],
+      "name": "Sapporo"
+    },
+    {
+      "coordinates": [821, 1393],
+      "name": "Hiroshima"
+    },
+    {
+      "coordinates": [1276, 1264],
+      "name": "Nagoya"
+    },
+    {
+      "coordinates": [613, 1502],
+      "name": "Fukuoka"
+    },
+    {
+      "coordinates": [1700, 874],
+      "name": "Sendai"
+    },
+    {
+      "coordinates": [1407, 1085],
+      "name": "Nagano"
+    },
+    {
+      "coordinates": [930, 1475],
+      "name": "Kōchi"
+    },
+    {
+      "coordinates": [711, 1680],
+      "name": "Miyazaki"
+    },
+    {
+      "coordinates": [2052, 317],
+      "name": "Kushiro"
+    },
+    {
+      "coordinates": [1549, 1208],
+      "name": "Yokohama"
+    },
+    {
+      "coordinates": [1098, 1335],
+      "name": "Kōbe"
+    },
+    {
+      "coordinates": [1852, 248],
+      "name": "Asahikawa"
+    },
+    {
+      "coordinates": [1610, 724],
+      "name": "Akita"
+    },
+    {
+      "coordinates": [1715, 712],
+      "name": "Morioka"
+    },
+    {
+      "coordinates": [1643, 941],
+      "name": "Fukushima"
+    },
+    {
+      "coordinates": [1651, 624],
+      "name": "Hirosaki"
+    },
+    {
+      "coordinates": [655, 1467],
+      "name": "Kitakyūshū"
+    },
+    {
+      "coordinates": [1358, 1305],
+      "name": "Hamamatsu"
+    },
+    {
+      "coordinates": [1424, 1269],
+      "name": "Shizuoka"
+    },
+    {
+      "coordinates": [1235, 1317],
+      "name": "Tsu"
+    },
+    {
+      "coordinates": [732, 1530],
+      "name": "Ōita"
+    },
+    {
+      "coordinates": [1097, 1386],
+      "name": "Wakayama"
+    },
+    {
+      "coordinates": [1261, 1236],
+      "name": "Gifu"
+    },
+    {
+      "coordinates": [1684, 1013],
+      "name": "Iwaki"
+    },
+    {
+      "coordinates": [1640, 1094],
+      "name": "Mito"
+    },
+    {
+      "coordinates": [1629, 883],
+      "name": "Yamagata"
+    },
+    {
+      "coordinates": [1208, 1169],
+      "name": "Fukui"
+    },
+    {
+      "coordinates": [1386, 1133],
+      "name": "Matsumoto"
+    },
+    {
+      "coordinates": [1446, 1193],
+      "name": "Kōfu"
+    },
+    {
+      "coordinates": [1479, 989],
+      "name": "Nagaoka"
+    },
+    {
+      "coordinates": [1765, 380],
+      "name": "Tomakomai"
+    },
+    {
+      "coordinates": [1930, 333],
+      "name": "Obihiro"
+    },
+    {
+      "coordinates": [887, 1267],
+      "name": "Matsue"
+    },
+    {
+      "coordinates": [1005, 1252],
+      "name": "Tottori"
+    },
+    {
+      "coordinates": [1709, 325],
+      "name": "Otaru"
+    },
+    {
+      "coordinates": [2007, 223],
+      "name": "Kitami"
+    },
+    {
+      "coordinates": [1581, 839],
+      "name": "Tsuruoka"
+    },
+    {
+      "coordinates": [1117, 1247],
+      "name": "Maizuru"
+    },
+    {
+      "coordinates": [971, 1347],
+      "name": "Okayama"
+    },
+    {
+      "coordinates": [1579, 1080],
+      "name": "Utsunomiya"
+    },
+    {
+      "coordinates": [1522, 1185],
+      "name": "Hachiōji"
+    },
+    {
+      "coordinates": [1034, 1409],
+      "name": "Tokushima"
+    },
+    {
+      "coordinates": [1498, 1105],
+      "name": "Maebashi"
+    },
+    {
+      "coordinates": [1633, 978],
+      "name": "Kōriyama"
+    },
+    {
+      "coordinates": [1539, 1154],
+      "name": "Kawagoe"
+    },
+    {
+      "coordinates": [1312, 1088],
+      "name": "Toyama"
+    },
+    {
+      "coordinates": [1289, 1094],
+      "name": "Takaoka"
+    },
+    {
+      "coordinates": [652, 1745],
+      "name": "Kanoya"
+    }
+  ],
   "nations": [
     {
       "coordinates": [1895, 288],

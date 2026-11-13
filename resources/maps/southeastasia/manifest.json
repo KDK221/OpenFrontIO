@@ -332,6 +332,808 @@
       "name": "Wa State"
     }
   ],
+  "places": [
+    {
+      "coordinates": [1328, 499],
+      "name": "Manila"
+    },
+    {
+      "coordinates": [1358, 21],
+      "name": "Taipei"
+    },
+    {
+      "coordinates": [372, 527],
+      "name": "Bangkok"
+    },
+    {
+      "coordinates": [659, 667],
+      "name": "Ho Chi Minh City"
+    },
+    {
+      "coordinates": [623, 197],
+      "name": "Hanoi"
+    },
+    {
+      "coordinates": [169, 386],
+      "name": "Yangon"
+    },
+    {
+      "coordinates": [476, 10],
+      "name": "Kunming"
+    },
+    {
+      "coordinates": [695, 1479],
+      "name": "Bandung"
+    },
+    {
+      "coordinates": [739, 116],
+      "name": "Nanning"
+    },
+    {
+      "coordinates": [281, 992],
+      "name": "Medan"
+    },
+    {
+      "coordinates": [424, 1013],
+      "name": "Kuala Lumpur"
+    },
+    {
+      "coordinates": [576, 630],
+      "name": "Phnom Penh"
+    },
+    {
+      "coordinates": [831, 4],
+      "name": "Guilin"
+    },
+    {
+      "coordinates": [168, 250],
+      "name": "Naypyidaw"
+    },
+    {
+      "coordinates": [470, 335],
+      "name": "Vientiane"
+    },
+    {
+      "coordinates": [1023, 1317],
+      "name": "Banjarmasin"
+    },
+    {
+      "coordinates": [1168, 1015],
+      "name": "Tarakan"
+    },
+    {
+      "coordinates": [662, 206],
+      "name": "Haiphong"
+    },
+    {
+      "coordinates": [1218, 26],
+      "name": "Quanzhou"
+    },
+    {
+      "coordinates": [167, 149],
+      "name": "Mandalay"
+    },
+    {
+      "coordinates": [824, 126],
+      "name": "Yulin"
+    },
+    {
+      "coordinates": [311, 6],
+      "name": "Baoshan"
+    },
+    {
+      "coordinates": [588, 1408],
+      "name": "Bandar Lampung"
+    },
+    {
+      "coordinates": [930, 1529],
+      "name": "Malang"
+    },
+    {
+      "coordinates": [985, 28],
+      "name": "Shaoguan"
+    },
+    {
+      "coordinates": [1309, 415],
+      "name": "Baguio"
+    },
+    {
+      "coordinates": [879, 87],
+      "name": "Wuzhou"
+    },
+    {
+      "coordinates": [301, 295],
+      "name": "Chiang Mai"
+    },
+    {
+      "coordinates": [1421, 1144],
+      "name": "Gorontalo"
+    },
+    {
+      "coordinates": [446, 471],
+      "name": "Nakhon Ratchasima"
+    },
+    {
+      "coordinates": [1311, 334],
+      "name": "Laoag"
+    },
+    {
+      "coordinates": [1621, 1135],
+      "name": "Ternate"
+    },
+    {
+      "coordinates": [659, 66],
+      "name": "Baicheng"
+    },
+    {
+      "coordinates": [2243, 1294],
+      "name": "Jayapura"
+    },
+    {
+      "coordinates": [315, 738],
+      "name": "Surat Thani"
+    },
+    {
+      "coordinates": [497, 559],
+      "name": "Battambang"
+    },
+    {
+      "coordinates": [498, 88],
+      "name": "Gejiu"
+    },
+    {
+      "coordinates": [527, 547],
+      "name": "Siem Reap"
+    },
+    {
+      "coordinates": [2406, 1448],
+      "name": "Mount Hagen"
+    },
+    {
+      "coordinates": [2461, 1459],
+      "name": "Goroka"
+    },
+    {
+      "coordinates": [2777, 1376],
+      "name": "Rabaul"
+    },
+    {
+      "coordinates": [831, 244],
+      "name": "Haikou"
+    },
+    {
+      "coordinates": [1294, 114],
+      "name": "Tainan"
+    },
+    {
+      "coordinates": [783, 50],
+      "name": "Liuzhou"
+    },
+    {
+      "coordinates": [1499, 783],
+      "name": "Cagayan de Oro"
+    },
+    {
+      "coordinates": [616, 700],
+      "name": "Cần Thơ"
+    },
+    {
+      "coordinates": [702, 407],
+      "name": "Huế"
+    },
+    {
+      "coordinates": [1420, 682],
+      "name": "Bacolod"
+    },
+    {
+      "coordinates": [656, 1461],
+      "name": "Bogor"
+    },
+    {
+      "coordinates": [579, 10],
+      "name": "Xingyi"
+    },
+    {
+      "coordinates": [776, 531],
+      "name": "Qui Nhơn"
+    },
+    {
+      "coordinates": [410, 1132],
+      "name": "Pekanbaru"
+    },
+    {
+      "coordinates": [449, 1057],
+      "name": "Melaka City"
+    },
+    {
+      "coordinates": [1330, 31],
+      "name": "Hsinchu"
+    },
+    {
+      "coordinates": [1430, 545],
+      "name": "Naga"
+    },
+    {
+      "coordinates": [1051, 1561],
+      "name": "Denpasar"
+    },
+    {
+      "coordinates": [394, 947],
+      "name": "Ipoh"
+    },
+    {
+      "coordinates": [1269, 1209],
+      "name": "Palu"
+    },
+    {
+      "coordinates": [779, 1163],
+      "name": "Pontianak"
+    },
+    {
+      "coordinates": [614, 303],
+      "name": "Vinh"
+    },
+    {
+      "coordinates": [1144, 1189],
+      "name": "Samarinda"
+    },
+    {
+      "coordinates": [622, 171],
+      "name": "Thái Nguyên"
+    },
+    {
+      "coordinates": [511, 1232],
+      "name": "Jambi"
+    },
+    {
+      "coordinates": [448, 1332],
+      "name": "Bengkulu"
+    },
+    {
+      "coordinates": [775, 601],
+      "name": "Nha Trang"
+    },
+    {
+      "coordinates": [471, 42],
+      "name": "Yuxi"
+    },
+    {
+      "coordinates": [1191, 899],
+      "name": "Sandakan"
+    },
+    {
+      "coordinates": [500, 983],
+      "name": "Kuantan"
+    },
+    {
+      "coordinates": [300, 1021],
+      "name": "Pematangsiantar"
+    },
+    {
+      "coordinates": [367, 837],
+      "name": "Hat Yai"
+    },
+    {
+      "coordinates": [1307, 474],
+      "name": "Angeles"
+    },
+    {
+      "coordinates": [1180, 971],
+      "name": "Tawau"
+    },
+    {
+      "coordinates": [980, 1538],
+      "name": "Jember"
+    },
+    {
+      "coordinates": [186, 362],
+      "name": "Bago"
+    },
+    {
+      "coordinates": [1478, 839],
+      "name": "Cotabato City"
+    },
+    {
+      "coordinates": [574, 461],
+      "name": "Ubon Ratchathani"
+    },
+    {
+      "coordinates": [725, 1497],
+      "name": "Tasikmalaya"
+    },
+    {
+      "coordinates": [68, 18],
+      "name": "Imphal"
+    },
+    {
+      "coordinates": [741, 1470],
+      "name": "Cirebon"
+    },
+    {
+      "coordinates": [480, 406],
+      "name": "Khon Kaen"
+    },
+    {
+      "coordinates": [639, 225],
+      "name": "Nam Định"
+    },
+    {
+      "coordinates": [378, 934],
+      "name": "Taiping"
+    },
+    {
+      "coordinates": [345, 772],
+      "name": "Nakhon Si Thammarat"
+    },
+    {
+      "coordinates": [124, 142],
+      "name": "Monywa"
+    },
+    {
+      "coordinates": [288, 1076],
+      "name": "Sibolga"
+    },
+    {
+      "coordinates": [897, 1058],
+      "name": "Sibu"
+    },
+    {
+      "coordinates": [620, 252],
+      "name": "Thanh Hóa"
+    },
+    {
+      "coordinates": [657, 360],
+      "name": "Đồng Hới"
+    },
+    {
+      "coordinates": [721, 521],
+      "name": "Pleiku"
+    },
+    {
+      "coordinates": [125, 293],
+      "name": "Pyay"
+    },
+    {
+      "coordinates": [112, 232],
+      "name": "Magway"
+    },
+    {
+      "coordinates": [630, 1255],
+      "name": "Pangkal Pinang"
+    },
+    {
+      "coordinates": [1804, 1212],
+      "name": "Sorong"
+    },
+    {
+      "coordinates": [1363, 361],
+      "name": "Tuguegarao"
+    },
+    {
+      "coordinates": [351, 438],
+      "name": "Nakhon Sawan"
+    },
+    {
+      "coordinates": [1161, 1160],
+      "name": "Bontang"
+    },
+    {
+      "coordinates": [571, 402],
+      "name": "Savannakhet"
+    },
+    {
+      "coordinates": [507, 1333],
+      "name": "Lahat"
+    },
+    {
+      "coordinates": [1301, 363],
+      "name": "Vigan"
+    },
+    {
+      "coordinates": [2001, 1329],
+      "name": "Nabire"
+    },
+    {
+      "coordinates": [571, 1381],
+      "name": "Kotabumi"
+    },
+    {
+      "coordinates": [183, 309],
+      "name": "Pyu"
+    },
+    {
+      "coordinates": [2227, 1567],
+      "name": "Merauke"
+    },
+    {
+      "coordinates": [2380, 1342],
+      "name": "Wewak"
+    },
+    {
+      "coordinates": [728, 30],
+      "name": "Hechi"
+    },
+    {
+      "coordinates": [1176, 43],
+      "name": "Zhangzhou"
+    },
+    {
+      "coordinates": [858, 159],
+      "name": "Maoming"
+    },
+    {
+      "coordinates": [762, 1515],
+      "name": "Cilacap"
+    },
+    {
+      "coordinates": [959, 78],
+      "name": "Qingyuan"
+    },
+    {
+      "coordinates": [360, 1171],
+      "name": "Bukittinggi"
+    },
+    {
+      "coordinates": [1305, 92],
+      "name": "Chiayi City"
+    },
+    {
+      "coordinates": [943, 1513],
+      "name": "Pasuruan"
+    },
+    {
+      "coordinates": [1477, 795],
+      "name": "Iligan"
+    },
+    {
+      "coordinates": [240, 400],
+      "name": "Mawlamyine"
+    },
+    {
+      "coordinates": [1103, 52],
+      "name": "Meizhou"
+    },
+    {
+      "coordinates": [1239, 2],
+      "name": "Putian"
+    },
+    {
+      "coordinates": [435, 1034],
+      "name": "Seremban"
+    },
+    {
+      "coordinates": [1146, 13],
+      "name": "Longyan"
+    },
+    {
+      "coordinates": [587, 739],
+      "name": "Cà Mau"
+    },
+    {
+      "coordinates": [723, 581],
+      "name": "Buôn Ma Thuột"
+    },
+    {
+      "coordinates": [725, 660],
+      "name": "Phan Thiết"
+    },
+    {
+      "coordinates": [363, 877],
+      "name": "Alor Setar"
+    },
+    {
+      "coordinates": [1036, 78],
+      "name": "Heyuan"
+    },
+    {
+      "coordinates": [584, 701],
+      "name": "Rạch Giá"
+    },
+    {
+      "coordinates": [626, 720],
+      "name": "Sóc Trăng"
+    },
+    {
+      "coordinates": [1435, 667],
+      "name": "Cadiz"
+    },
+    {
+      "coordinates": [11, 67],
+      "name": "Aizawl"
+    },
+    {
+      "coordinates": [1228, 1329],
+      "name": "Majene"
+    },
+    {
+      "coordinates": [310, 1093],
+      "name": "Padang Sidempuan"
+    },
+    {
+      "coordinates": [740, 615],
+      "name": "Da Lat"
+    },
+    {
+      "coordinates": [760, 468],
+      "name": "Quảng Ngãi"
+    },
+    {
+      "coordinates": [479, 361],
+      "name": "Udon Thani"
+    },
+    {
+      "coordinates": [1343, 524],
+      "name": "San Pablo"
+    },
+    {
+      "coordinates": [103, 386],
+      "name": "Pathein"
+    },
+    {
+      "coordinates": [901, 1520],
+      "name": "Kediri"
+    },
+    {
+      "coordinates": [394, 544],
+      "name": "Chon Buri"
+    },
+    {
+      "coordinates": [1327, 458],
+      "name": "Cabanatuan"
+    },
+    {
+      "coordinates": [325, 319],
+      "name": "Lampang"
+    },
+    {
+      "coordinates": [929, 28],
+      "name": "Lianzhou"
+    },
+    {
+      "coordinates": [481, 1074],
+      "name": "Batu Pahat"
+    },
+    {
+      "coordinates": [1539, 760],
+      "name": "Butuan"
+    },
+    {
+      "coordinates": [879, 1512],
+      "name": "Madiun"
+    },
+    {
+      "coordinates": [1260, 1340],
+      "name": "Pinrang"
+    },
+    {
+      "coordinates": [137, 346],
+      "name": "Hinthada"
+    },
+    {
+      "coordinates": [766, 632],
+      "name": "Phan Rang–Tháp Chàm"
+    },
+    {
+      "coordinates": [1012, 1540],
+      "name": "Banyuwangi"
+    },
+    {
+      "coordinates": [361, 386],
+      "name": "Phitsanulok"
+    },
+    {
+      "coordinates": [135, 172],
+      "name": "Myingyan"
+    },
+    {
+      "coordinates": [396, 114],
+      "name": "Simao"
+    },
+    {
+      "coordinates": [14, 18],
+      "name": "Silchar"
+    },
+    {
+      "coordinates": [549, 89],
+      "name": "Wenshan City"
+    },
+    {
+      "coordinates": [992, 1265],
+      "name": "Palangkaraya"
+    },
+    {
+      "coordinates": [405, 858],
+      "name": "Yala"
+    },
+    {
+      "coordinates": [327, 810],
+      "name": "Trang"
+    },
+    {
+      "coordinates": [263, 510],
+      "name": "Dawei"
+    },
+    {
+      "coordinates": [692, 197],
+      "name": "Cẩm Phả"
+    },
+    {
+      "coordinates": [643, 686],
+      "name": "Mỹ Tho"
+    },
+    {
+      "coordinates": [857, 1471],
+      "name": "Pati"
+    },
+    {
+      "coordinates": [250, 942],
+      "name": "Langsa"
+    },
+    {
+      "coordinates": [341, 245],
+      "name": "Chiang Rai"
+    },
+    {
+      "coordinates": [922, 1505],
+      "name": "Mojokerto"
+    },
+    {
+      "coordinates": [816, 1504],
+      "name": "Magelang"
+    },
+    {
+      "coordinates": [449, 247],
+      "name": "Luang Prabang"
+    },
+    {
+      "coordinates": [339, 537],
+      "name": "Ratchaburi"
+    },
+    {
+      "coordinates": [182, 287],
+      "name": "Taungoo"
+    },
+    {
+      "coordinates": [1201, 935],
+      "name": "Lahad Datu"
+    },
+    {
+      "coordinates": [599, 206],
+      "name": "Hòa Bình"
+    },
+    {
+      "coordinates": [540, 1317],
+      "name": "Prabumulih"
+    },
+    {
+      "coordinates": [620, 467],
+      "name": "Pakse"
+    },
+    {
+      "coordinates": [393, 974],
+      "name": "Teluk Intan"
+    },
+    {
+      "coordinates": [445, 580],
+      "name": "Chanthaburi"
+    },
+    {
+      "coordinates": [408, 1252],
+      "name": "Sungai Penuh"
+    },
+    {
+      "coordinates": [947, 1280],
+      "name": "Sampit"
+    },
+    {
+      "coordinates": [108, 197],
+      "name": "Chauk"
+    },
+    {
+      "coordinates": [149, 121],
+      "name": "Shwebo"
+    },
+    {
+      "coordinates": [1537, 722],
+      "name": "Surigao City"
+    },
+    {
+      "coordinates": [309, 675],
+      "name": "Chumphon"
+    },
+    {
+      "coordinates": [602, 610],
+      "name": "Kampong Cham"
+    },
+    {
+      "coordinates": [385, 297],
+      "name": "Nan"
+    },
+    {
+      "coordinates": [1292, 1375],
+      "name": "Watampone"
+    },
+    {
+      "coordinates": [412, 514],
+      "name": "Prachin Buri"
+    },
+    {
+      "coordinates": [1352, 1574],
+      "name": "Ende"
+    },
+    {
+      "coordinates": [353, 349],
+      "name": "Uttaradit"
+    },
+    {
+      "coordinates": [542, 373],
+      "name": "Sakon Nakhon"
+    },
+    {
+      "coordinates": [565, 598],
+      "name": "Kampong Chhnang"
+    },
+    {
+      "coordinates": [685, 394],
+      "name": "Quảng Trị"
+    },
+    {
+      "coordinates": [586, 670],
+      "name": "Châu Đốc"
+    },
+    {
+      "coordinates": [147, 409],
+      "name": "Pyapon"
+    },
+    {
+      "coordinates": [325, 515],
+      "name": "Kanchanaburi"
+    },
+    {
+      "coordinates": [511, 477],
+      "name": "Surin"
+    },
+    {
+      "coordinates": [443, 434],
+      "name": "Chaiyaphum"
+    },
+    {
+      "coordinates": [126, 267],
+      "name": "Myede"
+    },
+    {
+      "coordinates": [571, 363],
+      "name": "Nakhon Phanom"
+    },
+    {
+      "coordinates": [530, 585],
+      "name": "Pursat"
+    },
+    {
+      "coordinates": [345, 581],
+      "name": "Hua Hin"
+    },
+    {
+      "coordinates": [380, 1188],
+      "name": "Sawahlunto"
+    },
+    {
+      "coordinates": [487, 536],
+      "name": "Sisophon"
+    },
+    {
+      "coordinates": [542, 673],
+      "name": "Kampot"
+    },
+    {
+      "coordinates": [229, 98],
+      "name": "Namtu"
+    },
+    {
+      "coordinates": [123, 394],
+      "name": "Wakema"
+    }
+  ],
   "themes": ["asia"],
   "translation_key": "map.southeastasia"
 }

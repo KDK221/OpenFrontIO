@@ -78,20 +78,34 @@ export class TribeSpawner {
       purchasedBySlot = new Map(slots.map((slot, i) => [slot, used[i]]));
     }
 
-    // Fill remaining slots with random-spawn tribes.
+    // Fill remaining slots with random-spawn tribes. On a map with real
+    // places, a tribe without a purchased or custom name is renamed after the
+    // place it lands nearest (SpawnExecution); the theme name drawn here
+    // still consumes the PRNG exactly as before, so spawns don't move.
+    const byPlace = this.gs.places().length > 0;
     let slot = 0;
     while (tribes.length < numTribes) {
       const purchased = purchasedBySlot.get(slot);
-      tribes.push(this.spawnTribe(purchased ?? this.randomTribeName()));
+      const custom = purchased === undefined ? this.nextCustomTribe() : null;
+      const name = purchased ?? custom ?? this.themeTribeName();
+      tribes.push(
+        this.spawnTribe(
+          name,
+          byPlace && purchased === undefined && custom === null,
+        ),
+      );
       slot++;
     }
     return tribes;
   }
 
-  spawnTribe(tribeName: string): SpawnExecution {
+  spawnTribe(tribeName: string, nameByPlace: boolean = false): SpawnExecution {
     return new SpawnExecution(
       this.gameID,
       new PlayerInfo(tribeName, PlayerType.Bot, null, this.random.nextID()),
+      undefined,
+      false,
+      nameByPlace,
     );
   }
 
@@ -131,24 +145,25 @@ export class TribeSpawner {
     );
   }
 
-  private randomTribeName(): string {
-    const { customTribes, prefixes, suffixes } = this.tribeNameData;
+  // Custom tribes come first (random selection, no duplicates until
+  // exhausted); null once they are used up or the map has none.
+  private nextCustomTribe(): string | null {
+    const { customTribes } = this.tribeNameData;
+    if (customTribes === undefined) return null;
+    const available = customTribes.filter(
+      (ct) =>
+        ct.coordinates === undefined && !this.usedCustomTribes.has(ct.name),
+    );
+    if (available.length === 0) return null;
+    const index = this.random.nextInt(0, available.length);
+    const chosen = available[index];
+    this.usedCustomTribes.add(chosen.name);
+    return chosen.name;
+  }
 
-    // Use custom tribes first (random selection, no duplicates until exhausted).
-    if (customTribes !== undefined) {
-      const available = customTribes.filter(
-        (ct) =>
-          ct.coordinates === undefined && !this.usedCustomTribes.has(ct.name),
-      );
-      if (available.length > 0) {
-        const index = this.random.nextInt(0, available.length);
-        const chosen = available[index];
-        this.usedCustomTribes.add(chosen.name);
-        return chosen.name;
-      }
-    }
-
-    // Fall back to theme-based prefix + suffix names.
+  // Theme-based prefix + suffix names.
+  private themeTribeName(): string {
+    const { prefixes, suffixes } = this.tribeNameData;
     const prefixIndex = this.random.nextInt(0, prefixes.length);
     const suffixIndex = this.random.nextInt(0, suffixes.length);
     return `${prefixes[prefixIndex]} ${suffixes[suffixIndex]}`;

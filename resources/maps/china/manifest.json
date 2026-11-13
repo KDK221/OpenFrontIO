@@ -196,6 +196,808 @@
       "name": "Ningxia"
     }
   ],
+  "places": [
+    {
+      "coordinates": [1857, 735],
+      "name": "Seoul"
+    },
+    {
+      "coordinates": [1767, 1376],
+      "name": "Taipei"
+    },
+    {
+      "coordinates": [980, 1206],
+      "name": "Chengdu"
+    },
+    {
+      "coordinates": [1445, 1517],
+      "name": "Guangzhou"
+    },
+    {
+      "coordinates": [1484, 1541],
+      "name": "Shenzhen"
+    },
+    {
+      "coordinates": [1404, 1150],
+      "name": "Wuhan"
+    },
+    {
+      "coordinates": [1665, 550],
+      "name": "Shenyang"
+    },
+    {
+      "coordinates": [1157, 1663],
+      "name": "Hanoi"
+    },
+    {
+      "coordinates": [1141, 1002],
+      "name": "Xi'an"
+    },
+    {
+      "coordinates": [1575, 1052],
+      "name": "Nanjing"
+    },
+    {
+      "coordinates": [1133, 1389],
+      "name": "Guiyang"
+    },
+    {
+      "coordinates": [1755, 339],
+      "name": "Harbin"
+    },
+    {
+      "coordinates": [1790, 672],
+      "name": "Pyongyang"
+    },
+    {
+      "coordinates": [1721, 439],
+      "name": "Changchun"
+    },
+    {
+      "coordinates": [1494, 825],
+      "name": "Zibo"
+    },
+    {
+      "coordinates": [1652, 1131],
+      "name": "Hangzhou"
+    },
+    {
+      "coordinates": [982, 1486],
+      "name": "Kunming"
+    },
+    {
+      "coordinates": [1452, 837],
+      "name": "Jinan"
+    },
+    {
+      "coordinates": [1661, 1339],
+      "name": "Fuzhou"
+    },
+    {
+      "coordinates": [1376, 1273],
+      "name": "Changsha"
+    },
+    {
+      "coordinates": [910, 945],
+      "name": "Lanzhou"
+    },
+    {
+      "coordinates": [1491, 1233],
+      "name": "Nanchang"
+    },
+    {
+      "coordinates": [1240, 1562],
+      "name": "Nanning"
+    },
+    {
+      "coordinates": [1738, 1501],
+      "name": "Kaohsiung"
+    },
+    {
+      "coordinates": [1494, 1034],
+      "name": "Huainan"
+    },
+    {
+      "coordinates": [820, 930],
+      "name": "Xining"
+    },
+    {
+      "coordinates": [1295, 1431],
+      "name": "Guilin"
+    },
+    {
+      "coordinates": [1418, 1296],
+      "name": "Pingxiang"
+    },
+    {
+      "coordinates": [2002, 436],
+      "name": "Vladivostok"
+    },
+    {
+      "coordinates": [452, 1332],
+      "name": "Lhasa"
+    },
+    {
+      "coordinates": [642, 795],
+      "name": "Jiayuguan City"
+    },
+    {
+      "coordinates": [415, 1446],
+      "name": "Thimphu"
+    },
+    {
+      "coordinates": [1620, 701],
+      "name": "Dalian"
+    },
+    {
+      "coordinates": [1596, 846],
+      "name": "Qingdao"
+    },
+    {
+      "coordinates": [1739, 1424],
+      "name": "Taichung"
+    },
+    {
+      "coordinates": [1771, 432],
+      "name": "Jilin City"
+    },
+    {
+      "coordinates": [1696, 1237],
+      "name": "Wenzhou"
+    },
+    {
+      "coordinates": [1064, 1188],
+      "name": "Nanchong"
+    },
+    {
+      "coordinates": [1495, 921],
+      "name": "Zaozhuang"
+    },
+    {
+      "coordinates": [1625, 770],
+      "name": "Yantai"
+    },
+    {
+      "coordinates": [1485, 953],
+      "name": "Xuzhou"
+    },
+    {
+      "coordinates": [1524, 907],
+      "name": "Linyi"
+    },
+    {
+      "coordinates": [1515, 1070],
+      "name": "Hefei"
+    },
+    {
+      "coordinates": [1194, 1668],
+      "name": "Haiphong"
+    },
+    {
+      "coordinates": [1484, 985],
+      "name": "Suzhou"
+    },
+    {
+      "coordinates": [1306, 1042],
+      "name": "Nanyang"
+    },
+    {
+      "coordinates": [1714, 1141],
+      "name": "Ningbo"
+    },
+    {
+      "coordinates": [1644, 1066],
+      "name": "Wuxi"
+    },
+    {
+      "coordinates": [1678, 309],
+      "name": "Daqing"
+    },
+    {
+      "coordinates": [1343, 1629],
+      "name": "Zhanjiang"
+    },
+    {
+      "coordinates": [1888, 792],
+      "name": "Daejeon"
+    },
+    {
+      "coordinates": [1032, 1253],
+      "name": "Neijiang"
+    },
+    {
+      "coordinates": [1879, 852],
+      "name": "Gwangju"
+    },
+    {
+      "coordinates": [1000, 1163],
+      "name": "Mianyang"
+    },
+    {
+      "coordinates": [1569, 976],
+      "name": "Huai'an"
+    },
+    {
+      "coordinates": [1014, 1004],
+      "name": "Tianshui"
+    },
+    {
+      "coordinates": [1055, 1399],
+      "name": "Liupanshui"
+    },
+    {
+      "coordinates": [1318, 1560],
+      "name": "Yulin"
+    },
+    {
+      "coordinates": [1164, 1079],
+      "name": "Ankang"
+    },
+    {
+      "coordinates": [1374, 1339],
+      "name": "Hengyang"
+    },
+    {
+      "coordinates": [835, 1504],
+      "name": "Baoshan"
+    },
+    {
+      "coordinates": [1596, 469],
+      "name": "Tongliao"
+    },
+    {
+      "coordinates": [1368, 1215],
+      "name": "Yueyang"
+    },
+    {
+      "coordinates": [1437, 1435],
+      "name": "Shaoguan"
+    },
+    {
+      "coordinates": [842, 861],
+      "name": "Wuwei"
+    },
+    {
+      "coordinates": [1358, 1512],
+      "name": "Wuzhou"
+    },
+    {
+      "coordinates": [936, 1352],
+      "name": "Xichang"
+    },
+    {
+      "coordinates": [1858, 655],
+      "name": "Wonsan"
+    },
+    {
+      "coordinates": [1723, 628],
+      "name": "Sinuiju"
+    },
+    {
+      "coordinates": [741, 826],
+      "name": "Zhangye"
+    },
+    {
+      "coordinates": [1158, 1520],
+      "name": "Baicheng"
+    },
+    {
+      "coordinates": [487, 801],
+      "name": "Dunhuang"
+    },
+    {
+      "coordinates": [537, 980],
+      "name": "Golmud"
+    },
+    {
+      "coordinates": [364, 1364],
+      "name": "Xigazê"
+    },
+    {
+      "coordinates": [517, 1498],
+      "name": "Dispur"
+    },
+    {
+      "coordinates": [680, 973],
+      "name": "Dulan"
+    },
+    {
+      "coordinates": [1700, 1459],
+      "name": "Magong"
+    },
+    {
+      "coordinates": [1353, 1685],
+      "name": "Haikou"
+    },
+    {
+      "coordinates": [1420, 954],
+      "name": "Shangqiu"
+    },
+    {
+      "coordinates": [1285, 961],
+      "name": "Luoyang"
+    },
+    {
+      "coordinates": [1357, 1153],
+      "name": "Jingmen City"
+    },
+    {
+      "coordinates": [1483, 1080],
+      "name": "Lu'an"
+    },
+    {
+      "coordinates": [1158, 1173],
+      "name": "Wanzhou"
+    },
+    {
+      "coordinates": [1462, 860],
+      "name": "Tai'an"
+    },
+    {
+      "coordinates": [1372, 1165],
+      "name": "Xiantao City"
+    },
+    {
+      "coordinates": [1539, 823],
+      "name": "Weifang"
+    },
+    {
+      "coordinates": [1379, 1076],
+      "name": "Xinyang"
+    },
+    {
+      "coordinates": [1053, 1285],
+      "name": "Luzhou"
+    },
+    {
+      "coordinates": [1482, 1372],
+      "name": "Ganzhou"
+    },
+    {
+      "coordinates": [1263, 1486],
+      "name": "Liuzhou"
+    },
+    {
+      "coordinates": [1313, 1240],
+      "name": "Changde"
+    },
+    {
+      "coordinates": [1042, 1204],
+      "name": "Suining"
+    },
+    {
+      "coordinates": [1345, 1257],
+      "name": "Yiyang"
+    },
+    {
+      "coordinates": [1403, 917],
+      "name": "Heze"
+    },
+    {
+      "coordinates": [1643, 1101],
+      "name": "Huzhou"
+    },
+    {
+      "coordinates": [1447, 902],
+      "name": "Jining"
+    },
+    {
+      "coordinates": [977, 1261],
+      "name": "Leshan"
+    },
+    {
+      "coordinates": [1643, 1189],
+      "name": "Jinhua"
+    },
+    {
+      "coordinates": [1387, 1290],
+      "name": "Zhuzhou"
+    },
+    {
+      "coordinates": [1300, 1092],
+      "name": "Xiangyang"
+    },
+    {
+      "coordinates": [1464, 1557],
+      "name": "Zhuhai"
+    },
+    {
+      "coordinates": [1682, 571],
+      "name": "Benxi"
+    },
+    {
+      "coordinates": [1341, 1377],
+      "name": "Yongzhou"
+    },
+    {
+      "coordinates": [1439, 1282],
+      "name": "Yichun"
+    },
+    {
+      "coordinates": [1661, 1041],
+      "name": "Nantong"
+    },
+    {
+      "coordinates": [1471, 971],
+      "name": "Huaibei"
+    },
+    {
+      "coordinates": [1461, 1281],
+      "name": "Xinyu"
+    },
+    {
+      "coordinates": [1336, 922],
+      "name": "Xinxiang"
+    },
+    {
+      "coordinates": [1021, 1295],
+      "name": "Yibin"
+    },
+    {
+      "coordinates": [1506, 1017],
+      "name": "Bengbu"
+    },
+    {
+      "coordinates": [1348, 882],
+      "name": "Anyang"
+    },
+    {
+      "coordinates": [1279, 1162],
+      "name": "Yichang"
+    },
+    {
+      "coordinates": [1361, 942],
+      "name": "Kaifeng"
+    },
+    {
+      "coordinates": [1586, 1105],
+      "name": "Xuancheng"
+    },
+    {
+      "coordinates": [1310, 929],
+      "name": "Jiaozuo"
+    },
+    {
+      "coordinates": [1601, 1040],
+      "name": "Zhenjiang"
+    },
+    {
+      "coordinates": [1104, 1409],
+      "name": "Anshun"
+    },
+    {
+      "coordinates": [1330, 1002],
+      "name": "Pingdingshan"
+    },
+    {
+      "coordinates": [1130, 1333],
+      "name": "Zunyi"
+    },
+    {
+      "coordinates": [1617, 979],
+      "name": "Yancheng"
+    },
+    {
+      "coordinates": [1074, 1472],
+      "name": "Xingyi"
+    },
+    {
+      "coordinates": [1566, 1088],
+      "name": "Wuhu"
+    },
+    {
+      "coordinates": [1001, 1370],
+      "name": "Zhaotong"
+    },
+    {
+      "coordinates": [1068, 1007],
+      "name": "Baoji"
+    },
+    {
+      "coordinates": [1659, 577],
+      "name": "Liaoyang"
+    },
+    {
+      "coordinates": [1672, 1141],
+      "name": "Shaoxing"
+    },
+    {
+      "coordinates": [1855, 618],
+      "name": "Hamhung"
+    },
+    {
+      "coordinates": [1588, 551],
+      "name": "Fuxin"
+    },
+    {
+      "coordinates": [1442, 1162],
+      "name": "Huangshi"
+    },
+    {
+      "coordinates": [1928, 514],
+      "name": "Chongjin"
+    },
+    {
+      "coordinates": [1175, 1778],
+      "name": "Vinh"
+    },
+    {
+      "coordinates": [1520, 1137],
+      "name": "Anqing"
+    },
+    {
+      "coordinates": [1687, 479],
+      "name": "Siping"
+    },
+    {
+      "coordinates": [1484, 1181],
+      "name": "Jiujiang"
+    },
+    {
+      "coordinates": [1723, 487],
+      "name": "Liaoyuan"
+    },
+    {
+      "coordinates": [1150, 1636],
+      "name": "Thái Nguyên"
+    },
+    {
+      "coordinates": [927, 1420],
+      "name": "Panzhihua"
+    },
+    {
+      "coordinates": [1035, 1109],
+      "name": "Guangyuan"
+    },
+    {
+      "coordinates": [985, 1520],
+      "name": "Yuxi"
+    },
+    {
+      "coordinates": [1779, 1427],
+      "name": "Hualien City"
+    },
+    {
+      "coordinates": [1138, 962],
+      "name": "Tongchuan"
+    },
+    {
+      "coordinates": [623, 1551],
+      "name": "Imphal"
+    },
+    {
+      "coordinates": [1603, 801],
+      "name": "Laiyang"
+    },
+    {
+      "coordinates": [1178, 1691],
+      "name": "Nam Định"
+    },
+    {
+      "coordinates": [1916, 571],
+      "name": "Kimchaek"
+    },
+    {
+      "coordinates": [1773, 1490],
+      "name": "Taitung City"
+    },
+    {
+      "coordinates": [633, 1415],
+      "name": "Dibrugarh"
+    },
+    {
+      "coordinates": [2045, 444],
+      "name": "Nakhodka"
+    },
+    {
+      "coordinates": [872, 1470],
+      "name": "Dali"
+    },
+    {
+      "coordinates": [1076, 1069],
+      "name": "Hanzhong"
+    },
+    {
+      "coordinates": [759, 1503],
+      "name": "Myitkyina"
+    },
+    {
+      "coordinates": [1429, 1116],
+      "name": "Macheng"
+    },
+    {
+      "coordinates": [690, 1222],
+      "name": "Changdu"
+    },
+    {
+      "coordinates": [1917, 456],
+      "name": "Tumen"
+    },
+    {
+      "coordinates": [1315, 1342],
+      "name": "Shaoyang"
+    },
+    {
+      "coordinates": [650, 1135],
+      "name": "Gyêgu"
+    },
+    {
+      "coordinates": [863, 1416],
+      "name": "Lijiang"
+    },
+    {
+      "coordinates": [472, 1237],
+      "name": "Nagchu Town"
+    },
+    {
+      "coordinates": [938, 1278],
+      "name": "Fulin"
+    },
+    {
+      "coordinates": [591, 1318],
+      "name": "Nyingchi"
+    },
+    {
+      "coordinates": [1210, 1472],
+      "name": "Hechi"
+    },
+    {
+      "coordinates": [1610, 1424],
+      "name": "Zhangzhou"
+    },
+    {
+      "coordinates": [1553, 951],
+      "name": "Shuyang"
+    },
+    {
+      "coordinates": [1356, 1591],
+      "name": "Maoming"
+    },
+    {
+      "coordinates": [1580, 1231],
+      "name": "Shangrao"
+    },
+    {
+      "coordinates": [1402, 1588],
+      "name": "Yangjiang"
+    },
+    {
+      "coordinates": [1567, 884],
+      "name": "Rizhao"
+    },
+    {
+      "coordinates": [1291, 919],
+      "name": "Jincheng"
+    },
+    {
+      "coordinates": [1287, 1623],
+      "name": "Beihai"
+    },
+    {
+      "coordinates": [1564, 926],
+      "name": "Lianyungang"
+    },
+    {
+      "coordinates": [1882, 819],
+      "name": "Jeonju"
+    },
+    {
+      "coordinates": [1426, 1492],
+      "name": "Qingyuan"
+    },
+    {
+      "coordinates": [1379, 897],
+      "name": "Puyang"
+    },
+    {
+      "coordinates": [1024, 1453],
+      "name": "Zhanyi"
+    },
+    {
+      "coordinates": [1617, 1024],
+      "name": "Taizhou"
+    },
+    {
+      "coordinates": [1546, 1111],
+      "name": "Tongling"
+    },
+    {
+      "coordinates": [1441, 1546],
+      "name": "Jiangmen"
+    },
+    {
+      "coordinates": [1471, 1313],
+      "name": "Ji'an"
+    },
+    {
+      "coordinates": [1736, 1459],
+      "name": "Chiayi City"
+    },
+    {
+      "coordinates": [1685, 378],
+      "name": "Songyuan"
+    },
+    {
+      "coordinates": [1409, 1527],
+      "name": "Zhaoqing"
+    },
+    {
+      "coordinates": [1723, 1200],
+      "name": "Jiaojiang"
+    },
+    {
+      "coordinates": [1542, 580],
+      "name": "Chaoyang"
+    },
+    {
+      "coordinates": [1539, 1196],
+      "name": "Jingdezhen"
+    },
+    {
+      "coordinates": [1348, 985],
+      "name": "Xuchang"
+    },
+    {
+      "coordinates": [1548, 1444],
+      "name": "Meizhou"
+    },
+    {
+      "coordinates": [1386, 999],
+      "name": "Zhoukou"
+    },
+    {
+      "coordinates": [528, 1525],
+      "name": "Shillong"
+    },
+    {
+      "coordinates": [1612, 1201],
+      "name": "Quzhou"
+    },
+    {
+      "coordinates": [956, 989],
+      "name": "Longxi"
+    },
+    {
+      "coordinates": [1136, 1651],
+      "name": "Việt Trì"
+    },
+    {
+      "coordinates": [1675, 524],
+      "name": "Tieling"
+    },
+    {
+      "coordinates": [946, 1245],
+      "name": "Ya'an"
+    },
+    {
+      "coordinates": [1495, 1480],
+      "name": "Heyuan"
+    },
+    {
+      "coordinates": [1404, 1389],
+      "name": "Chenzhou"
+    },
+    {
+      "coordinates": [1664, 1308],
+      "name": "Jiaocheng"
+    },
+    {
+      "coordinates": [1805, 572],
+      "name": "Kanggye"
+    },
+    {
+      "coordinates": [1314, 1210],
+      "name": "Jinshi"
+    },
+    {
+      "coordinates": [1862, 873],
+      "name": "Mokpo"
+    },
+    {
+      "coordinates": [1667, 656],
+      "name": "Zhuanghe"
+    }
+  ],
   "themes": ["asia"],
   "translation_key": "map.china"
 }

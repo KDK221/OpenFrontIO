@@ -456,6 +456,444 @@
       "name": "Chetumal"
     }
   ],
+  "places": [
+    {
+      "coordinates": [70, 1575],
+      "name": "Mexico City"
+    },
+    {
+      "coordinates": [179, 1626],
+      "name": "Puebla City"
+    },
+    {
+      "coordinates": [771, 1921],
+      "name": "Tuxtla Gutiérrez"
+    },
+    {
+      "coordinates": [361, 1875],
+      "name": "Oaxaca de Juárez"
+    },
+    {
+      "coordinates": [9, 529],
+      "name": "Nuevo Laredo"
+    },
+    {
+      "coordinates": [2273, 659],
+      "name": "West Palm Beach"
+    },
+    {
+      "coordinates": [2732, 1426],
+      "name": "Holguín"
+    },
+    {
+      "coordinates": [2856, 1522],
+      "name": "Guantánamo"
+    },
+    {
+      "coordinates": [2298, 1227],
+      "name": "Santa Clara"
+    },
+    {
+      "coordinates": [1863, 1219],
+      "name": "Pinar del Rio"
+    },
+    {
+      "coordinates": [2543, 1730],
+      "name": "Montego Bay"
+    },
+    {
+      "coordinates": [1488, 1458],
+      "name": "San Miguel de Cozumel"
+    },
+    {
+      "coordinates": [1246, 151],
+      "name": "Biloxi"
+    },
+    {
+      "coordinates": [116, 1484],
+      "name": "Pachuca"
+    },
+    {
+      "coordinates": [72, 1529],
+      "name": "Zumpango"
+    },
+    {
+      "coordinates": [276, 1703],
+      "name": "Tehuacán"
+    },
+    {
+      "coordinates": [329, 1645],
+      "name": "Córdoba"
+    },
+    {
+      "coordinates": [2651, 1416],
+      "name": "Las Tunas"
+    },
+    {
+      "coordinates": [2688, 1490],
+      "name": "Bayamo"
+    },
+    {
+      "coordinates": [276, 1530],
+      "name": "Teziutlán"
+    },
+    {
+      "coordinates": [2255, 795],
+      "name": "Coral Gables"
+    },
+    {
+      "coordinates": [173, 691],
+      "name": "Edinburg"
+    },
+    {
+      "coordinates": [2109, 1142],
+      "name": "Matanzas"
+    },
+    {
+      "coordinates": [2057, 675],
+      "name": "Cape Coral"
+    },
+    {
+      "coordinates": [2633, 1494],
+      "name": "Manzanillo"
+    },
+    {
+      "coordinates": [2360, 1288],
+      "name": "Sancti Spíritus"
+    },
+    {
+      "coordinates": [2240, 538],
+      "name": "Vero Beach"
+    },
+    {
+      "coordinates": [2129, 231],
+      "name": "St. Augustine"
+    },
+    {
+      "coordinates": [109, 1344],
+      "name": "Tamazunchale ♤"
+    },
+    {
+      "coordinates": [1972, 1170],
+      "name": "Artemisa"
+    },
+    {
+      "coordinates": [2455, 1267],
+      "name": "Morón"
+    },
+    {
+      "coordinates": [1034, 258],
+      "name": "Houma"
+    },
+    {
+      "coordinates": [2188, 1185],
+      "name": "Colón"
+    },
+    {
+      "coordinates": [1348, 1835],
+      "name": "Belize City"
+    },
+    {
+      "coordinates": [2285, 1174],
+      "name": "Sagua La Grande"
+    },
+    {
+      "coordinates": [11, 879],
+      "name": "Linares"
+    },
+    {
+      "coordinates": [659, 212],
+      "name": "Port Arthur"
+    },
+    {
+      "coordinates": [2614, 1341],
+      "name": "Nuevitas"
+    },
+    {
+      "coordinates": [2795, 1417],
+      "name": "Banes"
+    },
+    {
+      "coordinates": [2190, 407],
+      "name": "Titusville"
+    },
+    {
+      "coordinates": [1342, 1436],
+      "name": "Valladolid"
+    },
+    {
+      "coordinates": [229, 1782],
+      "name": "Huajuapan de León"
+    },
+    {
+      "coordinates": [564, 12],
+      "name": "Lufkin"
+    },
+    {
+      "coordinates": [1347, 1378],
+      "name": "Tizimín"
+    },
+    {
+      "coordinates": [481, 153],
+      "name": "Conroe"
+    },
+    {
+      "coordinates": [1152, 1903],
+      "name": "Flores"
+    },
+    {
+      "coordinates": [469, 96],
+      "name": "Huntsville"
+    },
+    {
+      "coordinates": [971, 1833],
+      "name": "Tenosique"
+    },
+    {
+      "coordinates": [1187, 1469],
+      "name": "Ticul"
+    },
+    {
+      "coordinates": [1050, 1600],
+      "name": "Champotón"
+    },
+    {
+      "coordinates": [1361, 1574],
+      "name": "Felipe Carrillo Puerto"
+    },
+    {
+      "coordinates": [1599, 27],
+      "name": "Enterprise"
+    },
+    {
+      "coordinates": [827, 1694],
+      "name": "Frontera"
+    },
+    {
+      "coordinates": [1304, 1761],
+      "name": "Orange Walk Town"
+    },
+    {
+      "coordinates": [424, 334],
+      "name": "Bay City"
+    },
+    {
+      "coordinates": [518, 1703],
+      "name": "Santiago Tuxtla"
+    },
+    {
+      "coordinates": [1246, 1402],
+      "name": "Izamal"
+    },
+    {
+      "coordinates": [111, 1253],
+      "name": "Tamuín"
+    },
+    {
+      "coordinates": [1947, 6],
+      "name": "Douglas"
+    },
+    {
+      "coordinates": [217, 410],
+      "name": "Beeville"
+    },
+    {
+      "coordinates": [189, 1133],
+      "name": "Maclovio Herrera"
+    },
+    {
+      "coordinates": [1124, 1922],
+      "name": "La Libertad"
+    },
+    {
+      "coordinates": [393, 1896],
+      "name": "Mitla"
+    },
+    {
+      "coordinates": [173, 568],
+      "name": "Falfurrias"
+    },
+    {
+      "coordinates": [1701, 249],
+      "name": "Apalachicola"
+    },
+    {
+      "coordinates": [518, 243],
+      "name": "Pasadena"
+    },
+    {
+      "coordinates": [176, 1592],
+      "name": "Tlaxcala"
+    },
+    {
+      "coordinates": [2135, 382],
+      "name": "Sanford"
+    },
+    {
+      "coordinates": [2214, 479],
+      "name": "Melbourne"
+    },
+    {
+      "coordinates": [832, 1922],
+      "name": "San Cristóbal de las Casas"
+    },
+    {
+      "coordinates": [374, 102],
+      "name": "Bryan"
+    },
+    {
+      "coordinates": [2439, 1301],
+      "name": "Ciego de Ávila"
+    },
+    {
+      "coordinates": [2624, 1793],
+      "name": "May Pen"
+    },
+    {
+      "coordinates": [1987, 422],
+      "name": "Spring Hill"
+    },
+    {
+      "coordinates": [227, 705],
+      "name": "Harlingen"
+    },
+    {
+      "coordinates": [2083, 485],
+      "name": "Winter Haven"
+    },
+    {
+      "coordinates": [2764, 1512],
+      "name": "Palma Soriano"
+    },
+    {
+      "coordinates": [539, 230],
+      "name": "Baytown"
+    },
+    {
+      "coordinates": [2234, 827],
+      "name": "Homestead"
+    },
+    {
+      "coordinates": [1142, 167],
+      "name": "Slidell"
+    },
+    {
+      "coordinates": [742, 168],
+      "name": "Lake Charles"
+    },
+    {
+      "coordinates": [192, 208],
+      "name": "San Marcos"
+    },
+    {
+      "coordinates": [2057, 1168],
+      "name": "Güines"
+    },
+    {
+      "coordinates": [584, 1771],
+      "name": "Jaltipan de Morelos"
+    },
+    {
+      "coordinates": [2041, 622],
+      "name": "Port Charlotte"
+    },
+    {
+      "coordinates": [2335, 1239],
+      "name": "Placetas"
+    },
+    {
+      "coordinates": [2064, 378],
+      "name": "Leesburg"
+    },
+    {
+      "coordinates": [2140, 280],
+      "name": "Palm Coast"
+    },
+    {
+      "coordinates": [171, 234],
+      "name": "New Braunfels"
+    },
+    {
+      "coordinates": [2002, 1160],
+      "name": "San Antonio de los Baños"
+    },
+    {
+      "coordinates": [2356, 1213],
+      "name": "Caibarién"
+    },
+    {
+      "coordinates": [905, 201],
+      "name": "New Iberia"
+    },
+    {
+      "coordinates": [1217, 1494],
+      "name": "Tekax"
+    },
+    {
+      "coordinates": [181, 498],
+      "name": "Alice"
+    },
+    {
+      "coordinates": [1515, 105],
+      "name": "Crestview"
+    },
+    {
+      "coordinates": [2090, 265],
+      "name": "Palatka"
+    },
+    {
+      "coordinates": [1215, 1380],
+      "name": "Motul"
+    },
+    {
+      "coordinates": [2005, 48],
+      "name": "Waycross"
+    },
+    {
+      "coordinates": [198, 1733],
+      "name": "Acatlán de Osorio"
+    },
+    {
+      "coordinates": [1259, 1504],
+      "name": "Peto"
+    },
+    {
+      "coordinates": [4, 1250],
+      "name": "Cárdenas"
+    },
+    {
+      "coordinates": [958, 1793],
+      "name": "Balancán"
+    },
+    {
+      "coordinates": [1123, 1458],
+      "name": "Halachó"
+    },
+    {
+      "coordinates": [1247, 1877],
+      "name": "San Ignacio"
+    },
+    {
+      "coordinates": [2592, 1784],
+      "name": "Mandeville"
+    },
+    {
+      "coordinates": [2723, 1770],
+      "name": "Port Antonio"
+    },
+    {
+      "coordinates": [2662, 1742],
+      "name": "Port Maria"
+    },
+    {
+      "coordinates": [2573, 1728],
+      "name": "Falmouth"
+    },
+    {
+      "coordinates": [2513, 1732],
+      "name": "Lucea"
+    }
+  ],
   "themes": ["north_america"],
   "translation_key": "map.gulfofmexico"
 }

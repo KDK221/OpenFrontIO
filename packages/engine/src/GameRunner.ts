@@ -104,6 +104,7 @@ export async function createGameRunner(
     gameMap.teamGameSpawnAreas,
   );
   game.setGoldenLands(goldenLands);
+  game.setPlaces(gameMap.places);
 
   const gr = new GameRunner(
     game,
@@ -176,6 +177,7 @@ export async function createGameRunnerFromSnapshot(
     teamGameSpawnAreas: gameMap.teamGameSpawnAreas,
   });
   game.setGoldenLands(goldenLands);
+  game.setPlaces(gameMap.places);
   // No init(): the snapshot already holds every execution init() adds.
   return new GameRunner(
     game,

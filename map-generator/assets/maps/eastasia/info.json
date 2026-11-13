@@ -6,6 +6,744 @@
   "categories": ["asia"],
   "location": { "lat": 43, "lon": 132 },
   "author": "Aotumuri",
+  "places": [
+    {
+      "coordinates": [724, 1120],
+      "name": "Osaka"
+    },
+    {
+      "coordinates": [202, 965],
+      "name": "Seoul"
+    },
+    {
+      "coordinates": [175, 479],
+      "name": "Harbin"
+    },
+    {
+      "coordinates": [125, 881],
+      "name": "Pyongyang"
+    },
+    {
+      "coordinates": [96, 593],
+      "name": "Changchun"
+    },
+    {
+      "coordinates": [1079, 616],
+      "name": "Sapporo"
+    },
+    {
+      "coordinates": [10, 388],
+      "name": "Qiqihar"
+    },
+    {
+      "coordinates": [500, 627],
+      "name": "Vladivostok"
+    },
+    {
+      "coordinates": [383, 1246],
+      "name": "Nagasaki"
+    },
+    {
+      "coordinates": [813, 1094],
+      "name": "Nagoya"
+    },
+    {
+      "coordinates": [414, 1196],
+      "name": "Fukuoka"
+    },
+    {
+      "coordinates": [180, 971],
+      "name": "Incheon"
+    },
+    {
+      "coordinates": [170, 592],
+      "name": "Jilin City"
+    },
+    {
+      "coordinates": [1063, 901],
+      "name": "Sendai"
+    },
+    {
+      "coordinates": [73, 432],
+      "name": "Daqing"
+    },
+    {
+      "coordinates": [229, 1038],
+      "name": "Daejeon"
+    },
+    {
+      "coordinates": [198, 1108],
+      "name": "Gwangju"
+    },
+    {
+      "coordinates": [402, 409],
+      "name": "Jiamusi"
+    },
+    {
+      "coordinates": [441, 499],
+      "name": "Jixi"
+    },
+    {
+      "coordinates": [889, 1003],
+      "name": "Nagano"
+    },
+    {
+      "coordinates": [694, 306],
+      "name": "Khabarovsk"
+    },
+    {
+      "coordinates": [607, 1193],
+      "name": "Kōchi"
+    },
+    {
+      "coordinates": [228, 870],
+      "name": "Wonsan"
+    },
+    {
+      "coordinates": [477, 1294],
+      "name": "Miyazaki"
+    },
+    {
+      "coordinates": [1044, 693],
+      "name": "Hakodate"
+    },
+    {
+      "coordinates": [226, 209],
+      "name": "Blagoveshchensk"
+    },
+    {
+      "coordinates": [1266, 617],
+      "name": "Kushiro"
+    },
+    {
+      "coordinates": [1163, 383],
+      "name": "Yuzhno-Sakhalinsk"
+    },
+    {
+      "coordinates": [163, 331],
+      "name": "Bei'an"
+    },
+    {
+      "coordinates": [991, 865],
+      "name": "Sakata"
+    },
+    {
+      "coordinates": [721, 538],
+      "name": "Dalnegorsk"
+    },
+    {
+      "coordinates": [302, 1064],
+      "name": "Daegu"
+    },
+    {
+      "coordinates": [706, 1125],
+      "name": "Kōbe"
+    },
+    {
+      "coordinates": [7, 714],
+      "name": "Fushun"
+    },
+    {
+      "coordinates": [356, 545],
+      "name": "Mudanjiang"
+    },
+    {
+      "coordinates": [106, 896],
+      "name": "Nampho"
+    },
+    {
+      "coordinates": [203, 983],
+      "name": "Suwon"
+    },
+    {
+      "coordinates": [346, 1082],
+      "name": "Ulsan"
+    },
+    {
+      "coordinates": [0, 746],
+      "name": "Benxi"
+    },
+    {
+      "coordinates": [40, 816],
+      "name": "Dandong"
+    },
+    {
+      "coordinates": [312, 360],
+      "name": "Yichun"
+    },
+    {
+      "coordinates": [234, 825],
+      "name": "Hamhung"
+    },
+    {
+      "coordinates": [403, 375],
+      "name": "Hegang"
+    },
+    {
+      "coordinates": [371, 710],
+      "name": "Chongjin"
+    },
+    {
+      "coordinates": [34, 636],
+      "name": "Siping"
+    },
+    {
+      "coordinates": [425, 1315],
+      "name": "Kagoshima"
+    },
+    {
+      "coordinates": [795, 1011],
+      "name": "Kanazawa"
+    },
+    {
+      "coordinates": [559, 1178],
+      "name": "Matsuyama"
+    },
+    {
+      "coordinates": [84, 651],
+      "name": "Liaoyuan"
+    },
+    {
+      "coordinates": [433, 470],
+      "name": "Qitaihe"
+    },
+    {
+      "coordinates": [349, 1054],
+      "name": "Pohang"
+    },
+    {
+      "coordinates": [1143, 574],
+      "name": "Asahikawa"
+    },
+    {
+      "coordinates": [1005, 818],
+      "name": "Akita"
+    },
+    {
+      "coordinates": [1069, 816],
+      "name": "Morioka"
+    },
+    {
+      "coordinates": [1030, 935],
+      "name": "Fukushima"
+    },
+    {
+      "coordinates": [809, 178],
+      "name": "Komsomolsk-on-Amur"
+    },
+    {
+      "coordinates": [335, 777],
+      "name": "Kimchaek"
+    },
+    {
+      "coordinates": [1028, 766],
+      "name": "Hirosaki"
+    },
+    {
+      "coordinates": [506, 587],
+      "name": "Ussuriysk"
+    },
+    {
+      "coordinates": [1058, 660],
+      "name": "Muroran"
+    },
+    {
+      "coordinates": [372, 640],
+      "name": "Tumen"
+    },
+    {
+      "coordinates": [85, 277],
+      "name": "Nenjiang"
+    },
+    {
+      "coordinates": [560, 289],
+      "name": "Birobidzhan"
+    },
+    {
+      "coordinates": [262, 141],
+      "name": "Svobodny"
+    },
+    {
+      "coordinates": [592, 485],
+      "name": "Lesozavodsk"
+    },
+    {
+      "coordinates": [1165, 402],
+      "name": "Korsakov"
+    },
+    {
+      "coordinates": [1010, 267],
+      "name": "Sovetskaya Gavan"
+    },
+    {
+      "coordinates": [1035, 18],
+      "name": "Nikolayevsk-on-Amur"
+    },
+    {
+      "coordinates": [207, 3],
+      "name": "Zeya"
+    },
+    {
+      "coordinates": [235, 106],
+      "name": "Shimanovsk"
+    },
+    {
+      "coordinates": [1124, 150],
+      "name": "Alexandrovsk-Sakhalinsky"
+    },
+    {
+      "coordinates": [118, 23],
+      "name": "Magdagachi"
+    },
+    {
+      "coordinates": [1040, 118],
+      "name": "De-Kastri"
+    },
+    {
+      "coordinates": [439, 1179],
+      "name": "Kitakyūshū"
+    },
+    {
+      "coordinates": [864, 1118],
+      "name": "Hamamatsu"
+    },
+    {
+      "coordinates": [433, 1243],
+      "name": "Kumamoto"
+    },
+    {
+      "coordinates": [212, 1068],
+      "name": "Jeonju"
+    },
+    {
+      "coordinates": [903, 1102],
+      "name": "Shizuoka"
+    },
+    {
+      "coordinates": [463, 417],
+      "name": "Shuangyashan"
+    },
+    {
+      "coordinates": [63, 516],
+      "name": "Songyuan"
+    },
+    {
+      "coordinates": [488, 1215],
+      "name": "Ōita"
+    },
+    {
+      "coordinates": [706, 1152],
+      "name": "Wakayama"
+    },
+    {
+      "coordinates": [803, 1078],
+      "name": "Gifu"
+    },
+    {
+      "coordinates": [176, 1207],
+      "name": "Jeju"
+    },
+    {
+      "coordinates": [1031, 1016],
+      "name": "Mito"
+    },
+    {
+      "coordinates": [4, 689],
+      "name": "Tieling"
+    },
+    {
+      "coordinates": [175, 763],
+      "name": "Kanggye"
+    },
+    {
+      "coordinates": [1020, 903],
+      "name": "Yamagata"
+    },
+    {
+      "coordinates": [195, 426],
+      "name": "Suihua"
+    },
+    {
+      "coordinates": [770, 1040],
+      "name": "Fukui"
+    },
+    {
+      "coordinates": [273, 736],
+      "name": "Hyesan"
+    },
+    {
+      "coordinates": [877, 1028],
+      "name": "Matsumoto"
+    },
+    {
+      "coordinates": [123, 939],
+      "name": "Haeju"
+    },
+    {
+      "coordinates": [127, 576],
+      "name": "Jiutai"
+    },
+    {
+      "coordinates": [915, 1062],
+      "name": "Kōfu"
+    },
+    {
+      "coordinates": [546, 1154],
+      "name": "Kure"
+    },
+    {
+      "coordinates": [931, 954],
+      "name": "Nagaoka"
+    },
+    {
+      "coordinates": [273, 619],
+      "name": "Dunhua"
+    },
+    {
+      "coordinates": [319, 951],
+      "name": "Gangneung"
+    },
+    {
+      "coordinates": [134, 461],
+      "name": "Zhaodong"
+    },
+    {
+      "coordinates": [1093, 641],
+      "name": "Tomakomai"
+    },
+    {
+      "coordinates": [1192, 622],
+      "name": "Obihiro"
+    },
+    {
+      "coordinates": [576, 1081],
+      "name": "Matsue"
+    },
+    {
+      "coordinates": [648, 1077],
+      "name": "Tottori"
+    },
+    {
+      "coordinates": [85, 560],
+      "name": "Nong'an"
+    },
+    {
+      "coordinates": [153, 503],
+      "name": "Shuangcheng"
+    },
+    {
+      "coordinates": [309, 1022],
+      "name": "Andong"
+    },
+    {
+      "coordinates": [219, 599],
+      "name": "Jiaohe"
+    },
+    {
+      "coordinates": [336, 393],
+      "name": "Nancha"
+    },
+    {
+      "coordinates": [98, 748],
+      "name": "Huanren"
+    },
+    {
+      "coordinates": [1236, 566],
+      "name": "Kitami"
+    },
+    {
+      "coordinates": [191, 378],
+      "name": "Hailun"
+    },
+    {
+      "coordinates": [260, 406],
+      "name": "Tieli"
+    },
+    {
+      "coordinates": [342, 760],
+      "name": "Kilju County"
+    },
+    {
+      "coordinates": [257, 509],
+      "name": "Shangzhi"
+    },
+    {
+      "coordinates": [416, 473],
+      "name": "Boli"
+    },
+    {
+      "coordinates": [504, 381],
+      "name": "Fujin"
+    },
+    {
+      "coordinates": [366, 619],
+      "name": "Wangqing"
+    },
+    {
+      "coordinates": [497, 483],
+      "name": "Mishan"
+    },
+    {
+      "coordinates": [140, 647],
+      "name": "Panshi"
+    },
+    {
+      "coordinates": [322, 667],
+      "name": "Helong"
+    },
+    {
+      "coordinates": [299, 925],
+      "name": "Sokcho"
+    },
+    {
+      "coordinates": [195, 711],
+      "name": "Linjiang"
+    },
+    {
+      "coordinates": [336, 685],
+      "name": "Musan County"
+    },
+    {
+      "coordinates": [194, 558],
+      "name": "Shulan"
+    },
+    {
+      "coordinates": [152, 449],
+      "name": "Lanxi"
+    },
+    {
+      "coordinates": [125, 345],
+      "name": "Keshan"
+    },
+    {
+      "coordinates": [283, 169],
+      "name": "Belogorsk"
+    },
+    {
+      "coordinates": [120, 687],
+      "name": "Liuhe"
+    },
+    {
+      "coordinates": [153, 666],
+      "name": "Huinan County"
+    },
+    {
+      "coordinates": [349, 327],
+      "name": "Xinqing"
+    },
+    {
+      "coordinates": [349, 559],
+      "name": "Ning'an"
+    },
+    {
+      "coordinates": [802, 198],
+      "name": "Amursk"
+    },
+    {
+      "coordinates": [555, 538],
+      "name": "Spassk-Dalny"
+    },
+    {
+      "coordinates": [565, 469],
+      "name": "Hulin"
+    },
+    {
+      "coordinates": [91, 355],
+      "name": "Yi'an"
+    },
+    {
+      "coordinates": [642, 404],
+      "name": "Bikin"
+    },
+    {
+      "coordinates": [692, 555],
+      "name": "Kavalerovo"
+    },
+    {
+      "coordinates": [1110, 401],
+      "name": "Nevelsk"
+    },
+    {
+      "coordinates": [1183, 247],
+      "name": "Poronaysk"
+    },
+    {
+      "coordinates": [671, 361],
+      "name": "Vyazemsky"
+    },
+    {
+      "coordinates": [563, 150],
+      "name": "Chegdomyn"
+    },
+    {
+      "coordinates": [1165, 283],
+      "name": "Makarov"
+    },
+    {
+      "coordinates": [1122, 295],
+      "name": "Krasnogorsk"
+    },
+    {
+      "coordinates": [105, 786],
+      "name": "Taedong"
+    },
+    {
+      "coordinates": [355, 237],
+      "name": "Progress"
+    },
+    {
+      "coordinates": [301, 1102],
+      "name": "Changwon"
+    },
+    {
+      "coordinates": [629, 1127],
+      "name": "Okayama"
+    },
+    {
+      "coordinates": [234, 1019],
+      "name": "Cheongju"
+    },
+    {
+      "coordinates": [994, 1006],
+      "name": "Utsunomiya"
+    },
+    {
+      "coordinates": [961, 1060],
+      "name": "Hachiōji"
+    },
+    {
+      "coordinates": [353, 645],
+      "name": "Yanji"
+    },
+    {
+      "coordinates": [669, 1162],
+      "name": "Tokushima"
+    },
+    {
+      "coordinates": [136, 856],
+      "name": "Sunchon"
+    },
+    {
+      "coordinates": [945, 1017],
+      "name": "Maebashi"
+    },
+    {
+      "coordinates": [1024, 954],
+      "name": "Kōriyama"
+    },
+    {
+      "coordinates": [971, 1044],
+      "name": "Kawagoe"
+    },
+    {
+      "coordinates": [637, 1146],
+      "name": "Takamatsu"
+    },
+    {
+      "coordinates": [831, 1001],
+      "name": "Toyama"
+    },
+    {
+      "coordinates": [164, 708],
+      "name": "Baishan"
+    },
+    {
+      "coordinates": [260, 976],
+      "name": "Wonju"
+    },
+    {
+      "coordinates": [247, 946],
+      "name": "Chuncheon"
+    },
+    {
+      "coordinates": [156, 753],
+      "name": "Manpo"
+    },
+    {
+      "coordinates": [93, 443],
+      "name": "Anda"
+    },
+    {
+      "coordinates": [31, 498],
+      "name": "Da'an"
+    },
+    {
+      "coordinates": [443, 1327],
+      "name": "Kanoya"
+    },
+    {
+      "coordinates": [397, 502],
+      "name": "Linkou"
+    },
+    {
+      "coordinates": [216, 857],
+      "name": "Munchon"
+    },
+    {
+      "coordinates": [139, 370],
+      "name": "Baiquan County"
+    },
+    {
+      "coordinates": [141, 424],
+      "name": "Qinggang"
+    },
+    {
+      "coordinates": [584, 564],
+      "name": "Arsenyev"
+    },
+    {
+      "coordinates": [202, 390],
+      "name": "Suiling Town"
+    },
+    {
+      "coordinates": [13, 571],
+      "name": "Changling County"
+    },
+    {
+      "coordinates": [227, 411],
+      "name": "Qing’an"
+    },
+    {
+      "coordinates": [575, 625],
+      "name": "Partizansk"
+    },
+    {
+      "coordinates": [1121, 379],
+      "name": "Kholmsk"
+    },
+    {
+      "coordinates": [609, 458],
+      "name": "Dalnerechensk"
+    },
+    {
+      "coordinates": [123, 723],
+      "name": "Tonghua"
+    },
+    {
+      "coordinates": [1118, 258],
+      "name": "Uglegorsk"
+    },
+    {
+      "coordinates": [245, 1002],
+      "name": "Eumseong"
+    },
+    {
+      "coordinates": [445, 279],
+      "name": "Obluchye"
+    },
+    {
+      "coordinates": [126, 773],
+      "name": "Chosan"
+    },
+    {
+      "coordinates": [271, 770],
+      "name": "Kimhyonggwon"
+    },
+    {
+      "coordinates": [125, 911],
+      "name": "Sariwon"
+    }
+  ],
   "nations": [
     {
       "coordinates": [1157, 614],

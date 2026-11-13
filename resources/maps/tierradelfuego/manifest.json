@@ -119,6 +119,28 @@
       "name": "San Gregorio"
     }
   ],
+  "places": [
+    {
+      "coordinates": [1182, 555],
+      "name": "Río Gallegos"
+    },
+    {
+      "coordinates": [1360, 977],
+      "name": "Río Grande"
+    },
+    {
+      "coordinates": [1337, 69],
+      "name": "Puerto San Julián"
+    },
+    {
+      "coordinates": [840, 609],
+      "name": "Veintiocho de Noviembre"
+    },
+    {
+      "coordinates": [937, 800],
+      "name": "Río Verde"
+    }
+  ],
   "themes": ["south_america"],
   "translation_key": "map.tierradelfuego"
 }

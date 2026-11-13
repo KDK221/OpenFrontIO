@@ -8,6 +8,124 @@
   "author": "TsProphet94",
   "forced_modifiers": ["isWaterNukes:75"],
   "themes": ["europe"],
+  "places": [
+    {
+      "coordinates": [156, 1427],
+      "name": "Grenoble"
+    },
+    {
+      "coordinates": [347, 585],
+      "name": "Lausanne"
+    },
+    {
+      "coordinates": [1979, 307],
+      "name": "Innsbruck"
+    },
+    {
+      "coordinates": [1236, 1035],
+      "name": "Lugano"
+    },
+    {
+      "coordinates": [1314, 318],
+      "name": "Vaduz"
+    },
+    {
+      "coordinates": [49, 99],
+      "name": "Besançon"
+    },
+    {
+      "coordinates": [222, 974],
+      "name": "Annecy"
+    },
+    {
+      "coordinates": [495, 195],
+      "name": "Biel/Bienne"
+    },
+    {
+      "coordinates": [1078, 1702],
+      "name": "Asti"
+    },
+    {
+      "coordinates": [1338, 503],
+      "name": "Chur"
+    },
+    {
+      "coordinates": [670, 1134],
+      "name": "Aosta"
+    },
+    {
+      "coordinates": [498, 431],
+      "name": "Fribourg"
+    },
+    {
+      "coordinates": [395, 290],
+      "name": "Neuchâtel"
+    },
+    {
+      "coordinates": [631, 807],
+      "name": "Sion"
+    },
+    {
+      "coordinates": [1363, 79],
+      "name": "Bregenz"
+    },
+    {
+      "coordinates": [938, 243],
+      "name": "Zug"
+    },
+    {
+      "coordinates": [1120, 16],
+      "name": "Frauenfeld"
+    },
+    {
+      "coordinates": [1235, 909],
+      "name": "Bellinzona"
+    },
+    {
+      "coordinates": [753, 84],
+      "name": "Aarau"
+    },
+    {
+      "coordinates": [1203, 144],
+      "name": "Herisau"
+    },
+    {
+      "coordinates": [593, 179],
+      "name": "Solothurn"
+    },
+    {
+      "coordinates": [1013, 354],
+      "name": "Schwyz"
+    },
+    {
+      "coordinates": [636, 10],
+      "name": "Liestal"
+    },
+    {
+      "coordinates": [507, 67],
+      "name": "Delémont"
+    },
+    {
+      "coordinates": [880, 415],
+      "name": "Sarnen"
+    },
+    {
+      "coordinates": [1025, 446],
+      "name": "Altdorf"
+    },
+    {
+      "coordinates": [926, 388],
+      "name": "Stans"
+    },
+    {
+      "coordinates": [1161, 353],
+      "name": "Glarus"
+    },
+    {
+      "coordinates": [1256, 183],
+      "name": "Appenzell"
+    }
+  ],
   "nations": [
     {
       "coordinates": [669, 356],

@@ -64,5 +64,15 @@
       "name": "Daishan Island"
     }
   ],
+  "places": [
+    {
+      "coordinates": [250, 2309],
+      "name": "Tongling"
+    },
+    {
+      "coordinates": [1529, 718],
+      "name": "Yangzhou"
+    }
+  ],
   "translation_key": "map.yangtzeriver"
 }

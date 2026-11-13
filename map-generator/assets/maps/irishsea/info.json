@@ -7,6 +7,20 @@
   "location": { "lat": 53.8, "lon": -5 },
   "author": "Tristar",
   "special_team_count": 3,
+  "places": [
+    {
+      "coordinates": [781, 691],
+      "name": "Douglas"
+    },
+    {
+      "coordinates": [9, 488],
+      "name": "Lisburn"
+    },
+    {
+      "coordinates": [1348, 1251],
+      "name": "Chester"
+    }
+  ],
   "nations": [
     {
       "coordinates": [771, 744],

@@ -8,6 +8,80 @@
   "author": "Tristar",
   "special_team_count": 2,
   "forced_modifiers": ["isWaterNukes:50"],
+  "places": [
+    {
+      "coordinates": [1220, 213],
+      "name": "Moroni"
+    },
+    {
+      "coordinates": [2132, 667],
+      "name": "Antalaha"
+    },
+    {
+      "coordinates": [138, 860],
+      "name": "Chiromo"
+    },
+    {
+      "coordinates": [164, 573],
+      "name": "Mangochi"
+    },
+    {
+      "coordinates": [330, 621],
+      "name": "Cuamba"
+    },
+    {
+      "coordinates": [111, 135],
+      "name": "Mbamba Bay"
+    },
+    {
+      "coordinates": [1444, 1940],
+      "name": "Bekily"
+    },
+    {
+      "coordinates": [486, 677],
+      "name": "Ligonha"
+    },
+    {
+      "coordinates": [1326, 1554],
+      "name": "Manja"
+    },
+    {
+      "coordinates": [59, 1984],
+      "name": "Zavala"
+    },
+    {
+      "coordinates": [56, 1893],
+      "name": "Panda"
+    },
+    {
+      "coordinates": [75, 906],
+      "name": "Chiramba"
+    },
+    {
+      "coordinates": [155, 911],
+      "name": "Nsanje"
+    },
+    {
+      "coordinates": [189, 790],
+      "name": "Mulanje"
+    },
+    {
+      "coordinates": [61, 730],
+      "name": "Mwanza"
+    },
+    {
+      "coordinates": [80, 621],
+      "name": "Ntcheu"
+    },
+    {
+      "coordinates": [148, 743],
+      "name": "Chiradzulu"
+    },
+    {
+      "coordinates": [195, 643],
+      "name": "Machinga"
+    }
+  ],
   "nations": [
     {
       "coordinates": [2941, 1383],

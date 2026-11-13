@@ -34,6 +34,8 @@ const DYNAMIC_KEY_PATTERNS: RegExp[] = [
   /^territory_patterns\.pattern_owned\.[^.]+$/,
   /^territory_patterns\.color_palette\.[^.]+$/,
   /^build_menu\.desc\.[^.]+$/,
+  // Tribes named after a real place: "<place> <suffix>" (ScenarioNames).
+  /^place_tribe\.[^.]+$/,
   // GameStartingModal picks one of START_TIPS at random.
   /^game_starting_modal\.tip_[a-z_]+$/,
   /^unit_type\.[^.]+$/,

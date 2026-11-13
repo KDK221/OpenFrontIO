@@ -321,6 +321,48 @@
       "name": "Inuvik"
     }
   ],
+  "places": [
+    {
+      "coordinates": [962, 1501],
+      "name": "Chesterfield Inlet"
+    },
+    {
+      "coordinates": [1549, 660],
+      "name": "Nuussuaq"
+    },
+    {
+      "coordinates": [1607, 737],
+      "name": "Kangersuatsiaq"
+    },
+    {
+      "coordinates": [1347, 630],
+      "name": "Savissivik"
+    },
+    {
+      "coordinates": [2035, 1133],
+      "name": "Timmiarmiut"
+    },
+    {
+      "coordinates": [1116, 1396],
+      "name": "Coral Harbour"
+    },
+    {
+      "coordinates": [1539, 638],
+      "name": "Kullorsuaq"
+    },
+    {
+      "coordinates": [1582, 691],
+      "name": "Tasiusaq"
+    },
+    {
+      "coordinates": [1094, 1141],
+      "name": "Sanirajak"
+    },
+    {
+      "coordinates": [1308, 1434],
+      "name": "Salluit"
+    }
+  ],
   "themes": ["north_america"],
   "translation_key": "map.northwestpassage"
 }

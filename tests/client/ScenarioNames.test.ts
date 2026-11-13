@@ -179,3 +179,26 @@ it("localizes former Chinese cities as tribes and western outposts", () => {
     ),
   ).toBe("서남 남부 변경성");
 });
+
+it("names place-named tribes on the real-world maps in the player's language", () => {
+  state.lang = ko as any;
+  // Place names themselves come from resources/place_names (not loaded here,
+  // so the English name stays); the suffix is translated.
+  expect(
+    scenarioDisplayName("Wonsan Village", PlayerType.Bot, GameMapType.Korea),
+  ).toBe("Wonsan 마을");
+  expect(
+    scenarioDisplayName("Wonsan Rebels", PlayerType.Bot, GameMapType.Korea),
+  ).toBe("Wonsan 반군");
+  // Theme names and nation names without a translation are left alone.
+  expect(
+    scenarioDisplayName("Ming Sultanate", PlayerType.Bot, GameMapType.Korea),
+  ).toBe("Ming Sultanate");
+  expect(scenarioDisplayName("Ulsan", PlayerType.Nation, GameMapType.Korea)).toBe(
+    "Ulsan",
+  );
+  state.lang = en as any;
+  expect(
+    scenarioDisplayName("Wonsan Village", PlayerType.Bot, GameMapType.Korea),
+  ).toBe("Wonsan Village");
+});

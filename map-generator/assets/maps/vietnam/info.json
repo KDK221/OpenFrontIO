@@ -109,6 +109,200 @@
   "location": { "lat": 16, "lon": 106.5 },
   "author": "crunchybbb",
   "special_team_count": 2,
+  "places": [
+    {
+      "coordinates": [1197, 3008],
+      "name": "Ho Chi Minh City"
+    },
+    {
+      "coordinates": [968, 3172],
+      "name": "Cần Thơ"
+    },
+    {
+      "coordinates": [1427, 1672],
+      "name": "Huế"
+    },
+    {
+      "coordinates": [1816, 2325],
+      "name": "Qui Nhơn"
+    },
+    {
+      "coordinates": [1231, 2965],
+      "name": "Biên Hòa"
+    },
+    {
+      "coordinates": [962, 1124],
+      "name": "Vinh"
+    },
+    {
+      "coordinates": [1004, 439],
+      "name": "Thái Nguyên"
+    },
+    {
+      "coordinates": [1094, 722],
+      "name": "Nam Định"
+    },
+    {
+      "coordinates": [994, 860],
+      "name": "Thanh Hóa"
+    },
+    {
+      "coordinates": [1187, 1421],
+      "name": "Đồng Hới"
+    },
+    {
+      "coordinates": [1526, 2265],
+      "name": "Pleiku"
+    },
+    {
+      "coordinates": [813, 3372],
+      "name": "Cà Mau"
+    },
+    {
+      "coordinates": [882, 3090],
+      "name": "Long Xuyên"
+    },
+    {
+      "coordinates": [905, 498],
+      "name": "Việt Trì"
+    },
+    {
+      "coordinates": [1535, 2577],
+      "name": "Buôn Ma Thuột"
+    },
+    {
+      "coordinates": [1544, 2987],
+      "name": "Phan Thiết"
+    },
+    {
+      "coordinates": [1625, 2755],
+      "name": "Da Lat"
+    },
+    {
+      "coordinates": [1732, 1997],
+      "name": "Quảng Ngãi"
+    },
+    {
+      "coordinates": [954, 3353],
+      "name": "Bạc Liêu"
+    },
+    {
+      "coordinates": [1764, 2847],
+      "name": "Phan Rang–Tháp Chàm"
+    },
+    {
+      "coordinates": [1016, 1213],
+      "name": "Hà Tĩnh"
+    },
+    {
+      "coordinates": [1128, 3064],
+      "name": "Tân An"
+    },
+    {
+      "coordinates": [1371, 587],
+      "name": "Cẩm Phả"
+    },
+    {
+      "coordinates": [1038, 759],
+      "name": "Ninh Bình"
+    },
+    {
+      "coordinates": [1112, 3107],
+      "name": "Mỹ Tho"
+    },
+    {
+      "coordinates": [1522, 2170],
+      "name": "Kon Tum"
+    },
+    {
+      "coordinates": [882, 620],
+      "name": "Hòa Bình"
+    },
+    {
+      "coordinates": [1333, 1601],
+      "name": "Quảng Trị"
+    },
+    {
+      "coordinates": [546, 206],
+      "name": "Lào Cai"
+    },
+    {
+      "coordinates": [1095, 521],
+      "name": "Bắc Giang"
+    },
+    {
+      "coordinates": [1176, 2802],
+      "name": "Hớn Quản"
+    },
+    {
+      "coordinates": [798, 138],
+      "name": "Hà Giang"
+    },
+    {
+      "coordinates": [1187, 2964],
+      "name": "Thủ Dầu Một"
+    },
+    {
+      "coordinates": [1126, 716],
+      "name": "Thái Bình"
+    },
+    {
+      "coordinates": [936, 3072],
+      "name": "Cao Lãnh"
+    },
+    {
+      "coordinates": [1234, 390],
+      "name": "Lạng Sơn"
+    },
+    {
+      "coordinates": [1107, 3205],
+      "name": "Trà Vinh"
+    },
+    {
+      "coordinates": [1063, 2875],
+      "name": "Tây Ninh"
+    },
+    {
+      "coordinates": [1016, 3125],
+      "name": "Vĩnh Long"
+    },
+    {
+      "coordinates": [769, 404],
+      "name": "Yên Bái"
+    },
+    {
+      "coordinates": [1118, 3135],
+      "name": "Bến Tre"
+    },
+    {
+      "coordinates": [1127, 600],
+      "name": "Hải Dương"
+    },
+    {
+      "coordinates": [1115, 192],
+      "name": "Cao Bằng"
+    },
+    {
+      "coordinates": [852, 381],
+      "name": "Tuyên Quang"
+    },
+    {
+      "coordinates": [1006, 313],
+      "name": "Bắc Kạn"
+    },
+    {
+      "coordinates": [530, 483],
+      "name": "Sơn La"
+    },
+    {
+      "coordinates": [1317, 1577],
+      "name": "Đông Hà"
+    },
+    {
+      "coordinates": [391, 379],
+      "name": "Luan Chau"
+    }
+  ],
   "nations": [
     {
       "coordinates": [1227, 3020],

@@ -95,6 +95,11 @@ export const CustomTribeSchema = z.union([
   }),
 ]);
 
+export const MapPlaceSchema = z.strictObject({
+  name: z.string().min(1).describe("English place name."),
+  coordinates: Coordinates,
+});
+
 const MapMetadataSchema = z.strictObject({
   width: z.int().positive(),
   height: z.int().positive(),
@@ -157,6 +162,12 @@ const mapInfoShape = {
     .optional()
     .describe("Tribe name themes from resources/tribeNameThemes.json."),
   custom_tribes: z.array(CustomTribeSchema).optional(),
+  places: z
+    .array(MapPlaceSchema)
+    .optional()
+    .describe(
+      "Real towns on the map. A tribe spawning on a map with places is named after the one nearest it.",
+    ),
   nations: z.array(NationSchema),
   additionalNations: z
     .array(NationSchema)
@@ -232,6 +243,7 @@ export const MapManifestSchema = z
       custom_tribes: (manifest.custom_tribes ?? []).filter(
         (t) => typeof t !== "string",
       ),
+      places: manifest.places ?? [],
     };
     for (const [group, entries] of Object.entries(groups)) {
       entries.forEach((entry, i) => {
@@ -263,5 +275,6 @@ export type MapManifest = z.infer<typeof MapManifestSchema>;
 export type MapMetadata = z.infer<typeof MapMetadataSchema>;
 export type Nation = z.infer<typeof NationSchema>;
 export type AdditionalNation = Nation;
+export type MapPlace = z.infer<typeof MapPlaceSchema>;
 export type MapLayer = z.infer<typeof MapLayerSchema>;
 export type LayerPlacement = MapLayer["placement"];

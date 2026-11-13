@@ -1,4 +1,5 @@
 import { GameMap, TileRef } from "@openfront/engine-api/game/GameMap";
+import type { MapPlace } from "@openfront/engine-api/game/MapFiles";
 import type { GoldenLand } from "@openfront/engine-lib/game/GoldenLands";
 import {
   AllianceInfo,
@@ -312,6 +313,9 @@ export interface Player extends PlayerLike {
   smallID(): number;
   info(): PlayerInfo;
   name(): string;
+  // Gives a tribe the name of where it spawned (SpawnExecution), in the
+  // same tick it joins, before any update has carried its first name.
+  rename(name: string): void;
   displayName(): string;
   clanTag(): string | null;
   clientID(): ClientID | null;
@@ -640,6 +644,9 @@ export interface Game extends GameLike {
    */
   goldenLands(): readonly GoldenLand[];
   setGoldenLands(lands: readonly GoldenLand[]): void;
+  // Real towns from the map's manifest; tribes take the nearest one's name.
+  places(): readonly MapPlace[];
+  setPlaces(places: readonly MapPlace[]): void;
   /**
    * The player's golden-land share: the fraction of each land they own,
    * summed over the lands.

@@ -59,6 +59,212 @@
       "name": "Jilin"
     }
   ],
+  "places": [
+    {
+      "coordinates": [1013, 208],
+      "name": "Shenyang"
+    },
+    {
+      "coordinates": [293, 836],
+      "name": "Jinan"
+    },
+    {
+      "coordinates": [972, 302],
+      "name": "Anshan"
+    },
+    {
+      "coordinates": [286, 11],
+      "name": "Chifeng"
+    },
+    {
+      "coordinates": [1261, 505],
+      "name": "Sinuiju"
+    },
+    {
+      "coordinates": [316, 406],
+      "name": "Tangshan"
+    },
+    {
+      "coordinates": [207, 1149],
+      "name": "Shangqiu"
+    },
+    {
+      "coordinates": [339, 914],
+      "name": "Tai'an"
+    },
+    {
+      "coordinates": [618, 887],
+      "name": "Weifang"
+    },
+    {
+      "coordinates": [1076, 210],
+      "name": "Fushun"
+    },
+    {
+      "coordinates": [132, 1021],
+      "name": "Heze"
+    },
+    {
+      "coordinates": [294, 1024],
+      "name": "Jining"
+    },
+    {
+      "coordinates": [1495, 741],
+      "name": "Nampho"
+    },
+    {
+      "coordinates": [1087, 291],
+      "name": "Benxi"
+    },
+    {
+      "coordinates": [1253, 495],
+      "name": "Dandong"
+    },
+    {
+      "coordinates": [85, 380],
+      "name": "Langfang"
+    },
+    {
+      "coordinates": [414, 185],
+      "name": "Lingyuan"
+    },
+    {
+      "coordinates": [894, 354],
+      "name": "Yingkou"
+    },
+    {
+      "coordinates": [1001, 283],
+      "name": "Liaoyang"
+    },
+    {
+      "coordinates": [723, 126],
+      "name": "Fuxin"
+    },
+    {
+      "coordinates": [1075, 18],
+      "name": "Siping"
+    },
+    {
+      "coordinates": [1215, 82],
+      "name": "Liaoyuan"
+    },
+    {
+      "coordinates": [856, 893],
+      "name": "Laiyang"
+    },
+    {
+      "coordinates": [33, 934],
+      "name": "Puyang"
+    },
+    {
+      "coordinates": [556, 165],
+      "name": "Chaoyang"
+    },
+    {
+      "coordinates": [200, 189],
+      "name": "Chengde"
+    },
+    {
+      "coordinates": [142, 696],
+      "name": "Dezhou"
+    },
+    {
+      "coordinates": [1044, 140],
+      "name": "Tieling"
+    },
+    {
+      "coordinates": [147, 847],
+      "name": "Liaocheng"
+    },
+    {
+      "coordinates": [1407, 591],
+      "name": "Chongju"
+    },
+    {
+      "coordinates": [423, 930],
+      "name": "Laiwu"
+    },
+    {
+      "coordinates": [1340, 347],
+      "name": "Huanren"
+    },
+    {
+      "coordinates": [78, 773],
+      "name": "Linqing"
+    },
+    {
+      "coordinates": [596, 1020],
+      "name": "Yishui County"
+    },
+    {
+      "coordinates": [746, 900],
+      "name": "Pingdu"
+    },
+    {
+      "coordinates": [1357, 101],
+      "name": "Panshi"
+    },
+    {
+      "coordinates": [1, 682],
+      "name": "Nangong"
+    },
+    {
+      "coordinates": [455, 1037],
+      "name": "Pingyi"
+    },
+    {
+      "coordinates": [255, 1108],
+      "name": "Shan County"
+    },
+    {
+      "coordinates": [1341, 196],
+      "name": "Liuhe"
+    },
+    {
+      "coordinates": [1407, 157],
+      "name": "Huinan County"
+    },
+    {
+      "coordinates": [1392, 450],
+      "name": "Taedong"
+    },
+    {
+      "coordinates": [33, 637],
+      "name": "Hengshui"
+    },
+    {
+      "coordinates": [273, 456],
+      "name": "Lunan"
+    },
+    {
+      "coordinates": [1473, 275],
+      "name": "Baishan"
+    },
+    {
+      "coordinates": [594, 133],
+      "name": "Beipiao"
+    },
+    {
+      "coordinates": [1494, 390],
+      "name": "Manpo"
+    },
+    {
+      "coordinates": [1469, 812],
+      "name": "Changyon"
+    },
+    {
+      "coordinates": [1379, 291],
+      "name": "Tonghua"
+    },
+    {
+      "coordinates": [1435, 427],
+      "name": "Chosan"
+    },
+    {
+      "coordinates": [1457, 628],
+      "name": "Sin-Ni"
+    }
+  ],
   "themes": ["asia"],
   "translation_key": "map.yellowsea"
 }

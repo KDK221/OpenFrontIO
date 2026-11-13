@@ -7,6 +7,228 @@
   "categories": ["europe"],
   "location": { "lat": 56.5, "lon": -4 },
   "author": "Tiger McSwane",
+  "places": [
+    {
+      "coordinates": [633, 883],
+      "name": "Dublin"
+    },
+    {
+      "coordinates": [1043, 507],
+      "name": "Glasgow"
+    },
+    {
+      "coordinates": [1160, 993],
+      "name": "Birmingham"
+    },
+    {
+      "coordinates": [1175, 845],
+      "name": "Manchester"
+    },
+    {
+      "coordinates": [744, 698],
+      "name": "Belfast"
+    },
+    {
+      "coordinates": [1282, 795],
+      "name": "Leeds"
+    },
+    {
+      "coordinates": [253, 1098],
+      "name": "Cork"
+    },
+    {
+      "coordinates": [280, 988],
+      "name": "Limerick"
+    },
+    {
+      "coordinates": [1288, 918],
+      "name": "Nottingham"
+    },
+    {
+      "coordinates": [1299, 1226],
+      "name": "Brighton"
+    },
+    {
+      "coordinates": [1176, 1233],
+      "name": "Portsmouth"
+    },
+    {
+      "coordinates": [1155, 917],
+      "name": "Stoke-on-Trent"
+    },
+    {
+      "coordinates": [1213, 999],
+      "name": "Coventry"
+    },
+    {
+      "coordinates": [1890, 1270],
+      "name": "Charleroi"
+    },
+    {
+      "coordinates": [1444, 802],
+      "name": "Kingston upon Hull"
+    },
+    {
+      "coordinates": [1326, 1074],
+      "name": "Luton"
+    },
+    {
+      "coordinates": [1209, 1093],
+      "name": "Oxford"
+    },
+    {
+      "coordinates": [1357, 773],
+      "name": "York"
+    },
+    {
+      "coordinates": [1548, 1041],
+      "name": "Ipswich"
+    },
+    {
+      "coordinates": [1388, 972],
+      "name": "Peterborough"
+    },
+    {
+      "coordinates": [1415, 1026],
+      "name": "Cambridge"
+    },
+    {
+      "coordinates": [1948, 1261],
+      "name": "Namur"
+    },
+    {
+      "coordinates": [1041, 1153],
+      "name": "Bath"
+    },
+    {
+      "coordinates": [1572, 1202],
+      "name": "Calais"
+    },
+    {
+      "coordinates": [584, 645],
+      "name": "Londonderry/Derry"
+    },
+    {
+      "coordinates": [258, 901],
+      "name": "Galway"
+    },
+    {
+      "coordinates": [1461, 726],
+      "name": "Scarborough"
+    },
+    {
+      "coordinates": [971, 570],
+      "name": "Ayr"
+    },
+    {
+      "coordinates": [1136, 276],
+      "name": "Inverness"
+    },
+    {
+      "coordinates": [649, 787],
+      "name": "Dundalk"
+    },
+    {
+      "coordinates": [642, 827],
+      "name": "Drogheda"
+    },
+    {
+      "coordinates": [1512, 1177],
+      "name": "Dover"
+    },
+    {
+      "coordinates": [915, 758],
+      "name": "Douglas"
+    },
+    {
+      "coordinates": [1091, 622],
+      "name": "Dumfries"
+    },
+    {
+      "coordinates": [461, 985],
+      "name": "Kilkenny"
+    },
+    {
+      "coordinates": [390, 755],
+      "name": "Sligo"
+    },
+    {
+      "coordinates": [645, 712],
+      "name": "Lisburn"
+    },
+    {
+      "coordinates": [126, 1080],
+      "name": "Killarney"
+    },
+    {
+      "coordinates": [1266, 862],
+      "name": "Sheffield"
+    },
+    {
+      "coordinates": [1458, 1118],
+      "name": "Southend-on-Sea"
+    },
+    {
+      "coordinates": [1014, 1144],
+      "name": "Bristol"
+    },
+    {
+      "coordinates": [1273, 968],
+      "name": "Leicester"
+    },
+    {
+      "coordinates": [1063, 1246],
+      "name": "Bournemouth"
+    },
+    {
+      "coordinates": [1140, 1220],
+      "name": "Southampton"
+    },
+    {
+      "coordinates": [1228, 1136],
+      "name": "Reading"
+    },
+    {
+      "coordinates": [1068, 891],
+      "name": "Chester"
+    },
+    {
+      "coordinates": [980, 501],
+      "name": "Greenock"
+    },
+    {
+      "coordinates": [1162, 647],
+      "name": "Carlisle"
+    },
+    {
+      "coordinates": [458, 1042],
+      "name": "Waterford"
+    },
+    {
+      "coordinates": [566, 702],
+      "name": "Omagh"
+    },
+    {
+      "coordinates": [983, 374],
+      "name": "Fort William"
+    },
+    {
+      "coordinates": [460, 698],
+      "name": "Donegal"
+    },
+    {
+      "coordinates": [1823, 1268],
+      "name": "Mons"
+    },
+    {
+      "coordinates": [590, 752],
+      "name": "Monaghan"
+    },
+    {
+      "coordinates": [393, 846],
+      "name": "Roscommon"
+    }
+  ],
   "nations": [
     {
       "coordinates": [960, 1258],

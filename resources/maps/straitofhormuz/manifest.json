@@ -124,6 +124,44 @@
       "name": "Bahrain"
     }
   ],
+  "places": [
+    {
+      "coordinates": [69, 529],
+      "name": "Manama"
+    },
+    {
+      "coordinates": [1566, 106],
+      "name": "Bam"
+    },
+    {
+      "coordinates": [1412, 1104],
+      "name": "Nizwa"
+    },
+    {
+      "coordinates": [1066, 883],
+      "name": "Al Ain"
+    },
+    {
+      "coordinates": [1103, 631],
+      "name": "Ras al-Khaimah"
+    },
+    {
+      "coordinates": [661, 102],
+      "name": "Fasa"
+    },
+    {
+      "coordinates": [1216, 1050],
+      "name": "Ibri"
+    },
+    {
+      "coordinates": [1180, 741],
+      "name": "Fujairah"
+    },
+    {
+      "coordinates": [1058, 33],
+      "name": "Sirjan"
+    }
+  ],
   "special_team_count": 2,
   "teamGameSpawnAreas": {
     "2": [

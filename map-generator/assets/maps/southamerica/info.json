@@ -7,6 +7,808 @@
   "location": { "lat": -15, "lon": -60 },
   "author": "evanpelle",
   "featured_rank": 4,
+  "places": [
+    {
+      "coordinates": [1480, 1379],
+      "name": "Rio de Janeiro"
+    },
+    {
+      "coordinates": [556, 557],
+      "name": "Bogotá"
+    },
+    {
+      "coordinates": [655, 1719],
+      "name": "Santiago"
+    },
+    {
+      "coordinates": [1023, 1762],
+      "name": "Buenos Aires"
+    },
+    {
+      "coordinates": [466, 1041],
+      "name": "Lima"
+    },
+    {
+      "coordinates": [772, 387],
+      "name": "Caracas"
+    },
+    {
+      "coordinates": [1240, 1608],
+      "name": "Porto Alegre"
+    },
+    {
+      "coordinates": [1340, 1159],
+      "name": "Brasília"
+    },
+    {
+      "coordinates": [1731, 934],
+      "name": "Recife"
+    },
+    {
+      "coordinates": [1623, 1077],
+      "name": "Salvador"
+    },
+    {
+      "coordinates": [511, 508],
+      "name": "Medellin"
+    },
+    {
+      "coordinates": [1297, 1457],
+      "name": "Curitiba"
+    },
+    {
+      "coordinates": [380, 753],
+      "name": "Guayaquil"
+    },
+    {
+      "coordinates": [483, 591],
+      "name": "Cali"
+    },
+    {
+      "coordinates": [629, 379],
+      "name": "Maracaibo"
+    },
+    {
+      "coordinates": [1298, 1187],
+      "name": "Goiânia"
+    },
+    {
+      "coordinates": [796, 149],
+      "name": "San Juan"
+    },
+    {
+      "coordinates": [880, 1215],
+      "name": "Santa Cruz de la Sierra"
+    },
+    {
+      "coordinates": [610, 145],
+      "name": "Port-au-Prince"
+    },
+    {
+      "coordinates": [1047, 1451],
+      "name": "Asunción"
+    },
+    {
+      "coordinates": [740, 394],
+      "name": "Valencia"
+    },
+    {
+      "coordinates": [978, 783],
+      "name": "Manaus"
+    },
+    {
+      "coordinates": [423, 696],
+      "name": "Quito"
+    },
+    {
+      "coordinates": [732, 1176],
+      "name": "La Paz"
+    },
+    {
+      "coordinates": [850, 1650],
+      "name": "Córdoba"
+    },
+    {
+      "coordinates": [103, 286],
+      "name": "San Salvador"
+    },
+    {
+      "coordinates": [256, 399],
+      "name": "San José"
+    },
+    {
+      "coordinates": [91, 66],
+      "name": "Mérida"
+    },
+    {
+      "coordinates": [163, 275],
+      "name": "Tegucigalpa"
+    },
+    {
+      "coordinates": [711, 1700],
+      "name": "Mendoza"
+    },
+    {
+      "coordinates": [583, 1838],
+      "name": "Concepción"
+    },
+    {
+      "coordinates": [514, 387],
+      "name": "Cartagena"
+    },
+    {
+      "coordinates": [1138, 1300],
+      "name": "Campo Grande"
+    },
+    {
+      "coordinates": [407, 925],
+      "name": "Trujillo"
+    },
+    {
+      "coordinates": [901, 450],
+      "name": "Ciudad Guayana"
+    },
+    {
+      "coordinates": [1247, 695],
+      "name": "Macapá"
+    },
+    {
+      "coordinates": [1609, 1056],
+      "name": "Feira de Santana"
+    },
+    {
+      "coordinates": [611, 465],
+      "name": "San Cristóbal"
+    },
+    {
+      "coordinates": [618, 1086],
+      "name": "Cuzco"
+    },
+    {
+      "coordinates": [664, 1396],
+      "name": "Antofagasta"
+    },
+    {
+      "coordinates": [669, 1221],
+      "name": "Tacna"
+    },
+    {
+      "coordinates": [505, 1101],
+      "name": "Ica"
+    },
+    {
+      "coordinates": [1034, 497],
+      "name": "Georgetown"
+    },
+    {
+      "coordinates": [959, 612],
+      "name": "Boa Vista"
+    },
+    {
+      "coordinates": [1137, 765],
+      "name": "Santarém"
+    },
+    {
+      "coordinates": [819, 1254],
+      "name": "Sucre"
+    },
+    {
+      "coordinates": [1305, 851],
+      "name": "Marabá"
+    },
+    {
+      "coordinates": [577, 1948],
+      "name": "Valdivia"
+    },
+    {
+      "coordinates": [1478, 838],
+      "name": "Caxias"
+    },
+    {
+      "coordinates": [794, 1012],
+      "name": "Riberalta"
+    },
+    {
+      "coordinates": [918, 1009],
+      "name": "Ji-Paraná"
+    },
+    {
+      "coordinates": [974, 1065],
+      "name": "Vilhena"
+    },
+    {
+      "coordinates": [1209, 553],
+      "name": "Cayenne"
+    },
+    {
+      "coordinates": [679, 813],
+      "name": "Leticia"
+    },
+    {
+      "coordinates": [597, 912],
+      "name": "Cruzeiro do Sul"
+    },
+    {
+      "coordinates": [117, 180],
+      "name": "Belmopan"
+    },
+    {
+      "coordinates": [673, 657],
+      "name": "Mitú"
+    },
+    {
+      "coordinates": [1459, 1286],
+      "name": "Belo Horizonte"
+    },
+    {
+      "coordinates": [1363, 1378],
+      "name": "Campinas"
+    },
+    {
+      "coordinates": [535, 371],
+      "name": "Barranquilla"
+    },
+    {
+      "coordinates": [660, 116],
+      "name": "Santiago de los Caballeros"
+    },
+    {
+      "coordinates": [1567, 1300],
+      "name": "Vila Velha"
+    },
+    {
+      "coordinates": [955, 1704],
+      "name": "Rosario"
+    },
+    {
+      "coordinates": [1706, 979],
+      "name": "Maceió"
+    },
+    {
+      "coordinates": [1721, 867],
+      "name": "Natal"
+    },
+    {
+      "coordinates": [819, 1498],
+      "name": "San Miguel de Tucumán"
+    },
+    {
+      "coordinates": [631, 1173],
+      "name": "Arequipa"
+    },
+    {
+      "coordinates": [1094, 1151],
+      "name": "Cuiabá"
+    },
+    {
+      "coordinates": [34, 252],
+      "name": "Quetzaltenango"
+    },
+    {
+      "coordinates": [1328, 1253],
+      "name": "Uberlândia"
+    },
+    {
+      "coordinates": [1352, 1396],
+      "name": "Sorocaba"
+    },
+    {
+      "coordinates": [505, 98],
+      "name": "Santiago de Cuba"
+    },
+    {
+      "coordinates": [1342, 1323],
+      "name": "Ribeirão Preto"
+    },
+    {
+      "coordinates": [814, 1433],
+      "name": "Salta"
+    },
+    {
+      "coordinates": [955, 1659],
+      "name": "Santa Fe"
+    },
+    {
+      "coordinates": [580, 799],
+      "name": "Iquitos"
+    },
+    {
+      "coordinates": [521, 1042],
+      "name": "Huancayo"
+    },
+    {
+      "coordinates": [359, 840],
+      "name": "Piura"
+    },
+    {
+      "coordinates": [460, 655],
+      "name": "San Juan de Pasto"
+    },
+    {
+      "coordinates": [1241, 1579],
+      "name": "Caxias do Sul"
+    },
+    {
+      "coordinates": [513, 543],
+      "name": "Manizales"
+    },
+    {
+      "coordinates": [420, 953],
+      "name": "Chimbote"
+    },
+    {
+      "coordinates": [1461, 1188],
+      "name": "Montes Claros"
+    },
+    {
+      "coordinates": [1138, 1459],
+      "name": "Ciudad del Este"
+    },
+    {
+      "coordinates": [1206, 1665],
+      "name": "Pelotas"
+    },
+    {
+      "coordinates": [541, 933],
+      "name": "Pucallpa"
+    },
+    {
+      "coordinates": [1552, 1133],
+      "name": "Vitória da Conquista"
+    },
+    {
+      "coordinates": [861, 947],
+      "name": "Porto Velho"
+    },
+    {
+      "coordinates": [1271, 1446],
+      "name": "Ponta Grossa"
+    },
+    {
+      "coordinates": [408, 773],
+      "name": "Cuenca"
+    },
+    {
+      "coordinates": [1563, 971],
+      "name": "Petrolina"
+    },
+    {
+      "coordinates": [743, 982],
+      "name": "Rio Branco"
+    },
+    {
+      "coordinates": [733, 1917],
+      "name": "Neuquén"
+    },
+    {
+      "coordinates": [1031, 1479],
+      "name": "Formosa"
+    },
+    {
+      "coordinates": [65, 101],
+      "name": "Campeche"
+    },
+    {
+      "coordinates": [834, 1330],
+      "name": "Tarija"
+    },
+    {
+      "coordinates": [1428, 1051],
+      "name": "Barreiras"
+    },
+    {
+      "coordinates": [638, 1598],
+      "name": "La Serena"
+    },
+    {
+      "coordinates": [604, 1861],
+      "name": "Los Ángeles"
+    },
+    {
+      "coordinates": [666, 1515],
+      "name": "Copiapó"
+    },
+    {
+      "coordinates": [846, 1833],
+      "name": "Santa Rosa"
+    },
+    {
+      "coordinates": [306, 444],
+      "name": "David"
+    },
+    {
+      "coordinates": [1047, 1255],
+      "name": "Corumbá"
+    },
+    {
+      "coordinates": [635, 1999],
+      "name": "Bariloche"
+    },
+    {
+      "coordinates": [830, 1127],
+      "name": "Trinidad"
+    },
+    {
+      "coordinates": [750, 528],
+      "name": "Puerto Ayacucho"
+    },
+    {
+      "coordinates": [612, 2175],
+      "name": "Coyhaique"
+    },
+    {
+      "coordinates": [1100, 983],
+      "name": "Alta Floresta"
+    },
+    {
+      "coordinates": [950, 284],
+      "name": "Castries"
+    },
+    {
+      "coordinates": [1080, 1721],
+      "name": "Durazno"
+    },
+    {
+      "coordinates": [1152, 584],
+      "name": "Cottica"
+    },
+    {
+      "coordinates": [1114, 1010],
+      "name": "Colíder"
+    },
+    {
+      "coordinates": [1305, 1060],
+      "name": "Alvorada"
+    },
+    {
+      "coordinates": [700, 399],
+      "name": "Barquisimeto"
+    },
+    {
+      "coordinates": [585, 484],
+      "name": "Bucaramanga"
+    },
+    {
+      "coordinates": [792, 1204],
+      "name": "Cochabamba"
+    },
+    {
+      "coordinates": [1311, 1486],
+      "name": "Joinville"
+    },
+    {
+      "coordinates": [1732, 906],
+      "name": "João Pessoa"
+    },
+    {
+      "coordinates": [1664, 1016],
+      "name": "Aracaju"
+    },
+    {
+      "coordinates": [139, 233],
+      "name": "San Pedro Sula"
+    },
+    {
+      "coordinates": [382, 885],
+      "name": "Chiclayo"
+    },
+    {
+      "coordinates": [1241, 1389],
+      "name": "Londrina"
+    },
+    {
+      "coordinates": [1475, 1343],
+      "name": "Juiz de Fora"
+    },
+    {
+      "coordinates": [785, 1715],
+      "name": "San Luis"
+    },
+    {
+      "coordinates": [553, 363],
+      "name": "Santa Marta"
+    },
+    {
+      "coordinates": [522, 562],
+      "name": "Ibagué"
+    },
+    {
+      "coordinates": [1702, 909],
+      "name": "Campina Grande"
+    },
+    {
+      "coordinates": [884, 410],
+      "name": "Maturín"
+    },
+    {
+      "coordinates": [1537, 1343],
+      "name": "Campos dos Goytacazes"
+    },
+    {
+      "coordinates": [1006, 1521],
+      "name": "Resistencia"
+    },
+    {
+      "coordinates": [570, 570],
+      "name": "Villavicencio"
+    },
+    {
+      "coordinates": [848, 1530],
+      "name": "Santiago del Estero"
+    },
+    {
+      "coordinates": [871, 458],
+      "name": "Ciudad Bolívar"
+    },
+    {
+      "coordinates": [1304, 1359],
+      "name": "Bauru"
+    },
+    {
+      "coordinates": [492, 72],
+      "name": "Holguín"
+    },
+    {
+      "coordinates": [854, 389],
+      "name": "Cumaná"
+    },
+    {
+      "coordinates": [817, 1414],
+      "name": "San Salvador de Jujuy"
+    },
+    {
+      "coordinates": [1355, 1304],
+      "name": "Franca"
+    },
+    {
+      "coordinates": [614, 108],
+      "name": "Cap-Haïtien"
+    },
+    {
+      "coordinates": [502, 436],
+      "name": "Montería"
+    },
+    {
+      "coordinates": [887, 910],
+      "name": "Crato"
+    },
+    {
+      "coordinates": [524, 95],
+      "name": "Guantánamo"
+    },
+    {
+      "coordinates": [597, 1908],
+      "name": "Temuco"
+    },
+    {
+      "coordinates": [1338, 1281],
+      "name": "Uberaba"
+    },
+    {
+      "coordinates": [480, 620],
+      "name": "Popayán"
+    },
+    {
+      "coordinates": [1518, 1254],
+      "name": "Governador Valadares"
+    },
+    {
+      "coordinates": [381, 24],
+      "name": "Santa Clara"
+    },
+    {
+      "coordinates": [1162, 1595],
+      "name": "Santa Maria"
+    },
+    {
+      "coordinates": [763, 1221],
+      "name": "Oruro"
+    },
+    {
+      "coordinates": [673, 1145],
+      "name": "Juliaca"
+    },
+    {
+      "coordinates": [1699, 940],
+      "name": "Caruaru"
+    },
+    {
+      "coordinates": [1329, 994],
+      "name": "Palmas"
+    },
+    {
+      "coordinates": [673, 350],
+      "name": "Punto Fijo"
+    },
+    {
+      "coordinates": [653, 1744],
+      "name": "Rancagua"
+    },
+    {
+      "coordinates": [1606, 1131],
+      "name": "Ilhéus"
+    },
+    {
+      "coordinates": [1599, 908],
+      "name": "Juazeiro do Norte"
+    },
+    {
+      "coordinates": [11, 250],
+      "name": "Tapachula"
+    },
+    {
+      "coordinates": [1353, 857],
+      "name": "Imperatriz"
+    },
+    {
+      "coordinates": [364, 720],
+      "name": "Portoviejo"
+    },
+    {
+      "coordinates": [1294, 1563],
+      "name": "Criciúma"
+    },
+    {
+      "coordinates": [1658, 849],
+      "name": "Mossoró"
+    },
+    {
+      "coordinates": [625, 1789],
+      "name": "Talca"
+    },
+    {
+      "coordinates": [802, 1552],
+      "name": "San Fernando del Valle de Catamarca"
+    },
+    {
+      "coordinates": [1678, 983],
+      "name": "Arapiraca"
+    },
+    {
+      "coordinates": [269, 22],
+      "name": "Pinar del Rio"
+    },
+    {
+      "coordinates": [1203, 1548],
+      "name": "Passo Fundo"
+    },
+    {
+      "coordinates": [418, 738],
+      "name": "Riobamba"
+    },
+    {
+      "coordinates": [1500, 1359],
+      "name": "Nova Friburgo"
+    },
+    {
+      "coordinates": [1263, 1324],
+      "name": "Araçatuba"
+    },
+    {
+      "coordinates": [550, 1075],
+      "name": "Ayacucho"
+    },
+    {
+      "coordinates": [173, 325],
+      "name": "León"
+    },
+    {
+      "coordinates": [770, 1583],
+      "name": "La Rioja"
+    },
+    {
+      "coordinates": [1132, 1355],
+      "name": "Dourados"
+    },
+    {
+      "coordinates": [1197, 1510],
+      "name": "Chapecó"
+    },
+    {
+      "coordinates": [490, 978],
+      "name": "Huánuco"
+    },
+    {
+      "coordinates": [845, 1710],
+      "name": "Río Cuarto"
+    },
+    {
+      "coordinates": [612, 1830],
+      "name": "Chillán"
+    },
+    {
+      "coordinates": [176, 226],
+      "name": "La Ceiba"
+    },
+    {
+      "coordinates": [709, 1358],
+      "name": "Calama"
+    },
+    {
+      "coordinates": [422, 897],
+      "name": "Cajamarca"
+    },
+    {
+      "coordinates": [489, 1001],
+      "name": "Cerro de Pasco"
+    },
+    {
+      "coordinates": [1575, 1103],
+      "name": "Jequié"
+    },
+    {
+      "coordinates": [401, 805],
+      "name": "Loja"
+    },
+    {
+      "coordinates": [442, 146],
+      "name": "Montego Bay"
+    },
+    {
+      "coordinates": [638, 1773],
+      "name": "Curicó"
+    },
+    {
+      "coordinates": [1683, 957],
+      "name": "Garanhuns"
+    },
+    {
+      "coordinates": [725, 1760],
+      "name": "San Rafael"
+    },
+    {
+      "coordinates": [1153, 1650],
+      "name": "Bagé"
+    },
+    {
+      "coordinates": [1036, 1652],
+      "name": "Salto"
+    },
+    {
+      "coordinates": [1575, 1270],
+      "name": "Linhares"
+    },
+    {
+      "coordinates": [1000, 1859],
+      "name": "Tandil"
+    },
+    {
+      "coordinates": [1532, 1224],
+      "name": "Teófilo Otoni"
+    },
+    {
+      "coordinates": [1100, 818],
+      "name": "Itaituba"
+    },
+    {
+      "coordinates": [451, 967],
+      "name": "Huaraz"
+    },
+    {
+      "coordinates": [965, 1844],
+      "name": "Olavarría"
+    },
+    {
+      "coordinates": [490, 1090],
+      "name": "Pisco"
+    },
+    {
+      "coordinates": [1020, 1707],
+      "name": "Gualeguaychú"
+    },
+    {
+      "coordinates": [639, 1621],
+      "name": "Ovalle"
+    },
+    {
+      "coordinates": [1287, 803],
+      "name": "Tucuruí"
+    },
+    {
+      "coordinates": [847, 1381],
+      "name": "San Ramón de la Nueva Orán"
+    }
+  ],
   "nations": [
     {
       "coordinates": [438, 58],

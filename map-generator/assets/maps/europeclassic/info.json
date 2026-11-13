@@ -7,6 +7,808 @@
   "categories": ["europe", "continental"],
   "location": { "lat": 48, "lon": 22 },
   "author": "evanpelle",
+  "places": [
+    {
+      "coordinates": [1741, 427],
+      "name": "Moscow"
+    },
+    {
+      "coordinates": [753, 598],
+      "name": "Paris"
+    },
+    {
+      "coordinates": [1035, 753],
+      "name": "Rome"
+    },
+    {
+      "coordinates": [583, 782],
+      "name": "Madrid"
+    },
+    {
+      "coordinates": [1925, 925],
+      "name": "Baghdad"
+    },
+    {
+      "coordinates": [1063, 510],
+      "name": "Berlin"
+    },
+    {
+      "coordinates": [1348, 834],
+      "name": "Athens"
+    },
+    {
+      "coordinates": [1541, 564],
+      "name": "Kyiv"
+    },
+    {
+      "coordinates": [1145, 615],
+      "name": "Vienna"
+    },
+    {
+      "coordinates": [1196, 321],
+      "name": "Stockholm"
+    },
+    {
+      "coordinates": [859, 660],
+      "name": "Geneva"
+    },
+    {
+      "coordinates": [826, 513],
+      "name": "Amsterdam"
+    },
+    {
+      "coordinates": [747, 763],
+      "name": "Barcelona"
+    },
+    {
+      "coordinates": [1538, 304],
+      "name": "Saint Petersburg"
+    },
+    {
+      "coordinates": [1604, 796],
+      "name": "Ankara"
+    },
+    {
+      "coordinates": [944, 676],
+      "name": "Milan"
+    },
+    {
+      "coordinates": [930, 569],
+      "name": "Frankfurt"
+    },
+    {
+      "coordinates": [1724, 869],
+      "name": "Aleppo"
+    },
+    {
+      "coordinates": [1699, 921],
+      "name": "Damascus"
+    },
+    {
+      "coordinates": [1084, 775],
+      "name": "Naples"
+    },
+    {
+      "coordinates": [1416, 701],
+      "name": "Bucharest"
+    },
+    {
+      "coordinates": [968, 483],
+      "name": "Hamburg"
+    },
+    {
+      "coordinates": [809, 551],
+      "name": "Brussels"
+    },
+    {
+      "coordinates": [1275, 517],
+      "name": "Warsaw"
+    },
+    {
+      "coordinates": [1221, 632],
+      "name": "Budapest"
+    },
+    {
+      "coordinates": [1092, 570],
+      "name": "Prague"
+    },
+    {
+      "coordinates": [926, 633],
+      "name": "Zürich"
+    },
+    {
+      "coordinates": [1040, 426],
+      "name": "Copenhagen"
+    },
+    {
+      "coordinates": [514, 487],
+      "name": "Dublin"
+    },
+    {
+      "coordinates": [991, 303],
+      "name": "Oslo"
+    },
+    {
+      "coordinates": [1459, 476],
+      "name": "Minsk"
+    },
+    {
+      "coordinates": [822, 669],
+      "name": "Lyon"
+    },
+    {
+      "coordinates": [1919, 411],
+      "name": "Nizhny Novgorod"
+    },
+    {
+      "coordinates": [518, 842],
+      "name": "Seville"
+    },
+    {
+      "coordinates": [1338, 738],
+      "name": "Sofia"
+    },
+    {
+      "coordinates": [570, 419],
+      "name": "Glasgow"
+    },
+    {
+      "coordinates": [1930, 792],
+      "name": "Yerevan"
+    },
+    {
+      "coordinates": [1938, 760],
+      "name": "Tbilisi"
+    },
+    {
+      "coordinates": [544, 906],
+      "name": "Fez"
+    },
+    {
+      "coordinates": [1931, 606],
+      "name": "Volgograd"
+    },
+    {
+      "coordinates": [1240, 766],
+      "name": "Tirana"
+    },
+    {
+      "coordinates": [1325, 779],
+      "name": "Thessaloniki"
+    },
+    {
+      "coordinates": [674, 801],
+      "name": "Valencia"
+    },
+    {
+      "coordinates": [667, 875],
+      "name": "Oran"
+    },
+    {
+      "coordinates": [1363, 392],
+      "name": "Riga"
+    },
+    {
+      "coordinates": [1200, 713],
+      "name": "Sarajevo"
+    },
+    {
+      "coordinates": [1494, 644],
+      "name": "Chișinău"
+    },
+    {
+      "coordinates": [1397, 455],
+      "name": "Vilnius"
+    },
+    {
+      "coordinates": [1382, 319],
+      "name": "Tallinn"
+    },
+    {
+      "coordinates": [1090, 873],
+      "name": "Valletta"
+    },
+    {
+      "coordinates": [1826, 150],
+      "name": "Arkhangelsk"
+    },
+    {
+      "coordinates": [1617, 889],
+      "name": "Nicosia"
+    },
+    {
+      "coordinates": [840, 287],
+      "name": "Bergen"
+    },
+    {
+      "coordinates": [78, 159],
+      "name": "Reykjavík"
+    },
+    {
+      "coordinates": [983, 188],
+      "name": "Trondheim"
+    },
+    {
+      "coordinates": [787, 936],
+      "name": "Ghardaia"
+    },
+    {
+      "coordinates": [1444, 825],
+      "name": "İzmir"
+    },
+    {
+      "coordinates": [635, 509],
+      "name": "Birmingham"
+    },
+    {
+      "coordinates": [626, 483],
+      "name": "Manchester"
+    },
+    {
+      "coordinates": [1001, 713],
+      "name": "Florence"
+    },
+    {
+      "coordinates": [1701, 575],
+      "name": "Kharkiv"
+    },
+    {
+      "coordinates": [1979, 834],
+      "name": "Tabriz"
+    },
+    {
+      "coordinates": [808, 520],
+      "name": "The Hague"
+    },
+    {
+      "coordinates": [836, 723],
+      "name": "Marseille"
+    },
+    {
+      "coordinates": [1891, 868],
+      "name": "Mosul"
+    },
+    {
+      "coordinates": [1672, 854],
+      "name": "Adana"
+    },
+    {
+      "coordinates": [1797, 640],
+      "name": "Rostov-on-Don"
+    },
+    {
+      "coordinates": [1666, 611],
+      "name": "Dnipro"
+    },
+    {
+      "coordinates": [1545, 656],
+      "name": "Odessa"
+    },
+    {
+      "coordinates": [1745, 622],
+      "name": "Donetsk"
+    },
+    {
+      "coordinates": [1593, 837],
+      "name": "Konya"
+    },
+    {
+      "coordinates": [1786, 533],
+      "name": "Voronezh"
+    },
+    {
+      "coordinates": [1975, 537],
+      "name": "Saratov"
+    },
+    {
+      "coordinates": [1359, 577],
+      "name": "Lviv"
+    },
+    {
+      "coordinates": [670, 689],
+      "name": "Bordeaux"
+    },
+    {
+      "coordinates": [1246, 572],
+      "name": "Kraków"
+    },
+    {
+      "coordinates": [1210, 463],
+      "name": "Gdańsk"
+    },
+    {
+      "coordinates": [1777, 689],
+      "name": "Krasnodar"
+    },
+    {
+      "coordinates": [1072, 547],
+      "name": "Dresden"
+    },
+    {
+      "coordinates": [1804, 374],
+      "name": "Yaroslavl"
+    },
+    {
+      "coordinates": [1926, 884],
+      "name": "Kirkuk"
+    },
+    {
+      "coordinates": [1799, 458],
+      "name": "Ryazan"
+    },
+    {
+      "coordinates": [1946, 496],
+      "name": "Penza"
+    },
+    {
+      "coordinates": [1285, 752],
+      "name": "Skopje"
+    },
+    {
+      "coordinates": [1278, 738],
+      "name": "Pristina"
+    },
+    {
+      "coordinates": [1262, 454],
+      "name": "Kaliningrad"
+    },
+    {
+      "coordinates": [1651, 493],
+      "name": "Bryansk"
+    },
+    {
+      "coordinates": [1166, 616],
+      "name": "Bratislava"
+    },
+    {
+      "coordinates": [631, 894],
+      "name": "Taza"
+    },
+    {
+      "coordinates": [1693, 396],
+      "name": "Tver"
+    },
+    {
+      "coordinates": [442, 744],
+      "name": "Vigo"
+    },
+    {
+      "coordinates": [1860, 689],
+      "name": "Stavropol"
+    },
+    {
+      "coordinates": [1458, 640],
+      "name": "Iași"
+    },
+    {
+      "coordinates": [552, 833],
+      "name": "Córdoba"
+    },
+    {
+      "coordinates": [1585, 453],
+      "name": "Smolensk"
+    },
+    {
+      "coordinates": [1093, 664],
+      "name": "Ljubljana"
+    },
+    {
+      "coordinates": [1486, 706],
+      "name": "Constanța"
+    },
+    {
+      "coordinates": [1351, 522],
+      "name": "Brest"
+    },
+    {
+      "coordinates": [1806, 327],
+      "name": "Vologda"
+    },
+    {
+      "coordinates": [1489, 568],
+      "name": "Zhytomyr"
+    },
+    {
+      "coordinates": [1031, 677],
+      "name": "Venice"
+    },
+    {
+      "coordinates": [1649, 243],
+      "name": "Petrozavodsk"
+    },
+    {
+      "coordinates": [1355, 254],
+      "name": "Tampere"
+    },
+    {
+      "coordinates": [691, 583],
+      "name": "Le Havre"
+    },
+    {
+      "coordinates": [1964, 727],
+      "name": "Grozny"
+    },
+    {
+      "coordinates": [1482, 367],
+      "name": "Pskov"
+    },
+    {
+      "coordinates": [1225, 742],
+      "name": "Podgorica"
+    },
+    {
+      "coordinates": [1175, 223],
+      "name": "Sundsvall"
+    },
+    {
+      "coordinates": [1312, 111],
+      "name": "Luleå"
+    },
+    {
+      "coordinates": [1412, 77],
+      "name": "Rovaniemi"
+    },
+    {
+      "coordinates": [945, 601],
+      "name": "Stuttgart"
+    },
+    {
+      "coordinates": [901, 685],
+      "name": "Turin"
+    },
+    {
+      "coordinates": [445, 767],
+      "name": "Porto"
+    },
+    {
+      "coordinates": [1730, 853],
+      "name": "Gaziantep"
+    },
+    {
+      "coordinates": [774, 555],
+      "name": "Lille"
+    },
+    {
+      "coordinates": [1711, 898],
+      "name": "Homs"
+    },
+    {
+      "coordinates": [882, 549],
+      "name": "Cologne"
+    },
+    {
+      "coordinates": [889, 714],
+      "name": "Nice"
+    },
+    {
+      "coordinates": [1915, 871],
+      "name": "Erbil"
+    },
+    {
+      "coordinates": [644, 443],
+      "name": "Newcastle upon Tyne"
+    },
+    {
+      "coordinates": [598, 534],
+      "name": "Cardiff"
+    },
+    {
+      "coordinates": [727, 716],
+      "name": "Toulouse"
+    },
+    {
+      "coordinates": [607, 485],
+      "name": "Liverpool"
+    },
+    {
+      "coordinates": [1671, 625],
+      "name": "Zaporizhzhia"
+    },
+    {
+      "coordinates": [1543, 856],
+      "name": "Antalya"
+    },
+    {
+      "coordinates": [1232, 529],
+      "name": "Łódź"
+    },
+    {
+      "coordinates": [522, 874],
+      "name": "Tangier"
+    },
+    {
+      "coordinates": [997, 585],
+      "name": "Nuremberg"
+    },
+    {
+      "coordinates": [935, 495],
+      "name": "Bremen"
+    },
+    {
+      "coordinates": [661, 757],
+      "name": "Zaragoza"
+    },
+    {
+      "coordinates": [1677, 820],
+      "name": "Kayseri"
+    },
+    {
+      "coordinates": [1687, 903],
+      "name": "Tripoli"
+    },
+    {
+      "coordinates": [1797, 510],
+      "name": "Lipetsk"
+    },
+    {
+      "coordinates": [1539, 798],
+      "name": "Eskişehir"
+    },
+    {
+      "coordinates": [599, 417],
+      "name": "Edinburgh"
+    },
+    {
+      "coordinates": [1741, 469],
+      "name": "Tula"
+    },
+    {
+      "coordinates": [1555, 514],
+      "name": "Gomel"
+    },
+    {
+      "coordinates": [1769, 851],
+      "name": "Şanlıurfa"
+    },
+    {
+      "coordinates": [904, 605],
+      "name": "Strasbourg"
+    },
+    {
+      "coordinates": [1836, 392],
+      "name": "Ivanovo"
+    },
+    {
+      "coordinates": [1700, 532],
+      "name": "Kursk"
+    },
+    {
+      "coordinates": [654, 831],
+      "name": "Murcia"
+    },
+    {
+      "coordinates": [585, 847],
+      "name": "Granada"
+    },
+    {
+      "coordinates": [1711, 559],
+      "name": "Belgorod"
+    },
+    {
+      "coordinates": [1533, 441],
+      "name": "Vitebsk"
+    },
+    {
+      "coordinates": [1697, 501],
+      "name": "Oryol"
+    },
+    {
+      "coordinates": [553, 757],
+      "name": "Valladolid"
+    },
+    {
+      "coordinates": [1819, 417],
+      "name": "Vladimir"
+    },
+    {
+      "coordinates": [1347, 648],
+      "name": "Cluj-Napoca"
+    },
+    {
+      "coordinates": [1847, 507],
+      "name": "Tambov"
+    },
+    {
+      "coordinates": [1660, 552],
+      "name": "Sumy"
+    },
+    {
+      "coordinates": [511, 859],
+      "name": "Cádiz"
+    },
+    {
+      "coordinates": [1834, 370],
+      "name": "Kostroma"
+    },
+    {
+      "coordinates": [640, 732],
+      "name": "Pamplona"
+    },
+    {
+      "coordinates": [975, 413],
+      "name": "Aarhus"
+    },
+    {
+      "coordinates": [1566, 348],
+      "name": "Veliky Novgorod"
+    },
+    {
+      "coordinates": [641, 616],
+      "name": "Rennes"
+    },
+    {
+      "coordinates": [1454, 742],
+      "name": "Burgas"
+    },
+    {
+      "coordinates": [1806, 150],
+      "name": "Severodvinsk"
+    },
+    {
+      "coordinates": [833, 946],
+      "name": "Ouargla"
+    },
+    {
+      "coordinates": [1313, 287],
+      "name": "Turku"
+    },
+    {
+      "coordinates": [849, 331],
+      "name": "Stavanger"
+    },
+    {
+      "coordinates": [1866, 634],
+      "name": "Volgodonsk"
+    },
+    {
+      "coordinates": [722, 668],
+      "name": "Limoges"
+    },
+    {
+      "coordinates": [622, 951],
+      "name": "Béchar"
+    },
+    {
+      "coordinates": [602, 883],
+      "name": "Melilla"
+    },
+    {
+      "coordinates": [1404, 133],
+      "name": "Oulu"
+    },
+    {
+      "coordinates": [854, 925],
+      "name": "Touggourt"
+    },
+    {
+      "coordinates": [1184, 305],
+      "name": "Uppsala"
+    },
+    {
+      "coordinates": [466, 742],
+      "name": "Ourense"
+    },
+    {
+      "coordinates": [1495, 280],
+      "name": "Vyborg"
+    },
+    {
+      "coordinates": [765, 911],
+      "name": "Laghouat"
+    },
+    {
+      "coordinates": [1430, 422],
+      "name": "Daugavpils"
+    },
+    {
+      "coordinates": [859, 581],
+      "name": "Luxembourg"
+    },
+    {
+      "coordinates": [1923, 661],
+      "name": "Elista"
+    },
+    {
+      "coordinates": [1543, 410],
+      "name": "Velikiye Luki"
+    },
+    {
+      "coordinates": [1437, 351],
+      "name": "Tartu"
+    },
+    {
+      "coordinates": [1408, 270],
+      "name": "Lahti"
+    },
+    {
+      "coordinates": [1127, 349],
+      "name": "Linköping"
+    },
+    {
+      "coordinates": [447, 504],
+      "name": "Limerick"
+    },
+    {
+      "coordinates": [1086, 367],
+      "name": "Jönköping"
+    },
+    {
+      "coordinates": [1833, 733],
+      "name": "Sukhumi"
+    },
+    {
+      "coordinates": [1641, 700],
+      "name": "Yalta"
+    },
+    {
+      "coordinates": [536, 871],
+      "name": "Ceuta"
+    },
+    {
+      "coordinates": [1258, 175],
+      "name": "Umeå"
+    },
+    {
+      "coordinates": [655, 660],
+      "name": "La Rochelle"
+    },
+    {
+      "coordinates": [1303, 852],
+      "name": "Kalamata"
+    },
+    {
+      "coordinates": [1995, 264],
+      "name": "Kotlas"
+    },
+    {
+      "coordinates": [728, 740],
+      "name": "Andorra la Vella"
+    },
+    {
+      "coordinates": [1524, 218],
+      "name": "Joensuu"
+    },
+    {
+      "coordinates": [1101, 197],
+      "name": "Östersund"
+    },
+    {
+      "coordinates": [1978, 617],
+      "name": "Akhtubinsk"
+    },
+    {
+      "coordinates": [1375, 351],
+      "name": "Pärnu"
+    },
+    {
+      "coordinates": [1599, 51],
+      "name": "Kandalaksha"
+    },
+    {
+      "coordinates": [1985, 280],
+      "name": "Veliky Ustyug"
+    },
+    {
+      "coordinates": [764, 971],
+      "name": "El Menia"
+    },
+    {
+      "coordinates": [1215, 192],
+      "name": "Örnsköldsvik"
+    },
+    {
+      "coordinates": [1868, 270],
+      "name": "Velsk"
+    },
+    {
+      "coordinates": [1965, 551],
+      "name": "Krasnoarmeysk"
+    },
+    {
+      "coordinates": [1756, 173],
+      "name": "Onega"
+    }
+  ],
   "nations": [
     {
       "coordinates": [171, 171],

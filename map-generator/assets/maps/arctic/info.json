@@ -6,6 +6,540 @@
   "categories": ["europe", "north_america", "asia"],
   "location": { "lat": 79, "lon": -60 },
   "author": "Tristar",
+  "places": [
+    {
+      "coordinates": [39, 844],
+      "name": "Toronto"
+    },
+    {
+      "coordinates": [625, 1748],
+      "name": "Amsterdam"
+    },
+    {
+      "coordinates": [22, 905],
+      "name": "Philadelphia"
+    },
+    {
+      "coordinates": [72, 942],
+      "name": "Boston"
+    },
+    {
+      "coordinates": [3, 808],
+      "name": "Detroit"
+    },
+    {
+      "coordinates": [746, 1784],
+      "name": "Oslo"
+    },
+    {
+      "coordinates": [1, 827],
+      "name": "Cleveland"
+    },
+    {
+      "coordinates": [81, 878],
+      "name": "Ottawa"
+    },
+    {
+      "coordinates": [8, 622],
+      "name": "Winnipeg"
+    },
+    {
+      "coordinates": [142, 1016],
+      "name": "Halifax"
+    },
+    {
+      "coordinates": [605, 1404],
+      "name": "Reykjavík"
+    },
+    {
+      "coordinates": [784, 1766],
+      "name": "Trondheim"
+    },
+    {
+      "coordinates": [37, 716],
+      "name": "Thunder Bay"
+    },
+    {
+      "coordinates": [163, 1015],
+      "name": "Charlottetown"
+    },
+    {
+      "coordinates": [52, 382],
+      "name": "Yellowknife"
+    },
+    {
+      "coordinates": [127, 621],
+      "name": "Churchill"
+    },
+    {
+      "coordinates": [261, 679],
+      "name": "Naujaat"
+    },
+    {
+      "coordinates": [342, 666],
+      "name": "Arctic Bay"
+    },
+    {
+      "coordinates": [14, 208],
+      "name": "Fort Good Hope"
+    },
+    {
+      "coordinates": [305, 551],
+      "name": "Resolute"
+    },
+    {
+      "coordinates": [133, 704],
+      "name": "Fort Severn"
+    },
+    {
+      "coordinates": [5, 892],
+      "name": "Baltimore"
+    },
+    {
+      "coordinates": [44, 866],
+      "name": "Rochester"
+    },
+    {
+      "coordinates": [51, 883],
+      "name": "Syracuse"
+    },
+    {
+      "coordinates": [43, 778],
+      "name": "Sault Ste. Marie"
+    },
+    {
+      "coordinates": [710, 1760],
+      "name": "Kristiansand"
+    },
+    {
+      "coordinates": [69, 833],
+      "name": "North Bay"
+    },
+    {
+      "coordinates": [178, 1049],
+      "name": "Sydney"
+    },
+    {
+      "coordinates": [83, 804],
+      "name": "Timmins"
+    },
+    {
+      "coordinates": [102, 949],
+      "name": "Augusta"
+    },
+    {
+      "coordinates": [4, 437],
+      "name": "Fort McMurray"
+    },
+    {
+      "coordinates": [15, 669],
+      "name": "International Falls"
+    },
+    {
+      "coordinates": [217, 947],
+      "name": "Labrador City"
+    },
+    {
+      "coordinates": [332, 887],
+      "name": "Iqaluit"
+    },
+    {
+      "coordinates": [154, 613],
+      "name": "Arviat"
+    },
+    {
+      "coordinates": [318, 718],
+      "name": "Igloolik"
+    },
+    {
+      "coordinates": [183, 460],
+      "name": "Cambridge Bay"
+    },
+    {
+      "coordinates": [109, 353],
+      "name": "Kugluktuk"
+    },
+    {
+      "coordinates": [254, 586],
+      "name": "Taloyoak"
+    },
+    {
+      "coordinates": [39, 419],
+      "name": "Fort Smith"
+    },
+    {
+      "coordinates": [199, 642],
+      "name": "Chesterfield Inlet"
+    },
+    {
+      "coordinates": [436, 1154],
+      "name": "Narsarsuaq"
+    },
+    {
+      "coordinates": [699, 1792],
+      "name": "Aarhus"
+    },
+    {
+      "coordinates": [706, 1731],
+      "name": "Stavanger"
+    },
+    {
+      "coordinates": [63, 816],
+      "name": "Greater Sudbury"
+    },
+    {
+      "coordinates": [151, 997],
+      "name": "Moncton"
+    },
+    {
+      "coordinates": [2, 691],
+      "name": "Duluth"
+    },
+    {
+      "coordinates": [731, 1774],
+      "name": "Skien"
+    },
+    {
+      "coordinates": [139, 977],
+      "name": "Fredericton"
+    },
+    {
+      "coordinates": [806, 1814],
+      "name": "Östersund"
+    },
+    {
+      "coordinates": [851, 1796],
+      "name": "Bodø"
+    },
+    {
+      "coordinates": [191, 963],
+      "name": "Sept-Îles"
+    },
+    {
+      "coordinates": [100, 845],
+      "name": "Val-d'Or"
+    },
+    {
+      "coordinates": [880, 1824],
+      "name": "Narvik"
+    },
+    {
+      "coordinates": [22, 653],
+      "name": "Kenora"
+    },
+    {
+      "coordinates": [6, 585],
+      "name": "Dauphin"
+    },
+    {
+      "coordinates": [32, 671],
+      "name": "Dryden"
+    },
+    {
+      "coordinates": [118, 991],
+      "name": "Yarmouth"
+    },
+    {
+      "coordinates": [37, 551],
+      "name": "Flin Flon"
+    },
+    {
+      "coordinates": [164, 982],
+      "name": "Bathurst"
+    },
+    {
+      "coordinates": [184, 990],
+      "name": "Gaspé"
+    },
+    {
+      "coordinates": [243, 1100],
+      "name": "Gander"
+    },
+    {
+      "coordinates": [8, 144],
+      "name": "Inuvik"
+    },
+    {
+      "coordinates": [621, 1383],
+      "name": "Ísafjörður"
+    },
+    {
+      "coordinates": [185, 628],
+      "name": "Rankin Inlet"
+    },
+    {
+      "coordinates": [531, 1223],
+      "name": "Tasiilaq"
+    },
+    {
+      "coordinates": [128, 774],
+      "name": "Attawapiskat"
+    },
+    {
+      "coordinates": [119, 800],
+      "name": "Moosonee"
+    },
+    {
+      "coordinates": [380, 747],
+      "name": "Pond Inlet"
+    },
+    {
+      "coordinates": [96, 625],
+      "name": "Gillam"
+    },
+    {
+      "coordinates": [230, 563],
+      "name": "Gjoa Haven"
+    },
+    {
+      "coordinates": [25, 147],
+      "name": "Tuktoyaktuk"
+    },
+    {
+      "coordinates": [204, 989],
+      "name": "Mingan"
+    },
+    {
+      "coordinates": [128, 312],
+      "name": "Ulukhaktok"
+    },
+    {
+      "coordinates": [65, 552],
+      "name": "Lynn Lake"
+    },
+    {
+      "coordinates": [42, 395],
+      "name": "Fort Resolution"
+    },
+    {
+      "coordinates": [314, 875],
+      "name": "Kimmirut"
+    },
+    {
+      "coordinates": [5, 307],
+      "name": "Fort Simpson"
+    },
+    {
+      "coordinates": [88, 716],
+      "name": "Neskantaga First Nation"
+    },
+    {
+      "coordinates": [53, 457],
+      "name": "Uranium City"
+    },
+    {
+      "coordinates": [492, 877],
+      "name": "Savissivik"
+    },
+    {
+      "coordinates": [394, 677],
+      "name": "Grise Fiord"
+    },
+    {
+      "coordinates": [470, 1184],
+      "name": "Timmiarmiut"
+    },
+    {
+      "coordinates": [115, 537],
+      "name": "Ennadai"
+    },
+    {
+      "coordinates": [18, 842],
+      "name": "Erie"
+    },
+    {
+      "coordinates": [35, 894],
+      "name": "Scranton"
+    },
+    {
+      "coordinates": [15, 872],
+      "name": "State College"
+    },
+    {
+      "coordinates": [16, 771],
+      "name": "Traverse City"
+    },
+    {
+      "coordinates": [8, 747],
+      "name": "Marinette"
+    },
+    {
+      "coordinates": [26, 744],
+      "name": "Marquette"
+    },
+    {
+      "coordinates": [716, 1791],
+      "name": "Frederikshavn"
+    },
+    {
+      "coordinates": [77, 861],
+      "name": "Pembroke"
+    },
+    {
+      "coordinates": [4, 725],
+      "name": "Rhinelander"
+    },
+    {
+      "coordinates": [112, 966],
+      "name": "Bar Harbor"
+    },
+    {
+      "coordinates": [84, 773],
+      "name": "Hearst"
+    },
+    {
+      "coordinates": [57, 747],
+      "name": "Marathon"
+    },
+    {
+      "coordinates": [201, 1054],
+      "name": "Channel-Port aux Basques"
+    },
+    {
+      "coordinates": [57, 646],
+      "name": "Deer Lake"
+    },
+    {
+      "coordinates": [27, 688],
+      "name": "Atikokan"
+    },
+    {
+      "coordinates": [28, 432],
+      "name": "Fort Chipewyan"
+    },
+    {
+      "coordinates": [66, 580],
+      "name": "Nelson House"
+    },
+    {
+      "coordinates": [41, 821],
+      "name": "Wiarton"
+    },
+    {
+      "coordinates": [58, 767],
+      "name": "Wawa"
+    },
+    {
+      "coordinates": [12, 553],
+      "name": "Hudson Bay"
+    },
+    {
+      "coordinates": [119, 840],
+      "name": "Matagami"
+    },
+    {
+      "coordinates": [40, 655],
+      "name": "Red Lake"
+    },
+    {
+      "coordinates": [180, 579],
+      "name": "Baker Lake"
+    },
+    {
+      "coordinates": [227, 1113],
+      "name": "Argentia"
+    },
+    {
+      "coordinates": [13, 232],
+      "name": "Norman Wells"
+    },
+    {
+      "coordinates": [106, 656],
+      "name": "Shamattawa"
+    },
+    {
+      "coordinates": [252, 722],
+      "name": "Coral Harbour"
+    },
+    {
+      "coordinates": [281, 885],
+      "name": "Kangirsuk"
+    },
+    {
+      "coordinates": [231, 1038],
+      "name": "Chevery"
+    },
+    {
+      "coordinates": [60, 675],
+      "name": "Cat Lake"
+    },
+    {
+      "coordinates": [77, 624],
+      "name": "Oxford House"
+    },
+    {
+      "coordinates": [241, 977],
+      "name": "Churchill Falls"
+    },
+    {
+      "coordinates": [21, 826],
+      "name": "London"
+    },
+    {
+      "coordinates": [102, 921],
+      "name": "Sherbrooke"
+    },
+    {
+      "coordinates": [1, 845],
+      "name": "Beaver Falls"
+    },
+    {
+      "coordinates": [12, 794],
+      "name": "Bay City"
+    },
+    {
+      "coordinates": [32, 794],
+      "name": "Alpena"
+    },
+    {
+      "coordinates": [99, 826],
+      "name": "La Sarre"
+    },
+    {
+      "coordinates": [128, 1006],
+      "name": "Liverpool"
+    },
+    {
+      "coordinates": [26, 373],
+      "name": "Hay River"
+    },
+    {
+      "coordinates": [21, 511],
+      "name": "La Ronge"
+    },
+    {
+      "coordinates": [37, 614],
+      "name": "Berens River"
+    },
+    {
+      "coordinates": [215, 1014],
+      "name": "Natashquan"
+    },
+    {
+      "coordinates": [32, 271],
+      "name": "Délı̨nę"
+    },
+    {
+      "coordinates": [76, 248],
+      "name": "Paulatuk"
+    },
+    {
+      "coordinates": [65, 489],
+      "name": "Stony Rapids"
+    },
+    {
+      "coordinates": [73, 423],
+      "name": "Łutselk'e"
+    },
+    {
+      "coordinates": [85, 691],
+      "name": "Big Beaver House"
+    },
+    {
+      "coordinates": [729, 1733],
+      "name": "Vossevangen"
+    }
+  ],
   "nations": [
     {
       "coordinates": [622, 1171],

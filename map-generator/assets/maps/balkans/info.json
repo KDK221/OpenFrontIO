@@ -6,6 +6,732 @@
   "categories": ["europe"],
   "location": { "lat": 43.5, "lon": 20.5 },
   "author": "Tristar",
+  "places": [
+    {
+      "coordinates": [1843, 1099],
+      "name": "Istanbul"
+    },
+    {
+      "coordinates": [1225, 1578],
+      "name": "Athens"
+    },
+    {
+      "coordinates": [97, 1134],
+      "name": "Naples"
+    },
+    {
+      "coordinates": [1492, 558],
+      "name": "Bucharest"
+    },
+    {
+      "coordinates": [656, 29],
+      "name": "Budapest"
+    },
+    {
+      "coordinates": [756, 1060],
+      "name": "Tirana"
+    },
+    {
+      "coordinates": [1119, 1160],
+      "name": "Thessaloniki"
+    },
+    {
+      "coordinates": [295, 323],
+      "name": "Zagreb"
+    },
+    {
+      "coordinates": [581, 651],
+      "name": "Sarajevo"
+    },
+    {
+      "coordinates": [1814, 121],
+      "name": "Chișinău"
+    },
+    {
+      "coordinates": [1852, 1241],
+      "name": "Bursa"
+    },
+    {
+      "coordinates": [2034, 211],
+      "name": "Odessa"
+    },
+    {
+      "coordinates": [945, 953],
+      "name": "Skopje"
+    },
+    {
+      "coordinates": [1662, 92],
+      "name": "Iași"
+    },
+    {
+      "coordinates": [1790, 598],
+      "name": "Constanța"
+    },
+    {
+      "coordinates": [688, 877],
+      "name": "Podgorica"
+    },
+    {
+      "coordinates": [2026, 1305],
+      "name": "Eskişehir"
+    },
+    {
+      "coordinates": [1192, 156],
+      "name": "Cluj-Napoca"
+    },
+    {
+      "coordinates": [2010, 1148],
+      "name": "Adapazarı"
+    },
+    {
+      "coordinates": [1659, 873],
+      "name": "Burgas"
+    },
+    {
+      "coordinates": [988, 1540],
+      "name": "Patras"
+    },
+    {
+      "coordinates": [1035, 1719],
+      "name": "Kalamata"
+    },
+    {
+      "coordinates": [160, 1159],
+      "name": "Salerno"
+    },
+    {
+      "coordinates": [1858, 1613],
+      "name": "Denizli"
+    },
+    {
+      "coordinates": [913, 332],
+      "name": "Timișoara"
+    },
+    {
+      "coordinates": [1432, 354],
+      "name": "Brașov"
+    },
+    {
+      "coordinates": [1224, 575],
+      "name": "Craiova"
+    },
+    {
+      "coordinates": [223, 102],
+      "name": "Graz"
+    },
+    {
+      "coordinates": [1714, 1326],
+      "name": "Balıkesir"
+    },
+    {
+      "coordinates": [998, 738],
+      "name": "Niš"
+    },
+    {
+      "coordinates": [1662, 1482],
+      "name": "Manisa"
+    },
+    {
+      "coordinates": [1484, 472],
+      "name": "Ploiești"
+    },
+    {
+      "coordinates": [958, 26],
+      "name": "Debrecen"
+    },
+    {
+      "coordinates": [752, 418],
+      "name": "Novi Sad"
+    },
+    {
+      "coordinates": [437, 496],
+      "name": "Banja Luka"
+    },
+    {
+      "coordinates": [35, 347],
+      "name": "Trieste"
+    },
+    {
+      "coordinates": [451, 1187],
+      "name": "Taranto"
+    },
+    {
+      "coordinates": [1585, 194],
+      "name": "Bacău"
+    },
+    {
+      "coordinates": [785, 248],
+      "name": "Szeged"
+    },
+    {
+      "coordinates": [557, 276],
+      "name": "Pécs"
+    },
+    {
+      "coordinates": [1479, 654],
+      "name": "Ruse"
+    },
+    {
+      "coordinates": [1347, 487],
+      "name": "Pitești"
+    },
+    {
+      "coordinates": [811, 646],
+      "name": "Čačak"
+    },
+    {
+      "coordinates": [515, 733],
+      "name": "Mostar"
+    },
+    {
+      "coordinates": [560, 1211],
+      "name": "Lecce"
+    },
+    {
+      "coordinates": [1907, 148],
+      "name": "Tiraspol"
+    },
+    {
+      "coordinates": [2030, 1465],
+      "name": "Afyonkarahisar"
+    },
+    {
+      "coordinates": [719, 941],
+      "name": "Shkodër"
+    },
+    {
+      "coordinates": [252, 1036],
+      "name": "Foggia"
+    },
+    {
+      "coordinates": [1896, 1475],
+      "name": "Uşak"
+    },
+    {
+      "coordinates": [1306, 197],
+      "name": "Târgu Mureș"
+    },
+    {
+      "coordinates": [615, 535],
+      "name": "Tuzla"
+    },
+    {
+      "coordinates": [1440, 887],
+      "name": "Stara Zagora"
+    },
+    {
+      "coordinates": [712, 1061],
+      "name": "Durrës"
+    },
+    {
+      "coordinates": [1188, 4],
+      "name": "Baia Mare"
+    },
+    {
+      "coordinates": [1067, 1326],
+      "name": "Larissa"
+    },
+    {
+      "coordinates": [1554, 1008],
+      "name": "Edirne"
+    },
+    {
+      "coordinates": [1666, 1116],
+      "name": "Tekirdağ"
+    },
+    {
+      "coordinates": [1319, 724],
+      "name": "Pleven"
+    },
+    {
+      "coordinates": [252, 196],
+      "name": "Maribor"
+    },
+    {
+      "coordinates": [787, 85],
+      "name": "Szolnok"
+    },
+    {
+      "coordinates": [507, 227],
+      "name": "Kaposvár"
+    },
+    {
+      "coordinates": [811, 846],
+      "name": "Pejë"
+    },
+    {
+      "coordinates": [380, 462],
+      "name": "Prijedor"
+    },
+    {
+      "coordinates": [4, 690],
+      "name": "Ancona"
+    },
+    {
+      "coordinates": [379, 1436],
+      "name": "Catanzaro"
+    },
+    {
+      "coordinates": [613, 367],
+      "name": "Osijek"
+    },
+    {
+      "coordinates": [1700, 699],
+      "name": "Dobrich"
+    },
+    {
+      "coordinates": [93, 181],
+      "name": "Klagenfurt"
+    },
+    {
+      "coordinates": [936, 1106],
+      "name": "Bitola"
+    },
+    {
+      "coordinates": [881, 1320],
+      "name": "Ioannina"
+    },
+    {
+      "coordinates": [993, 411],
+      "name": "Reșița"
+    },
+    {
+      "coordinates": [1815, 405],
+      "name": "Izmail"
+    },
+    {
+      "coordinates": [1660, 1615],
+      "name": "Söke"
+    },
+    {
+      "coordinates": [949, 1480],
+      "name": "Agrinio"
+    },
+    {
+      "coordinates": [1638, 597],
+      "name": "Călărași"
+    },
+    {
+      "coordinates": [1210, 1505],
+      "name": "Chalkida"
+    },
+    {
+      "coordinates": [211, 605],
+      "name": "Zadar"
+    },
+    {
+      "coordinates": [1738, 310],
+      "name": "Cahul"
+    },
+    {
+      "coordinates": [156, 1088],
+      "name": "Benevento"
+    },
+    {
+      "coordinates": [42, 480],
+      "name": "Pula"
+    },
+    {
+      "coordinates": [1198, 1100],
+      "name": "Serres"
+    },
+    {
+      "coordinates": [1075, 1227],
+      "name": "Katerini"
+    },
+    {
+      "coordinates": [1443, 780],
+      "name": "Veliko Tarnovo"
+    },
+    {
+      "coordinates": [1094, 908],
+      "name": "Kyustendil"
+    },
+    {
+      "coordinates": [1355, 1091],
+      "name": "Xanthi"
+    },
+    {
+      "coordinates": [549, 845],
+      "name": "Dubrovnik"
+    },
+    {
+      "coordinates": [1066, 1649],
+      "name": "Tripoli"
+    },
+    {
+      "coordinates": [1509, 1521],
+      "name": "Chios"
+    },
+    {
+      "coordinates": [955, 1622],
+      "name": "Pyrgos"
+    },
+    {
+      "coordinates": [1648, 1743],
+      "name": "Kos"
+    },
+    {
+      "coordinates": [1072, 1714],
+      "name": "Sparti"
+    },
+    {
+      "coordinates": [1368, 1659],
+      "name": "Ermoupolis"
+    },
+    {
+      "coordinates": [1721, 387],
+      "name": "Galați"
+    },
+    {
+      "coordinates": [108, 1099],
+      "name": "Caserta"
+    },
+    {
+      "coordinates": [993, 110],
+      "name": "Oradea"
+    },
+    {
+      "coordinates": [1712, 1600],
+      "name": "Aydın"
+    },
+    {
+      "coordinates": [1955, 1362],
+      "name": "Kütahya"
+    },
+    {
+      "coordinates": [267, 1555],
+      "name": "Reggio Calabria"
+    },
+    {
+      "coordinates": [2029, 1614],
+      "name": "Isparta"
+    },
+    {
+      "coordinates": [864, 916],
+      "name": "Prizren"
+    },
+    {
+      "coordinates": [881, 624],
+      "name": "Kragujevac"
+    },
+    {
+      "coordinates": [924, 262],
+      "name": "Arad"
+    },
+    {
+      "coordinates": [525, 590],
+      "name": "Zenica"
+    },
+    {
+      "coordinates": [1258, 327],
+      "name": "Sibiu"
+    },
+    {
+      "coordinates": [577, 83],
+      "name": "Székesfehérvár"
+    },
+    {
+      "coordinates": [1575, 437],
+      "name": "Buzău"
+    },
+    {
+      "coordinates": [891, 952],
+      "name": "Tetovo"
+    },
+    {
+      "coordinates": [731, 135],
+      "name": "Kecskemét"
+    },
+    {
+      "coordinates": [1130, 1367],
+      "name": "Volos"
+    },
+    {
+      "coordinates": [367, 77],
+      "name": "Szombathely"
+    },
+    {
+      "coordinates": [1086, 521],
+      "name": "Drobeta-Turnu Severin"
+    },
+    {
+      "coordinates": [1505, 9],
+      "name": "Suceava"
+    },
+    {
+      "coordinates": [1619, 346],
+      "name": "Focșani"
+    },
+    {
+      "coordinates": [730, 279],
+      "name": "Subotica"
+    },
+    {
+      "coordinates": [1523, 846],
+      "name": "Sliven"
+    },
+    {
+      "coordinates": [1810, 431],
+      "name": "Tulcea"
+    },
+    {
+      "coordinates": [1647, 1051],
+      "name": "Lüleburgaz"
+    },
+    {
+      "coordinates": [719, 1193],
+      "name": "Vlorë"
+    },
+    {
+      "coordinates": [1593, 750],
+      "name": "Shumen"
+    },
+    {
+      "coordinates": [1132, 856],
+      "name": "Pernik"
+    },
+    {
+      "coordinates": [1263, 1945],
+      "name": "Chania"
+    },
+    {
+      "coordinates": [1195, 759],
+      "name": "Vratsa"
+    },
+    {
+      "coordinates": [162, 1732],
+      "name": "Ragusa"
+    },
+    {
+      "coordinates": [816, 397],
+      "name": "Zrenjanin"
+    },
+    {
+      "coordinates": [1299, 1123],
+      "name": "Kavala"
+    },
+    {
+      "coordinates": [242, 376],
+      "name": "Karlovac"
+    },
+    {
+      "coordinates": [2029, 244],
+      "name": "Chornomorsk"
+    },
+    {
+      "coordinates": [1774, 1696],
+      "name": "Muğla"
+    },
+    {
+      "coordinates": [321, 1471],
+      "name": "Vibo Valentia"
+    },
+    {
+      "coordinates": [1712, 415],
+      "name": "Brăila"
+    },
+    {
+      "coordinates": [1288, 444],
+      "name": "Râmnicu Vâlcea"
+    },
+    {
+      "coordinates": [1521, 131],
+      "name": "Piatra Neamț"
+    },
+    {
+      "coordinates": [1157, 454],
+      "name": "Târgu Jiu"
+    },
+    {
+      "coordinates": [1416, 473],
+      "name": "Târgoviște"
+    },
+    {
+      "coordinates": [728, 1154],
+      "name": "Fier"
+    },
+    {
+      "coordinates": [1299, 96],
+      "name": "Bistrița"
+    },
+    {
+      "coordinates": [1288, 557],
+      "name": "Slatina"
+    },
+    {
+      "coordinates": [579, 21],
+      "name": "Tatabánya"
+    },
+    {
+      "coordinates": [1681, 185],
+      "name": "Vaslui"
+    },
+    {
+      "coordinates": [1463, 642],
+      "name": "Giurgiu"
+    },
+    {
+      "coordinates": [281, 1166],
+      "name": "Potenza"
+    },
+    {
+      "coordinates": [1113, 312],
+      "name": "Deva"
+    },
+    {
+      "coordinates": [2000, 1622],
+      "name": "Burdur"
+    },
+    {
+      "coordinates": [1191, 279],
+      "name": "Alba Iulia"
+    },
+    {
+      "coordinates": [897, 175],
+      "name": "Békéscsaba"
+    },
+    {
+      "coordinates": [1128, 89],
+      "name": "Zalău"
+    },
+    {
+      "coordinates": [518, 101],
+      "name": "Veszprém"
+    },
+    {
+      "coordinates": [392, 144],
+      "name": "Zalaegerszeg"
+    },
+    {
+      "coordinates": [1453, 316],
+      "name": "Sfântu Gheorghe"
+    },
+    {
+      "coordinates": [869, 1172],
+      "name": "Korçë"
+    },
+    {
+      "coordinates": [1631, 997],
+      "name": "Kırklareli"
+    },
+    {
+      "coordinates": [1644, 536],
+      "name": "Slobozia"
+    },
+    {
+      "coordinates": [144, 1020],
+      "name": "Campobasso"
+    },
+    {
+      "coordinates": [1398, 646],
+      "name": "Alexandria"
+    },
+    {
+      "coordinates": [1070, 1439],
+      "name": "Lamia"
+    },
+    {
+      "coordinates": [775, 1157],
+      "name": "Berat"
+    },
+    {
+      "coordinates": [1418, 1093],
+      "name": "Komotini"
+    },
+    {
+      "coordinates": [1421, 231],
+      "name": "Miercurea Ciuc"
+    },
+    {
+      "coordinates": [744, 1121],
+      "name": "Lushnjë"
+    },
+    {
+      "coordinates": [1960, 1249],
+      "name": "Bilecik"
+    },
+    {
+      "coordinates": [856, 1127],
+      "name": "Pogradec"
+    },
+    {
+      "coordinates": [288, 670],
+      "name": "Šibenik"
+    },
+    {
+      "coordinates": [615, 231],
+      "name": "Szekszárd"
+    },
+    {
+      "coordinates": [797, 1256],
+      "name": "Gjirokastër"
+    },
+    {
+      "coordinates": [1849, 76],
+      "name": "Dubăsari"
+    },
+    {
+      "coordinates": [753, 1029],
+      "name": "Krujë"
+    },
+    {
+      "coordinates": [827, 939],
+      "name": "Kukës"
+    },
+    {
+      "coordinates": [778, 1012],
+      "name": "Burrel"
+    },
+    {
+      "coordinates": [780, 1287],
+      "name": "Saranda"
+    },
+    {
+      "coordinates": [828, 1003],
+      "name": "Peshkopi"
+    },
+    {
+      "coordinates": [806, 1187],
+      "name": "Çorovodë"
+    },
+    {
+      "coordinates": [821, 1080],
+      "name": "Librazhd"
+    },
+    {
+      "coordinates": [783, 1224],
+      "name": "Tepelenë"
+    },
+    {
+      "coordinates": [802, 1132],
+      "name": "Gramsh"
+    },
+    {
+      "coordinates": [821, 1232],
+      "name": "Përmet"
+    },
+    {
+      "coordinates": [755, 987],
+      "name": "Rrëshen"
+    },
+    {
+      "coordinates": [785, 899],
+      "name": "Bajram Curri"
+    },
+    {
+      "coordinates": [860, 1216],
+      "name": "Ersekë"
+    },
+    {
+      "coordinates": [762, 947],
+      "name": "Pukë"
+    },
+    {
+      "coordinates": [1187, 1210],
+      "name": "Polygyros"
+    }
+  ],
   "nations": [
     {
       "coordinates": [122, 281],

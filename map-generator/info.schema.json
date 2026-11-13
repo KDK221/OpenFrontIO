@@ -165,6 +165,38 @@
         ]
       }
     },
+    "places": {
+      "description": "Real towns on the map. A tribe spawning on a map with places is named after the one nearest it.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "English place name."
+          },
+          "coordinates": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              }
+            ],
+            "description": "[x, y] tile position. Origin is top-left; y extends down."
+          }
+        },
+        "required": ["name", "coordinates"],
+        "additionalProperties": false
+      }
+    },
     "nations": {
       "type": "array",
       "items": {

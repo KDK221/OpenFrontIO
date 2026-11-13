@@ -6,6 +6,804 @@
   "categories": ["africa", "new"],
   "location": { "lat": 8, "lon": 46 },
   "author": "Tristar",
+  "places": [
+    {
+      "coordinates": [981, 312],
+      "name": "Sanaa"
+    },
+    {
+      "coordinates": [175, 1333],
+      "name": "Kampala"
+    },
+    {
+      "coordinates": [1063, 1228],
+      "name": "Mogadishu"
+    },
+    {
+      "coordinates": [1037, 490],
+      "name": "Aden"
+    },
+    {
+      "coordinates": [615, 307],
+      "name": "Asmara"
+    },
+    {
+      "coordinates": [495, 9],
+      "name": "Port Sudan"
+    },
+    {
+      "coordinates": [972, 711],
+      "name": "Hargeisa"
+    },
+    {
+      "coordinates": [513, 492],
+      "name": "Gondar"
+    },
+    {
+      "coordinates": [28, 32],
+      "name": "Karma"
+    },
+    {
+      "coordinates": [167, 279],
+      "name": "Omdurman"
+    },
+    {
+      "coordinates": [0, 1486],
+      "name": "Kigali"
+    },
+    {
+      "coordinates": [970, 432],
+      "name": "Ta'izz"
+    },
+    {
+      "coordinates": [10, 444],
+      "name": "Al-Ubayyid"
+    },
+    {
+      "coordinates": [362, 1322],
+      "name": "Eldoret"
+    },
+    {
+      "coordinates": [459, 1591],
+      "name": "Arusha"
+    },
+    {
+      "coordinates": [528, 1831],
+      "name": "Morogoro"
+    },
+    {
+      "coordinates": [396, 1784],
+      "name": "Dodoma"
+    },
+    {
+      "coordinates": [110, 697],
+      "name": "Malakal"
+    },
+    {
+      "coordinates": [154, 1163],
+      "name": "Gulu"
+    },
+    {
+      "coordinates": [105, 1021],
+      "name": "Juba"
+    },
+    {
+      "coordinates": [652, 433],
+      "name": "Mek'ele"
+    },
+    {
+      "coordinates": [526, 1357],
+      "name": "Meru"
+    },
+    {
+      "coordinates": [894, 348],
+      "name": "Al Hudaydah"
+    },
+    {
+      "coordinates": [639, 774],
+      "name": "Adama"
+    },
+    {
+      "coordinates": [326, 1363],
+      "name": "Kisumu"
+    },
+    {
+      "coordinates": [417, 1378],
+      "name": "Nakuru"
+    },
+    {
+      "coordinates": [180, 448],
+      "name": "Kosti"
+    },
+    {
+      "coordinates": [239, 364],
+      "name": "Wad Madani"
+    },
+    {
+      "coordinates": [865, 1392],
+      "name": "Kismayo"
+    },
+    {
+      "coordinates": [627, 1712],
+      "name": "Tanga"
+    },
+    {
+      "coordinates": [368, 391],
+      "name": "Al Qadarif"
+    },
+    {
+      "coordinates": [881, 1362],
+      "name": "Jamame"
+    },
+    {
+      "coordinates": [664, 597],
+      "name": "Dessie"
+    },
+    {
+      "coordinates": [839, 725],
+      "name": "Harar Jugol"
+    },
+    {
+      "coordinates": [271, 137],
+      "name": "Atbarah"
+    },
+    {
+      "coordinates": [245, 423],
+      "name": "Sennar"
+    },
+    {
+      "coordinates": [943, 1154],
+      "name": "Baidoa"
+    },
+    {
+      "coordinates": [470, 831],
+      "name": "Jimma"
+    },
+    {
+      "coordinates": [956, 202],
+      "name": "Sa'dah"
+    },
+    {
+      "coordinates": [929, 958],
+      "name": "Gode"
+    },
+    {
+      "coordinates": [531, 92],
+      "name": "Tokar"
+    },
+    {
+      "coordinates": [531, 649],
+      "name": "Debre Marqos"
+    },
+    {
+      "coordinates": [520, 945],
+      "name": "Arba Minch"
+    },
+    {
+      "coordinates": [534, 886],
+      "name": "Sodo"
+    },
+    {
+      "coordinates": [1051, 1044],
+      "name": "Beledweyne"
+    },
+    {
+      "coordinates": [1206, 907],
+      "name": "Galkayo"
+    },
+    {
+      "coordinates": [1327, 599],
+      "name": "Bosaso"
+    },
+    {
+      "coordinates": [688, 881],
+      "name": "Goba"
+    },
+    {
+      "coordinates": [104, 926],
+      "name": "Bor"
+    },
+    {
+      "coordinates": [624, 1120],
+      "name": "Moyale"
+    },
+    {
+      "coordinates": [1372, 826],
+      "name": "Eyl"
+    },
+    {
+      "coordinates": [550, 1201],
+      "name": "Marsabit"
+    },
+    {
+      "coordinates": [1441, 724],
+      "name": "Bayla"
+    },
+    {
+      "coordinates": [835, 1078],
+      "name": "Dolo"
+    },
+    {
+      "coordinates": [661, 997],
+      "name": "Negele Boran"
+    },
+    {
+      "coordinates": [121, 81],
+      "name": "Merowe"
+    },
+    {
+      "coordinates": [1280, 796],
+      "name": "Garoowe"
+    },
+    {
+      "coordinates": [1027, 1248],
+      "name": "Merca"
+    },
+    {
+      "coordinates": [1197, 1114],
+      "name": "Mareeg"
+    },
+    {
+      "coordinates": [138, 1106],
+      "name": "Nimule"
+    },
+    {
+      "coordinates": [506, 1591],
+      "name": "Moshi"
+    },
+    {
+      "coordinates": [285, 1281],
+      "name": "Mbale"
+    },
+    {
+      "coordinates": [218, 1325],
+      "name": "Jinja"
+    },
+    {
+      "coordinates": [607, 337],
+      "name": "Mendefera"
+    },
+    {
+      "coordinates": [58, 1144],
+      "name": "Arua"
+    },
+    {
+      "coordinates": [939, 288],
+      "name": "Hajjah"
+    },
+    {
+      "coordinates": [232, 207],
+      "name": "Shendi"
+    },
+    {
+      "coordinates": [297, 546],
+      "name": "Ad-Damazin"
+    },
+    {
+      "coordinates": [43, 1071],
+      "name": "Yei"
+    },
+    {
+      "coordinates": [167, 1350],
+      "name": "Entebbe"
+    },
+    {
+      "coordinates": [919, 390],
+      "name": "Zabid"
+    },
+    {
+      "coordinates": [202, 374],
+      "name": "El Manaqil"
+    },
+    {
+      "coordinates": [342, 1287],
+      "name": "Kitale"
+    },
+    {
+      "coordinates": [581, 282],
+      "name": "Keren"
+    },
+    {
+      "coordinates": [285, 1308],
+      "name": "Tororo"
+    },
+    {
+      "coordinates": [196, 1199],
+      "name": "Lira"
+    },
+    {
+      "coordinates": [549, 774],
+      "name": "Waliso"
+    },
+    {
+      "coordinates": [592, 866],
+      "name": "Shashamane"
+    },
+    {
+      "coordinates": [234, 1608],
+      "name": "Shinyanga"
+    },
+    {
+      "coordinates": [1074, 715],
+      "name": "Burao"
+    },
+    {
+      "coordinates": [652, 380],
+      "name": "Adigrat"
+    },
+    {
+      "coordinates": [488, 1432],
+      "name": "Thika"
+    },
+    {
+      "coordinates": [363, 1383],
+      "name": "Kericho"
+    },
+    {
+      "coordinates": [482, 1831],
+      "name": "Kilosa"
+    },
+    {
+      "coordinates": [318, 1382],
+      "name": "Kendu Bay"
+    },
+    {
+      "coordinates": [540, 841],
+      "name": "Hosaena"
+    },
+    {
+      "coordinates": [155, 391],
+      "name": "Ed Dueim"
+    },
+    {
+      "coordinates": [41, 1393],
+      "name": "Mbarara"
+    },
+    {
+      "coordinates": [630, 815],
+      "name": "Asella"
+    },
+    {
+      "coordinates": [23, 1704],
+      "name": "Uvinza"
+    },
+    {
+      "coordinates": [69, 1791],
+      "name": "Mpanda"
+    },
+    {
+      "coordinates": [449, 733],
+      "name": "Nekemte"
+    },
+    {
+      "coordinates": [351, 1405],
+      "name": "Chamagel"
+    },
+    {
+      "coordinates": [18, 1548],
+      "name": "Muyinga"
+    },
+    {
+      "coordinates": [0, 1460],
+      "name": "Byumba"
+    },
+    {
+      "coordinates": [1299, 277],
+      "name": "Seiyun"
+    },
+    {
+      "coordinates": [667, 1394],
+      "name": "Garissa"
+    },
+    {
+      "coordinates": [910, 683],
+      "name": "Borama"
+    },
+    {
+      "coordinates": [1028, 471],
+      "name": "Lahij"
+    },
+    {
+      "coordinates": [116, 1376],
+      "name": "Masaka"
+    },
+    {
+      "coordinates": [657, 697],
+      "name": "Debre Berhan"
+    },
+    {
+      "coordinates": [324, 1337],
+      "name": "Kakamega"
+    },
+    {
+      "coordinates": [325, 1689],
+      "name": "Singida"
+    },
+    {
+      "coordinates": [513, 1396],
+      "name": "Embu"
+    },
+    {
+      "coordinates": [195, 1128],
+      "name": "Kitgum"
+    },
+    {
+      "coordinates": [883, 723],
+      "name": "Jijiga"
+    },
+    {
+      "coordinates": [312, 1318],
+      "name": "Bungoma"
+    },
+    {
+      "coordinates": [78, 464],
+      "name": "Umm Ruwaba"
+    },
+    {
+      "coordinates": [819, 1095],
+      "name": "Mandera"
+    },
+    {
+      "coordinates": [589, 1713],
+      "name": "Korogwe"
+    },
+    {
+      "coordinates": [271, 116],
+      "name": "Berber"
+    },
+    {
+      "coordinates": [600, 389],
+      "name": "Axum"
+    },
+    {
+      "coordinates": [572, 920],
+      "name": "Dila"
+    },
+    {
+      "coordinates": [694, 1243],
+      "name": "Wajir"
+    },
+    {
+      "coordinates": [1025, 376],
+      "name": "Rida"
+    },
+    {
+      "coordinates": [442, 1408],
+      "name": "Naivasha"
+    },
+    {
+      "coordinates": [540, 743],
+      "name": "Ambo"
+    },
+    {
+      "coordinates": [138, 1326],
+      "name": "Mityana"
+    },
+    {
+      "coordinates": [878, 599],
+      "name": "Ali Sabieh"
+    },
+    {
+      "coordinates": [3, 1667],
+      "name": "Kasulu"
+    },
+    {
+      "coordinates": [591, 1594],
+      "name": "Voi"
+    },
+    {
+      "coordinates": [579, 897],
+      "name": "Irgalem"
+    },
+    {
+      "coordinates": [486, 1359],
+      "name": "Nanyuki"
+    },
+    {
+      "coordinates": [175, 1618],
+      "name": "Kahama"
+    },
+    {
+      "coordinates": [396, 1649],
+      "name": "Babati"
+    },
+    {
+      "coordinates": [87, 1534],
+      "name": "Biharamulo"
+    },
+    {
+      "coordinates": [867, 1105],
+      "name": "Luuq"
+    },
+    {
+      "coordinates": [400, 727],
+      "name": "Gimbi"
+    },
+    {
+      "coordinates": [974, 1177],
+      "name": "Burhakaba"
+    },
+    {
+      "coordinates": [310, 664],
+      "name": "Asosa"
+    },
+    {
+      "coordinates": [542, 290],
+      "name": "Agordat"
+    },
+    {
+      "coordinates": [326, 1403],
+      "name": "Kisii"
+    },
+    {
+      "coordinates": [329, 770],
+      "name": "Dembi Dollo"
+    },
+    {
+      "coordinates": [1534, 261],
+      "name": "Al Ghaydah"
+    },
+    {
+      "coordinates": [189, 1743],
+      "name": "Sikonge"
+    },
+    {
+      "coordinates": [217, 1645],
+      "name": "Nzega"
+    },
+    {
+      "coordinates": [63, 1578],
+      "name": "Kakonko"
+    },
+    {
+      "coordinates": [115, 1102],
+      "name": "Moyo Town"
+    },
+    {
+      "coordinates": [460, 1283],
+      "name": "Maralal"
+    },
+    {
+      "coordinates": [382, 1143],
+      "name": "Lodwar"
+    },
+    {
+      "coordinates": [438, 97],
+      "name": "Hayya"
+    },
+    {
+      "coordinates": [446, 1797],
+      "name": "Mpwapwa"
+    },
+    {
+      "coordinates": [307, 1749],
+      "name": "Itigi"
+    },
+    {
+      "coordinates": [691, 594],
+      "name": "Bati"
+    },
+    {
+      "coordinates": [91, 1312],
+      "name": "Mubende"
+    },
+    {
+      "coordinates": [917, 543],
+      "name": "Obock"
+    },
+    {
+      "coordinates": [393, 1355],
+      "name": "Eldama Ravine"
+    },
+    {
+      "coordinates": [98, 1183],
+      "name": "Pakwach"
+    },
+    {
+      "coordinates": [532, 1641],
+      "name": "Same"
+    },
+    {
+      "coordinates": [41, 1522],
+      "name": "Ngara"
+    },
+    {
+      "coordinates": [27, 1821],
+      "name": "Karema"
+    },
+    {
+      "coordinates": [243, 1520],
+      "name": "Nyahanga"
+    },
+    {
+      "coordinates": [457, 319],
+      "name": "Teseney"
+    },
+    {
+      "coordinates": [380, 1623],
+      "name": "Mbulu"
+    },
+    {
+      "coordinates": [468, 1535],
+      "name": "Namanga"
+    },
+    {
+      "coordinates": [1663, 510],
+      "name": "Hadibu"
+    },
+    {
+      "coordinates": [556, 1425],
+      "name": "Mwingi"
+    },
+    {
+      "coordinates": [379, 1582],
+      "name": "Ngorongoro"
+    },
+    {
+      "coordinates": [140, 1237],
+      "name": "Masindi Port"
+    },
+    {
+      "coordinates": [245, 1027],
+      "name": "Kapoeta"
+    },
+    {
+      "coordinates": [1049, 1020],
+      "name": "Ferfer"
+    },
+    {
+      "coordinates": [720, 1528],
+      "name": "Witu"
+    },
+    {
+      "coordinates": [23, 0],
+      "name": "Kerma"
+    },
+    {
+      "coordinates": [819, 1449],
+      "name": "Buur Gaabo"
+    },
+    {
+      "coordinates": [490, 1481],
+      "name": "Konza"
+    },
+    {
+      "coordinates": [208, 763],
+      "name": "Nasir"
+    },
+    {
+      "coordinates": [147, 1551],
+      "name": "Geita"
+    },
+    {
+      "coordinates": [1326, 721],
+      "name": "Qardho"
+    },
+    {
+      "coordinates": [282, 1114],
+      "name": "Kaabong"
+    },
+    {
+      "coordinates": [246, 1238],
+      "name": "Soroti"
+    },
+    {
+      "coordinates": [1436, 553],
+      "name": "Aluula"
+    },
+    {
+      "coordinates": [584, 1567],
+      "name": "Tsavo"
+    },
+    {
+      "coordinates": [318, 1182],
+      "name": "Moroto Town"
+    },
+    {
+      "coordinates": [337, 1756],
+      "name": "Manyoni"
+    },
+    {
+      "coordinates": [979, 407],
+      "name": "Ibb"
+    },
+    {
+      "coordinates": [994, 367],
+      "name": "Dhamar"
+    },
+    {
+      "coordinates": [1076, 408],
+      "name": "Al Bayda'"
+    },
+    {
+      "coordinates": [1161, 370],
+      "name": "Ataq"
+    },
+    {
+      "coordinates": [1059, 309],
+      "name": "Ma'rib"
+    },
+    {
+      "coordinates": [380, 797],
+      "name": "Gore"
+    },
+    {
+      "coordinates": [1199, 644],
+      "name": "Erigavo"
+    },
+    {
+      "coordinates": [172, 1314],
+      "name": "Bombo"
+    },
+    {
+      "coordinates": [1198, 792],
+      "name": "Las Anod"
+    },
+    {
+      "coordinates": [479, 1389],
+      "name": "Nyeri"
+    },
+    {
+      "coordinates": [279, 1325],
+      "name": "Busia"
+    },
+    {
+      "coordinates": [237, 1314],
+      "name": "Iganga"
+    },
+    {
+      "coordinates": [15, 1305],
+      "name": "Fort Portal"
+    },
+    {
+      "coordinates": [121, 1122],
+      "name": "Adjumani"
+    },
+    {
+      "coordinates": [115, 1238],
+      "name": "Masindi"
+    },
+    {
+      "coordinates": [253, 1277],
+      "name": "Pallisa"
+    },
+    {
+      "coordinates": [72, 1182],
+      "name": "Nebbi"
+    },
+    {
+      "coordinates": [891, 556],
+      "name": "Tadjoura"
+    },
+    {
+      "coordinates": [14, 1412],
+      "name": "Ntungamo"
+    },
+    {
+      "coordinates": [119, 1290],
+      "name": "Kiboga"
+    },
+    {
+      "coordinates": [269, 1256],
+      "name": "Kumi Town"
+    },
+    {
+      "coordinates": [845, 1138],
+      "name": "Garbahaareey"
+    },
+    {
+      "coordinates": [854, 602],
+      "name": "Dikhil"
+    },
+    {
+      "coordinates": [7, 1565],
+      "name": "Karuzi"
+    },
+    {
+      "coordinates": [271, 1226],
+      "name": "Katakwi"
+    }
+  ],
   "nations": [
     {
       "coordinates": [1767, 1707],

@@ -6,6 +6,228 @@
   "categories": ["europe", "asia"],
   "location": { "lat": 42.5, "lon": 44.5 },
   "author": "Tristar",
+  "places": [
+    {
+      "coordinates": [658, 894],
+      "name": "Yerevan"
+    },
+    {
+      "coordinates": [698, 656],
+      "name": "Tbilisi"
+    },
+    {
+      "coordinates": [165, 191],
+      "name": "Krasnodar"
+    },
+    {
+      "coordinates": [454, 167],
+      "name": "Stavropol"
+    },
+    {
+      "coordinates": [600, 393],
+      "name": "Nalchik"
+    },
+    {
+      "coordinates": [800, 407],
+      "name": "Grozny"
+    },
+    {
+      "coordinates": [201, 803],
+      "name": "Trabzon"
+    },
+    {
+      "coordinates": [391, 696],
+      "name": "Batumi"
+    },
+    {
+      "coordinates": [344, 955],
+      "name": "Erzurum"
+    },
+    {
+      "coordinates": [698, 455],
+      "name": "Vladikavkaz"
+    },
+    {
+      "coordinates": [371, 180],
+      "name": "Armavir"
+    },
+    {
+      "coordinates": [722, 678],
+      "name": "Rustavi"
+    },
+    {
+      "coordinates": [21, 812],
+      "name": "Ordu"
+    },
+    {
+      "coordinates": [168, 992],
+      "name": "Erzincan"
+    },
+    {
+      "coordinates": [455, 282],
+      "name": "Cherkessk"
+    },
+    {
+      "coordinates": [1039, 583],
+      "name": "Derbent"
+    },
+    {
+      "coordinates": [513, 974],
+      "name": "Ağrı"
+    },
+    {
+      "coordinates": [983, 463],
+      "name": "Kaspiysk"
+    },
+    {
+      "coordinates": [525, 838],
+      "name": "Kars"
+    },
+    {
+      "coordinates": [933, 472],
+      "name": "Buynaksk"
+    },
+    {
+      "coordinates": [1083, 904],
+      "name": "Şirvan"
+    },
+    {
+      "coordinates": [924, 723],
+      "name": "Shaki"
+    },
+    {
+      "coordinates": [282, 56],
+      "name": "Tikhoretsk"
+    },
+    {
+      "coordinates": [331, 238],
+      "name": "Labinsk"
+    },
+    {
+      "coordinates": [872, 935],
+      "name": "Stepanakert"
+    },
+    {
+      "coordinates": [165, 99],
+      "name": "Timashyovsk"
+    },
+    {
+      "coordinates": [633, 253],
+      "name": "Zelenokumsk"
+    },
+    {
+      "coordinates": [595, 149],
+      "name": "Blagodarny"
+    },
+    {
+      "coordinates": [975, 801],
+      "name": "Goychay"
+    },
+    {
+      "coordinates": [841, 805],
+      "name": "Ganja"
+    },
+    {
+      "coordinates": [279, 792],
+      "name": "Rize"
+    },
+    {
+      "coordinates": [503, 590],
+      "name": "Kutaisi"
+    },
+    {
+      "coordinates": [270, 246],
+      "name": "Maykop"
+    },
+    {
+      "coordinates": [599, 805],
+      "name": "Gyumri"
+    },
+    {
+      "coordinates": [447, 233],
+      "name": "Nevinnomyssk"
+    },
+    {
+      "coordinates": [516, 336],
+      "name": "Kislovodsk"
+    },
+    {
+      "coordinates": [322, 115],
+      "name": "Kropotkin"
+    },
+    {
+      "coordinates": [591, 293],
+      "name": "Georgiyevsk"
+    },
+    {
+      "coordinates": [917, 811],
+      "name": "Yevlakh"
+    },
+    {
+      "coordinates": [231, 270],
+      "name": "Apsheronsk"
+    },
+    {
+      "coordinates": [702, 348],
+      "name": "Mozdok"
+    },
+    {
+      "coordinates": [710, 426],
+      "name": "Nazran"
+    },
+    {
+      "coordinates": [71, 822],
+      "name": "Giresun"
+    },
+    {
+      "coordinates": [406, 758],
+      "name": "Artvin"
+    },
+    {
+      "coordinates": [173, 883],
+      "name": "Gümüşhane"
+    },
+    {
+      "coordinates": [719, 863],
+      "name": "Gavar"
+    },
+    {
+      "coordinates": [660, 929],
+      "name": "Artashat"
+    },
+    {
+      "coordinates": [644, 877],
+      "name": "Ashtarak"
+    },
+    {
+      "coordinates": [726, 784],
+      "name": "Ijevan"
+    },
+    {
+      "coordinates": [988, 750],
+      "name": "Qabala"
+    },
+    {
+      "coordinates": [788, 827],
+      "name": "Gədəbəy"
+    },
+    {
+      "coordinates": [734, 953],
+      "name": "Yeghegnadzor"
+    },
+    {
+      "coordinates": [883, 814],
+      "name": "Goranboy"
+    },
+    {
+      "coordinates": [951, 739],
+      "name": "Oğuz"
+    },
+    {
+      "coordinates": [765, 777],
+      "name": "Ağdam"
+    }
+  ],
   "nations": [
     {
       "coordinates": [624, 581],

@@ -124,6 +124,112 @@
       "name": "Bodega Bay"
     }
   ],
+  "places": [
+    {
+      "coordinates": [877, 368],
+      "name": "Santo Domingo"
+    },
+    {
+      "coordinates": [179, 123],
+      "name": "Benguela"
+    },
+    {
+      "coordinates": [806, 338],
+      "name": "Roseau"
+    },
+    {
+      "coordinates": [1068, 1273],
+      "name": "Ciudad Juárez"
+    },
+    {
+      "coordinates": [922, 542],
+      "name": "Camagüey"
+    },
+    {
+      "coordinates": [844, 674],
+      "name": "San Juan de la Maguana"
+    },
+    {
+      "coordinates": [1168, 5],
+      "name": "Victoria"
+    },
+    {
+      "coordinates": [1344, 247],
+      "name": "Modesto"
+    },
+    {
+      "coordinates": [897, 657],
+      "name": "Las Tunas"
+    },
+    {
+      "coordinates": [884, 487],
+      "name": "Gonaïves"
+    },
+    {
+      "coordinates": [1134, 1591],
+      "name": "Visalia"
+    },
+    {
+      "coordinates": [1213, 292],
+      "name": "Las Cruces"
+    },
+    {
+      "coordinates": [1295, 557],
+      "name": "Merced"
+    },
+    {
+      "coordinates": [1010, 121],
+      "name": "Colón"
+    },
+    {
+      "coordinates": [1259, 445],
+      "name": "Bullhead City"
+    },
+    {
+      "coordinates": [987, 1301],
+      "name": "Beeville"
+    },
+    {
+      "coordinates": [1151, 99],
+      "name": "Port Lavaca"
+    },
+    {
+      "coordinates": [1188, 223],
+      "name": "Fort Stockton"
+    },
+    {
+      "coordinates": [130, 408],
+      "name": "Cubal"
+    },
+    {
+      "coordinates": [935, 701],
+      "name": "Güines"
+    },
+    {
+      "coordinates": [1103, 1501],
+      "name": "Lake Havasu City"
+    },
+    {
+      "coordinates": [906, 932],
+      "name": "San Antonio de los Baños"
+    },
+    {
+      "coordinates": [1079, 1391],
+      "name": "Safford"
+    },
+    {
+      "coordinates": [1045, 1328],
+      "name": "Van Horn"
+    },
+    {
+      "coordinates": [842, 623],
+      "name": "San Cristóbal"
+    },
+    {
+      "coordinates": [863, 589],
+      "name": "Hinche"
+    }
+  ],
   "themes": ["north_america"],
   "translation_key": "map.sanfrancisco"
 }

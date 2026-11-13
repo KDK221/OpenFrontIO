@@ -226,6 +226,52 @@
       "name": "Zeila"
     }
   ],
+  "places": [
+    {
+      "coordinates": [965, 750],
+      "name": "Ta'izz"
+    },
+    {
+      "coordinates": [723, 498],
+      "name": "Al Hudaydah"
+    },
+    {
+      "coordinates": [938, 2],
+      "name": "Sa'dah"
+    },
+    {
+      "coordinates": [1156, 860],
+      "name": "Lahij"
+    },
+    {
+      "coordinates": [1151, 552],
+      "name": "Rida"
+    },
+    {
+      "coordinates": [651, 1322],
+      "name": "Ali Sabieh"
+    },
+    {
+      "coordinates": [786, 1129],
+      "name": "Obock"
+    },
+    {
+      "coordinates": [1050, 530],
+      "name": "Dhamar"
+    },
+    {
+      "coordinates": [1318, 642],
+      "name": "Al Bayda'"
+    },
+    {
+      "coordinates": [1270, 321],
+      "name": "Ma'rib"
+    },
+    {
+      "coordinates": [573, 1339],
+      "name": "Dikhil"
+    }
+  ],
   "special_team_count": 2,
   "teamGameSpawnAreas": {
     "2": [

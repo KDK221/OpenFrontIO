@@ -21,5 +21,6 @@ export type {
   MapLayer,
   MapManifest,
   MapMetadata,
+  MapPlace,
   Nation,
 } from "./MapManifest";

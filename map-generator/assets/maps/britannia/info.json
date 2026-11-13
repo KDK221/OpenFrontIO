@@ -6,6 +6,244 @@
   "categories": ["europe"],
   "location": { "lat": 52.6, "lon": -1.5 },
   "author": "TsProphet94",
+  "places": [
+    {
+      "coordinates": [1338, 1763],
+      "name": "London"
+    },
+    {
+      "coordinates": [562, 1384],
+      "name": "Dublin"
+    },
+    {
+      "coordinates": [807, 840],
+      "name": "Glasgow"
+    },
+    {
+      "coordinates": [1109, 1559],
+      "name": "Birmingham"
+    },
+    {
+      "coordinates": [1065, 1341],
+      "name": "Manchester"
+    },
+    {
+      "coordinates": [595, 1114],
+      "name": "Belfast"
+    },
+    {
+      "coordinates": [1148, 1270],
+      "name": "Leeds"
+    },
+    {
+      "coordinates": [1143, 1021],
+      "name": "Newcastle upon Tyne"
+    },
+    {
+      "coordinates": [948, 1769],
+      "name": "Cardiff"
+    },
+    {
+      "coordinates": [981, 1360],
+      "name": "Liverpool"
+    },
+    {
+      "coordinates": [937, 822],
+      "name": "Edinburgh"
+    },
+    {
+      "coordinates": [283, 1694],
+      "name": "Cork"
+    },
+    {
+      "coordinates": [265, 1531],
+      "name": "Limerick"
+    },
+    {
+      "coordinates": [1202, 1452],
+      "name": "Nottingham"
+    },
+    {
+      "coordinates": [1190, 1110],
+      "name": "Middlesbrough"
+    },
+    {
+      "coordinates": [1075, 1448],
+      "name": "Stoke-on-Trent"
+    },
+    {
+      "coordinates": [1162, 1570],
+      "name": "Coventry"
+    },
+    {
+      "coordinates": [1306, 1285],
+      "name": "Kingston upon Hull"
+    },
+    {
+      "coordinates": [1300, 1683],
+      "name": "Luton"
+    },
+    {
+      "coordinates": [1195, 1708],
+      "name": "Oxford"
+    },
+    {
+      "coordinates": [1514, 1520],
+      "name": "Norwich"
+    },
+    {
+      "coordinates": [1077, 560],
+      "name": "Aberdeen"
+    },
+    {
+      "coordinates": [1211, 1239],
+      "name": "York"
+    },
+    {
+      "coordinates": [963, 711],
+      "name": "Dundee"
+    },
+    {
+      "coordinates": [1499, 1640],
+      "name": "Ipswich"
+    },
+    {
+      "coordinates": [1319, 1534],
+      "name": "Peterborough"
+    },
+    {
+      "coordinates": [1366, 1614],
+      "name": "Cambridge"
+    },
+    {
+      "coordinates": [911, 1940],
+      "name": "Exeter"
+    },
+    {
+      "coordinates": [1058, 1792],
+      "name": "Bath"
+    },
+    {
+      "coordinates": [1586, 1877],
+      "name": "Calais"
+    },
+    {
+      "coordinates": [421, 1032],
+      "name": "Londonderry/Derry"
+    },
+    {
+      "coordinates": [210, 1403],
+      "name": "Galway"
+    },
+    {
+      "coordinates": [904, 727],
+      "name": "Perth"
+    },
+    {
+      "coordinates": [539, 1243],
+      "name": "Dundalk"
+    },
+    {
+      "coordinates": [549, 1303],
+      "name": "Drogheda"
+    },
+    {
+      "coordinates": [783, 1207],
+      "name": "Douglas"
+    },
+    {
+      "coordinates": [897, 1011],
+      "name": "Dumfries"
+    },
+    {
+      "coordinates": [438, 1531],
+      "name": "Kilkenny"
+    },
+    {
+      "coordinates": [506, 1133],
+      "name": "Lisburn"
+    },
+    {
+      "coordinates": [155, 1663],
+      "name": "Killarney"
+    },
+    {
+      "coordinates": [1160, 1369],
+      "name": "Sheffield"
+    },
+    {
+      "coordinates": [1444, 1751],
+      "name": "Southend-on-Sea"
+    },
+    {
+      "coordinates": [1029, 1779],
+      "name": "Bristol"
+    },
+    {
+      "coordinates": [1127, 1277],
+      "name": "Bradford"
+    },
+    {
+      "coordinates": [1208, 1525],
+      "name": "Leicester"
+    },
+    {
+      "coordinates": [1171, 1038],
+      "name": "Sunderland"
+    },
+    {
+      "coordinates": [1179, 1893],
+      "name": "Southampton"
+    },
+    {
+      "coordinates": [1230, 1771],
+      "name": "Reading"
+    },
+    {
+      "coordinates": [856, 1743],
+      "name": "Swansea"
+    },
+    {
+      "coordinates": [981, 1407],
+      "name": "Chester"
+    },
+    {
+      "coordinates": [744, 828],
+      "name": "Greenock"
+    },
+    {
+      "coordinates": [976, 1049],
+      "name": "Carlisle"
+    },
+    {
+      "coordinates": [457, 1615],
+      "name": "Waterford"
+    },
+    {
+      "coordinates": [129, 1618],
+      "name": "Tralee"
+    },
+    {
+      "coordinates": [427, 1117],
+      "name": "Omagh"
+    },
+    {
+      "coordinates": [696, 641],
+      "name": "Fort William"
+    },
+    {
+      "coordinates": [324, 1108],
+      "name": "Donegal"
+    },
+    {
+      "coordinates": [470, 1191],
+      "name": "Monaghan"
+    },
+    {
+      "coordinates": [318, 1324],
+      "name": "Roscommon"
+    }
+  ],
   "nations": [
     {
       "coordinates": [1539, 1915],

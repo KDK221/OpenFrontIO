@@ -2126,6 +2126,16 @@
     "tps": "TPS:",
     "tps_avg_60s": "Avg:"
   },
+  "place_tribe": {
+    "Clan": "{name} Clan",
+    "Commune": "{name} Commune",
+    "Guard": "{name} Guard",
+    "Militia": "{name} Militia",
+    "Rebels": "{name} Rebels",
+    "Town": "{name} Town",
+    "Union": "{name} Union",
+    "Village": "{name} Village"
+  },
   "play_mode": {
     "capital": "Capital: {name}",
     "choose_faction": "Choose your faction",

@@ -179,6 +179,156 @@
       "name": "Gwangju"
     }
   ],
+  "places": [
+    {
+      "coordinates": [529, 946],
+      "name": "Wonsan"
+    },
+    {
+      "coordinates": [207, 1013],
+      "name": "Nampho"
+    },
+    {
+      "coordinates": [466, 1323],
+      "name": "Suwon"
+    },
+    {
+      "coordinates": [545, 794],
+      "name": "Hamhung"
+    },
+    {
+      "coordinates": [814, 648],
+      "name": "Kimchaek"
+    },
+    {
+      "coordinates": [487, 1288],
+      "name": "Seongnam"
+    },
+    {
+      "coordinates": [437, 1244],
+      "name": "Goyang"
+    },
+    {
+      "coordinates": [493, 1602],
+      "name": "Jeonju"
+    },
+    {
+      "coordinates": [388, 570],
+      "name": "Kanggye"
+    },
+    {
+      "coordinates": [374, 1794],
+      "name": "Mokpo"
+    },
+    {
+      "coordinates": [423, 1570],
+      "name": "Gunsan"
+    },
+    {
+      "coordinates": [923, 2126],
+      "name": "Sasebo"
+    },
+    {
+      "coordinates": [647, 492],
+      "name": "Hyesan"
+    },
+    {
+      "coordinates": [252, 1160],
+      "name": "Haeju"
+    },
+    {
+      "coordinates": [774, 1236],
+      "name": "Gangneung"
+    },
+    {
+      "coordinates": [165, 827],
+      "name": "Chongju"
+    },
+    {
+      "coordinates": [833, 590],
+      "name": "Kilju County"
+    },
+    {
+      "coordinates": [722, 1145],
+      "name": "Sokcho"
+    },
+    {
+      "coordinates": [814, 323],
+      "name": "Musan County"
+    },
+    {
+      "coordinates": [194, 1178],
+      "name": "Ongjin"
+    },
+    {
+      "coordinates": [200, 636],
+      "name": "Taedong"
+    },
+    {
+      "coordinates": [731, 1729],
+      "name": "Changwon"
+    },
+    {
+      "coordinates": [549, 1446],
+      "name": "Cheongju"
+    },
+    {
+      "coordinates": [442, 1304],
+      "name": "Ansan"
+    },
+    {
+      "coordinates": [284, 883],
+      "name": "Sunchon"
+    },
+    {
+      "coordinates": [460, 1580],
+      "name": "Iksan"
+    },
+    {
+      "coordinates": [619, 1310],
+      "name": "Wonju"
+    },
+    {
+      "coordinates": [583, 1206],
+      "name": "Chuncheon"
+    },
+    {
+      "coordinates": [337, 532],
+      "name": "Manpo"
+    },
+    {
+      "coordinates": [832, 1613],
+      "name": "Gyeongju"
+    },
+    {
+      "coordinates": [499, 900],
+      "name": "Munchon"
+    },
+    {
+      "coordinates": [151, 1114],
+      "name": "Changyon"
+    },
+    {
+      "coordinates": [544, 973],
+      "name": "Anbyon"
+    },
+    {
+      "coordinates": [579, 1391],
+      "name": "Eumseong"
+    },
+    {
+      "coordinates": [257, 595],
+      "name": "Chosan"
+    },
+    {
+      "coordinates": [642, 612],
+      "name": "Kimhyonggwon"
+    },
+    {
+      "coordinates": [258, 1067],
+      "name": "Sariwon"
+    }
+  ],
   "special_team_count": 2,
   "teamGameSpawnAreas": {
     "2": [

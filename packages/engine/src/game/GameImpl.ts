@@ -1,4 +1,5 @@
 import { GameMap, TileRef } from "@openfront/engine-api/game/GameMap";
+import type { MapPlace } from "@openfront/engine-api/game/MapFiles";
 import {
   GoldenLand,
   goldenShares,
@@ -497,6 +498,16 @@ export class GameImpl implements Game {
   setGoldenLands(lands: readonly GoldenLand[]): void {
     this._goldenLands = lands;
     this._goldenSharesTick = -1;
+  }
+
+  private _places: readonly MapPlace[] = [];
+
+  places(): readonly MapPlace[] {
+    return this._places;
+  }
+
+  setPlaces(places: readonly MapPlace[]): void {
+    this._places = places;
   }
 
   goldenShare(player: Player): number {

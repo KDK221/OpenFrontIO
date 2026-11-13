@@ -7,6 +7,76 @@
   "location": { "lat": 24.5, "lon": 119.5 },
   "author": "Tristar",
   "special_team_count": 2,
+  "places": [
+    {
+      "coordinates": [1150, 633],
+      "name": "Taichung"
+    },
+    {
+      "coordinates": [1405, 268],
+      "name": "New Taipei"
+    },
+    {
+      "coordinates": [1430, 668],
+      "name": "Hualien City"
+    },
+    {
+      "coordinates": [1268, 1166],
+      "name": "Taitung City"
+    },
+    {
+      "coordinates": [1328, 295],
+      "name": "Zhongli"
+    },
+    {
+      "coordinates": [1096, 670],
+      "name": "Changhua"
+    },
+    {
+      "coordinates": [1064, 1217],
+      "name": "Pingtung City"
+    },
+    {
+      "coordinates": [1062, 907],
+      "name": "Chiayi City"
+    },
+    {
+      "coordinates": [1199, 464],
+      "name": "Miaoli City"
+    },
+    {
+      "coordinates": [1146, 725],
+      "name": "Nantou City"
+    },
+    {
+      "coordinates": [1489, 361],
+      "name": "Yilan City"
+    },
+    {
+      "coordinates": [1100, 812],
+      "name": "Douliu"
+    },
+    {
+      "coordinates": [1003, 920],
+      "name": "Puzi"
+    },
+    {
+      "coordinates": [1263, 354],
+      "name": "Zhubei"
+    },
+    {
+      "coordinates": [1307, 317],
+      "name": "Yangmei"
+    },
+    {
+      "coordinates": [1353, 296],
+      "name": "Bade"
+    },
+    {
+      "coordinates": [1031, 921],
+      "name": "Taibao"
+    }
+  ],
   "nations": [
     {
       "coordinates": [694, 26],

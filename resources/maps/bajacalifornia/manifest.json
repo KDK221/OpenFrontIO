@@ -59,6 +59,196 @@
       "name": "New Mexico"
     }
   ],
+  "places": [
+    {
+      "coordinates": [835, 72],
+      "name": "Phoenix"
+    },
+    {
+      "coordinates": [1688, 703],
+      "name": "Chihuahua City"
+    },
+    {
+      "coordinates": [526, 215],
+      "name": "Mexicali"
+    },
+    {
+      "coordinates": [1021, 247],
+      "name": "Tucson"
+    },
+    {
+      "coordinates": [1738, 1232],
+      "name": "Culiacán"
+    },
+    {
+      "coordinates": [1493, 277],
+      "name": "El Paso"
+    },
+    {
+      "coordinates": [1059, 370],
+      "name": "Nogales"
+    },
+    {
+      "coordinates": [446, 329],
+      "name": "Ensenada"
+    },
+    {
+      "coordinates": [1770, 760],
+      "name": "Delicias"
+    },
+    {
+      "coordinates": [613, 205],
+      "name": "Yuma"
+    },
+    {
+      "coordinates": [1496, 121],
+      "name": "Alamogordo"
+    },
+    {
+      "coordinates": [1200, 354],
+      "name": "Douglas"
+    },
+    {
+      "coordinates": [1698, 175],
+      "name": "Carlsbad"
+    },
+    {
+      "coordinates": [1253, 678],
+      "name": "Mazatán"
+    },
+    {
+      "coordinates": [364, 68],
+      "name": "Palm Springs"
+    },
+    {
+      "coordinates": [1349, 888],
+      "name": "Ciudad Obregon"
+    },
+    {
+      "coordinates": [1416, 938],
+      "name": "Navojoa"
+    },
+    {
+      "coordinates": [1440, 206],
+      "name": "Las Cruces"
+    },
+    {
+      "coordinates": [1590, 1138],
+      "name": "Guasave City"
+    },
+    {
+      "coordinates": [1618, 738],
+      "name": "Cuauhtémoc"
+    },
+    {
+      "coordinates": [1634, 1150],
+      "name": "Guamúchil"
+    },
+    {
+      "coordinates": [1414, 472],
+      "name": "Nuevo Casas Grandes"
+    },
+    {
+      "coordinates": [1621, 44],
+      "name": "Roswell"
+    },
+    {
+      "coordinates": [512, 196],
+      "name": "El Centro"
+    },
+    {
+      "coordinates": [1140, 409],
+      "name": "Cananea"
+    },
+    {
+      "coordinates": [1410, 974],
+      "name": "Huatabampobambo"
+    },
+    {
+      "coordinates": [1796, 128],
+      "name": "Hobbs"
+    },
+    {
+      "coordinates": [670, 433],
+      "name": "San Felipe"
+    },
+    {
+      "coordinates": [849, 50],
+      "name": "Scottsdale"
+    },
+    {
+      "coordinates": [886, 844],
+      "name": "Guerrero Negro"
+    },
+    {
+      "coordinates": [1533, 1023],
+      "name": "El Fuerte"
+    },
+    {
+      "coordinates": [1550, 437],
+      "name": "Miguel Ahumada"
+    },
+    {
+      "coordinates": [582, 514],
+      "name": "San Quintín"
+    },
+    {
+      "coordinates": [1128, 234],
+      "name": "Willcox"
+    },
+    {
+      "coordinates": [796, 157],
+      "name": "Gila Bend"
+    },
+    {
+      "coordinates": [1130, 309],
+      "name": "Tombstone"
+    },
+    {
+      "coordinates": [841, 715],
+      "name": "Punta Prieta"
+    },
+    {
+      "coordinates": [875, 86],
+      "name": "Mesa"
+    },
+    {
+      "coordinates": [899, 160],
+      "name": "Casa Grande"
+    },
+    {
+      "coordinates": [1342, 219],
+      "name": "Deming"
+    },
+    {
+      "coordinates": [563, 476],
+      "name": "Vicente Guerrero"
+    },
+    {
+      "coordinates": [1235, 483],
+      "name": "Nacozari de García"
+    },
+    {
+      "coordinates": [1374, 379],
+      "name": "Ascensión"
+    },
+    {
+      "coordinates": [1113, 153],
+      "name": "Safford"
+    },
+    {
+      "coordinates": [1352, 97],
+      "name": "Truth or Consequences"
+    },
+    {
+      "coordinates": [1702, 367],
+      "name": "Van Horn"
+    },
+    {
+      "coordinates": [1692, 1263],
+      "name": "Altata"
+    }
+  ],
   "themes": ["north_america"],
   "translation_key": "map.bajacalifornia"
 }

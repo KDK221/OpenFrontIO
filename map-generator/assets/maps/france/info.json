@@ -6,6 +6,304 @@
   "categories": ["europe", "countries"],
   "location": { "lat": 46.6, "lon": 2.4 },
   "author": "Tristar",
+  "places": [
+    {
+      "coordinates": [1196, 802],
+      "name": "Paris"
+    },
+    {
+      "coordinates": [1761, 1341],
+      "name": "Geneva"
+    },
+    {
+      "coordinates": [1187, 2005],
+      "name": "Barcelona"
+    },
+    {
+      "coordinates": [1486, 543],
+      "name": "Brussels"
+    },
+    {
+      "coordinates": [1569, 1374],
+      "name": "Lyon"
+    },
+    {
+      "coordinates": [1654, 1789],
+      "name": "Marseille"
+    },
+    {
+      "coordinates": [866, 636],
+      "name": "Le Havre"
+    },
+    {
+      "coordinates": [1302, 536],
+      "name": "Lille"
+    },
+    {
+      "coordinates": [1498, 483],
+      "name": "Antwerp"
+    },
+    {
+      "coordinates": [1075, 1623],
+      "name": "Toulouse"
+    },
+    {
+      "coordinates": [735, 1874],
+      "name": "Zaragoza"
+    },
+    {
+      "coordinates": [608, 811],
+      "name": "Rennes"
+    },
+    {
+      "coordinates": [1042, 1261],
+      "name": "Limoges"
+    },
+    {
+      "coordinates": [1754, 792],
+      "name": "Luxembourg"
+    },
+    {
+      "coordinates": [688, 1138],
+      "name": "La Rochelle"
+    },
+    {
+      "coordinates": [1087, 1806],
+      "name": "Andorra la Vella"
+    },
+    {
+      "coordinates": [1878, 874],
+      "name": "Saarbrücken"
+    },
+    {
+      "coordinates": [1891, 640],
+      "name": "Bonn"
+    },
+    {
+      "coordinates": [1010, 676],
+      "name": "Rouen"
+    },
+    {
+      "coordinates": [621, 957],
+      "name": "Nantes"
+    },
+    {
+      "coordinates": [1762, 873],
+      "name": "Metz"
+    },
+    {
+      "coordinates": [1701, 1495],
+      "name": "Grenoble"
+    },
+    {
+      "coordinates": [1735, 1831],
+      "name": "Toulon"
+    },
+    {
+      "coordinates": [1505, 613],
+      "name": "Charleroi"
+    },
+    {
+      "coordinates": [1432, 1695],
+      "name": "Montpellier"
+    },
+    {
+      "coordinates": [1969, 715],
+      "name": "Koblenz"
+    },
+    {
+      "coordinates": [1766, 944],
+      "name": "Nancy"
+    },
+    {
+      "coordinates": [1836, 1304],
+      "name": "Lausanne"
+    },
+    {
+      "coordinates": [1504, 1416],
+      "name": "Saint-Étienne"
+    },
+    {
+      "coordinates": [958, 995],
+      "name": "Tours"
+    },
+    {
+      "coordinates": [1134, 946],
+      "name": "Orléans"
+    },
+    {
+      "coordinates": [1445, 790],
+      "name": "Reims"
+    },
+    {
+      "coordinates": [800, 674],
+      "name": "Caen"
+    },
+    {
+      "coordinates": [1596, 1128],
+      "name": "Dijon"
+    },
+    {
+      "coordinates": [1502, 1673],
+      "name": "Nîmes"
+    },
+    {
+      "coordinates": [1324, 449],
+      "name": "Bruges"
+    },
+    {
+      "coordinates": [869, 878],
+      "name": "Le Mans"
+    },
+    {
+      "coordinates": [1189, 635],
+      "name": "Amiens"
+    },
+    {
+      "coordinates": [1566, 617],
+      "name": "Namur"
+    },
+    {
+      "coordinates": [1118, 452],
+      "name": "Calais"
+    },
+    {
+      "coordinates": [1166, 808],
+      "name": "Versailles"
+    },
+    {
+      "coordinates": [358, 819],
+      "name": "Lorient"
+    },
+    {
+      "coordinates": [1335, 1718],
+      "name": "Béziers"
+    },
+    {
+      "coordinates": [1209, 1092],
+      "name": "Bourges"
+    },
+    {
+      "coordinates": [1455, 938],
+      "name": "Troyes"
+    },
+    {
+      "coordinates": [608, 562],
+      "name": "Cherbourg-Octeville"
+    },
+    {
+      "coordinates": [954, 1506],
+      "name": "Agen"
+    },
+    {
+      "coordinates": [1085, 1379],
+      "name": "Brive-la-Gaillarde"
+    },
+    {
+      "coordinates": [2151, 2106],
+      "name": "Ajaccio"
+    },
+    {
+      "coordinates": [1322, 1130],
+      "name": "Nevers"
+    },
+    {
+      "coordinates": [1361, 1277],
+      "name": "Vichy"
+    },
+    {
+      "coordinates": [1010, 595],
+      "name": "Dieppe"
+    },
+    {
+      "coordinates": [1379, 1010],
+      "name": "Auxerre"
+    },
+    {
+      "coordinates": [1671, 612],
+      "name": "Liège"
+    },
+    {
+      "coordinates": [1393, 493],
+      "name": "Ghent"
+    },
+    {
+      "coordinates": [1246, 866],
+      "name": "Melun"
+    },
+    {
+      "coordinates": [1312, 1322],
+      "name": "Clermont-Ferrand"
+    },
+    {
+      "coordinates": [777, 944],
+      "name": "Angers"
+    },
+    {
+      "coordinates": [1227, 1988],
+      "name": "Mataró"
+    },
+    {
+      "coordinates": [1665, 1755],
+      "name": "Aix-en-Provence"
+    },
+    {
+      "coordinates": [1291, 1814],
+      "name": "Perpignan"
+    },
+    {
+      "coordinates": [1743, 1173],
+      "name": "Besançon"
+    },
+    {
+      "coordinates": [1759, 1390],
+      "name": "Annecy"
+    },
+    {
+      "coordinates": [906, 1113],
+      "name": "Poitiers"
+    },
+    {
+      "coordinates": [1456, 1310],
+      "name": "Roanne"
+    },
+    {
+      "coordinates": [1259, 587],
+      "name": "Arras"
+    },
+    {
+      "coordinates": [875, 1647],
+      "name": "Tarbes"
+    },
+    {
+      "coordinates": [1685, 579],
+      "name": "Maastricht"
+    },
+    {
+      "coordinates": [1429, 594],
+      "name": "Mons"
+    },
+    {
+      "coordinates": [1656, 555],
+      "name": "Hasselt"
+    },
+    {
+      "coordinates": [1379, 414],
+      "name": "Middelburg"
+    },
+    {
+      "coordinates": [1707, 771],
+      "name": "Arlon"
+    },
+    {
+      "coordinates": [1759, 749],
+      "name": "Diekirch"
+    },
+    {
+      "coordinates": [1783, 783],
+      "name": "Grevenmacher"
+    }
+  ],
   "nations": [
     {
       "coordinates": [1140, 389],

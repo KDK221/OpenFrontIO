@@ -7,6 +7,808 @@
   "location": { "lat": 48, "lon": 90 },
   "author": "SunnyBoyWTF",
   "featured_rank": 5,
+  "places": [
+    {
+      "coordinates": [1464, 653],
+      "name": "Tokyo"
+    },
+    {
+      "coordinates": [622, 853],
+      "name": "Mumbai"
+    },
+    {
+      "coordinates": [1234, 706],
+      "name": "Shanghai"
+    },
+    {
+      "coordinates": [1182, 603],
+      "name": "Beijing"
+    },
+    {
+      "coordinates": [235, 417],
+      "name": "Moscow"
+    },
+    {
+      "coordinates": [111, 592],
+      "name": "Istanbul"
+    },
+    {
+      "coordinates": [1008, 1151],
+      "name": "Jakarta"
+    },
+    {
+      "coordinates": [1133, 812],
+      "name": "Hong Kong"
+    },
+    {
+      "coordinates": [309, 787],
+      "name": "Riyadh"
+    },
+    {
+      "coordinates": [154, 1095],
+      "name": "Nairobi"
+    },
+    {
+      "coordinates": [1410, 664],
+      "name": "Osaka"
+    },
+    {
+      "coordinates": [380, 655],
+      "name": "Tehran"
+    },
+    {
+      "coordinates": [672, 924],
+      "name": "Bengaluru"
+    },
+    {
+      "coordinates": [955, 914],
+      "name": "Bangkok"
+    },
+    {
+      "coordinates": [291, 683],
+      "name": "Baghdad"
+    },
+    {
+      "coordinates": [1020, 713],
+      "name": "Chengdu"
+    },
+    {
+      "coordinates": [834, 558],
+      "name": "Ürümqi"
+    },
+    {
+      "coordinates": [43, 629],
+      "name": "Athens"
+    },
+    {
+      "coordinates": [190, 972],
+      "name": "Addis Ababa"
+    },
+    {
+      "coordinates": [142, 481],
+      "name": "Kyiv"
+    },
+    {
+      "coordinates": [606, 588],
+      "name": "Tashkent"
+    },
+    {
+      "coordinates": [414, 779],
+      "name": "Dubai"
+    },
+    {
+      "coordinates": [0, 375],
+      "name": "Stockholm"
+    },
+    {
+      "coordinates": [687, 739],
+      "name": "New Delhi"
+    },
+    {
+      "coordinates": [843, 796],
+      "name": "Dhaka"
+    },
+    {
+      "coordinates": [557, 783],
+      "name": "Karachi"
+    },
+    {
+      "coordinates": [1145, 714],
+      "name": "Wuhan"
+    },
+    {
+      "coordinates": [656, 704],
+      "name": "Lahore"
+    },
+    {
+      "coordinates": [1049, 726],
+      "name": "Chongqing"
+    },
+    {
+      "coordinates": [689, 872],
+      "name": "Hyderabad"
+    },
+    {
+      "coordinates": [624, 805],
+      "name": "Ahmedabad"
+    },
+    {
+      "coordinates": [1027, 950],
+      "name": "Ho Chi Minh City"
+    },
+    {
+      "coordinates": [1271, 580],
+      "name": "Shenyang"
+    },
+    {
+      "coordinates": [123, 895],
+      "name": "Khartoum"
+    },
+    {
+      "coordinates": [151, 368],
+      "name": "Saint Petersburg"
+    },
+    {
+      "coordinates": [859, 813],
+      "name": "Chattogram"
+    },
+    {
+      "coordinates": [1030, 828],
+      "name": "Hanoi"
+    },
+    {
+      "coordinates": [111, 709],
+      "name": "Alexandria"
+    },
+    {
+      "coordinates": [905, 879],
+      "name": "Yangon"
+    },
+    {
+      "coordinates": [1083, 670],
+      "name": "Xi'an"
+    },
+    {
+      "coordinates": [625, 827],
+      "name": "Surat"
+    },
+    {
+      "coordinates": [157, 605],
+      "name": "Ankara"
+    },
+    {
+      "coordinates": [1202, 696],
+      "name": "Nanjing"
+    },
+    {
+      "coordinates": [1047, 762],
+      "name": "Guiyang"
+    },
+    {
+      "coordinates": [1316, 533],
+      "name": "Harbin"
+    },
+    {
+      "coordinates": [1296, 613],
+      "name": "Pyongyang"
+    },
+    {
+      "coordinates": [1297, 556],
+      "name": "Changchun"
+    },
+    {
+      "coordinates": [723, 764],
+      "name": "Kanpur"
+    },
+    {
+      "coordinates": [171, 699],
+      "name": "Tel Aviv"
+    },
+    {
+      "coordinates": [1199, 640],
+      "name": "Zibo"
+    },
+    {
+      "coordinates": [212, 824],
+      "name": "Jeddah"
+    },
+    {
+      "coordinates": [1217, 718],
+      "name": "Hangzhou"
+    },
+    {
+      "coordinates": [996, 780],
+      "name": "Kunming"
+    },
+    {
+      "coordinates": [668, 759],
+      "name": "Jaipur"
+    },
+    {
+      "coordinates": [1133, 627],
+      "name": "Taiyuan"
+    },
+    {
+      "coordinates": [205, 649],
+      "name": "Aleppo"
+    },
+    {
+      "coordinates": [1143, 664],
+      "name": "Zhengzhou"
+    },
+    {
+      "coordinates": [1201, 767],
+      "name": "Fuzhou"
+    },
+    {
+      "coordinates": [1126, 742],
+      "name": "Changsha"
+    },
+    {
+      "coordinates": [1023, 649],
+      "name": "Lanzhou"
+    },
+    {
+      "coordinates": [480, 648],
+      "name": "Mashhad"
+    },
+    {
+      "coordinates": [191, 682],
+      "name": "Damascus"
+    },
+    {
+      "coordinates": [701, 827],
+      "name": "Nagpur"
+    },
+    {
+      "coordinates": [1162, 737],
+      "name": "Nanchang"
+    },
+    {
+      "coordinates": [1062, 806],
+      "name": "Nanning"
+    },
+    {
+      "coordinates": [781, 774],
+      "name": "Patna"
+    },
+    {
+      "coordinates": [919, 1035],
+      "name": "Medan"
+    },
+    {
+      "coordinates": [330, 730],
+      "name": "Kuwait City"
+    },
+    {
+      "coordinates": [1103, 594],
+      "name": "Baotou"
+    },
+    {
+      "coordinates": [266, 897],
+      "name": "Sanaa"
+    },
+    {
+      "coordinates": [27, 459],
+      "name": "Warsaw"
+    },
+    {
+      "coordinates": [85, 365],
+      "name": "Helsinki"
+    },
+    {
+      "coordinates": [366, 599],
+      "name": "Baku"
+    },
+    {
+      "coordinates": [110, 439],
+      "name": "Minsk"
+    },
+    {
+      "coordinates": [986, 1113],
+      "name": "Palembang"
+    },
+    {
+      "coordinates": [683, 802],
+      "name": "Bhopal"
+    },
+    {
+      "coordinates": [662, 948],
+      "name": "Coimbatore"
+    },
+    {
+      "coordinates": [1285, 514],
+      "name": "Qiqihar"
+    },
+    {
+      "coordinates": [379, 691],
+      "name": "Isfahan"
+    },
+    {
+      "coordinates": [1165, 800],
+      "name": "Shantou"
+    },
+    {
+      "coordinates": [749, 868],
+      "name": "Visakhapatnam"
+    },
+    {
+      "coordinates": [619, 720],
+      "name": "Multan"
+    },
+    {
+      "coordinates": [1006, 941],
+      "name": "Phnom Penh"
+    },
+    {
+      "coordinates": [1181, 690],
+      "name": "Huainan"
+    },
+    {
+      "coordinates": [104, 1076],
+      "name": "Kampala"
+    },
+    {
+      "coordinates": [1255, 993],
+      "name": "Davao City"
+    },
+    {
+      "coordinates": [791, 424],
+      "name": "Novosibirsk"
+    },
+    {
+      "coordinates": [754, 777],
+      "name": "Varanasi"
+    },
+    {
+      "coordinates": [801, 797],
+      "name": "Asansol"
+    },
+    {
+      "coordinates": [519, 403],
+      "name": "Yekaterinburg"
+    },
+    {
+      "coordinates": [625, 675],
+      "name": "Peshawar"
+    },
+    {
+      "coordinates": [791, 808],
+      "name": "Jamshedpur"
+    },
+    {
+      "coordinates": [675, 961],
+      "name": "Madurai"
+    },
+    {
+      "coordinates": [314, 410],
+      "name": "Nizhny Novgorod"
+    },
+    {
+      "coordinates": [386, 727],
+      "name": "Shiraz"
+    },
+    {
+      "coordinates": [702, 564],
+      "name": "Almaty"
+    },
+    {
+      "coordinates": [386, 447],
+      "name": "Samara"
+    },
+    {
+      "coordinates": [377, 417],
+      "name": "Kazan"
+    },
+    {
+      "coordinates": [301, 602],
+      "name": "Yerevan"
+    },
+    {
+      "coordinates": [11, 548],
+      "name": "Belgrade"
+    },
+    {
+      "coordinates": [730, 826],
+      "name": "Bhilai"
+    },
+    {
+      "coordinates": [596, 621],
+      "name": "Dushanbe"
+    },
+    {
+      "coordinates": [999, 643],
+      "name": "Xining"
+    },
+    {
+      "coordinates": [460, 428],
+      "name": "Ufa"
+    },
+    {
+      "coordinates": [467, 390],
+      "name": "Perm"
+    },
+    {
+      "coordinates": [1056, 620],
+      "name": "Yinchuan"
+    },
+    {
+      "coordinates": [1089, 777],
+      "name": "Guilin"
+    },
+    {
+      "coordinates": [311, 501],
+      "name": "Volgograd"
+    },
+    {
+      "coordinates": [914, 412],
+      "name": "Krasnoyarsk"
+    },
+    {
+      "coordinates": [786, 749],
+      "name": "Kathmandu"
+    },
+    {
+      "coordinates": [1076, 508],
+      "name": "Ulaanbaatar"
+    },
+    {
+      "coordinates": [783, 837],
+      "name": "Bhubaneswar"
+    },
+    {
+      "coordinates": [673, 569],
+      "name": "Bishkek"
+    },
+    {
+      "coordinates": [644, 678],
+      "name": "Islamabad"
+    },
+    {
+      "coordinates": [986, 864],
+      "name": "Vientiane"
+    },
+    {
+      "coordinates": [71, 403],
+      "name": "Riga"
+    },
+    {
+      "coordinates": [468, 628],
+      "name": "Ashgabat"
+    },
+    {
+      "coordinates": [550, 703],
+      "name": "Kandahar"
+    },
+    {
+      "coordinates": [575, 607],
+      "name": "Samarkand"
+    },
+    {
+      "coordinates": [117, 521],
+      "name": "Chișinău"
+    },
+    {
+      "coordinates": [137, 775],
+      "name": "Luxor"
+    },
+    {
+      "coordinates": [1106, 1117],
+      "name": "Banjarmasin"
+    },
+    {
+      "coordinates": [799, 444],
+      "name": "Barnaul"
+    },
+    {
+      "coordinates": [1377, 564],
+      "name": "Vladivostok"
+    },
+    {
+      "coordinates": [1049, 456],
+      "name": "Irkutsk"
+    },
+    {
+      "coordinates": [905, 569],
+      "name": "Yizhou"
+    },
+    {
+      "coordinates": [83, 430],
+      "name": "Vilnius"
+    },
+    {
+      "coordinates": [818, 407],
+      "name": "Tomsk"
+    },
+    {
+      "coordinates": [686, 609],
+      "name": "Kashgar City"
+    },
+    {
+      "coordinates": [185, 847],
+      "name": "Port Sudan"
+    },
+    {
+      "coordinates": [257, 966],
+      "name": "Hargeisa"
+    },
+    {
+      "coordinates": [664, 486],
+      "name": "Karaganda"
+    },
+    {
+      "coordinates": [731, 638],
+      "name": "Hotan"
+    },
+    {
+      "coordinates": [682, 351],
+      "name": "Surgut"
+    },
+    {
+      "coordinates": [25, 937],
+      "name": "Nyala"
+    },
+    {
+      "coordinates": [170, 550],
+      "name": "Sevastopol"
+    },
+    {
+      "coordinates": [282, 312],
+      "name": "Arkhangelsk"
+    },
+    {
+      "coordinates": [645, 470],
+      "name": "Nur-Sultan"
+    },
+    {
+      "coordinates": [1162, 459],
+      "name": "Chita"
+    },
+    {
+      "coordinates": [103, 1186],
+      "name": "Mbeya"
+    },
+    {
+      "coordinates": [1499, 1189],
+      "name": "Port Moresby"
+    },
+    {
+      "coordinates": [1021, 410],
+      "name": "Bratsk"
+    },
+    {
+      "coordinates": [1374, 340],
+      "name": "Yakutsk"
+    },
+    {
+      "coordinates": [158, 662],
+      "name": "Nicosia"
+    },
+    {
+      "coordinates": [859, 726],
+      "name": "Lhasa"
+    },
+    {
+      "coordinates": [1152, 1038],
+      "name": "Tarakan"
+    },
+    {
+      "coordinates": [1717, 445],
+      "name": "Petropavlovsk-Kamchatsky"
+    },
+    {
+      "coordinates": [180, 930],
+      "name": "Gondar"
+    },
+    {
+      "coordinates": [960, 605],
+      "name": "Jiayuguan City"
+    },
+    {
+      "coordinates": [57, 989],
+      "name": "Wau"
+    },
+    {
+      "coordinates": [839, 752],
+      "name": "Thimphu"
+    },
+    {
+      "coordinates": [1629, 368],
+      "name": "Magadan"
+    },
+    {
+      "coordinates": [1043, 495],
+      "name": "Erdenet"
+    },
+    {
+      "coordinates": [24, 253],
+      "name": "Tromsø"
+    },
+    {
+      "coordinates": [102, 852],
+      "name": "Karma"
+    },
+    {
+      "coordinates": [36, 1016],
+      "name": "Obo"
+    },
+    {
+      "coordinates": [1963, 306],
+      "name": "Anadyr"
+    },
+    {
+      "coordinates": [1375, 226],
+      "name": "Tiksi"
+    },
+    {
+      "coordinates": [1741, 374],
+      "name": "Palana"
+    },
+    {
+      "coordinates": [784, 205],
+      "name": "Dikson"
+    },
+    {
+      "coordinates": [1463, 228],
+      "name": "Nizhneyansk"
+    },
+    {
+      "coordinates": [713, 882],
+      "name": "Amaravati"
+    },
+    {
+      "coordinates": [1331, 660],
+      "name": "Busan"
+    },
+    {
+      "coordinates": [1428, 659],
+      "name": "Nagoya"
+    },
+    {
+      "coordinates": [1246, 615],
+      "name": "Dalian"
+    },
+    {
+      "coordinates": [1226, 648],
+      "name": "Qingdao"
+    },
+    {
+      "coordinates": [1184, 787],
+      "name": "Xiamen"
+    },
+    {
+      "coordinates": [1238, 593],
+      "name": "Lianshan"
+    },
+    {
+      "coordinates": [1157, 625],
+      "name": "Shijiazhuang"
+    },
+    {
+      "coordinates": [1312, 556],
+      "name": "Jilin City"
+    },
+    {
+      "coordinates": [1220, 744],
+      "name": "Wenzhou"
+    },
+    {
+      "coordinates": [1483, 622],
+      "name": "Sendai"
+    },
+    {
+      "coordinates": [1191, 663],
+      "name": "Zaozhuang"
+    },
+    {
+      "coordinates": [664, 809],
+      "name": "Indore"
+    },
+    {
+      "coordinates": [1126, 685],
+      "name": "Nanyang"
+    },
+    {
+      "coordinates": [1126, 592],
+      "name": "Hohhot"
+    },
+    {
+      "coordinates": [674, 711],
+      "name": "Ludhiana"
+    },
+    {
+      "coordinates": [1155, 643],
+      "name": "Handan"
+    },
+    {
+      "coordinates": [696, 756],
+      "name": "Agra"
+    },
+    {
+      "coordinates": [1085, 826],
+      "name": "Zhanjiang"
+    },
+    {
+      "coordinates": [652, 960],
+      "name": "Kochi"
+    },
+    {
+      "coordinates": [635, 841],
+      "name": "Nashik"
+    },
+    {
+      "coordinates": [1030, 726],
+      "name": "Neijiang"
+    },
+    {
+      "coordinates": [211, 486],
+      "name": "Kharkiv"
+    },
+    {
+      "coordinates": [1306, 659],
+      "name": "Gwangju"
+    },
+    {
+      "coordinates": [279, 648],
+      "name": "Mosul"
+    },
+    {
+      "coordinates": [911, 817],
+      "name": "Mandalay"
+    },
+    {
+      "coordinates": [184, 640],
+      "name": "Adana"
+    },
+    {
+      "coordinates": [714, 803],
+      "name": "Jabalpur"
+    },
+    {
+      "coordinates": [1217, 575],
+      "name": "Chifeng"
+    },
+    {
+      "coordinates": [1207, 678],
+      "name": "Huai'an"
+    },
+    {
+      "coordinates": [601, 814],
+      "name": "Rajkot"
+    },
+    {
+      "coordinates": [1047, 666],
+      "name": "Tianshui"
+    },
+    {
+      "coordinates": [1024, 762],
+      "name": "Liupanshui"
+    },
+    {
+      "coordinates": [665, 673],
+      "name": "Srinagar"
+    },
+    {
+      "coordinates": [674, 425],
+      "name": "Omsk"
+    },
+    {
+      "coordinates": [1084, 809],
+      "name": "Yulin"
+    },
+    {
+      "coordinates": [653, 842],
+      "name": "Aurangabad"
+    },
+    {
+      "coordinates": [1083, 689],
+      "name": "Ankang"
+    },
+    {
+      "coordinates": [527, 423],
+      "name": "Chelyabinsk"
+    }
+  ],
   "nations": [
     {
       "coordinates": [165, 422],

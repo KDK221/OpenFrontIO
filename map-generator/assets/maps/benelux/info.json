@@ -6,6 +6,112 @@
   "categories": ["new", "europe", "countries"],
   "location": { "lat": 51, "lon": 5 },
   "author": "Niels_600",
+  "places": [
+    {
+      "coordinates": [803, 581],
+      "name": "Amsterdam"
+    },
+    {
+      "coordinates": [591, 986],
+      "name": "Brussels"
+    },
+    {
+      "coordinates": [619, 692],
+      "name": "The Hague"
+    },
+    {
+      "coordinates": [669, 715],
+      "name": "Rotterdam"
+    },
+    {
+      "coordinates": [627, 887],
+      "name": "Antwerp"
+    },
+    {
+      "coordinates": [849, 627],
+      "name": "Utrecht"
+    },
+    {
+      "coordinates": [1029, 1267],
+      "name": "Metz"
+    },
+    {
+      "coordinates": [727, 595],
+      "name": "Haarlem"
+    },
+    {
+      "coordinates": [608, 1077],
+      "name": "Charleroi"
+    },
+    {
+      "coordinates": [1283, 256],
+      "name": "Groningen"
+    },
+    {
+      "coordinates": [307, 971],
+      "name": "Bruges"
+    },
+    {
+      "coordinates": [1069, 305],
+      "name": "Leeuwarden"
+    },
+    {
+      "coordinates": [723, 1035],
+      "name": "Namur"
+    },
+    {
+      "coordinates": [921, 947],
+      "name": "Liège"
+    },
+    {
+      "coordinates": [427, 984],
+      "name": "Ghent"
+    },
+    {
+      "coordinates": [928, 761],
+      "name": "Eindhoven"
+    },
+    {
+      "coordinates": [1062, 598],
+      "name": "Arnhem"
+    },
+    {
+      "coordinates": [887, 713],
+      "name": "'s-Hertogenbosch"
+    },
+    {
+      "coordinates": [955, 887],
+      "name": "Maastricht"
+    },
+    {
+      "coordinates": [1128, 457],
+      "name": "Zwolle"
+    },
+    {
+      "coordinates": [907, 874],
+      "name": "Hasselt"
+    },
+    {
+      "coordinates": [1268, 311],
+      "name": "Assen"
+    },
+    {
+      "coordinates": [420, 877],
+      "name": "Middelburg"
+    },
+    {
+      "coordinates": [951, 1157],
+      "name": "Arlon"
+    },
+    {
+      "coordinates": [1053, 1085],
+      "name": "Diekirch"
+    },
+    {
+      "coordinates": [1091, 1117],
+      "name": "Grevenmacher"
+    }
+  ],
   "nations": [
     {
       "coordinates": [718, 492],

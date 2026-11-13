@@ -6,6 +6,16 @@
   "categories": ["asia"],
   "location": { "lat": 30.5, "lon": 114.3 },
   "author": "crunchybbb",
+  "places": [
+    {
+      "coordinates": [250, 2309],
+      "name": "Tongling"
+    },
+    {
+      "coordinates": [1529, 718],
+      "name": "Yangzhou"
+    }
+  ],
   "nations": [
     {
       "coordinates": [3306, 1778],

@@ -149,6 +149,104 @@
       "name": "Yarmouth"
     }
   ],
+  "places": [
+    {
+      "coordinates": [1499, 754],
+      "name": "St. John's"
+    },
+    {
+      "coordinates": [791, 957],
+      "name": "Sydney"
+    },
+    {
+      "coordinates": [260, 285],
+      "name": "Sept-Îles"
+    },
+    {
+      "coordinates": [300, 703],
+      "name": "Bathurst"
+    },
+    {
+      "coordinates": [1339, 538],
+      "name": "Gander"
+    },
+    {
+      "coordinates": [238, 1057],
+      "name": "Saint John"
+    },
+    {
+      "coordinates": [43, 564],
+      "name": "Rimouski"
+    },
+    {
+      "coordinates": [50, 726],
+      "name": "Edmundston"
+    },
+    {
+      "coordinates": [75, 817],
+      "name": "Presque Isle"
+    },
+    {
+      "coordinates": [964, 584],
+      "name": "Stephenville"
+    },
+    {
+      "coordinates": [619, 1018],
+      "name": "Antigonish"
+    },
+    {
+      "coordinates": [261, 1157],
+      "name": "Digby"
+    },
+    {
+      "coordinates": [415, 1108],
+      "name": "Windsor"
+    },
+    {
+      "coordinates": [294, 1289],
+      "name": "Shelburne"
+    },
+    {
+      "coordinates": [1123, 550],
+      "name": "Buchans"
+    },
+    {
+      "coordinates": [1014, 443],
+      "name": "Trout River"
+    },
+    {
+      "coordinates": [559, 1022],
+      "name": "New Glasgow"
+    },
+    {
+      "coordinates": [83, 445],
+      "name": "Baie-Comeau"
+    },
+    {
+      "coordinates": [415, 980],
+      "name": "Amherst"
+    },
+    {
+      "coordinates": [982, 173],
+      "name": "Saint-Augustin"
+    },
+    {
+      "coordinates": [129, 1068],
+      "name": "Calais"
+    },
+    {
+      "coordinates": [738, 950],
+      "name": "Baddeck"
+    },
+    {
+      "coordinates": [1253, 379],
+      "name": "La Scie"
+    },
+    {
+      "coordinates": [679, 321],
+      "name": "Natashquan"
+    }
+  ],
   "special_team_count": 3,
   "teamGameSpawnAreas": {
     "3": [

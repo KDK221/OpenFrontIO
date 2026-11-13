@@ -331,6 +331,568 @@
       "name": "Finnmark"
     }
   ],
+  "places": [
+    {
+      "coordinates": [999, 1470],
+      "name": "Stockholm"
+    },
+    {
+      "coordinates": [1685, 1353],
+      "name": "Saint Petersburg"
+    },
+    {
+      "coordinates": [594, 2199],
+      "name": "Hamburg"
+    },
+    {
+      "coordinates": [1378, 1345],
+      "name": "Helsinki"
+    },
+    {
+      "coordinates": [578, 1429],
+      "name": "Oslo"
+    },
+    {
+      "coordinates": [1361, 1737],
+      "name": "Riga"
+    },
+    {
+      "coordinates": [1450, 2006],
+      "name": "Vilnius"
+    },
+    {
+      "coordinates": [1373, 1435],
+      "name": "Tallinn"
+    },
+    {
+      "coordinates": [527, 1009],
+      "name": "Trondheim"
+    },
+    {
+      "coordinates": [1075, 2070],
+      "name": "Gdańsk"
+    },
+    {
+      "coordinates": [1979, 2143],
+      "name": "Bryansk"
+    },
+    {
+      "coordinates": [747, 1943],
+      "name": "Malmö"
+    },
+    {
+      "coordinates": [1892, 1109],
+      "name": "Petrozavodsk"
+    },
+    {
+      "coordinates": [1299, 1190],
+      "name": "Tampere"
+    },
+    {
+      "coordinates": [927, 1105],
+      "name": "Sundsvall"
+    },
+    {
+      "coordinates": [1163, 1005],
+      "name": "Vaasa"
+    },
+    {
+      "coordinates": [1365, 580],
+      "name": "Rovaniemi"
+    },
+    {
+      "coordinates": [1212, 86],
+      "name": "Hammerfest"
+    },
+    {
+      "coordinates": [669, 1686],
+      "name": "Gothenburg"
+    },
+    {
+      "coordinates": [1721, 1927],
+      "name": "Vitebsk"
+    },
+    {
+      "coordinates": [1756, 1523],
+      "name": "Veliky Novgorod"
+    },
+    {
+      "coordinates": [1224, 1322],
+      "name": "Turku"
+    },
+    {
+      "coordinates": [300, 1562],
+      "name": "Stavanger"
+    },
+    {
+      "coordinates": [1365, 762],
+      "name": "Oulu"
+    },
+    {
+      "coordinates": [968, 1410],
+      "name": "Uppsala"
+    },
+    {
+      "coordinates": [1507, 1857],
+      "name": "Daugavpils"
+    },
+    {
+      "coordinates": [1730, 1789],
+      "name": "Velikiye Luki"
+    },
+    {
+      "coordinates": [1495, 1555],
+      "name": "Tartu"
+    },
+    {
+      "coordinates": [1412, 1244],
+      "name": "Lahti"
+    },
+    {
+      "coordinates": [868, 1593],
+      "name": "Linköping"
+    },
+    {
+      "coordinates": [1079, 922],
+      "name": "Umeå"
+    },
+    {
+      "coordinates": [520, 1520],
+      "name": "Skien"
+    },
+    {
+      "coordinates": [1630, 1035],
+      "name": "Joensuu"
+    },
+    {
+      "coordinates": [1242, 911],
+      "name": "Kokkola"
+    },
+    {
+      "coordinates": [769, 1021],
+      "name": "Östersund"
+    },
+    {
+      "coordinates": [1889, 1065],
+      "name": "Kondopoga"
+    },
+    {
+      "coordinates": [998, 990],
+      "name": "Örnsköldsvik"
+    },
+    {
+      "coordinates": [1308, 677],
+      "name": "Kemi"
+    },
+    {
+      "coordinates": [713, 645],
+      "name": "Mo i Rana"
+    },
+    {
+      "coordinates": [871, 384],
+      "name": "Narvik"
+    },
+    {
+      "coordinates": [1041, 438],
+      "name": "Kiruna"
+    },
+    {
+      "coordinates": [1880, 733],
+      "name": "Kem"
+    },
+    {
+      "coordinates": [1895, 784],
+      "name": "Belomorsk"
+    },
+    {
+      "coordinates": [1193, 171],
+      "name": "Alta"
+    },
+    {
+      "coordinates": [1460, 554],
+      "name": "Kemijärvi"
+    },
+    {
+      "coordinates": [1581, 175],
+      "name": "Kirkenes"
+    },
+    {
+      "coordinates": [1366, 1979],
+      "name": "Kaunas"
+    },
+    {
+      "coordinates": [1741, 2082],
+      "name": "Mogilev"
+    },
+    {
+      "coordinates": [1051, 2221],
+      "name": "Bydgoszcz"
+    },
+    {
+      "coordinates": [1375, 2132],
+      "name": "Grodno"
+    },
+    {
+      "coordinates": [1068, 2051],
+      "name": "Gdynia"
+    },
+    {
+      "coordinates": [1343, 2199],
+      "name": "Białystok"
+    },
+    {
+      "coordinates": [594, 2105],
+      "name": "Kiel"
+    },
+    {
+      "coordinates": [629, 2158],
+      "name": "Lübeck"
+    },
+    {
+      "coordinates": [1684, 2179],
+      "name": "Babruysk"
+    },
+    {
+      "coordinates": [711, 2129],
+      "name": "Rostock"
+    },
+    {
+      "coordinates": [1634, 2049],
+      "name": "Barysaw"
+    },
+    {
+      "coordinates": [513, 2205],
+      "name": "Bremerhaven"
+    },
+    {
+      "coordinates": [1740, 2007],
+      "name": "Orsha"
+    },
+    {
+      "coordinates": [1089, 2175],
+      "name": "Grudziądz"
+    },
+    {
+      "coordinates": [1456, 2102],
+      "name": "Lida"
+    },
+    {
+      "coordinates": [837, 1489],
+      "name": "Örebro"
+    },
+    {
+      "coordinates": [1406, 1091],
+      "name": "Jyväskylä"
+    },
+    {
+      "coordinates": [1510, 1007],
+      "name": "Kuopio"
+    },
+    {
+      "coordinates": [724, 1888],
+      "name": "Helsingborg"
+    },
+    {
+      "coordinates": [548, 1451],
+      "name": "Drammen"
+    },
+    {
+      "coordinates": [1678, 1399],
+      "name": "Gatchina"
+    },
+    {
+      "coordinates": [897, 1568],
+      "name": "Norrköping"
+    },
+    {
+      "coordinates": [739, 1485],
+      "name": "Karlstad"
+    },
+    {
+      "coordinates": [488, 1974],
+      "name": "Esbjerg"
+    },
+    {
+      "coordinates": [934, 1315],
+      "name": "Gävle"
+    },
+    {
+      "coordinates": [1341, 1774],
+      "name": "Jelgava"
+    },
+    {
+      "coordinates": [1568, 1429],
+      "name": "Narva"
+    },
+    {
+      "coordinates": [1860, 2211],
+      "name": "Klintsy"
+    },
+    {
+      "coordinates": [721, 1685],
+      "name": "Borås"
+    },
+    {
+      "coordinates": [1869, 1377],
+      "name": "Tikhvin"
+    },
+    {
+      "coordinates": [762, 2097],
+      "name": "Stralsund"
+    },
+    {
+      "coordinates": [836, 1780],
+      "name": "Växjö"
+    },
+    {
+      "coordinates": [1554, 1226],
+      "name": "Lappeenranta"
+    },
+    {
+      "coordinates": [1902, 1526],
+      "name": "Borovichi"
+    },
+    {
+      "coordinates": [1884, 2066],
+      "name": "Roslavl"
+    },
+    {
+      "coordinates": [1290, 2119],
+      "name": "Ełk"
+    },
+    {
+      "coordinates": [727, 1812],
+      "name": "Halmstad"
+    },
+    {
+      "coordinates": [1953, 1909],
+      "name": "Vyazma"
+    },
+    {
+      "coordinates": [1754, 381],
+      "name": "Monchegorsk"
+    },
+    {
+      "coordinates": [1975, 1687],
+      "name": "Torzhok"
+    },
+    {
+      "coordinates": [307, 1129],
+      "name": "Ålesund"
+    },
+    {
+      "coordinates": [1893, 1920],
+      "name": "Safonovo"
+    },
+    {
+      "coordinates": [1800, 1347],
+      "name": "Volkhov"
+    },
+    {
+      "coordinates": [681, 1622],
+      "name": "Trollhättan"
+    },
+    {
+      "coordinates": [1669, 1500],
+      "name": "Luga"
+    },
+    {
+      "coordinates": [1964, 2044],
+      "name": "Kirov"
+    },
+    {
+      "coordinates": [578, 1487],
+      "name": "Moss"
+    },
+    {
+      "coordinates": [1762, 1584],
+      "name": "Staraya Russa"
+    },
+    {
+      "coordinates": [805, 1885],
+      "name": "Kristianstad"
+    },
+    {
+      "coordinates": [1805, 417],
+      "name": "Kirovsk"
+    },
+    {
+      "coordinates": [1858, 1792],
+      "name": "Nelidovo"
+    },
+    {
+      "coordinates": [1915, 1589],
+      "name": "Bologoye"
+    },
+    {
+      "coordinates": [1593, 212],
+      "name": "Nikel"
+    },
+    {
+      "coordinates": [883, 1235],
+      "name": "Bollnäs"
+    },
+    {
+      "coordinates": [1418, 1315],
+      "name": "Porvoo"
+    },
+    {
+      "coordinates": [583, 932],
+      "name": "Steinkjer"
+    },
+    {
+      "coordinates": [1706, 1378],
+      "name": "Kolpino"
+    },
+    {
+      "coordinates": [1184, 2130],
+      "name": "Olsztyn"
+    },
+    {
+      "coordinates": [1504, 2190],
+      "name": "Baranavichy"
+    },
+    {
+      "coordinates": [1326, 1862],
+      "name": "Šiauliai"
+    },
+    {
+      "coordinates": [1120, 2087],
+      "name": "Elbląg"
+    },
+    {
+      "coordinates": [1387, 1882],
+      "name": "Panevezys"
+    },
+    {
+      "coordinates": [908, 1442],
+      "name": "Västerås"
+    },
+    {
+      "coordinates": [1541, 2044],
+      "name": "Maladziečna"
+    },
+    {
+      "coordinates": [1639, 1896],
+      "name": "Polotsk"
+    },
+    {
+      "coordinates": [1188, 1200],
+      "name": "Pori"
+    },
+    {
+      "coordinates": [1946, 1782],
+      "name": "Rzhev"
+    },
+    {
+      "coordinates": [1778, 241],
+      "name": "Severomorsk"
+    },
+    {
+      "coordinates": [1947, 1622],
+      "name": "Vyshny Volochyok"
+    },
+    {
+      "coordinates": [438, 2232],
+      "name": "Emden"
+    },
+    {
+      "coordinates": [1518, 1430],
+      "name": "Kohtla-Järve"
+    },
+    {
+      "coordinates": [1252, 2025],
+      "name": "Chernyakhovsk"
+    },
+    {
+      "coordinates": [692, 1939],
+      "name": "Roskilde"
+    },
+    {
+      "coordinates": [837, 1344],
+      "name": "Borlänge"
+    },
+    {
+      "coordinates": [1547, 1779],
+      "name": "Rēzekne"
+    },
+    {
+      "coordinates": [1566, 1462],
+      "name": "Slantsy"
+    },
+    {
+      "coordinates": [533, 1854],
+      "name": "Viborg"
+    },
+    {
+      "coordinates": [1971, 2104],
+      "name": "Dyatkovo"
+    },
+    {
+      "coordinates": [1586, 1127],
+      "name": "Savonlinna"
+    },
+    {
+      "coordinates": [904, 278],
+      "name": "Finnsnes"
+    },
+    {
+      "coordinates": [673, 2184],
+      "name": "Schwerin"
+    },
+    {
+      "coordinates": [612, 1427],
+      "name": "Bærum"
+    },
+    {
+      "coordinates": [1345, 1248],
+      "name": "Hämeenlinna"
+    },
+    {
+      "coordinates": [1498, 1154],
+      "name": "Mikkeli"
+    },
+    {
+      "coordinates": [849, 1327],
+      "name": "Falun"
+    },
+    {
+      "coordinates": [869, 1860],
+      "name": "Karlskrona"
+    },
+    {
+      "coordinates": [1472, 1254],
+      "name": "Kouvola"
+    },
+    {
+      "coordinates": [588, 1319],
+      "name": "Hamar"
+    },
+    {
+      "coordinates": [943, 1545],
+      "name": "Nyköping"
+    },
+    {
+      "coordinates": [1432, 1561],
+      "name": "Viljandi"
+    },
+    {
+      "coordinates": [960, 1075],
+      "name": "Härnösand"
+    },
+    {
+      "coordinates": [1311, 1499],
+      "name": "Haapsalu"
+    },
+    {
+      "coordinates": [665, 1967],
+      "name": "Sorø"
+    },
+    {
+      "coordinates": [328, 1359],
+      "name": "Vossevangen"
+    }
+  ],
   "themes": ["europe"],
   "translation_key": "map.scandinavia"
 }

@@ -279,6 +279,808 @@
       "name": "Puducherry"
     }
   ],
+  "places": [
+    {
+      "coordinates": [667, 1084],
+      "name": "Mumbai"
+    },
+    {
+      "coordinates": [1538, 881],
+      "name": "Kolkata"
+    },
+    {
+      "coordinates": [932, 1442],
+      "name": "Bengaluru"
+    },
+    {
+      "coordinates": [460, 167],
+      "name": "Kabul"
+    },
+    {
+      "coordinates": [913, 514],
+      "name": "Delhi"
+    },
+    {
+      "coordinates": [1655, 809],
+      "name": "Dhaka"
+    },
+    {
+      "coordinates": [1085, 1435],
+      "name": "Chennai"
+    },
+    {
+      "coordinates": [751, 342],
+      "name": "Lahore"
+    },
+    {
+      "coordinates": [984, 1180],
+      "name": "Hyderabad"
+    },
+    {
+      "coordinates": [652, 846],
+      "name": "Ahmedabad"
+    },
+    {
+      "coordinates": [723, 1112],
+      "name": "Pune"
+    },
+    {
+      "coordinates": [1979, 1220],
+      "name": "Yangon"
+    },
+    {
+      "coordinates": [1087, 645],
+      "name": "Kanpur"
+    },
+    {
+      "coordinates": [833, 617],
+      "name": "Jaipur"
+    },
+    {
+      "coordinates": [1018, 958],
+      "name": "Nagpur"
+    },
+    {
+      "coordinates": [1358, 696],
+      "name": "Patna"
+    },
+    {
+      "coordinates": [898, 1558],
+      "name": "Coimbatore"
+    },
+    {
+      "coordinates": [1255, 1162],
+      "name": "Visakhapatnam"
+    },
+    {
+      "coordinates": [588, 422],
+      "name": "Multan"
+    },
+    {
+      "coordinates": [1238, 713],
+      "name": "Varanasi"
+    },
+    {
+      "coordinates": [1462, 811],
+      "name": "Asansol"
+    },
+    {
+      "coordinates": [593, 197],
+      "name": "Peshawar"
+    },
+    {
+      "coordinates": [1418, 863],
+      "name": "Jamshedpur"
+    },
+    {
+      "coordinates": [964, 1622],
+      "name": "Madurai"
+    },
+    {
+      "coordinates": [780, 338],
+      "name": "Amritsar"
+    },
+    {
+      "coordinates": [1150, 955],
+      "name": "Bhilai"
+    },
+    {
+      "coordinates": [831, 1543],
+      "name": "Kozhikode"
+    },
+    {
+      "coordinates": [1976, 1044],
+      "name": "Naypyidaw"
+    },
+    {
+      "coordinates": [1368, 572],
+      "name": "Kathmandu"
+    },
+    {
+      "coordinates": [1397, 1012],
+      "name": "Bhubaneswar"
+    },
+    {
+      "coordinates": [684, 216],
+      "name": "Islamabad"
+    },
+    {
+      "coordinates": [264, 338],
+      "name": "Kandahar"
+    },
+    {
+      "coordinates": [1065, 16],
+      "name": "Hotan"
+    },
+    {
+      "coordinates": [1694, 459],
+      "name": "Lhasa"
+    },
+    {
+      "coordinates": [1062, 1799],
+      "name": "Colombo"
+    },
+    {
+      "coordinates": [1612, 587],
+      "name": "Thimphu"
+    },
+    {
+      "coordinates": [1099, 1232],
+      "name": "Amaravati"
+    },
+    {
+      "coordinates": [1121, 622],
+      "name": "Lucknow"
+    },
+    {
+      "coordinates": [837, 866],
+      "name": "Indore"
+    },
+    {
+      "coordinates": [685, 889],
+      "name": "Vadodara"
+    },
+    {
+      "coordinates": [837, 380],
+      "name": "Ludhiana"
+    },
+    {
+      "coordinates": [957, 603],
+      "name": "Agra"
+    },
+    {
+      "coordinates": [1607, 861],
+      "name": "Khulna"
+    },
+    {
+      "coordinates": [742, 307],
+      "name": "Gujranwala"
+    },
+    {
+      "coordinates": [719, 1026],
+      "name": "Nashik"
+    },
+    {
+      "coordinates": [940, 494],
+      "name": "Meerut"
+    },
+    {
+      "coordinates": [1974, 914],
+      "name": "Mandalay"
+    },
+    {
+      "coordinates": [1067, 839],
+      "name": "Jabalpur"
+    },
+    {
+      "coordinates": [1430, 804],
+      "name": "Dhanbad"
+    },
+    {
+      "coordinates": [1173, 705],
+      "name": "Allahabad"
+    },
+    {
+      "coordinates": [777, 192],
+      "name": "Srinagar"
+    },
+    {
+      "coordinates": [806, 1032],
+      "name": "Aurangabad"
+    },
+    {
+      "coordinates": [839, 1164],
+      "name": "Solapur"
+    },
+    {
+      "coordinates": [676, 654],
+      "name": "Jodhpur"
+    },
+    {
+      "coordinates": [888, 393],
+      "name": "Chandigarh"
+    },
+    {
+      "coordinates": [967, 658],
+      "name": "Gwalior"
+    },
+    {
+      "coordinates": [898, 1706],
+      "name": "Thiruvananthapuram"
+    },
+    {
+      "coordinates": [795, 1300],
+      "name": "Hubli"
+    },
+    {
+      "coordinates": [882, 1481],
+      "name": "Mysore"
+    },
+    {
+      "coordinates": [967, 1519],
+      "name": "Salem"
+    },
+    {
+      "coordinates": [820, 356],
+      "name": "Jalandhar"
+    },
+    {
+      "coordinates": [835, 720],
+      "name": "Kota"
+    },
+    {
+      "coordinates": [960, 560],
+      "name": "Aligarh"
+    },
+    {
+      "coordinates": [779, 275],
+      "name": "Jammu"
+    },
+    {
+      "coordinates": [999, 504],
+      "name": "Muradabad"
+    },
+    {
+      "coordinates": [780, 1446],
+      "name": "Mangalore"
+    },
+    {
+      "coordinates": [339, 420],
+      "name": "Quetta"
+    },
+    {
+      "coordinates": [744, 1221],
+      "name": "Kolhapur"
+    },
+    {
+      "coordinates": [917, 1076],
+      "name": "Nanded"
+    },
+    {
+      "coordinates": [901, 984],
+      "name": "Akola"
+    },
+    {
+      "coordinates": [931, 437],
+      "name": "Saharanpur"
+    },
+    {
+      "coordinates": [891, 1183],
+      "name": "Gulbarga"
+    },
+    {
+      "coordinates": [66, 176],
+      "name": "Herat"
+    },
+    {
+      "coordinates": [343, 37],
+      "name": "Mazar-i-Sharif"
+    },
+    {
+      "coordinates": [406, 578],
+      "name": "Larkana"
+    },
+    {
+      "coordinates": [1462, 719],
+      "name": "Bhagalpur"
+    },
+    {
+      "coordinates": [1060, 1504],
+      "name": "Pondicherry"
+    },
+    {
+      "coordinates": [1107, 1779],
+      "name": "Kandy"
+    },
+    {
+      "coordinates": [1907, 60],
+      "name": "Golmud"
+    },
+    {
+      "coordinates": [1569, 482],
+      "name": "Xigazê"
+    },
+    {
+      "coordinates": [932, 190],
+      "name": "Leh"
+    },
+    {
+      "coordinates": [681, 351],
+      "name": "Faisalabad"
+    },
+    {
+      "coordinates": [639, 154],
+      "name": "Saidu Sharif"
+    },
+    {
+      "coordinates": [1046, 1145],
+      "name": "Warangal"
+    },
+    {
+      "coordinates": [683, 1064],
+      "name": "Bhiwandi"
+    },
+    {
+      "coordinates": [944, 970],
+      "name": "Amravati"
+    },
+    {
+      "coordinates": [1069, 1356],
+      "name": "Nellore"
+    },
+    {
+      "coordinates": [1259, 629],
+      "name": "Gorakhpur"
+    },
+    {
+      "coordinates": [760, 1270],
+      "name": "Belgaum"
+    },
+    {
+      "coordinates": [1030, 1029],
+      "name": "Chandrapur"
+    },
+    {
+      "coordinates": [601, 470],
+      "name": "Bahawalpur"
+    },
+    {
+      "coordinates": [840, 1353],
+      "name": "Davangere"
+    },
+    {
+      "coordinates": [775, 973],
+      "name": "Dhule"
+    },
+    {
+      "coordinates": [716, 754],
+      "name": "Udaipur"
+    },
+    {
+      "coordinates": [896, 1313],
+      "name": "Bellary"
+    },
+    {
+      "coordinates": [964, 1687],
+      "name": "Thoothukudi"
+    },
+    {
+      "coordinates": [959, 1273],
+      "name": "Kurnool"
+    },
+    {
+      "coordinates": [1351, 744],
+      "name": "Gaya"
+    },
+    {
+      "coordinates": [442, 569],
+      "name": "Sukkur"
+    },
+    {
+      "coordinates": [906, 1421],
+      "name": "Tumkur"
+    },
+    {
+      "coordinates": [774, 1078],
+      "name": "Ahmednagar"
+    },
+    {
+      "coordinates": [876, 1121],
+      "name": "Latur"
+    },
+    {
+      "coordinates": [1340, 1068],
+      "name": "Berhampur"
+    },
+    {
+      "coordinates": [1195, 1207],
+      "name": "Kakinada"
+    },
+    {
+      "coordinates": [1592, 689],
+      "name": "Rangpur"
+    },
+    {
+      "coordinates": [1999, 1189],
+      "name": "Bago"
+    },
+    {
+      "coordinates": [828, 1213],
+      "name": "Vijayapura"
+    },
+    {
+      "coordinates": [1854, 746],
+      "name": "Imphal"
+    },
+    {
+      "coordinates": [1070, 1637],
+      "name": "Jaffna"
+    },
+    {
+      "coordinates": [488, 926],
+      "name": "Porbandar"
+    },
+    {
+      "coordinates": [27, 372],
+      "name": "Zabol"
+    },
+    {
+      "coordinates": [1922, 906],
+      "name": "Monywa"
+    },
+    {
+      "coordinates": [433, 71],
+      "name": "Baghlan"
+    },
+    {
+      "coordinates": [957, 1595],
+      "name": "Dindigul"
+    },
+    {
+      "coordinates": [353, 6],
+      "name": "Termez"
+    },
+    {
+      "coordinates": [1908, 588],
+      "name": "Dibrugarh"
+    },
+    {
+      "coordinates": [117, 669],
+      "name": "Turbat"
+    },
+    {
+      "coordinates": [1549, 829],
+      "name": "Krishnanagar"
+    },
+    {
+      "coordinates": [1925, 1100],
+      "name": "Pyay"
+    },
+    {
+      "coordinates": [1909, 1022],
+      "name": "Magway"
+    },
+    {
+      "coordinates": [1091, 1716],
+      "name": "Anuradhapura"
+    },
+    {
+      "coordinates": [306, 378],
+      "name": "Chaman"
+    },
+    {
+      "coordinates": [62, 291],
+      "name": "Farah"
+    },
+    {
+      "coordinates": [367, 148],
+      "name": "Bamyan"
+    },
+    {
+      "coordinates": [1995, 1120],
+      "name": "Pyu"
+    },
+    {
+      "coordinates": [1747, 351],
+      "name": "Nagchu Town"
+    },
+    {
+      "coordinates": [1880, 467],
+      "name": "Nyingchi"
+    },
+    {
+      "coordinates": [988, 704],
+      "name": "Jhansi"
+    },
+    {
+      "coordinates": [1036, 534],
+      "name": "Bareilly"
+    },
+    {
+      "coordinates": [959, 417],
+      "name": "Dehradun"
+    },
+    {
+      "coordinates": [761, 993],
+      "name": "Malegaon"
+    },
+    {
+      "coordinates": [820, 1385],
+      "name": "Shivamogga"
+    },
+    {
+      "coordinates": [919, 1554],
+      "name": "Tirupur"
+    },
+    {
+      "coordinates": [1341, 896],
+      "name": "Rourkela"
+    },
+    {
+      "coordinates": [540, 257],
+      "name": "Bannu"
+    },
+    {
+      "coordinates": [764, 1211],
+      "name": "Sangli"
+    },
+    {
+      "coordinates": [531, 171],
+      "name": "Jalalabad"
+    },
+    {
+      "coordinates": [694, 551],
+      "name": "Bikaner"
+    },
+    {
+      "coordinates": [1191, 904],
+      "name": "Bilaspur"
+    },
+    {
+      "coordinates": [657, 311],
+      "name": "Sargodha"
+    },
+    {
+      "coordinates": [940, 1693],
+      "name": "Tirunelveli"
+    },
+    {
+      "coordinates": [1545, 632],
+      "name": "Siliguri"
+    },
+    {
+      "coordinates": [832, 838],
+      "name": "Ujjain"
+    },
+    {
+      "coordinates": [1549, 860],
+      "name": "Bhatpara"
+    },
+    {
+      "coordinates": [796, 576],
+      "name": "Sikar"
+    },
+    {
+      "coordinates": [767, 710],
+      "name": "Bhilwara"
+    },
+    {
+      "coordinates": [1698, 824],
+      "name": "Cumilla"
+    },
+    {
+      "coordinates": [963, 1105],
+      "name": "Nizamabad"
+    },
+    {
+      "coordinates": [887, 1069],
+      "name": "Parbhani"
+    },
+    {
+      "coordinates": [1738, 700],
+      "name": "Shillong"
+    },
+    {
+      "coordinates": [933, 1652],
+      "name": "Rajapalayam"
+    },
+    {
+      "coordinates": [637, 359],
+      "name": "Jhang"
+    },
+    {
+      "coordinates": [1372, 666],
+      "name": "Muzaffarpur"
+    },
+    {
+      "coordinates": [866, 416],
+      "name": "Patiala"
+    },
+    {
+      "coordinates": [999, 799],
+      "name": "Sagar"
+    },
+    {
+      "coordinates": [1064, 561],
+      "name": "Shahjahanpur"
+    },
+    {
+      "coordinates": [790, 828],
+      "name": "Ratlam"
+    },
+    {
+      "coordinates": [1170, 1203],
+      "name": "Rajamahendravaram"
+    },
+    {
+      "coordinates": [930, 1149],
+      "name": "Bidar"
+    },
+    {
+      "coordinates": [899, 471],
+      "name": "Panipat"
+    },
+    {
+      "coordinates": [1078, 1188],
+      "name": "Khammam"
+    },
+    {
+      "coordinates": [757, 368],
+      "name": "Kasur"
+    },
+    {
+      "coordinates": [496, 833],
+      "name": "Bhojpur"
+    },
+    {
+      "coordinates": [1019, 1118],
+      "name": "Karimnagar"
+    },
+    {
+      "coordinates": [1037, 1402],
+      "name": "Tirupathi"
+    },
+    {
+      "coordinates": [866, 1305],
+      "name": "Hospet"
+    },
+    {
+      "coordinates": [896, 1465],
+      "name": "Mandya"
+    },
+    {
+      "coordinates": [878, 580],
+      "name": "Alwar"
+    },
+    {
+      "coordinates": [1785, 810],
+      "name": "Aizawl"
+    },
+    {
+      "coordinates": [443, 36],
+      "name": "Kunduz"
+    },
+    {
+      "coordinates": [1014, 626],
+      "name": "Etawah"
+    },
+    {
+      "coordinates": [921, 1250],
+      "name": "Raichur"
+    },
+    {
+      "coordinates": [1089, 1272],
+      "name": "Chirala"
+    },
+    {
+      "coordinates": [1214, 723],
+      "name": "Mirzapur"
+    },
+    {
+      "coordinates": [1900, 1221],
+      "name": "Pathein"
+    },
+    {
+      "coordinates": [542, 430],
+      "name": "Dera Ghazi Khan"
+    },
+    {
+      "coordinates": [416, 655],
+      "name": "Nawabshah"
+    },
+    {
+      "coordinates": [929, 598],
+      "name": "Bharatpur"
+    },
+    {
+      "coordinates": [925, 1725],
+      "name": "Nagercoil"
+    },
+    {
+      "coordinates": [701, 387],
+      "name": "Okara"
+    },
+    {
+      "coordinates": [748, 85],
+      "name": "Gilgit"
+    },
+    {
+      "coordinates": [694, 683],
+      "name": "Pali"
+    },
+    {
+      "coordinates": [1704, 803],
+      "name": "Agartala"
+    },
+    {
+      "coordinates": [1072, 1289],
+      "name": "Ongole"
+    },
+    {
+      "coordinates": [1653, 870],
+      "name": "Barisal"
+    },
+    {
+      "coordinates": [1401, 1039],
+      "name": "Puri"
+    },
+    {
+      "coordinates": [1523, 909],
+      "name": "Haldia"
+    },
+    {
+      "coordinates": [212, 82],
+      "name": "Maymana"
+    },
+    {
+      "coordinates": [1490, 687],
+      "name": "Purnia"
+    },
+    {
+      "coordinates": [989, 1337],
+      "name": "Proddatur"
+    },
+    {
+      "coordinates": [852, 949],
+      "name": "Burhanpur"
+    },
+    {
+      "coordinates": [1136, 1252],
+      "name": "Machilipatnam"
+    },
+    {
+      "coordinates": [514, 534],
+      "name": "Sadiqabad"
+    },
+    {
+      "coordinates": [984, 1291],
+      "name": "Nandyal"
+    },
+    {
+      "coordinates": [1479, 645],
+      "name": "Biratnagar"
+    },
+    {
+      "coordinates": [1163, 577],
+      "name": "Bahraich"
+    },
+    {
+      "coordinates": [832, 663],
+      "name": "Tonk"
+    },
+    {
+      "coordinates": [789, 465],
+      "name": "Sirsa"
+    },
+    {
+      "coordinates": [1940, 1169],
+      "name": "Hinthada"
+    },
+    {
+      "coordinates": [1266, 1139],
+      "name": "Vizianagaram"
+    }
+  ],
   "themes": ["asia"],
   "translation_key": "map.indiansubcontinent"
 }

@@ -6,6 +6,10 @@ import {
   SpawnArea,
 } from "@openfront/engine-api/game/GameTypes";
 import { GameID } from "@openfront/engine-api/Schemas";
+import {
+  PLACE_TRIBE_SUFFIXES,
+  placeTribeName,
+} from "@openfront/engine-lib/execution/utils/PlaceTribeNames";
 import { PseudoRandom } from "@openfront/engine-lib/PseudoRandom";
 import { zNum, zRandom } from "@openfront/engine-lib/snapshot/SnapshotType";
 import { simpleHash } from "@openfront/engine-lib/Util";
@@ -44,6 +48,9 @@ export class SpawnExecution implements Execution {
     // callers (PlayerSpawner, NationExecution) are trusted and place players
     // deliberately, including at the end of the spawn phase; a client may not.
     private fromIntent: boolean = false,
+    // A tribe that takes the name of the real place nearest where it lands
+    // (maps with places in their manifest; TribeSpawner sets it).
+    private nameByPlace: boolean = false,
   ) {
     this.random = new PseudoRandom(
       simpleHash(playerInfo.id) + simpleHash(gameID),
@@ -68,7 +75,8 @@ export class SpawnExecution implements Execution {
     }
 
     let player: Player | null = null;
-    if (this.mg.hasPlayer(this.playerInfo.id)) {
+    const joining = !this.mg.hasPlayer(this.playerInfo.id);
+    if (!joining) {
       player = this.mg.player(this.playerInfo.id);
     } else {
       player = this.mg.addPlayer(this.playerInfo);
@@ -118,6 +126,18 @@ export class SpawnExecution implements Execution {
       if (player.type() === PlayerType.Bot) {
         this.mg.addExecution(new TribeExecution(player));
       }
+    }
+
+    if (joining && this.nameByPlace) {
+      const taken = new Set(this.mg.allPlayers().map((p) => p.name()));
+      const name = placeTribeName(
+        this.mg.places(),
+        this.mg.x(spawn.center),
+        this.mg.y(spawn.center),
+        taken,
+        this.random.nextInt(0, PLACE_TRIBE_SUFFIXES.length),
+      );
+      if (name !== null) player.rename(name);
     }
 
     player.setSpawnTile(spawn.center);
@@ -233,6 +253,7 @@ export class SpawnExecution implements Execution {
       playerInfo: playerInfoData(this.playerInfo),
       tile: this.tile,
       fromIntent: this.fromIntent,
+      nameByPlace: this.nameByPlace,
     });
   }
 
@@ -244,6 +265,7 @@ export class SpawnExecution implements Execution {
     this.playerInfo = readPlayerInfo(s.playerInfo, r);
     if (s.tile !== undefined) this.tile = s.tile;
     this.fromIntent = s.fromIntent;
+    this.nameByPlace = s.nameByPlace ?? false;
   }
 }
 
@@ -256,6 +278,8 @@ const SpawnStateSchema = z.object({
   // Untrusted intent data, validated in tick, so any number.
   tile: zNum().optional(),
   fromIntent: z.boolean(),
+  // Optional: snapshots from before tribes were named by place lack it.
+  nameByPlace: z.boolean().optional(),
 });
 type SpawnState = z.infer<typeof SpawnStateSchema>;
 

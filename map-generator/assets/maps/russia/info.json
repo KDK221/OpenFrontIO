@@ -6,6 +6,808 @@
   "categories": ["europe", "asia", "countries"],
   "location": { "lat": 61.5, "lon": 100 },
   "author": "Tristar",
+  "places": [
+    {
+      "coordinates": [960, 1057],
+      "name": "Yekaterinburg"
+    },
+    {
+      "coordinates": [678, 1006],
+      "name": "Kazan"
+    },
+    {
+      "coordinates": [805, 1099],
+      "name": "Ufa"
+    },
+    {
+      "coordinates": [1376, 1377],
+      "name": "Barnaul"
+    },
+    {
+      "coordinates": [1359, 992],
+      "name": "Surgut"
+    },
+    {
+      "coordinates": [1843, 1414],
+      "name": "Bratsk"
+    },
+    {
+      "coordinates": [2617, 1417],
+      "name": "Yakutsk"
+    },
+    {
+      "coordinates": [1841, 582],
+      "name": "Dikson"
+    },
+    {
+      "coordinates": [245, 1255],
+      "name": "Rostov-on-Don"
+    },
+    {
+      "coordinates": [224, 1211],
+      "name": "Donetsk"
+    },
+    {
+      "coordinates": [1460, 1389],
+      "name": "Novokuznetsk"
+    },
+    {
+      "coordinates": [833, 1175],
+      "name": "Magnitogorsk"
+    },
+    {
+      "coordinates": [974, 1011],
+      "name": "Nizhny Tagil"
+    },
+    {
+      "coordinates": [232, 1430],
+      "name": "Nalchik"
+    },
+    {
+      "coordinates": [710, 1280],
+      "name": "Aktobe"
+    },
+    {
+      "coordinates": [273, 1453],
+      "name": "Grozny"
+    },
+    {
+      "coordinates": [1554, 1426],
+      "name": "Abakan"
+    },
+    {
+      "coordinates": [1899, 803],
+      "name": "Norilsk"
+    },
+    {
+      "coordinates": [912, 1226],
+      "name": "Rudniy"
+    },
+    {
+      "coordinates": [1914, 1353],
+      "name": "Ust-Ilimsk"
+    },
+    {
+      "coordinates": [1318, 678],
+      "name": "Vorkuta"
+    },
+    {
+      "coordinates": [2284, 1270],
+      "name": "Mirny"
+    },
+    {
+      "coordinates": [2257, 1348],
+      "name": "Lensk"
+    },
+    {
+      "coordinates": [2874, 1242],
+      "name": "Batagay"
+    },
+    {
+      "coordinates": [2603, 1185],
+      "name": "Zhigansk"
+    },
+    {
+      "coordinates": [2284, 815],
+      "name": "Khatanga"
+    },
+    {
+      "coordinates": [798, 998],
+      "name": "Izhevsk"
+    },
+    {
+      "coordinates": [194, 1243],
+      "name": "Mariupol"
+    },
+    {
+      "coordinates": [247, 875],
+      "name": "Vitebsk"
+    },
+    {
+      "coordinates": [235, 1075],
+      "name": "Sumy"
+    },
+    {
+      "coordinates": [767, 1256],
+      "name": "Orsk"
+    },
+    {
+      "coordinates": [1420, 1030],
+      "name": "Nizhnevartovsk"
+    },
+    {
+      "coordinates": [136, 1335],
+      "name": "Novorossiysk"
+    },
+    {
+      "coordinates": [873, 795],
+      "name": "Syktyvkar"
+    },
+    {
+      "coordinates": [1836, 1013],
+      "name": "Noginsk"
+    },
+    {
+      "coordinates": [1097, 1202],
+      "name": "Petropavl"
+    },
+    {
+      "coordinates": [360, 758],
+      "name": "Veliky Novgorod"
+    },
+    {
+      "coordinates": [608, 1195],
+      "name": "Oral"
+    },
+    {
+      "coordinates": [708, 595],
+      "name": "Severodvinsk"
+    },
+    {
+      "coordinates": [894, 1113],
+      "name": "Zlatoust"
+    },
+    {
+      "coordinates": [944, 928],
+      "name": "Berezniki"
+    },
+    {
+      "coordinates": [306, 1265],
+      "name": "Volgodonsk"
+    },
+    {
+      "coordinates": [1271, 1427],
+      "name": "Rubtsovsk"
+    },
+    {
+      "coordinates": [1602, 1320],
+      "name": "Achinsk"
+    },
+    {
+      "coordinates": [1164, 1067],
+      "name": "Tobolsk"
+    },
+    {
+      "coordinates": [1458, 937],
+      "name": "Noyabrsk"
+    },
+    {
+      "coordinates": [986, 745],
+      "name": "Ukhta"
+    },
+    {
+      "coordinates": [1714, 1365],
+      "name": "Kansk"
+    },
+    {
+      "coordinates": [256, 725],
+      "name": "Tartu"
+    },
+    {
+      "coordinates": [1033, 951],
+      "name": "Serov"
+    },
+    {
+      "coordinates": [1558, 834],
+      "name": "Novy Urengoy"
+    },
+    {
+      "coordinates": [1255, 966],
+      "name": "Khanty-Mansiysk"
+    },
+    {
+      "coordinates": [1698, 1261],
+      "name": "Lesosibirsk"
+    },
+    {
+      "coordinates": [771, 776],
+      "name": "Kotlas"
+    },
+    {
+      "coordinates": [1387, 1448],
+      "name": "Gorno-Altaysk"
+    },
+    {
+      "coordinates": [435, 589],
+      "name": "Joensuu"
+    },
+    {
+      "coordinates": [1757, 1394],
+      "name": "Tayshet"
+    },
+    {
+      "coordinates": [1206, 894],
+      "name": "Nyagan"
+    },
+    {
+      "coordinates": [1778, 1467],
+      "name": "Tulun"
+    },
+    {
+      "coordinates": [1452, 822],
+      "name": "Nadym"
+    },
+    {
+      "coordinates": [1106, 713],
+      "name": "Pechora"
+    },
+    {
+      "coordinates": [1131, 685],
+      "name": "Usinsk"
+    },
+    {
+      "coordinates": [415, 1268],
+      "name": "Akhtubinsk"
+    },
+    {
+      "coordinates": [1753, 1441],
+      "name": "Nizhneudinsk"
+    },
+    {
+      "coordinates": [811, 1071],
+      "name": "Birsk"
+    },
+    {
+      "coordinates": [1469, 1573],
+      "name": "Ulaangom"
+    },
+    {
+      "coordinates": [749, 792],
+      "name": "Veliky Ustyug"
+    },
+    {
+      "coordinates": [1491, 1182],
+      "name": "Kolpashevo"
+    },
+    {
+      "coordinates": [1264, 1166],
+      "name": "Tara"
+    },
+    {
+      "coordinates": [665, 747],
+      "name": "Velsk"
+    },
+    {
+      "coordinates": [1998, 1496],
+      "name": "Severobaykalsk"
+    },
+    {
+      "coordinates": [1950, 1425],
+      "name": "Ust-Kut"
+    },
+    {
+      "coordinates": [738, 1291],
+      "name": "Khromtau"
+    },
+    {
+      "coordinates": [1857, 784],
+      "name": "Dudinka"
+    },
+    {
+      "coordinates": [1194, 703],
+      "name": "Inta"
+    },
+    {
+      "coordinates": [653, 605],
+      "name": "Onega"
+    },
+    {
+      "coordinates": [2170, 1448],
+      "name": "Bodaybo"
+    },
+    {
+      "coordinates": [2353, 1110],
+      "name": "Udachny"
+    },
+    {
+      "coordinates": [2485, 1286],
+      "name": "Vilyuysk"
+    },
+    {
+      "coordinates": [1212, 846],
+      "name": "Igrim"
+    },
+    {
+      "coordinates": [2763, 1440],
+      "name": "Khandyga"
+    },
+    {
+      "coordinates": [644, 470],
+      "name": "Umba"
+    },
+    {
+      "coordinates": [1640, 798],
+      "name": "Tazovsky"
+    },
+    {
+      "coordinates": [2029, 1093],
+      "name": "Tura"
+    },
+    {
+      "coordinates": [2264, 1240],
+      "name": "Chernyshevsky"
+    },
+    {
+      "coordinates": [1800, 935],
+      "name": "Turukhansk"
+    },
+    {
+      "coordinates": [2618, 1326],
+      "name": "Sangar"
+    },
+    {
+      "coordinates": [2065, 1497],
+      "name": "Novy Uoyan"
+    },
+    {
+      "coordinates": [1457, 1518],
+      "name": "Teeli"
+    },
+    {
+      "coordinates": [630, 320],
+      "name": "Kirkenes"
+    },
+    {
+      "coordinates": [2536, 914],
+      "name": "Saskylakh"
+    },
+    {
+      "coordinates": [1519, 743],
+      "name": "Novy Port"
+    },
+    {
+      "coordinates": [2704, 1508],
+      "name": "Eldikan"
+    },
+    {
+      "coordinates": [2752, 1075],
+      "name": "Govorovo"
+    },
+    {
+      "coordinates": [2091, 1303],
+      "name": "Yerema"
+    },
+    {
+      "coordinates": [1326, 573],
+      "name": "Amderma"
+    },
+    {
+      "coordinates": [1859, 676],
+      "name": "Vorontsovo"
+    },
+    {
+      "coordinates": [612, 458],
+      "name": "Kovda"
+    },
+    {
+      "coordinates": [1725, 666],
+      "name": "Gyda"
+    },
+    {
+      "coordinates": [1723, 1097],
+      "name": "Komsa"
+    },
+    {
+      "coordinates": [2635, 1138],
+      "name": "Menkere"
+    },
+    {
+      "coordinates": [2024, 574],
+      "name": "Mikhaylova"
+    },
+    {
+      "coordinates": [1377, 884],
+      "name": "Numto"
+    },
+    {
+      "coordinates": [2410, 1030],
+      "name": "Olenyok"
+    },
+    {
+      "coordinates": [2354, 806],
+      "name": "Starorybnoye"
+    },
+    {
+      "coordinates": [2478, 1253],
+      "name": "Terbyas"
+    },
+    {
+      "coordinates": [627, 1096],
+      "name": "Tolyatti"
+    },
+    {
+      "coordinates": [272, 1202],
+      "name": "Luhansk"
+    },
+    {
+      "coordinates": [216, 926],
+      "name": "Mogilev"
+    },
+    {
+      "coordinates": [414, 927],
+      "name": "Podolsk"
+    },
+    {
+      "coordinates": [522, 787],
+      "name": "Cherepovets"
+    },
+    {
+      "coordinates": [550, 1035],
+      "name": "Saransk"
+    },
+    {
+      "coordinates": [735, 1032],
+      "name": "Nizhnekamsk"
+    },
+    {
+      "coordinates": [312, 1085],
+      "name": "Stary Oskol"
+    },
+    {
+      "coordinates": [270, 1241],
+      "name": "Shakhty"
+    },
+    {
+      "coordinates": [1385, 1420],
+      "name": "Biysk"
+    },
+    {
+      "coordinates": [217, 1352],
+      "name": "Armavir"
+    },
+    {
+      "coordinates": [499, 1144],
+      "name": "Engels"
+    },
+    {
+      "coordinates": [978, 1084],
+      "name": "Kamensk-Uralsky"
+    },
+    {
+      "coordinates": [1621, 778],
+      "name": "Nakhodka"
+    },
+    {
+      "coordinates": [523, 920],
+      "name": "Kovrov"
+    },
+    {
+      "coordinates": [125, 1301],
+      "name": "Kerch"
+    },
+    {
+      "coordinates": [399, 944],
+      "name": "Serpukhov"
+    },
+    {
+      "coordinates": [446, 1193],
+      "name": "Kamyshin"
+    },
+    {
+      "coordinates": [800, 1035],
+      "name": "Neftekamsk"
+    },
+    {
+      "coordinates": [262, 1181],
+      "name": "Lysychansk"
+    },
+    {
+      "coordinates": [219, 1387],
+      "name": "Cherkessk"
+    },
+    {
+      "coordinates": [296, 1522],
+      "name": "Derbent"
+    },
+    {
+      "coordinates": [818, 944],
+      "name": "Glazov"
+    },
+    {
+      "coordinates": [286, 1025],
+      "name": "Zheleznogorsk"
+    },
+    {
+      "coordinates": [231, 1028],
+      "name": "Shostka"
+    },
+    {
+      "coordinates": [553, 1087],
+      "name": "Kuznetsk"
+    },
+    {
+      "coordinates": [362, 708],
+      "name": "Gatchina"
+    },
+    {
+      "coordinates": [447, 939],
+      "name": "Yegoryevsk"
+    },
+    {
+      "coordinates": [668, 1145],
+      "name": "Buzuluk"
+    },
+    {
+      "coordinates": [1464, 1296],
+      "name": "Yurga"
+    },
+    {
+      "coordinates": [908, 1170],
+      "name": "Troitsk"
+    },
+    {
+      "coordinates": [1006, 1111],
+      "name": "Shadrinsk"
+    },
+    {
+      "coordinates": [937, 980],
+      "name": "Chusovoy"
+    },
+    {
+      "coordinates": [541, 1134],
+      "name": "Volsk"
+    },
+    {
+      "coordinates": [748, 1087],
+      "name": "Tuymazy"
+    },
+    {
+      "coordinates": [1136, 1155],
+      "name": "Ishim"
+    },
+    {
+      "coordinates": [895, 1005],
+      "name": "Kungur"
+    },
+    {
+      "coordinates": [228, 984],
+      "name": "Klintsy"
+    },
+    {
+      "coordinates": [940, 1069],
+      "name": "Polevskoy"
+    },
+    {
+      "coordinates": [746, 1174],
+      "name": "Kumertau"
+    },
+    {
+      "coordinates": [218, 1312],
+      "name": "Tikhoretsk"
+    },
+    {
+      "coordinates": [701, 1033],
+      "name": "Çistay"
+    },
+    {
+      "coordinates": [439, 732],
+      "name": "Tikhvin"
+    },
+    {
+      "coordinates": [265, 1299],
+      "name": "Salsk"
+    },
+    {
+      "coordinates": [423, 892],
+      "name": "Solnechnogorsk"
+    },
+    {
+      "coordinates": [1403, 971],
+      "name": "Kogalym"
+    },
+    {
+      "coordinates": [273, 944],
+      "name": "Roslavl"
+    },
+    {
+      "coordinates": [1537, 1449],
+      "name": "Sayanogorsk"
+    },
+    {
+      "coordinates": [338, 907],
+      "name": "Vyazma"
+    },
+    {
+      "coordinates": [337, 1040],
+      "name": "Livny"
+    },
+    {
+      "coordinates": [886, 971],
+      "name": "Krasnokamsk"
+    },
+    {
+      "coordinates": [449, 869],
+      "name": "Kimry"
+    },
+    {
+      "coordinates": [928, 1101],
+      "name": "Kyshtym"
+    },
+    {
+      "coordinates": [664, 1115],
+      "name": "Otradny"
+    },
+    {
+      "coordinates": [635, 1002],
+      "name": "Kanash"
+    },
+    {
+      "coordinates": [456, 1035],
+      "name": "Morshansk"
+    },
+    {
+      "coordinates": [781, 902],
+      "name": "Slobodskoy"
+    },
+    {
+      "coordinates": [401, 844],
+      "name": "Torzhok"
+    },
+    {
+      "coordinates": [1569, 750],
+      "name": "Yamburg"
+    },
+    {
+      "coordinates": [294, 1228],
+      "name": "Belaya Kalitva"
+    },
+    {
+      "coordinates": [390, 1057],
+      "name": "Gryazi"
+    },
+    {
+      "coordinates": [764, 1004],
+      "name": "Mozhga"
+    },
+    {
+      "coordinates": [313, 901],
+      "name": "Safonovo"
+    },
+    {
+      "coordinates": [599, 1020],
+      "name": "Alatyr"
+    },
+    {
+      "coordinates": [420, 712],
+      "name": "Volkhov"
+    },
+    {
+      "coordinates": [367, 1017],
+      "name": "Yefremov"
+    },
+    {
+      "coordinates": [1436, 1046],
+      "name": "Strezhevoy"
+    },
+    {
+      "coordinates": [1001, 1048],
+      "name": "Artyomovsky"
+    },
+    {
+      "coordinates": [1334, 1341],
+      "name": "Kamen-na-Obi"
+    },
+    {
+      "coordinates": [1540, 1301],
+      "name": "Mariinsk"
+    },
+    {
+      "coordinates": [891, 1044],
+      "name": "Krasnoufimsk"
+    },
+    {
+      "coordinates": [579, 792],
+      "name": "Sokol"
+    },
+    {
+      "coordinates": [919, 1143],
+      "name": "Yemanzhelinsk"
+    },
+    {
+      "coordinates": [389, 1139],
+      "name": "Uryupinsk"
+    },
+    {
+      "coordinates": [262, 1397],
+      "name": "Zelenokumsk"
+    },
+    {
+      "coordinates": [399, 1190],
+      "name": "Frolovo"
+    },
+    {
+      "coordinates": [334, 737],
+      "name": "Luga"
+    },
+    {
+      "coordinates": [1138, 965],
+      "name": "Uray"
+    },
+    {
+      "coordinates": [314, 1117],
+      "name": "Alexeyevka"
+    },
+    {
+      "coordinates": [1094, 1049],
+      "name": "Tavda"
+    },
+    {
+      "coordinates": [559, 892],
+      "name": "Vichuga"
+    },
+    {
+      "coordinates": [837, 1101],
+      "name": "Asha"
+    },
+    {
+      "coordinates": [1449, 1359],
+      "name": "Guryevsk"
+    },
+    {
+      "coordinates": [487, 975],
+      "name": "Kasimov"
+    },
+    {
+      "coordinates": [483, 1092],
+      "name": "Serdobsk"
+    },
+    {
+      "coordinates": [270, 1367],
+      "name": "Blagodarny"
+    },
+    {
+      "coordinates": [2141, 824],
+      "name": "Boyarka"
+    },
+    {
+      "coordinates": [1080, 1110],
+      "name": "Yalutorovsk"
+    },
+    {
+      "coordinates": [289, 1129],
+      "name": "Valuyki"
+    },
+    {
+      "coordinates": [669, 877],
+      "name": "Sharya"
+    },
+    {
+      "coordinates": [612, 995],
+      "name": "Shumerlya"
+    },
+    {
+      "coordinates": [643, 1213],
+      "name": "Aksay"
+    },
+    {
+      "coordinates": [458, 829],
+      "name": "Bezhetsk"
+    },
+    {
+      "coordinates": [1255, 1350],
+      "name": "Slavgorod"
+    }
+  ],
   "nations": [
     {
       "coordinates": [715, 415],

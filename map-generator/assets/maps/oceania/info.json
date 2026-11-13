@@ -6,6 +6,808 @@
   "categories": ["oceania", "continental"],
   "location": { "lat": -12, "lon": 160 },
   "author": "evanpelle",
+  "places": [
+    {
+      "coordinates": [184, 381],
+      "name": "Jakarta"
+    },
+    {
+      "coordinates": [741, 730],
+      "name": "Sydney"
+    },
+    {
+      "coordinates": [367, 119],
+      "name": "Manila"
+    },
+    {
+      "coordinates": [108, 130],
+      "name": "Bangkok"
+    },
+    {
+      "coordinates": [662, 779],
+      "name": "Melbourne"
+    },
+    {
+      "coordinates": [1039, 766],
+      "name": "Auckland"
+    },
+    {
+      "coordinates": [186, 168],
+      "name": "Ho Chi Minh City"
+    },
+    {
+      "coordinates": [177, 39],
+      "name": "Hanoi"
+    },
+    {
+      "coordinates": [54, 92],
+      "name": "Yangon"
+    },
+    {
+      "coordinates": [259, 395],
+      "name": "Surabaya"
+    },
+    {
+      "coordinates": [194, 391],
+      "name": "Bandung"
+    },
+    {
+      "coordinates": [209, 16],
+      "name": "Nanning"
+    },
+    {
+      "coordinates": [83, 259],
+      "name": "Medan"
+    },
+    {
+      "coordinates": [121, 264],
+      "name": "Kuala Lumpur"
+    },
+    {
+      "coordinates": [766, 648],
+      "name": "Brisbane"
+    },
+    {
+      "coordinates": [159, 341],
+      "name": "Palembang"
+    },
+    {
+      "coordinates": [425, 214],
+      "name": "Davao City"
+    },
+    {
+      "coordinates": [230, 391],
+      "name": "Semarang"
+    },
+    {
+      "coordinates": [344, 368],
+      "name": "Makassar"
+    },
+    {
+      "coordinates": [54, 55],
+      "name": "Naypyidaw"
+    },
+    {
+      "coordinates": [135, 77],
+      "name": "Vientiane"
+    },
+    {
+      "coordinates": [283, 345],
+      "name": "Banjarmasin"
+    },
+    {
+      "coordinates": [749, 716],
+      "name": "Newcastle"
+    },
+    {
+      "coordinates": [1039, 823],
+      "name": "Wellington"
+    },
+    {
+      "coordinates": [387, 168],
+      "name": "Iloilo City"
+    },
+    {
+      "coordinates": [1011, 851],
+      "name": "Christchurch"
+    },
+    {
+      "coordinates": [715, 747],
+      "name": "Canberra"
+    },
+    {
+      "coordinates": [695, 422],
+      "name": "Port Moresby"
+    },
+    {
+      "coordinates": [421, 411],
+      "name": "Dili"
+    },
+    {
+      "coordinates": [323, 262],
+      "name": "Tarakan"
+    },
+    {
+      "coordinates": [688, 545],
+      "name": "Townsville"
+    },
+    {
+      "coordinates": [488, 460],
+      "name": "Darwin"
+    },
+    {
+      "coordinates": [690, 843],
+      "name": "Hobart"
+    },
+    {
+      "coordinates": [961, 526],
+      "name": "Port Vila"
+    },
+    {
+      "coordinates": [524, 602],
+      "name": "Alice Springs"
+    },
+    {
+      "coordinates": [104, 235],
+      "name": "George Town"
+    },
+    {
+      "coordinates": [234, 36],
+      "name": "Zhanjiang"
+    },
+    {
+      "coordinates": [54, 27],
+      "name": "Mandalay"
+    },
+    {
+      "coordinates": [232, 18],
+      "name": "Yulin"
+    },
+    {
+      "coordinates": [419, 226],
+      "name": "General Santos"
+    },
+    {
+      "coordinates": [165, 372],
+      "name": "Bandar Lampung"
+    },
+    {
+      "coordinates": [230, 284],
+      "name": "Kuching"
+    },
+    {
+      "coordinates": [41, 234],
+      "name": "Banda Aceh"
+    },
+    {
+      "coordinates": [363, 96],
+      "name": "Baguio"
+    },
+    {
+      "coordinates": [312, 319],
+      "name": "Balikpapan"
+    },
+    {
+      "coordinates": [247, 8],
+      "name": "Wuzhou"
+    },
+    {
+      "coordinates": [90, 67],
+      "name": "Chiang Mai"
+    },
+    {
+      "coordinates": [391, 296],
+      "name": "Gorontalo"
+    },
+    {
+      "coordinates": [456, 350],
+      "name": "Ambon"
+    },
+    {
+      "coordinates": [128, 115],
+      "name": "Nakhon Ratchasima"
+    },
+    {
+      "coordinates": [396, 431],
+      "name": "Kupang"
+    },
+    {
+      "coordinates": [363, 74],
+      "name": "Laoag"
+    },
+    {
+      "coordinates": [446, 293],
+      "name": "Ternate"
+    },
+    {
+      "coordinates": [13, 50],
+      "name": "Sittwe"
+    },
+    {
+      "coordinates": [187, 2],
+      "name": "Baicheng"
+    },
+    {
+      "coordinates": [614, 335],
+      "name": "Jayapura"
+    },
+    {
+      "coordinates": [92, 188],
+      "name": "Surat Thani"
+    },
+    {
+      "coordinates": [142, 139],
+      "name": "Battambang"
+    },
+    {
+      "coordinates": [676, 516],
+      "name": "Cairns"
+    },
+    {
+      "coordinates": [143, 9],
+      "name": "Gejiu"
+    },
+    {
+      "coordinates": [1046, 778],
+      "name": "Hamilton"
+    },
+    {
+      "coordinates": [693, 388],
+      "name": "Lae"
+    },
+    {
+      "coordinates": [983, 880],
+      "name": "Dunedin"
+    },
+    {
+      "coordinates": [335, 410],
+      "name": "Raba"
+    },
+    {
+      "coordinates": [347, 354],
+      "name": "Parepare"
+    },
+    {
+      "coordinates": [653, 766],
+      "name": "Bendigo"
+    },
+    {
+      "coordinates": [735, 597],
+      "name": "Rockhampton"
+    },
+    {
+      "coordinates": [196, 338],
+      "name": "Tanjung Pandan"
+    },
+    {
+      "coordinates": [658, 377],
+      "name": "Mount Hagen"
+    },
+    {
+      "coordinates": [1066, 800],
+      "name": "Napier"
+    },
+    {
+      "coordinates": [673, 379],
+      "name": "Goroka"
+    },
+    {
+      "coordinates": [715, 722],
+      "name": "Orange"
+    },
+    {
+      "coordinates": [365, 690],
+      "name": "Kalgoorlie"
+    },
+    {
+      "coordinates": [595, 564],
+      "name": "Mount Isa"
+    },
+    {
+      "coordinates": [709, 709],
+      "name": "Dubbo"
+    },
+    {
+      "coordinates": [319, 744],
+      "name": "Albany"
+    },
+    {
+      "coordinates": [748, 687],
+      "name": "Armidale"
+    },
+    {
+      "coordinates": [569, 719],
+      "name": "Whyalla"
+    },
+    {
+      "coordinates": [678, 822],
+      "name": "Devonport"
+    },
+    {
+      "coordinates": [618, 705],
+      "name": "Broken Hill"
+    },
+    {
+      "coordinates": [309, 564],
+      "name": "Karratha"
+    },
+    {
+      "coordinates": [676, 735],
+      "name": "Griffith"
+    },
+    {
+      "coordinates": [331, 559],
+      "name": "Port Hedland"
+    },
+    {
+      "coordinates": [679, 761],
+      "name": "Wangaratta"
+    },
+    {
+      "coordinates": [547, 741],
+      "name": "Port Lincoln"
+    },
+    {
+      "coordinates": [505, 485],
+      "name": "Katherine"
+    },
+    {
+      "coordinates": [759, 356],
+      "name": "Rabaul"
+    },
+    {
+      "coordinates": [635, 623],
+      "name": "Windorah"
+    },
+    {
+      "coordinates": [233, 51],
+      "name": "Haikou"
+    },
+    {
+      "coordinates": [413, 197],
+      "name": "Cagayan de Oro"
+    },
+    {
+      "coordinates": [174, 177],
+      "name": "Cần Thơ"
+    },
+    {
+      "coordinates": [218, 130],
+      "name": "Qui Nhơn"
+    },
+    {
+      "coordinates": [117, 296],
+      "name": "Pekanbaru"
+    },
+    {
+      "coordinates": [395, 132],
+      "name": "Naga"
+    },
+    {
+      "coordinates": [113, 246],
+      "name": "Ipoh"
+    },
+    {
+      "coordinates": [350, 315],
+      "name": "Palu"
+    },
+    {
+      "coordinates": [217, 304],
+      "name": "Pontianak"
+    },
+    {
+      "coordinates": [174, 68],
+      "name": "Vinh"
+    },
+    {
+      "coordinates": [304, 228],
+      "name": "Kota Kinabalu"
+    },
+    {
+      "coordinates": [128, 227],
+      "name": "Kota Bharu"
+    },
+    {
+      "coordinates": [145, 324],
+      "name": "Jambi"
+    },
+    {
+      "coordinates": [414, 285],
+      "name": "Manado"
+    },
+    {
+      "coordinates": [217, 149],
+      "name": "Nha Trang"
+    },
+    {
+      "coordinates": [329, 230],
+      "name": "Sandakan"
+    },
+    {
+      "coordinates": [142, 255],
+      "name": "Kuantan"
+    },
+    {
+      "coordinates": [223, 73],
+      "name": "Sanya"
+    },
+    {
+      "coordinates": [106, 216],
+      "name": "Hat Yai"
+    },
+    {
+      "coordinates": [327, 250],
+      "name": "Tawau"
+    },
+    {
+      "coordinates": [271, 406],
+      "name": "Jember"
+    },
+    {
+      "coordinates": [408, 212],
+      "name": "Cotabato City"
+    },
+    {
+      "coordinates": [163, 111],
+      "name": "Ubon Ratchathani"
+    },
+    {
+      "coordinates": [84, 147],
+      "name": "Myeik"
+    },
+    {
+      "coordinates": [206, 388],
+      "name": "Cirebon"
+    },
+    {
+      "coordinates": [138, 97],
+      "name": "Khon Kaen"
+    },
+    {
+      "coordinates": [100, 198],
+      "name": "Nakhon Si Thammarat"
+    },
+    {
+      "coordinates": [84, 282],
+      "name": "Sibolga"
+    },
+    {
+      "coordinates": [250, 274],
+      "name": "Sibu"
+    },
+    {
+      "coordinates": [176, 54],
+      "name": "Thanh Hóa"
+    },
+    {
+      "coordinates": [186, 83],
+      "name": "Đồng Hới"
+    },
+    {
+      "coordinates": [385, 353],
+      "name": "Kendari"
+    },
+    {
+      "coordinates": [203, 127],
+      "name": "Pleiku"
+    },
+    {
+      "coordinates": [80, 204],
+      "name": "Phuket"
+    },
+    {
+      "coordinates": [64, 238],
+      "name": "Lhokseumawe"
+    },
+    {
+      "coordinates": [42, 67],
+      "name": "Pyay"
+    },
+    {
+      "coordinates": [38, 50],
+      "name": "Magway"
+    },
+    {
+      "coordinates": [177, 330],
+      "name": "Pangkal Pinang"
+    },
+    {
+      "coordinates": [495, 314],
+      "name": "Sorong"
+    },
+    {
+      "coordinates": [377, 81],
+      "name": "Tuguegarao"
+    },
+    {
+      "coordinates": [321, 302],
+      "name": "Bontang"
+    },
+    {
+      "coordinates": [936, 583],
+      "name": "Noumea"
+    },
+    {
+      "coordinates": [752, 650],
+      "name": "Toowoomba"
+    },
+    {
+      "coordinates": [163, 95],
+      "name": "Savannakhet"
+    },
+    {
+      "coordinates": [1049, 811],
+      "name": "Palmerston North"
+    },
+    {
+      "coordinates": [718, 569],
+      "name": "Mackay"
+    },
+    {
+      "coordinates": [530, 314],
+      "name": "Manokwari"
+    },
+    {
+      "coordinates": [413, 151],
+      "name": "Calbayog"
+    },
+    {
+      "coordinates": [143, 351],
+      "name": "Lahat"
+    },
+    {
+      "coordinates": [1058, 783],
+      "name": "Rotorua"
+    },
+    {
+      "coordinates": [357, 412],
+      "name": "Ruteng"
+    },
+    {
+      "coordinates": [758, 616],
+      "name": "Bundaberg"
+    },
+    {
+      "coordinates": [1034, 752],
+      "name": "Whangārei"
+    },
+    {
+      "coordinates": [956, 887],
+      "name": "Invercargill"
+    },
+    {
+      "coordinates": [764, 699],
+      "name": "Port Macquarie"
+    },
+    {
+      "coordinates": [627, 733],
+      "name": "Mildura"
+    },
+    {
+      "coordinates": [548, 345],
+      "name": "Nabire"
+    },
+    {
+      "coordinates": [57, 71],
+      "name": "Pyu"
+    },
+    {
+      "coordinates": [738, 694],
+      "name": "Tamworth"
+    },
+    {
+      "coordinates": [609, 410],
+      "name": "Merauke"
+    },
+    {
+      "coordinates": [1080, 789],
+      "name": "Gisborne"
+    },
+    {
+      "coordinates": [769, 666],
+      "name": "Lismore"
+    },
+    {
+      "coordinates": [630, 786],
+      "name": "Warrnambool"
+    },
+    {
+      "coordinates": [993, 862],
+      "name": "Timaru"
+    },
+    {
+      "coordinates": [651, 348],
+      "name": "Wewak"
+    },
+    {
+      "coordinates": [1101, 509],
+      "name": "Labasa"
+    },
+    {
+      "coordinates": [608, 779],
+      "name": "Mount Gambier"
+    },
+    {
+      "coordinates": [961, 870],
+      "name": "Queenstown"
+    },
+    {
+      "coordinates": [706, 555],
+      "name": "Bowen"
+    },
+    {
+      "coordinates": [725, 674],
+      "name": "Moree"
+    },
+    {
+      "coordinates": [370, 730],
+      "name": "Esperance"
+    },
+    {
+      "coordinates": [267, 617],
+      "name": "Carnarvon"
+    },
+    {
+      "coordinates": [304, 702],
+      "name": "Northam"
+    },
+    {
+      "coordinates": [460, 502],
+      "name": "Kununurra"
+    },
+    {
+      "coordinates": [712, 637],
+      "name": "Roma"
+    },
+    {
+      "coordinates": [345, 598],
+      "name": "Newman"
+    },
+    {
+      "coordinates": [731, 662],
+      "name": "Goondiwindi"
+    },
+    {
+      "coordinates": [297, 735],
+      "name": "Manjimup"
+    },
+    {
+      "coordinates": [529, 551],
+      "name": "Tennant Creek"
+    },
+    {
+      "coordinates": [399, 521],
+      "name": "Derby"
+    },
+    {
+      "coordinates": [627, 462],
+      "name": "Weipa"
+    },
+    {
+      "coordinates": [680, 635],
+      "name": "Charleville"
+    },
+    {
+      "coordinates": [520, 707],
+      "name": "Ceduna"
+    },
+    {
+      "coordinates": [447, 533],
+      "name": "Halls Creek"
+    },
+    {
+      "coordinates": [608, 564],
+      "name": "Cloncurry"
+    },
+    {
+      "coordinates": [369, 709],
+      "name": "Norseman"
+    },
+    {
+      "coordinates": [487, 621],
+      "name": "Yulara"
+    },
+    {
+      "coordinates": [647, 533],
+      "name": "Georgetown"
+    },
+    {
+      "coordinates": [328, 638],
+      "name": "Meekatharra"
+    },
+    {
+      "coordinates": [655, 638],
+      "name": "Quilpie"
+    },
+    {
+      "coordinates": [655, 565],
+      "name": "Hughenden"
+    },
+    {
+      "coordinates": [378, 664],
+      "name": "Laverton"
+    },
+    {
+      "coordinates": [364, 667],
+      "name": "Leonora"
+    },
+    {
+      "coordinates": [649, 656],
+      "name": "Thargomindah"
+    },
+    {
+      "coordinates": [293, 675],
+      "name": "Three Springs"
+    },
+    {
+      "coordinates": [578, 554],
+      "name": "Camooweal"
+    },
+    {
+      "coordinates": [613, 523],
+      "name": "Karumba"
+    },
+    {
+      "coordinates": [515, 621],
+      "name": "Erldunda"
+    },
+    {
+      "coordinates": [255, 28],
+      "name": "Yangjiang"
+    },
+    {
+      "coordinates": [268, 5],
+      "name": "Qingyuan"
+    },
+    {
+      "coordinates": [104, 307],
+      "name": "Bukittinggi"
+    },
+    {
+      "coordinates": [73, 96],
+      "name": "Mawlamyine"
+    },
+    {
+      "coordinates": [166, 188],
+      "name": "Cà Mau"
+    },
+    {
+      "coordinates": [140, 236],
+      "name": "Kuala Terengganu"
+    },
+    {
+      "coordinates": [203, 144],
+      "name": "Buôn Ma Thuột"
+    },
+    {
+      "coordinates": [289, 4],
+      "name": "Heyuan"
+    },
+    {
+      "coordinates": [11, 5],
+      "name": "Aizawl"
+    },
+    {
+      "coordinates": [214, 113],
+      "name": "Quảng Ngãi"
+    },
+    {
+      "coordinates": [213, 292],
+      "name": "Singkawang"
+    },
+    {
+      "coordinates": [36, 92],
+      "name": "Pathein"
+    },
+    {
+      "coordinates": [289, 406],
+      "name": "Singaraja"
+    },
+    {
+      "coordinates": [277, 248],
+      "name": "Miri"
+    }
+  ],
   "nations": [
     {
       "coordinates": [515, 690],

@@ -6,6 +6,68 @@
   "categories": ["new", "oceania"],
   "location": { "lat": -41.5, "lon": 172.5 },
   "author": "Tristar",
+  "places": [
+    {
+      "coordinates": [1200, 716],
+      "name": "Manukau City"
+    },
+    {
+      "coordinates": [1326, 898],
+      "name": "Tauranga"
+    },
+    {
+      "coordinates": [1129, 454],
+      "name": "Whangārei"
+    },
+    {
+      "coordinates": [1335, 1083],
+      "name": "Taupō"
+    },
+    {
+      "coordinates": [769, 1986],
+      "name": "Queenstown"
+    },
+    {
+      "coordinates": [1293, 1413],
+      "name": "Levin"
+    },
+    {
+      "coordinates": [1405, 980],
+      "name": "Whakatāne"
+    },
+    {
+      "coordinates": [939, 1640],
+      "name": "Hokitika"
+    },
+    {
+      "coordinates": [1205, 755],
+      "name": "Pukekohe"
+    },
+    {
+      "coordinates": [1267, 907],
+      "name": "Cambridge"
+    },
+    {
+      "coordinates": [1186, 1179],
+      "name": "Hāwera"
+    },
+    {
+      "coordinates": [1266, 770],
+      "name": "Thames"
+    },
+    {
+      "coordinates": [802, 1942],
+      "name": "Wanaka"
+    },
+    {
+      "coordinates": [1316, 1128],
+      "name": "Tūrangi"
+    },
+    {
+      "coordinates": [955, 1604],
+      "name": "Greymouth"
+    }
+  ],
   "nations": [
     {
       "coordinates": [1096, 415],

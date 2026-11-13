@@ -507,6 +507,10 @@ function getCachedLangSelector(): LangSelector | null {
   return found;
 }
 
+/** The selected UI language code ("ko", "en", …), "en" before it is known. */
+export const currentLanguage = (): string =>
+  getCachedLangSelector()?.currentLang ?? "en";
+
 /** Language codes whose script reads right-to-left (resources/lang/metadata.json). */
 const RTL_LANGUAGES = new Set(["ar", "fa", "he"]);
 

@@ -336,6 +336,440 @@
       "name": "Chiapas"
     }
   ],
+  "places": [
+    {
+      "coordinates": [2418, 1605],
+      "name": "Medellin"
+    },
+    {
+      "coordinates": [2378, 1946],
+      "name": "Cali"
+    },
+    {
+      "coordinates": [1327, 1385],
+      "name": "San José"
+    },
+    {
+      "coordinates": [456, 1005],
+      "name": "Guatemala City"
+    },
+    {
+      "coordinates": [411, 278],
+      "name": "Mérida"
+    },
+    {
+      "coordinates": [96, 826],
+      "name": "Tuxtla Gutiérrez"
+    },
+    {
+      "coordinates": [2397, 1066],
+      "name": "Barranquilla"
+    },
+    {
+      "coordinates": [334, 1004],
+      "name": "Quetzaltenango"
+    },
+    {
+      "coordinates": [2454, 1739],
+      "name": "Manizales"
+    },
+    {
+      "coordinates": [1450, 1355],
+      "name": "Limón"
+    },
+    {
+      "coordinates": [95, 681],
+      "name": "Villahermosa"
+    },
+    {
+      "coordinates": [2322, 1336],
+      "name": "Montería"
+    },
+    {
+      "coordinates": [244, 1013],
+      "name": "Tapachula"
+    },
+    {
+      "coordinates": [625, 524],
+      "name": "Chetumal"
+    },
+    {
+      "coordinates": [1510, 1543],
+      "name": "Puerto Armuelles"
+    },
+    {
+      "coordinates": [2441, 1771],
+      "name": "Pereira"
+    },
+    {
+      "coordinates": [2447, 1802],
+      "name": "Armenia"
+    },
+    {
+      "coordinates": [2369, 1265],
+      "name": "Sincelejo"
+    },
+    {
+      "coordinates": [585, 1054],
+      "name": "Santa Ana"
+    },
+    {
+      "coordinates": [2396, 1863],
+      "name": "Tuluá"
+    },
+    {
+      "coordinates": [206, 584],
+      "name": "Ciudad del Carmen"
+    },
+    {
+      "coordinates": [904, 1152],
+      "name": "Chinandega"
+    },
+    {
+      "coordinates": [434, 1047],
+      "name": "Escuintla"
+    },
+    {
+      "coordinates": [1060, 1204],
+      "name": "Granada"
+    },
+    {
+      "coordinates": [2304, 1694],
+      "name": "Quibdó"
+    },
+    {
+      "coordinates": [328, 948],
+      "name": "Huehuetenango"
+    },
+    {
+      "coordinates": [342, 1037],
+      "name": "Mazatenango"
+    },
+    {
+      "coordinates": [2388, 1212],
+      "name": "El Carmen de Bolívar"
+    },
+    {
+      "coordinates": [2319, 1280],
+      "name": "Santa Cruz de Lorica"
+    },
+    {
+      "coordinates": [1737, 1521],
+      "name": "Santiago de Veraguas"
+    },
+    {
+      "coordinates": [580, 227],
+      "name": "Tizimín"
+    },
+    {
+      "coordinates": [476, 733],
+      "name": "Flores"
+    },
+    {
+      "coordinates": [961, 905],
+      "name": "Juticalpa"
+    },
+    {
+      "coordinates": [281, 707],
+      "name": "Tenosique"
+    },
+    {
+      "coordinates": [1087, 1256],
+      "name": "Rivas"
+    },
+    {
+      "coordinates": [1276, 1349],
+      "name": "Quesada"
+    },
+    {
+      "coordinates": [435, 339],
+      "name": "Ticul"
+    },
+    {
+      "coordinates": [320, 482],
+      "name": "Champotón"
+    },
+    {
+      "coordinates": [2419, 1367],
+      "name": "Ayapel"
+    },
+    {
+      "coordinates": [111, 611],
+      "name": "Frontera"
+    },
+    {
+      "coordinates": [605, 575],
+      "name": "Orange Walk Town"
+    },
+    {
+      "coordinates": [482, 269],
+      "name": "Izamal"
+    },
+    {
+      "coordinates": [1828, 1544],
+      "name": "Las Tablas"
+    },
+    {
+      "coordinates": [963, 761],
+      "name": "Trujillo"
+    },
+    {
+      "coordinates": [452, 756],
+      "name": "La Libertad"
+    },
+    {
+      "coordinates": [623, 802],
+      "name": "Punta Gorda"
+    },
+    {
+      "coordinates": [1237, 785],
+      "name": "Puerto Lempira"
+    },
+    {
+      "coordinates": [1118, 1293],
+      "name": "La Cruz"
+    },
+    {
+      "coordinates": [1141, 746],
+      "name": "Brus Laguna"
+    },
+    {
+      "coordinates": [1416, 1482],
+      "name": "Ciudad Cortés"
+    },
+    {
+      "coordinates": [2141, 1559],
+      "name": "Juradó"
+    },
+    {
+      "coordinates": [2065, 1425],
+      "name": "La Palma"
+    },
+    {
+      "coordinates": [1510, 1399],
+      "name": "Sixaola"
+    },
+    {
+      "coordinates": [1349, 1267],
+      "name": "San Juan de Nicaragua"
+    },
+    {
+      "coordinates": [1308, 1379],
+      "name": "Alajuela"
+    },
+    {
+      "coordinates": [759, 1080],
+      "name": "San Miguel"
+    },
+    {
+      "coordinates": [1347, 1389],
+      "name": "Cartago"
+    },
+    {
+      "coordinates": [157, 814],
+      "name": "San Cristóbal de las Casas"
+    },
+    {
+      "coordinates": [546, 805],
+      "name": "San Luis"
+    },
+    {
+      "coordinates": [984, 1084],
+      "name": "Estelí"
+    },
+    {
+      "coordinates": [2446, 1258],
+      "name": "Magangué"
+    },
+    {
+      "coordinates": [2391, 1104],
+      "name": "Sabanalarga"
+    },
+    {
+      "coordinates": [453, 907],
+      "name": "Cobán"
+    },
+    {
+      "coordinates": [1123, 1171],
+      "name": "Juigalpa"
+    },
+    {
+      "coordinates": [538, 1028],
+      "name": "Jutiapa"
+    },
+    {
+      "coordinates": [840, 1060],
+      "name": "Nacaome"
+    },
+    {
+      "coordinates": [1081, 1138],
+      "name": "Boaco"
+    },
+    {
+      "coordinates": [1801, 1462],
+      "name": "Penonomé"
+    },
+    {
+      "coordinates": [47, 644],
+      "name": "Paraíso"
+    },
+    {
+      "coordinates": [469, 356],
+      "name": "Tekax"
+    },
+    {
+      "coordinates": [447, 256],
+      "name": "Motul"
+    },
+    {
+      "coordinates": [1196, 1352],
+      "name": "Cañas"
+    },
+    {
+      "coordinates": [2462, 1662],
+      "name": "Sonsón"
+    },
+    {
+      "coordinates": [513, 356],
+      "name": "Peto"
+    },
+    {
+      "coordinates": [636, 831],
+      "name": "Livingston"
+    },
+    {
+      "coordinates": [261, 673],
+      "name": "Balancán"
+    },
+    {
+      "coordinates": [368, 342],
+      "name": "Halachó"
+    },
+    {
+      "coordinates": [1541, 1419],
+      "name": "Almirante"
+    },
+    {
+      "coordinates": [1469, 1508],
+      "name": "Golfito"
+    },
+    {
+      "coordinates": [1026, 1076],
+      "name": "Jinotega"
+    },
+    {
+      "coordinates": [1033, 1219],
+      "name": "Jinotepe"
+    },
+    {
+      "coordinates": [568, 690],
+      "name": "San Ignacio"
+    },
+    {
+      "coordinates": [887, 726],
+      "name": "Roatán"
+    },
+    {
+      "coordinates": [511, 968],
+      "name": "El Progreso"
+    },
+    {
+      "coordinates": [420, 1007],
+      "name": "Chimaltenango"
+    },
+    {
+      "coordinates": [351, 991],
+      "name": "Totonicapán"
+    },
+    {
+      "coordinates": [665, 1071],
+      "name": "Cojutepeque"
+    },
+    {
+      "coordinates": [519, 992],
+      "name": "Jalapa"
+    },
+    {
+      "coordinates": [375, 1003],
+      "name": "Sololá"
+    },
+    {
+      "coordinates": [568, 964],
+      "name": "Chiquimula"
+    },
+    {
+      "coordinates": [469, 947],
+      "name": "Salamá"
+    },
+    {
+      "coordinates": [322, 1040],
+      "name": "Retalhuleu"
+    },
+    {
+      "coordinates": [565, 944],
+      "name": "Zacapa"
+    },
+    {
+      "coordinates": [553, 1068],
+      "name": "Ahuachapán"
+    },
+    {
+      "coordinates": [957, 1026],
+      "name": "Ocotal"
+    },
+    {
+      "coordinates": [638, 1035],
+      "name": "Chalatenango"
+    },
+    {
+      "coordinates": [298, 995],
+      "name": "San Marcos"
+    },
+    {
+      "coordinates": [375, 973],
+      "name": "Santa Cruz del Quiché"
+    },
+    {
+      "coordinates": [948, 1046],
+      "name": "Somoto"
+    },
+    {
+      "coordinates": [798, 976],
+      "name": "La Paz"
+    },
+    {
+      "coordinates": [491, 1038],
+      "name": "Cuilapa"
+    },
+    {
+      "coordinates": [764, 1054],
+      "name": "San Francisco Gotera"
+    },
+    {
+      "coordinates": [827, 885],
+      "name": "Yoro"
+    },
+    {
+      "coordinates": [719, 921],
+      "name": "Santa Bárbara"
+    },
+    {
+      "coordinates": [619, 996],
+      "name": "Nueva Ocotepeque"
+    },
+    {
+      "coordinates": [686, 967],
+      "name": "Gracias"
+    },
+    {
+      "coordinates": [741, 985],
+      "name": "La Esperanza"
+    },
+    {
+      "coordinates": [905, 1000],
+      "name": "Yuscarán"
+    }
+  ],
   "themes": ["north_america", "south_america"],
   "translation_key": "map.centralamerica"
 }

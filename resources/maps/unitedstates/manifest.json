@@ -331,6 +331,808 @@
       "name": "New Hampshire"
     }
   ],
+  "places": [
+    {
+      "coordinates": [1929, 1002],
+      "name": "Atlanta"
+    },
+    {
+      "coordinates": [1476, 1238],
+      "name": "Houston"
+    },
+    {
+      "coordinates": [352, 826],
+      "name": "San Francisco"
+    },
+    {
+      "coordinates": [1075, 684],
+      "name": "Denver"
+    },
+    {
+      "coordinates": [2311, 628],
+      "name": "Philadelphia"
+    },
+    {
+      "coordinates": [1413, 1075],
+      "name": "Dallas"
+    },
+    {
+      "coordinates": [781, 1056],
+      "name": "Phoenix"
+    },
+    {
+      "coordinates": [1561, 337],
+      "name": "Minneapolis"
+    },
+    {
+      "coordinates": [1686, 731],
+      "name": "St. Louis"
+    },
+    {
+      "coordinates": [1696, 1221],
+      "name": "New Orleans"
+    },
+    {
+      "coordinates": [340, 340],
+      "name": "Portland"
+    },
+    {
+      "coordinates": [2111, 609],
+      "name": "Pittsburgh"
+    },
+    {
+      "coordinates": [650, 908],
+      "name": "Las Vegas"
+    },
+    {
+      "coordinates": [375, 853],
+      "name": "San Jose"
+    },
+    {
+      "coordinates": [1926, 692],
+      "name": "Cincinnati"
+    },
+    {
+      "coordinates": [391, 777],
+      "name": "Sacramento"
+    },
+    {
+      "coordinates": [1344, 1260],
+      "name": "San Antonio"
+    },
+    {
+      "coordinates": [2168, 881],
+      "name": "Raleigh"
+    },
+    {
+      "coordinates": [2266, 818],
+      "name": "Norfolk"
+    },
+    {
+      "coordinates": [2157, 454],
+      "name": "Buffalo"
+    },
+    {
+      "coordinates": [786, 630],
+      "name": "Salt Lake City"
+    },
+    {
+      "coordinates": [1447, 580],
+      "name": "Omaha"
+    },
+    {
+      "coordinates": [1830, 872],
+      "name": "Nashville"
+    },
+    {
+      "coordinates": [1385, 926],
+      "name": "Oklahoma City"
+    },
+    {
+      "coordinates": [2474, 182],
+      "name": "Quebec City"
+    },
+    {
+      "coordinates": [1546, 556],
+      "name": "Des Moines"
+    },
+    {
+      "coordinates": [608, 457],
+      "name": "Boise"
+    },
+    {
+      "coordinates": [1689, 1095],
+      "name": "Jackson"
+    },
+    {
+      "coordinates": [1036, 925],
+      "name": "Santa Fe"
+    },
+    {
+      "coordinates": [1081, 598],
+      "name": "Cheyenne"
+    },
+    {
+      "coordinates": [1248, 224],
+      "name": "Bismarck"
+    },
+    {
+      "coordinates": [781, 254],
+      "name": "Helena"
+    },
+    {
+      "coordinates": [1266, 386],
+      "name": "Pierre"
+    },
+    {
+      "coordinates": [564, 1030],
+      "name": "San Bernardino"
+    },
+    {
+      "coordinates": [1505, 709],
+      "name": "Kansas City"
+    },
+    {
+      "coordinates": [1393, 1081],
+      "name": "Fort Worth"
+    },
+    {
+      "coordinates": [1855, 658],
+      "name": "Indianapolis"
+    },
+    {
+      "coordinates": [1376, 1217],
+      "name": "Austin"
+    },
+    {
+      "coordinates": [2043, 1192],
+      "name": "Jacksonville"
+    },
+    {
+      "coordinates": [1451, 887],
+      "name": "Tulsa"
+    },
+    {
+      "coordinates": [2217, 778],
+      "name": "Richmond"
+    },
+    {
+      "coordinates": [1006, 960],
+      "name": "Albuquerque"
+    },
+    {
+      "coordinates": [830, 1128],
+      "name": "Tucson"
+    },
+    {
+      "coordinates": [2210, 433],
+      "name": "Rochester"
+    },
+    {
+      "coordinates": [1012, 1146],
+      "name": "El Paso"
+    },
+    {
+      "coordinates": [2271, 439],
+      "name": "Syracuse"
+    },
+    {
+      "coordinates": [1949, 880],
+      "name": "Knoxville"
+    },
+    {
+      "coordinates": [461, 882],
+      "name": "Fresno"
+    },
+    {
+      "coordinates": [1083, 737],
+      "name": "Colorado Springs"
+    },
+    {
+      "coordinates": [1303, 1367],
+      "name": "Laredo"
+    },
+    {
+      "coordinates": [1650, 1198],
+      "name": "Baton Rouge"
+    },
+    {
+      "coordinates": [2074, 986],
+      "name": "Columbia"
+    },
+    {
+      "coordinates": [558, 187],
+      "name": "Spokane"
+    },
+    {
+      "coordinates": [459, 717],
+      "name": "Reno"
+    },
+    {
+      "coordinates": [1541, 1089],
+      "name": "Shreveport"
+    },
+    {
+      "coordinates": [326, 380],
+      "name": "Salem"
+    },
+    {
+      "coordinates": [1935, 1189],
+      "name": "Tallahassee"
+    },
+    {
+      "coordinates": [1206, 946],
+      "name": "Amarillo"
+    },
+    {
+      "coordinates": [2066, 1099],
+      "name": "Savannah"
+    },
+    {
+      "coordinates": [1414, 214],
+      "name": "Fargo"
+    },
+    {
+      "coordinates": [2197, 971],
+      "name": "Wilmington"
+    },
+    {
+      "coordinates": [1417, 435],
+      "name": "Sioux Falls"
+    },
+    {
+      "coordinates": [1461, 714],
+      "name": "Topeka"
+    },
+    {
+      "coordinates": [2044, 737],
+      "name": "Charleston"
+    },
+    {
+      "coordinates": [927, 303],
+      "name": "Billings"
+    },
+    {
+      "coordinates": [700, 237],
+      "name": "Missoula"
+    },
+    {
+      "coordinates": [812, 190],
+      "name": "Great Falls"
+    },
+    {
+      "coordinates": [799, 961],
+      "name": "Flagstaff"
+    },
+    {
+      "coordinates": [280, 645],
+      "name": "Eureka"
+    },
+    {
+      "coordinates": [2166, 1390],
+      "name": "Freeport"
+    },
+    {
+      "coordinates": [627, 632],
+      "name": "Elko"
+    },
+    {
+      "coordinates": [2107, 1381],
+      "name": "West Palm Beach"
+    },
+    {
+      "coordinates": [1829, 1022],
+      "name": "Birmingham"
+    },
+    {
+      "coordinates": [2077, 919],
+      "name": "Charlotte"
+    },
+    {
+      "coordinates": [1873, 750],
+      "name": "Louisville"
+    },
+    {
+      "coordinates": [1937, 656],
+      "name": "Dayton"
+    },
+    {
+      "coordinates": [2240, 614],
+      "name": "Harrisburg"
+    },
+    {
+      "coordinates": [493, 961],
+      "name": "Bakersfield"
+    },
+    {
+      "coordinates": [1392, 795],
+      "name": "Wichita"
+    },
+    {
+      "coordinates": [2120, 868],
+      "name": "Greensboro"
+    },
+    {
+      "coordinates": [2329, 615],
+      "name": "Trenton"
+    },
+    {
+      "coordinates": [799, 662],
+      "name": "Provo"
+    },
+    {
+      "coordinates": [1721, 456],
+      "name": "Madison"
+    },
+    {
+      "coordinates": [2084, 568],
+      "name": "Youngstown"
+    },
+    {
+      "coordinates": [1922, 471],
+      "name": "Lansing"
+    },
+    {
+      "coordinates": [1925, 758],
+      "name": "Lexington"
+    },
+    {
+      "coordinates": [2029, 1020],
+      "name": "Augusta"
+    },
+    {
+      "coordinates": [2054, 588],
+      "name": "Canton"
+    },
+    {
+      "coordinates": [1894, 933],
+      "name": "Chattanooga"
+    },
+    {
+      "coordinates": [1778, 1181],
+      "name": "Mobile"
+    },
+    {
+      "coordinates": [323, 438],
+      "name": "Eugene"
+    },
+    {
+      "coordinates": [1813, 1194],
+      "name": "Pensacola"
+    },
+    {
+      "coordinates": [530, 998],
+      "name": "Lancaster"
+    },
+    {
+      "coordinates": [2070, 1251],
+      "name": "Daytona Beach"
+    },
+    {
+      "coordinates": [1204, 1040],
+      "name": "Lubbock"
+    },
+    {
+      "coordinates": [1837, 955],
+      "name": "Huntsville"
+    },
+    {
+      "coordinates": [1559, 822],
+      "name": "Springfield"
+    },
+    {
+      "coordinates": [1779, 359],
+      "name": "Green Bay"
+    },
+    {
+      "coordinates": [1798, 767],
+      "name": "Evansville"
+    },
+    {
+      "coordinates": [1710, 605],
+      "name": "Peoria"
+    },
+    {
+      "coordinates": [1401, 1146],
+      "name": "Waco"
+    },
+    {
+      "coordinates": [384, 889],
+      "name": "Salinas"
+    },
+    {
+      "coordinates": [368, 872],
+      "name": "Santa Cruz"
+    },
+    {
+      "coordinates": [2420, 217],
+      "name": "Trois-Rivières"
+    },
+    {
+      "coordinates": [1293, 1100],
+      "name": "Abilene"
+    },
+    {
+      "coordinates": [1477, 1099],
+      "name": "Tyler"
+    },
+    {
+      "coordinates": [332, 548],
+      "name": "Medford"
+    },
+    {
+      "coordinates": [1184, 1137],
+      "name": "Odessa"
+    },
+    {
+      "coordinates": [927, 728],
+      "name": "Grand Junction"
+    },
+    {
+      "coordinates": [2147, 789],
+      "name": "Lynchburg"
+    },
+    {
+      "coordinates": [1345, 1016],
+      "name": "Wichita Falls"
+    },
+    {
+      "coordinates": [430, 264],
+      "name": "Yakima"
+    },
+    {
+      "coordinates": [718, 853],
+      "name": "St. George"
+    },
+    {
+      "coordinates": [376, 708],
+      "name": "Chico"
+    },
+    {
+      "coordinates": [2175, 752],
+      "name": "Charlottesville"
+    },
+    {
+      "coordinates": [782, 461],
+      "name": "Idaho Falls"
+    },
+    {
+      "coordinates": [1596, 1153],
+      "name": "Alexandria"
+    },
+    {
+      "coordinates": [397, 434],
+      "name": "Bend"
+    },
+    {
+      "coordinates": [1711, 333],
+      "name": "Wausau"
+    },
+    {
+      "coordinates": [1147, 409],
+      "name": "Rapid City"
+    },
+    {
+      "coordinates": [1498, 1265],
+      "name": "Galveston"
+    },
+    {
+      "coordinates": [1407, 1294],
+      "name": "Victoria"
+    },
+    {
+      "coordinates": [765, 499],
+      "name": "Pocatello"
+    },
+    {
+      "coordinates": [438, 208],
+      "name": "Wenatchee"
+    },
+    {
+      "coordinates": [2256, 479],
+      "name": "Ithaca"
+    },
+    {
+      "coordinates": [461, 739],
+      "name": "Carson City"
+    },
+    {
+      "coordinates": [1606, 737],
+      "name": "Jefferson City"
+    },
+    {
+      "coordinates": [766, 997],
+      "name": "Prescott"
+    },
+    {
+      "coordinates": [1744, 1198],
+      "name": "Biloxi"
+    },
+    {
+      "coordinates": [575, 272],
+      "name": "Lewiston"
+    },
+    {
+      "coordinates": [2050, 1147],
+      "name": "Brunswick"
+    },
+    {
+      "coordinates": [378, 553],
+      "name": "Klamath Falls"
+    },
+    {
+      "coordinates": [1035, 1083],
+      "name": "Alamogordo"
+    },
+    {
+      "coordinates": [761, 294],
+      "name": "Butte"
+    },
+    {
+      "coordinates": [687, 146],
+      "name": "Kalispell"
+    },
+    {
+      "coordinates": [276, 483],
+      "name": "Coos Bay"
+    },
+    {
+      "coordinates": [1049, 589],
+      "name": "Laramie"
+    },
+    {
+      "coordinates": [1661, 1093],
+      "name": "Vicksburg"
+    },
+    {
+      "coordinates": [1107, 1108],
+      "name": "Carlsbad"
+    },
+    {
+      "coordinates": [905, 388],
+      "name": "Cody"
+    },
+    {
+      "coordinates": [664, 728],
+      "name": "Ely"
+    },
+    {
+      "coordinates": [398, 813],
+      "name": "Stockton"
+    },
+    {
+      "coordinates": [596, 1048],
+      "name": "Palm Springs"
+    },
+    {
+      "coordinates": [785, 602],
+      "name": "Ogden"
+    },
+    {
+      "coordinates": [2012, 942],
+      "name": "Greenville"
+    },
+    {
+      "coordinates": [411, 831],
+      "name": "Modesto"
+    },
+    {
+      "coordinates": [1898, 575],
+      "name": "Fort Wayne"
+    },
+    {
+      "coordinates": [1957, 497],
+      "name": "Ann Arbor"
+    },
+    {
+      "coordinates": [1561, 358],
+      "name": "Lakeville"
+    },
+    {
+      "coordinates": [1672, 553],
+      "name": "Davenport"
+    },
+    {
+      "coordinates": [2158, 925],
+      "name": "Fayetteville"
+    },
+    {
+      "coordinates": [340, 786],
+      "name": "Santa Rosa"
+    },
+    {
+      "coordinates": [1072, 634],
+      "name": "Fort Collins"
+    },
+    {
+      "coordinates": [2099, 1344],
+      "name": "Fort Pierce"
+    },
+    {
+      "coordinates": [1905, 1079],
+      "name": "Columbus"
+    },
+    {
+      "coordinates": [2114, 798],
+      "name": "Roanoke"
+    },
+    {
+      "coordinates": [1879, 500],
+      "name": "Kalamazoo"
+    },
+    {
+      "coordinates": [2107, 503],
+      "name": "Erie"
+    },
+    {
+      "coordinates": [1401, 1054],
+      "name": "Denton"
+    },
+    {
+      "coordinates": [2282, 553],
+      "name": "Wilkes-Barre"
+    },
+    {
+      "coordinates": [1359, 1428],
+      "name": "Edinburg"
+    },
+    {
+      "coordinates": [2362, 451],
+      "name": "Schenectady"
+    },
+    {
+      "coordinates": [1771, 639],
+      "name": "Urbana"
+    },
+    {
+      "coordinates": [2006, 899],
+      "name": "Asheville"
+    },
+    {
+      "coordinates": [2280, 499],
+      "name": "Binghamton"
+    },
+    {
+      "coordinates": [1260, 1304],
+      "name": "Piedras Negras"
+    },
+    {
+      "coordinates": [1377, 1171],
+      "name": "Killeen"
+    },
+    {
+      "coordinates": [2217, 734],
+      "name": "Fredericksburg"
+    },
+    {
+      "coordinates": [1806, 852],
+      "name": "Clarksville"
+    },
+    {
+      "coordinates": [1738, 617],
+      "name": "Bloomington"
+    },
+    {
+      "coordinates": [1064, 667],
+      "name": "Boulder"
+    },
+    {
+      "coordinates": [480, 906],
+      "name": "Visalia"
+    },
+    {
+      "coordinates": [1799, 1040],
+      "name": "Tuscaloosa"
+    },
+    {
+      "coordinates": [385, 743],
+      "name": "Yuba City"
+    },
+    {
+      "coordinates": [1846, 890],
+      "name": "Murfreesboro"
+    },
+    {
+      "coordinates": [1961, 1056],
+      "name": "Macon"
+    },
+    {
+      "coordinates": [1001, 1117],
+      "name": "Las Cruces"
+    },
+    {
+      "coordinates": [2257, 363],
+      "name": "Kingston"
+    },
+    {
+      "coordinates": [1523, 299],
+      "name": "St. Cloud"
+    },
+    {
+      "coordinates": [1090, 772],
+      "name": "Pueblo"
+    },
+    {
+      "coordinates": [1527, 1222],
+      "name": "Beaumont"
+    },
+    {
+      "coordinates": [1972, 993],
+      "name": "Athens"
+    },
+    {
+      "coordinates": [2309, 435],
+      "name": "Utica"
+    },
+    {
+      "coordinates": [1609, 1086],
+      "name": "Monroe"
+    },
+    {
+      "coordinates": [1852, 441],
+      "name": "Muskegon"
+    },
+    {
+      "coordinates": [1599, 496],
+      "name": "Waterloo"
+    },
+    {
+      "coordinates": [432, 851],
+      "name": "Merced"
+    },
+    {
+      "coordinates": [352, 656],
+      "name": "Redding"
+    },
+    {
+      "coordinates": [1514, 927],
+      "name": "Fort Smith"
+    },
+    {
+      "coordinates": [1348, 978],
+      "name": "Lawton"
+    },
+    {
+      "coordinates": [1431, 501],
+      "name": "Sioux City"
+    },
+    {
+      "coordinates": [2056, 890],
+      "name": "Hickory"
+    },
+    {
+      "coordinates": [1940, 1127],
+      "name": "Albany"
+    },
+    {
+      "coordinates": [1264, 1155],
+      "name": "San Angelo"
+    },
+    {
+      "coordinates": [2200, 583],
+      "name": "State College"
+    },
+    {
+      "coordinates": [1888, 630],
+      "name": "Muncie"
+    },
+    {
+      "coordinates": [2010, 734],
+      "name": "Huntington"
+    },
+    {
+      "coordinates": [565, 1006],
+      "name": "Victorville"
+    },
+    {
+      "coordinates": [1495, 669],
+      "name": "St. Joseph"
+    },
+    {
+      "coordinates": [1740, 657],
+      "name": "Decatur"
+    }
+  ],
   "themes": ["north_america"],
   "translation_key": "map.unitedstates"
 }

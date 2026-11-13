@@ -139,6 +139,88 @@
       "name": "Carpathos"
     }
   ],
+  "places": [
+    {
+      "coordinates": [388, 46],
+      "name": "Thessaloniki"
+    },
+    {
+      "coordinates": [1405, 848],
+      "name": "İzmir"
+    },
+    {
+      "coordinates": [38, 823],
+      "name": "Patras"
+    },
+    {
+      "coordinates": [823, 1820],
+      "name": "Heraklion"
+    },
+    {
+      "coordinates": [106, 1215],
+      "name": "Kalamata"
+    },
+    {
+      "coordinates": [1620, 469],
+      "name": "Balıkesir"
+    },
+    {
+      "coordinates": [1482, 791],
+      "name": "Manisa"
+    },
+    {
+      "coordinates": [246, 383],
+      "name": "Larissa"
+    },
+    {
+      "coordinates": [1259, 284],
+      "name": "Çanakkale"
+    },
+    {
+      "coordinates": [1454, 1075],
+      "name": "Söke"
+    },
+    {
+      "coordinates": [517, 780],
+      "name": "Chalkida"
+    },
+    {
+      "coordinates": [184, 1067],
+      "name": "Tripoli"
+    },
+    {
+      "coordinates": [186, 1209],
+      "name": "Sparti"
+    },
+    {
+      "coordinates": [824, 1130],
+      "name": "Ermoupolis"
+    },
+    {
+      "coordinates": [527, 947],
+      "name": "Piraeus"
+    },
+    {
+      "coordinates": [1567, 1050],
+      "name": "Aydın"
+    },
+    {
+      "coordinates": [372, 476],
+      "name": "Volos"
+    },
+    {
+      "coordinates": [1143, 48],
+      "name": "Alexandroupoli"
+    },
+    {
+      "coordinates": [1680, 1264],
+      "name": "Muğla"
+    },
+    {
+      "coordinates": [231, 619],
+      "name": "Lamia"
+    }
+  ],
   "special_team_count": 2,
   "teamGameSpawnAreas": {
     "2": [

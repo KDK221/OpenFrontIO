@@ -331,6 +331,392 @@
       "name": "San Andres"
     }
   ],
+  "places": [
+    {
+      "coordinates": [1978, 997],
+      "name": "Santo Domingo"
+    },
+    {
+      "coordinates": [1725, 1036],
+      "name": "Port-au-Prince"
+    },
+    {
+      "coordinates": [305, 1777],
+      "name": "Tegucigalpa"
+    },
+    {
+      "coordinates": [63, 1484],
+      "name": "Belmopan"
+    },
+    {
+      "coordinates": [1872, 906],
+      "name": "Santiago de los Caballeros"
+    },
+    {
+      "coordinates": [3049, 1637],
+      "name": "Port of Spain"
+    },
+    {
+      "coordinates": [706, 345],
+      "name": "West Palm Beach"
+    },
+    {
+      "coordinates": [2432, 1795],
+      "name": "Maracay"
+    },
+    {
+      "coordinates": [2902, 1761],
+      "name": "Maturín"
+    },
+    {
+      "coordinates": [1258, 871],
+      "name": "Holguín"
+    },
+    {
+      "coordinates": [2779, 1709],
+      "name": "Cumaná"
+    },
+    {
+      "coordinates": [1387, 927],
+      "name": "Guantánamo"
+    },
+    {
+      "coordinates": [2123, 1694],
+      "name": "Punto Fijo"
+    },
+    {
+      "coordinates": [549, 110],
+      "name": "Daytona Beach"
+    },
+    {
+      "coordinates": [403, 90],
+      "name": "Gainesville"
+    },
+    {
+      "coordinates": [78, 1347],
+      "name": "Chetumal"
+    },
+    {
+      "coordinates": [1832, 988],
+      "name": "San Juan de la Maguana"
+    },
+    {
+      "coordinates": [2307, 939],
+      "name": "Arecibo"
+    },
+    {
+      "coordinates": [2271, 971],
+      "name": "Mayagüez"
+    },
+    {
+      "coordinates": [667, 277],
+      "name": "Fort Pierce"
+    },
+    {
+      "coordinates": [2041, 987],
+      "name": "San Pedro de Macorís"
+    },
+    {
+      "coordinates": [2076, 984],
+      "name": "La Romana"
+    },
+    {
+      "coordinates": [1185, 877],
+      "name": "Las Tunas"
+    },
+    {
+      "coordinates": [1232, 931],
+      "name": "Bayamo"
+    },
+    {
+      "coordinates": [794, 823],
+      "name": "Cienfuegos"
+    },
+    {
+      "coordinates": [1588, 1098],
+      "name": "Les Cayes"
+    },
+    {
+      "coordinates": [1666, 950],
+      "name": "Gonaïves"
+    },
+    {
+      "coordinates": [716, 454],
+      "name": "Coral Gables"
+    },
+    {
+      "coordinates": [653, 753],
+      "name": "Matanzas"
+    },
+    {
+      "coordinates": [434, 134],
+      "name": "Ocala"
+    },
+    {
+      "coordinates": [1185, 943],
+      "name": "Manzanillo"
+    },
+    {
+      "coordinates": [903, 826],
+      "name": "Sancti Spíritus"
+    },
+    {
+      "coordinates": [501, 46],
+      "name": "St. Augustine"
+    },
+    {
+      "coordinates": [251, 1748],
+      "name": "Comayagua"
+    },
+    {
+      "coordinates": [537, 799],
+      "name": "Artemisa"
+    },
+    {
+      "coordinates": [982, 792],
+      "name": "Morón"
+    },
+    {
+      "coordinates": [731, 773],
+      "name": "Colón"
+    },
+    {
+      "coordinates": [116, 1447],
+      "name": "Belize City"
+    },
+    {
+      "coordinates": [815, 748],
+      "name": "Sagua La Grande"
+    },
+    {
+      "coordinates": [1313, 853],
+      "name": "Banes"
+    },
+    {
+      "coordinates": [587, 167],
+      "name": "Titusville"
+    },
+    {
+      "coordinates": [32, 1123],
+      "name": "Valladolid"
+    },
+    {
+      "coordinates": [25, 1075],
+      "name": "Tizimín"
+    },
+    {
+      "coordinates": [392, 1700],
+      "name": "Juticalpa"
+    },
+    {
+      "coordinates": [62, 1394],
+      "name": "Orange Walk Town"
+    },
+    {
+      "coordinates": [89, 1603],
+      "name": "Punta Gorda"
+    },
+    {
+      "coordinates": [1773, 714],
+      "name": "Cockburn Town"
+    },
+    {
+      "coordinates": [2122, 944],
+      "name": "Bávaro"
+    },
+    {
+      "coordinates": [1264, 1182],
+      "name": "Spanish Town"
+    },
+    {
+      "coordinates": [533, 158],
+      "name": "Sanford"
+    },
+    {
+      "coordinates": [621, 218],
+      "name": "Melbourne"
+    },
+    {
+      "coordinates": [704, 397],
+      "name": "Coral Springs"
+    },
+    {
+      "coordinates": [1895, 932],
+      "name": "La Vega"
+    },
+    {
+      "coordinates": [1921, 919],
+      "name": "San Francisco de Macorís"
+    },
+    {
+      "coordinates": [1235, 1189],
+      "name": "May Pen"
+    },
+    {
+      "coordinates": [21, 1604],
+      "name": "San Luis"
+    },
+    {
+      "coordinates": [507, 245],
+      "name": "Winter Haven"
+    },
+    {
+      "coordinates": [1303, 935],
+      "name": "Palma Soriano"
+    },
+    {
+      "coordinates": [703, 483],
+      "name": "Homestead"
+    },
+    {
+      "coordinates": [612, 782],
+      "name": "Güines"
+    },
+    {
+      "coordinates": [871, 790],
+      "name": "Placetas"
+    },
+    {
+      "coordinates": [520, 80],
+      "name": "Palm Coast"
+    },
+    {
+      "coordinates": [562, 786],
+      "name": "San Antonio de los Baños"
+    },
+    {
+      "coordinates": [126, 1738],
+      "name": "Santa Rosa de Copán"
+    },
+    {
+      "coordinates": [356, 41],
+      "name": "Lake City"
+    },
+    {
+      "coordinates": [1822, 1026],
+      "name": "Neiba"
+    },
+    {
+      "coordinates": [473, 77],
+      "name": "Palatka"
+    },
+    {
+      "coordinates": [101, 1629],
+      "name": "Livingston"
+    },
+    {
+      "coordinates": [35, 1499],
+      "name": "San Ignacio"
+    },
+    {
+      "coordinates": [2098, 959],
+      "name": "Salvaleón de Higüey"
+    },
+    {
+      "coordinates": [1862, 877],
+      "name": "Puerto Plata"
+    },
+    {
+      "coordinates": [1914, 958],
+      "name": "Bonao"
+    },
+    {
+      "coordinates": [1939, 1025],
+      "name": "Baní"
+    },
+    {
+      "coordinates": [1893, 1014],
+      "name": "Azua"
+    },
+    {
+      "coordinates": [1829, 909],
+      "name": "Mao"
+    },
+    {
+      "coordinates": [1205, 1188],
+      "name": "Mandeville"
+    },
+    {
+      "coordinates": [5, 1775],
+      "name": "Jalapa"
+    },
+    {
+      "coordinates": [1781, 990],
+      "name": "Comendador"
+    },
+    {
+      "coordinates": [1937, 941],
+      "name": "Cotuí"
+    },
+    {
+      "coordinates": [47, 1750],
+      "name": "Chiquimula"
+    },
+    {
+      "coordinates": [2037, 954],
+      "name": "Hato Mayor del Rey"
+    },
+    {
+      "coordinates": [1960, 903],
+      "name": "Nagua"
+    },
+    {
+      "coordinates": [1713, 1072],
+      "name": "Jacmel"
+    },
+    {
+      "coordinates": [1156, 1183],
+      "name": "Savanna-la-Mar"
+    },
+    {
+      "coordinates": [2060, 950],
+      "name": "Santa Cruz del Seibo"
+    },
+    {
+      "coordinates": [1744, 968],
+      "name": "Hinche"
+    },
+    {
+      "coordinates": [1764, 921],
+      "name": "Dajabón"
+    },
+    {
+      "coordinates": [1802, 919],
+      "name": "Sabaneta"
+    },
+    {
+      "coordinates": [1982, 960],
+      "name": "Monte Plata"
+    },
+    {
+      "coordinates": [179, 1713],
+      "name": "Santa Bárbara"
+    },
+    {
+      "coordinates": [1800, 1077],
+      "name": "Pedernales"
+    },
+    {
+      "coordinates": [94, 1780],
+      "name": "Nueva Ocotepeque"
+    },
+    {
+      "coordinates": [152, 1754],
+      "name": "Gracias"
+    },
+    {
+      "coordinates": [1777, 1032],
+      "name": "Jimaní"
+    },
+    {
+      "coordinates": [201, 1771],
+      "name": "La Esperanza"
+    },
+    {
+      "coordinates": [347, 1786],
+      "name": "Yuscarán"
+    }
+  ],
   "themes": ["north_america"],
   "translation_key": "map.caribbean"
 }

@@ -240,6 +240,808 @@
       "name": "Sao Tome and Principe"
     }
   ],
+  "places": [
+    {
+      "coordinates": [1375, 232],
+      "name": "Cairo"
+    },
+    {
+      "coordinates": [606, 883],
+      "name": "Lagos"
+    },
+    {
+      "coordinates": [1803, 381],
+      "name": "Riyadh"
+    },
+    {
+      "coordinates": [1022, 1996],
+      "name": "Cape Town"
+    },
+    {
+      "coordinates": [1528, 1096],
+      "name": "Nairobi"
+    },
+    {
+      "coordinates": [1931, 77],
+      "name": "Tehran"
+    },
+    {
+      "coordinates": [935, 1180],
+      "name": "Kinshasa"
+    },
+    {
+      "coordinates": [1286, 1782],
+      "name": "Johannesburg"
+    },
+    {
+      "coordinates": [1167, 13],
+      "name": "Athens"
+    },
+    {
+      "coordinates": [302, 135],
+      "name": "Casablanca"
+    },
+    {
+      "coordinates": [1580, 811],
+      "name": "Addis Ababa"
+    },
+    {
+      "coordinates": [878, 1305],
+      "name": "Luanda"
+    },
+    {
+      "coordinates": [1339, 200],
+      "name": "Alexandria"
+    },
+    {
+      "coordinates": [597, 47],
+      "name": "Algiers"
+    },
+    {
+      "coordinates": [748, 730],
+      "name": "Kano"
+    },
+    {
+      "coordinates": [1594, 467],
+      "name": "Jeddah"
+    },
+    {
+      "coordinates": [1596, 1248],
+      "name": "Dar es Salaam"
+    },
+    {
+      "coordinates": [1538, 62],
+      "name": "Aleppo"
+    },
+    {
+      "coordinates": [1368, 1884],
+      "name": "Durban"
+    },
+    {
+      "coordinates": [1514, 137],
+      "name": "Damascus"
+    },
+    {
+      "coordinates": [876, 154],
+      "name": "Tripoli"
+    },
+    {
+      "coordinates": [507, 908],
+      "name": "Accra"
+    },
+    {
+      "coordinates": [1732, 637],
+      "name": "Sanaa"
+    },
+    {
+      "coordinates": [793, 46],
+      "name": "Tunis"
+    },
+    {
+      "coordinates": [1492, 127],
+      "name": "Beirut"
+    },
+    {
+      "coordinates": [1824, 1582],
+      "name": "Antananarivo"
+    },
+    {
+      "coordinates": [1939, 159],
+      "name": "Isfahan"
+    },
+    {
+      "coordinates": [831, 954],
+      "name": "Yaoundé"
+    },
+    {
+      "coordinates": [1369, 1552],
+      "name": "Harare"
+    },
+    {
+      "coordinates": [292, 712],
+      "name": "Bamako"
+    },
+    {
+      "coordinates": [547, 892],
+      "name": "Lomé"
+    },
+    {
+      "coordinates": [1412, 1776],
+      "name": "Maputo"
+    },
+    {
+      "coordinates": [1412, 1052],
+      "name": "Kampala"
+    },
+    {
+      "coordinates": [1271, 1383],
+      "name": "Lubumbashi"
+    },
+    {
+      "coordinates": [1293, 1486],
+      "name": "Lusaka"
+    },
+    {
+      "coordinates": [1066, 175],
+      "name": "Benghazi"
+    },
+    {
+      "coordinates": [471, 720],
+      "name": "Ouagadougou"
+    },
+    {
+      "coordinates": [948, 1412],
+      "name": "Huambo"
+    },
+    {
+      "coordinates": [1764, 1003],
+      "name": "Mogadishu"
+    },
+    {
+      "coordinates": [1504, 180],
+      "name": "Amman"
+    },
+    {
+      "coordinates": [1484, 184],
+      "name": "Jerusalem"
+    },
+    {
+      "coordinates": [1219, 1997],
+      "name": "Port Elizabeth"
+    },
+    {
+      "coordinates": [375, 122],
+      "name": "Fez"
+    },
+    {
+      "coordinates": [1754, 708],
+      "name": "Aden"
+    },
+    {
+      "coordinates": [1608, 1172],
+      "name": "Mombasa"
+    },
+    {
+      "coordinates": [292, 189],
+      "name": "Marrakesh"
+    },
+    {
+      "coordinates": [881, 10],
+      "name": "Palermo"
+    },
+    {
+      "coordinates": [148, 828],
+      "name": "Freetown"
+    },
+    {
+      "coordinates": [495, 76],
+      "name": "Oran"
+    },
+    {
+      "coordinates": [582, 884],
+      "name": "Cotonou"
+    },
+    {
+      "coordinates": [657, 701],
+      "name": "Sokoto"
+    },
+    {
+      "coordinates": [1302, 1617],
+      "name": "Bulawayo"
+    },
+    {
+      "coordinates": [720, 883],
+      "name": "Enugu"
+    },
+    {
+      "coordinates": [1445, 1446],
+      "name": "Lilongwe"
+    },
+    {
+      "coordinates": [1033, 1200],
+      "name": "Kikwit"
+    },
+    {
+      "coordinates": [1587, 638],
+      "name": "Asmara"
+    },
+    {
+      "coordinates": [1413, 352],
+      "name": "Luxor"
+    },
+    {
+      "coordinates": [1475, 1607],
+      "name": "Beira"
+    },
+    {
+      "coordinates": [1539, 520],
+      "name": "Port Sudan"
+    },
+    {
+      "coordinates": [1728, 797],
+      "name": "Hargeisa"
+    },
+    {
+      "coordinates": [1237, 1864],
+      "name": "Bloemfontein"
+    },
+    {
+      "coordinates": [1216, 1356],
+      "name": "Kolwezi"
+    },
+    {
+      "coordinates": [1594, 1230],
+      "name": "Zanzibar City"
+    },
+    {
+      "coordinates": [83, 734],
+      "name": "Bissau"
+    },
+    {
+      "coordinates": [1517, 634],
+      "name": "Kassala"
+    },
+    {
+      "coordinates": [1199, 728],
+      "name": "Nyala"
+    },
+    {
+      "coordinates": [913, 71],
+      "name": "Valletta"
+    },
+    {
+      "coordinates": [908, 769],
+      "name": "Maroua"
+    },
+    {
+      "coordinates": [1435, 1306],
+      "name": "Mbeya"
+    },
+    {
+      "coordinates": [984, 1683],
+      "name": "Windhoek"
+    },
+    {
+      "coordinates": [761, 680],
+      "name": "Zinder"
+    },
+    {
+      "coordinates": [1636, 1461],
+      "name": "Nacala"
+    },
+    {
+      "coordinates": [1228, 1740],
+      "name": "Gaborone"
+    },
+    {
+      "coordinates": [367, 873],
+      "name": "Yamoussoukro"
+    },
+    {
+      "coordinates": [1087, 679],
+      "name": "Abéché"
+    },
+    {
+      "coordinates": [1546, 713],
+      "name": "Gondar"
+    },
+    {
+      "coordinates": [1285, 848],
+      "name": "Wau"
+    },
+    {
+      "coordinates": [614, 165],
+      "name": "Ghardaia"
+    },
+    {
+      "coordinates": [733, 592],
+      "name": "Agadez"
+    },
+    {
+      "coordinates": [911, 315],
+      "name": "Sabha"
+    },
+    {
+      "coordinates": [665, 433],
+      "name": "Tamanrasset"
+    },
+    {
+      "coordinates": [430, 599],
+      "name": "Timbuktu"
+    },
+    {
+      "coordinates": [153, 495],
+      "name": "Atar"
+    },
+    {
+      "coordinates": [387, 678],
+      "name": "Djenné"
+    },
+    {
+      "coordinates": [1354, 532],
+      "name": "Karma"
+    },
+    {
+      "coordinates": [1013, 1600],
+      "name": "Grootfontein"
+    },
+    {
+      "coordinates": [1001, 1465],
+      "name": "Menongue"
+    },
+    {
+      "coordinates": [1244, 912],
+      "name": "Obo"
+    },
+    {
+      "coordinates": [1083, 829],
+      "name": "N'Délé"
+    },
+    {
+      "coordinates": [1409, 630],
+      "name": "Omdurman"
+    },
+    {
+      "coordinates": [1934, 363],
+      "name": "Doha"
+    },
+    {
+      "coordinates": [718, 771],
+      "name": "Kaduna"
+    },
+    {
+      "coordinates": [1790, 10],
+      "name": "Tabriz"
+    },
+    {
+      "coordinates": [1164, 1230],
+      "name": "Mbuji-Mayi"
+    },
+    {
+      "coordinates": [1487, 41],
+      "name": "Adana"
+    },
+    {
+      "coordinates": [668, 886],
+      "name": "Benin City"
+    },
+    {
+      "coordinates": [706, 928],
+      "name": "Port Harcourt"
+    },
+    {
+      "coordinates": [1604, 385],
+      "name": "Medina"
+    },
+    {
+      "coordinates": [1856, 198],
+      "name": "Ahwaz"
+    },
+    {
+      "coordinates": [630, 837],
+      "name": "Ogbomosho"
+    },
+    {
+      "coordinates": [1408, 16],
+      "name": "Konya"
+    },
+    {
+      "coordinates": [876, 734],
+      "name": "Maiduguri"
+    },
+    {
+      "coordinates": [1342, 1115],
+      "name": "Kigali"
+    },
+    {
+      "coordinates": [672, 909],
+      "name": "Warri"
+    },
+    {
+      "coordinates": [1131, 1223],
+      "name": "Kananga"
+    },
+    {
+      "coordinates": [1728, 685],
+      "name": "Ta'izz"
+    },
+    {
+      "coordinates": [1736, 178],
+      "name": "Najaf"
+    },
+    {
+      "coordinates": [841, 1192],
+      "name": "Pointe-Noire"
+    },
+    {
+      "coordinates": [695, 58],
+      "name": "Constantine"
+    },
+    {
+      "coordinates": [1737, 82],
+      "name": "Kirkuk"
+    },
+    {
+      "coordinates": [1478, 1496],
+      "name": "Blantyre"
+    },
+    {
+      "coordinates": [1209, 1046],
+      "name": "Kisangani"
+    },
+    {
+      "coordinates": [374, 849],
+      "name": "Bouaké"
+    },
+    {
+      "coordinates": [1521, 278],
+      "name": "Tabuk"
+    },
+    {
+      "coordinates": [1851, 101],
+      "name": "Hamadan"
+    },
+    {
+      "coordinates": [1410, 233],
+      "name": "Suez"
+    },
+    {
+      "coordinates": [727, 43],
+      "name": "Annaba"
+    },
+    {
+      "coordinates": [793, 897],
+      "name": "Bamenda"
+    },
+    {
+      "coordinates": [882, 804],
+      "name": "Garoua"
+    },
+    {
+      "coordinates": [1251, 1832],
+      "name": "Welkom"
+    },
+    {
+      "coordinates": [1373, 311],
+      "name": "Asyut"
+    },
+    {
+      "coordinates": [460, 105],
+      "name": "Taza"
+    },
+    {
+      "coordinates": [1292, 1414],
+      "name": "Kitwe"
+    },
+    {
+      "coordinates": [1346, 697],
+      "name": "Al-Ubayyid"
+    },
+    {
+      "coordinates": [1597, 1478],
+      "name": "Nampula"
+    },
+    {
+      "coordinates": [929, 168],
+      "name": "Misrata"
+    },
+    {
+      "coordinates": [87, 286],
+      "name": "Las Palmas de Gran Canaria"
+    },
+    {
+      "coordinates": [395, 753],
+      "name": "Bobo Dioulasso"
+    },
+    {
+      "coordinates": [1486, 1046],
+      "name": "Eldoret"
+    },
+    {
+      "coordinates": [1525, 1153],
+      "name": "Arusha"
+    },
+    {
+      "coordinates": [1282, 1970],
+      "name": "East London"
+    },
+    {
+      "coordinates": [1323, 1154],
+      "name": "Bujumbura"
+    },
+    {
+      "coordinates": [806, 73],
+      "name": "Sousse"
+    },
+    {
+      "coordinates": [1363, 253],
+      "name": "Faiyum"
+    },
+    {
+      "coordinates": [1420, 397],
+      "name": "Aswan"
+    },
+    {
+      "coordinates": [748, 848],
+      "name": "Makurdi"
+    },
+    {
+      "coordinates": [1321, 1057],
+      "name": "Butembo"
+    },
+    {
+      "coordinates": [69, 671],
+      "name": "Kaolack"
+    },
+    {
+      "coordinates": [1017, 1060],
+      "name": "Mbandaka"
+    },
+    {
+      "coordinates": [1668, 796],
+      "name": "Dire Dawa"
+    },
+    {
+      "coordinates": [1552, 1249],
+      "name": "Morogoro"
+    },
+    {
+      "coordinates": [1755, 773],
+      "name": "Berbera"
+    },
+    {
+      "coordinates": [709, 689],
+      "name": "Niamey"
+    },
+    {
+      "coordinates": [1499, 1231],
+      "name": "Dodoma"
+    },
+    {
+      "coordinates": [1318, 1224],
+      "name": "Kalemie"
+    },
+    {
+      "coordinates": [1298, 1459],
+      "name": "Kabwe"
+    },
+    {
+      "coordinates": [585, 803],
+      "name": "Parakou"
+    },
+    {
+      "coordinates": [149, 313],
+      "name": "Laayoune"
+    },
+    {
+      "coordinates": [1812, 1651],
+      "name": "Fianarantsoa"
+    },
+    {
+      "coordinates": [846, 153],
+      "name": "Zuwara"
+    },
+    {
+      "coordinates": [1133, 1997],
+      "name": "George"
+    },
+    {
+      "coordinates": [1132, 690],
+      "name": "Geneina"
+    },
+    {
+      "coordinates": [1386, 798],
+      "name": "Malakal"
+    },
+    {
+      "coordinates": [1792, 1493],
+      "name": "Mahajanga"
+    },
+    {
+      "coordinates": [883, 1408],
+      "name": "Benguela"
+    },
+    {
+      "coordinates": [1403, 984],
+      "name": "Gulu"
+    },
+    {
+      "coordinates": [849, 1480],
+      "name": "Moçâmedes"
+    },
+    {
+      "coordinates": [1439, 1507],
+      "name": "Tete"
+    },
+    {
+      "coordinates": [1050, 1988],
+      "name": "Worcester"
+    },
+    {
+      "coordinates": [964, 1324],
+      "name": "Malanje"
+    },
+    {
+      "coordinates": [885, 1472],
+      "name": "Lubango"
+    },
+    {
+      "coordinates": [340, 690],
+      "name": "Ségou"
+    },
+    {
+      "coordinates": [511, 612],
+      "name": "Gao"
+    },
+    {
+      "coordinates": [658, 650],
+      "name": "Tahoua"
+    },
+    {
+      "coordinates": [256, 775],
+      "name": "Kankan"
+    },
+    {
+      "coordinates": [1384, 928],
+      "name": "Juba"
+    },
+    {
+      "coordinates": [1631, 1419],
+      "name": "Pemba"
+    },
+    {
+      "coordinates": [1451, 1377],
+      "name": "Mzuzu"
+    },
+    {
+      "coordinates": [1691, 702],
+      "name": "Assab"
+    },
+    {
+      "coordinates": [1602, 688],
+      "name": "Mek'ele"
+    },
+    {
+      "coordinates": [1372, 1786],
+      "name": "Mbabane"
+    },
+    {
+      "coordinates": [1272, 1644],
+      "name": "Francistown"
+    },
+    {
+      "coordinates": [821, 981],
+      "name": "Ebolowa"
+    },
+    {
+      "coordinates": [544, 853],
+      "name": "Atakpamé"
+    },
+    {
+      "coordinates": [197, 663],
+      "name": "Kayes"
+    },
+    {
+      "coordinates": [1248, 1183],
+      "name": "Kasongo"
+    },
+    {
+      "coordinates": [1083, 902],
+      "name": "Bambari"
+    },
+    {
+      "coordinates": [913, 1694],
+      "name": "Walvis Bay"
+    },
+    {
+      "coordinates": [1253, 1698],
+      "name": "Mahalapye"
+    },
+    {
+      "coordinates": [1250, 1678],
+      "name": "Serowe"
+    },
+    {
+      "coordinates": [1551, 1059],
+      "name": "Meru"
+    },
+    {
+      "coordinates": [55, 690],
+      "name": "Banjul"
+    },
+    {
+      "coordinates": [1155, 394],
+      "name": "Al Jawf"
+    },
+    {
+      "coordinates": [1203, 1929],
+      "name": "Middelburg"
+    },
+    {
+      "coordinates": [931, 1796],
+      "name": "Lüderitz"
+    },
+    {
+      "coordinates": [1007, 1879],
+      "name": "Springbok"
+    },
+    {
+      "coordinates": [248, 602],
+      "name": "Ayoun el Atrous"
+    },
+    {
+      "coordinates": [948, 334],
+      "name": "Tmassa"
+    },
+    {
+      "coordinates": [468, 877],
+      "name": "Kumasi"
+    },
+    {
+      "coordinates": [1544, 38],
+      "name": "Gaziantep"
+    },
+    {
+      "coordinates": [1525, 103],
+      "name": "Homs"
+    },
+    {
+      "coordinates": [1918, 105],
+      "name": "Qom"
+    },
+    {
+      "coordinates": [1726, 63],
+      "name": "Erbil"
+    },
+    {
+      "coordinates": [1811, 113],
+      "name": "Kermanshah"
+    },
+    {
+      "coordinates": [758, 787],
+      "name": "Jos"
+    },
+    {
+      "coordinates": [1359, 43],
+      "name": "Antalya"
+    },
+    {
+      "coordinates": [1698, 652],
+      "name": "Al Hudaydah"
+    },
+    {
+      "coordinates": [352, 75],
+      "name": "Tangier"
+    },
+    {
+      "coordinates": [1880, 362],
+      "name": "Hofuf"
+    },
+    {
+      "coordinates": [1882, 32],
+      "name": "Rasht"
+    }
+  ],
   "themes": ["africa"],
   "translation_key": "map.africa"
 }

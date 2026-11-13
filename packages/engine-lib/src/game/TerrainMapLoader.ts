@@ -8,6 +8,7 @@ import {
   MapFiles,
   MapLayer,
   MapMetadata,
+  MapPlace,
   Nation,
 } from "@openfront/engine-api/game/MapFiles";
 import { GameMapImpl } from "./GameMapImpl";
@@ -20,6 +21,8 @@ export type TerrainMapData = {
   teamGameSpawnAreas?: TeamGameSpawnAreas;
   /** Map layers from the manifest, if any. */
   layers?: MapLayer[];
+  /** Real towns tribes are named after (empty when the map has none). */
+  places: MapPlace[];
 };
 
 /**
@@ -72,6 +75,18 @@ export async function loadTerrainMap(files: MapFiles): Promise<TerrainMapData> {
     });
   }
 
+  const places = (manifest.places ?? []).map((p) =>
+    mapSize === GameMapSize.Compact
+      ? {
+          name: p.name,
+          coordinates: [
+            Math.floor(p.coordinates[0] / 2),
+            Math.floor(p.coordinates[1] / 2),
+          ] as [number, number],
+        }
+      : p,
+  );
+
   // Scale spawn areas for compact maps
   let teamGameSpawnAreas = manifest.teamGameSpawnAreas;
   if (mapSize === GameMapSize.Compact && teamGameSpawnAreas) {
@@ -115,6 +130,7 @@ export async function loadTerrainMap(files: MapFiles): Promise<TerrainMapData> {
     miniGameMap: miniMap,
     teamGameSpawnAreas,
     layers,
+    places,
   };
 }
 
