@@ -75,7 +75,7 @@ export async function loadTerrainMap(files: MapFiles): Promise<TerrainMapData> {
     });
   }
 
-  const places = (manifest.places ?? []).map((p) =>
+  const places = (manifest.places ?? []).map((p: MapPlace) =>
     mapSize === GameMapSize.Compact
       ? {
           name: p.name,

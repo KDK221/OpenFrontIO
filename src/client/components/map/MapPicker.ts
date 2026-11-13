@@ -34,10 +34,13 @@ const freeFeatured: MapInfo[] = [
 ];
 
 // Asia first: the game is set there, so its maps are the ones people look for.
-const freeCategories: MapCategory[] = [
+const regionOrder: MapCategory[] = [
   "asia",
   ...mapCategoryOrder.filter((c) => c !== "featured" && c !== "asia"),
-].filter((c) => freeModeMaps.some((m) => m.categories.includes(c)));
+];
+const freeCategories: MapCategory[] = regionOrder.filter((c) =>
+  freeModeMaps.some((m) => m.categories.includes(c)),
+);
 
 function mapsInCategory(category: MapCategory): MapInfo[] {
   return freeModeMaps
