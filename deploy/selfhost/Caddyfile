@@ -1,0 +1,6 @@
+# HTTPS for the game: Caddy fetches a Let's Encrypt certificate for $DOMAIN
+# and forwards everything, WebSockets included, to the game container.
+{$DOMAIN} {
+	encode gzip
+	reverse_proxy game:80
+}

@@ -66,9 +66,26 @@ export class ServerEnv {
   static turnstileSiteKey(): string {
     const v = process.env.TURNSTILE_SITE_KEY;
     if (!v) {
+      // A self-hosted server never verifies a Turnstile token, so the page
+      // gets Cloudflare's public always-pass test key instead of a real one.
+      if (ServerEnv.selfHosted()) return "1x00000000000000000000AA";
       throw new Error("TURNSTILE_SITE_KEY not set");
     }
     return v;
+  }
+  // A self-hosted deployment (SELF_HOSTED=1, docs/SelfHostServer.md) runs
+  // with no OpenFront API behind it. Players join as guests under their
+  // browser's persistent ID, and everything that would ask the API (join
+  // verification, subscriptions, paid queueing, ranked, cosmetics) is
+  // skipped the way local dev skips it. The page is told too
+  // (BOOTSTRAP_CONFIG.selfHosted), so it never looks for the API either.
+  static selfHosted(): boolean {
+    return process.env.SELF_HOSTED === "1";
+  }
+  // Whether there is an OpenFront API to check players and payments against:
+  // not on local dev, not on a self-hosted server.
+  static hasApi(): boolean {
+    return ServerEnv.gameEnv !== GameEnv.Dev && !ServerEnv.selfHosted();
   }
   // Optional, unlike turnstileSiteKey: a deployment without a key just keeps
   // the inline Stripe flow off (the store falls back to redirect checkout).

@@ -1,0 +1,39 @@
+# Self-hosted multiplayer server: the game container (nginx + node, the same
+# image OpenFront deploys) behind Caddy, which gets and renews the HTTPS
+# certificate. Run by install.sh / update.sh; settings come from .env.
+services:
+  game:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+      args:
+        GIT_COMMIT: ${GIT_COMMIT:-unknown}
+    restart: unless-stopped
+    environment:
+      GAME_ENV: prod
+      SELF_HOSTED: "1"
+      DOMAIN: ${DOMAIN}
+      NUM_WORKERS: ${NUM_WORKERS:-2}
+      INSTANCE_LETTER: a
+      API_KEY: none
+    expose:
+      - "80"
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      - game
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:
