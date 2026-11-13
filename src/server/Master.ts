@@ -29,7 +29,7 @@ import { renderAppShell } from "./RenderHtml";
 import { ServerEnv } from "./ServerEnv";
 import { applyStaticAssetCacheControl } from "./StaticAssetCache";
 
-const playlist = new MapPlaylist();
+const playlist = new MapPlaylist(!ServerEnv.selfHosted());
 let lobbyService: MasterLobbyService;
 
 const app = express();

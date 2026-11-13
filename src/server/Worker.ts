@@ -73,7 +73,7 @@ const log = logger.child({ comp: `w_${workerId}` });
 
 // The WebSocket server's max payload.
 const MAX_WEBSOCKET_PAYLOAD_BYTES = 1024 * 1024;
-const playlist = new MapPlaylist();
+const playlist = new MapPlaylist(!ServerEnv.selfHosted());
 
 export function clampApprovedUsername(username: string): string {
   return username.length > MAX_USERNAME_LENGTH

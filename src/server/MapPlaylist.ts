@@ -151,6 +151,11 @@ export class MapPlaylist {
   // Rotation weights from the API (see MapWeights.ts).
   private weights: MapWeights = {};
 
+  // Whether every TRUSTED_PUBLIC_EVERY-th lobby is trusted-only. Off on a
+  // self-hosted server: trust is an API account tier, so nobody there could
+  // ever join one.
+  constructor(private readonly trustedLobbies: boolean = true) {}
+
   // Queued playlists were built from the old weights, so drop them: a map
   // pulled to 0 must stop appearing now, not after a full rotation.
   public setWeights(weights: MapWeights) {
@@ -165,7 +170,8 @@ export class MapPlaylist {
 
   public async gameConfig(type: ScheduledPublicGameType): Promise<GameConfig> {
     this.scheduled++;
-    const trusted = this.scheduled % TRUSTED_PUBLIC_EVERY === 0;
+    const trusted =
+      this.trustedLobbies && this.scheduled % TRUSTED_PUBLIC_EVERY === 0;
     const config = await this.rollConfig(type, trusted);
     if (trusted) {
       config.trusted = true;

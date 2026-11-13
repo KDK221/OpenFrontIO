@@ -29,6 +29,14 @@ describe("MapPlaylist trusted-only public games", () => {
     ]);
   });
 
+  it("never makes trusted-only games when they are turned off (self-hosted)", async () => {
+    const playlist = new MapPlaylist(false);
+    const types = ["ffa", "team", "special"] as const;
+    for (let i = 0; i < 14; i++) {
+      expect((await playlist.gameConfig(types[i % 3])).trusted).toBeUndefined();
+    }
+  });
+
   it("counts per playlist instance, starting open", async () => {
     const a = new MapPlaylist();
     const b = new MapPlaylist();
