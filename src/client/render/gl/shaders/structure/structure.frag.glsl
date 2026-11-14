@@ -132,7 +132,7 @@ float shapeSDF(vec2 p, float R) {
 void main() {
   // Full-color historical sprites use the existing size/zoom and hit-test geometry.
   // Keep affiliation dots at far zoom; construction, alt-view and deletion stay visible.
-  // The sprite casts a faint shadow in its owner's territory color, so
+  // The sprite has a thin outline in its owner's territory color, so
   // captured buildings on contested land still read as whose they are.
   if (vZoom > uDotsThreshold) {
     float lo = vAtlasIdx / float(ATLAS_COLS);
@@ -142,10 +142,19 @@ void main() {
       c = texture(uAtlas, vAtlasUV);
     }
 
-    // Shadow: a soft, faint ellipse in the owner's color under the base.
-    float e = length((vLocalPos - vec2(0.0, 0.37)) / vec2(0.40, 0.085));
-    float plinthA = 0.45 * (1.0 - smoothstep(0.55, 1.0, e));
-    if (c.a < 0.02 && plinthA <= 0.0) discard;
+    // Outline: a thin line in the owner's color just outside the sprite's
+    // silhouette (8 taps two texels out, kept inside this sprite's column).
+    vec2 texel = 2.0 / vec2(textureSize(uAtlas, 0));
+    float near = 0.0;
+    for (int k = 0; k < 8; k++) {
+      float ang = float(k) * 0.7853982;
+      vec2 uv = vAtlasUV + vec2(cos(ang), sin(ang)) * texel;
+      if (uv.x > lo && uv.x < hi && uv.y > 0.0 && uv.y < 1.0) {
+        near = max(near, texture(uAtlas, uv).a);
+      }
+    }
+    float outlineA = 0.95 * clamp((near - 0.3) / 0.4, 0.0, 1.0);
+    if (c.a < 0.02 && outlineA <= 0.0) discard;
     vec3 pc;
     if (vUnderConstruction > 0.5) {
       pc = vec3(0.6);
@@ -160,9 +169,9 @@ void main() {
     if (vMarkedForDeletion > 0.5 && min(abs(vLocalPos.x-vLocalPos.y),abs(vLocalPos.x+vLocalPos.y)) < 0.045) c.rgb = vec3(1.0,0.2,0.2);
     if (dot(uOutlineColor,uOutlineColor)>0.01) c.rgb=mix(c.rgb,uOutlineColor,0.5);
 
-    // Sprite over shadow.
-    float a = c.a + plinthA * (1.0 - c.a);
-    vec3 rgb = (c.rgb * c.a + pc * plinthA * (1.0 - c.a)) / max(a, 1e-4);
+    // Sprite over outline.
+    float a = c.a + outlineA * (1.0 - c.a);
+    vec3 rgb = (c.rgb * c.a + pc * outlineA * (1.0 - c.a)) / max(a, 1e-4);
     if (uHighlightMask != 0 && (uHighlightMask & (1 << int(vAtlasIdx+0.5))) == 0) a *= uHighlightDimAlpha;
     fragColor=vec4(rgb,a*uGhostAlpha*uIconAlpha);
     return;
