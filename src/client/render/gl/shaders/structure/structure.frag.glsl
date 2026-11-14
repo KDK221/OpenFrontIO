@@ -132,8 +132,8 @@ float shapeSDF(vec2 p, float R) {
 void main() {
   // Full-color historical sprites use the existing size/zoom and hit-test geometry.
   // Keep affiliation dots at far zoom; construction, alt-view and deletion stay visible.
-  // The sprite stands on a plinth in its owner's territory color, so captured
-  // buildings on contested land still read as whose they are.
+  // The sprite casts a faint shadow in its owner's territory color, so
+  // captured buildings on contested land still read as whose they are.
   if (vZoom > uDotsThreshold) {
     float lo = vAtlasIdx / float(ATLAS_COLS);
     float hi = (vAtlasIdx + 1.0) / float(ATLAS_COLS);
@@ -142,10 +142,9 @@ void main() {
       c = texture(uAtlas, vAtlasUV);
     }
 
-    // Plinth: a flat ellipse under the sprite's base, darker at the rim.
-    float e = length((vLocalPos - vec2(0.0, 0.36)) / vec2(0.47, 0.125));
-    float ew = fwidth(e);
-    float plinthA = 1.0 - smoothstep(1.0 - ew, 1.0 + ew, e);
+    // Shadow: a soft, faint ellipse in the owner's color under the base.
+    float e = length((vLocalPos - vec2(0.0, 0.37)) / vec2(0.40, 0.085));
+    float plinthA = 0.45 * (1.0 - smoothstep(0.55, 1.0, e));
     if (c.a < 0.02 && plinthA <= 0.0) discard;
     vec3 pc;
     if (vUnderConstruction > 0.5) {
@@ -155,14 +154,13 @@ void main() {
     } else {
       pc = texture(uPalette, vec2((vOwnerID + 0.5) / float(PALETTE_SIZE), 0.25)).rgb;
     }
-    pc = mix(pc, darken(pc, 0.55), smoothstep(0.7, 0.95, e));
 
     if (vUnderConstruction > 0.5) c.rgb = mix(c.rgb, vec3(0.55), 0.65);
     if (uAltView != 0) c.rgb = mix(c.rgb, texelFetch(uAffiliation, ivec2(int(vOwnerID), 1), 0).rgb, 0.7);
     if (vMarkedForDeletion > 0.5 && min(abs(vLocalPos.x-vLocalPos.y),abs(vLocalPos.x+vLocalPos.y)) < 0.045) c.rgb = vec3(1.0,0.2,0.2);
     if (dot(uOutlineColor,uOutlineColor)>0.01) c.rgb=mix(c.rgb,uOutlineColor,0.5);
 
-    // Sprite over plinth.
+    // Sprite over shadow.
     float a = c.a + plinthA * (1.0 - c.a);
     vec3 rgb = (c.rgb * c.a + pc * plinthA * (1.0 - c.a)) / max(a, 1e-4);
     if (uHighlightMask != 0 && (uHighlightMask & (1 << int(vAtlasIdx+0.5))) == 0) a *= uHighlightDimAlpha;
