@@ -133,6 +133,16 @@ export type CellString = string;
 export class GameImpl implements Game {
   private _ticks = 0;
   private burningSince = new Map<TileRef, number>();
+  /**
+   * isolatedOwner[tile] is the smallID of the player that held the tile cut
+   * off from its capital at its last isolation pass (0 otherwise);
+   * isolatedTiles lists those tiles per smallID so a pass can clear them.
+   */
+  private isolatedOwner: Uint16Array;
+  private isolatedTiles = new Map<number, TileRef[]>();
+  // Scratch for the isolation flood fill; all zero between passes.
+  private isolationSeen: Uint8Array;
+  private isolationQueue = new Int32Array(1024);
   private startTick: number | null = null;
 
   private unInitExecs: Execution[] = [];
@@ -199,6 +209,8 @@ export class GameImpl implements Game {
     this._terraNullius = new TerraNulliusImpl();
     this._width = _map.width();
     this._height = _map.height();
+    this.isolatedOwner = new Uint16Array(this._width * this._height);
+    this.isolationSeen = new Uint8Array(this._width * this._height);
     this.unitGrid = new UnitGrid<Unit>(this._map);
     this._waterManager = new WaterManager(
       this._map,
@@ -623,6 +635,123 @@ export class GameImpl implements Game {
     return this.startTick === null;
   }
 
+  isIsolatedTile(tile: TileRef): boolean {
+    const id = this.isolatedOwner[tile];
+    return id !== 0 && id === this._map.ownerID(tile);
+  }
+
+  /**
+   * Marks the land each player holds cut off from its capital: the tiles not
+   * reachable over its own land from its spawn tile (from the biggest piece
+   * of its land once the spawn tile is lost; ties go to the piece with the
+   * lowest tile). Each tick redoes the players whose smallID falls in that
+   * tick's slot, so every player is redone every ISOLATION_INTERVAL ticks
+   * and the work is spread out. The result does not depend on the order of
+   * a player's tile set, which a restore rebuilds.
+   */
+  private updateIsolation(): void {
+    const slot = this._ticks % ISOLATION_INTERVAL;
+    for (const player of this._players.values()) {
+      if (player.smallID() % ISOLATION_INTERVAL !== slot) continue;
+      this.updatePlayerIsolation(player);
+    }
+  }
+
+  private updatePlayerIsolation(player: Player): void {
+    const id = player.smallID();
+    const isolatedOwner = this.isolatedOwner;
+    const old = this.isolatedTiles.get(id);
+    if (old !== undefined) {
+      for (const t of old) if (isolatedOwner[t] === id) isolatedOwner[t] = 0;
+      this.isolatedTiles.delete(id);
+    }
+    const owned = player.numTilesOwned();
+    if (owned === 0) return;
+
+    const capital = player.spawnTile();
+    let home: TileRef;
+    if (capital !== undefined && this._map.ownerID(capital) === id) {
+      home = capital;
+    } else {
+      // Capital lost: flood every piece and take the biggest, comparing
+      // ties by lowest tile so the choice doesn't depend on tile-set order.
+      home = -1;
+      let best = 0;
+      for (const t of player.tiles()) {
+        if (this.isolationSeen[t] === 1) continue;
+        const size = this.floodOwned(t, id);
+        const low = this.floodLowest;
+        if (size > best || (size === best && low < home)) {
+          best = size;
+          home = low;
+        }
+      }
+      for (const t of player.tiles()) this.isolationSeen[t] = 0;
+    }
+    const reached = this.floodOwned(home, id);
+    if (reached < owned) {
+      const cut: TileRef[] = [];
+      for (const t of player.tiles()) {
+        if (this.isolationSeen[t] === 0) {
+          isolatedOwner[t] = id;
+          cut.push(t);
+        }
+      }
+      this.isolatedTiles.set(id, cut);
+    }
+    for (const t of player.tiles()) this.isolationSeen[t] = 0;
+  }
+
+  /** Lowest tile of the piece the last floodOwned call marked. */
+  private floodLowest = 0;
+  /**
+   * Marks (isolationSeen) the piece of `id`'s land around `start` and returns
+   * its size; floodLowest gets its lowest tile.
+   */
+  private floodOwned(start: TileRef, id: number): number {
+    const map = this._map;
+    const w = this._width;
+    const last = this._width * this._height - 1;
+    const seen = this.isolationSeen;
+    let queue = this.isolationQueue;
+    let head = 0;
+    let tail = 0;
+    seen[start] = 1;
+    queue[tail++] = start;
+    let lowest = start;
+    while (head < tail) {
+      const t = queue[head++];
+      if (t < lowest) lowest = t;
+      const x = t % w;
+      for (let k = 0; k < 4; k++) {
+        let n: number;
+        if (k === 0) {
+          if (x === 0) continue;
+          n = t - 1;
+        } else if (k === 1) {
+          if (x === w - 1) continue;
+          n = t + 1;
+        } else if (k === 2) {
+          n = t - w;
+          if (n < 0) continue;
+        } else {
+          n = t + w;
+          if (n > last) continue;
+        }
+        if (seen[n] === 1 || map.ownerID(n) !== id) continue;
+        seen[n] = 1;
+        if (tail === queue.length) {
+          const grown = new Int32Array(queue.length * 2);
+          grown.set(queue);
+          queue = this.isolationQueue = grown;
+        }
+        queue[tail++] = n;
+      }
+    }
+    this.floodLowest = lowest;
+    return tail;
+  }
+
   endSpawnPhase(): void {
     if (this.startTick !== null) {
       return;
@@ -689,6 +818,7 @@ export class GameImpl implements Game {
       this.viewResyncQueued = false;
       this.addViewResync();
     }
+    if (!this.inSpawnPhase()) this.updateIsolation();
     this.execs.forEach((e) => {
       if (
         (!this.inSpawnPhase() || e.activeDuringSpawnPhase()) &&
@@ -1614,6 +1744,9 @@ export class GameImpl implements Game {
     return {
       ticks: this._ticks,
       burningSince: [...this.burningSince],
+      isolatedTiles: [...this.isolatedTiles].flatMap(([id, tiles]) =>
+        tiles.map((t) => [t, id] as [number, number]),
+      ),
       startTick: this.startTick,
       humans: this._humans.map(playerInfoData),
       nations: this._nations.map(nationData),
@@ -1667,6 +1800,13 @@ export class GameImpl implements Game {
   restoreState(s: GameState, r: SnapshotReader): void {
     this._ticks = s.ticks;
     this.burningSince = new Map(s.burningSince);
+    this.isolatedTiles = new Map();
+    for (const [t, id] of s.isolatedTiles) {
+      this.isolatedOwner[t] = id;
+      const tiles = this.isolatedTiles.get(id);
+      if (tiles === undefined) this.isolatedTiles.set(id, [t]);
+      else tiles.push(t);
+    }
     this.startTick = s.startTick;
     this.execs = s.execs.map((i) => r.exec(i));
     this.unInitExecs = s.unInitExecs.map((i) => r.exec(i));
@@ -1798,12 +1938,17 @@ export class GameImpl implements Game {
   }
 }
 
+/** Ticks between passes that work out which land is cut off (isIsolatedTile). */
+export const ISOLATION_INTERVAL = 10;
+
 export const GameSnapshot = snapshotType({
   name: "Game",
   version: 1,
   schema: z.object({
     ticks: zInt(),
     burningSince: z.array(z.tuple([zInt(), zInt()])).default([]),
+    // [tile, owner smallID] for land cut off at the last isolation pass.
+    isolatedTiles: z.array(z.tuple([zInt(), zInt()])).default([]),
     startTick: zInt().nullable(),
     humans: z.array(PlayerInfoSchema),
     nations: z.array(NationSchema),

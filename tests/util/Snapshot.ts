@@ -141,6 +141,9 @@ const DERIVED_FIELDS = new Set<string>([
   "unitCountMemo",
   "unitsByTypeMemo",
   "borderNbuf",
+  // isolation flood-fill scratch (isolationSeen is all zero between ticks)
+  "isolationQueue",
+  "floodLowest",
   // PlayerImpl
   "lastSentUpdate",
   "myUnitsMemo",

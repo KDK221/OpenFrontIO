@@ -1306,6 +1306,7 @@
     "tip_fortress": "Borders near a Fortress show a checkered pattern. Enemies attacking there are slower and lose more troops.",
     "tip_golden_lands": "The golden patches on the map are fertile plains. The more of them you hold, the faster your troops grow.",
     "tip_harbor": "Harbors send trade ships to other countries' harbors, and both sides earn gold.",
+    "tip_isolated": "Land cut off from your capital is out of supply: enemies take it faster and cheaper. Keep your territory in one piece.",
     "tip_label": "Tip",
     "tip_market": "A Market District lays trade roads to nearby towns and harbors. Every stop a caravan makes earns you gold.",
     "tip_plague": "A plague drains troops and spreads to neighbors but leaves the land standing. Ballista Towers can't stop it.",

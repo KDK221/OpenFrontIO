@@ -36,6 +36,11 @@ export interface AttackLogicInput {
   } | null;
   /** A defense post owned by the defender is in range of the tile. */
   defenderHasDefensePost: boolean;
+  /**
+   * The tile is cut off from the defender's capital (Game.isIsolatedTile),
+   * so it is cheaper and faster to take.
+   */
+  defenderTileIsolated?: boolean;
   /** Fraction of land tiles with fallout, or null if the tile has no fallout. */
   falloutRatio: number | null;
   /** Tiles on the attack front this tick (plus jitter); fixed for the tick. */
@@ -126,6 +131,14 @@ export class EngineConfig extends Config {
 
   traitorSpeedDebuff(): number {
     return 0.8;
+  }
+
+  /**
+   * Land cut off from its owner's capital is out of supply: attacks on it
+   * lose this share of the troops and take this share of the time.
+   */
+  isolatedDefenseModifier(): number {
+    return 0.6;
   }
 
   teamLandShareWinThresholdTenths(): number {
@@ -548,6 +561,10 @@ export class EngineConfig extends Config {
     if (defender !== null && input.defenderHasDefensePost) {
       mag *= this.defensePostDefenseBonus();
       tileCost *= this.defensePostSpeedBonus();
+    }
+    if (defender !== null && input.defenderTileIsolated === true) {
+      mag *= this.isolatedDefenseModifier();
+      tileCost *= this.isolatedDefenseModifier();
     }
     if (input.falloutRatio !== null) {
       const fallout = this.falloutDefenseModifier(input.falloutRatio);

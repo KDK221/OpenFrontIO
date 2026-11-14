@@ -21,6 +21,7 @@ export const START_TIPS = [
   "warship",
   "betrayal",
   "ally_aid",
+  "isolated",
 ] as const;
 
 export function pickStartTip(random: () => number = Math.random): string {
