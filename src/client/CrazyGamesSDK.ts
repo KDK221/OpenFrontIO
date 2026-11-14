@@ -90,15 +90,11 @@ class CrazyGamesSDK {
       }
       return false;
     } catch (e) {
-      // If we get a cross-origin error, we're definitely iframed
-      // Check our own referrer as fallback
-      const isCrazyGames = document.referrer.includes("crazygames");
-      if (isCrazyGames) {
-        return true;
-      }
-
-      // Fallback: on safari private we can't get referrer, so just assume we are in crazygames if in iframe
-      return window.self !== window.top;
+      // A cross-origin error means we're iframed by another site.
+      return crossOriginFrameIsCrazyGames(
+        window.location.ancestorOrigins,
+        document.referrer,
+      );
     }
   }
 
@@ -408,3 +404,21 @@ class CrazyGamesSDK {
 }
 
 export const crazyGamesSDK = new CrazyGamesSDK();
+
+/**
+ * Whether the cross-origin page embedding us is CrazyGames. The embedding
+ * origins say so directly where the browser lists them; otherwise the
+ * referrer does. Only when neither is known (Safari private browsing) do we
+ * assume CrazyGames, so other sites that embed the game (somusoft.com) don't
+ * get CrazyGames behaviour such as the instant tutorial.
+ */
+export function crossOriginFrameIsCrazyGames(
+  ancestorOrigins: ArrayLike<string> | undefined,
+  referrer: string,
+): boolean {
+  if (ancestorOrigins !== undefined && ancestorOrigins.length > 0) {
+    return Array.from(ancestorOrigins).some((o) => o.includes("crazygames"));
+  }
+  if (referrer !== "") return referrer.includes("crazygames");
+  return true;
+}

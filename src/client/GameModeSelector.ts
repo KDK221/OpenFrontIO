@@ -291,6 +291,10 @@ export function shouldBlockJoin(
   return shouldBlockSocketSourcedAction(update, session);
 }
 
+// Steam-edition perks ("Custom (Steam)"; a locked preview on the web). Defined
+// by components/SteamPerksPanel, which PlayPage imports.
+const STEAM_PERKS_CARD = html`<steam-perks class="block"></steam-perks>`;
+
 @customElement("game-mode-selector")
 export class GameModeSelector extends LitElement {
   @state() private lobbies: PublicGames | null = null;
@@ -655,11 +659,14 @@ export class GameModeSelector extends LitElement {
       >
         ${translateText("main.play_together")}
       </h2>
-      <p
-        class="sm:col-span-2 sm:row-start-3 rounded-lg border border-white/10 bg-black/30 px-4 py-3 text-sm text-white/70"
-      >
-        ${translateText("main.multiplayer_coming_soon")}
-      </p>`;
+      <div class="flex flex-col gap-4 sm:compact:gap-3 sm:col-span-2 sm:row-start-3">
+        <p
+          class="rounded-lg border border-white/10 bg-black/30 px-4 py-3 text-sm text-white/70"
+        >
+          ${translateText("main.multiplayer_coming_soon")}
+        </p>
+        ${STEAM_PERKS_CARD}
+      </div>`;
   }
 
   private renderTogether(
@@ -675,8 +682,10 @@ export class GameModeSelector extends LitElement {
       >
         ${translateText("main.play_together")}
       </h2>
+      <!-- The multiplayer actions, with the Steam card right under them. -->
+      <div class="flex flex-col gap-4 sm:compact:gap-3 sm:col-span-2 sm:row-start-3">
       <div
-        class="grid ${ClientEnv.selfHosted() ? "grid-cols-2" : "grid-cols-3"} gap-4 sm:compact:gap-3 sm:col-span-2 sm:row-start-3"
+        class="grid ${ClientEnv.selfHosted() ? "grid-cols-2" : "grid-cols-3"} gap-4 sm:compact:gap-3"
       >
         ${this.renderTogetherCard(
           translateText("main.create"),
@@ -715,6 +724,8 @@ export class GameModeSelector extends LitElement {
           this.openJoinLobby,
           this.hostedLobbyCount(),
         )}
+      </div>
+      ${STEAM_PERKS_CARD}
       </div>
 
       ${

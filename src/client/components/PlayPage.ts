@@ -111,9 +111,6 @@ export class PlayPage extends LitElement {
 
         <game-mode-selector></game-mode-selector>
 
-        <!-- Steam-edition perks (a locked preview in the web edition), after
-             both ways to play. -->
-        <steam-perks class="block mt-4 px-4 sm:px-0"></steam-perks>
       </div>
     `;
   }
