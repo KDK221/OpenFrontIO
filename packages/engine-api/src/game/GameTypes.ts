@@ -143,10 +143,24 @@ export const listedMaps: readonly MapInfo[] = maps.filter(
 );
 
 /**
- * The maps singleplayer free mode offers: every map but the hidden ones,
- * the ones inherited from OpenFront included (browsed by region).
+ * The maps singleplayer free mode offers, in picker order: present-day East
+ * Asian maps inherited from OpenFront. The scenario maps have their own mode.
  */
-export const freeModeMaps: readonly MapInfo[] = maps.filter((m) => !m.hidden);
+export const FREE_MODE_MAPS: readonly GameMapType[] = [
+  GameMapType.Korea,
+  GameMapType.TaiwanStrait,
+  GameMapType.EastAsia,
+  GameMapType.Japan,
+  GameMapType.China,
+  GameMapType.HongKong,
+];
+
+/** The map free mode starts on. */
+export const DEFAULT_FREE_MAP: GameMapType = FREE_MODE_MAPS[0];
+
+export const freeModeMaps: readonly MapInfo[] = FREE_MODE_MAPS.map(
+  (type) => maps.find((m) => m.type === type)!,
+);
 
 export enum GameType {
   Singleplayer = "Singleplayer",

@@ -5,7 +5,6 @@ import {
   GameMapType,
   listedMaps,
   MapCategory,
-  mapCategoryOrder,
   MapInfo,
   maps,
 } from "@openfront/engine-api/game/GameTypes";
@@ -24,23 +23,10 @@ const byRank = (a: MapInfo, b: MapInfo) =>
 // rank order, with no tabs.
 const scenarioMaps: MapInfo[] = [...listedMaps].sort(byRank);
 
-// Free mode: every map, browsed like OpenFront's picker. The scenario maps
-// lead the featured tab, then OpenFront's own featured maps.
-const freeFeatured: MapInfo[] = [
-  ...scenarioMaps,
-  ...freeModeMaps
-    .filter((m) => m.categories.includes("featured") && !scenarioMaps.includes(m))
-    .sort(byRank),
-];
-
-// Asia first: the game is set there, so its maps are the ones people look for.
-const regionOrder: MapCategory[] = [
-  "asia",
-  ...mapCategoryOrder.filter((c) => c !== "featured" && c !== "asia"),
-];
-const freeCategories: MapCategory[] = regionOrder.filter((c) =>
-  freeModeMaps.some((m) => m.categories.includes(c)),
-);
+// Free mode: the East Asian maps of FREE_MODE_MAPS, in that order; the "all"
+// tab groups them under Asia.
+const freeFeatured: MapInfo[] = [...freeModeMaps];
+const freeCategories: MapCategory[] = ["asia"];
 
 function mapsInCategory(category: MapCategory): MapInfo[] {
   return freeModeMaps

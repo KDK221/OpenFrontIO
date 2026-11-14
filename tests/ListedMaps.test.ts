@@ -32,17 +32,19 @@ describe("listedMaps", () => {
 });
 
 describe("freeModeMaps", () => {
-  test("offers every map but the hidden tutorial, scenario maps included", () => {
-    expect(freeModeMaps.some((m) => m.type === GameMapType.Tutorial)).toBe(
-      false,
-    );
-    expect(freeModeMaps.length).toBe(maps.filter((m) => !m.hidden).length);
-    for (const type of [
-      ...SCENARIO_MAPS,
+  test("offers just the present-day East Asian maps, in picker order", () => {
+    expect(freeModeMaps.map((m) => m.type)).toEqual([
       GameMapType.Korea,
       GameMapType.TaiwanStrait,
-    ]) {
-      expect(freeModeMaps.some((m) => m.type === type)).toBe(true);
+      GameMapType.EastAsia,
+      GameMapType.Japan,
+      GameMapType.China,
+      GameMapType.HongKong,
+    ]);
+    for (const m of freeModeMaps) {
+      expect(m.hidden).toBeFalsy();
+      expect(SCENARIO_MAPS).not.toContain(m.type);
+      expect(m.categories).toContain("asia");
     }
   });
 

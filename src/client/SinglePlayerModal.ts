@@ -8,6 +8,8 @@ import {
   UnitType,
   DEFAULT_MAP,
   SCENARIO_MAPS,
+  FREE_MODE_MAPS,
+  DEFAULT_FREE_MAP,
 } from "@openfront/engine-api/game/GameTypes";
 import type { SnapshotHeader } from "@openfront/engine-api/game/SnapshotHeader";
 import { TeamCountConfig } from "@openfront/engine-api/Schemas";
@@ -863,7 +865,10 @@ export class SinglePlayerModal extends BaseModal {
 
   private handleSelectRandomMap() {
     this.useRandomMap = true;
-    this.selectedMap = getRandomMapType();
+    this.selectedMap =
+      this.playMode === "free"
+        ? FREE_MODE_MAPS[Math.floor(Math.random() * FREE_MODE_MAPS.length)]
+        : getRandomMapType();
     void this.loadNationCount();
   }
 
@@ -1473,12 +1478,17 @@ export class SinglePlayerModal extends BaseModal {
     }
   }
 
-  // Free mode offers every map; a scenario only exists on the scenario maps,
-  // so switching back to one leaves any other map for the default.
+  // Each mode has its own maps (scenario: SCENARIO_MAPS, free:
+  // FREE_MODE_MAPS); switching to a mode the selected map isn't in picks that
+  // mode's default.
   private setPlayMode(mode: PlayMode) {
     this.playMode = mode;
     if (mode === "scenario" && !SCENARIO_MAPS.includes(this.selectedMap)) {
       this.selectedMap = DEFAULT_MAP;
+      this.useRandomMap = false;
+    }
+    if (mode === "free" && !FREE_MODE_MAPS.includes(this.selectedMap)) {
+      this.selectedMap = DEFAULT_FREE_MAP;
       this.useRandomMap = false;
     }
   }
