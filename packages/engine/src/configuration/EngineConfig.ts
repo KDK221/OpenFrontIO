@@ -37,7 +37,7 @@ export interface AttackLogicInput {
   /** A defense post owned by the defender is in range of the tile. */
   defenderHasDefensePost: boolean;
   /**
-   * The tile is cut off from the defender's capital (Game.isIsolatedTile),
+   * The tile is cut off from the defender's mainland (Game.isIsolatedTile),
    * so it is cheaper and faster to take.
    */
   defenderTileIsolated?: boolean;
@@ -134,7 +134,7 @@ export class EngineConfig extends Config {
   }
 
   /**
-   * Land cut off from its owner's capital is out of supply: attacks on it
+   * Land cut off from its owner's mainland is out of supply: attacks on it
    * lose this share of the troops and take this share of the time.
    */
   isolatedDefenseModifier(): number {

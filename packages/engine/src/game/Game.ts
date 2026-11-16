@@ -560,10 +560,9 @@ export interface Game extends GameLike {
   ticks(): Tick;
   inSpawnPhase(): boolean;
   /**
-   * Whether the tile's owner holds it cut off from the land around its
-   * capital (its spawn tile; the biggest piece of its land once the capital
-   * is lost). Worked out every ISOLATION_INTERVAL ticks; land taken since
-   * then counts as connected.
+   * Whether the tile's owner holds it cut off from its mainland, the biggest
+   * piece of its land. Worked out every ISOLATION_INTERVAL ticks; land taken
+   * since then counts as connected.
    */
   isIsolatedTile(tile: TileRef): boolean;
   endSpawnPhase(): void;

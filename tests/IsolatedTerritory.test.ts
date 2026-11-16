@@ -28,40 +28,49 @@ function nextPass(g: Game) {
 }
 
 describe("isolated territory", () => {
-  it("marks land cut off from the capital, not the capital's own piece", async () => {
+  it("marks land cut off from the biggest piece", async () => {
     const g = await create();
     const p = g.player("p");
     block(g, p, 5, 5, 6);
     block(g, p, 30, 30, 3);
-    p.setSpawnTile(g.ref(7, 7));
     nextPass(g);
     expect(g.isIsolatedTile(g.ref(7, 7))).toBe(false);
     expect(g.isIsolatedTile(g.ref(31, 31))).toBe(true);
     expect(g.isIsolatedTile(g.ref(50, 50))).toBe(false);
   });
 
-  it("follows the capital, even to the smaller piece", async () => {
+  it("ignores the capital: the biggest piece is the mainland", async () => {
     const g = await create();
     const p = g.player("p");
     block(g, p, 5, 5, 6);
     block(g, p, 30, 30, 3);
     p.setSpawnTile(g.ref(31, 31));
-    nextPass(g);
-    expect(g.isIsolatedTile(g.ref(31, 31))).toBe(false);
-    expect(g.isIsolatedTile(g.ref(7, 7))).toBe(true);
-  });
-
-  it("falls back to the biggest piece once the capital is lost", async () => {
-    const g = await create();
-    const p = g.player("p");
-    const q = g.player("q");
-    block(g, p, 5, 5, 6);
-    block(g, p, 30, 30, 3);
-    p.setSpawnTile(g.ref(31, 31));
-    q.conquer(g.ref(31, 31));
     nextPass(g);
     expect(g.isIsolatedTile(g.ref(7, 7))).toBe(false);
+    expect(g.isIsolatedTile(g.ref(31, 31))).toBe(true);
+  });
+
+  it("moves the mainland when another piece outgrows it", async () => {
+    const g = await create();
+    const p = g.player("p");
+    block(g, p, 5, 5, 3);
+    block(g, p, 30, 30, 2);
+    nextPass(g);
     expect(g.isIsolatedTile(g.ref(30, 30))).toBe(true);
+    block(g, p, 30, 30, 5);
+    nextPass(g);
+    expect(g.isIsolatedTile(g.ref(30, 30))).toBe(false);
+    expect(g.isIsolatedTile(g.ref(6, 6))).toBe(true);
+  });
+
+  it("keeps a single piece whole", async () => {
+    const g = await create();
+    const p = g.player("p");
+    block(g, p, 5, 5, 6);
+    nextPass(g);
+    for (let x = 5; x < 11; x++) {
+      expect(g.isIsolatedTile(g.ref(x, 7))).toBe(false);
+    }
   });
 
   it("stops counting a tile once someone else takes it, and heals when rejoined", async () => {
@@ -70,7 +79,6 @@ describe("isolated territory", () => {
     const q = g.player("q");
     block(g, p, 5, 5, 6);
     block(g, p, 13, 5, 3);
-    p.setSpawnTile(g.ref(7, 7));
     nextPass(g);
     expect(g.isIsolatedTile(g.ref(14, 6))).toBe(true);
     q.conquer(g.ref(14, 6));
@@ -118,7 +126,6 @@ describe("isolated territory", () => {
     const p = g.player("p");
     block(g, p, 5, 5, 6);
     block(g, p, 30, 30, 3);
-    p.setSpawnTile(g.ref(7, 7));
     nextPass(g);
     g.executeNextTick();
     const { restored } = await roundTrip(g, "plains");

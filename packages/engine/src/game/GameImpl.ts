@@ -135,7 +135,7 @@ export class GameImpl implements Game {
   private burningSince = new Map<TileRef, number>();
   /**
    * isolatedOwner[tile] is the smallID of the player that held the tile cut
-   * off from its capital at its last isolation pass (0 otherwise);
+   * off from its mainland at its last isolation pass (0 otherwise);
    * isolatedTiles lists those tiles per smallID so a pass can clear them.
    */
   private isolatedOwner: Uint16Array;
@@ -641,13 +641,12 @@ export class GameImpl implements Game {
   }
 
   /**
-   * Marks the land each player holds cut off from its capital: the tiles not
-   * reachable over its own land from its spawn tile (from the biggest piece
-   * of its land once the spawn tile is lost; ties go to the piece with the
-   * lowest tile). Each tick redoes the players whose smallID falls in that
-   * tick's slot, so every player is redone every ISOLATION_INTERVAL ticks
-   * and the work is spread out. The result does not depend on the order of
-   * a player's tile set, which a restore rebuilds.
+   * Marks the land each player holds cut off from its mainland, the biggest
+   * piece of its land (ties go to the piece with the lowest tile). Each tick
+   * redoes the players whose smallID falls in that tick's slot, so every
+   * player is redone every ISOLATION_INTERVAL ticks and the work is spread
+   * out. The result does not depend on the order of a player's tile set,
+   * which a restore rebuilds.
    */
   private updateIsolation(): void {
     const slot = this._ticks % ISOLATION_INTERVAL;
@@ -668,26 +667,22 @@ export class GameImpl implements Game {
     const owned = player.numTilesOwned();
     if (owned === 0) return;
 
-    const capital = player.spawnTile();
-    let home: TileRef;
-    if (capital !== undefined && this._map.ownerID(capital) === id) {
-      home = capital;
-    } else {
-      // Capital lost: flood every piece and take the biggest, comparing
-      // ties by lowest tile so the choice doesn't depend on tile-set order.
-      home = -1;
-      let best = 0;
-      for (const t of player.tiles()) {
-        if (this.isolationSeen[t] === 1) continue;
-        const size = this.floodOwned(t, id);
-        const low = this.floodLowest;
-        if (size > best || (size === best && low < home)) {
-          best = size;
-          home = low;
-        }
+    // Flood every piece and keep the biggest as the mainland, comparing ties
+    // by lowest tile so the choice doesn't depend on tile-set order.
+    let home = -1;
+    let best = 0;
+    for (const t of player.tiles()) {
+      if (this.isolationSeen[t] === 1) continue;
+      const size = this.floodOwned(t, id);
+      const low = this.floodLowest;
+      if (size > best || (size === best && low < home)) {
+        best = size;
+        home = low;
       }
-      for (const t of player.tiles()) this.isolationSeen[t] = 0;
+      if (size === owned) break; // all one piece: nothing is cut off
     }
+    for (const t of player.tiles()) this.isolationSeen[t] = 0;
+    if (best === owned) return;
     const reached = this.floodOwned(home, id);
     if (reached < owned) {
       const cut: TileRef[] = [];
