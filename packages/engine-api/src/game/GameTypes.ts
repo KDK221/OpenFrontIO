@@ -514,6 +514,8 @@ export enum MessageType {
   DONATION_RECEIVED,
   CHAT,
   RENEW_ALLIANCE,
+  SUPPLY_CUT,
+  SUPPLY_RESTORED,
 }
 
 // Message categories used for filtering events in the EventsDisplay
@@ -549,6 +551,8 @@ export const MESSAGE_TYPE_CATEGORIES: Record<MessageType, MessageCategory> = {
   [MessageType.DONATION_SENT]: MessageCategory.TRADE,
   [MessageType.DONATION_RECEIVED]: MessageCategory.TRADE,
   [MessageType.CHAT]: MessageCategory.CHAT,
+  [MessageType.SUPPLY_CUT]: MessageCategory.ATTACK,
+  [MessageType.SUPPLY_RESTORED]: MessageCategory.ATTACK,
 } as const;
 
 /**

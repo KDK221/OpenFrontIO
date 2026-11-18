@@ -866,7 +866,9 @@
     "naval_invasion_inbound": "{name}의 수군 상륙 접근 ({troops})",
     "sent_emoji_all": "모두에게 보냄: {emoji}",
     "plague_ended": "☠️ {name}의 역병이 끝났습니다. 병력 {troops} 감소.",
-    "plague_ended_victim": "☠️ 역병이 지나갔습니다. 병력 {troops}을(를) 잃었습니다."
+    "plague_ended_victim": "☠️ 역병이 지나갔습니다. 병력 {troops}을(를) 잃었습니다.",
+    "supply_cut": "보급 끊김: 내 땅 {tiles}칸이 본토와 끊겨 방어력이 약해졌습니다. 다시 이어 주세요!",
+    "supply_restored": "보급 복구: 끊겼던 땅이 본토와 다시 이어졌습니다."
   },
   "featured_stream": {
     "expand": "펼치기",
@@ -1730,6 +1732,7 @@
     "tps_avg_60s": "평균:"
   },
   "player_panel": {
+    "isolated": "⚠ 본토와 끊긴 땅: 보급이 끊겨 방어력이 약합니다",
     "active": "활성화 됨",
     "alliance_time_remaining": "동맹 만료: ",
     "alliances": "동맹",

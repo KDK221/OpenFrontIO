@@ -133,13 +133,8 @@ export type CellString = string;
 export class GameImpl implements Game {
   private _ticks = 0;
   private burningSince = new Map<TileRef, number>();
-  /**
-   * isolatedOwner[tile] is the smallID of the player that held the tile cut
-   * off from its mainland at its last isolation pass (0 otherwise);
-   * isolatedTiles lists those tiles per smallID so a pass can clear them.
-   */
-  private isolatedOwner: Uint16Array;
-  private isolatedTiles = new Map<number, TileRef[]>();
+  // Isolated tiles from a snapshot, set on the map once ownership is back.
+  private restoredIsolated: [number, number][] = [];
   // Scratch for the isolation flood fill; all zero between passes.
   private isolationSeen: Uint8Array;
   private isolationQueue = new Int32Array(1024);
@@ -209,7 +204,6 @@ export class GameImpl implements Game {
     this._terraNullius = new TerraNulliusImpl();
     this._width = _map.width();
     this._height = _map.height();
-    this.isolatedOwner = new Uint16Array(this._width * this._height);
     this.isolationSeen = new Uint8Array(this._width * this._height);
     this.unitGrid = new UnitGrid<Unit>(this._map);
     this._waterManager = new WaterManager(
@@ -636,8 +630,7 @@ export class GameImpl implements Game {
   }
 
   isIsolatedTile(tile: TileRef): boolean {
-    const id = this.isolatedOwner[tile];
-    return id !== 0 && id === this._map.ownerID(tile);
+    return this._map.isIsolated(tile);
   }
 
   /**
@@ -658,21 +651,16 @@ export class GameImpl implements Game {
 
   private updatePlayerIsolation(player: Player): void {
     const id = player.smallID();
-    const isolatedOwner = this.isolatedOwner;
-    const old = this.isolatedTiles.get(id);
-    if (old !== undefined) {
-      for (const t of old) if (isolatedOwner[t] === id) isolatedOwner[t] = 0;
-      this.isolatedTiles.delete(id);
-    }
     const owned = player.numTilesOwned();
     if (owned === 0) return;
+    const seen = this.isolationSeen;
 
     // Flood every piece and keep the biggest as the mainland, comparing ties
     // by lowest tile so the choice doesn't depend on tile-set order.
     let home = -1;
     let best = 0;
     for (const t of player.tiles()) {
-      if (this.isolationSeen[t] === 1) continue;
+      if (seen[t] === 1) continue;
       const size = this.floodOwned(t, id);
       const low = this.floodLowest;
       if (size > best || (size === best && low < home)) {
@@ -681,20 +669,48 @@ export class GameImpl implements Game {
       }
       if (size === owned) break; // all one piece: nothing is cut off
     }
-    for (const t of player.tiles()) this.isolationSeen[t] = 0;
-    if (best === owned) return;
-    const reached = this.floodOwned(home, id);
-    if (reached < owned) {
-      const cut: TileRef[] = [];
-      for (const t of player.tiles()) {
-        if (this.isolationSeen[t] === 0) {
-          isolatedOwner[t] = id;
-          cut.push(t);
-        }
+    for (const t of player.tiles()) seen[t] = 0;
+    const onePiece = best === owned;
+    if (!onePiece) this.floodOwned(home, id);
+
+    // Set the map's isolated bit (it travels to clients with the tile
+    // state) outside the mainland and clear it inside; only tiles whose bit
+    // changes get a tile update.
+    let before = 0;
+    let after = 0;
+    for (const t of player.tiles()) {
+      const cut = !onePiece && seen[t] === 0;
+      seen[t] = 0;
+      const was = this._map.isIsolated(t);
+      if (was) before++;
+      if (cut) after++;
+      if (was !== cut) {
+        this._map.setIsolated(t, cut);
+        this.recordTileUpdate(t);
       }
-      this.isolatedTiles.set(id, cut);
     }
-    for (const t of player.tiles()) this.isolationSeen[t] = 0;
+
+    // Tell the player when a real piece of land (not a sliver left by a
+    // jagged front) gets cut off or joined back.
+    if (player.type() !== PlayerType.Human) return;
+    if (before < SUPPLY_MESSAGE_TILES && after >= SUPPLY_MESSAGE_TILES) {
+      this.displayMessage(
+        "events_display.supply_cut",
+        MessageType.SUPPLY_CUT,
+        player.id(),
+        undefined,
+        { tiles: after },
+      );
+    } else if (
+      before >= SUPPLY_MESSAGE_TILES &&
+      after < SUPPLY_MESSAGE_TILES
+    ) {
+      this.displayMessage(
+        "events_display.supply_restored",
+        MessageType.SUPPLY_RESTORED,
+        player.id(),
+      );
+    }
   }
 
   /** Lowest tile of the piece the last floodOwned call marked. */
@@ -1109,6 +1125,7 @@ export class GameImpl implements Game {
     this.updateBorders(tile);
     this.burningSince.delete(tile);
     this._map.setFallout(tile, false);
+    this._map.setIsolated(tile, false);
     this.recordTileUpdate(tile);
   }
 
@@ -1128,6 +1145,7 @@ export class GameImpl implements Game {
 
     this._territoryVersion++;
     this._map.setOwnerID(tile, 0);
+    this._map.setIsolated(tile, false);
     this.updateBorders(tile);
     this.recordTileUpdate(tile);
   }
@@ -1607,6 +1625,14 @@ export class GameImpl implements Game {
     this._territoryVersion++;
     return this._map.setOwnerID(ref, playerId);
   }
+  isIsolated(ref: TileRef): boolean {
+    return this._map.isIsolated(ref);
+  }
+  // Isolation is the engine's to set (updatePlayerIsolation); this is the
+  // GameMap passthrough.
+  setIsolated(ref: TileRef, value: boolean): void {
+    this._map.setIsolated(ref, value);
+  }
   hasFallout(ref: TileRef): boolean {
     return this._map.hasFallout(ref);
   }
@@ -1739,8 +1765,12 @@ export class GameImpl implements Game {
     return {
       ticks: this._ticks,
       burningSince: [...this.burningSince],
-      isolatedTiles: [...this.isolatedTiles].flatMap(([id, tiles]) =>
-        tiles.map((t) => [t, id] as [number, number]),
+      // The map snapshot doesn't carry the isolated bit (or ownership).
+      isolatedTiles: [...this._players.values()].flatMap((p) =>
+        [...p.tiles()]
+          .filter((t) => this._map.isIsolated(t))
+          .sort((a, b) => a - b)
+          .map((t) => [t, p.smallID()] as [number, number]),
       ),
       startTick: this.startTick,
       humans: this._humans.map(playerInfoData),
@@ -1782,6 +1812,15 @@ export class GameImpl implements Game {
     };
   }
 
+  /**
+   * Sets the map's isolated bit on the restored isolated tiles. Runs once
+   * tile ownership is back, which the map snapshot doesn't carry.
+   */
+  restoreIsolatedBits(): void {
+    for (const [t] of this.restoredIsolated) this._map.setIsolated(t, true);
+    this.restoredIsolated = [];
+  }
+
   /** Registers a restored player shell before any state is filled in. */
   addRestoredPlayer(player: PlayerImpl, id: PlayerID, smallID: number): void {
     this._players.set(id, player);
@@ -1795,13 +1834,7 @@ export class GameImpl implements Game {
   restoreState(s: GameState, r: SnapshotReader): void {
     this._ticks = s.ticks;
     this.burningSince = new Map(s.burningSince);
-    this.isolatedTiles = new Map();
-    for (const [t, id] of s.isolatedTiles) {
-      this.isolatedOwner[t] = id;
-      const tiles = this.isolatedTiles.get(id);
-      if (tiles === undefined) this.isolatedTiles.set(id, [t]);
-      else tiles.push(t);
-    }
+    this.restoredIsolated = s.isolatedTiles;
     this.startTick = s.startTick;
     this.execs = s.execs.map((i) => r.exec(i));
     this.unInitExecs = s.unInitExecs.map((i) => r.exec(i));
@@ -1935,6 +1968,9 @@ export class GameImpl implements Game {
 
 /** Ticks between passes that work out which land is cut off (isIsolatedTile). */
 export const ISOLATION_INTERVAL = 10;
+
+/** Cut-off land the player hears about, in tiles; smaller slivers pass quietly. */
+export const SUPPLY_MESSAGE_TILES = 50;
 
 export const GameSnapshot = snapshotType({
   name: "Game",

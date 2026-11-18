@@ -1,3 +1,4 @@
+import { GameUpdateType } from "@openfront/engine-api/game/GameUpdates";
 import {
   GameMapType,
   PlayerInfo,
@@ -89,6 +90,40 @@ describe("isolated territory", () => {
     }
     nextPass(g);
     expect(g.isIsolatedTile(g.ref(13, 5))).toBe(false);
+  });
+
+  it("marks isolated land in the tile state and tells a human player", async () => {
+    const g = await create();
+    const p = g.player("p");
+    block(g, p, 5, 5, 12);
+    block(g, p, 30, 30, 8);
+    const messages: string[] = [];
+    for (let i = 0; i < ISOLATION_INTERVAL; i++) {
+      const updates = g.executeNextTick();
+      for (const u of updates[GameUpdateType.DisplayEvent]) {
+        messages.push(u.message);
+      }
+    }
+    expect(g.map().isIsolated(g.ref(31, 31))).toBe(true);
+    expect(g.map().isIsolated(g.ref(7, 7))).toBe(false);
+    expect(messages).toContain("events_display.supply_cut");
+
+    // Conquest clears the bit right away.
+    g.player("q").conquer(g.ref(31, 31));
+    expect(g.map().isIsolated(g.ref(31, 31))).toBe(false);
+
+    // Joining the piece back up clears the rest and says so.
+    for (let x = 17; x < 30; x++) for (let y = 30; y < 32; y++) p.conquer(g.ref(x, y));
+    for (let x = 15; x < 19; x++) for (let y = 15; y < 32; y++) p.conquer(g.ref(x, y));
+    messages.length = 0;
+    for (let i = 0; i < ISOLATION_INTERVAL; i++) {
+      const updates = g.executeNextTick();
+      for (const u of updates[GameUpdateType.DisplayEvent]) {
+        messages.push(u.message);
+      }
+    }
+    expect(g.map().isIsolated(g.ref(33, 33))).toBe(false);
+    expect(messages).toContain("events_display.supply_restored");
   });
 
   it("makes isolated land cheaper and faster to attack", async () => {

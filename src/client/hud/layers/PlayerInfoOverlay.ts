@@ -526,6 +526,18 @@ export class PlayerInfoOverlay extends LitElement implements Controller {
     </button>`;
   }
 
+  // The shown tile is cut off from its owner's mainland: say so, since the
+  // map only marks it with a faint glow.
+  private renderIsolatedNote() {
+    if (this.player === null || this.tile === null) return "";
+    if (!this.game.isIsolated(this.tile)) return "";
+    return html`<div
+      class="px-2 pb-1 text-xs text-amber-300"
+    >
+      ${translateText("player_panel.isolated")}
+    </div>`;
+  }
+
   private renderPlayerInfo(player: PlayerView) {
     const myPlayer = this.game.myPlayer();
     const isFriendly = myPlayer?.isFriendly(player);
@@ -939,6 +951,7 @@ export class PlayerInfoOverlay extends LitElement implements Controller {
           @mouseleave=${this.onPanelLeave}
         >
           ${this.player ? this.renderPlayerInfo(this.player) : ""}
+          ${this.renderIsolatedNote()}
           ${this.unit ? this.renderUnitInfo(this.unit) : ""}
         </div>
       </div>

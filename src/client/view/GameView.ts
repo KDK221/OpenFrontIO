@@ -1092,6 +1092,12 @@ export class GameView implements GameLike {
   hasFallout(ref: TileRef): boolean {
     return this._map.hasFallout(ref);
   }
+  isIsolated(ref: TileRef): boolean {
+    return this._map.isIsolated(ref);
+  }
+  setIsolated(ref: TileRef, value: boolean): void {
+    this._map.setIsolated(ref, value);
+  }
   setFallout(ref: TileRef, value: boolean): void {
     return this._map.setFallout(ref, value);
   }

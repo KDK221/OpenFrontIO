@@ -139,6 +139,28 @@ void main() {
     }
   }
 
+  // Land cut off from its owner's mainland: a faint warm glow that breathes
+  // slowly, strongest along the piece's edge (sampled 1, 3 and 5 tiles out
+  // in four directions; only isolated tiles pay for the fetches).
+  if ((raw & (1u << ISOLATED_BIT)) != 0u) {
+    uint isoMask = uint(OWNER_MASK) | (1u << ISOLATED_BIT);
+    uint same = owner | (1u << ISOLATED_BIT);
+    float edge = 0.0;
+    for (int d = 0; d < 4; d++) {
+      ivec2 dir = d == 0 ? ivec2(1, 0) : d == 1 ? ivec2(-1, 0) : d == 2 ? ivec2(0, 1) : ivec2(0, -1);
+      for (int k = 0; k < 3; k++) {
+        ivec2 p = clamp(tc + dir * (1 + 2 * k), ivec2(0), ivec2(uMapSize) - 1);
+        if ((texelFetch(uTileTex, p, 0).r & isoMask) != same) {
+          edge = max(edge, 1.0 - 0.35 * float(k));
+          break;
+        }
+      }
+    }
+    float pulse = 0.5 - 0.5 * cos(uFireTime * 2.6);
+    float glow = edge * (0.06 + 0.10 * pulse) + 0.02 * pulse;
+    color.rgb = mix(color.rgb, vec3(1.0, 0.88, 0.55), glow);
+  }
+
   // Hover highlight: boost contrast on the hovered player's tiles, pushing
   // channels away from mid-gray. uHighlightBrighten is the strength; 0 disables.
   if (uHighlightOwner != 0u && owner == uHighlightOwner && uHighlightBrighten > 0.0) {

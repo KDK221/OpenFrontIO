@@ -36,6 +36,7 @@ export class GameMapImpl implements GameMap {
 
   // State bits (Uint16Array)
   private static readonly PLAYER_ID_MASK = 0xfff;
+  private static readonly ISOLATED_BIT = 12;
   private static readonly FALLOUT_BIT = 13;
   private static readonly DEFENSE_BONUS_BIT = 14;
   // Bit 15 still reserved
@@ -270,6 +271,18 @@ export class GameMapImpl implements GameMap {
       return true;
     }
     return false;
+  }
+
+  isIsolated(ref: TileRef): boolean {
+    return Boolean(this.state[ref] & (1 << GameMapImpl.ISOLATED_BIT));
+  }
+
+  setIsolated(ref: TileRef, value: boolean): void {
+    if (value) {
+      this.state[ref] |= 1 << GameMapImpl.ISOLATED_BIT;
+    } else {
+      this.state[ref] &= ~(1 << GameMapImpl.ISOLATED_BIT);
+    }
   }
 
   hasDefenseBonus(ref: TileRef): boolean {

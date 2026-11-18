@@ -37,6 +37,9 @@ export interface GameMap {
   setOwnerID(ref: TileRef, playerId: number): void;
   hasFallout(ref: TileRef): boolean;
   setFallout(ref: TileRef, value: boolean): void;
+  /** The owner holds this tile cut off from its mainland (Game.isIsolatedTile). */
+  isIsolated(ref: TileRef): boolean;
+  setIsolated(ref: TileRef, value: boolean): void;
   isOnEdgeOfMap(ref: TileRef): boolean;
   isBorder(ref: TileRef): boolean;
   neighbors(ref: TileRef): TileRef[];

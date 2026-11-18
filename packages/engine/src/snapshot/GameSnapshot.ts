@@ -404,5 +404,6 @@ export function restoreGame(bytes: Uint8Array, deps: RestoreDeps): Game {
     const id = p.smallID();
     for (const tile of p.tiles()) map.setOwnerID(tile, id);
   }
+  game.restoreIsolatedBits();
   return game;
 }
