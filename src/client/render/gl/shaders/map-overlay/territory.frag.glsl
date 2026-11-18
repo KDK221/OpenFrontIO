@@ -30,8 +30,6 @@ uniform float uSaturation;         // 1 = full color, 0 = grayscale
 uniform float uTerritoryAlpha;     // absolute fill opacity; 1 = fully opaque
 uniform sampler2D uAffiliation;    // RGBA8 — alt-view relation colors (row 0)
 uniform float uAltFillAlpha;       // alt-view translucent fill opacity
-uniform uint uPlagued[16];         // smallIDs of players a plague is draining
-uniform int uPlaguedCount;
 
 in vec2 vWorldPos;
 out vec4 fragColor;
@@ -50,8 +48,20 @@ void main() {
   uint raw = texelFetch(uTileTex, tc, 0).r;
   uint owner = raw & uint(OWNER_MASK);
   bool fallout = (raw & (1u << FALLOUT_BIT)) != 0u;
+  bool plague = (raw & (1u << PLAGUE_BIT)) != 0u;
 
-  if (owner == 0u && !fallout) discard;
+  if (owner == 0u && !fallout && !plague) discard;
+
+  // Plague ground (PlagueExecution): a flat green face over the land, like
+  // the original fallout, with a faint mottle so it reads as sickness.
+  if (plague && !fallout) {
+    vec3 sick = vec3(0.36, 0.68, 0.22);
+    float mottle = fireNoise(vWorldPos * 0.25) * 0.12;
+    if (owner == 0u) {
+      fragColor = vec4(sick - mottle, 0.45);
+      return;
+    }
+  }
 
   // --- Stale-nuke ground (any fallout tile, owned or not) ---
   // Renders for owned tiles too so the player's territory color can't bleed
@@ -163,17 +173,9 @@ void main() {
     color.rgb = mix(color.rgb, vec3(1.0, 0.88, 0.55), glow);
   }
 
-  // Plague: slow, blotchy sickly-green patches drifting over the land.
-  for (int i = 0; i < 16; i++) {
-    if (i >= uPlaguedCount) break;
-    if (uPlagued[i] == owner) {
-      float n = fireNoise(vWorldPos * 0.12 + vec2(uFireTime * 0.25, uFireTime * 0.15));
-      float n2 = fireNoise(vWorldPos * 0.35 - vec2(uFireTime * 0.4, 0.0));
-      float blot = smoothstep(0.35, 0.8, n * 0.7 + n2 * 0.3);
-      float pulse = 0.5 - 0.5 * cos(uFireTime * 2.0);
-      color.rgb = mix(color.rgb, vec3(0.55, 0.75, 0.22), 0.12 + blot * (0.25 + 0.1 * pulse));
-      break;
-    }
+  if (plague && !fallout) {
+    vec3 sick = vec3(0.36, 0.68, 0.22) - fireNoise(vWorldPos * 0.25) * 0.12;
+    color.rgb = mix(color.rgb, sick, 0.6);
   }
 
   // Hover highlight: boost contrast on the hovered player's tiles, pushing

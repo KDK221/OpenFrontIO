@@ -1628,6 +1628,15 @@ export class GameImpl implements Game {
   isIsolated(ref: TileRef): boolean {
     return this._map.isIsolated(ref);
   }
+  isPlague(ref: TileRef): boolean {
+    return this._map.isPlague(ref);
+  }
+  /** Marks or clears plague ground, sending the change to clients. */
+  setPlague(ref: TileRef, value: boolean): void {
+    if (this._map.isPlague(ref) === value) return;
+    this._map.setPlague(ref, value);
+    this.recordTileUpdate(ref);
+  }
   // Isolation is the engine's to set (updatePlayerIsolation); this is the
   // GameMap passthrough.
   setIsolated(ref: TileRef, value: boolean): void {

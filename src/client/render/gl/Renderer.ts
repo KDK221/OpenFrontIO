@@ -927,12 +927,6 @@ export class GPURenderer {
   ): void {
     this.namePass.updateNames(names, players, snap, statusData);
 
-    const plagued: number[] = [];
-    for (const ps of players.values()) {
-      if (ps.isAlive && ps.isPlagued) plagued.push(ps.smallID);
-    }
-    this.territoryPass.setPlaguedOwners(plagued);
-
     // Extract local player's allies + teammates for SAM radius coloring
     if (this.localPlayerID > 0) {
       const localPS = players.get(this.localPlayerID);

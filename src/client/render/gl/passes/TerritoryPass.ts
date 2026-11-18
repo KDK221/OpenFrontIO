@@ -32,8 +32,6 @@ export class TerritoryPass {
   private uMapSize: WebGLUniformLocation;
   private uAltView: WebGLUniformLocation;
   private uFireTime: WebGLUniformLocation;
-  private uPlagued: WebGLUniformLocation | null;
-  private uPlaguedCount: WebGLUniformLocation | null;
   private uStaleNukeBase: WebGLUniformLocation;
   private uStaleNukeVariation: WebGLUniformLocation;
   private uStaleNukeAlpha: WebGLUniformLocation;
@@ -60,10 +58,6 @@ export class TerritoryPass {
   private defenseCoverageTex: WebGLTexture | null = null;
   private borderTex: WebGLTexture | null = null;
   private affiliationTex: WebGLTexture | null = null;
-  // Players a plague is draining (smallIDs; at most PLAGUED_MAX are shown).
-  private plagued = new Uint32Array(TerritoryPass.PLAGUED_MAX);
-  private plaguedCount = 0;
-  private static readonly PLAGUED_MAX = 16;
 
   private altView = false;
 
@@ -191,8 +185,6 @@ export class TerritoryPass {
       "uTerritoryAlpha",
     )!;
     this.uAltFillAlpha = gl.getUniformLocation(this.program, "uAltFillAlpha")!;
-    this.uPlagued = gl.getUniformLocation(this.program, "uPlagued");
-    this.uPlaguedCount = gl.getUniformLocation(this.program, "uPlaguedCount");
 
     gl.useProgram(this.program);
     gl.uniform1i(gl.getUniformLocation(this.program, "uTileTex"), 0);
@@ -422,12 +414,6 @@ export class TerritoryPass {
     this.borderTex = tex;
   }
 
-  /** Owners whose land shows the plague (see territory.frag). */
-  setPlaguedOwners(smallIDs: readonly number[]): void {
-    this.plaguedCount = Math.min(smallIDs.length, TerritoryPass.PLAGUED_MAX);
-    for (let i = 0; i < this.plaguedCount; i++) this.plagued[i] = smallIDs[i];
-  }
-
   /** Affiliation palette (row 0 = border/relation colors) for the alt-view fill. */
   setAffiliationTex(tex: WebGLTexture): void {
     this.affiliationTex = tex;
@@ -465,8 +451,6 @@ export class TerritoryPass {
     gl.uniform1f(this.uSaturation, mo.territorySaturation);
     gl.uniform1f(this.uTerritoryAlpha, mo.territoryAlpha);
     gl.uniform1f(this.uAltFillAlpha, this.settings.altView.fillAlpha);
-    gl.uniform1uiv(this.uPlagued, this.plagued);
-    gl.uniform1i(this.uPlaguedCount, this.plaguedCount);
 
     gl.activeTexture(gl.TEXTURE0);
     gl.bindTexture(gl.TEXTURE_2D, this.tileTex);

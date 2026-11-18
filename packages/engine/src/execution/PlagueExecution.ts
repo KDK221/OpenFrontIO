@@ -19,9 +19,11 @@ import type {
 } from "../snapshot/SnapshotContext";
 
 /**
- * Plague: the era's replacement for the MIRV. A disease is released on the
- * player owning the target tile. It drains troops (never land) and may spread
- * to players that share a border with an infected player.
+ * Plague: the era's replacement for the MIRV. Like the MIRV's fallout, it
+ * covers ground: the target player's land within RADIUS of the impact turns
+ * to plague ground (green on the map) for DURATION ticks. While it lasts the
+ * target loses troops in proportion to how much of its land is covered. It
+ * takes no land and doesn't spread to other players.
  *
  * Launched from a ready Siege Camp, like the other strategic attacks.
  */
@@ -37,10 +39,12 @@ export class PlagueExecution implements Execution {
    * "nothing happened".
    */
   static readonly DRAIN = 0.04;
-  /** Ticks between spread attempts. */
-  static readonly SPREAD_INTERVAL = 50;
-  /** Percent chance per attempt that a bordering player catches it. */
-  static readonly SPREAD_CHANCE = 35;
+  /**
+   * Radius of the plague ground. A MIRV's 350 warheads (outer radius 18)
+   * cover up to about 356k tiles; the plague covers half that, a circle of
+   * about 238.
+   */
+  static readonly RADIUS = 238;
 
   private active = true;
   private mg: Game;
@@ -50,10 +54,13 @@ export class PlagueExecution implements Execution {
   private infected: Player[] = [];
   /** Troops each infected player has lost so far, for the closing report. */
   private lost = new Map<Player, number>();
+  /** The plague ground: tiles marked with the map's plague bit. */
+  private area: TileRef[] = [];
 
   constructor(
     private player: Player,
     private dst: TileRef,
+    private radius: number = PlagueExecution.RADIUS,
   ) {}
 
   init(mg: Game, ticks: number): void {
@@ -85,13 +92,19 @@ export class PlagueExecution implements Execution {
 
     if (this.age % PlagueExecution.STEP === 0) {
       for (const p of this.infected) {
+        // In proportion to the share of its land under the plague.
+        const owned = p.numTilesOwned();
+        if (owned === 0) continue;
+        let covered = 0;
+        for (const t of this.area) {
+          if (this.mg.ownerID(t) === p.smallID()) covered++;
+        }
         const before = p.troops();
-        p.removeTroops(before * PlagueExecution.DRAIN);
+        p.removeTroops(
+          before * PlagueExecution.DRAIN * Math.min(1, covered / owned),
+        );
         this.lost.set(p, (this.lost.get(p) ?? 0) + (before - p.troops()));
       }
-    }
-    if (this.age % PlagueExecution.SPREAD_INTERVAL === 0) {
-      this.spread();
     }
     this.markInfected();
   }
@@ -110,6 +123,7 @@ export class PlagueExecution implements Execution {
     this.player.removeGold(this.mg.unitInfo(UnitType.MIRV).cost(this.mg, this.player));
     this.started = true;
     this.infected = [target];
+    this.coverGround(target);
     this.markInfected();
     // Counts toward the price of the next plague (see EngineConfig).
     this.mg.recordMirvLaunch();
@@ -151,30 +165,21 @@ export class PlagueExecution implements Execution {
     for (const p of this.infected) p.markPlagued(this.mg.ticks() + 1);
   }
 
-  private spread(): void {
-    const newlyInfected: Player[] = [];
-    for (const carrier of this.infected) {
-      for (const other of this.mg.players()) {
-        if (
-          other === carrier ||
-          !other.isAlive() ||
-          this.infected.includes(other) ||
-          newlyInfected.includes(other) ||
-          // The one who released it keeps its own people healthy, as do its
-          // teammates.
-          other === this.player ||
-          this.player.isOnSameTeam(other) ||
-          !carrier.sharesBorderWith(other)
-        ) {
-          continue;
-        }
-        if (this.random.nextInt(0, 100) < PlagueExecution.SPREAD_CHANCE) {
-          newlyInfected.push(other);
-          this.notify(other);
-        }
+  /** Marks the target's land within RADIUS of the impact as plague ground. */
+  private coverGround(target: Player): void {
+    const r = this.radius;
+    const cx = this.mg.x(this.dst);
+    const cy = this.mg.y(this.dst);
+    const id = target.smallID();
+    for (let y = Math.max(0, cy - r); y <= Math.min(this.mg.height() - 1, cy + r); y++) {
+      for (let x = Math.max(0, cx - r); x <= Math.min(this.mg.width() - 1, cx + r); x++) {
+        if ((x - cx) ** 2 + (y - cy) ** 2 > r * r) continue;
+        const t = this.mg.ref(x, y);
+        if (this.mg.ownerID(t) !== id || this.mg.isPlague(t)) continue;
+        this.mg.setPlague(t, true);
+        this.area.push(t);
       }
     }
-    this.infected.push(...newlyInfected);
   }
 
   private notify(target: Player): void {
@@ -191,6 +196,8 @@ export class PlagueExecution implements Execution {
 
   private finish(): void {
     this.active = false;
+    for (const t of this.area) this.mg.setPlague(t, false);
+    this.area = [];
     const first = this.mg.owner(this.dst);
     this.mg.stats().bombLand(this.player, first, UnitType.MIRV);
     // Report what it did: to the one who released it, per victim, and to
@@ -245,6 +252,8 @@ export class PlagueExecution implements Execution {
       age: this.age,
       infected: this.infected.map((p) => w.player(p)),
       lost: [...this.lost].map(([p, n]) => [w.player(p), Math.round(n)]),
+      area: this.area,
+      radius: this.radius,
     });
   }
 
@@ -260,6 +269,10 @@ export class PlagueExecution implements Execution {
     this.age = s.age;
     this.infected = s.infected.map((p) => r.player(p));
     this.lost = new Map((s.lost ?? []).map(([p, n]) => [r.player(p), n]));
+    // The map snapshot doesn't carry the plague bit.
+    this.area = s.area;
+    this.radius = s.radius;
+    for (const t of this.area) r.game.map().setPlague(t, true);
   }
 }
 
@@ -273,6 +286,8 @@ const PlagueStateSchema = z.object({
   infected: z.array(zPlayerRef()),
   // Added after version 1 shipped; saves from before it have none.
   lost: z.array(z.tuple([zPlayerRef(), zInt()])).optional(),
+  area: z.array(zTile()).default([]),
+  radius: zInt().default(PlagueExecution.RADIUS),
 });
 type PlagueState = z.infer<typeof PlagueStateSchema>;
 

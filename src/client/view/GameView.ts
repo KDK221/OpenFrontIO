@@ -1095,6 +1095,12 @@ export class GameView implements GameLike {
   isIsolated(ref: TileRef): boolean {
     return this._map.isIsolated(ref);
   }
+  isPlague(ref: TileRef): boolean {
+    return this._map.isPlague(ref);
+  }
+  setPlague(ref: TileRef, value: boolean): void {
+    this._map.setPlague(ref, value);
+  }
   setIsolated(ref: TileRef, value: boolean): void {
     this._map.setIsolated(ref, value);
   }

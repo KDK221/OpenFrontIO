@@ -5,6 +5,7 @@
  *   Bit 12:     isolated (cut off from the owner's mainland)
  *   Bit 13:     fallout
  *   Bit 14:     defense bonus
+ *   Bit 15:     plague ground
  */
 
 export const OWNER_MASK = 0xfff; // bits 0-11
@@ -15,4 +16,5 @@ export const TILE_DEFINES = {
   ISOLATED_BIT: 12, // used as (1u << ISOLATED_BIT) in GLSL
   FALLOUT_BIT: 13, // used as (1u << FALLOUT_BIT) in GLSL
   DEFENSE_BIT: 14, // used as (1u << DEFENSE_BIT) in GLSL
+  PLAGUE_BIT: 15, // used as (1u << PLAGUE_BIT) in GLSL
 };

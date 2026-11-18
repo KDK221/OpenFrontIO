@@ -40,6 +40,9 @@ export interface GameMap {
   /** The owner holds this tile cut off from its mainland (Game.isIsolatedTile). */
   isIsolated(ref: TileRef): boolean;
   setIsolated(ref: TileRef, value: boolean): void;
+  /** Ground a plague covers (PlagueExecution). */
+  isPlague(ref: TileRef): boolean;
+  setPlague(ref: TileRef, value: boolean): void;
   isOnEdgeOfMap(ref: TileRef): boolean;
   isBorder(ref: TileRef): boolean;
   neighbors(ref: TileRef): TileRef[];

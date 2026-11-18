@@ -39,6 +39,7 @@ export class GameMapImpl implements GameMap {
   private static readonly ISOLATED_BIT = 12;
   private static readonly FALLOUT_BIT = 13;
   private static readonly DEFENSE_BONUS_BIT = 14;
+  private static readonly PLAGUE_BIT = 15;
   // Bit 15 still reserved
 
   constructor(
@@ -282,6 +283,18 @@ export class GameMapImpl implements GameMap {
       this.state[ref] |= 1 << GameMapImpl.ISOLATED_BIT;
     } else {
       this.state[ref] &= ~(1 << GameMapImpl.ISOLATED_BIT);
+    }
+  }
+
+  isPlague(ref: TileRef): boolean {
+    return Boolean(this.state[ref] & (1 << GameMapImpl.PLAGUE_BIT));
+  }
+
+  setPlague(ref: TileRef, value: boolean): void {
+    if (value) {
+      this.state[ref] |= 1 << GameMapImpl.PLAGUE_BIT;
+    } else {
+      this.state[ref] &= ~(1 << GameMapImpl.PLAGUE_BIT);
     }
   }
 

@@ -10,6 +10,7 @@ import { PlagueExecution } from "@openfront/engine/execution/PlagueExecution";
 import { PlayerExecution } from "@openfront/engine/execution/PlayerExecution";
 import { Game, Player } from "@openfront/engine/game/Game";
 import { setup } from "./util/Setup";
+import { roundTrip } from "./util/Snapshot";
 import { executeTicks } from "./util/utils";
 
 function conquerRect(
@@ -106,15 +107,32 @@ describe("Plague (MIRV slot)", () => {
     expect(b.numTilesOwned()).toBe(tiles);
   });
 
-  test("spreads to neighbors but never to the one who released it", async () => {
+  test("covers the target's land near the impact as plague ground, and only that", async () => {
     const { game, a, b, c } = await plagueGame();
     const plague = new PlagueExecution(a, game.ref(15, 5));
     game.addExecution(plague);
+    executeTicks(game, 20);
+    expect(game.isPlague(game.ref(15, 5))).toBe(true);
+    expect(game.isPlague(game.ref(25, 5))).toBe(false); // c's land
+    expect(game.isPlague(game.ref(5, 5))).toBe(false); // a's land
     executeTicks(game, PlagueExecution.DURATION);
-    expect(plague.infectedPlayers()).toContain(c);
-    expect(plague.infectedPlayers()).not.toContain(a);
-    expect(a.troops()).toBeGreaterThanOrEqual(100_000);
+    // It never spreads to c, and the ground clears when it ends.
+    expect(plague.infectedPlayers()).not.toContain(c);
+    expect(c.troops()).toBeGreaterThanOrEqual(100_000);
     expect(b.troops()).toBeLessThan(100_000 * 0.6);
+    expect(game.isPlague(game.ref(15, 5))).toBe(false);
+  });
+
+  test("drains in proportion to the share of land it covers", async () => {
+    const { game, a, b } = await plagueGame();
+    // Give b far more land outside the radius than inside it.
+    conquerRect(game, b, 10, 10, 20, 100);
+    const plague = new PlagueExecution(a, game.ref(15, 5), 5);
+    game.addExecution(plague);
+    executeTicks(game, 101);
+    const lostShare = 1 - b.troops() / 100_000;
+    expect(lostShare).toBeGreaterThan(0);
+    expect(lostShare).toBeLessThan(0.1);
   });
 
   // With troop growth running, as in a real game. At 1% a step the target
@@ -255,5 +273,20 @@ describe("Plague status", () => {
     expect(a.isPlagued()).toBe(false);
     executeTicks(game, PlagueExecution.DURATION + 5);
     expect(b.isPlagued()).toBe(false);
+  });
+});
+
+describe("Plague ground in snapshots", () => {
+  test("survives a round trip and still clears at the end", async () => {
+    const { game, a } = await threePlayers("plains");
+    conquerRect(game, a, 0, 0, 10, 10);
+    conquerRect(game, game.player("b_id"), 10, 0, 20, 10);
+    a.buildUnit(UnitType.MissileSilo, game.ref(5, 5), {});
+    game.addExecution(new PlagueExecution(a, game.ref(15, 5)));
+    executeTicks(game, 30);
+    const { restored } = await roundTrip(game, "plains");
+    expect(restored.isPlague(restored.ref(15, 5))).toBe(true);
+    executeTicks(restored, PlagueExecution.DURATION);
+    expect(restored.isPlague(restored.ref(15, 5))).toBe(false);
   });
 });
