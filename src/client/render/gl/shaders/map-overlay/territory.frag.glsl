@@ -30,6 +30,8 @@ uniform float uSaturation;         // 1 = full color, 0 = grayscale
 uniform float uTerritoryAlpha;     // absolute fill opacity; 1 = fully opaque
 uniform sampler2D uAffiliation;    // RGBA8 — alt-view relation colors (row 0)
 uniform float uAltFillAlpha;       // alt-view translucent fill opacity
+uniform uint uPlagued[16];         // smallIDs of players a plague is draining
+uniform int uPlaguedCount;
 
 in vec2 vWorldPos;
 out vec4 fragColor;
@@ -159,6 +161,19 @@ void main() {
     float pulse = 0.5 - 0.5 * cos(uFireTime * 2.6);
     float glow = edge * (0.06 + 0.10 * pulse) + 0.02 * pulse;
     color.rgb = mix(color.rgb, vec3(1.0, 0.88, 0.55), glow);
+  }
+
+  // Plague: slow, blotchy sickly-green patches drifting over the land.
+  for (int i = 0; i < 16; i++) {
+    if (i >= uPlaguedCount) break;
+    if (uPlagued[i] == owner) {
+      float n = fireNoise(vWorldPos * 0.12 + vec2(uFireTime * 0.25, uFireTime * 0.15));
+      float n2 = fireNoise(vWorldPos * 0.35 - vec2(uFireTime * 0.4, 0.0));
+      float blot = smoothstep(0.35, 0.8, n * 0.7 + n2 * 0.3);
+      float pulse = 0.5 - 0.5 * cos(uFireTime * 2.0);
+      color.rgb = mix(color.rgb, vec3(0.55, 0.75, 0.22), 0.12 + blot * (0.25 + 0.1 * pulse));
+      break;
+    }
   }
 
   // Hover highlight: boost contrast on the hovered player's tiles, pushing
