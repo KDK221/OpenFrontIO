@@ -58,6 +58,7 @@ export function diffPlayerUpdate(
     prev.inDoomsdayClock === next.inDoomsdayClock &&
     prev.markedDoomsdayClockTick === next.markedDoomsdayClockTick &&
     prev.isDecaying === next.isDecaying &&
+    prev.isPlagued === next.isPlagued &&
     prev.hasSpawned === next.hasSpawned &&
     prev.spawnTile === next.spawnTile &&
     prev.betrayals === next.betrayals &&
@@ -122,6 +123,7 @@ export function diffPlayerUpdate(
     prev.markedDoomsdayClockTick === next.markedDoomsdayClockTick,
   );
   setIfDifferent("isDecaying", prev.isDecaying === next.isDecaying);
+  setIfDifferent("isPlagued", prev.isPlagued === next.isPlagued);
   setIfDifferent("hasSpawned", prev.hasSpawned === next.hasSpawned);
   setIfDifferent("spawnTile", prev.spawnTile === next.spawnTile);
   setIfDifferent("betrayals", prev.betrayals === next.betrayals);

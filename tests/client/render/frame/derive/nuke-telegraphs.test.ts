@@ -44,6 +44,7 @@ function ps(overrides: Partial<PlayerState> = {}): PlayerState {
     traitorRemainingTicks: 0,
     inDoomsdayClock: false,
     isDecaying: false,
+    isPlagued: false,
     markedDoomsdayClockTick: -1,
     betrayals: 0,
     hasSpawned: true,

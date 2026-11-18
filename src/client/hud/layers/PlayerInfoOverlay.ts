@@ -530,12 +530,22 @@ export class PlayerInfoOverlay extends LitElement implements Controller {
   // map only marks it with a faint glow.
   private renderIsolatedNote() {
     if (this.player === null || this.tile === null) return "";
-    if (!this.game.isIsolated(this.tile)) return "";
-    return html`<div
-      class="px-2 pb-1 text-xs text-amber-300"
-    >
-      ${translateText("player_panel.isolated")}
-    </div>`;
+    const plagued = this.player.isPlagued();
+    const isolated = this.game.isIsolated(this.tile);
+    if (!plagued && !isolated) return "";
+    return html`${
+      plagued
+        ? html`<div class="px-2 pb-1 text-xs text-lime-300">
+            ${translateText("player_panel.plagued")}
+          </div>`
+        : ""
+    }${
+      isolated
+        ? html`<div class="px-2 pb-1 text-xs text-amber-300">
+            ${translateText("player_panel.isolated")}
+          </div>`
+        : ""
+    }`;
   }
 
   private renderPlayerInfo(player: PlayerView) {

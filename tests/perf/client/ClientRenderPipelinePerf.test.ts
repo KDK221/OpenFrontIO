@@ -1138,6 +1138,7 @@ function createTestPlayerUpdate(
     traitorRemainingTicks: 0,
     inDoomsdayClock: false,
     isDecaying: false,
+    isPlagued: false,
     markedDoomsdayClockTick: 0,
     betrayals: 0,
     hasSpawned: true,

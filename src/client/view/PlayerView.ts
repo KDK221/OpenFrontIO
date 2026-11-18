@@ -609,6 +609,9 @@ export class PlayerView implements PlayerLike {
   isDecaying(): boolean {
     return this.state.isDecaying;
   }
+  isPlagued(): boolean {
+    return this.state.isPlagued;
+  }
   doomsdayClockTicks(): number {
     return this.inDoomsdayClock()
       ? this.game.ticks() - this.state.markedDoomsdayClockTick

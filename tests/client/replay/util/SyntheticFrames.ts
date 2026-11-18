@@ -71,6 +71,7 @@ export function fullPlayer(
     traitorRemainingTicks: 0,
     inDoomsdayClock: false,
     isDecaying: false,
+    isPlagued: false,
     markedDoomsdayClockTick: -1,
     targets: [],
     outgoingEmojis: [],

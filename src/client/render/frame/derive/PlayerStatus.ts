@@ -104,7 +104,9 @@ export function computePlayerStatus(
     const crown = sid === crownSmallID;
     const traitor = ps.isTraitor;
     const disconnected = ps.isDisconnected;
-    const inDoomsdayClock = ps.inDoomsdayClock;
+    // A plagued player shows the same red skull as a decaying one.
+    const plagued = ps.isPlagued;
+    const inDoomsdayClock = ps.inDoomsdayClock || plagued;
     // Past the warn grace the side is actively bleeding troops; the skull holds
     // steady then (vs blinking while merely in danger).
     const doomsdayClockUnderTicks =
@@ -113,7 +115,8 @@ export function computePlayerStatus(
     const doomsdayClockDraining =
       inDoomsdayClock && doomsdayClockUnderTicks >= doomsdayClockWarnTicks;
     // Red, static skull. From the sim — see PlayerImpl.isDecaying.
-    const doomsdayClockDecaying = inDoomsdayClock && ps.isDecaying;
+    const doomsdayClockDecaying =
+      (ps.inDoomsdayClock && ps.isDecaying) || plagued;
     // How far through the warn countdown (0->1); the danger skull blinks faster
     // as this nears 1, i.e. as the side approaches draining.
     const doomsdayClockWarnProgress =

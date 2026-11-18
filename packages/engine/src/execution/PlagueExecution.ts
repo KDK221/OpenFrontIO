@@ -93,6 +93,7 @@ export class PlagueExecution implements Execution {
     if (this.age % PlagueExecution.SPREAD_INTERVAL === 0) {
       this.spread();
     }
+    this.markInfected();
   }
 
   private start(): void {
@@ -109,6 +110,7 @@ export class PlagueExecution implements Execution {
     this.player.removeGold(this.mg.unitInfo(UnitType.MIRV).cost(this.mg, this.player));
     this.started = true;
     this.infected = [target];
+    this.markInfected();
     // Counts toward the price of the next plague (see EngineConfig).
     this.mg.recordMirvLaunch();
     this.mg.stats().bombLaunch(this.player, target, UnitType.MIRV);
@@ -139,6 +141,14 @@ export class PlagueExecution implements Execution {
     if (silo) {
       silo.launch();
     }
+  }
+
+  /**
+   * Flags the infected players (a skull over their names) through the next
+   * tick; renewed every tick while the plague lasts.
+   */
+  private markInfected(): void {
+    for (const p of this.infected) p.markPlagued(this.mg.ticks() + 1);
   }
 
   private spread(): void {

@@ -276,6 +276,8 @@ export interface PlayerUpdate {
   traitorRemainingTicks?: number;
   inDoomsdayClock?: boolean;
   isDecaying?: boolean;
+  /** A plague is draining this player's troops (PlagueExecution). */
+  isPlagued?: boolean;
   markedDoomsdayClockTick?: number;
   targets?: number[];
   outgoingEmojis?: EmojiMessage[];

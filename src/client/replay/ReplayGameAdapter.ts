@@ -169,6 +169,9 @@ class ReplayPlayerView {
   isDecaying(): boolean {
     return this.state?.isDecaying ?? false;
   }
+  isPlagued(): boolean {
+    return this.state?.isPlagued ?? false;
+  }
   markedDoomsdayClockTick(): number {
     return this.state?.markedDoomsdayClockTick ?? 0;
   }

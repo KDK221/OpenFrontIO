@@ -154,6 +154,7 @@ export class PlayerImpl implements Player {
   markedDoomsdayClockTick = -1;
   /** Tick territory rot last took land from this player (-1 = never). */
   private rottedAtTick = -1;
+  private plaguedUntil = -1;
   private _betrayalCount: number = 0;
 
   private embargoes = new Map<PlayerID, Embargo>();
@@ -404,6 +405,7 @@ export class PlayerImpl implements Player {
       traitorRemainingTicks: this.getTraitorRemainingTicks(),
       inDoomsdayClock: this.inDoomsdayClock(),
       isDecaying: this.isDecaying(),
+      isPlagued: this.isPlagued(),
       markedDoomsdayClockTick: this.markedDoomsdayClockTick,
       targets: targets,
       outgoingEmojis: outgoingEmojis,
@@ -938,6 +940,14 @@ export class PlayerImpl implements Player {
   isDecaying(): boolean {
     if (!this.inDoomsdayClock() || this.rottedAtTick < 0) return false;
     return this.mg.ticks() - this.rottedAtTick <= DECAY_CUE_GRACE_TICKS;
+  }
+
+  isPlagued(): boolean {
+    return this.mg.ticks() <= this.plaguedUntil;
+  }
+
+  markPlagued(untilTick: number): void {
+    this.plaguedUntil = Math.max(this.plaguedUntil, untilTick);
   }
 
   betrayals(): number {
@@ -2037,6 +2047,7 @@ export class PlayerImpl implements Player {
       markedTraitorTick: this.markedTraitorTick,
       markedDoomsdayClockTick: this.markedDoomsdayClockTick,
       rottedAtTick: this.rottedAtTick,
+      plaguedUntil: this.plaguedUntil,
       betrayalCount: this._betrayalCount,
       embargoes: [...this.embargoes.values()].map((e) => ({
         target: w.player(e.target),
@@ -2109,6 +2120,7 @@ export class PlayerImpl implements Player {
     this.markedTraitorTick = s.markedTraitorTick;
     this.markedDoomsdayClockTick = s.markedDoomsdayClockTick;
     this.rottedAtTick = s.rottedAtTick;
+    this.plaguedUntil = s.plaguedUntil;
     this._betrayalCount = s.betrayalCount;
     this.embargoes = new Map();
     for (const e of s.embargoes) {
@@ -2184,6 +2196,7 @@ export const PlayerSnapshot = snapshotType({
     markedTraitorTick: zInt(),
     markedDoomsdayClockTick: zInt(),
     rottedAtTick: zInt(),
+    plaguedUntil: zInt().default(-1),
     betrayalCount: zInt(),
     embargoes: z.array(
       z.object({

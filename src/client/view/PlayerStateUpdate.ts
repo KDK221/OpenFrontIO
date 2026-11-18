@@ -32,6 +32,7 @@ export function applyStateUpdate(target: PlayerState, pu: PlayerUpdate): void {
     target.markedDoomsdayClockTick = pu.markedDoomsdayClockTick;
   }
   if (pu.isDecaying !== undefined) target.isDecaying = pu.isDecaying;
+  if (pu.isPlagued !== undefined) target.isPlagued = pu.isPlagued;
   if (pu.betrayals !== undefined) target.betrayals = pu.betrayals;
   if (pu.hasSpawned !== undefined) target.hasSpawned = pu.hasSpawned;
   if (pu.spawnTile !== undefined) target.spawnTile = pu.spawnTile;

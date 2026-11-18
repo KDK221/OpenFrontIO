@@ -240,3 +240,20 @@ describe("Plague (MIRV slot)", () => {
     expect(cost(UnitType.HydrogenBomb)).toBe(8_000_000n);
   });
 });
+
+describe("Plague status", () => {
+  test("flags the infected players while it lasts", async () => {
+    const { game, a, b } = await threePlayers("plains");
+    conquerRect(game, a, 0, 0, 10, 10);
+    conquerRect(game, b, 10, 0, 20, 10);
+    a.buildUnit(UnitType.MissileSilo, game.ref(5, 5), {});
+    b.setTroops(100_000);
+    expect(b.isPlagued()).toBe(false);
+    game.addExecution(new PlagueExecution(a, game.ref(15, 5)));
+    executeTicks(game, 20);
+    expect(b.isPlagued()).toBe(true);
+    expect(a.isPlagued()).toBe(false);
+    executeTicks(game, PlagueExecution.DURATION + 5);
+    expect(b.isPlagued()).toBe(false);
+  });
+});

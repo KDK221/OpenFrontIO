@@ -1732,6 +1732,7 @@
     "tps_avg_60s": "평균:"
   },
   "player_panel": {
+    "plagued": "☠ 역병 중: 매초 병력이 줄어들고 있습니다",
     "isolated": "⚠ 본토와 끊긴 땅: 보급이 끊겨 방어력이 약합니다",
     "active": "활성화 됨",
     "alliance_time_remaining": "동맹 만료: ",

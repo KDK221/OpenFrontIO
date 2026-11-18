@@ -79,6 +79,8 @@ export interface PlayerState {
   traitorRemainingTicks: number;
   inDoomsdayClock: boolean;
   isDecaying: boolean;
+  /** A plague is draining this player's troops. */
+  isPlagued: boolean;
   markedDoomsdayClockTick: number;
   betrayals: number;
   hasSpawned: boolean;

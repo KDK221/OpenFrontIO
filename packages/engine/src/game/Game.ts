@@ -334,6 +334,10 @@ export interface Player extends PlayerLike {
   /** Territory is actively rotting away (the final doomsday phase). */
   isDecaying(): boolean;
   markRotted(): void;
+  /** A plague is draining this player's troops. */
+  isPlagued(): boolean;
+  /** Keeps isPlagued() true through the given tick (PlagueExecution). */
+  markPlagued(untilTick: number): void;
   doomsdayClockTicks(): number;
   enterDoomsdayClock(): void;
   clearDoomsdayClock(): void;

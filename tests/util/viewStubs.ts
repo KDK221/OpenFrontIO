@@ -141,6 +141,7 @@ export function makePlayerUpdate(
     inDoomsdayClock: false,
     markedDoomsdayClockTick: -1,
     isDecaying: false,
+    isPlagued: false,
     targets: [],
     outgoingEmojis: [],
     outgoingAttacks: [],

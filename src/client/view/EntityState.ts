@@ -172,6 +172,7 @@ export function playerStateFromUpdate(pu: PlayerUpdate): PlayerState {
     traitorRemainingTicks: Math.max(0, pu.traitorRemainingTicks ?? 0),
     inDoomsdayClock: pu.inDoomsdayClock ?? false,
     isDecaying: pu.isDecaying ?? false,
+    isPlagued: pu.isPlagued ?? false,
     markedDoomsdayClockTick: pu.markedDoomsdayClockTick ?? -1,
     betrayals: pu.betrayals!,
     hasSpawned: pu.hasSpawned!,
